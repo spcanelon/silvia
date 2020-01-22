@@ -22,9 +22,12 @@ organizations:
   url: ""
 role: Postdoctoral Research Scientist
 social:
-- icon: envelope
-  icon_pack: fas
-  link: '#contact'
+# - icon: envelope
+#   icon_pack: fas
+#   link: ''
+- icon: linkedin
+  icon_pack: fab
+  link: https://linkedin.com/in/spcanelon
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/spcanelon

@@ -24,7 +24,7 @@ date_format = "Jan 2006"
   location = "Philadelphia, PA"
   date_start = "2018-10-01"
   date_end = ""
-  description = """
+  description = ""
 
 [[experience]]
   title = "Graduate Research Assistant"
@@ -33,6 +33,6 @@ date_format = "Jan 2006"
   location = "Indianapolis, IN"
   date_start = "2012-05-01"
   date_end = "2018-05-01"
-  description = """
+  description = ""
 
 +++
