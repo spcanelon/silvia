@@ -23,7 +23,10 @@ googleAnalytics = ""
 ############################
 
 # Name of Academic theme folder in `themes/`.
+
+#theme = "hugo-academia"
 theme = "hugo-academic"
+
 
 # Get last modified date for content from Git?
 enableGitInfo = false
@@ -40,15 +43,16 @@ footnotereturnlinkcontents = "<sup>^</sup>"
 ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [outputs]
-  home = [ "HTML", "RSS", "JSON", "WebAppManifest" ]
+  home = [ "HTML", "RSS", "JSON" ]
+  #home = [ "HTML", "RSS", "JSON", "WebAppManifest" ]
   section = [ "HTML", "RSS" ]
 
 [mediaTypes."application/manifest+json"]
   suffixes = ["webmanifest"]
 
-[outputFormats.WebAppManifest]
-  mediaType = "application/manifest+json"
-  rel = "manifest"
+#[outputFormats.WebAppManifest]
+#  mediaType = "application/manifest+json"
+#  rel = "manifest"
 
 # Configure BlackFriday Markdown rendering.
 #   See: https://gohugo.io/getting-started/configuration/#configure-blackfriday
