@@ -1,6 +1,7 @@
 # Steps to take
 
 - to view live version use the **serve site** add-in `blogdown::serve_site()`. But only use it once and it automatically reloads when you save changes to your files via _LiveReload_
+- to stop the session, run `servr::daemon_stop(1)`or end it manually
 
 ## Color palette
 Penn/DBEI primary colors
@@ -46,6 +47,7 @@ Other
 </iframe>
 ```
 - Embedding PDF: https://www.w3docs.com/snippets/html/how-to-embed-pdf-in-html.html
+- Adding website to search engines: https://ahrefs.com/blog/submit-website-to-search-engines/
 
 # Structure
 
