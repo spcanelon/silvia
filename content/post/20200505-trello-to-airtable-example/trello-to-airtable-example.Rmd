@@ -1,0 +1,294 @@
+---
+title: Working with JSON Data in R to Migrate from Trello to Airtable
+subtitle: A basic tutorial on how to migrate your current Trello board to an Airtable base
+date: "2020-05-05"
+
+summary: "" #important to avoid unformatted text on the home page preview
+draft: true
+featured: true
+
+authors:
+- admin
+
+tags:
+- R
+- JSON
+- purrr
+- Trello
+- Airtable
+
+categories: ""
+
+output:
+  html_notebook:
+    fig_width: 7.2
+    toc: true
+    toc_float: true
+    number_sections: yes
+    theme: lumen
+    highlight: pygments #zenburn is a nice dark themed syntax
+---
+
+# Follow along with me!
+
+The Trello board used for this codethrough is this [Program Management Template](https://trello.com/templates/project-management/program-management-template-potjK48u) created by Soniya AHuja. To download the Trello board data, go to _Settings_ > _Print and Export_ and then right-click on "Export as JSON" to save on you local computer.
+
+# Importing JSON file
+Resources:
+- [Trello Business Class](https://trello.com/business-class) includes Trello board export to CSV, but it costs $9.99 per user per month
+- [Making Sense of Trello's JSON Export](https://help.trello.com/article/924-making-sense-of-trellos-json-export)
+
+```{r import}
+# clearing environment
+rm(list = ls())
+
+# loading libraries
+library(jsonlite)
+library(tidyverse)
+library(tictoc)
+
+trello <- stream_in(file("program-mgmt.json")) # produces a data frame
+glimpse(trello)
+```
+
+# Parsing information
+Instructions found here: https://blog.exploratory.io/working-with-json-data-in-very-simple-way-ad7ebcc0bb89
+
+## Cards
+- *Flattening:* Making the nested hiearchical data structure into a flatter structure by assigning each of the nested variable as its own column as much as possible.
+- *Tibble:* Making it easier to see the data frame data
+
+```{r tibble-time}
+# selecting cards information
+cards <- trello$cards # list of 1
+
+# flattening
+cards_flat <- flatten(cards) #list of 37
+
+# tibble time
+cards_flat_tbl <- as_tibble(cards_flat) # 32 obs of 37 variables
+cards_flat_tbl
+
+# removing unwanted variables
+glimpse(cards_flat_tbl)
+
+cards_trim <- cards_flat_tbl %>%
+  select(-address, -checkItemStates, -coordinates, -creationMethod, -descData, -dueReminder,
+         -idAttachmentCover, -idBoard, -idLabels, -idMembersVoted, -limits, -locationName, -manualCoverAttachment,
+         -(pos:badges), -(email:idMembers), -subscribed, -url, -cover, -pluginData, -customFieldItems) %>%
+  arrange(desc(dateLastActivity)) %>%
+  select(id, idShort, idList, dateLastActivity, name, desc, dueComplete, due,
+         labels, attachments, shortUrl, closed)
+
+cards_trim
+```
+
+### Labels
+Resources:
+- **Used:** the `unnest` function after selecting the minimum necessary variables
+- Helpful, again! https://blog.exploratory.io/working-with-json-data-in-very-simple-way-ad7ebcc0bb89 , particularly for saving the label details as a character list
+
+```{r labels}
+# extracting labels details
+
+labels_info <- cards_trim %>%
+  select(id, idShort, labels) %>%
+  unnest() %>% # no arguments because the nested items don't have names
+  rename(labelName = name) %>%
+  select(id, idShort, labelName) %>%
+  group_by(id, idShort) %>%
+  summarize(labelList = list(labelName)) %>%
+  mutate(labelList = as.character(labelList)) %>%
+  mutate(labelList_tidy = str_remove_all(labelList, pattern = "\"")) %>%
+  mutate(labelList_tidy = str_remove_all(labelList_tidy, pattern ="c\\(")) %>%
+  mutate(labelList_tidy = str_remove_all(labelList_tidy, pattern ="\\)")) %>%
+  unique()
+
+# joining back with main cards data frame
+ct_labels <- left_join(cards_trim %>% select(-labels), labels_info %>% select(-labelList))
+ct_labels
+```
+
+### Attachments
+
+Downloading attachments to local folder
+
+Resources:
+- https://stackoverflow.com/a/32175665 and https://stackoverflow.com/a/50997645
+- https://stackoverflow.com/a/2158803
+
+```{r}
+tic("downloading attachments")
+
+# expanding the attachment lists into separate url records
+att_urls <- ct_labels %>%
+  select(idShort, attachments) %>%
+  unnest() %>%
+  select(idShort, url) %>%
+  mutate(url = as.character(url),
+         attachmentError = 'FALSE')
+
+# create directory for attachments
+dirAttachments <- "attachments/"
+dir.create(dirAttachments)
+
+# downloading urls and checking for errors using try()
+for (i in 1:length(att_urls$url)){
+  locAttachments <-
+        paste(dirAttachments, "/", att_urls$idShort[i], "_", basename(att_urls$url[i]), sep = "")
+  step_to_try <- try(attachment_check <- download.file(att_urls$url[i], destfile = locAttachments))
+  if("try-error" %in% class(step_to_try)) {
+    cat("Error row: ", i, "\n", "Error message: ", step_to_try[1], sep = "")
+    att_urls$attachmentError[i] = 'TRUE'
+  }
+}
+
+# preparing data frame for export to CSV
+attachment_errors <- att_urls %>%
+  filter(attachmentError == TRUE) %>%
+  rename(Task_Id = idShort, Attachment_URL = url, Attachment_Error = attachmentError)
+attachment_errors
+
+# converts the attachment column to a categorical variable in the main cards data frame
+ct_labels <- ct_labels %>%
+  mutate(attachments = ifelse(idShort %in% att_urls$idShort, TRUE, FALSE))
+ct_labels
+
+toc()
+```
+
+#### Exporting to CSV
+```{r export-csv-attachment, eval=TRUE}
+write.csv(attachment_errors, file = "attachment_errors.csv")
+```
+
+To download attachments into folders specific to each card i:
+```{r, eval=FALSE}
+# creates individual directory folders for each card id -- probably overkill and more cumbersome for import purposes
+for (i in 1:3){
+  dirAttachments <- paste(dirFiles, "attachments", att_urls$idShort[i], sep = "/")
+  dir.create(dirAttachments) # creates directory for each unique card id
+  locAttachments <- paste(dirAttachments, basename(url[i]), sep = "/")
+  download.file(url[i], destfile = locAttachments)
+}
+```
+
+## Lists
+Transforming the "lists" list to a data frame was easy because there was only one data frame in it. If there had been more, I would have used the `unnest` function as before
+```{r}
+# selecting lists information
+lists <- trello$lists # list of 1 data frame
+lists
+
+# flattening
+lists_flat <- lists[[1]] # 17 obs of 9 variables
+lists_flat
+
+# removing unwanted variables
+glimpse(lists_flat)
+
+lists_trim <- lists_flat %>%
+  select(id, name, closed) %>%
+  rename(idList = id, nameList = name, closedList = closed)
+lists_trim
+
+# joining back with main cards data frame
+ct_labels_list <- left_join(ct_labels, lists_trim) %>%
+  select(id:shortUrl, labelList_tidy:nameList, closed, closedList)
+ct_labels_list
+glimpse(ct_labels_list)
+```
+
+# Prepping for export
+Resource for date conversions and formatting: http://biostat.mc.vanderbilt.edu/wiki/pub/Main/ColeBeck/datestimes.pdf
+
+```{r export-prep}
+library(lubridate)
+
+glimpse(ct_labels_list)
+
+# changing variable names
+tidy_cards <- ct_labels_list %>%
+  select(-id, -idList, -closedList) %>%
+  rename(Task = name, Task_ID = idShort, Notes = desc, Done = dueComplete, Date_Due = due,
+         Labels = labelList_tidy, Trello_List = nameList, Trello_Last_Modified = dateLastActivity,
+         Trello_Url = shortUrl, Trello_Attachments = attachments, Archived = closed) %>%
+  select(Task, Task_ID, Notes, Done, Date_Due, Labels, Trello_List, Trello_Last_Modified,
+         Trello_Url, Trello_Attachments, Archived) %>%
+  mutate(Trello_Last_Modified = as_datetime(Trello_Last_Modified, tz = ""),
+         Date_Due = as_datetime(Date_Due, tz = ""),
+         Done = ifelse(is.na(Date_Due) == TRUE, 'NA', Done)) # ensures only undone tasks assigned a due date get marked as "FALSE"
+
+glimpse(tidy_cards)
+length(unique(tidy_cards$Task_Id)) # confirm this matches the number of records (i.e. one task per observation)
+```
+
+# Exporting to CSV
+```{r export-csv, eval=TRUE}
+write.csv(tidy_cards, file = "tidy_cards.csv")
+```
+
+# Tidying in Airtable
+Import CSV into Airtable as a new base
+- **Add a base** > **Import a spreadsheet** > **CSV file*"**. Upload the _cards_tidy.csv_ file. Pick a name and icon for your new base!
+- See also https://support.airtable.com/hc/en-us/articles/202579399-Import-an-Existing-Spreadsheet-or-CSV-Into-a-New-App#cleanup
+
+## `Task`
+1. Because we know each observation in our table is unique, we can copy and paste `Task` into the first column and hide/delete the original column. `Task` is now the primary field.
+
+## `Task_ID`
+1. Convert `Task_ID` field type to 'number'.
+
+## `Notes`
+1. Convert `Notes` field type to "long text" and enable _rich text formatting_. This gives us the option of using Markdown in the future, but sadly doesn't automatically recognize fully formatted Markdown in the imported text. :(
+
+## `Labels`
+1. Change `Labels` field type to "multiple select" so that it turns each item in each list into a label.
+
+_**Optional**_:
+2. Create a new `Projects` column next to `Labels` and use the labels to guide you in creating `Project` labels/categories: Group the records by `Labels` field and add to `Projects` field as appropriate.
+  > **Tip:** I recommend creating an `NA` project from the `NA` labels so that these tasks aren't marked as "uncategorized" in the `Projects` column. Having records with an "empty" assignment gets in the way whenever you want to group by that category. To that end, it's helpful to group by `Project` and make sure any "empty" records get assigned to the "NA" `Project`.
+
+3. Delete from `Labels` any labels that were converted to `Projects` and ungroup the records.
+
+## `Trello_Lists`
+1. Convert `Trello_Lists` column field type into "single select". This gives us the option of using the Kanban style we were used to in Trello.
+  > **Note:** Every record should already be associated with a Trello_List.
+
+2. If you want to replicate the Trello kanban layout, change the order of the single select options in `Trello_Lists` to match the order from left-to-right of your Trello board
+
+## `Trello_URL`
+1. Convert the `Trello_URL` field type to "URL" and then hide it if you don't think you'll reference it often.
+
+## `Trello_Attachments`
+1. Convert `Trello_Attachments` field type to "single select"
+2. Create a new `Attachments` with field type "attachment". This is where you'll upload your downloaded attachments.
+3. Filter your records by `Trello_Attachments` so only show "TRUE" results
+4. Sort records by `Task_ID` and simplify your view by temporarily hiding all columns except for `Task_Name` (primary field), `Task_ID`, `Trello_Attachments`, and the new `Attachments` column.
+5. Open your local _attachments_ folder and drag and drop the files to their corresponding `Attachments` field according to their `Task_ID` in the filename.
+  > **Tip:** Increase the height of the records for this step. It'll make it easier to make sure you're dragging and dropping to the correct record
+
+6. If you encountered errors downloading some of your attachment URLs, now is the time to check your local _attachment_errors.csv_ file for the URLs with errors during the download process. These are attachments you'll have to find elsewhere and upload to the `Attachments` field as needed.
+7. Remove the filter to your view and unhide any columns you wish to remain visible.
+
+## `Done` & `Archived`
+1. Convert the `Done` and `Archived` field types to "Checkbox" and it will automatically assign a "check" to all records marked "TRUE" and leave the ones marked "FALSE" or "NA" unchecked. So easy!
+2. There is no direct option to "archive" tasks that have been completed like you can do in Trello, _but_ you can apply a filter to your table view to hide the tasks that are complete. To do this, set the filter so that the `Done` and `Archived` fields are unchecked.
+  > **Note:** This must be repeated for each saved View of your records.
+
+# Moving forward
+
+## Dates
+1. Modify `Date_Due` and `Trello_Last_Modified` field types to "Date" with time.
+2. You can sort the records by `Trello_Last_Modified` if that's helpful, but otherwise you can hide the column and keep it for historical reference.
+3. Create a new column `Last_Modified` with field type "Last modified time" and select all columns you want to track changes to on a date/time basis moving forward.
+
+## Record Views
+1. Select **Kanban** from the Views options and group by `Trello_List` to see your tasks similar to how you saw them in Trello, complete with attachment covers! A _bonus_ is that if you have multiple images attached to a card, you can view them without expanding the card by just hovering over the attachment cover!
+2. Move, collapse, and delete stacks as you see fit. Customize cards with as little or as much information as you want.
+
+## Tasks vs Subtasks
+- There are probably many ways to creatively group your records to parallel the checklist option within a Trello card moving forward. One is to think of your primary field `Tasks`s instead as **'subtasks'** and create a new column to serve as the umbrella **'task'**, with a "single selection" field type. Then you could group your records by **'task'**.
+
+## Sharing with others
+- https://support.airtable.com/hc/en-us/articles/218324867-Can-I-make-my-own-templates-
