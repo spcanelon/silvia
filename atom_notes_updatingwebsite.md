@@ -48,6 +48,10 @@ Other
 ```
 - Embedding PDF: https://www.w3docs.com/snippets/html/how-to-embed-pdf-in-html.html
 - Adding website to search engines: https://ahrefs.com/blog/submit-website-to-search-engines/
+- Create a Markdown "aside" for hints, definitions, etc. It doesn't show here but it does on the web page:
+```markdown
+A> A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
+```
 
 # Structure
 
