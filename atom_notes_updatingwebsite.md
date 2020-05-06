@@ -33,8 +33,10 @@ Other
 - ExcelYellow = "#efbf2c" #Excel yellow
 - Grey = "#999999"
 
-Great resource for looking at colors in similar families: https://www.color-hex.com/
-Quick look at the different pre-set Hugo Academic theme colors: https://sourcethemes.com/academic/themes/
+## Resources
+- Great resource for looking at colors in similar families: https://www.color-hex.com/
+- Quick look at the different pre-set Hugo Academic theme colors: https://sourcethemes.com/academic/themes/
+- Embedding HTML pages
 
 # Structure
 
@@ -49,6 +51,7 @@ Quick look at the different pre-set Hugo Academic theme colors: https://sourceth
   - browse built-in font sets in `themes/hugo-academic/data/fonts/`
   - browse user installed font sets in `data/fonts/`
   - this is where I set `day_night = false` so that I could just focus on the color scheme I want for a light mode page. Not sure how to select a set of colors for dark mode to start playing around with it.
+  - this is where all contact information lives
 
 ## content
 ### authors

@@ -19,13 +19,20 @@ doi: ""
 
 featured: false
 
+# Placement options: 1 = Full column width, 2 = Out-set, 3 = Screen-width
+# Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
+# Set `preview_only` to `true` to just use the image for thumbnails.
+
 image:
   caption: Schematic representation of the Medication Assisted Treatment (MAT) referral process pipeline as part of the recovery process for an individual with opioid use disorder.
-  focal_point: ""
+  placement: 3
+  focal_point: Center
   preview_only: false
 
 links:
-- name: Lab Meeting Presentation
+- name: Data Hackathon Presentation Slides
+  url: https://github.com/CodeForPhilly/datahack2020/raw/master/analyses/team11/Presentation/Team11_March17_Presentation.pptx
+- name: Lab Meeting Presentation Slides
   url: https://slides.com/spcanelon/2020datahack
 - name: Empathy Tool Mockup
   url: https://codeforphilly.github.io/datahack2020/analyses/team11/
@@ -52,7 +59,7 @@ url_dataset:
 url_pdf: https://github.com/CodeForPhilly/datahack2020/blob/master/analyses/team11/Final%20Report/2020_DataHackathon_Team11_FinalReport.pdf
 url_poster:
 url_project:
-url_slides: https://github.com/CodeForPhilly/datahack2020/raw/master/analyses/team11/Presentation/Team11_March17_Presentation.pptx
+url_slides:
 url_source:
 url_video:
 ---
