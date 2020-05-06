@@ -24,7 +24,8 @@ date_format = "Jan 2006"
   location = "Philadelphia, PA"
   date_start = "2018-10-01"
   date_end = ""
-  description = ""
+  description = """Developing tools to mine **Electronic Health Record** (EHR) data for population-level analyses with the purpose of understanding **female fertility and infertility** related conditions.\n
+  Designing **machine learning methods and algorithms** with the goal of contributing software to the biomedical informatics field and making it accessible in open platforms"""
 
 [[experience]]
   title = "Graduate Research Assistant"
@@ -33,6 +34,7 @@ date_format = "Jan 2006"
   location = "Indianapolis, IN"
   date_start = "2012-05-01"
   date_end = "2018-05-01"
-  description = ""
+  description = """Characterized the **type I collagen matrix** produced by osteoblasts in vitro to assess **structural, biochemical, mechanical, and biological** properties. _Assays used include atomic force microscopy, nanoindentation, Fourier transform infrared spectroscopy, and quantitative gene expression analysis_.\n
+  Investigated the effect of **(1)** an induced reduction in molecular crosslinking on type I collagen matrix properties and **(2)** mechanical loading via equibiaxial substrate strain to determine the impact of environmental factors."""
 
 +++
