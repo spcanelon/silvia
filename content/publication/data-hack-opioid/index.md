@@ -1,5 +1,5 @@
 ---
-abstract: "Recovery from opioid dependency often is a long and difficult journey, and it will look different for different people. For some, recovery can mean reducing dependency to a minimal level that allows them to successfully maintain their emotional, social, and economic daily life. While many programs are in place to help, recovery is a voluntary commitment from a person who might need continual encouragement and understanding, as well as assistance navigating hurdles they might not be able to overcome on their own, especially if they are going through the agony of withdrawal. Managing withdrawal symptoms is a first step toward long-term treatment, and not recognizing this need and responding to it with compassion and respect can waste an opportunity that might not come around again. Likewise, a failure to provide understanding or timely referrals at any critical point along the recovery process can lead to relapses, creating a vicious cycle of continuous addiction. Understanding what people are going through and what they need are the keys to helping people on their journey toward sustained recovery."
+title: "Visualizing the Inside Journey of Recovery from Opioid Use Disorder"
 
 authors:
 - admin
@@ -13,6 +13,10 @@ authors:
 - Laura Mullin
 - Jessica Streeter
 - Catherine Weiss
+
+summary:  As part of the Code for Philly 2020 Opioid Data Hackathon, our team endeavored to visualize the process of recovery from opioid use disorder to understand the barriers to recovery and develop a tool for empathy for the general public.
+
+abstract: "Recovery from opioid dependency often is a long and difficult journey, and it will look different for different people. For some, recovery can mean reducing dependency to a minimal level that allows them to successfully maintain their emotional, social, and economic daily life. While many programs are in place to help, recovery is a voluntary commitment from a person who might need continual encouragement and understanding, as well as assistance navigating hurdles they might not be able to overcome on their own, especially if they are going through the agony of withdrawal. Managing withdrawal symptoms is a first step toward long-term treatment, and not recognizing this need and responding to it with compassion and respect can waste an opportunity that might not come around again. Likewise, a failure to provide understanding or timely referrals at any critical point along the recovery process can lead to relapses, creating a vicious cycle of continuous addiction. Understanding what people are going through and what they need are the keys to helping people on their journey toward sustained recovery."
 
 date: "2020-03-25T00:00:00Z"
 doi: ""
@@ -47,13 +51,10 @@ publishDate: "2020-03-25T00:00:00Z"
 
 slides:
 
-summary:  As part of the Code for Philly 2020 Opioid Data Hackathon, our team endeavored to visualize the process of recovery from opioid use disorder to understand the barriers to recovery and develop a tool for empathy for the general public.
-
 tags:
 - opioid
 - data hack
 
-title: "Visualizing the Inside Journey of Recovery from Opioid Use Disorder"
 url_code:
 url_dataset:
 url_pdf: https://github.com/CodeForPhilly/datahack2020/blob/master/analyses/team11/Final%20Report/2020_DataHackathon_Team11_FinalReport.pdf
