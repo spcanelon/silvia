@@ -4,7 +4,7 @@ avatar_image: "avatar.jpg"
 authors:
 - admin
 
-bio: My research interests include applications of biomedical informatics in the public and population health fields.
+bio: "Biomedical engineer turned informatician, curious about all intersections of data and society. Pronouns: she/her."
 
 education:
   courses:
