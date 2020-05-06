@@ -4,7 +4,7 @@ subtitle: A basic tutorial on how to migrate your current Trello board to an Air
 date: "2020-05-05"
 
 summary: "" #important to avoid unformatted text on the home page preview
-draft: true
+draft: false
 featured: true
 
 authors:
