@@ -12,7 +12,8 @@ featured: true
 
 image:
   caption: A conceptual schema illustrating how climate change could impact timing of menarche and increase disease burden.
-  focal_point: ""
+  placement: 3
+  focal_point: Center
   preview_only: false
 
 links:
