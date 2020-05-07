@@ -35,7 +35,7 @@ output:
 </ul>
 </div>
 
-<p><img src="trello-to-airtable-main.png" /></p>
+<p><img src="/img/trello-to-airtable-main.png" /></p>
 <p>My exposure to working with databases began the summer after I finished graduate school by way of a free two-part Microsoft Office Access community class hosted my public library. In looking for a database tool that I could access on my smartphone, I came across Airtable – a user-friendly and <em>powerful</em> tool that I started using for personal projects (i.e. document organizing, apartment hunting, etc.). Since then I’ve received more formal training in relational databases for my research role, and have felt more comfortable exploring more advanced features of airtable. Recently I leaned on Airtable to support the <a href="https://www.womensmedicalfund.org/prfc">Philadelphia Reproductive Freedom Collective</a> and created a base (with some inspiration and knowledge-sharing with the <a href="https://siliconvalleydsa.org/">Silicon Valley Democratic Socialists of America!</a>) to track our COVID-19 mutual aid efforts.</p>
 <p>Having fallen in some Airtable deep-work I figured maybe it was time to <strong>retire my Trello boards</strong> in favor of some task bases. When I went to export my Trello data I noticed my free account didn’t let me download the data into a CSV format. The only options available were to print as a PDF or export as JSON! Anyway, I figured this would be a good opportunity to learn about this data format so that I could get it into a CSV that I could upload to Airtable. Nothing like spending hours tinkering in R for the sake of <em>future</em> project management…to the disregard of <em>present</em> project management. That’s how I chose to spend my weekend, but that doesn’t mean you have to. <strong>Cue code-through.</strong></p>
 <div id="follow-along-with-me" class="section level1">
@@ -328,7 +328,7 @@ ct_labels</code></pre>
 ## # … with 22 more rows, and 4 more variables: attachments &lt;lgl&gt;, shortUrl &lt;chr&gt;,
 ## #   closed &lt;lgl&gt;, labelList_tidy &lt;chr&gt;</code></pre>
 <pre class="r"><code>toc()</code></pre>
-<pre><code>## downloading attachments: 3.129 sec elapsed</code></pre>
+<pre><code>## downloading attachments: 3.202 sec elapsed</code></pre>
 <div id="exporting-to-csv" class="section level4">
 <h4><span class="header-section-number">3.1.2.1</span> Exporting to CSV</h4>
 <pre class="r"><code>write.csv(attachment_errors, file = &quot;attachment_errors.csv&quot;)</code></pre>

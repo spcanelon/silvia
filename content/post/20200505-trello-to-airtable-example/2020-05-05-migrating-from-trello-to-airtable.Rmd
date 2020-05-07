@@ -22,7 +22,7 @@ output:
     toc_depth: 1
 ---
 
-![](./trello-to-airtable-main.png)
+![](/img/trello-to-airtable-main.png)
 
 My exposure to working with databases began the summer after I finished graduate school by way of a free two-part Microsoft Office Access community class hosted my public library. In looking for a database tool that I could access on my smartphone, I came across Airtable -- a user-friendly and _powerful_ tool that I started using for personal projects (i.e. document organizing, apartment hunting, etc.). Since then I've received more formal training in relational databases for my research role, and have felt more comfortable exploring more advanced features of airtable. Recently I leaned on Airtable to support the [Philadelphia Reproductive Freedom Collective](https://www.womensmedicalfund.org/prfc) and created a base (with some inspiration and knowledge-sharing with the [Silicon Valley Democratic Socialists of America!](https://siliconvalleydsa.org/)) to track our COVID-19 mutual aid efforts.
 
