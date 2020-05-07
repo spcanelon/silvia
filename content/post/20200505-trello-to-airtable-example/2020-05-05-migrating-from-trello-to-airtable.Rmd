@@ -1,47 +1,28 @@
 ---
-title: "Migrating from Trello to Airtable: Working with JSON Data in R"
-subtitle: Tutorial on how to migrate your current Trello board to an Airtable base from start to finish.
-date: "2020-05-05"
-
-summary: Tutorial on how to migrate your current Trello board to an Airtable base from start to finish. #important to avoid unformatted text on the home page preview
-draft: true
-featured: true
-
-authors:
-- admin
-
+title: 'Migrating from Trello to Airtable: Working with JSON Data in R'
+author: '[admin]'
+date: '2020-05-05'
+slug: ''
+categories: []
+tags: []
+subtitle: 'Tutorial on how to migrate your current Trello board to an Airtable base from start to finish.'
+summary: 'Tutorial on how to migrate your current Trello board to an Airtable base from start to finish.'
+authors: [admin]
+lastmod: '2020-05-06T21:47:11-04:00'
+featured: yes
 image:
-  caption: 'Image credit: **Silvia Canelón**'
-  placement: 3 #2
-  focal_point: Center
-  preview_only: false
-
-markup: mmark
-
-tags:
-- R
-- JSON
-- purrr
-- Trello
-- Airtable
-
-categories: ""
-
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
 output:
-  html_notebook:
-    fig_width: 7.2
+  blogdown::html_page:
     toc: true
-    toc_float: true
-    number_sections: yes
-    theme: lumen
-    highlight: pygments #zenburn is a nice dark themed syntax
+    number_sections: true
+    toc_depth: 1
 ---
 
-```{r figure, fig.align='center'}
-knitr::include_graphics('./featured.png')
-```
-
-
+![](./trello-to-airtable-main.png)
 
 My exposure to working with databases began the summer after I finished graduate school by way of a free two-part Microsoft Office Access community class hosted my public library. In looking for a database tool that I could access on my smartphone, I came across Airtable -- a user-friendly and _powerful_ tool that I started using for personal projects (i.e. document organizing, apartment hunting, etc.). Since then I've received more formal training in relational databases for my research role, and have felt more comfortable exploring more advanced features of airtable. Recently I leaned on Airtable to support the [Philadelphia Reproductive Freedom Collective](https://www.womensmedicalfund.org/prfc) and created a base (with some inspiration and knowledge-sharing with the [Silicon Valley Democratic Socialists of America!](https://siliconvalleydsa.org/)) to track our COVID-19 mutual aid efforts.
 
@@ -53,9 +34,12 @@ The Trello board used for this codethrough is this [Program Management Template]
 
 You may also choose to read through Trello's [Making Sense of Trello's JSON Export](https://help.trello.com/article/924-making-sense-of-trellos-json-export).
 
-# Importing JSON file into R
+# Importing JSON file
+Resources:
+- [Trello Business Class](https://trello.com/business-class) includes Trello board export to CSV, but it costs $9.99 per user per month
+- [Making Sense of Trello's JSON Export](https://help.trello.com/article/924-making-sense-of-trellos-json-export)
 
-```{r import, include=FALSE}
+```{r import}
 # clearing environment
 rm(list = ls())
 
@@ -65,16 +49,15 @@ library(tidyverse)
 library(tictoc)
 
 trello <- stream_in(file("program-mgmt.json")) # produces a data frame
-#glimpse(trello)
+glimpse(trello)
 ```
 
-# Parsing JSON
-
-Kan Nishida's [Working with JSON data in a very simple way](https://blog.exploratory.io/working-with-json-data-in-very-simple-way-ad7ebcc0bb89) is a fantastic post that I went back to time and time again.
+# Parsing information
+Instructions found here: https://blog.exploratory.io/working-with-json-data-in-very-simple-way-ad7ebcc0bb89
 
 ## Cards
-
-*Flattening* using `flatten()` makes the nested hiearchical data structure into a flatter structure by assigning each of the nested variable as its own column as much as possible.
+- *Flattening:* Making the nested hiearchical data structure into a flatter structure by assigning each of the nested variable as its own column as much as possible.
+- *Tibble:* Making it easier to see the data frame data
 
 ```{r tibble-time}
 # selecting cards information
@@ -103,6 +86,7 @@ cards_trim
 
 ### Labels
 
+Resources:
 - **Used:** the `unnest` function after selecting the minimum necessary variables
 - Helpful, again! https://blog.exploratory.io/working-with-json-data-in-very-simple-way-ad7ebcc0bb89 , particularly for saving the label details as a character list
 
@@ -306,7 +290,7 @@ _**Optional**_:
 2. Move, collapse, and delete stacks as you see fit. Customize cards with as little or as much information as you want.
 
 ## Tasks vs Subtasks
-- There are probably many ways to creatively group your records to parallel the checklist option within a Trello card moving forward. One is to think of your primary field `Tasks`s instead as **'subtasks'** and create a new column to serve as the umbrella **'task'**, with a "single selection" field type. Then you could group your records by **'task'**.
+- There are probably many ways to creatively group your records to parallel the checklist option within a Trello card moving forward. One is to think of your primary field `Tasks` instead as **'subtasks'** and create a new column to serve as the umbrella **'task'**, with a "single selection" field type. Then you could group your records by **'task'**.
 
 ## Sharing with others
 - https://support.airtable.com/hc/en-us/articles/218324867-Can-I-make-my-own-templates-

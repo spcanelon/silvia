@@ -1,62 +1,126 @@
 ---
-title: "Migrating from Trello to Airtable: Working with JSON Data in R"
-subtitle: Tutorial on how to migrate your current Trello board to an Airtable base from start to finish.
-date: "2020-05-05"
-
-summary: Tutorial on how to migrate your current Trello board to an Airtable base from start to finish. #important to avoid unformatted text on the home page preview
-draft: true
-featured: true
-
-authors:
-- admin
-
+title: 'Migrating from Trello to Airtable: Working with JSON Data in R'
+author: '[admin]'
+date: '2020-05-05'
+slug: ''
+categories: []
+tags: []
+subtitle: 'Tutorial on how to migrate your current Trello board to an Airtable base from start to finish.'
+summary: 'Tutorial on how to migrate your current Trello board to an Airtable base from start to finish.'
+authors: [admin]
+lastmod: '2020-05-06T21:47:11-04:00'
+featured: yes
 image:
-  caption: 'Image credit: **Silvia Canelón**'
-  placement: 3 #2
-  focal_point: Center
-  preview_only: false
-
-markup: mmark
-
-tags:
-- R
-- JSON
-- purrr
-- Trello
-- Airtable
-
-categories: ""
-
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
 output:
-  html_notebook:
-    fig_width: 7.2
+  blogdown::html_page:
     toc: true
-    toc_float: true
-    number_sections: yes
-    theme: lumen
-    highlight: pygments #zenburn is a nice dark themed syntax
+    number_sections: true
+    toc_depth: 1
 ---
 
 
+<div id="TOC">
+<ul>
+<li><a href="#follow-along-with-me"><span class="toc-section-number">1</span> Follow along with me!</a></li>
+<li><a href="#importing-json-file"><span class="toc-section-number">2</span> Importing JSON file</a></li>
+<li><a href="#parsing-information"><span class="toc-section-number">3</span> Parsing information</a></li>
+<li><a href="#prepping-for-export"><span class="toc-section-number">4</span> Prepping for export</a></li>
+<li><a href="#exporting-to-csv-1"><span class="toc-section-number">5</span> Exporting to CSV</a></li>
+<li><a href="#tidying-in-airtable"><span class="toc-section-number">6</span> Tidying in Airtable</a></li>
+<li><a href="#moving-forward"><span class="toc-section-number">7</span> Moving forward</a></li>
+</ul>
+</div>
 
-<pre class="r"><code>knitr::include_graphics(&#39;./featured.png&#39;)</code></pre>
-<p><img src="featured.png" width="890" style="display: block; margin: auto;" /></p>
+<p><img src="trello-to-airtable-main.png" /></p>
 <p>My exposure to working with databases began the summer after I finished graduate school by way of a free two-part Microsoft Office Access community class hosted my public library. In looking for a database tool that I could access on my smartphone, I came across Airtable – a user-friendly and <em>powerful</em> tool that I started using for personal projects (i.e. document organizing, apartment hunting, etc.). Since then I’ve received more formal training in relational databases for my research role, and have felt more comfortable exploring more advanced features of airtable. Recently I leaned on Airtable to support the <a href="https://www.womensmedicalfund.org/prfc">Philadelphia Reproductive Freedom Collective</a> and created a base (with some inspiration and knowledge-sharing with the <a href="https://siliconvalleydsa.org/">Silicon Valley Democratic Socialists of America!</a>) to track our COVID-19 mutual aid efforts.</p>
 <p>Having fallen in some Airtable deep-work I figured maybe it was time to <strong>retire my Trello boards</strong> in favor of some task bases. When I went to export my Trello data I noticed my free account didn’t let me download the data into a CSV format. The only options available were to print as a PDF or export as JSON! Anyway, I figured this would be a good opportunity to learn about this data format so that I could get it into a CSV that I could upload to Airtable. Nothing like spending hours tinkering in R for the sake of <em>future</em> project management…to the disregard of <em>present</em> project management. That’s how I chose to spend my weekend, but that doesn’t mean you have to. <strong>Cue code-through.</strong></p>
 <div id="follow-along-with-me" class="section level1">
-<h1>Follow along with me!</h1>
+<h1><span class="header-section-number">1</span> Follow along with me!</h1>
 <p>The Trello board used for this codethrough is this <a href="https://trello.com/templates/project-management/program-management-template-potjK48u">Program Management Template</a> created by Soniya Ahuja. To download the Trello board data, go to <em>Menu</em> &gt; <em>More</em> &gt; <em>Print and Export</em> and then right-click on “Export as JSON” to save the JSON file in your working directory.</p>
 <p>You may also choose to read through Trello’s <a href="https://help.trello.com/article/924-making-sense-of-trellos-json-export">Making Sense of Trello’s JSON Export</a>.</p>
 </div>
-<div id="importing-json-file-into-r" class="section level1">
-<h1>Importing JSON file into R</h1>
+<div id="importing-json-file" class="section level1">
+<h1><span class="header-section-number">2</span> Importing JSON file</h1>
+<p>Resources:
+- <a href="https://trello.com/business-class">Trello Business Class</a> includes Trello board export to CSV, but it costs $9.99 per user per month
+- <a href="https://help.trello.com/article/924-making-sense-of-trellos-json-export">Making Sense of Trello’s JSON Export</a></p>
+<pre class="r"><code># clearing environment
+rm(list = ls())
+
+# loading libraries
+library(jsonlite)
+library(tidyverse)</code></pre>
+<pre><code>## ── Attaching packages ────────────────────── tidyverse 1.3.0 ──</code></pre>
+<pre><code>## ✓ ggplot2 3.2.1     ✓ purrr   0.3.3
+## ✓ tibble  3.0.1     ✓ dplyr   0.8.5
+## ✓ tidyr   1.0.0     ✓ stringr 1.4.0
+## ✓ readr   1.3.1     ✓ forcats 0.4.0</code></pre>
+<pre><code>## ── Conflicts ───────────────────────── tidyverse_conflicts() ──
+## x dplyr::filter()  masks stats::filter()
+## x purrr::flatten() masks jsonlite::flatten()
+## x dplyr::lag()     masks stats::lag()</code></pre>
+<pre class="r"><code>library(tictoc)
+
+trello &lt;- stream_in(file(&quot;program-mgmt.json&quot;)) # produces a data frame</code></pre>
+<pre><code>## opening file input connection.</code></pre>
+<pre><code>## Warning in readLines(con, n = pagesize, encoding = &quot;UTF-8&quot;): incomplete final
+## line found on &#39;program-mgmt.json&#39;</code></pre>
+<pre><code>## 
+ Found 1 records...
+ Imported 1 records. Simplifying...</code></pre>
+<pre><code>## closing file input connection.</code></pre>
+<pre class="r"><code>glimpse(trello)</code></pre>
+<pre><code>## Rows: 1
+## Columns: 35
+## $ id                &lt;chr&gt; &quot;5eb0d2732976430b950123eb&quot;
+## $ name              &lt;chr&gt; &quot;Program Management Template&quot;
+## $ desc              &lt;chr&gt; &quot;A simple template with valuable links to resources…
+## $ descData          &lt;lgl&gt; NA
+## $ closed            &lt;lgl&gt; FALSE
+## $ idOrganization    &lt;lgl&gt; NA
+## $ shortLink         &lt;chr&gt; &quot;AENSPbmG&quot;
+## $ powerUps          &lt;list&gt; [[]]
+## $ dateLastActivity  &lt;chr&gt; &quot;2020-05-05T02:41:56.852Z&quot;
+## $ idTags            &lt;list&gt; [[]]
+## $ datePluginDisable &lt;lgl&gt; NA
+## $ creationMethod    &lt;lgl&gt; NA
+## $ idBoardSource     &lt;chr&gt; &quot;5e2440092eecc03dab3d216b&quot;
+## $ idEnterprise      &lt;lgl&gt; NA
+## $ pinned            &lt;lgl&gt; FALSE
+## $ starred           &lt;lgl&gt; FALSE
+## $ url               &lt;chr&gt; &quot;https://trello.com/b/AENSPbmG/program-management-t…
+## $ shortUrl          &lt;chr&gt; &quot;https://trello.com/b/AENSPbmG&quot;
+## $ ixUpdate          &lt;chr&gt; &quot;4&quot;
+## $ limits            &lt;df[,11]&gt; &lt;data.frame[1 x 11]&gt;
+## $ enterpriseOwned   &lt;lgl&gt; FALSE
+## $ prefs             &lt;df[,22]&gt; &lt;data.frame[1 x 22]&gt;
+## $ subscribed        &lt;lgl&gt; FALSE
+## $ templateGallery   &lt;lgl&gt; NA
+## $ labelNames        &lt;df[,10]&gt; &lt;data.frame[1 x 10]&gt;
+## $ dateLastView      &lt;chr&gt; &quot;2020-05-06T15:48:51.390Z&quot;
+## $ actions           &lt;list&gt; [&lt;data.frame[2 x 7]&gt;]
+## $ cards             &lt;list&gt; [&lt;data.frame[32 x 37]&gt;]
+## $ labels            &lt;list&gt; [&lt;data.frame[7 x 4]&gt;]
+## $ lists             &lt;list&gt; [&lt;data.frame[11 x 9]&gt;]
+## $ members           &lt;list&gt; [&lt;data.frame[1 x 20]&gt;]
+## $ checklists        &lt;list&gt; [&lt;data.frame[2 x 8]&gt;]
+## $ customFields      &lt;list&gt; [[]]
+## $ memberships       &lt;list&gt; [&lt;data.frame[1 x 5]&gt;]
+## $ pluginData        &lt;list&gt; [[]]</code></pre>
 </div>
-<div id="parsing-json" class="section level1">
-<h1>Parsing JSON</h1>
-<p>Kan Nishida’s <a href="https://blog.exploratory.io/working-with-json-data-in-very-simple-way-ad7ebcc0bb89">Working with JSON data in a very simple way</a> is a fantastic post that I went back to time and time again.</p>
+<div id="parsing-information" class="section level1">
+<h1><span class="header-section-number">3</span> Parsing information</h1>
+<p>Instructions found here: <a href="https://blog.exploratory.io/working-with-json-data-in-very-simple-way-ad7ebcc0bb89" class="uri">https://blog.exploratory.io/working-with-json-data-in-very-simple-way-ad7ebcc0bb89</a></p>
 <div id="cards" class="section level2">
-<h2>Cards</h2>
-<p><em>Flattening</em> using <code>flatten()</code> makes the nested hiearchical data structure into a flatter structure by assigning each of the nested variable as its own column as much as possible.</p>
+<h2><span class="header-section-number">3.1</span> Cards</h2>
+<ul>
+<li><em>Flattening:</em> Making the nested hiearchical data structure into a flatter structure by assigning each of the nested variable as its own column as much as possible.</li>
+<li><em>Tibble:</em> Making it easier to see the data frame data</li>
+</ul>
 <pre class="r"><code># selecting cards information
 cards &lt;- trello$cards # list of 1
 
@@ -164,11 +228,10 @@ cards_trim</code></pre>
 ## # … with 22 more rows, and 3 more variables: attachments &lt;list&gt;,
 ## #   shortUrl &lt;chr&gt;, closed &lt;lgl&gt;</code></pre>
 <div id="labels" class="section level3">
-<h3>Labels</h3>
-<ul>
-<li><strong>Used:</strong> the <code>unnest</code> function after selecting the minimum necessary variables</li>
-<li>Helpful, again! <a href="https://blog.exploratory.io/working-with-json-data-in-very-simple-way-ad7ebcc0bb89" class="uri">https://blog.exploratory.io/working-with-json-data-in-very-simple-way-ad7ebcc0bb89</a> , particularly for saving the label details as a character list</li>
-</ul>
+<h3><span class="header-section-number">3.1.1</span> Labels</h3>
+<p>Resources:
+- <strong>Used:</strong> the <code>unnest</code> function after selecting the minimum necessary variables
+- Helpful, again! <a href="https://blog.exploratory.io/working-with-json-data-in-very-simple-way-ad7ebcc0bb89" class="uri">https://blog.exploratory.io/working-with-json-data-in-very-simple-way-ad7ebcc0bb89</a> , particularly for saving the label details as a character list</p>
 <pre class="r"><code># extracting labels details
 
 labels_info &lt;- cards_trim %&gt;%
@@ -206,7 +269,7 @@ ct_labels &lt;- left_join(cards_trim %&gt;% select(-labels), labels_info %&gt;% 
 ## #   shortUrl &lt;chr&gt;, closed &lt;lgl&gt;, labelList_tidy &lt;chr&gt;</code></pre>
 </div>
 <div id="attachments" class="section level3">
-<h3>Attachments</h3>
+<h3><span class="header-section-number">3.1.2</span> Attachments</h3>
 <p>Downloading attachments to local folder</p>
 <p>Resources:
 - <a href="https://stackoverflow.com/a/32175665" class="uri">https://stackoverflow.com/a/32175665</a> and <a href="https://stackoverflow.com/a/50997645" class="uri">https://stackoverflow.com/a/50997645</a>
@@ -265,9 +328,9 @@ ct_labels</code></pre>
 ## # … with 22 more rows, and 4 more variables: attachments &lt;lgl&gt;, shortUrl &lt;chr&gt;,
 ## #   closed &lt;lgl&gt;, labelList_tidy &lt;chr&gt;</code></pre>
 <pre class="r"><code>toc()</code></pre>
-<pre><code>## downloading attachments: 2.841 sec elapsed</code></pre>
+<pre><code>## downloading attachments: 3.129 sec elapsed</code></pre>
 <div id="exporting-to-csv" class="section level4">
-<h4>Exporting to CSV</h4>
+<h4><span class="header-section-number">3.1.2.1</span> Exporting to CSV</h4>
 <pre class="r"><code>write.csv(attachment_errors, file = &quot;attachment_errors.csv&quot;)</code></pre>
 <p>To download attachments into folders specific to each card i:</p>
 <pre class="r"><code># creates individual directory folders for each card id -- probably overkill and more cumbersome for import purposes
@@ -281,7 +344,7 @@ for (i in 1:3){
 </div>
 </div>
 <div id="lists" class="section level2">
-<h2>Lists</h2>
+<h2><span class="header-section-number">3.2</span> Lists</h2>
 <p>Transforming the “lists” list to a data frame was easy because there was only one data frame in it. If there had been more, I would have used the <code>unnest</code> function as before</p>
 <pre class="r"><code># selecting lists information
 lists &lt;- trello$lists # list of 1 data frame
@@ -515,7 +578,7 @@ ct_labels_list &lt;- left_join(ct_labels, lists_trim) %&gt;%
 </div>
 </div>
 <div id="prepping-for-export" class="section level1">
-<h1>Prepping for export</h1>
+<h1><span class="header-section-number">4</span> Prepping for export</h1>
 <p>Resource for date conversions and formatting: <a href="http://biostat.mc.vanderbilt.edu/wiki/pub/Main/ColeBeck/datestimes.pdf" class="uri">http://biostat.mc.vanderbilt.edu/wiki/pub/Main/ColeBeck/datestimes.pdf</a></p>
 <pre class="r"><code>library(lubridate)</code></pre>
 <pre><code>## 
@@ -572,34 +635,34 @@ tidy_cards &lt;- ct_labels_list %&gt;%
 <pre><code>## [1] 0</code></pre>
 </div>
 <div id="exporting-to-csv-1" class="section level1">
-<h1>Exporting to CSV</h1>
+<h1><span class="header-section-number">5</span> Exporting to CSV</h1>
 <pre class="r"><code>write.csv(tidy_cards, file = &quot;tidy_cards.csv&quot;)</code></pre>
 </div>
 <div id="tidying-in-airtable" class="section level1">
-<h1>Tidying in Airtable</h1>
+<h1><span class="header-section-number">6</span> Tidying in Airtable</h1>
 <p>Import CSV into Airtable as a new base
 - <strong>Add a base</strong> &gt; <strong>Import a spreadsheet</strong> &gt; **CSV file*&quot;**. Upload the <em>cards_tidy.csv</em> file. Pick a name and icon for your new base!
 - See also <a href="https://support.airtable.com/hc/en-us/articles/202579399-Import-an-Existing-Spreadsheet-or-CSV-Into-a-New-App#cleanup" class="uri">https://support.airtable.com/hc/en-us/articles/202579399-Import-an-Existing-Spreadsheet-or-CSV-Into-a-New-App#cleanup</a></p>
 <div id="task" class="section level2">
-<h2><code>Task</code></h2>
+<h2><span class="header-section-number">6.1</span> <code>Task</code></h2>
 <ol style="list-style-type: decimal">
 <li>Because we know each observation in our table is unique, we can copy and paste <code>Task</code> into the first column and hide/delete the original column. <code>Task</code> is now the primary field.</li>
 </ol>
 </div>
 <div id="task_id" class="section level2">
-<h2><code>Task_ID</code></h2>
+<h2><span class="header-section-number">6.2</span> <code>Task_ID</code></h2>
 <ol style="list-style-type: decimal">
 <li>Convert <code>Task_ID</code> field type to ‘number’.</li>
 </ol>
 </div>
 <div id="notes" class="section level2">
-<h2><code>Notes</code></h2>
+<h2><span class="header-section-number">6.3</span> <code>Notes</code></h2>
 <ol style="list-style-type: decimal">
 <li>Convert <code>Notes</code> field type to “long text” and enable <em>rich text formatting</em>. This gives us the option of using Markdown in the future, but sadly doesn’t automatically recognize fully formatted Markdown in the imported text. :(</li>
 </ol>
 </div>
 <div id="labels-1" class="section level2">
-<h2><code>Labels</code></h2>
+<h2><span class="header-section-number">6.4</span> <code>Labels</code></h2>
 <ol style="list-style-type: decimal">
 <li>Change <code>Labels</code> field type to “multiple select” so that it turns each item in each list into a label.</li>
 </ol>
@@ -611,7 +674,7 @@ tidy_cards &lt;- ct_labels_list %&gt;%
 </ol>
 </div>
 <div id="trello_lists" class="section level2">
-<h2><code>Trello_Lists</code></h2>
+<h2><span class="header-section-number">6.5</span> <code>Trello_Lists</code></h2>
 <ol style="list-style-type: decimal">
 <li><p>Convert <code>Trello_Lists</code> column field type into “single select”. This gives us the option of using the Kanban style we were used to in Trello.
 &gt; <strong>Note:</strong> Every record should already be associated with a Trello_List.</p></li>
@@ -619,13 +682,13 @@ tidy_cards &lt;- ct_labels_list %&gt;%
 </ol>
 </div>
 <div id="trello_url" class="section level2">
-<h2><code>Trello_URL</code></h2>
+<h2><span class="header-section-number">6.6</span> <code>Trello_URL</code></h2>
 <ol style="list-style-type: decimal">
 <li>Convert the <code>Trello_URL</code> field type to “URL” and then hide it if you don’t think you’ll reference it often.</li>
 </ol>
 </div>
 <div id="trello_attachments" class="section level2">
-<h2><code>Trello_Attachments</code></h2>
+<h2><span class="header-section-number">6.7</span> <code>Trello_Attachments</code></h2>
 <ol style="list-style-type: decimal">
 <li>Convert <code>Trello_Attachments</code> field type to “single select”</li>
 <li>Create a new <code>Attachments</code> with field type “attachment”. This is where you’ll upload your downloaded attachments.</li>
@@ -638,7 +701,7 @@ tidy_cards &lt;- ct_labels_list %&gt;%
 </ol>
 </div>
 <div id="done-archived" class="section level2">
-<h2><code>Done</code> &amp; <code>Archived</code></h2>
+<h2><span class="header-section-number">6.8</span> <code>Done</code> &amp; <code>Archived</code></h2>
 <ol style="list-style-type: decimal">
 <li>Convert the <code>Done</code> and <code>Archived</code> field types to “Checkbox” and it will automatically assign a “check” to all records marked “TRUE” and leave the ones marked “FALSE” or “NA” unchecked. So easy!</li>
 <li>There is no direct option to “archive” tasks that have been completed like you can do in Trello, <em>but</em> you can apply a filter to your table view to hide the tasks that are complete. To do this, set the filter so that the <code>Done</code> and <code>Archived</code> fields are unchecked.
@@ -647,9 +710,9 @@ tidy_cards &lt;- ct_labels_list %&gt;%
 </div>
 </div>
 <div id="moving-forward" class="section level1">
-<h1>Moving forward</h1>
+<h1><span class="header-section-number">7</span> Moving forward</h1>
 <div id="dates" class="section level2">
-<h2>Dates</h2>
+<h2><span class="header-section-number">7.1</span> Dates</h2>
 <ol style="list-style-type: decimal">
 <li>Modify <code>Date_Due</code> and <code>Trello_Last_Modified</code> field types to “Date” with time.</li>
 <li>You can sort the records by <code>Trello_Last_Modified</code> if that’s helpful, but otherwise you can hide the column and keep it for historical reference.</li>
@@ -657,20 +720,20 @@ tidy_cards &lt;- ct_labels_list %&gt;%
 </ol>
 </div>
 <div id="record-views" class="section level2">
-<h2>Record Views</h2>
+<h2><span class="header-section-number">7.2</span> Record Views</h2>
 <ol style="list-style-type: decimal">
 <li>Select <strong>Kanban</strong> from the Views options and group by <code>Trello_List</code> to see your tasks similar to how you saw them in Trello, complete with attachment covers! A <em>bonus</em> is that if you have multiple images attached to a card, you can view them without expanding the card by just hovering over the attachment cover!</li>
 <li>Move, collapse, and delete stacks as you see fit. Customize cards with as little or as much information as you want.</li>
 </ol>
 </div>
 <div id="tasks-vs-subtasks" class="section level2">
-<h2>Tasks vs Subtasks</h2>
+<h2><span class="header-section-number">7.3</span> Tasks vs Subtasks</h2>
 <ul>
-<li>There are probably many ways to creatively group your records to parallel the checklist option within a Trello card moving forward. One is to think of your primary field <code>Tasks</code>s instead as <strong>‘subtasks’</strong> and create a new column to serve as the umbrella <strong>‘task’</strong>, with a “single selection” field type. Then you could group your records by <strong>‘task’</strong>.</li>
+<li>There are probably many ways to creatively group your records to parallel the checklist option within a Trello card moving forward. One is to think of your primary field <code>Tasks</code> instead as <strong>‘subtasks’</strong> and create a new column to serve as the umbrella <strong>‘task’</strong>, with a “single selection” field type. Then you could group your records by <strong>‘task’</strong>.</li>
 </ul>
 </div>
 <div id="sharing-with-others" class="section level2">
-<h2>Sharing with others</h2>
+<h2><span class="header-section-number">7.4</span> Sharing with others</h2>
 <ul>
 <li><a href="https://support.airtable.com/hc/en-us/articles/218324867-Can-I-make-my-own-templates-" class="uri">https://support.airtable.com/hc/en-us/articles/218324867-Can-I-make-my-own-templates-</a></li>
 </ul>
