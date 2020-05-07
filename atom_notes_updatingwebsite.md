@@ -38,7 +38,7 @@ Other
 - Great resource for looking at colors in similar families: https://www.color-hex.com/
 - Quick look at the different pre-set Hugo Academic theme colors: https://sourcethemes.com/academic/themes/
 - Embedding HTML pages
-```
+```html
 <iframe
     src="./2019_AMIA_annual_symposium.pdf"
     width="100%"
