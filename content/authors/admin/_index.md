@@ -17,8 +17,8 @@ education:
 email: ""
 
 interests:
-- Prenatal and perinatal health
-- Sexual and reproductive health
+- Reproductive & sexual health
+- Prenatal & perinatal health
 - Social determinants of health
 - Environmental exposures
 
