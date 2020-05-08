@@ -6,7 +6,6 @@ featured: false
 
 abstract:
 
-markup: mmark
 math: true
 tags:
 - AMIA

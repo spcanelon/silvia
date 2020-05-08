@@ -9,7 +9,6 @@ image:
   placement: 3 #2 #3
   focal_point: Center
   preview_only: false
-markup: mmark
 math: true
 tags:
 - R
