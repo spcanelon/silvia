@@ -21,6 +21,10 @@ output:
     toc: true
     number_sections: true
     toc_depth: 1
+    
+link:
+  name: 'R Markdown'
+  url: "/2020-05-06-migrating-from-trello-to-airtable.Rmd"
 ---
 
 
@@ -37,25 +41,28 @@ output:
 </ul>
 </div>
 
-<p><img src="/post/2020-05-05-migrating-from-trello-to-airtable/trello-to-airtable-main.png" /></p>
-<p><a href="https://airtable.com/">Airtable</a> is a user-friendly and <em>powerful</em> tool that until recently I’d been using for personal projects (i.e. document organizing, apartment hunting, etc.). A week ago I leaned on Airtable to create a base designed for the <a href="https://www.womensmedicalfund.org/prfc">Philadelphia Reproductive Freedom Collective</a> to support our COVID-19 mutual aid efforts.</p>
+<div class="figure">
+<img src="/post/2020-05-05-migrating-from-trello-to-airtable/trello-to-airtable-main.png" alt="Fig 1. Trello to Airtable migration using the example in this tutorial." />
+<p class="caption"><strong>Fig 1.</strong> Trello to Airtable migration using the example in this tutorial.</p>
+</div>
+<p><strong><a href="https://airtable.com/">Airtable</a> is a user-friendly and <em>powerful</em> tool</strong> that until recently I’d been using for personal projects (i.e. document organizing, apartment hunting, etc.). A week ago I leaned on Airtable to create a base designed for the <a href="https://www.womensmedicalfund.org/prfc">Philadelphia Reproductive Freedom Collective</a> to support our COVID-19 mutual aid efforts.</p>
 <blockquote>
-<p>Shout out to the <a href="https://siliconvalleydsa.org/">Silicon Valley Democratic Socialists of America!</a> who provided inspiration and support! Their mutual aid network is extensive and functions at an impressive scale. Get connected with the South Bay Mutual Aid network here: <a href="https://www.southbay.aidnetwork.org/" class="uri">https://www.southbay.aidnetwork.org/</a></p>
+<p>Shout out to the <a href="https://siliconvalleydsa.org/">Silicon Valley Democratic Socialists of America</a> who provided inspiration and support! Their mutual aid network is extensive and operates at an impressive scale. Get connected with the South Bay Mutual Aid network here: <a href="https://www.southbay.aidnetwork.org/" class="uri">https://www.southbay.aidnetwork.org/</a></p>
 </blockquote>
 <p>Having fallen in some Airtable deep-work I figured maybe it was time to <strong>retire my Trello boards</strong> in favor of some task bases. Airtable accepts CSV files from Trello but, alas, my <a href="https://trello.com/pricing"><em>free</em> Trello account</a> only gave me the option to print as a PDF or export as JSON. I decided this would be a good opportunity to learn how to parse JSON data and export it as a CSV ready for import to Airtable.</p>
 <div id="what-to-expect" class="section level1">
 <h1><span class="header-section-number">1</span> What to expect</h1>
-<p>The code provided in the R Markdown file linked above requires the <code>tidyverse</code> and <code>JSONlite</code> packages as well as a JSON file with your Trello data. It will generate the following files.</p>
+<p>The code provided in the <a href="https://github.com/spcanelon/silvia/tree/master/content/post/20200505-trello-to-airtable-example">R Markdown file</a> requires the <code>tidyverse</code>, <code>JSONlite</code>, and <code>lubridate</code> packages as well as a JSON file containing your Trello data. It will generate the following:</p>
 <ul>
-<li><em>tidy_cards.csv</em> file ready to import to Airtable</li>
-<li><em>attachments</em> folder containing any content you’ve attached to your cards using an URL.</li>
-<li><em>attachment_errors.csv</em> file containing the card name, or task, as well as the URL/file path of any attachments that failed to download (i.e. links to files stored locally), so that you exactly which links you’ll need to locate manually.</li>
+<li><strong><em>tidy_cards.csv</em></strong> file ready to import to Airtable</li>
+<li><strong><em>attachments folder</em></strong> containing any content you’ve attached to your cards using an URL.</li>
+<li><strong><em>attachment_errors.csv</em></strong> file containing the card name, or task, as well as the URL/file path of any attachments that failed to download (i.e. links to files stored locally), so that you exactly which links you’ll need to locate manually.</li>
 </ul>
 <p><strong>By the end of the tutorial</strong> you’ll have imported a CSV file into Airtable <em><strong>and</strong></em> configured Airtable to match your Trello board. Specifically, you’ll be able to migrate labels, lists, attachments, card names, card descriptions, card due dates, date last modified, and whether the cards were marked “complete” or archived.</p>
 <div id="what-not-to-expect" class="section level2">
 <h2><span class="header-section-number">1.1</span> What <em>not</em> to expect</h2>
 <ul>
-<li>Rendered markdown from your card descriptions. Airtable does support markdown in its “long description” field type, but it doesn’t automatically render from imported text.</li>
+<li>Rendered markdown from your card descriptions. Airtable <em>does</em> support markdown in its “long description” field type, but it doesn’t automatically render from imported text.</li>
 </ul>
 </div>
 </div>
@@ -63,14 +70,14 @@ output:
 <h1><span class="header-section-number">2</span> Choose your own adventure</h1>
 <ol style="list-style-type: decimal">
 <li><strong>Download the R Markdown file</strong> linked above and run with it. Jump down to section “Tidying in Airtable” for pointers on how to get your Airtable base configured like your Trello board.</li>
-<li><strong>Keep reading</strong> for a codethrough of the R Markdown file, using the example featured in the picture above, with tips and resources along the way.</li>
+<li><strong>Keep reading</strong> for a code-through of the R Markdown file, using the example featured in the picture above, with tips and resources along the way.</li>
 </ol>
 </div>
 <div id="follow-along-with-me" class="section level1">
 <h1><span class="header-section-number">3</span> Follow along with me!</h1>
-<p>The Trello board used for this codethrough is this <a href="https://trello.com/templates/project-management/program-management-template-potjK48u">Program Management Template</a> created by Soniya Ahuja. To download the Trello board data, go to <em>Menu</em> &gt; <em>More</em> &gt; <em>Print and Export</em> and then right-click on “Export as JSON” to save the JSON file in your working directory.</p>
+<p>The Trello board used for this code-through is this <a href="https://trello.com/templates/project-management/program-management-template-potjK48u">Program Management Template</a> created by Soniya Ahuja. To download the Trello board data, go to <em>Menu</em> &gt; <em>More</em> &gt; <em>Print and Export</em> and then right-click on “Export as JSON” to save the JSON file in your working directory.</p>
 <p>You may also choose to read through Trello’s <a href="https://help.trello.com/article/924-making-sense-of-trellos-json-export">Making Sense of Trello’s JSON Export</a>.</p>
-<p>Last but not least – we’ll be keeping things tidy, with the help of the <code>tidyverse</code> package, to ensure each variable is in its own column, observations are in rows, and values are in cells. You can read more about tidy data in <a href="https://r4ds.had.co.nz/tidy-data.html">Chapter 12 of R for Data Science</a>.</p>
+<p>Last but not least – we’ll be keeping things tidy, with the help of the <a href="https://www.tidyverse.org/"><strong>tidyverse</strong> collection of R packages</a>, to ensure each variable is in its own column, observations are in rows, and values are in cells. You can read more about tidy data in <a href="https://tidyr.tidyverse.org/articles/tidy-data.html">Chapter 12 of R for Data Science</a>.</p>
 </div>
 <div id="importing-json-file" class="section level1">
 <h1><span class="header-section-number">4</span> Importing JSON file</h1>
@@ -80,17 +87,27 @@ rm(list = ls())
 
 # loading libraries
 library(jsonlite)
-library(tidyverse)</code></pre>
+library(lubridate)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;lubridate&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:base&#39;:
+## 
+##     date</code></pre>
+<pre class="r"><code>library(tidyverse)</code></pre>
 <pre><code>## ── Attaching packages ────────────────────── tidyverse 1.3.0 ──</code></pre>
 <pre><code>## ✓ ggplot2 3.2.1     ✓ purrr   0.3.3
 ## ✓ tibble  3.0.1     ✓ dplyr   0.8.5
 ## ✓ tidyr   1.0.0     ✓ stringr 1.4.0
 ## ✓ readr   1.3.1     ✓ forcats 0.4.0</code></pre>
 <pre><code>## ── Conflicts ───────────────────────── tidyverse_conflicts() ──
-## x dplyr::filter()  masks stats::filter()
-## x purrr::flatten() masks jsonlite::flatten()
-## x dplyr::lag()     masks stats::lag()</code></pre>
-<pre class="r"><code>library(tictoc)</code></pre>
+## x lubridate::as.difftime() masks base::as.difftime()
+## x lubridate::date()        masks base::date()
+## x dplyr::filter()          masks stats::filter()
+## x purrr::flatten()         masks jsonlite::flatten()
+## x lubridate::intersect()   masks base::intersect()
+## x dplyr::lag()             masks stats::lag()
+## x lubridate::setdiff()     masks base::setdiff()
+## x lubridate::union()       masks base::union()</code></pre>
 <pre class="r"><code>trello &lt;- stream_in(file(&quot;program-mgmt.json&quot;)) # produces a data frame</code></pre>
 <pre><code>## opening file input connection.</code></pre>
 <pre><code>## 
@@ -153,40 +170,6 @@ cards_flat &lt;- flatten(cards) #list of 37
 
 # tibble time
 cards_flat_tbl &lt;- as_tibble(cards_flat) # 32 obs of 37 variables
-cards_flat_tbl</code></pre>
-<pre><code>## # A tibble: 32 x 37
-##    id    address checkItemStates closed coordinates creationMethod
-##    &lt;chr&gt; &lt;lgl&gt;   &lt;lgl&gt;           &lt;lgl&gt;  &lt;lgl&gt;       &lt;lgl&gt;         
-##  1 5eb0… NA      NA              FALSE  NA          NA            
-##  2 5eb0… NA      NA              FALSE  NA          NA            
-##  3 5eb0… NA      NA              FALSE  NA          NA            
-##  4 5eb0… NA      NA              FALSE  NA          NA            
-##  5 5eb0… NA      NA              FALSE  NA          NA            
-##  6 5eb0… NA      NA              FALSE  NA          NA            
-##  7 5eb0… NA      NA              FALSE  NA          NA            
-##  8 5eb0… NA      NA              FALSE  NA          NA            
-##  9 5eb0… NA      NA              FALSE  NA          NA            
-## 10 5eb0… NA      NA              FALSE  NA          NA            
-## # … with 22 more rows, and 58 more variables: dateLastActivity &lt;chr&gt;,
-## #   desc &lt;chr&gt;, descData &lt;lgl&gt;, dueReminder &lt;int&gt;, idBoard &lt;chr&gt;,
-## #   idLabels &lt;list&gt;, idList &lt;chr&gt;, idMembersVoted &lt;list&gt;, idShort &lt;int&gt;,
-## #   idAttachmentCover &lt;chr&gt;, locationName &lt;lgl&gt;, manualCoverAttachment &lt;lgl&gt;,
-## #   name &lt;chr&gt;, pos &lt;dbl&gt;, shortLink &lt;chr&gt;, isTemplate &lt;lgl&gt;,
-## #   badges$attachmentsByType$trello$board &lt;int&gt;, $$$card &lt;int&gt;,
-## #   $location &lt;lgl&gt;, $votes &lt;int&gt;, $viewingMemberVoted &lt;lgl&gt;,
-## #   $subscribed &lt;lgl&gt;, $fogbugz &lt;chr&gt;, $checkItems &lt;int&gt;,
-## #   $checkItemsChecked &lt;int&gt;, $checkItemsEarliestDue &lt;lgl&gt;, $comments &lt;int&gt;,
-## #   $attachments &lt;int&gt;, $description &lt;lgl&gt;, $due &lt;chr&gt;, $dueComplete &lt;lgl&gt;,
-## #   dueComplete &lt;lgl&gt;, due &lt;chr&gt;, email &lt;chr&gt;, idChecklists &lt;list&gt;,
-## #   idMembers &lt;list&gt;, labels &lt;list&gt;, limits$attachments$perCard$status &lt;chr&gt;,
-## #   $$$disableAt &lt;int&gt;, $$$warnAt &lt;int&gt;, $checklists$perCard$status &lt;chr&gt;,
-## #   $$$disableAt &lt;int&gt;, $$$warnAt &lt;int&gt;, $stickers$perCard$status &lt;chr&gt;,
-## #   $$$disableAt &lt;int&gt;, $$$warnAt &lt;int&gt;, shortUrl &lt;chr&gt;, subscribed &lt;lgl&gt;,
-## #   url &lt;chr&gt;, cover$idAttachment &lt;chr&gt;, $color &lt;lgl&gt;,
-## #   $idUploadedBackground &lt;lgl&gt;, $size &lt;chr&gt;, $brightness &lt;chr&gt;,
-## #   $scaled &lt;list&gt;, attachments &lt;list&gt;, pluginData &lt;list&gt;,
-## #   customFieldItems &lt;list&gt;</code></pre>
-<pre class="r"><code># removing unwanted variables
 glimpse(cards_flat_tbl)</code></pre>
 <pre><code>## Rows: 32
 ## Columns: 37
@@ -227,29 +210,14 @@ glimpse(cards_flat_tbl)</code></pre>
 ## $ attachments           &lt;list&gt; [&lt;data.frame[1 x 11]&gt;, &lt;data.frame[0 x 0]&gt;, &lt;d…
 ## $ pluginData            &lt;list&gt; [[], [], [], [], [], [], [], [], [], [], [], […
 ## $ customFieldItems      &lt;list&gt; [[], [], [], [], [], [], [], [], [], [], [], […</code></pre>
-<pre class="r"><code>cards_trim &lt;- cards_flat_tbl %&gt;%
+<pre class="r"><code># removing unwanted variables
+cards_trim &lt;- cards_flat_tbl %&gt;%
   select(-address, -checkItemStates, -coordinates, -creationMethod, -descData, -dueReminder,
          -idAttachmentCover, -idBoard, -idLabels, -idMembersVoted, -limits, -locationName, -manualCoverAttachment,
          -(pos:badges), -(email:idMembers), -subscribed, -url, -cover, -pluginData, -customFieldItems) %&gt;%
   arrange(desc(dateLastActivity)) %&gt;%
   select(id, idShort, idList, dateLastActivity, name, desc, dueComplete, due,
-         labels, attachments, shortUrl, closed)
-
-glimpse(cards_trim)</code></pre>
-<pre><code>## Rows: 32
-## Columns: 12
-## $ id               &lt;chr&gt; &quot;5eb0d2732976430b95012428&quot;, &quot;5eb0d2732976430b9501242…
-## $ idShort          &lt;int&gt; 10, 13, 6, 14, 11, 8, 16, 15, 12, 9, 7, 2, 3, 4, 5, …
-## $ idList           &lt;chr&gt; &quot;5eb0d2732976430b950123f0&quot;, &quot;5eb0d2732976430b950123f…
-## $ dateLastActivity &lt;chr&gt; &quot;2020-05-05T02:41:56.775Z&quot;, &quot;2020-05-05T02:41:56.708…
-## $ name             &lt;chr&gt; &quot;Risks, dependencies, status and mitigation plan&quot;, &quot;…
-## $ desc             &lt;chr&gt; &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;### OKR Examples\n\n- Plenty of…
-## $ dueComplete      &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FAL…
-## $ due              &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
-## $ labels           &lt;list&gt; [&lt;data.frame[0 x 0]&gt;, &lt;data.frame[0 x 0]&gt;, &lt;data.fr…
-## $ attachments      &lt;list&gt; [&lt;data.frame[1 x 11]&gt;, &lt;data.frame[1 x 11]&gt;, &lt;data.…
-## $ shortUrl         &lt;chr&gt; &quot;https://trello.com/c/gu8n5Tmt&quot;, &quot;https://trello.com…
-## $ closed           &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FAL…</code></pre>
+         labels, attachments, shortUrl, closed)</code></pre>
 <div id="labels" class="section level3">
 <h3><span class="header-section-number">5.1.1</span> Labels</h3>
 <p>Resources:</p>
@@ -258,7 +226,6 @@ glimpse(cards_trim)</code></pre>
 <li>Helpful, again! <a href="https://blog.exploratory.io/working-with-json-data-in-very-simple-way-ad7ebcc0bb89" class="uri">https://blog.exploratory.io/working-with-json-data-in-very-simple-way-ad7ebcc0bb89</a> , particularly for saving the label details as a character list</li>
 </ul>
 <pre class="r"><code># extracting labels details
-
 labels_info &lt;- cards_trim %&gt;%
   select(id, idShort, labels) %&gt;%
   unnest() %&gt;% # no arguments because the nested items don&#39;t have names
@@ -272,25 +239,70 @@ labels_info &lt;- cards_trim %&gt;%
   mutate(labelList_tidy = str_remove_all(labelList_tidy, pattern =&quot;\\)&quot;)) %&gt;%
   unique()
 
-# joining back with main cards data frame
+knitr::kable(labels_info)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">id</th>
+<th align="right">idShort</th>
+<th align="left">labelList</th>
+<th align="left">labelList_tidy</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">5eb0d2732976430b95012436</td>
+<td align="right">17</td>
+<td align="left">Product</td>
+<td align="left">Product</td>
+</tr>
+<tr class="even">
+<td align="left">5eb0d2732976430b95012438</td>
+<td align="right">18</td>
+<td align="left">Sales &amp; Marketing</td>
+<td align="left">Sales &amp; Marketing</td>
+</tr>
+<tr class="odd">
+<td align="left">5eb0d2732976430b9501243a</td>
+<td align="right">19</td>
+<td align="left">Engineering</td>
+<td align="left">Engineering</td>
+</tr>
+<tr class="even">
+<td align="left">5eb0d2732976430b9501243c</td>
+<td align="right">20</td>
+<td align="left">Engineering</td>
+<td align="left">Engineering</td>
+</tr>
+<tr class="odd">
+<td align="left">5eb0d2732976430b9501243e</td>
+<td align="right">21</td>
+<td align="left">Sales &amp; Marketing</td>
+<td align="left">Sales &amp; Marketing</td>
+</tr>
+<tr class="even">
+<td align="left">5eb0d2732976430b95012440</td>
+<td align="right">22</td>
+<td align="left">c(“Product”, “Sales &amp; Marketing”)</td>
+<td align="left">Product, Sales &amp; Marketing</td>
+</tr>
+<tr class="odd">
+<td align="left">5eb0d2732976430b9501244f</td>
+<td align="right">30</td>
+<td align="left">c(“Product”, “Engineering”)</td>
+<td align="left">Product, Engineering</td>
+</tr>
+<tr class="even">
+<td align="left">5eb0d2732976430b95012452</td>
+<td align="right">32</td>
+<td align="left">Sales &amp; Marketing</td>
+<td align="left">Sales &amp; Marketing</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code># joining back with main cards data frame
 ct_labels &lt;- left_join(cards_trim %&gt;% select(-labels), labels_info %&gt;% select(-labelList))</code></pre>
 <pre><code>## Joining, by = c(&quot;id&quot;, &quot;idShort&quot;)</code></pre>
-<pre class="r"><code>ct_labels</code></pre>
-<pre><code>## # A tibble: 32 x 12
-##    id    idShort idList dateLastActivity name  desc  dueComplete due  
-##    &lt;chr&gt;   &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;            &lt;chr&gt; &lt;chr&gt; &lt;lgl&gt;       &lt;chr&gt;
-##  1 5eb0…      10 5eb0d… 2020-05-05T02:4… Risk… &quot;&quot;    FALSE       &lt;NA&gt; 
-##  2 5eb0…      13 5eb0d… 2020-05-05T02:4… Upco… &quot;&quot;    FALSE       &lt;NA&gt; 
-##  3 5eb0…       6 5eb0d… 2020-05-05T02:4… All … &quot;&quot;    FALSE       &lt;NA&gt; 
-##  4 5eb0…      14 5eb0d… 2020-05-05T02:4… Prod… &quot;&quot;    FALSE       &lt;NA&gt; 
-##  5 5eb0…      11 5eb0d… 2020-05-05T02:4… Fina… &quot;&quot;    FALSE       &lt;NA&gt; 
-##  6 5eb0…       8 5eb0d… 2020-05-05T02:4… KPIs… &quot;###… FALSE       &lt;NA&gt; 
-##  7 5eb0…      16 5eb0d… 2020-05-05T02:4… Metr… &quot;&quot;    FALSE       &lt;NA&gt; 
-##  8 5eb0…      15 5eb0d… 2020-05-05T02:4… Peri… &quot;&quot;    FALSE       &lt;NA&gt; 
-##  9 5eb0…      12 5eb0d… 2020-05-05T02:4… Huma… &quot;&quot;    FALSE       &lt;NA&gt; 
-## 10 5eb0…       9 5eb0d… 2020-05-05T02:4… Key … &quot;&quot;    FALSE       &lt;NA&gt; 
-## # … with 22 more rows, and 4 more variables: attachments &lt;list&gt;,
-## #   shortUrl &lt;chr&gt;, closed &lt;lgl&gt;, labelList_tidy &lt;chr&gt;</code></pre>
 </div>
 <div id="attachments" class="section level3">
 <h3><span class="header-section-number">5.1.2</span> Attachments</h3>
@@ -300,17 +312,81 @@ ct_labels &lt;- left_join(cards_trim %&gt;% select(-labels), labels_info %&gt;% 
 <li><a href="https://stackoverflow.com/a/32175665" class="uri">https://stackoverflow.com/a/32175665</a> and <a href="https://stackoverflow.com/a/50997645" class="uri">https://stackoverflow.com/a/50997645</a></li>
 <li><a href="https://stackoverflow.com/a/2158803" class="uri">https://stackoverflow.com/a/2158803</a></li>
 </ul>
-<pre class="r"><code>tic(&quot;downloading attachments&quot;)
-
-# expanding the attachment lists into separate url records
+<pre class="r"><code># expanding the attachment lists into separate url records
 att_urls &lt;- ct_labels %&gt;%
   select(idShort, attachments) %&gt;%
   unnest() %&gt;%
   select(idShort, url) %&gt;%
   mutate(url = as.character(url),
          attachmentError = &#39;FALSE&#39;)
-
-# create directory for attachments
+knitr::kable(att_urls)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">idShort</th>
+<th align="left">url</th>
+<th align="left">attachmentError</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">10</td>
+<td align="left"><a href="https://trello-attachments.s3.amazonaws.com/5eb0d2732976430b950123eb/5eb0d2732976430b95012428/x/65f56db0b02c7d71fbb20c23c6923ecf/risk.png" class="uri">https://trello-attachments.s3.amazonaws.com/5eb0d2732976430b950123eb/5eb0d2732976430b95012428/x/65f56db0b02c7d71fbb20c23c6923ecf/risk.png</a></td>
+<td align="left">FALSE</td>
+</tr>
+<tr class="even">
+<td align="right">13</td>
+<td align="left"><a href="https://trello-attachments.s3.amazonaws.com/5eb0d2732976430b950123eb/5eb0d2732976430b9501242e/x/f400e4051bafe46d0a2918ce429c77b3/scrum.png" class="uri">https://trello-attachments.s3.amazonaws.com/5eb0d2732976430b950123eb/5eb0d2732976430b9501242e/x/f400e4051bafe46d0a2918ce429c77b3/scrum.png</a></td>
+<td align="left">FALSE</td>
+</tr>
+<tr class="odd">
+<td align="right">6</td>
+<td align="left"><a href="https://trello-attachments.s3.amazonaws.com/5eb0d2732976430b950123eb/5eb0d2732976430b95012420/x/4c5034647d03e2bfd7c8f3d95989dd84/party.png" class="uri">https://trello-attachments.s3.amazonaws.com/5eb0d2732976430b950123eb/5eb0d2732976430b95012420/x/4c5034647d03e2bfd7c8f3d95989dd84/party.png</a></td>
+<td align="left">FALSE</td>
+</tr>
+<tr class="even">
+<td align="right">14</td>
+<td align="left"><a href="https://trello-attachments.s3.amazonaws.com/5eb0d2732976430b950123eb/5eb0d2732976430b95012430/x/8f9e74bcb4dd072460bf56bd3db9e881/experience.png" class="uri">https://trello-attachments.s3.amazonaws.com/5eb0d2732976430b950123eb/5eb0d2732976430b95012430/x/8f9e74bcb4dd072460bf56bd3db9e881/experience.png</a></td>
+<td align="left">FALSE</td>
+</tr>
+<tr class="odd">
+<td align="right">11</td>
+<td align="left"><a href="https://trello-attachments.s3.amazonaws.com/5eb0d2732976430b950123eb/5eb0d2732976430b9501242a/x/74f7cae187770ce51afb7433fb92bd53/budget.png" class="uri">https://trello-attachments.s3.amazonaws.com/5eb0d2732976430b950123eb/5eb0d2732976430b9501242a/x/74f7cae187770ce51afb7433fb92bd53/budget.png</a></td>
+<td align="left">FALSE</td>
+</tr>
+<tr class="even">
+<td align="right">8</td>
+<td align="left"><a href="https://trello-attachments.s3.amazonaws.com/5eb0d2732976430b950123eb/5eb0d2732976430b95012424/x/327e424c673147a5e75fcad2c8aefe58/key-performance-indicator.png" class="uri">https://trello-attachments.s3.amazonaws.com/5eb0d2732976430b950123eb/5eb0d2732976430b95012424/x/327e424c673147a5e75fcad2c8aefe58/key-performance-indicator.png</a></td>
+<td align="left">FALSE</td>
+</tr>
+<tr class="odd">
+<td align="right">16</td>
+<td align="left"><a href="https://trello-attachments.s3.amazonaws.com/5eb0d2732976430b950123eb/5eb0d2732976430b95012434/x/e58e01280ea72f2e4f53fe33b08027e5/report.png" class="uri">https://trello-attachments.s3.amazonaws.com/5eb0d2732976430b950123eb/5eb0d2732976430b95012434/x/e58e01280ea72f2e4f53fe33b08027e5/report.png</a></td>
+<td align="left">FALSE</td>
+</tr>
+<tr class="even">
+<td align="right">15</td>
+<td align="left"><a href="https://trello-attachments.s3.amazonaws.com/5eb0d2732976430b950123eb/5eb0d2732976430b95012432/x/b5ebad9002676967dc508061b2fdda98/newsletter.png" class="uri">https://trello-attachments.s3.amazonaws.com/5eb0d2732976430b950123eb/5eb0d2732976430b95012432/x/b5ebad9002676967dc508061b2fdda98/newsletter.png</a></td>
+<td align="left">FALSE</td>
+</tr>
+<tr class="odd">
+<td align="right">12</td>
+<td align="left"><a href="https://trello-attachments.s3.amazonaws.com/5eb0d2732976430b950123eb/5eb0d2732976430b9501242c/x/9532bef5454ed24d84118bdfd019ef62/resource.png" class="uri">https://trello-attachments.s3.amazonaws.com/5eb0d2732976430b950123eb/5eb0d2732976430b9501242c/x/9532bef5454ed24d84118bdfd019ef62/resource.png</a></td>
+<td align="left">FALSE</td>
+</tr>
+<tr class="even">
+<td align="right">9</td>
+<td align="left"><a href="https://trello-attachments.s3.amazonaws.com/5eb0d2732976430b950123eb/5eb0d2732976430b95012426/x/e4aa9985e54a098f220952233797ecf6/success.png" class="uri">https://trello-attachments.s3.amazonaws.com/5eb0d2732976430b950123eb/5eb0d2732976430b95012426/x/e4aa9985e54a098f220952233797ecf6/success.png</a></td>
+<td align="left">FALSE</td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="left"><a href="https://trello-attachments.s3.amazonaws.com/5eb0d2732976430b950123eb/5eb0d2732976430b95012422/x/e2d2a81643a0733961cf426cb1216705/focus.png" class="uri">https://trello-attachments.s3.amazonaws.com/5eb0d2732976430b950123eb/5eb0d2732976430b95012422/x/e2d2a81643a0733961cf426cb1216705/focus.png</a></td>
+<td align="left">FALSE</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code># create directory for attachments
 dirAttachments &lt;- &quot;attachments/&quot;
 dir.create(dirAttachments)
 
@@ -323,55 +399,25 @@ for (i in 1:length(att_urls$url)){
     cat(&quot;Error row: &quot;, i, &quot;\n&quot;, &quot;Error message: &quot;, step_to_try[1], sep = &quot;&quot;)
     att_urls$attachmentError[i] = &#39;TRUE&#39;
   }
-}
-
-# preparing data frame for export to CSV
-attachment_errors &lt;- att_urls %&gt;%
-  filter(attachmentError == TRUE) %&gt;%
-  rename(Task_Id = idShort, Attachment_URL = url, Attachment_Error = attachmentError)
-knitr::kable(attachment_errors)</code></pre>
-<table>
-<thead>
-<tr class="header">
-<th align="right">Task_Id</th>
-<th align="left">Attachment_URL</th>
-<th align="left">Attachment_Error</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-<pre class="r"><code># converts the attachment column to a categorical variable in the main cards data frame
-ct_labels &lt;- ct_labels %&gt;%
-  mutate(attachments = ifelse(idShort %in% att_urls$idShort, TRUE, FALSE))
-ct_labels</code></pre>
-<pre><code>## # A tibble: 32 x 12
-##    id    idShort idList dateLastActivity name  desc  dueComplete due  
-##    &lt;chr&gt;   &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;            &lt;chr&gt; &lt;chr&gt; &lt;lgl&gt;       &lt;chr&gt;
-##  1 5eb0…      10 5eb0d… 2020-05-05T02:4… Risk… &quot;&quot;    FALSE       &lt;NA&gt; 
-##  2 5eb0…      13 5eb0d… 2020-05-05T02:4… Upco… &quot;&quot;    FALSE       &lt;NA&gt; 
-##  3 5eb0…       6 5eb0d… 2020-05-05T02:4… All … &quot;&quot;    FALSE       &lt;NA&gt; 
-##  4 5eb0…      14 5eb0d… 2020-05-05T02:4… Prod… &quot;&quot;    FALSE       &lt;NA&gt; 
-##  5 5eb0…      11 5eb0d… 2020-05-05T02:4… Fina… &quot;&quot;    FALSE       &lt;NA&gt; 
-##  6 5eb0…       8 5eb0d… 2020-05-05T02:4… KPIs… &quot;###… FALSE       &lt;NA&gt; 
-##  7 5eb0…      16 5eb0d… 2020-05-05T02:4… Metr… &quot;&quot;    FALSE       &lt;NA&gt; 
-##  8 5eb0…      15 5eb0d… 2020-05-05T02:4… Peri… &quot;&quot;    FALSE       &lt;NA&gt; 
-##  9 5eb0…      12 5eb0d… 2020-05-05T02:4… Huma… &quot;&quot;    FALSE       &lt;NA&gt; 
-## 10 5eb0…       9 5eb0d… 2020-05-05T02:4… Key … &quot;&quot;    FALSE       &lt;NA&gt; 
-## # … with 22 more rows, and 4 more variables: attachments &lt;lgl&gt;, shortUrl &lt;chr&gt;,
-## #   closed &lt;lgl&gt;, labelList_tidy &lt;chr&gt;</code></pre>
-<pre class="r"><code>toc()</code></pre>
-<pre><code>## downloading attachments: 3.249 sec elapsed</code></pre>
-<p>Exporting to CSV</p>
-<pre class="r"><code>write.csv(attachment_errors, file = &quot;attachment_errors.csv&quot;)</code></pre>
-<p>To download attachments into folders specific to each card i:</p>
+}</code></pre>
+<p><strong>Side step:</strong> If you have a lot of attachments <em>per card</em>, you may want to create a directory folder for each card. This for loop will get you there – use it instead of the one above.</p>
 <pre class="r"><code># creates individual directory folders for each card id -- probably overkill and more cumbersome for import purposes
-for (i in 1:3){
+for (i in 1:length(att_urls$url)){
   dirAttachments &lt;- paste(dirFiles, &quot;attachments&quot;, att_urls$idShort[i], sep = &quot;/&quot;)
   dir.create(dirAttachments) # creates directory for each unique card id
   locAttachments &lt;- paste(dirAttachments, basename(url[i]), sep = &quot;/&quot;)
   download.file(url[i], destfile = locAttachments)
 }</code></pre>
+<pre class="r"><code># preparing data frame for export to CSV
+attachment_errors &lt;- att_urls %&gt;%
+  filter(attachmentError == TRUE) %&gt;%
+  rename(Task_Id = idShort, Attachment_URL = url, Attachment_Error = attachmentError)
+
+# converts the attachment column to a categorical variable in the main cards data frame
+ct_labels &lt;- ct_labels %&gt;%
+  mutate(attachments = ifelse(idShort %in% att_urls$idShort, TRUE, FALSE))</code></pre>
+<p>Exporting to CSV</p>
+<pre class="r"><code>write.csv(attachment_errors, file = &quot;attachment_errors.csv&quot;)</code></pre>
 </div>
 </div>
 <div id="lists" class="section level2">
@@ -379,156 +425,23 @@ for (i in 1:3){
 <p>Transforming the “lists” list to a data frame was easy because there was only one data frame in it. If there had been more, I would have used the <code>unnest</code> function as before</p>
 <pre class="r"><code># selecting lists information
 lists &lt;- trello$lists # list of 1 data frame
-lists</code></pre>
-<pre><code>## [[1]]
-##                          id                                       name closed
-## 1  5eb0d2732976430b950123ec           Focus Objectives For The Quarter  FALSE
-## 2  5eb0d2732976430b950123ed Key Performance Indicators For The Quarter  FALSE
-## 3  5eb0d2732976430b950123ee                      Metrics and Reporting  FALSE
-## 4  5eb0d2732976430b950123ef               Milestones &amp; Important Dates  FALSE
-## 5  5eb0d2732976430b950123f0                       Risks &amp; Dependencies  FALSE
-## 6  5eb0d2732976430b950123f1                        Finance &amp; Budgeting  FALSE
-## 7  5eb0d2732976430b950123f2                          Open Requirements  FALSE
-## 8  5eb0d2732976430b950123f3                         Release Management  FALSE
-## 9  5eb0d2732976430b950123f4                  Training &amp; Certifications  FALSE
-## 10 5eb0d2732976430b950123f5                           Event Management  FALSE
-## 11 5eb0d2732976430b950123f6                                 Newsletter  FALSE
-##       pos softLimit creationMethod                  idBoard
-## 1   65535        NA             NA 5eb0d2732976430b950123eb
-## 2  131071        NA             NA 5eb0d2732976430b950123eb
-## 3  147455        NA             NA 5eb0d2732976430b950123eb
-## 4  163839        NA             NA 5eb0d2732976430b950123eb
-## 5  180223        NA             NA 5eb0d2732976430b950123eb
-## 6  188415        NA             NA 5eb0d2732976430b950123eb
-## 7  196607        NA             NA 5eb0d2732976430b950123eb
-## 8  262143        NA             NA 5eb0d2732976430b950123eb
-## 9  327679        NA             NA 5eb0d2732976430b950123eb
-## 10 393215        NA             NA 5eb0d2732976430b950123eb
-## 11 458751        NA             NA 5eb0d2732976430b950123eb
-##    limits.cards.openPerList.status limits.cards.openPerList.disableAt
-## 1                               ok                               5000
-## 2                               ok                               5000
-## 3                               ok                               5000
-## 4                               ok                               5000
-## 5                               ok                               5000
-## 6                               ok                               5000
-## 7                               ok                               5000
-## 8                               ok                               5000
-## 9                               ok                               5000
-## 10                              ok                               5000
-## 11                              ok                               5000
-##    limits.cards.openPerList.warnAt limits.cards.totalPerList.status
-## 1                             4500                               ok
-## 2                             4500                               ok
-## 3                             4500                               ok
-## 4                             4500                               ok
-## 5                             4500                               ok
-## 6                             4500                               ok
-## 7                             4500                               ok
-## 8                             4500                               ok
-## 9                             4500                               ok
-## 10                            4500                               ok
-## 11                            4500                               ok
-##    limits.cards.totalPerList.disableAt limits.cards.totalPerList.warnAt
-## 1                              1000000                           900000
-## 2                              1000000                           900000
-## 3                              1000000                           900000
-## 4                              1000000                           900000
-## 5                              1000000                           900000
-## 6                              1000000                           900000
-## 7                              1000000                           900000
-## 8                              1000000                           900000
-## 9                              1000000                           900000
-## 10                             1000000                           900000
-## 11                             1000000                           900000
-##    subscribed
-## 1       FALSE
-## 2       FALSE
-## 3       FALSE
-## 4       FALSE
-## 5       FALSE
-## 6       FALSE
-## 7       FALSE
-## 8       FALSE
-## 9       FALSE
-## 10      FALSE
-## 11      FALSE</code></pre>
+glimpse(lists)</code></pre>
+<pre><code>## List of 1
+##  $ :&#39;data.frame&#39;:    11 obs. of  9 variables:
+##   ..$ id            : chr [1:11] &quot;5eb0d2732976430b950123ec&quot; &quot;5eb0d2732976430b950123ed&quot; &quot;5eb0d2732976430b950123ee&quot; &quot;5eb0d2732976430b950123ef&quot; ...
+##   ..$ name          : chr [1:11] &quot;Focus Objectives For The Quarter&quot; &quot;Key Performance Indicators For The Quarter&quot; &quot;Metrics and Reporting&quot; &quot;Milestones &amp; Important Dates&quot; ...
+##   ..$ closed        : logi [1:11] FALSE FALSE FALSE FALSE FALSE FALSE ...
+##   ..$ pos           : int [1:11] 65535 131071 147455 163839 180223 188415 196607 262143 327679 393215 ...
+##   ..$ softLimit     : logi [1:11] NA NA NA NA NA NA ...
+##   ..$ creationMethod: logi [1:11] NA NA NA NA NA NA ...
+##   ..$ idBoard       : chr [1:11] &quot;5eb0d2732976430b950123eb&quot; &quot;5eb0d2732976430b950123eb&quot; &quot;5eb0d2732976430b950123eb&quot; &quot;5eb0d2732976430b950123eb&quot; ...
+##   ..$ limits        :&#39;data.frame&#39;:   11 obs. of  1 variable:
+##   .. ..$ cards:&#39;data.frame&#39;: 11 obs. of  2 variables:
+##   ..$ subscribed    : logi [1:11] FALSE FALSE FALSE FALSE FALSE FALSE ...</code></pre>
 <pre class="r"><code># flattening
 lists_flat &lt;- lists[[1]] # 17 obs of 9 variables
-lists_flat</code></pre>
-<pre><code>##                          id                                       name closed
-## 1  5eb0d2732976430b950123ec           Focus Objectives For The Quarter  FALSE
-## 2  5eb0d2732976430b950123ed Key Performance Indicators For The Quarter  FALSE
-## 3  5eb0d2732976430b950123ee                      Metrics and Reporting  FALSE
-## 4  5eb0d2732976430b950123ef               Milestones &amp; Important Dates  FALSE
-## 5  5eb0d2732976430b950123f0                       Risks &amp; Dependencies  FALSE
-## 6  5eb0d2732976430b950123f1                        Finance &amp; Budgeting  FALSE
-## 7  5eb0d2732976430b950123f2                          Open Requirements  FALSE
-## 8  5eb0d2732976430b950123f3                         Release Management  FALSE
-## 9  5eb0d2732976430b950123f4                  Training &amp; Certifications  FALSE
-## 10 5eb0d2732976430b950123f5                           Event Management  FALSE
-## 11 5eb0d2732976430b950123f6                                 Newsletter  FALSE
-##       pos softLimit creationMethod                  idBoard
-## 1   65535        NA             NA 5eb0d2732976430b950123eb
-## 2  131071        NA             NA 5eb0d2732976430b950123eb
-## 3  147455        NA             NA 5eb0d2732976430b950123eb
-## 4  163839        NA             NA 5eb0d2732976430b950123eb
-## 5  180223        NA             NA 5eb0d2732976430b950123eb
-## 6  188415        NA             NA 5eb0d2732976430b950123eb
-## 7  196607        NA             NA 5eb0d2732976430b950123eb
-## 8  262143        NA             NA 5eb0d2732976430b950123eb
-## 9  327679        NA             NA 5eb0d2732976430b950123eb
-## 10 393215        NA             NA 5eb0d2732976430b950123eb
-## 11 458751        NA             NA 5eb0d2732976430b950123eb
-##    limits.cards.openPerList.status limits.cards.openPerList.disableAt
-## 1                               ok                               5000
-## 2                               ok                               5000
-## 3                               ok                               5000
-## 4                               ok                               5000
-## 5                               ok                               5000
-## 6                               ok                               5000
-## 7                               ok                               5000
-## 8                               ok                               5000
-## 9                               ok                               5000
-## 10                              ok                               5000
-## 11                              ok                               5000
-##    limits.cards.openPerList.warnAt limits.cards.totalPerList.status
-## 1                             4500                               ok
-## 2                             4500                               ok
-## 3                             4500                               ok
-## 4                             4500                               ok
-## 5                             4500                               ok
-## 6                             4500                               ok
-## 7                             4500                               ok
-## 8                             4500                               ok
-## 9                             4500                               ok
-## 10                            4500                               ok
-## 11                            4500                               ok
-##    limits.cards.totalPerList.disableAt limits.cards.totalPerList.warnAt
-## 1                              1000000                           900000
-## 2                              1000000                           900000
-## 3                              1000000                           900000
-## 4                              1000000                           900000
-## 5                              1000000                           900000
-## 6                              1000000                           900000
-## 7                              1000000                           900000
-## 8                              1000000                           900000
-## 9                              1000000                           900000
-## 10                             1000000                           900000
-## 11                             1000000                           900000
-##    subscribed
-## 1       FALSE
-## 2       FALSE
-## 3       FALSE
-## 4       FALSE
-## 5       FALSE
-## 6       FALSE
-## 7       FALSE
-## 8       FALSE
-## 9       FALSE
-## 10      FALSE
-## 11      FALSE</code></pre>
-<pre class="r"><code># removing unwanted variables
+
+# removing unwanted variables
 lists_trim &lt;- lists_flat %&gt;%
   select(id, name, closed) %&gt;%
   rename(idList = id, nameList = name, closedList = closed)
@@ -603,22 +516,6 @@ knitr::kable(lists_trim)</code></pre>
 ct_labels_list &lt;- left_join(ct_labels, lists_trim) %&gt;%
   select(id:shortUrl, labelList_tidy:nameList, closed, closedList)</code></pre>
 <pre><code>## Joining, by = &quot;idList&quot;</code></pre>
-<pre class="r"><code>ct_labels_list</code></pre>
-<pre><code>## # A tibble: 32 x 14
-##    id    idShort idList dateLastActivity name  desc  dueComplete due  
-##    &lt;chr&gt;   &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;            &lt;chr&gt; &lt;chr&gt; &lt;lgl&gt;       &lt;chr&gt;
-##  1 5eb0…      10 5eb0d… 2020-05-05T02:4… Risk… &quot;&quot;    FALSE       &lt;NA&gt; 
-##  2 5eb0…      13 5eb0d… 2020-05-05T02:4… Upco… &quot;&quot;    FALSE       &lt;NA&gt; 
-##  3 5eb0…       6 5eb0d… 2020-05-05T02:4… All … &quot;&quot;    FALSE       &lt;NA&gt; 
-##  4 5eb0…      14 5eb0d… 2020-05-05T02:4… Prod… &quot;&quot;    FALSE       &lt;NA&gt; 
-##  5 5eb0…      11 5eb0d… 2020-05-05T02:4… Fina… &quot;&quot;    FALSE       &lt;NA&gt; 
-##  6 5eb0…       8 5eb0d… 2020-05-05T02:4… KPIs… &quot;###… FALSE       &lt;NA&gt; 
-##  7 5eb0…      16 5eb0d… 2020-05-05T02:4… Metr… &quot;&quot;    FALSE       &lt;NA&gt; 
-##  8 5eb0…      15 5eb0d… 2020-05-05T02:4… Peri… &quot;&quot;    FALSE       &lt;NA&gt; 
-##  9 5eb0…      12 5eb0d… 2020-05-05T02:4… Huma… &quot;&quot;    FALSE       &lt;NA&gt; 
-## 10 5eb0…       9 5eb0d… 2020-05-05T02:4… Key … &quot;&quot;    FALSE       &lt;NA&gt; 
-## # … with 22 more rows, and 6 more variables: attachments &lt;lgl&gt;, shortUrl &lt;chr&gt;,
-## #   labelList_tidy &lt;chr&gt;, nameList &lt;chr&gt;, closed &lt;lgl&gt;, closedList &lt;lgl&gt;</code></pre>
 </div>
 </div>
 <div id="exporting-to-csv" class="section level1">
@@ -626,29 +523,7 @@ ct_labels_list &lt;- left_join(ct_labels, lists_trim) %&gt;%
 <p>Resource for date conversions and formatting: <a href="http://biostat.mc.vanderbilt.edu/wiki/pub/Main/ColeBeck/datestimes.pdf" class="uri">http://biostat.mc.vanderbilt.edu/wiki/pub/Main/ColeBeck/datestimes.pdf</a></p>
 <div id="data-prepping" class="section level2">
 <h2><span class="header-section-number">6.1</span> Data prepping</h2>
-<pre class="r"><code>library(lubridate)</code></pre>
-<pre><code>## 
-## Attaching package: &#39;lubridate&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:base&#39;:
-## 
-##     date</code></pre>
-<pre class="r"><code>glimpse(ct_labels_list)</code></pre>
-<pre><code>## Rows: 32
-## Columns: 14
-## $ id               &lt;chr&gt; &quot;5eb0d2732976430b95012428&quot;, &quot;5eb0d2732976430b9501242…
-## $ idShort          &lt;int&gt; 10, 13, 6, 14, 11, 8, 16, 15, 12, 9, 7, 2, 3, 4, 5, …
-## $ idList           &lt;chr&gt; &quot;5eb0d2732976430b950123f0&quot;, &quot;5eb0d2732976430b950123f…
-## $ dateLastActivity &lt;chr&gt; &quot;2020-05-05T02:41:56.775Z&quot;, &quot;2020-05-05T02:41:56.708…
-## $ name             &lt;chr&gt; &quot;Risks, dependencies, status and mitigation plan&quot;, &quot;…
-## $ desc             &lt;chr&gt; &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;### OKR Examples\n\n- Plenty of…
-## $ dueComplete      &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FAL…
-## $ due              &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
-## $ attachments      &lt;lgl&gt; TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE…
-## $ shortUrl         &lt;chr&gt; &quot;https://trello.com/c/gu8n5Tmt&quot;, &quot;https://trello.com…
-## $ labelList_tidy   &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
-## $ nameList         &lt;chr&gt; &quot;Risks &amp; Dependencies&quot;, &quot;Release Management&quot;, &quot;Event…
-## $ closed           &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FAL…
-## $ closedList       &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FAL…</code></pre>
+<p>The <code>lubridate</code> package was used here.</p>
 <pre class="r"><code># changing variable names
 tidy_cards &lt;- ct_labels_list %&gt;%
   select(-id, -idList, -closedList) %&gt;%
@@ -660,170 +535,25 @@ tidy_cards &lt;- ct_labels_list %&gt;%
   mutate(Trello_Last_Modified = as_datetime(Trello_Last_Modified, tz = &quot;&quot;),
          Date_Due = as_datetime(Date_Due, tz = &quot;&quot;),
          Done = ifelse(is.na(Date_Due) == TRUE, &#39;NA&#39;, Done)) # ensures only undone tasks assigned a due date get marked as &quot;FALSE&quot;</code></pre>
-<pre><code>## Date in ISO8601 format; converting timezone from UTC to &quot;&quot;.</code></pre>
-<pre><code>## Date in ISO8601 format; converting timezone from UTC to &quot;&quot;.</code></pre>
-<pre class="r"><code>knitr::kable(tidy_cards)</code></pre>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Task</th>
-<th align="right">Task_ID</th>
-<th align="left">Notes</th>
-<th align="left">Done</th>
-<th align="left">Date_Due</th>
-<th align="left">Labels</th>
-<th align="left">Trello_List</th>
-<th align="left">Trello_Last_Modified</th>
-<th align="left">Trello_Url</th>
-<th align="left">Trello_Attachments</th>
-<th align="left">Archived</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Risks, dependencies, status and mitigation plan</td>
-<td align="right">10</td>
-<td align="left"></td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">Risks &amp; Dependencies</td>
-<td align="left">2020-05-04 22:41:56</td>
-<td align="left"><a href="https://trello.com/c/gu8n5Tmt" class="uri">https://trello.com/c/gu8n5Tmt</a></td>
-<td align="left">TRUE</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">Upcoming Releases and Tracking</td>
-<td align="right">13</td>
-<td align="left"></td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">Release Management</td>
-<td align="left">2020-05-04 22:41:56</td>
-<td align="left"><a href="https://trello.com/c/4OQRBxPV" class="uri">https://trello.com/c/4OQRBxPV</a></td>
-<td align="left">TRUE</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="odd">
-<td align="left">All Hands, team events, celebrations, etc.</td>
-<td align="right">6</td>
-<td align="left"></td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">Event Management</td>
-<td align="left">2020-05-04 22:41:56</td>
-<td align="left"><a href="https://trello.com/c/mRdBW48X" class="uri">https://trello.com/c/mRdBW48X</a></td>
-<td align="left">TRUE</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">Product Certifications, Mandatory Training, etc.</td>
-<td align="right">14</td>
-<td align="left"></td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">Training &amp; Certifications</td>
-<td align="left">2020-05-04 22:41:56</td>
-<td align="left"><a href="https://trello.com/c/YNMqwJtO" class="uri">https://trello.com/c/YNMqwJtO</a></td>
-<td align="left">TRUE</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="odd">
-<td align="left">Financial metrics and health</td>
-<td align="right">11</td>
-<td align="left"></td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">Finance &amp; Budgeting</td>
-<td align="left">2020-05-04 22:41:56</td>
-<td align="left"><a href="https://trello.com/c/5JndsPfg" class="uri">https://trello.com/c/5JndsPfg</a></td>
-<td align="left">TRUE</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">KPIs or OKRs and their current state vs desired state</td>
-<td align="right">8</td>
-<td align="left">### OKR Examples</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>Plenty of OKR examples for different departments in your organization</li>
-</ul>
-<div id="freemium-okr-tools" class="section level3">
-<h3><span class="header-section-number">6.1.1</span> Freemium OKR Tools</h3>
-<ul>
-<li>Weekdone</li>
-<li><a href="www.zokri.com">Zokri</a> (This tool integrates with a Trello Board to track OKRs) NA NA NA Key Performance Indicators For The Quarter 2020-05-04 22:41:56 <a href="https://trello.com/c/FDkfShgT" class="uri">https://trello.com/c/FDkfShgT</a> TRUE FALSE<br />
-Metrics, Executive reporting, program level reporting, etc. 16 NA NA NA Metrics and Reporting 2020-05-04 22:41:56 <a href="https://trello.com/c/MaOVV2VC" class="uri">https://trello.com/c/MaOVV2VC</a> TRUE FALSE<br />
-Periodic program newsletter 15 NA NA NA Newsletter 2020-05-04 22:41:56 <a href="https://trello.com/c/1hhkfLFj" class="uri">https://trello.com/c/1hhkfLFj</a> TRUE FALSE<br />
-Human Resources, Physical Resources, Software Resources, etc. 12 NA NA NA Open Requirements 2020-05-04 22:41:56 <a href="https://trello.com/c/o2OSxNYu" class="uri">https://trello.com/c/o2OSxNYu</a> TRUE FALSE<br />
-Key Milestones 9 NA NA NA Milestones &amp; Important Dates 2020-05-04 22:41:56 <a href="https://trello.com/c/vdRVb3rM" class="uri">https://trello.com/c/vdRVb3rM</a> TRUE FALSE<br />
-Key Objectives that the program will focus on in a given time period 7 - Limit Objectives To a Quarter</li>
-<li>Use OKRs to objectively measure progress towards an objective</li>
-</ul>
-<p><strong>OKR Examples</strong>
-- <a href="https://okrexamples.co/">Plenty of OKR examples for different departments in your organization</a></p>
-<p><strong>Freemium OKR Tools</strong>
-- <a href="https://weekdone.com/prices">Weekdone</a>
-- <a href="https://zokri.com/pricing-plans/">Zokri</a> (This tool integrates with a Trello Board to track OKRs) NA NA NA Focus Objectives For The Quarter 2020-05-04 22:41:56 <a href="https://trello.com/c/qvqixygv" class="uri">https://trello.com/c/qvqixygv</a> TRUE FALSE<br />
-New Office Space 2 NA NA NA Open Requirements 2020-05-04 22:41:56 <a href="https://trello.com/c/XqYUe5Xb" class="uri">https://trello.com/c/XqYUe5Xb</a> FALSE FALSE<br />
-New Vendor Onboarding 3 NA NA NA Open Requirements 2020-05-04 22:41:55 <a href="https://trello.com/c/3vaxUYkI" class="uri">https://trello.com/c/3vaxUYkI</a> FALSE FALSE<br />
-Contractor/Employee Offboarding 4 NA NA NA Open Requirements 2020-05-04 22:41:55 <a href="https://trello.com/c/hOqN16zB" class="uri">https://trello.com/c/hOqN16zB</a> FALSE FALSE<br />
-Event Management 5 NA NA NA Open Requirements 2020-05-04 22:41:55 <a href="https://trello.com/c/nSwpm3zh" class="uri">https://trello.com/c/nSwpm3zh</a> FALSE FALSE<br />
-Successfully Release Version 1.0 of product 17 Some KRs could include:</p>
-<ul>
-<li><strong>Get 100 new customers</strong></li>
-<li>0.3: 25 new customers</li>
-<li>0.7: 60 new customers</li>
-<li><p>1.0: 100 new customers</p></li>
-<li><strong>Get featured in Gartner Quadrant</strong></li>
-<li>0.3: Get positive reviews by Gartner Analyst</li>
-<li>0.7: Get featured on the Gartner Niche Players Quadrant</li>
-<li><p>1.0: Get featured on the Visionaries Quadrant</p></li>
-<li><strong>Get 50 reviews by customers</strong></li>
-<li>0.3: 10 customers review the product on a public channel</li>
-<li>0.7: 30 customers review the product on a public channel</li>
-<li><p>1.0: 50 customers review the product on a public channel NA NA Product Focus Objectives For The Quarter 2020-05-04 22:41:55 <a href="https://trello.com/c/4rOLZNMw" class="uri">https://trello.com/c/4rOLZNMw</a> FALSE FALSE<br />
-Increase Recurring Revenue 18 Some examples include:</p></li>
-<li><strong>Achieve $100k in sales for current quarter</strong></li>
-<li><strong>Build pipeline of $150k for upcoming quarter</strong></li>
-<li><p><strong>Sell multi year contract to 50% customers</strong> NA NA Sales &amp; Marketing Focus Objectives For The Quarter 2020-05-04 22:41:55 <a href="https://trello.com/c/KgVOC3qc" class="uri">https://trello.com/c/KgVOC3qc</a> FALSE FALSE<br />
-Improve quality of code 19 Some Examples include</p></li>
-<li><strong>Attain 80% code coverage through unit tests</strong></li>
-<li><strong>Reduce integration tests run time to 15 minutes</strong></li>
-<li><p><strong>Automate 80% regression tests</strong> NA NA Engineering Focus Objectives For The Quarter 2020-05-04 22:41:55 <a href="https://trello.com/c/4Fly9akh" class="uri">https://trello.com/c/4Fly9akh</a> FALSE FALSE<br />
-Average Cycle Time of Stories in a Sprint 20 NA NA Engineering Metrics and Reporting 2020-05-04 22:41:55 <a href="https://trello.com/c/DR0NPWps" class="uri">https://trello.com/c/DR0NPWps</a> FALSE FALSE<br />
-Customer/Account Churn 21 NA NA Sales &amp; Marketing Key Performance Indicators For The Quarter 2020-05-04 22:41:55 <a href="https://trello.com/c/kl12NIc2" class="uri">https://trello.com/c/kl12NIc2</a> FALSE FALSE<br />
-Net Promoter Score 22 NA NA Product, Sales &amp; Marketing Key Performance Indicators For The Quarter 2020-05-04 22:41:55 <a href="https://trello.com/c/sMS6kSyc" class="uri">https://trello.com/c/sMS6kSyc</a> FALSE FALSE<br />
-Release Version 1.0 23 FALSE 2020-09-30 15:00:00 NA Milestones &amp; Important Dates 2020-05-04 22:41:55 <a href="https://trello.com/c/WmK6DLvn" class="uri">https://trello.com/c/WmK6DLvn</a> FALSE FALSE<br />
-Create Deployment Package with New Features Toggled Off <span class="citation">@soniyaahuja2</span> 24 NA NA NA Milestones &amp; Important Dates 2020-05-04 22:41:55 <a href="https://trello.com/c/to59jsAs" class="uri">https://trello.com/c/to59jsAs</a> FALSE FALSE<br />
-Executive summary for program execution, monthly report 25 NA NA NA Metrics and Reporting 2020-05-04 22:41:55 <a href="https://trello.com/c/gjWu5AWu" class="uri">https://trello.com/c/gjWu5AWu</a> FALSE FALSE<br />
-Program health report or RAG report 26 NA NA NA Metrics and Reporting 2020-05-04 22:41:55 <a href="https://trello.com/c/tm1yAQPg" class="uri">https://trello.com/c/tm1yAQPg</a> FALSE FALSE<br />
-Release V1.0 27 NA NA NA Release Management 2020-05-04 22:41:55 <a href="https://trello.com/c/LJPcKiff" class="uri">https://trello.com/c/LJPcKiff</a> FALSE FALSE<br />
-Security certifications 28 NA NA NA Training &amp; Certifications 2020-05-04 22:41:55 <a href="https://trello.com/c/OvAYsa02" class="uri">https://trello.com/c/OvAYsa02</a> FALSE FALSE<br />
-Mandatory skills upgrade training 29 NA NA NA Training &amp; Certifications 2020-05-04 22:41:55 <a href="https://trello.com/c/aCcgmBfL" class="uri">https://trello.com/c/aCcgmBfL</a> FALSE FALSE<br />
-Scrum teams have little to no knowledge on a new tool 30 Trainings have been setup but the knowledge gap possesses a significant risk to timely delivery of commitments NA NA Product, Engineering Risks &amp; Dependencies 2020-05-04 22:41:55 <a href="https://trello.com/c/fwGJrVen" class="uri">https://trello.com/c/fwGJrVen</a> FALSE FALSE<br />
-Penetration Testing and Certification for Release 1.0 31 NA NA NA Finance &amp; Budgeting 2020-05-04 22:41:55 <a href="https://trello.com/c/gNWSiMX7" class="uri">https://trello.com/c/gNWSiMX7</a> FALSE FALSE<br />
-MRR 32 NA NA Sales &amp; Marketing Key Performance Indicators For The Quarter 2020-05-04 22:41:55 <a href="https://trello.com/c/mVLUQa0l" class="uri">https://trello.com/c/mVLUQa0l</a> FALSE FALSE<br />
-New Contractor/Employee 1 NA NA NA Open Requirements 2020-05-04 22:41:55 <a href="https://trello.com/c/d6kUcza1" class="uri">https://trello.com/c/d6kUcza1</a> FALSE FALSE</p></li>
-</ul>
-<pre class="r"><code>length(unique(tidy_cards$Task_Id)) # confirm this matches the number of records (i.e. one task per observation)</code></pre>
-<pre><code>## [1] 0</code></pre>
-</div>
+<pre><code>## Date in ISO8601 format; converting timezone from UTC to &quot;&quot;.
+## Date in ISO8601 format; converting timezone from UTC to &quot;&quot;.</code></pre>
+<pre class="r"><code>length(unique(tidy_cards$Task_ID)) # confirm this matches the number of records (i.e. one task per observation)
+## [1] 32
+
+glimpse(tidy_cards)
+## Rows: 32
+## Columns: 11
+## $ Task                 &lt;chr&gt; &quot;Risks, dependencies, status and mitigation plan…
+## $ Task_ID              &lt;int&gt; 10, 13, 6, 14, 11, 8, 16, 15, 12, 9, 7, 2, 3, 4,…
+## $ Notes                &lt;chr&gt; &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;### OKR Examples\n\n- Plent…
+## $ Done                 &lt;chr&gt; &quot;NA&quot;, &quot;NA&quot;, &quot;NA&quot;, &quot;NA&quot;, &quot;NA&quot;, &quot;NA&quot;, &quot;NA&quot;, &quot;NA&quot;, …
+## $ Date_Due             &lt;dttm&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
+## $ Labels               &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
+## $ Trello_List          &lt;chr&gt; &quot;Risks &amp; Dependencies&quot;, &quot;Release Management&quot;, &quot;E…
+## $ Trello_Last_Modified &lt;dttm&gt; 2020-05-04 22:41:56, 2020-05-04 22:41:56, 2020-…
+## $ Trello_Url           &lt;chr&gt; &quot;https://trello.com/c/gu8n5Tmt&quot;, &quot;https://trello…
+## $ Trello_Attachments   &lt;lgl&gt; TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, …
+## $ Archived             &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE,…</code></pre>
 </div>
 <div id="data-exporting" class="section level2">
 <h2><span class="header-section-number">6.2</span> Data exporting</h2>
@@ -832,9 +562,11 @@ New Contractor/Employee 1 NA NA NA Open Requirements 2020-05-04 22:41:55 <a href
 </div>
 <div id="tidying-in-airtable" class="section level1">
 <h1><span class="header-section-number">7</span> Tidying in Airtable</h1>
-<p>Import CSV into Airtable as a new base
-- <strong>Add a base</strong> &gt; <strong>Import a spreadsheet</strong> &gt; **CSV file*&quot;**. Upload the <em>cards_tidy.csv</em> file. Pick a name and icon for your new base!
-- See also <a href="https://support.airtable.com/hc/en-us/articles/202579399-Import-an-Existing-Spreadsheet-or-CSV-Into-a-New-App#cleanup" class="uri">https://support.airtable.com/hc/en-us/articles/202579399-Import-an-Existing-Spreadsheet-or-CSV-Into-a-New-App#cleanup</a></p>
+<p>Import CSV into Airtable as a new base</p>
+<ul>
+<li><strong>Add a base</strong> &gt; <strong>Import a spreadsheet</strong> &gt; **CSV file*&quot;**. Upload the <em>cards_tidy.csv</em> file. Pick a name and icon for your new base!</li>
+<li>See also <a href="https://support.airtable.com/hc/en-us/articles/202579399-Import-an-Existing-Spreadsheet-or-CSV-Into-a-New-App#cleanup" class="uri">https://support.airtable.com/hc/en-us/articles/202579399-Import-an-Existing-Spreadsheet-or-CSV-Into-a-New-App#cleanup</a></li>
+</ul>
 <div id="task" class="section level2">
 <h2><span class="header-section-number">7.1</span> <code>Task</code></h2>
 <ol style="list-style-type: decimal">
@@ -859,8 +591,10 @@ New Contractor/Employee 1 NA NA NA Open Requirements 2020-05-04 22:41:55 <a href
 <li>Change <code>Labels</code> field type to “multiple select” so that it turns each item in each list into a label.</li>
 </ol>
 <p><em><strong>Optional</strong></em>:
-2. Create a new <code>Projects</code> column next to <code>Labels</code> and use the labels to guide you in creating <code>Project</code> labels/categories: Group the records by <code>Labels</code> field and add to <code>Projects</code> field as appropriate.
-&gt; <strong>Tip:</strong> I recommend creating an <code>NA</code> project from the <code>NA</code> labels so that these tasks aren’t marked as “uncategorized” in the <code>Projects</code> column. Having records with an “empty” assignment gets in the way whenever you want to group by that category. To that end, it’s helpful to group by <code>Project</code> and make sure any “empty” records get assigned to the “NA” <code>Project</code>.</p>
+2. Create a new <code>Projects</code> column next to <code>Labels</code> and use the labels to guide you in creating <code>Project</code> labels/categories: Group the records by <code>Labels</code> field and add to <code>Projects</code> field as appropriate.</p>
+<blockquote>
+<p><strong>Tip:</strong> I recommend creating an <code>NA</code> project from the <code>NA</code> labels so that these tasks aren’t marked as “uncategorized” in the <code>Projects</code> column. Having records with an “empty” assignment gets in the way whenever you want to group by that category. To that end, it’s helpful to group by <code>Project</code> and make sure any “empty” records get assigned to the “NA” <code>Project</code>.</p>
+</blockquote>
 <ol start="3" style="list-style-type: decimal">
 <li>Delete from <code>Labels</code> any labels that were converted to <code>Projects</code> and ungroup the records.</li>
 </ol>
@@ -868,9 +602,13 @@ New Contractor/Employee 1 NA NA NA Open Requirements 2020-05-04 22:41:55 <a href
 <div id="trello_lists" class="section level2">
 <h2><span class="header-section-number">7.5</span> <code>Trello_Lists</code></h2>
 <ol style="list-style-type: decimal">
-<li><p>Convert <code>Trello_Lists</code> column field type into “single select”. This gives us the option of using the Kanban style we were used to in Trello.
-&gt; <strong>Note:</strong> Every record should already be associated with a Trello_List.</p></li>
-<li><p>If you want to replicate the Trello kanban layout, change the order of the single select options in <code>Trello_Lists</code> to match the order from left-to-right of your Trello board</p></li>
+<li>Convert <code>Trello_Lists</code> column field type into “single select”. This gives us the option of using the Kanban style we were used to in Trello.</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> Every record should already be associated with a Trello_List.</p>
+</blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>If you want to replicate the Trello kanban layout, change the order of the single select options in <code>Trello_Lists</code> to match the order from left-to-right of your Trello board</li>
 </ol>
 </div>
 <div id="trello_url" class="section level2">
@@ -886,19 +624,25 @@ New Contractor/Employee 1 NA NA NA Open Requirements 2020-05-04 22:41:55 <a href
 <li>Create a new <code>Attachments</code> with field type “attachment”. This is where you’ll upload your downloaded attachments.</li>
 <li>Filter your records by <code>Trello_Attachments</code> so only show “TRUE” results</li>
 <li>Sort records by <code>Task_ID</code> and simplify your view by temporarily hiding all columns except for <code>Task_Name</code> (primary field), <code>Task_ID</code>, <code>Trello_Attachments</code>, and the new <code>Attachments</code> column.</li>
-<li><p>Open your local <em>attachments</em> folder and drag and drop the files to their corresponding <code>Attachments</code> field according to their <code>Task_ID</code> in the filename.
-&gt; <strong>Tip:</strong> Increase the height of the records for this step. It’ll make it easier to make sure you’re dragging and dropping to the correct record</p></li>
+<li>Open your local <em>attachments</em> folder and drag and drop the files to their corresponding <code>Attachments</code> field according to their <code>Task_ID</code> in the filename.</li>
+</ol>
+<blockquote>
+<p><strong>Tip:</strong> Increase the height of the records for this step. It’ll make it easier to make sure you’re dragging and dropping to the correct record</p>
+</blockquote>
+<ol start="6" style="list-style-type: decimal">
 <li>If you encountered errors downloading some of your attachment URLs, now is the time to check your local <em>attachment_errors.csv</em> file for the URLs with errors during the download process. These are attachments you’ll have to find elsewhere and upload to the <code>Attachments</code> field as needed.</li>
-<li><p>Remove the filter to your view and unhide any columns you wish to remain visible.</p></li>
+<li>Remove the filter to your view and unhide any columns you wish to remain visible.</li>
 </ol>
 </div>
 <div id="done-archived" class="section level2">
 <h2><span class="header-section-number">7.8</span> <code>Done</code> &amp; <code>Archived</code></h2>
 <ol style="list-style-type: decimal">
 <li>Convert the <code>Done</code> and <code>Archived</code> field types to “Checkbox” and it will automatically assign a “check” to all records marked “TRUE” and leave the ones marked “FALSE” or “NA” unchecked. So easy!</li>
-<li>There is no direct option to “archive” tasks that have been completed like you can do in Trello, <em>but</em> you can apply a filter to your table view to hide the tasks that are complete. To do this, set the filter so that the <code>Done</code> and <code>Archived</code> fields are unchecked.
-&gt; <strong>Note:</strong> This must be repeated for each saved View of your records.</li>
+<li>There is no direct option to “archive” tasks that have been completed like you can do in Trello, <em>but</em> you can apply a filter to your table view to hide the tasks that are complete. To do this, set the filter so that the <code>Done</code> and <code>Archived</code> fields are unchecked.</li>
 </ol>
+<blockquote>
+<p><strong>Note:</strong> This must be repeated for each saved View of your records.</p>
+</blockquote>
 </div>
 </div>
 <div id="moving-forward" class="section level1">
