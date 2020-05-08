@@ -10,6 +10,7 @@ summary: 'Tutorial on how to migrate your current Trello board to an Airtable ba
 authors: [admin]
 lastmod: '2020-05-06T21:47:11-04:00'
 featured: yes
+draft: yes
 image:
   caption: ''
   focal_point: ''
