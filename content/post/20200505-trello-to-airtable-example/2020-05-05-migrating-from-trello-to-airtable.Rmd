@@ -21,6 +21,7 @@ output:
     toc: true
     number_sections: true
     toc_depth: 1
+    code_download: true
 ---
 
 ![](/post/2020-05-05-migrating-from-trello-to-airtable/trello-to-airtable-main.png)
