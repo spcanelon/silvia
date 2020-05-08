@@ -16,7 +16,7 @@ baseurl = "https://silvia.rbind.io/"
 copyright = ""
 
 # Enable analytics by entering your Google Analytics tracking ID
-googleAnalytics = ""
+googleAnalytics = "UA-165907306-1"
 
 ############################
 ## Advanced options below ##
