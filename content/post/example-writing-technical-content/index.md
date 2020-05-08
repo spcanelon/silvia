@@ -189,11 +189,11 @@ renders as
 Academic supports a Markdown extension for asides, also referred to as *notices* or *hints*. By prefixing a paragraph with `A>`, it will render as an aside. You can enable this feature by adding `markup: mmark` to your page front matter, or alternatively using the [*Alert* shortcode](https://sourcethemes.com/academic/docs/writing-markdown-latex/#alerts).
 
 ```markdown
-A> A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
+{{% alert note %}} A Markdown aside shortcode is useful for displaying notices, hints, or definitions to your readers. {{% /alert %}}
 ```
 
 renders as
 
-A> A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
+{{% alert note %}} A Markdown aside shortcode is useful for displaying notices, hints, or definitions to your readers. {{% /alert %}}
 
 ### Did you find this page helpful? Consider sharing it 🙌
