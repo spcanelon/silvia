@@ -49,8 +49,7 @@ org_name = ""
 description = ""
 
 # Display a logo in navigation bar rather than title (optional).
-#   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
-logo = ""
+#   To enable, place an image in `assets/images/logo.png` and it's automatically detected
 
 ############################
 ## Site Features
