@@ -21,10 +21,6 @@ image:
   focal_point: Center
   preview_only: false
 
-links:
-- name:
-  url:
-
 projects:
 
 publication: medRxiv
