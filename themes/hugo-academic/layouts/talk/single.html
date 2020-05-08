@@ -27,6 +27,7 @@
     </div>
     <div class="d-md-none space-below"></div>
 
+    {{ if .Params.event }}
     <div class="row">
       <div class="col-md-1"></div>
       <div class="col-md-10">
@@ -42,6 +43,7 @@
       <div class="col-md-1"></div>
     </div>
     <div class="d-md-none space-below"></div>
+    {{ end }}
 
     {{ if .Params.location }}
     <div class="row">
@@ -51,15 +53,8 @@
           <div class="col-12 col-md-3 pub-row-heading">{{ i18n "location" }}</div>
           <div class="col-12 col-md-9">{{ .Params.location | markdownify }}</div>
           {{ if .Params.address }}
-            {{ $addr := slice }}
-            {{with .Params.address.street}}{{$addr = $addr | append .}}{{end}}
-            {{with .Params.address.city}}{{$addr = $addr | append .}}{{end}}
-            {{with .Params.address.region}}{{$addr = $addr | append .}}{{end}}
-            {{with .Params.address.postcode}}{{$addr = $addr | append .}}{{end}}
-            {{with .Params.address.country}}{{$addr = $addr | append .}}{{end}}
-            {{ $addr_formatted := delimit $addr (site.Params.list_delimiter | default ", ") }}
             <div class="col-md-3"></div>
-            <div class="col-12 col-md-9">{{$addr_formatted}}</div>
+            <div class="col-12 col-md-9">{{partial "functions/get_address" (dict "root" . "address" .Params.address) }}</div>
           {{end}}
         </div>
       </div>
@@ -74,18 +69,8 @@
       {{ .Content }}
     </div>
 
-    {{ partial "tags.html" . }}
-    {{ partial "page_author.html" . }}
-
-    {{ partial "comments" . }}
+    {{ partial "page_footer" . }}
 
   </div>
 </div>
-
-{{ if site.Params.section_pager }}
-<div class="article-container article-widget">
-  {{ partial "section_pager.html" . }}
-</div>
-{{ end }}
-
 {{- end -}}
