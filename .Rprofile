@@ -9,5 +9,7 @@ options(
   blogdown.subdir = "post",
   blogdown.yaml.empty = TRUE,
   blogdown.new_bundle = TRUE,
-  blogdown.title_case = TRUE
+  blogdown.title_case = TRUE,
+  blogdown.draft = TRUE,
+  blogdown.image.placement = 1
 )
