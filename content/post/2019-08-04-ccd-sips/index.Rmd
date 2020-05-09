@@ -1,0 +1,30 @@
+---
+title: 'Philly Center City Sips 2019: An Interactive Map'
+author: Silvia Canelón
+date: '2019-08-04'
+slug: ccd-sips
+categories: []
+tags:
+  - mapping
+  - R
+subtitle: 'An interactive map showing restaurants participating in Philly’s Center City District Sips 2019.'
+summary: 'An interactive map showing restaurants participating in Philly’s Center City District Sips 2019.'
+authors: []
+lastmod: ''
+featured: yes
+image:
+  caption: '[Image credit: Silvia Canelón](featured.png)'
+  focal_point: 'Center'
+  preview_only: no
+projects: []
+---
+
+An [interactive map](https://spcanelon.github.io/CCDSips2019.html/) showing restaurants participating in Philly’s 2019 [Center City District Sips](https://centercityphila.org/explore-center-city/ccdsips)
+
+
+<iframe
+    src="https://spcanelon.github.io/CCDSips2019.html">
+    width= "100%"
+    height= "100%"
+    style="border:none">
+</iframe>
