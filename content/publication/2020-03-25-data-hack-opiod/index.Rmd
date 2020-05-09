@@ -1,8 +1,14 @@
 ---
-title: "Visualizing the Inside Journey of Recovery from Opioid Use Disorder"
-
+title: 'Visualizing the Inside Journey of Recovery from Opioid Use Disorder'
+author: 
+date: '2020-03-25'
+slug: data-hack-opiod
+categories: []
+tags:
+  - data hack
+  - opioid
 authors:
-- admin
+- Silvia Canelón
 - Pete Arriaza
 - Vince Giorno
 - Alyssa Hernandez
@@ -13,73 +19,41 @@ authors:
 - Laura Mullin
 - Jessica Streeter
 - Catherine Weiss
-
-summary:  Code for Philly 2020 Opioid Data Hackathon project to better understand recovery from opioid use disorder.
-
-abstract:
-
-date: "2020-03-25T00:00:00Z"
-doi: ""
-
-featured: false
-
-# Placement options: 1 = Full column width, 2 = Out-set, 3 = Screen-width
-# Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
-# Set `preview_only` to `true` to just use the image for thumbnails.
-
-image:
-  caption: Schematic representation of the Medication Assisted Treatment (MAT) referral process pipeline as part of the recovery process for an individual with opioid use disorder.
-  placement: 3
-  focal_point: Center
-  preview_only: false
-
-links:
-- name: Data Hackathon Presentation Slides
-  url: https://github.com/CodeForPhilly/datahack2020/raw/master/analyses/team11/Presentation/Team11_March17_Presentation.pptx
-- name: Lab Meeting Presentation Slides
-  url: https://slides.com/spcanelon/2020datahack
-- name: Empathy Tool Mockup
-  url: https://codeforphilly.github.io/datahack2020/analyses/team11/
-
-projects:
-
-publication:
-publication_short:
+doi: ''
+publishDate: ''
 publication_types:
-- "4"
-publishDate: "2020-03-25T00:00:00Z"
-
-slides:
-
-tags:
-- opioid
-- data hack
-
-url_code:
-url_dataset:
+  - '4'
+publication: ''
+publication_short: ''
+abstract: ''
+summary: 'Code for Philly 2020 Opioid Data Hackathon project to better understand recovery from opioid use disorder.'
+featured: no
 url_pdf: https://github.com/CodeForPhilly/datahack2020/blob/master/analyses/team11/Final%20Report/2020_DataHackathon_Team11_FinalReport.pdf
-url_poster:
-url_project:
-url_slides:
-url_source:
-url_video:
+url_code: ~
+url_dataset: ~
+url_poster: ~
+url_project: ''
+url_source: https://codeforphilly.github.io/datahack2020/analyses/team11/)
+url_slides: https://slides.com/spcanelon/2020datahack/embed
+url_video: ~
+image:
+  caption: '[Image credit: Silvia Canelón](featured.png)'
+  placement: 3
+  focal_point: 'Center'
+  preview_only: no
+projects: []
+slides: ''
 ---
+
 # 2020 Opioid Data Hackathon
 This year I participated in the 2020 Opioid Data Hackathon as part of a team tasked with creating ways to visualize the opioid use disorder recovery process to identify barriers and build understanding in the general public.
 
 I went into it thinking I might explore some interesting datasets to generate maps, and my teammates were on a similar wavelength. It didn't take long to realize the kind of information needed to understand what it's like to engage in recovery didn't live in quantitative datasets. So we endeavored to collect our own qualitative data instead! We conducted interviews with our partner organizations and other major players in Philly as part of this storytelling project.
 
-**Our team's final report, presentation, and "scrollytelling" mock-up are linked above**. The slide deck included below was created for a lab meeting presentation and summarizes the content.
+**Our team's final report and "scrollytelling" mock-up are linked above**. There's also a slide deck linked above that I created for a lab meeting presentation and that summarizes the content.
 
-<iframe
-  src="https://slides.com/spcanelon/2020datahack/embed"
-  width="700"; height="450"; scrolling="no"; frameborder="0";
-  margin-left: auto;
-  margin-right: auto;
-  webkitallowfullscreen; mozallowfullscreen; allowfullscreen>
-</iframe>
+Be sure to check out these **Freakonomics Radio podcast episodes** to learn more about the **opioid crisis in Philly**:
 
-**Be sure to check out these Freakonomics Radio podcast episodes to learn more about the opioid crisis in Philly:**
 - [Part 1: "We've Addicted an Entire Generation"](https://freakonomics.com/podcast/opioids-part-1/)
 - [Part 2: "It's Not a Death Sentence"](https://freakonomics.com/podcast/opioids-part-2/)
 
@@ -99,6 +73,7 @@ Recovery from opioid dependency often is a long and difficult journey, and it wi
 
 # Recurring Themes in Recovery
 We observed a number of recurring themes in the qualitative data collected.
+
 - **Every recovery path is unique.** Often, a person’s recovery is non-linear, includes setbacks and does not have a clear end point. This can make visualizing a journey difficult, because there is no “typical” recovery.
 - **The perfect recovery process is the one perfect for that person.** The best recovery process is one that meets an individual exactly where they are, free of external barriers and judgment, and full of respect and compassion.
 - **Relapse can happen during recovery.** An individual can relapse but this does not mean that their recovery is over.
