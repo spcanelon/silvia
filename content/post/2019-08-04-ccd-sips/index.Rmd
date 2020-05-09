@@ -2,7 +2,6 @@
 title: 'Philly Center City Sips 2019: An Interactive Map'
 author: Silvia Canelón
 date: '2019-08-04'
-draft: no
 slug: ccd-sips
 categories: []
 tags:
