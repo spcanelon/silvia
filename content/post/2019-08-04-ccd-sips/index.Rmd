@@ -15,7 +15,7 @@ lastmod: ''
 featured: yes
 image:
   caption: '[Image credit: Silvia Canelón](featured.png)'
-  placement: 1
+  placement: 2
   focal_point: 'Center'
   preview_only: no
 projects: []
@@ -26,7 +26,7 @@ An [interactive map](https://spcanelon.github.io/CCDSips2019.html/) showing rest
 
 <iframe
     src="https://spcanelon.github.io/CCDSips2019.html">
-    width= "100%"
-    height= "100%"
+    width= "1000px"
+    height= "500px"
     style="border:none">
 </iframe>
