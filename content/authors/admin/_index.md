@@ -2,7 +2,7 @@
 avatar_image: "avatar.jpg"
 
 authors:
-- admin
+- silvia
 
 bio: "Biomedical engineer turned informatician, curious about all intersections of data and society. Pronouns: she/her."
 
@@ -33,18 +33,22 @@ social:
 # - icon: envelope
 #   icon_pack: fas
 #   link: ''
-- icon: linkedin
-  icon_pack: fab
-  link: https://linkedin.com/in/spcanelon
+
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/spcanelon
-- icon: google-scholar
-  icon_pack: ai
-  link: https://scholar.google.com/citations?user=GAzkvpcAAAAJ&hl=en&oi=ao
 - icon: github
   icon_pack: fab
   link: https://github.com/spcanelon
+- icon: orcid
+  icon_pack: ai
+  link: https://orcid.org/0000-0003-1709-1394
+- icon: google-scholar
+  icon_pack: ai
+  link: https://scholar.google.com/citations?user=GAzkvpcAAAAJ&hl=en&oi=ao
+- icon: linkedin
+  icon_pack: fab
+  link: https://linkedin.com/in/spcanelon
 superuser: true
 user_groups:
 - Researchers
