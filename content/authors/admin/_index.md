@@ -1,10 +1,25 @@
 ---
+title: Silvia P. Canelón
 avatar_image: "avatar.jpg"
 
 authors:
 - silvia
 
 bio: "Biomedical engineer turned informatician, curious about all intersections of data and society. Pronouns: she/her."
+
+organizations:
+- name: University of Pennsylvania
+  url: ""
+
+role: Postdoctoral Research Scientist
+social:
+
+interests:
+- Reproductive & sexual health
+- Prenatal & perinatal health
+- Social determinants of health
+- Environmental exposures
+- Data science
 
 education:
   courses:
@@ -14,26 +29,8 @@ education:
   - course: B.S. in Biomedical Engineering
     institution: University of Minnesota
     year: 2012
-email: ""
 
-interests:
-- Reproductive & sexual health
-- Prenatal & perinatal health
-- Social determinants of health
-- Environmental exposures
-
-name: Silvia P. Canelón
-
-organizations:
-- name: University of Pennsylvania
-  url: ""
-
-role: Postdoctoral Research Scientist
 social:
-# - icon: envelope
-#   icon_pack: fas
-#   link: ''
-
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/spcanelon
@@ -55,4 +52,4 @@ user_groups:
 - Visitors
 ---
 
-**Hello, and welcome!** I'm a postdoctoral research scientist in the [Department of Biostatistics, Epidemiology, and Informatics](https://www.dbei.med.upenn.edu/) at the University of Pennsylvania Perelman School of Medicine. My research interests include applications of biomedical informatics in the public and population health fields. I work in the [Boland Lab](https://www.med.upenn.edu/bolandlab/) on projects that develop novel data mining methods to extract pregnancy-related information from Electronic Health Records (EHR) and study the relationship between environment and disease.
+**Hello, and welcome!** I'm a postdoctoral research scientist in the [Department of Biostatistics, Epidemiology, and Informatics](https://www.dbei.med.upenn.edu/) at the University of Pennsylvania Perelman School of Medicine. My research interests include applications of biomedical informatics in the public and population health fields. I work in the [Boland Lab](https://www.med.upenn.edu/bolandlab/) on projects that develop novel data mining methods to extract pregnancy-related information from Electronic Health Records (EHR) and study the relationship between environment and disease. R has become an instrumental part of my research workflow and has begun making appearances elsewhere in my life. You can keep up with my R tinkering in [posts](post) and my research interests in [publications](publication). **Thanks** for stopping by!
