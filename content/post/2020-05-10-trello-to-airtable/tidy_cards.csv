@@ -1,0 +1,71 @@
+"","Task","Task_ID","Notes","Done","Date_Due","Labels","Trello_List","Trello_Last_Modified","Trello_Url","Trello_Attachments","Archived"
+"1","Risks, dependencies, status and mitigation plan",10,"","NA",NA,NA,"Risks & Dependencies",2020-05-04 22:41:56,"https://trello.com/c/gu8n5Tmt",TRUE,FALSE
+"2","Upcoming Releases and Tracking",13,"","NA",NA,NA,"Release Management",2020-05-04 22:41:56,"https://trello.com/c/4OQRBxPV",TRUE,FALSE
+"3","All Hands, team events, celebrations, etc.",6,"","NA",NA,NA,"Event Management",2020-05-04 22:41:56,"https://trello.com/c/mRdBW48X",TRUE,FALSE
+"4","Product Certifications, Mandatory Training, etc.",14,"","NA",NA,NA,"Training & Certifications",2020-05-04 22:41:56,"https://trello.com/c/YNMqwJtO",TRUE,FALSE
+"5","Financial metrics and health",11,"","NA",NA,NA,"Finance & Budgeting",2020-05-04 22:41:56,"https://trello.com/c/5JndsPfg",TRUE,FALSE
+"6","KPIs or OKRs and their current state vs desired state",8,"### OKR Examples
+
+- Plenty of OKR examples for different departments in your organization
+
+### Freemium OKR Tools
+
+- Weekdone
+- [Zokri](www.zokri.com)  (This tool integrates with a Trello Board to track OKRs)","NA",NA,NA,"Key Performance Indicators For The Quarter",2020-05-04 22:41:56,"https://trello.com/c/FDkfShgT",TRUE,FALSE
+"7","Metrics, Executive reporting, program level reporting, etc.",16,"","NA",NA,NA,"Metrics and Reporting",2020-05-04 22:41:56,"https://trello.com/c/MaOVV2VC",TRUE,FALSE
+"8","Periodic program newsletter",15,"","NA",NA,NA,"Newsletter",2020-05-04 22:41:56,"https://trello.com/c/1hhkfLFj",TRUE,FALSE
+"9","Human Resources, Physical Resources, Software Resources, etc.",12,"","NA",NA,NA,"Open Requirements",2020-05-04 22:41:56,"https://trello.com/c/o2OSxNYu",TRUE,FALSE
+"10","Key Milestones",9,"","NA",NA,NA,"Milestones & Important Dates",2020-05-04 22:41:56,"https://trello.com/c/vdRVb3rM",TRUE,FALSE
+"11","Key Objectives that the program will focus on in a given time period",7,"- Limit Objectives To a Quarter
+- Use OKRs to objectively measure progress towards an objective
+
+**OKR Examples**
+- [Plenty of OKR examples for different departments in your organization](https://okrexamples.co/)
+
+**Freemium OKR Tools**
+- [Weekdone](https://weekdone.com/prices)
+- [Zokri](https://zokri.com/pricing-plans/) (This tool integrates with a Trello Board to track OKRs)","NA",NA,NA,"Focus Objectives For The Quarter",2020-05-04 22:41:56,"https://trello.com/c/qvqixygv",TRUE,FALSE
+"12","New Office Space",2,"","NA",NA,NA,"Open Requirements",2020-05-04 22:41:56,"https://trello.com/c/XqYUe5Xb",FALSE,FALSE
+"13","New Vendor Onboarding",3,"","NA",NA,NA,"Open Requirements",2020-05-04 22:41:55,"https://trello.com/c/3vaxUYkI",FALSE,FALSE
+"14","Contractor/Employee Offboarding",4,"","NA",NA,NA,"Open Requirements",2020-05-04 22:41:55,"https://trello.com/c/hOqN16zB",FALSE,FALSE
+"15","Event Management",5,"","NA",NA,NA,"Open Requirements",2020-05-04 22:41:55,"https://trello.com/c/nSwpm3zh",FALSE,FALSE
+"16","Successfully Release Version 1.0 of product",17,"Some KRs could include:
+
+- **Get 100 new customers**
+- 0.3: 25 new customers
+- 0.7: 60 new customers
+- 1.0: 100 new customers
+
+- **Get featured in Gartner Quadrant**
+- 0.3: Get positive reviews by Gartner Analyst
+- 0.7: Get featured on the Gartner Niche Players Quadrant
+- 1.0: Get featured on the Visionaries Quadrant
+
+- **Get 50 reviews by customers**
+- 0.3: 10 customers review the product on a public channel
+- 0.7: 30 customers review the product on a public channel
+- 1.0: 50 customers review the product on a public channel","NA",NA,"Product","Focus Objectives For The Quarter",2020-05-04 22:41:55,"https://trello.com/c/4rOLZNMw",FALSE,FALSE
+"17","Increase Recurring Revenue",18,"Some examples include:
+
+- **Achieve $100k in sales for current quarter**
+- **Build pipeline of $150k for upcoming quarter**
+- **Sell multi year contract to 50% customers**","NA",NA,"Sales & Marketing","Focus Objectives For The Quarter",2020-05-04 22:41:55,"https://trello.com/c/KgVOC3qc",FALSE,FALSE
+"18","Improve quality of code",19,"Some Examples include
+
+- **Attain 80% code coverage through unit tests**
+- **Reduce integration tests run time to 15 minutes**
+- **Automate 80% regression tests**","NA",NA,"Engineering","Focus Objectives For The Quarter",2020-05-04 22:41:55,"https://trello.com/c/4Fly9akh",FALSE,FALSE
+"19","Average Cycle Time of Stories in a Sprint",20,"","NA",NA,"Engineering","Metrics and Reporting",2020-05-04 22:41:55,"https://trello.com/c/DR0NPWps",FALSE,FALSE
+"20","Customer/Account Churn",21,"","NA",NA,"Sales & Marketing","Key Performance Indicators For The Quarter",2020-05-04 22:41:55,"https://trello.com/c/kl12NIc2",FALSE,FALSE
+"21","Net Promoter Score",22,"","NA",NA,"Product, Sales & Marketing","Key Performance Indicators For The Quarter",2020-05-04 22:41:55,"https://trello.com/c/sMS6kSyc",FALSE,FALSE
+"22","Release Version 1.0",23,"","FALSE",2020-09-30 15:00:00,NA,"Milestones & Important Dates",2020-05-04 22:41:55,"https://trello.com/c/WmK6DLvn",FALSE,FALSE
+"23","Create Deployment Package with New Features Toggled Off @soniyaahuja2",24,"","NA",NA,NA,"Milestones & Important Dates",2020-05-04 22:41:55,"https://trello.com/c/to59jsAs",FALSE,FALSE
+"24","Executive summary for program execution, monthly report",25,"","NA",NA,NA,"Metrics and Reporting",2020-05-04 22:41:55,"https://trello.com/c/gjWu5AWu",FALSE,FALSE
+"25","Program health report or RAG report",26,"","NA",NA,NA,"Metrics and Reporting",2020-05-04 22:41:55,"https://trello.com/c/tm1yAQPg",FALSE,FALSE
+"26","Release V1.0",27,"","NA",NA,NA,"Release Management",2020-05-04 22:41:55,"https://trello.com/c/LJPcKiff",FALSE,FALSE
+"27","Security certifications",28,"","NA",NA,NA,"Training & Certifications",2020-05-04 22:41:55,"https://trello.com/c/OvAYsa02",FALSE,FALSE
+"28","Mandatory skills upgrade training",29,"","NA",NA,NA,"Training & Certifications",2020-05-04 22:41:55,"https://trello.com/c/aCcgmBfL",FALSE,FALSE
+"29","Scrum teams have little to no knowledge on a new tool",30,"Trainings have been setup but the knowledge gap possesses a significant risk to timely delivery of commitments","NA",NA,"Product, Engineering","Risks & Dependencies",2020-05-04 22:41:55,"https://trello.com/c/fwGJrVen",FALSE,FALSE
+"30","Penetration Testing and Certification for Release 1.0",31,"","NA",NA,NA,"Finance & Budgeting",2020-05-04 22:41:55,"https://trello.com/c/gNWSiMX7",FALSE,FALSE
+"31","MRR",32,"","NA",NA,"Sales & Marketing","Key Performance Indicators For The Quarter",2020-05-04 22:41:55,"https://trello.com/c/mVLUQa0l",FALSE,FALSE
+"32","New Contractor/Employee",1,"","NA",NA,NA,"Open Requirements",2020-05-04 22:41:55,"https://trello.com/c/d6kUcza1",FALSE,FALSE
