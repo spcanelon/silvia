@@ -1,13 +1,15 @@
 ---
 title: 'Investigating Pregnancy-Related Health Outcomes Among Patients with Sickle Cell Disease and Linking with Health Disparities'
-author: Silvia Canelón
+author:
 date: '2019-11-20'
 slug: amia-annual-symposium
 categories: []
 tags:
   - AMIA
   - poster
-authors: []
+authors:
+- Silvia Canelón
+- Mary Regina Boland
 doi: ''
 publishDate: ''
 publication_types:
@@ -20,7 +22,7 @@ featured: no
 url_pdf: ~
 url_code: ~
 url_dataset: ~
-url_poster: 2019_AMIA_annual_symposium.pdf
+url_poster: ~
 url_project: ~
 url_slides: ~
 url_source: ~
@@ -32,6 +34,9 @@ image:
   preview_only: no
 projects: []
 slides: ''
+links:
+  - name: <i class="fas fa-file-pdf"></i> Poster
+    url: 2019_AMIA_annual_symposium.pdf
 ---
 
 Poster presented at the 2019 American Medical Informatics Association Annual Symposium held November 16th-20th in Washington D.C.
