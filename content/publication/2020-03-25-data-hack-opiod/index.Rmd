@@ -1,6 +1,6 @@
 ---
 title: 'Visualizing the Inside Journey of Recovery from Opioid Use Disorder'
-author: 
+author:
 date: '2020-03-25'
 slug: data-hack-opiod
 categories: []
@@ -28,14 +28,6 @@ publication_short: ''
 abstract: ''
 summary: 'Code for Philly 2020 Opioid Data Hackathon project to better understand recovery from opioid use disorder.'
 featured: no
-url_pdf:
-url_code: ~
-url_dataset: ~
-url_poster: ~
-url_project: ''
-url_source: https://github.com/CodeForPhilly/datahack2020/tree/master/analyses/team11
-url_slides: ~
-url_video: ~
 image:
   caption: '[Image credit: Silvia Canelón](featured.png)'
   placement: 3
@@ -44,13 +36,25 @@ image:
 projects: []
 slides: ''
 links:
-- name: 'Data Hackathon Final Report'
+- icon: github
+  icon_pack: fab
+  name: Repo
+  url: https://github.com/CodeForPhilly/datahack2020/tree/master/analyses/team11
+- icon: file-pdf
+  icon_pack: fas
+  name: Data Hackathon Final Report
   url: https://github.com/CodeForPhilly/datahack2020/blob/master/analyses/team11/Final%20Report/2020_DataHackathon_Team11_FinalReport.pdf
-- name: 'Data Hackathon Presentation Slides'
+- icon: images
+  icon_pack: fas
+  name: Data Hackathon Presentation Slides
   url: https://github.com/CodeForPhilly/datahack2020/raw/master/analyses/team11/Presentation/Team11_March17_Presentation.pptx
-- name: 'Lab Meeting Presentation Slides'
+- icon: images
+  icon_pack: fas
+  name: Lab Meeting Presentation Slides
   url: https://slides.com/spcanelon/2020datahack
-- name: 'Empathy Tool Mockup'
+- icon: hand-holding-heart
+  icon_pack: fas
+  name: 'Empathy Tool Mockup'
   url: https://codeforphilly.github.io/datahack2020/analyses/team11/
 ---
 
@@ -70,7 +74,7 @@ Be sure to check out these **Freakonomics Radio podcast episodes** to learn more
 - [Code for Philly ](https://codeforphilly.org/)
 - [DataPhilly](https://www.meetup.com/DataPhilly/)
 - [Philly Data Jawn](https://www.rladiesphilly.org/)
-- [City of Philadelphia](https://www.phila.gov/programs/combating-the-opioid-epidemic/)   
+- [City of Philadelphia](https://www.phila.gov/programs/combating-the-opioid-epidemic/)
 
 ## Partner organizations/interviewees
 - [Prevention Point Prevention](https://ppponline.org/): drop-in, medical, mobile clinic, and re-entry case managers.
