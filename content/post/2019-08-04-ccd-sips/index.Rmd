@@ -19,13 +19,13 @@ image:
   preview_only: no
 projects: []
 links:
-- name: 'Interactive Map'
+- name: '<i class="fas fa-map-marked-alt"></i> Interactive Map'
   url: https://spcanelon.github.io/CCDSips2019.html
 ---
 
 I used **R** to play around with **webscraping** and create an [interactive map](https://spcanelon.github.io/CCDSips2019.html/) showing restaurants participating in Philly’s 2019 [Center City District Sips](https://centercityphila.org/explore-center-city/ccdsips). Center City Sips is a series of summer Wednesday evenings filled with **happy hour specials**.
 
-This mini-project was motivated by two of my close friends' frustration with the website shortcomings. **The information was presented beautifully, but there was no map view**! This made it difficult to figure out what happy hours you could check out nearby. 
+This mini-project was motivated by two of my close friends' frustration with the website shortcomings. **The information was presented beautifully, but there was no map view**! This made it difficult to figure out what happy hours you could check out nearby.
 
 The map pop-ups could use information on the specials for each restaurant, but my newly acquired skills with the `RSelenium` and `Leaflet` packages weren't quite up to the task! **Suggestions and advice are welcome!**
 
