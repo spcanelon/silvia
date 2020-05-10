@@ -1,6 +1,5 @@
 ---
 title: 'Is Hydroxychloroquine Safe During Pregnancy? Observations from Penn Medicine'
-author: Silvia Canelón
 date: '2020-05-06'
 slug: preprint-hydroxychloroquine-pregnancy
 categories: []
@@ -10,7 +9,7 @@ tags:
   - pregnancy
 authors:
   - Lena M. Davidson
-  - Silvia P. Canelón
+  - silvia
   - Mary Regina Boland
 doi:
 publishDate: '2020-05-08T20:26:47-04:00'
