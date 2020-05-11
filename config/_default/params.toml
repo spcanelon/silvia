@@ -20,7 +20,7 @@ day_night = false
 #   Latest font sets (may require updating): https://sourcethemes.com/academic/themes/
 #   Browse built-in font sets in `themes/academic/data/fonts/`
 #   Browse user installed font sets in `data/fonts/`
-font = "Rose"
+font = "silvia"
 
 # Choose a font size.
 # Sizes: XS (extra small), S (small), M (medium), L (large - DEFAULT), XL (extra large)
@@ -58,8 +58,11 @@ description = ""
 # Enable source code highlighting? true/false
 # Documentation: https://sourcethemes.com/academic/docs/writing-markdown-latex/#highlighting-options
 highlight = true
-highlight_languages = ["r"]  # Add support for highlighting additional languages
-#highlight_style = "monokai"  # For supported styles, see https://cdnjs.com/libraries/highlight.js/
+highlight_languages = ["r", "yaml"]  # Add support for highlighting additional languages
+highlight_style = "atelier-estuary-light"
+#highlight_style = "arduino-light"
+highlight_version = "10.0.2"
+# For supported styles, see css options at https://cdnjs.com/libraries/highlight.js/
 
 # Enable LaTeX math rendering? true/false
 #   If false, you can enable math on a per page basis as needed.
@@ -111,7 +114,7 @@ office_hours = '' #["Monday 10:00 to 13:00", "Wednesday 09:00 to 10:00"]
 # Contact links
 #   Set to `[]` to disable, or comment out unwanted lines with a hash `#`.
 contact_links = [
-  {icon = "twitter", icon_pack = "fab", name = "DM Me", link = "https://twitter.com/spcanelon"},
+  {icon = "twitter", icon_pack = "fab", name = "Find me on Twitter", link = "https://twitter.com/spcanelon"},
   #{icon = "skype", icon_pack = "fab", name = "Skype Me", link = "skype:echo123?call"},
   #{icon = "keybase", icon_pack = "fab", name = "Chat on Keybase", link = "https://keybase.io/"},
   #{icon = "comments", icon_pack = "fas", name = "Discuss on Forum", link = "https://discourse.gohugo.io"},
@@ -126,7 +129,7 @@ contact_links = [
 sharing_image = ""
 
 # Twitter username (without @). Used when a visitor shares your site on Twitter.
-twitter = ""
+twitter = "spcanelon"
 
 ############################
 ## Regional Settings
@@ -266,5 +269,5 @@ plugins_js  = []
 ## Marketing
 ############################
 [marketing]
-  google_analytics = ""
+  google_analytics = "UA-165907306-1"
   google_tag_manager = ""
