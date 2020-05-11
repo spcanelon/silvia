@@ -12,7 +12,7 @@ summary: 'Tutorial on how to migrate your current Trello board to an Airtable ba
 authors: []
 lastmod: '2020-05-09T23:19:13-04:00'
 featured: yes
-draft: no
+draft: yes
 image:
   caption: '[Trello to Airtable migration using the example in this tutorial](featured.png)'
   focal_point: 'Center'
@@ -458,7 +458,7 @@ I recommend creating an <code>NA</code> project from the <code>NA</code> labels 
 </ol>
 <p>{{% alert note %}}
 Every record should already be associated with a Trello_List.
-{{ /alert %}}</p>
+{{% /alert %}}</p>
 <ol start="2" style="list-style-type: decimal">
 <li>If you want to replicate the Trello kanban layout, change the order of the single select options in <code>Trello_Lists</code> to match the order from left-to-right of your Trello board</li>
 </ol>
@@ -480,7 +480,7 @@ Every record should already be associated with a Trello_List.
 </ol>
 <p>{{% alert note %}}
 Increase the height of the records for this step. It’ll make it easier to make sure you’re dragging and dropping to the correct record
-{{ /alert %}}</p>
+{{% /alert %}}</p>
 <ol start="6" style="list-style-type: decimal">
 <li>If you encountered errors downloading some of your attachment URLs, now is the time to check your local <em>attachment_errors.csv</em> file for the URLs with errors during the download process. These are attachments you’ll have to find elsewhere and upload to the <code>Attachments</code> field as needed.</li>
 <li>Remove the filter to your view and unhide any columns you wish to remain visible.</li>
@@ -492,9 +492,9 @@ Increase the height of the records for this step. It’ll make it easier to make
 <li>Convert the <code>Done</code> and <code>Archived</code> field types to “Checkbox” and it will automatically assign a “check” to all records marked “TRUE” and leave the ones marked “FALSE” or “NA” unchecked. So easy!</li>
 <li>There is no direct option to “archive” tasks that have been completed like you can do in Trello, <em>but</em> you can apply a filter to your table view to hide the tasks that are complete. To do this, set the filter so that the <code>Done</code> and <code>Archived</code> fields are unchecked.</li>
 </ol>
-<blockquote>
-<p><strong>Note:</strong> This must be repeated for each saved View of your records.</p>
-</blockquote>
+<p>{{% alert note %}}
+<strong>Note:</strong> This must be repeated for each saved View of your records.
+{{% /alert %}}</p>
 </div>
 </div>
 <div id="moving-forward" class="section level1">

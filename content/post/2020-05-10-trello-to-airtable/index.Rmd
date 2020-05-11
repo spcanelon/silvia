@@ -12,7 +12,7 @@ summary: 'Tutorial on how to migrate your current Trello board to an Airtable ba
 authors: []
 lastmod: '2020-05-09T23:19:13-04:00'
 featured: yes
-draft: no
+draft: yes
 image:
   caption: '[Trello to Airtable migration using the example in this tutorial](featured.png)'
   focal_point: 'Center'
@@ -279,7 +279,7 @@ I recommend creating an `NA` project from the `NA` labels so that these tasks ar
 
 {{% alert note %}}
 Every record should already be associated with a Trello_List.
-{{ /alert %}}
+{{% /alert %}}
 
 2. If you want to replicate the Trello kanban layout, change the order of the single select options in `Trello_Lists` to match the order from left-to-right of your Trello board
 
@@ -295,7 +295,7 @@ Every record should already be associated with a Trello_List.
 
 {{% alert note %}}
 Increase the height of the records for this step. It'll make it easier to make sure you're dragging and dropping to the correct record
-{{ /alert %}}
+{{% /alert %}}
 
 6. If you encountered errors downloading some of your attachment URLs, now is the time to check your local _attachment_errors.csv_ file for the URLs with errors during the download process. These are attachments you'll have to find elsewhere and upload to the `Attachments` field as needed.
 7. Remove the filter to your view and unhide any columns you wish to remain visible.
@@ -304,7 +304,9 @@ Increase the height of the records for this step. It'll make it easier to make s
 1. Convert the `Done` and `Archived` field types to "Checkbox" and it will automatically assign a "check" to all records marked "TRUE" and leave the ones marked "FALSE" or "NA" unchecked. So easy!
 2. There is no direct option to "archive" tasks that have been completed like you can do in Trello, _but_ you can apply a filter to your table view to hide the tasks that are complete. To do this, set the filter so that the `Done` and `Archived` fields are unchecked.
 
-  > **Note:** This must be repeated for each saved View of your records.
+{{% alert note %}}
+**Note:** This must be repeated for each saved View of your records.
+{{% /alert %}}
 
 # Moving forward
 
