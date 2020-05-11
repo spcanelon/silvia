@@ -253,7 +253,7 @@ write.csv(tidy_cards, file = "tidy_cards.csv")
 # Formatting in Airtable
 Import CSV into Airtable as a new base
 
-- **Add a base** > **Import a spreadsheet** > **CSV file**. Upload the `cards_tidy.csv` file. Pick a name and icon for your new base! `r emo::ji('tada')` More detailed instructions can be found in [this Airtable article](https://support.airtable.com/hc/en-us/articles/202579399-Import-an-Existing-Spreadsheet-or-CSV-Into-a-New-App#cleanup). 
+- **Add a base** > **Import a spreadsheet** > **CSV file**. Upload the `cards_tidy.csv` file. Pick a name and icon for your new base! :tada: More detailed instructions can be found in [this Airtable article](https://support.airtable.com/hc/en-us/articles/202579399-Import-an-Existing-Spreadsheet-or-CSV-Into-a-New-App#cleanup). 
 
 ## Task
 1. Because we know each observation in our table is unique, we can copy and paste `Task` into the first column and hide/delete the original column. `Task` is now the primary field.
@@ -262,7 +262,7 @@ Import CSV into Airtable as a new base
 1. Convert `Task_ID` field type to "number".
 
 ## Notes
-1. Convert `Notes` field type to "long text" and enable _rich text formatting_. This gives us the option of using Markdown in the future, but sadly doesn't automatically recognize fully formatted Markdown in the imported text `r emo::ji('disappointed')`.
+1. Convert `Notes` field type to "long text" and enable _rich text formatting_. This gives us the option of using Markdown in the future, but sadly doesn't automatically recognize fully formatted Markdown in the imported text :disappointed: .
 
 ## Labels
 1. Change `Labels` field type to "multiple select" so that it turns each item in each list into a label.
