@@ -35,7 +35,7 @@ links:
     url: program-mgmt.json
 ---
 
-**[Airtable](https://airtable.com/) is a user-friendly and _powerful_ tool** that until recently I'd been using for personal projects (i.e. document organizing, apartment hunting, etc.). A week ago I leaned on Airtable to create a base designed for the [Philadelphia Reproductive Freedom Collective](https://www.womensmedicalfund.org/prfc) to support our COVID-19 mutual aid efforts. 
+**[Airtable](https://airtable.com/) is a user-friendly and _powerful_ tool** that until recently I'd been using for personal projects (i.e. document organizing, apartment hunting, etc.). A coule of weeks ago I leaned on Airtable to create a base designed for the [Philadelphia Reproductive Freedom Collective](https://www.womensmedicalfund.org/prfc) to support our COVID-19 mutual aid efforts. 
 
 > Shout out to the [Silicon Valley Democratic Socialists of America](https://siliconvalleydsa.org/) who provided inspiration and support! Their mutual aid network is extensive and operates at an impressive scale. Get connected with the South Bay Mutual Aid network here: https://www.aidnetwork.org/
 
