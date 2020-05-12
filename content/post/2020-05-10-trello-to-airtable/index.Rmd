@@ -1,18 +1,18 @@
 ---
 title: 'Migrating from Trello to Airtable: Working with JSON Data in R'
 author: silvia
-date: '2020-05-10'
+date: '2020-05-12'
 slug: trello-to-airtable
-categories: []
+categories: [R minis]
 tags:
   - r
   - json
 subtitle: 'Tutorial on how to migrate your current Trello board to an Airtable base from start to finish.'
 summary: 'Tutorial on how to migrate your current Trello board to an Airtable base from start to finish.'
 authors: []
-lastmod: '2020-05-09T23:19:13-04:00'
+lastmod: '2020-05-12'
 featured: yes
-draft: yes
+draft: no
 image:
   caption: '[Trello to Airtable migration using the example in this tutorial](featured.png)'
   focal_point: 'Center'
@@ -28,23 +28,27 @@ links:
   - icon:
     icon_pack:
     name: Rmd
-    url: 2020-05-10-trello-to-airtable.Rmd
+    url: index.Rmd
+  - icon:
+    icon_pack:
+    name: JSON example file
+    url: program-mgmt.json
 ---
 
 **[Airtable](https://airtable.com/) is a user-friendly and _powerful_ tool** that until recently I'd been using for personal projects (i.e. document organizing, apartment hunting, etc.). A week ago I leaned on Airtable to create a base designed for the [Philadelphia Reproductive Freedom Collective](https://www.womensmedicalfund.org/prfc) to support our COVID-19 mutual aid efforts. 
 
 > Shout out to the [Silicon Valley Democratic Socialists of America](https://siliconvalleydsa.org/) who provided inspiration and support! Their mutual aid network is extensive and operates at an impressive scale. Get connected with the South Bay Mutual Aid network here: https://www.aidnetwork.org/
 
-Having fallen in some Airtable deep-work I figured maybe it was time to **retire my Trello boards** in favor of some task bases. Airtable accepts CSV files from Trello but, alas, my [_free_ Trello account](https://trello.com/pricing) only gave me the option to print as a PDF or export as JSON. I decided this would be a good opportunity to learn how to parse JSON data and export it as a CSV ready for import to Airtable.
+Having fallen in some Airtable deep-work I figured maybe it was time to **retire my Trello boards** in favor of some task bases. Airtable accepts CSV files from Trello but, alas, my free Trello account only gave me the option to print as a PDF or export as JSON. I decided this would be a good opportunity to learn how to parse JSON data and export it as a CSV ready for import to Airtable.
 
 # What to expect
 The code provided in the [R Markdown file](https://github.com/spcanelon/silvia/tree/master/content/post/20200505-trello-to-airtable-example) requires the `tidyverse`, `JSONlite`, and `lubridate` packages as well as a JSON file containing your Trello data. It will generate the following:
 
 - `tidy_cards.csv` file ready to import to Airtable 
-- `attachments` folder containing any content you've attached to your cards using an URL. 
+- `attachments` folder containing any content you've attached to your cards using a URL. 
 - `attachment_errors.csv` file containing the card name, or task, as well as the URL/file path of any attachments that failed to download (i.e. links to files stored locally), so that you exactly which links you'll need to locate manually.
 
-**By the end of the tutorial** you'll have imported a CSV file into Airtable _**and**_ configured Airtable to match your Trello board. Specifically, you'll be able to migrate labels, lists, attachments, card names, card descriptions, card due dates, date last modified, and whether the cards were marked "complete" or archived.
+**By the end of the tutorial** you'll have imported a CSV file into Airtable _**and**_ configured Airtable to match your Trello board. Specifically, you'll be able to migrate **labels**, **lists**, **attachments**, **card names**, **card descriptions**, **card due dates**, **date last modified**, and whether the cards were marked **"complete" or archived.**
 
 ## What _not_ to expect
 - Rendered markdown from your card descriptions. Airtable _does_ support markdown in its "long text" field type, but it doesn't automatically render from imported text.
@@ -55,9 +59,9 @@ The code provided in the [R Markdown file](https://github.com/spcanelon/silvia/t
 
 # Follow along with me!
 
-The Trello board used for this code-through is this [Program Management Template](https://trello.com/templates/project-management/program-management-template-potjK48u) created by Soniya Ahuja. To download the Trello board data, go to _Menu_ > _More_ > _Print and Export_ and then right-click on "Export as JSON" to save the JSON file in your working directory.
+The Trello board used for this code-through is this [Program Management Template](https://trello.com/templates/project-management/program-management-template-potjK48u) created by Soniya Ahuja. To download the Trello board data, go to _Menu_ > _More_ > _Print and Export_ and then right-click on "Export as JSON" to save the JSON file in your working directory. **Or** save a little time and download the `program-mgmt.json` file linked above <i class="fas fa-hand-point-up"></i>.
 
-You may also choose to read through Trello's [Making Sense of Trello's JSON Export](https://help.trello.com/article/924-making-sense-of-trellos-json-export).
+You may also choose to read through [Making Sense of Trello's JSON Export](https://help.trello.com/article/924-making-sense-of-trellos-json-export).
 
 Last but not least -- we'll be keeping things tidy, with the help of the [**tidyverse** collection of R packages](https://www.tidyverse.org/), to ensure each variable is in its own column, observations are in rows, and values are in cells. You can read more about tidy data in [Chapter 12 of R for Data Science](https://tidyr.tidyverse.org/articles/tidy-data.html).
 
@@ -88,15 +92,15 @@ trello <- stream_in(file("program-mgmt.json")) # produces a data frame
 ```{r}
 glimpse(trello)
 ```
+A _lot_ of information about the Trello board is contained in JSON data. We'll be parsing information about the `cards` as well as the `lists` and then joining them together by a common identifier `id` or `idShort`.
 
 # Parsing information
 
-Instructions found here: https://blog.exploratory.io/working-with-json-data-in-very-simple-way-ad7ebcc0bb89
+Parsing information from JSON data was not something I was familiar with and found myself coming back to Kan Nishida's post [Working with JSON data in a very simple way](https://blog.exploratory.io/working-with-json-data-in-very-simple-way-ad7ebcc0bb89) time and time again throughout this process.
 
 ## Cards
-- *Flattening:* Making the nested hierarchical data structure into a flatter structure by assigning each of the nested variable as its own column as much as possible.
-- *Tibble:* Making it easier to see the data frame data
 
+The first step is to extract information about the Trello `cards` themselves. This information is contained within a list of data frames and requires **flattening** which makes the nested hierarchical data structure into a flatter structure by assigning each of the nested variables its own column as much as possible. Then, the most important variables are selected before moving on to extracting `label` information.
 ```{r tibble-time, paged.print=TRUE}
 # selecting cards information
 cards <- trello$cards # list of 1
@@ -108,22 +112,15 @@ cards_flat <- flatten(cards) #list of 37
 cards_flat_tbl <- as_tibble(cards_flat) # 32 obs of 37 variables
 glimpse(cards_flat_tbl)
 
-# removing unwanted variables
+# selecting wanted variables
 cards_trim <- cards_flat_tbl %>%
-  select(-address, -checkItemStates, -coordinates, -creationMethod, -descData, -dueReminder,
-         -idAttachmentCover, -idBoard, -idLabels, -idMembersVoted, -limits, -locationName, -manualCoverAttachment,
-         -(pos:badges), -(email:idMembers), -subscribed, -url, -cover, -pluginData, -customFieldItems) %>%
-  arrange(desc(dateLastActivity)) %>%
   select(id, idShort, idList, dateLastActivity, name, desc, dueComplete, due,
-         labels, attachments, shortUrl, closed)
+         labels, attachments, shortUrl, closed) %>%
+  arrange(desc(dateLastActivity))
 ```
 
 ### Labels
-
-Resources:
-- **Used:** the `unnest` function after selecting the minimum necessary variables
-- Helpful, again! https://blog.exploratory.io/working-with-json-data-in-very-simple-way-ad7ebcc0bb89 , particularly for saving the label details as a character list
-
+Relevant information about the labels is selected and the `unnest` function is used to flatten because `labels` is a list of data frames. Again, I found [Kan's post](https://blog.exploratory.io/working-with-json-data-in-very-simple-way-ad7ebcc0bb89) helpful here! Particularly for saving the label details as a character list, which will be helpful later on. Once we get to Airtable it'll be important that label information for each `card` be structured as a simple list of words (i.e. label1, label2, label3). We get close once `labels` are contained within a character list, but there are still "c"s and parentheses that need to be removed. String manipulation is something I'm still learning about so the code below is far from elegant! :sweat_smile:
 ```{r labels}
 # extracting labels details
 labels_info <- cards_trim %>%
@@ -147,7 +144,7 @@ ct_labels <- left_join(cards_trim %>% select(-labels), labels_info %>% select(-l
 
 ### Attachments
 
-The next step is to download all of the items attached the cards onto a local folder. I found [this StackOverflow post](https://stackoverflow.com/questions/32174306/download-url-links-using-r) really helpful. When I tried this out on my own Trello board I also found that I couldn't download the few attachments I had made from my local drive. [This StackOverflow post](https://stackoverflow.com/questions/2158780/catching-an-error-and-then-branching-logic/2158803#2158803) helped me figure out how to flag and catch these download errors so that I could create a list of the urls with "attachment errors" that I could follow up with manually. 
+The next step is to download all of the items attached to the cards onto a local folder. I found [this StackOverflow post](https://stackoverflow.com/questions/32174306/download-url-links-using-r) really helpful. When I tried this out on my own Trello board I also found that I couldn't download the few attachments I had made from my local drive. [This StackOverflow post](https://stackoverflow.com/questions/2158780/catching-an-error-and-then-branching-logic/2158803#2158803) helped me figure out how to flag and catch these download errors so that I could create a list of the urls with "attachment errors" that I could follow up with manually. 
 
 ```{r}
 # expanding the attachment lists into separate url records
@@ -159,7 +156,7 @@ att_urls <- ct_labels %>%
          attachmentError = 'FALSE')
 knitr::kable(att_urls %>% head(n = 3L))
 
-# create directory for attachments
+# creating directory for attachments
 dirAttachments <- "attachments/"
 dir.create(dirAttachments)
 
@@ -175,7 +172,18 @@ for (i in 1:length(att_urls$url)){
 }
 ```
 
-**Side step:** If you have a lot of attachments _per card_, you may want to create a directory folder for each card. This for loop will get you there -- use it instead of the one above.
+The following selects the attachment records with errors, renames somes variables, and exports the data frame as a CSV. 
+```{r}
+# preparing data frame for export to CSV
+attachment_errors <- att_urls %>%
+  filter(attachmentError == TRUE) %>%
+  rename(Task_Id = idShort, Attachment_URL = url, Attachment_Error = attachmentError)
+
+# exporting to CSV
+write.csv(attachment_errors, file = "attachment_errors.csv")
+```
+
+**_Aside:_** *If you have a lot of attachments _per card_, you may want to create a directory folder for each card. This for loop will get you there -- use it instead of the one above:*
 ```{r, eval=FALSE}
 # creates individual directory folders for each card id -- probably overkill and more cumbersome for import purposes
 for (i in 1:length(att_urls$url)){
@@ -186,22 +194,15 @@ for (i in 1:length(att_urls$url)){
 }
 ```
 
+Records in the main `cards` data frame are labeled "TRUE" within the `attachments` column if they have attachments and "FALSE" if they don't.
 ```{r}
-# preparing data frame for export to CSV
-attachment_errors <- att_urls %>%
-  filter(attachmentError == TRUE) %>%
-  rename(Task_Id = idShort, Attachment_URL = url, Attachment_Error = attachmentError)
-
 # converts the attachment column to a categorical variable in the main cards data frame
 ct_labels <- ct_labels %>%
   mutate(attachments = ifelse(idShort %in% att_urls$idShort, TRUE, FALSE))
-
-# exporting to CSV
-write.csv(attachment_errors, file = "attachment_errors.csv")
 ```
 
 ## Lists
-Transforming the "lists" list to a data frame was easy because there was only one data frame in it. If there had been more, I would have used the `unnest` function as before
+The `lists` information was extracted similarly to the `cards` information, but flattening was a little more straightforward because it involved only one data frame. With more data frames, the `unnest` function would have been a better choice.
 ```{r}
 # selecting lists information
 lists <- trello$lists # list of 1 data frame
@@ -210,7 +211,7 @@ glimpse(lists)
 # flattening
 lists_flat <- lists[[1]] # 17 obs of 9 variables
 
-# removing unwanted variables
+# selecting wanted variables
 lists_trim <- lists_flat %>%
   select(id, name, closed) %>%
   rename(idList = id, nameList = name, closedList = closed)
@@ -240,7 +241,9 @@ tidy_cards <- ct_labels_list %>%
 ```
 
 ```{r collapse=TRUE}
-length(unique(tidy_cards$Task_ID)) # confirm this matches the number of records (i.e. one task per observation)
+# determining the number of unique tasks
+# this number should match the number of records (i.e. one task per observation)
+length(unique(tidy_cards$Task_ID))
 
 glimpse(tidy_cards)
 ```
@@ -251,9 +254,7 @@ write.csv(tidy_cards, file = "tidy_cards.csv")
 ```
 
 # Formatting in Airtable
-Import CSV into Airtable as a new base
-
-- **Add a base** > **Import a spreadsheet** > **CSV file**. Upload the `cards_tidy.csv` file. Pick a name and icon for your new base! :tada: More detailed instructions can be found in [this Airtable article](https://support.airtable.com/hc/en-us/articles/202579399-Import-an-Existing-Spreadsheet-or-CSV-Into-a-New-App#cleanup). 
+**Import CSV into Airtable as a new base.** _Add a base_ > _Import a spreadsheet_ > _CSV file_. Upload the `cards_tidy.csv` file. Pick a name and icon for your new base! :tada: More detailed instructions can be found in [this Airtable article](https://support.airtable.com/hc/en-us/articles/202579399-Import-an-Existing-Spreadsheet-or-CSV-Into-a-New-App#cleanup). 
 
 ## Task
 1. Because we know each observation in our table is unique, we can copy and paste `Task` into the first column and hide/delete the original column. `Task` is now the primary field.
@@ -320,6 +321,7 @@ Increase the height of the records for this step. It'll make it easier to make s
 2. Move, collapse, and delete stacks as you see fit. Customize cards with as little or as much information as you want.
 
 ## Tasks vs Subtasks
-There are probably many ways to creatively group your records to parallel the checklist option within a Trello card moving forward. 
+There are probably many ways to creatively group your records to parallel the checklist option Trello gives you within a card. 
+
 - The most straightforward is to use the basic checklist formatting within the `Description` field to create lists
 - Another is to think of your primary field `Tasks` instead as **'subtasks'** and create a new column to serve as the umbrella **'task'**. This new **'task'** column would be field type "single selection", then you could group your records by **'task'**.
