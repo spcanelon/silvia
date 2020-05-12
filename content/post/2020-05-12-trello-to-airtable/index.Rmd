@@ -16,7 +16,7 @@ draft: no
 image:
   caption: '[Trello to Airtable migration using the example in this tutorial](featured.png)'
   focal_point: 'Center'
-  placement: '2'
+  placement: 2
   preview_only: no
 projects: []
 output:
