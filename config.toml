@@ -27,7 +27,6 @@ googleAnalytics = "UA-165907306-1"
 #theme = "hugo-academia"
 theme = "hugo-academic"
 
-
 # Get last modified date for content from Git?
 enableGitInfo = false
 
