@@ -3,7 +3,7 @@ title: 'Philly Center City Sips 2019: An Interactive Map'
 author: silvia
 date: '2019-08-04'
 slug: ccd-sips
-categories: []
+categories: [R minis]
 tags:
   - mapping
   - R
