@@ -99,7 +99,7 @@ address = {city = "Philadelphia", region = "PA", postcode = "19104", country = "
 
 # Geographic coordinates
 # To get your coordinates, right-click on Google Maps and choose "What's here?". The coords will show up at the bottom.
-coordinates = {latitude = "39.957120", longitude = "-75.199550"}
+#coordinates = {latitude = "39.957120", longitude = "-75.199550"}
 
 # Directions for visitors to locate you.
 directions = '' #"Enter Building 1 and take the stairs to Office 200 on Floor 2"
@@ -165,7 +165,6 @@ link_authors = true
 
 # Load JS plugins
 #   E.g. To load `/assets/js/custom.js`, set `plugins_js = ["custom"]`.
-plugins_css = ["silvia"]
 plugins_js  = []
 
 # Avatars.
