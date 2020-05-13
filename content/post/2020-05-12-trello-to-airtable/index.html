@@ -25,12 +25,12 @@ output:
     number_sections: true
     toc_depth: 1
 links:
-  - icon:
-    icon_pack:
-    name: Rmd
+  - icon: file-code
+    icon_pack: far
+    name: R Markdown
     url: index.Rmd
-  - icon:
-    icon_pack:
+  - icon: table
+    icon_pack: fas
     name: JSON example file
     url: program-mgmt.json
 ---
@@ -49,14 +49,14 @@ links:
 </ul>
 </div>
 
-<p><strong><a href="https://airtable.com/">Airtable</a> is a user-friendly and <em>powerful</em> tool</strong> that until recently I’d been using for personal projects (i.e. document organizing, apartment hunting, etc.). A coule of weeks ago I leaned on Airtable to create a base designed for the <a href="https://www.womensmedicalfund.org/prfc">Philadelphia Reproductive Freedom Collective</a> to support our COVID-19 mutual aid efforts.</p>
+<p><strong><a href="https://airtable.com/">Airtable</a> is a user-friendly and <em>powerful</em> tool</strong> that until recently I’d been using for personal projects (i.e. document organizing, apartment hunting, etc.). A couple of weeks ago I leaned on Airtable to create a base designed for the <a href="https://www.womensmedicalfund.org/prfc">Philadelphia Reproductive Freedom Collective</a> to support our COVID-19 mutual aid efforts.</p>
 <blockquote>
 <p>Shout out to the <a href="https://siliconvalleydsa.org/">Silicon Valley Democratic Socialists of America</a> who provided inspiration and support! Their mutual aid network is extensive and operates at an impressive scale. Get connected with the South Bay Mutual Aid network here: <a href="https://www.aidnetwork.org/" class="uri">https://www.aidnetwork.org/</a></p>
 </blockquote>
 <p>Having fallen in some Airtable deep-work I figured maybe it was time to <strong>retire my Trello boards</strong> in favor of some task bases. Airtable accepts CSV files from Trello but, alas, my free Trello account only gave me the option to print as a PDF or export as JSON. I decided this would be a good opportunity to learn how to parse JSON data and export it as a CSV ready for import to Airtable.</p>
 <div id="what-to-expect" class="section level1">
 <h1><span class="header-section-number">1</span> What to expect</h1>
-<p>The code provided in the <a href="https://github.com/spcanelon/silvia/tree/master/content/post/20200505-trello-to-airtable-example">R Markdown file</a> requires the <code>tidyverse</code>, <code>JSONlite</code>, and <code>lubridate</code> packages as well as a JSON file containing your Trello data. It will generate the following:</p>
+<p>The code provided in the R Markdown file requires the <code>tidyverse</code>, <code>JSONlite</code>, and <code>lubridate</code> packages as well as a JSON file containing your Trello data. It will generate the following:</p>
 <ul>
 <li><code>tidy_cards.csv</code> file ready to import to Airtable</li>
 <li><code>attachments</code> folder containing any content you’ve attached to your cards using a URL.</li>
@@ -138,7 +138,7 @@ library(tidyverse)</code></pre>
 <p>Parsing information from JSON data was not something I was familiar with and found myself coming back to Kan Nishida’s post <a href="https://blog.exploratory.io/working-with-json-data-in-very-simple-way-ad7ebcc0bb89">Working with JSON data in a very simple way</a> time and time again throughout this process.</p>
 <div id="cards" class="section level2">
 <h2><span class="header-section-number">5.1</span> Cards</h2>
-<p>The first step is to extract information about the Trello <code>cards</code> themselves. This information is contained within a list of data frames and requires <strong>flattening</strong> which makes the nested hierarchical data structure into a flatter structure by assigning each of the nested variables its own column as much as possible. Then, the most important variables are selected before moving on to extracting <code>label</code> information.</p>
+<p>The first step is to extract information about the Trello <code>cards</code> themselves. This information is contained within a list of data frames and requires <strong>flattening</strong> which makes the nested hierarchical data structure into a flatter structure by assigning each of the nested variables its own column as much as possible. Then, the most important variables are selected as <code>cards_trim</code> before moving on to extracting <code>label</code> information.</p>
 <pre class="r"><code># selecting cards information
 cards &lt;- trello$cards # list of 1
 
@@ -194,7 +194,8 @@ cards_trim &lt;- cards_flat_tbl %&gt;%
   arrange(desc(dateLastActivity))</code></pre>
 <div id="labels" class="section level3">
 <h3><span class="header-section-number">5.1.1</span> Labels</h3>
-<p>Relevant information about the labels is selected and the <code>unnest</code> function is used to flatten because <code>labels</code> is a list of data frames. Again, I found <a href="https://blog.exploratory.io/working-with-json-data-in-very-simple-way-ad7ebcc0bb89">Kan’s post</a> helpful here! Particularly for saving the label details as a character list, which will be helpful later on. Once we get to Airtable it’ll be important that label information for each <code>card</code> be structured as a simple list of words (i.e. label1, label2, label3). We get close once <code>labels</code> are contained within a character list, but there are still “c”s and parentheses that need to be removed. String manipulation is something I’m still learning about so the code below is far from elegant! :sweat_smile:</p>
+<p>Relevant information about the labels is selected and the <code>unnest</code> function is used to flatten because <code>labels</code> is a list of data frames. Again, I found <a href="https://blog.exploratory.io/working-with-json-data-in-very-simple-way-ad7ebcc0bb89">Kan’s post</a> helpful here! Particularly for saving the label details as a character list, which is helpful later on. Once we get to Airtable it’ll be important that label information for each <code>card</code> be structured as a simple list of words (i.e. label1, label2, label3).
+We get close once the <code>labels</code> are contained within a character list <code>labelList</code>, but there are still “c”s and parentheses that need to be removed. String manipulation is something I’m still learning about so the code below is far from elegant!</p>
 <pre class="r"><code># extracting labels details
 labels_info &lt;- cards_trim %&gt;%
   select(id, idShort, labels) %&gt;%
@@ -311,14 +312,14 @@ for (i in 1:length(att_urls$url)){
   download.file(url[i], destfile = locAttachments)
 }</code></pre>
 <p>Records in the main <code>cards</code> data frame are labeled “TRUE” within the <code>attachments</code> column if they have attachments and “FALSE” if they don’t.</p>
-<pre class="r"><code># converts the attachment column to a categorical variable in the main cards data frame
+<pre class="r"><code># converts the attachment column to a categorical variable in the main cards+labels data frame
 ct_labels &lt;- ct_labels %&gt;%
   mutate(attachments = ifelse(idShort %in% att_urls$idShort, TRUE, FALSE))</code></pre>
 </div>
 </div>
 <div id="lists" class="section level2">
 <h2><span class="header-section-number">5.2</span> Lists</h2>
-<p>The <code>lists</code> information was extracted similarly to the <code>cards</code> information, but flattening was a little more straightforward because it involved only one data frame. With more data frames, the <code>unnest</code> function would have been a better choice.</p>
+<p>The <code>lists</code> information is extracted similarly to the <code>cards</code> information, but flattening is a little more straightforward because it involves only one data frame. With more data frames, the <code>unnest</code> function is a better choice.</p>
 <pre class="r"><code># selecting lists information
 lists &lt;- trello$lists # list of 1 data frame
 glimpse(lists)</code></pre>
@@ -368,7 +369,7 @@ knitr::kable(lists_trim %&gt;% head(n = 3L))</code></pre>
 </tr>
 </tbody>
 </table>
-<pre class="r"><code># joining back with main cards data frame
+<pre class="r"><code># joining back with main cards+labels data frame
 ct_labels_list &lt;- left_join(ct_labels, lists_trim) %&gt;%
   select(id:shortUrl, labelList_tidy:nameList, closed, closedList)</code></pre>
 </div>
@@ -377,7 +378,7 @@ ct_labels_list &lt;- left_join(ct_labels, lists_trim) %&gt;%
 <h1><span class="header-section-number">6</span> Exporting to CSV</h1>
 <div id="data-prepping" class="section level2">
 <h2><span class="header-section-number">6.1</span> Data prepping</h2>
-<p>The <code>lubridate</code> package was used next to convert the date fields and <a href="http://biostat.mc.vanderbilt.edu/wiki/pub/Main/ColeBeck/datestimes.pdf">this resource</a> was helpful in understanding date conversions and formatting.</p>
+<p>Columns in the new <code>ct_labels_list</code> data frame are given new names, and the <code>lubridate</code> package is used next to convert the date fields. <a href="http://biostat.mc.vanderbilt.edu/wiki/pub/Main/ColeBeck/datestimes.pdf">This resource</a> was helpful in understanding date conversions and formatting.</p>
 <pre class="r"><code># changing variable names
 tidy_cards &lt;- ct_labels_list %&gt;%
   select(-id, -idList, -closedList) %&gt;%
@@ -389,11 +390,12 @@ tidy_cards &lt;- ct_labels_list %&gt;%
   mutate(Trello_Last_Modified = as_datetime(Trello_Last_Modified, tz = &quot;&quot;),
          Date_Due = as_datetime(Date_Due, tz = &quot;&quot;),
          Done = ifelse(is.na(Date_Due) == TRUE, &#39;NA&#39;, Done)) # ensures only undone tasks assigned a due date get marked as &quot;FALSE&quot;</code></pre>
+<p>The last step before exporting the final data frame <code>tidy_cards</code> is to check the unique number of tasks to make sure it matches the number of records in the data frame (i.e. one task per observation).</p>
 <pre class="r"><code># determining the number of unique tasks
-# this number should match the number of records (i.e. one task per observation)
 length(unique(tidy_cards$Task_ID))
 ## [1] 32
 
+# final look at tidy_cards
 glimpse(tidy_cards)
 ## Rows: 32
 ## Columns: 11
@@ -416,7 +418,8 @@ glimpse(tidy_cards)
 </div>
 <div id="formatting-in-airtable" class="section level1">
 <h1><span class="header-section-number">7</span> Formatting in Airtable</h1>
-<p><strong>Import CSV into Airtable as a new base.</strong> <em>Add a base</em> &gt; <em>Import a spreadsheet</em> &gt; <em>CSV file</em>. Upload the <code>cards_tidy.csv</code> file. Pick a name and icon for your new base! :tada: More detailed instructions can be found in <a href="https://support.airtable.com/hc/en-us/articles/202579399-Import-an-Existing-Spreadsheet-or-CSV-Into-a-New-App#cleanup">this Airtable article</a>.</p>
+<p><strong>Import CSV into Airtable as a new base.</strong> <em>Add a base</em> &gt; <em>Import a spreadsheet</em> &gt; <em>CSV file</em>. Upload the <code>cards_tidy.csv</code> file. Pick a name, icon, and color for your brand new base!
+More detailed instructions can be found in <a href="https://support.airtable.com/hc/en-us/articles/202579399-Import-an-Existing-Spreadsheet-or-CSV-Into-a-New-App#cleanup">this Airtable article</a>.</p>
 <div id="task" class="section level2">
 <h2><span class="header-section-number">7.1</span> Task</h2>
 <ol style="list-style-type: decimal">
@@ -432,7 +435,7 @@ glimpse(tidy_cards)
 <div id="notes" class="section level2">
 <h2><span class="header-section-number">7.3</span> Notes</h2>
 <ol style="list-style-type: decimal">
-<li>Convert <code>Notes</code> field type to “long text” and enable <em>rich text formatting</em>. This gives us the option of using Markdown in the future, but sadly doesn’t automatically recognize fully formatted Markdown in the imported text :disappointed: .</li>
+<li>Convert <code>Notes</code> field type to “long text” and enable <em>rich text formatting</em>. This gives us the option of using Markdown in the future, but sadly doesn’t automatically recognize fully formatted Markdown in the imported text.</li>
 </ol>
 </div>
 <div id="labels-1" class="section level2">
@@ -470,7 +473,7 @@ Every record should already be associated with a Trello_List.
 <h2><span class="header-section-number">7.7</span> Trello_Attachments</h2>
 <ol style="list-style-type: decimal">
 <li>Convert <code>Trello_Attachments</code> field type to “single select”</li>
-<li>Create a new <code>Attachments</code> with field type “attachment”. This is where you’ll upload your downloaded attachments.</li>
+<li>Create a new <code>Attachments</code> column with field type “attachment”. This is where you’ll upload your downloaded attachments.</li>
 <li>Filter your records by <code>Trello_Attachments</code> so only show “TRUE” results</li>
 <li>Sort records by <code>Task_ID</code> and simplify your view by temporarily hiding all columns except for <code>Task_Name</code> (primary field), <code>Task_ID</code>, <code>Trello_Attachments</code>, and the new <code>Attachments</code> column.</li>
 <li>Open your local <code>attachments</code> folder and drag and drop the files to their corresponding <code>Attachments</code> field according to their <code>Task_ID</code> in the filename.</li>
@@ -479,7 +482,7 @@ Every record should already be associated with a Trello_List.
 Increase the height of the records for this step. It’ll make it easier to make sure you’re dragging and dropping to the correct record
 {{% /alert %}}</p>
 <ol start="6" style="list-style-type: decimal">
-<li>If you encountered errors downloading some of your attachment URLs, now is the time to check your local <em>attachment_errors.csv</em> file for the URLs with errors during the download process. These are attachments you’ll have to find elsewhere and upload to the <code>Attachments</code> field as needed.</li>
+<li>If you encountered errors downloading some of your attachment URLs, now is the time to check your local <code>attachment_errors.csv</code> file for the URLs with errors during the download process. These are attachments you’ll have to find elsewhere and upload to the <code>Attachments</code> field as needed.</li>
 <li>Remove the filter to your view and unhide any columns you wish to remain visible.</li>
 </ol>
 </div>
@@ -490,7 +493,7 @@ Increase the height of the records for this step. It’ll make it easier to make
 <li>There is no direct option to “archive” tasks that have been completed like you can do in Trello, <em>but</em> you can apply a filter to your table view to hide the tasks that are complete. To do this, set the filter so that the <code>Done</code> and <code>Archived</code> fields are unchecked.</li>
 </ol>
 <p>{{% alert note %}}
-<strong>Note:</strong> This must be repeated for each saved View of your records.
+This must be repeated for each saved View of your records.
 {{% /alert %}}</p>
 </div>
 </div>
@@ -513,7 +516,7 @@ Increase the height of the records for this step. It’ll make it easier to make
 </div>
 <div id="tasks-vs-subtasks" class="section level2">
 <h2><span class="header-section-number">8.3</span> Tasks vs Subtasks</h2>
-<p>There are probably many ways to creatively group your records to parallel the checklist option Trello gives you within a card.</p>
+<p>There are probably many ways to parallel the checklist option Trello gives you within a card.</p>
 <ul>
 <li>The most straightforward is to use the basic checklist formatting within the <code>Description</code> field to create lists</li>
 <li>Another is to think of your primary field <code>Tasks</code> instead as <strong>‘subtasks’</strong> and create a new column to serve as the umbrella <strong>‘task’</strong>. This new <strong>‘task’</strong> column would be field type “single selection”, then you could group your records by <strong>‘task’</strong>.</li>
