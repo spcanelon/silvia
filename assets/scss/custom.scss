@@ -167,13 +167,6 @@ div.alert-note > div:first-child::before {
   content: "\f00c"; /* check mark icon */
 }
 
-div.alert-warning > div:first-child::before {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  color: #122140;
-  content: "\f12a"; /* exclamation point icon */
-}
-
 .alert-note {
   color: #333;
   background-color: #e7e8eb;
@@ -189,11 +182,17 @@ div.alert > div {
   font-size: 0.85rem;
 }
 
+div.alert-warning > div:first-child::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #a90533;
+  content: "\f12a"; /* exclamation point icon */
+}
 
 div.alert.alert-warning {
-  color: #d03b39;
+  color: #a90533;
   background-color: #fdf4f4;
-  border-top: 2px solid #d53135;
+  border-top: 2px solid #a90533;
   border-radius: 0px; /*undo rounded corners*/
   border-right-style: none;
   border-bottom-style: none;
@@ -201,9 +200,10 @@ div.alert.alert-warning {
   padding: 23px 10px 21px 10px;
 }
 
-/* buttons */
+/* buttons (i.e. download PDF) */
 
 .btn.btn-sm, .btn-group-sm > .btn {
+  background: #fdfbf2;
   border-radius: 0px; /*undo rounded corners*/
   font-size: 0.8rem;
 }
@@ -214,9 +214,9 @@ div.alert.alert-warning {
 }
 
 .btn {
-  font-family: Arapey;
-  text-transform: lowercase;
-  font-style: italic;
+  font-family: Lora;
+  text-transform: sentencecase;
+  font-style: regular;
   border-radius: 0px;
 }
 
@@ -264,7 +264,8 @@ hr {
  }
 
 .home-section.wg-experience .card-body {
-	padding: .5rem;
+	/*padding: .5rem;*/
+  padding: 2em; /* padding around text in experience cards*/
 }
 
 .home-section.wg-experience .card .card-text{
