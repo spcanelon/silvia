@@ -1,6 +1,6 @@
 ---
 title: Silvia P. Canelón
-avatar_image: "avatar.jpg"
+avatar_image: "avatar.png"
 
 authors:
 - silvia
@@ -52,4 +52,4 @@ user_groups:
 - Visitors
 ---
 
-**Hello, and welcome!** I'm a postdoctoral research scientist in the [Department of Biostatistics, Epidemiology, and Informatics](https://www.dbei.med.upenn.edu/) at the University of Pennsylvania Perelman School of Medicine. My research interests include applications of biomedical informatics in the public and population health fields. I work in the [Boland Lab](https://www.med.upenn.edu/bolandlab/) on projects that develop novel data mining methods to extract pregnancy-related information from Electronic Health Records (EHR) and study the relationship between environment and disease. I enjoy using R to optimize my research workflow and have noticed it making guest appearances elsewhere in my life. Keep up with my R tinkering in [posts](post) and my research interests in [publications](publication). **Thanks** for stopping by!
+**Hello, and welcome!** I'm a postdoctoral research scientist in the [Department of Biostatistics, Epidemiology, and Informatics](https://www.dbei.med.upenn.edu/) at the University of Pennsylvania Perelman School of Medicine. My research interests include applications of biomedical informatics in the public and population health fields. I work in the [Boland Lab](https://www.med.upenn.edu/bolandlab/) on projects that develop novel data mining methods to extract pregnancy-related information from Electronic Health Records (EHR) and study the relationship between environment and disease. I enjoy using [R](https://www.r-project.org/about.html) to optimize my research workflow and have noticed it making guest appearances elsewhere in my life. Keep up with my R tinkering in [posts](post) and my research interests in [publications](publication). **Thanks** for stopping by!
