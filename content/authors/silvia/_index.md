@@ -5,7 +5,7 @@ avatar_image: "avatar.png"
 authors:
 - silvia
 
-bio: "Biomedical engineer turned informatician, curious about all intersections of data and society. Pronouns: she/her."
+bio: "Biomedical engineer turned informaticist, curious about all intersections of data and society. Pronouns: she/her."
 
 organizations:
 - name: University of Pennsylvania

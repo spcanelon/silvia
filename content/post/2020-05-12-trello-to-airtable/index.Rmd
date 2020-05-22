@@ -184,9 +184,10 @@ attachment_errors <- att_urls %>%
 write.csv(attachment_errors, file = "attachment_errors.csv")
 ```
 
-**_Aside:_** *If you have a lot of attachments _per card_, you may want to create a directory folder for each card. This for loop will get you there -- use it instead of the one above:*
+> **_Aside:_** *If you have a lot of attachments _per card_, you may want to create a directory folder for each card. This for loop will get you there -- use it instead of the one above:*
+
 ```{r, eval=FALSE}
-# creates individual directory folders for each card id -- probably overkill and more cumbersome for import purposes
+# creates individual directory folders for each card id
 for (i in 1:length(att_urls$url)){
   dirAttachments <- paste(dirFiles, "attachments", att_urls$idShort[i], sep = "/")
   dir.create(dirAttachments) # creates directory for each unique card id
