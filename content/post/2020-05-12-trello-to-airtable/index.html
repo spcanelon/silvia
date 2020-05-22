@@ -303,8 +303,10 @@ attachment_errors &lt;- att_urls %&gt;%
 
 # exporting to CSV
 write.csv(attachment_errors, file = &quot;attachment_errors.csv&quot;)</code></pre>
+<blockquote>
 <p><strong><em>Aside:</em></strong> <em>If you have a lot of attachments <em>per card</em>, you may want to create a directory folder for each card. This for loop will get you there – use it instead of the one above:</em></p>
-<pre class="r"><code># creates individual directory folders for each card id -- probably overkill and more cumbersome for import purposes
+</blockquote>
+<pre class="r"><code># creates individual directory folders for each card id
 for (i in 1:length(att_urls$url)){
   dirAttachments &lt;- paste(dirFiles, &quot;attachments&quot;, att_urls$idShort[i], sep = &quot;/&quot;)
   dir.create(dirAttachments) # creates directory for each unique card id
