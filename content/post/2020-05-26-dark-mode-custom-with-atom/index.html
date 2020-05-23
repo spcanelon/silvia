@@ -1,18 +1,18 @@
 ---
 title: Customizing Hugo Academic's Dark Mode with Help from Atom
-author: Silvia Canelón
+author: silvia
 date: '2020-05-26'
 slug: dark-theme-custom-with-atom
 draft: yes
 categories:
   - R minis
 tags:
-  - css
+  - scss
   - atom
   - blogdown
   - r
-subtitle: ''
-summary: ''
+subtitle: Tutorial on how to customize the dark mode in Hugo's Academic theme with help from the Atom text editor package pigments.
+summary: Tutorial on how to customize the dark mode in Hugo's Academic theme with help from the Atom text editor package pigments.
 authors: []
 lastmod: '2020-05-23T13:22:13-04:00'
 featured: no
@@ -27,14 +27,19 @@ projects: []
 
 <div id="where-i-started" class="section level1">
 <h1>Where I started</h1>
-<p>With Alison Hill’s <a href="https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/">Up and Running with Blogdown</a> post! <strong>Super helpful</strong>, though because I came to it 2.5 years late, it was more like ‘up and running with lots of water breaks’ because I had to stop and account for changes made to the Hugo Academic theme in the meantime. The <a href="https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/#going-further">going futher</a> section specifically talks about customizing the out-of-the-box theme and Alison directly links to her custom <code>css</code> file, which I closely referred to when changing colors in <a href="https://github.com/spcanelon/silvia/blob/master/assets/scss/custom.scss">my custom css/scss file</a>.</p>
-<p>Alison’s file helped me customize everything from text colors and fonts to alert colors and borders for Hugo Academic’s light mode. At this point I had the light mode looking the way I wanted but the dark mode still used out-of-the-box colors and they <em>just didn’t go</em>. <a href="">INSERT SCREENSHOT HERE</a>. So I decided not to enable the dark-mode option in <code>params.toml</code> until I could figure out how to customize the dark mode.</p>
+<p>With Alison Hill’s <a href="https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/">Up and Running with Blogdown</a> post! <strong>Super helpful</strong>, though because I came to it 2.5 years late, it was more like ‘up and running with lots of water breaks’ because I had to stop and account for changes made to the Hugo Academic theme in the meantime. The <a href="https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/#going-further">going futher</a> section in that post specifically talks about customizing the out-of-the-box theme and Alison directly links to her custom <code>css</code> file, which I closely referred to when changing colors in <a href="https://github.com/spcanelon/silvia/blob/master/assets/scss/custom.scss">my custom scss file</a>.</p>
+<p>Alison’s well-commented file helped me customize everything from text colors and fonts to alert colors and borders for Academic’s light mode. At this point I had the light mode looking the way I wanted but the dark mode still used out-of-the-box colors and they <strong><em>just didn’t go</em></strong>. <a href="">INSERT SCREENSHOT HERE</a>. So I decided not to enable the dark-mode option in <code>params.toml</code> until I could figure out how to customize the dark mode.</p>
 </div>
 <div id="why-atom" class="section level1">
 <h1>Why Atom?</h1>
-<p>Helpful packages to install</p>
-<ul>
-<li><strong>Must-have:</strong> <a href="https://atom.io/packages/pigments">pigments</a>, <a href="https://atom.io/packages/highlight-selected">highlight-selected</a></li>
-<li><strong>Nice-to-have:</strong> <a href="https://atom.io/packages/file-icons">file-icons</a></li>
-</ul>
+<p><a href="https://atom.io/">Atom</a> is a text editor that I like to use to <em>modify</em> any files in my website directory. I say modify because I much prefer to <em>create</em> content for posts like this one using the <a href="https://bookdown.org/yihui/blogdown/rstudio-ide.html">Blogdown addins in RStudio</a>. It’s such a breeze! But here’s why I think Atom is a fantastic companion to the RStudio IDE:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Seeing your directory files is made friendly in Tree View</strong> when you open your website folder as a ‘project folder’. You can just click on the file once to preview it and double-click if you want to actually open it. I find this to be really helpful when I can’t remember which file contains what I’m looking for because I don’t have to actually open each file to see what’s in it.</li>
+<li><strong>Searching for something specific is easy with the built-in search tool</strong>. I’ve used this many times when I can’t remember where that specific parameter (e.g. fonts) or file type (e.g. <code>.scss</code>) is located within my directory. In particular I find it super handy to find specific HTML color codes, but more on that later! This brings me to my most favorite feature in Atom…</li>
+<li><strong>The <a href="https://atom.io/packages/pigments">pigments</a> package!</strong> Like R, Atom has a universe of handy packages and <code>pigments</code> will <strong>display colors</strong> behind the color code that you type out. It’s kind of magical and has been a real game changer for me. I guarantee you that having this package will make customizing your scss file much easier on the eyes and brain. You may also choose to install the <a href="https://atom.io/packages/highlight-selected">highlight-selected</a> package to make highlighted text easier to spot throughout your file and the <a href="https://atom.io/packages/file-icons">file-icons</a> package to make it easier to discern between different file types in your tree view.You can install packages in Atom <em>Settings &gt; Install</em>.</li>
+</ol>
+</div>
+<div id="html-sleuthing" class="section level1">
+<h1>HTML sleuthing</h1>
+<p>I started by figuring out which out-of-the-box colors were the ones I wanted to change by using my browser’s <strong>Inspect Element</strong> tool on various elements of the <a href="https://sourcethemes.com/academic/docs/customization/">Hugo Academic documentation website</a> in dark mode.</p>
 </div>
