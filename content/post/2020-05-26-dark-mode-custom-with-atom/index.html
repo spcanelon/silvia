@@ -27,8 +27,14 @@ projects: []
 
 <div id="where-i-started" class="section level1">
 <h1>Where I started</h1>
-<p>With Alison Hill’s <a href="https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/">Up and Running with Blogdown</a> post! <strong>Super helpful</strong>, though because I came to it 2.5 years late, it was more like ‘up and running with lots of water breaks’ because I had to stop and account for changes made to the Hugo Academic theme in the meantime. The <a href="https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/#going-further">going futher</a> section in that post specifically talks about customizing the out-of-the-box theme and Alison directly links to her custom <code>css</code> file, which I closely referred to when changing colors in <a href="https://github.com/spcanelon/silvia/blob/master/assets/scss/custom.scss">my custom scss file</a>.</p>
-<p>Alison’s well-commented file helped me customize everything from text colors and fonts to alert colors and borders for Academic’s light mode. At this point I had the light mode looking the way I wanted but the dark mode still used out-of-the-box colors and they <strong><em>just didn’t go</em></strong>. <a href="">INSERT SCREENSHOT HERE</a>. So I decided not to enable the dark-mode option in <code>params.toml</code> until I could figure out how to customize the dark mode.</p>
+<p>With Alison Hill’s <a href="https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/">Up and Running with Blogdown</a> post! <strong>Super helpful</strong>, though because I came to it 2.5 years late, it was more like ‘up and running with lots of water breaks’ because I had to stop and account for changes made to the Hugo Academic theme in the meantime.</p>
+<ul>
+<li>For example, prior to Academic version 4.6, custom CSS was added using the <code>plugins_css</code> option in <code>params.toml</code>, but <a href="https://sourcethemes.com/academic/docs/customization/#customize-style-css">in current version 4.8</a>, the theme supports SCSS (a superset of CSS) and a <code>custom.scss</code> file is added in the <code>assets/scss/</code> folder.</li>
+</ul>
+<p>The <a href="https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/#going-further">going futher</a> section in Alison’s post specifically talks about customizing the out-of-the-box theme and Alison directly links to her custom CSS file, which I closely referred to when changing colors in <a href="https://github.com/spcanelon/silvia/blob/master/assets/scss/custom.scss">my custom SCSS file</a>.</p>
+<p>Alison’s well-commented CSS style sheet helped me customize everything from text colors and fonts to alert colors and borders for Academic’s light mode. At this point I had the light mode looking the way I wanted but the dark mode still used out-of-the-box colors and they <strong><em>just didn’t go</em></strong>. <a href="">INSERT DARK MODE SCREENSHOT HERE</a></p>
+<p>So I decided not to enable the dark-mode option in <code>params.toml</code> until I could figure out how to customize my stylesheet accordingly. That time has come because it turns out <a href="https://github.com/gcushen/hugo-academic/issues/988#issuecomment-475896178">it’s pretty straightforward</a>!</p>
+<p>The <a href="https://bookdown.org/yihui/blogdown/css.html">Blogdown book</a> does an excellent job summarizing what you need to know about CSS. This tutorial builds on that a little by incorporating <a href="https://sass-lang.com/guide">features made possible by SCSS</a> including variables and nested syntax.</p>
 </div>
 <div id="why-atom" class="section level1">
 <h1>Why Atom?</h1>
@@ -41,5 +47,5 @@ projects: []
 </div>
 <div id="html-sleuthing" class="section level1">
 <h1>HTML sleuthing</h1>
-<p>I started by figuring out which out-of-the-box colors were the ones I wanted to change by using my browser’s <strong>Inspect Element</strong> tool on various elements of the <a href="https://sourcethemes.com/academic/docs/customization/">Hugo Academic documentation website</a> in dark mode.</p>
+<p>I started by figuring out which out-of-the-box colors were the ones I wanted to change by using my browser’s <strong>Inspect Element</strong> tool on various elements of a <a href="https://sourcethemes.com/academic/docs/customization/">Hugo Academic theme documentation site</a> in dark mode.</p>
 </div>

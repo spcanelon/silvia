@@ -23,11 +23,17 @@ image:
 projects: []
 ---
 # Where I started
-With Alison Hill's [Up and Running with Blogdown](https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/) post! **Super helpful**, though because I came to it 2.5 years late, it was more like 'up and running with lots of water breaks' because I had to stop and account for changes made to the Hugo Academic theme in the meantime. The [going futher](https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/#going-further) section in that post specifically talks about customizing the out-of-the-box theme and Alison directly links to her custom `css` file, which I closely referred to when changing colors in [my custom scss file](https://github.com/spcanelon/silvia/blob/master/assets/scss/custom.scss). 
+With Alison Hill's [Up and Running with Blogdown](https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/) post! **Super helpful**, though because I came to it 2.5 years late, it was more like 'up and running with lots of water breaks' because I had to stop and account for changes made to the Hugo Academic theme in the meantime. 
 
-Alison's well-commented file helped me customize everything from text colors and fonts to alert colors and borders for Academic's light mode. At this point I had the light mode looking the way I wanted but the dark mode still used out-of-the-box colors and they **_just didn't go_**. [INSERT SCREENSHOT HERE](). So I decided not to enable the dark-mode option in `params.toml` until I could figure out how to customize the dark mode.
+- For example, prior to Academic version 4.6, custom CSS was added using the `plugins_css` option in `params.toml`, but [in current version 4.8](https://sourcethemes.com/academic/docs/customization/#customize-style-css), the theme supports SCSS (a superset of CSS) and a `custom.scss` file is added in the `assets/scss/` folder. 
 
+The [going futher](https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/#going-further) section in Alison's post specifically talks about customizing the out-of-the-box theme and Alison directly links to her custom CSS file, which I closely referred to when changing colors in [my custom SCSS file](https://github.com/spcanelon/silvia/blob/master/assets/scss/custom.scss).
 
+Alison's well-commented CSS style sheet helped me customize everything from text colors and fonts to alert colors and borders for Academic's light mode. At this point I had the light mode looking the way I wanted but the dark mode still used out-of-the-box colors and they **_just didn't go_**. [INSERT DARK MODE SCREENSHOT HERE]()
+
+So I decided not to enable the dark-mode option in `params.toml` until I could figure out how to customize my stylesheet accordingly. That time has come because it turns out [it's pretty straightforward](https://github.com/gcushen/hugo-academic/issues/988#issuecomment-475896178)! 
+
+The [Blogdown book](https://bookdown.org/yihui/blogdown/css.html) does an excellent job summarizing what you need to know about CSS. This tutorial builds on that a little by incorporating [features made possible by SCSS](https://sass-lang.com/guide) including variables and nested syntax. 
 
 # Why Atom?
 
@@ -39,4 +45,4 @@ Alison's well-commented file helped me customize everything from text colors and
 
 # HTML sleuthing
 
-I started by figuring out which out-of-the-box colors were the ones I wanted to change by using my browser's **Inspect Element** tool on various elements of the [Hugo Academic documentation website](https://sourcethemes.com/academic/docs/customization/) in dark mode.
+I started by figuring out which out-of-the-box colors were the ones I wanted to change by using my browser's **Inspect Element** tool on various elements of a [Hugo Academic theme documentation site](https://sourcethemes.com/academic/docs/customization/) in dark mode.
