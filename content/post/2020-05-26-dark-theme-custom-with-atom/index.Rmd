@@ -7,10 +7,10 @@ draft: yes
 categories:
   - R minis
 tags:
-  - r
-  - atom
   - css
+  - atom
   - blogdown
+  - r
 subtitle: ''
 summary: ''
 authors: []
@@ -22,3 +22,12 @@ image:
   preview_only: no
 projects: []
 ---
+
+# Helpful packages to install in Atom:
+
+must-have
+- [pigments](https://atom.io/packages/pigments)
+- [highlight-selected](https://atom.io/packages/highlight-selected)
+
+nice-to-have
+- [file-icons](https://atom.io/packages/file-icons)
