@@ -23,11 +23,9 @@ image:
 projects: []
 ---
 
-# Helpful packages to install in Atom:
+# Why Atom?
 
-must-have
-- [pigments](https://atom.io/packages/pigments)
-- [highlight-selected](https://atom.io/packages/highlight-selected)
+Helpful packages to install
 
-nice-to-have
-- [file-icons](https://atom.io/packages/file-icons)
+- **Must-have:** [pigments](https://atom.io/packages/pigments), [highlight-selected](https://atom.io/packages/highlight-selected)
+- **Nice-to-have:** [file-icons](https://atom.io/packages/file-icons)
