@@ -310,8 +310,56 @@ iframe {
 	border-bottom-right-radius: 0rem;
 }
 
-/* dark mode customization */
+/* DARK MODE CUSTOMIZATION */
+/* modified from themes/hugo-academic/assets/scss/academic/_dark.scss */
 
+/* body of site */
+body.dark,
+.dark .docs-toc-link,
+.dark .docs-sidebar .nav > li:not(.active) > a,
+.dark .modal button.close,
+.dark input,
+.dark .form-control,
+.dark .form-control:focus {
+  color: #fff; /* text of search filter field and summary text*/
+  background: #293753; /* page background - publications and posts */
+}
+
+.dark .form-control {
+  background-color: #122140; /* color of search filter field */
+}
+
+.dark .form-control:focus {
+  background-color: #122140; /* color of search filter field drop down menu */
+  border-color: $sta-primary;
+  box-shadow: 0 0 0 .2rem $sta-primary-dark;
+}
+
+/* heading*/
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: rgb(152, 166, 173);
+}
+
+.dark pre,
+.dark code {
+  color: #cfd2d8;
+  background-color: #122140;
+}
+
+.dark pre {
+  background-color: rgb(68, 71, 90);
+  border-color: rgb(68, 71, 90);
+}
+
+/**/
+
+/*
 .dark .pagination li > a, .pagination li > span {
 	border: 1px solid #e5be00;
 }
@@ -325,3 +373,4 @@ iframe {
 .dark a:hover {
 	color: #fff;
 }
+*/
