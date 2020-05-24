@@ -29,7 +29,7 @@ With Alison Hill's [Up and Running with Blogdown](https://alison.rbind.io/post/2
 
 The [going futher](https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/#going-further) section in Alison's post specifically talks about customizing the out-of-the-box theme and Alison directly links to her custom CSS file, which I closely referred to when changing colors in [my custom SCSS file](https://github.com/spcanelon/silvia/blob/master/assets/scss/custom.scss).
 
-Alison's well-commented CSS style sheet helped me customize everything from text colors and fonts to alert colors and borders for Academic's light mode. At this point I had the light mode looking the way I wanted but the dark mode still used out-of-the-box colors and they **_just didn't go_**. [INSERT DARK MODE SCREENSHOT HERE]()
+Alison's well-commented CSS helped me customize everything from text colors and fonts to alert colors and borders for Academic's light mode. At this point I had the light mode looking the way I wanted but the dark mode still used out-of-the-box colors for the most part and they **_just didn't go_**. [INSERT DARK MODE SCREENSHOT HERE]()
 
 So I decided not to enable the dark-mode option in `params.toml` until I could figure out how to customize my stylesheet accordingly. That time has come because it turns out [it's pretty straightforward](https://github.com/gcushen/hugo-academic/issues/988#issuecomment-475896178)! 
 
@@ -41,8 +41,25 @@ The [Blogdown book](https://bookdown.org/yihui/blogdown/css.html) does an excell
 
 1. **Seeing your directory files is made friendly in Tree View** when you open your website folder as a 'project folder'. You can just click on the file once to preview it and double-click if you want to actually open it. I find this to be really helpful when I can't remember which file contains what I'm looking for because I don't have to actually open each file to see what's in it.
 2. **Searching for something specific is easy with the built-in search tool**. I've used this many times when I can't remember where that specific parameter (e.g. fonts) or file type (e.g. `.scss`) is located within my directory. In particular I find it super handy to find specific HTML color codes, but more on that later! This brings me to my most favorite feature in Atom...
-3. **The [pigments](https://atom.io/packages/pigments) package!** Like R, Atom has a universe of handy packages and `pigments` will **display colors** behind the color code that you type out. It's kind of magical and has been a real game changer for me. I guarantee you that having this package will make customizing your scss file much easier on the eyes and brain. You may also choose to install the [highlight-selected](https://atom.io/packages/highlight-selected) package to make highlighted text easier to spot throughout your file and the [file-icons](https://atom.io/packages/file-icons) package to make it easier to discern between different file types in your tree view.You can install packages in Atom _Settings > Install_.
+3. **The [pigments](https://atom.io/packages/pigments) package!** Like R, Atom has a universe of handy packages and `pigments` will **display colors** behind the color code that you type out. It's kind of magical and has been a real game changer for me. Having this package will make customizing your scss file much easier on the eyes and brain.
 
-# HTML sleuthing
+- You may also choose to install the [highlight-selected](https://atom.io/packages/highlight-selected) package to make highlighted text easier to spot throughout your file and the [file-icons](https://atom.io/packages/file-icons) package to make it easier to discern between different file types in your tree view. You can install packages in _Atom > Packages > Settings View > Install Packages/Themes_.
 
-I started by figuring out which out-of-the-box colors were the ones I wanted to change by using my browser's **Inspect Element** tool on various elements of a [Hugo Academic theme documentation site](https://sourcethemes.com/academic/docs/customization/) in dark mode.
+# Choose your own adventure
+1. **Check out the SCSS file** linked above <i class="fas fa-hand-point-up"></i> to see how I customized my theme.
+2. **Keep reading** to follow along and learn with me < class="fas fa-user-friends"></i>.
+
+# Adding dark mode definitions to stylesheet
+Looking through GitHub issues I found that including two sub-themes, one for light mode and one for dark mode, [may be considered for Academic in the future but is not a priority](https://github.com/gcushen/hugo-academic/issues/995). A related issue shared that if you use a custom CSS, you can [define `.dark .<SELECTOR-NAME> {...}` for dark mode](https://github.com/gcushen/hugo-academic/issues/988).
+
+Not knowing what all of the options were for dark mode, I took a look at the `dark.scss` dark mode stylesheet built in to Academic in `themes/hugo-academic/assets/scss/academic/` folder. You can see the `pigments` package in action here! It makes it easier to identify elements with colors that you want to change. I'm looking at you inline code text color rgb(139, 233, 253). 
+
+[INSERT CODE SCREENSHOT FROM ATOM]()
+
+
+
+# Other helpful tools
+
+## HTML sleuthing
+
+I started by figuring out which out-of-the-box colors were the ones I wanted to change by using my browser's **Inspect Element** tool on various elements of a [Hugo Academic theme documentation site](https://sourcethemes.com/academic/docs/customization/) in dark mode. In particular, the teal color used for inline code stands out to me. 
