@@ -56,6 +56,53 @@ Not knowing what all of the options were for dark mode, I took a look at the `da
 
 [INSERT CODE SCREENSHOT FROM ATOM]()
 
+## <body/>
+
+This is the CSS corresponding to the body of the page. I've commented the lines with examples of variables defined with the `$` sign prefix. Having learned that [variables can be used to store colors](https://sass-lang.com/guide), I wanted to make I knew what these variables were pointing to, particularly the one for `border-color`. This led me down a bit of rabbit hole... 
+
+```{css}
+body.dark,
+.dark .docs-toc-link,
+.dark .docs-sidebar .nav > li:not(.active) > a,
+.dark .modal button.close,
+.dark input,
+.dark .form-control,
+.dark .form-control:focus {
+  color: rgb(248, 248, 242);
+  background: $sta-dark-background;              ### <---
+}
+
+.dark .form-control {
+  background-color: rgb(68, 71, 90);
+}
+
+.dark .form-control:focus {
+  background-color: rgb(68, 71, 90);
+  border-color: $sta-primary;                    ### <---
+  box-shadow: 0 0 0 .2rem $sta-primary-dark;     ### <---
+}
+```
+
+I found these three variables defined in `main.scss` within the `themes/hugo-academic/assets/scss/` folder. I'll start with `border-color: $sta-primary`. It was defined in `main.scss` as `{{ $scr.Get "primary" }}`
+
+```{css}
+$sta-primary: {{ $scr.Get "primary" }};
+```
+
+The double brackets around `$scr.Get "primary"` implied it's some kind of template and these definitions at the top of `main.scss` confirmed it's a [partial template](https://gohugo.io/templates/partials/):
+```{css}
+{{- $scr := .Scratch -}}
+{{- $site := $scr.Get "site" -}}
+{{- partial "functions/parse_theme" . -}}
+```
+
+The `$scr.Get "primary"` partial call passes site variable "primary" down to function "Scratch.Get". This function [_gets_ and _writes_ the value of a given key](https://gohugo.io/functions/scratch/) which in this case is "primary". This key is set in partial function `parse_theme` in the `themes/hugo-academic/layouts/partials/functions/` folder to correspond to a parameter in our theme `.toml` file. All that to say that **`$border-color: $sta-primary` really just corresponds to the primary color we define in the theme file**! 
+
+> **Note**: `$sta-primary-dark` and `$sta-primary-light` are the same primary color but made 10% darker and lighter, respectively. This is reflected in the `main.scss` file.
+
+`background: $sta-dark-background` was a little more interesting. The background of the body of the page is set in function `parse_theme` to default to dark mode color `rgb(40, 42, 54)` unless the "light" parameter within the theme file is set equal to "false", in which case the background of the page becomes whatever we define as "background" in the theme file. This we probably learned from experience when we first modified our theme file. This just means the `$sta-dark-background` variable isn't doing us any favors and we can **replace it with a background color of our choosing**.
+
+Anyway, I copied and pasted the `<body/>` elements to my custom SCSS and changed the background color fields to a dark gray.
 
 
 # Other helpful tools
