@@ -15,7 +15,6 @@
 /* links */
 
 a {
-  /*color: #d53135;*/
   color: #e5be00;
   cursor: pointer;
 }
@@ -23,7 +22,6 @@ a {
 a:active,
 a:focus,
 a:hover {
-  /*color: #d03b39;*/
   color: #ceab00;
 }
 
@@ -104,6 +102,14 @@ h1 {
   padding: 25px 0 50px 0;
 }
 
+.home-section.wg-experience .card-body {
+  padding: 2em; /* padding around text in experience cards*/
+}
+
+.home-section.wg-experience .card .card-text{
+  padding: 0;
+}
+
 /* this erases the margin-bottom for h1 */
 
 .home-section.wg-pages .section-heading h1 {
@@ -146,7 +152,6 @@ pre code {
 
 /* inline code */
 code {
-  /*color: #d03b39;*/
   color: #122140;
   /*background: #fff;*/
   background: #cfd2d8;
@@ -241,6 +246,7 @@ div.universal-wrapper.pt-3 h1 {
 }
 
 /* about-contact helpers */
+/* Used by Alison -- helpers = horizontal separators for sections? */
 
 .mini {
 	text-align: left;
@@ -263,16 +269,9 @@ hr {
     margin-right: auto;
  }
 
-.home-section.wg-experience .card-body {
-	/*padding: .5rem;*/
-  padding: 2em; /* padding around text in experience cards*/
-}
-
-.home-section.wg-experience .card .card-text{
-  padding: 0;
-}
 
 /* images more like cards; iframes more seamless */
+/* Used by Alison */
 
 img {
 	margin-bottom: 1.5rem;
@@ -285,20 +284,20 @@ iframe {
 	border: 0;
 }
 
-/* pagination buttons */
+/* pagination buttons at bottom of screen */
 
 .page-link {
-	color: #d53135;
+	color: #e5be00;
 	background-color: #fbf9f4;
-	border: 1px solid #d53135;
+	border: 1px solid #e5be00;
   border-radius: 0px; /*undo rounded corners*/
 
 }
 
 .page-link:hover {
 	color: #fff;
-	background-color: #d53135;
-	border-color: #d53135;
+	background-color: #e5be00;
+	border-color: #ceab00;
 }
 
 .page-item:first-child .page-link {
@@ -311,14 +310,14 @@ iframe {
 	border-bottom-right-radius: 0rem;
 }
 
-/* dark fixes */
+/* dark mode customization */
 
 .dark .pagination li > a, .pagination li > span {
-	border: 1px solid #d53135;
+	border: 1px solid #e5be00;
 }
 
 .dark .page-link:hover {
-	background-color: #d53135;
+	background-color: #ceab00;
 }
 
 .dark a:active,
