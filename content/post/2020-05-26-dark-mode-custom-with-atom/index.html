@@ -32,7 +32,7 @@ projects: []
 <li>For example, prior to Academic version 4.6, custom CSS was added using the <code>plugins_css</code> option in <code>params.toml</code>, but <a href="https://sourcethemes.com/academic/docs/customization/#customize-style-css">in current version 4.8</a>, the theme supports SCSS (a superset of CSS) and a <code>custom.scss</code> file is added in the <code>assets/scss/</code> folder.</li>
 </ul>
 <p>The <a href="https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/#going-further">going futher</a> section in Alison’s post specifically talks about customizing the out-of-the-box theme and Alison directly links to her custom CSS file, which I closely referred to when changing colors in <a href="https://github.com/spcanelon/silvia/blob/master/assets/scss/custom.scss">my custom SCSS file</a>.</p>
-<p>Alison’s well-commented CSS style sheet helped me customize everything from text colors and fonts to alert colors and borders for Academic’s light mode. At this point I had the light mode looking the way I wanted but the dark mode still used out-of-the-box colors and they <strong><em>just didn’t go</em></strong>. <a href="">INSERT DARK MODE SCREENSHOT HERE</a></p>
+<p>Alison’s well-commented CSS helped me customize everything from text colors and fonts to alert colors and borders for Academic’s light mode. At this point I had the light mode looking the way I wanted but the dark mode still used out-of-the-box colors for the most part and they <strong><em>just didn’t go</em></strong>. <a href="">INSERT DARK MODE SCREENSHOT HERE</a></p>
 <p>So I decided not to enable the dark-mode option in <code>params.toml</code> until I could figure out how to customize my stylesheet accordingly. That time has come because it turns out <a href="https://github.com/gcushen/hugo-academic/issues/988#issuecomment-475896178">it’s pretty straightforward</a>!</p>
 <p>The <a href="https://bookdown.org/yihui/blogdown/css.html">Blogdown book</a> does an excellent job summarizing what you need to know about CSS. This tutorial builds on that a little by incorporating <a href="https://sass-lang.com/guide">features made possible by SCSS</a> including variables and nested syntax.</p>
 </div>
@@ -42,10 +42,94 @@ projects: []
 <ol style="list-style-type: decimal">
 <li><strong>Seeing your directory files is made friendly in Tree View</strong> when you open your website folder as a ‘project folder’. You can just click on the file once to preview it and double-click if you want to actually open it. I find this to be really helpful when I can’t remember which file contains what I’m looking for because I don’t have to actually open each file to see what’s in it.</li>
 <li><strong>Searching for something specific is easy with the built-in search tool</strong>. I’ve used this many times when I can’t remember where that specific parameter (e.g. fonts) or file type (e.g. <code>.scss</code>) is located within my directory. In particular I find it super handy to find specific HTML color codes, but more on that later! This brings me to my most favorite feature in Atom…</li>
-<li><strong>The <a href="https://atom.io/packages/pigments">pigments</a> package!</strong> Like R, Atom has a universe of handy packages and <code>pigments</code> will <strong>display colors</strong> behind the color code that you type out. It’s kind of magical and has been a real game changer for me. I guarantee you that having this package will make customizing your scss file much easier on the eyes and brain. You may also choose to install the <a href="https://atom.io/packages/highlight-selected">highlight-selected</a> package to make highlighted text easier to spot throughout your file and the <a href="https://atom.io/packages/file-icons">file-icons</a> package to make it easier to discern between different file types in your tree view.You can install packages in Atom <em>Settings &gt; Install</em>.</li>
+<li><strong>The <a href="https://atom.io/packages/pigments">pigments</a> package!</strong> Like R, Atom has a universe of handy packages and <code>pigments</code> will <strong>display colors</strong> behind the color code that you type out. It’s kind of magical and has been a real game changer for me. Having this package will make customizing your scss file much easier on the eyes and brain.</li>
+</ol>
+<ul>
+<li>You may also choose to install the <a href="https://atom.io/packages/highlight-selected">highlight-selected</a> package to make highlighted text easier to spot throughout your file and the <a href="https://atom.io/packages/file-icons">file-icons</a> package to make it easier to discern between different file types in your tree view. You can install packages in <em>Atom &gt; Packages &gt; Settings View &gt; Install Packages/Themes</em>.</li>
+</ul>
+</div>
+<div id="choose-your-own-adventure" class="section level1">
+<h1>Choose your own adventure</h1>
+<ol style="list-style-type: decimal">
+<li><strong>Check out the SCSS file</strong> linked above <i class="fas fa-hand-point-up"></i> to see how I customized my theme.</li>
+<li><strong>Keep reading</strong> to follow along and learn with me &lt; class=“fas fa-user-friends”&gt;</i>.</li>
 </ol>
 </div>
-<div id="html-sleuthing" class="section level1">
-<h1>HTML sleuthing</h1>
-<p>I started by figuring out which out-of-the-box colors were the ones I wanted to change by using my browser’s <strong>Inspect Element</strong> tool on various elements of a <a href="https://sourcethemes.com/academic/docs/customization/">Hugo Academic theme documentation site</a> in dark mode.</p>
+<div id="adding-dark-mode-definitions-to-stylesheet" class="section level1">
+<h1>Adding dark mode definitions to stylesheet</h1>
+<p>Looking through GitHub issues I found that including two sub-themes, one for light mode and one for dark mode, <a href="https://github.com/gcushen/hugo-academic/issues/995">may be considered for Academic in the future but is not a priority</a>. A related issue shared that if you use a custom CSS, you can <a href="https://github.com/gcushen/hugo-academic/issues/988">define <code>.dark .&lt;SELECTOR-NAME&gt; {...}</code> for dark mode</a>.</p>
+<p>Not knowing what all of the options were for dark mode, I took a look at the <code>dark.scss</code> dark mode stylesheet built in to Academic in <code>themes/hugo-academic/assets/scss/academic/</code> folder. You can see the <code>pigments</code> package in action here! It makes it easier to identify elements with colors that you want to change. I’m looking at you inline code text color rgb(139, 233, 253).</p>
+<p><a href="">INSERT CODE SCREENSHOT FROM ATOM</a></p>
+##
+<body/>
+<p>This is the CSS corresponding to the body of the page. I’ve commented the lines with examples of variables defined with the <code>$</code> sign prefix. Having learned that <a href="https://sass-lang.com/guide">variables can be used to store colors</a>, I wanted to make I knew what these variables were pointing to, particularly the one for <code>border-color</code>. This led me down a bit of rabbit hole…</p>
+<pre class="css"><code>body.dark,
+.dark .docs-toc-link,
+.dark .docs-sidebar .nav &gt; li:not(.active) &gt; a,
+.dark .modal button.close,
+.dark input,
+.dark .form-control,
+.dark .form-control:focus {
+  color: rgb(248, 248, 242);
+  background: $sta-dark-background;              ### &lt;---
+}
+
+.dark .form-control {
+  background-color: rgb(68, 71, 90);
+}
+
+.dark .form-control:focus {
+  background-color: rgb(68, 71, 90);
+  border-color: $sta-primary;                    ### &lt;---
+  box-shadow: 0 0 0 .2rem $sta-primary-dark;     ### &lt;---
+}</code></pre>
+<style type="text/css">
+body.dark,
+.dark .docs-toc-link,
+.dark .docs-sidebar .nav > li:not(.active) > a,
+.dark .modal button.close,
+.dark input,
+.dark .form-control,
+.dark .form-control:focus {
+  color: rgb(248, 248, 242);
+  background: $sta-dark-background;              ### <---
+}
+
+.dark .form-control {
+  background-color: rgb(68, 71, 90);
+}
+
+.dark .form-control:focus {
+  background-color: rgb(68, 71, 90);
+  border-color: $sta-primary;                    ### <---
+  box-shadow: 0 0 0 .2rem $sta-primary-dark;     ### <---
+}
+</style>
+<p>I found these three variables defined in <code>main.scss</code> within the <code>themes/hugo-academic/assets/scss/</code> folder. I’ll start with <code>border-color: $sta-primary</code>. It was defined in <code>main.scss</code> as <code>{{ $scr.Get &quot;primary&quot; }}</code></p>
+<pre class="css"><code>$sta-primary: {{ $scr.Get &quot;primary&quot; }};</code></pre>
+<style type="text/css">
+$sta-primary: {{ $scr.Get "primary" }};
+</style>
+<p>The double brackets around <code>$scr.Get &quot;primary&quot;</code> implied it’s some kind of template and these definitions at the top of <code>main.scss</code> confirmed it’s a <a href="https://gohugo.io/templates/partials/">partial template</a>:</p>
+<pre class="css"><code>{{- $scr := .Scratch -}}
+{{- $site := $scr.Get &quot;site&quot; -}}
+{{- partial &quot;functions/parse_theme&quot; . -}}</code></pre>
+<style type="text/css">
+{{- $scr := .Scratch -}}
+{{- $site := $scr.Get "site" -}}
+{{- partial "functions/parse_theme" . -}}
+</style>
+<p>The <code>$scr.Get &quot;primary&quot;</code> partial call passes site variable “primary” down to function “Scratch.Get”. This function <a href="https://gohugo.io/functions/scratch/"><em>gets</em> and <em>writes</em> the value of a given key</a> which in this case is “primary”. This key is set in partial function <code>parse_theme</code> in the <code>themes/hugo-academic/layouts/partials/functions/</code> folder to correspond to a parameter in our theme <code>.toml</code> file. All that to say that <strong><code>$border-color: $sta-primary</code> really just corresponds to the primary color we define in the theme file</strong>!</p>
+<blockquote>
+<p><strong>Note</strong>: <code>$sta-primary-dark</code> and <code>$sta-primary-light</code> are the same primary color but made 10% darker and lighter, respectively. This is reflected in the <code>main.scss</code> file.</p>
+</blockquote>
+<p><code>background: $sta-dark-background</code> was a little more interesting. The background of the body of the page is set in function <code>parse_theme</code> to default to dark mode color <code>rgb(40, 42, 54)</code> unless the “light” parameter within the theme file is set equal to “false”, in which case the background of the page becomes whatever we define as “background” in the theme file. This we probably learned from experience when we first modified our theme file. This just means the <code>$sta-dark-background</code> variable isn’t doing us any favors and we can <strong>replace it with a background color of our choosing</strong>.</p>
+<p>Anyway, I copied and pasted the <code>&lt;body/&gt;</code> elements to my custom SCSS and changed the background color fields to a dark gray.</p>
+</div>
+<div id="other-helpful-tools" class="section level1">
+<h1>Other helpful tools</h1>
+<div id="html-sleuthing" class="section level2">
+<h2>HTML sleuthing</h2>
+<p>I started by figuring out which out-of-the-box colors were the ones I wanted to change by using my browser’s <strong>Inspect Element</strong> tool on various elements of a <a href="https://sourcethemes.com/academic/docs/customization/">Hugo Academic theme documentation site</a> in dark mode. In particular, the teal color used for inline code stands out to me.</p>
+</div>
 </div>
