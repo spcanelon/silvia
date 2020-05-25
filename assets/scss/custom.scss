@@ -1,31 +1,80 @@
 /*************************************************
- *  A custom theme for Hugo Academic
- *  Modified from Alison Hill's custom file:
- *  https://github.com/rbind/apreshill/blob/master/assets/css/alison.css
- *  Saved as custom.scss in `/assets/scss/custom.scss` relative to your website root
+ *  Saved as custom.scss in `/assets/scss/custom.scss` relative to the website root
  *  https://sourcethemes.com/academic/docs/customization/
  **************************************************/
 
-/* from rgb(127,140,180) to gold */
-/*  change all rgb(127,140,180) --> to rgb(127,140,180) */
-/*  change all rgb(52,60,86) --> to #f7ebb2 */
-/*  change all rgba(127,140,180,0.6) --> rgba(127,140,180,0.6) */
-/*  change all rgba(52,60,86,1) --> #b79800 */
+/** CHANGES **/
+
+/*  change all rgb(152, 166, 173) --> rgba(255, 255, 255, 0.87) -- headings */
+/*  change all rgb(40, 42, 54)    --> #121212, rgba(18, 18, 18, 100) -- page background */
+/*  change all rgb(68, 71, 90)    --> mix(rgba(18, 18, 18, 100), white, 88%) -- dark mode inline code background */
+/*  change all rgb(139, 233, 253) --> #122140 -- dark mode inline code text */
+
+
+/** COLOR VARIABLES **/
+
+$spc-primary: #122140;                         /* primary color */
+$spc-primary-light: #3d486b;                   /* primary color, lighter shade */
+$spc-primary-dark: #00001b;                    /* primary color, darker shade */
+
+$spc-secondary: #e5be00;                       /* secondary color */
+$spc-secondary-light: #fff14d;                 /* secondary color, lighter shade */
+$spc-secondary-dark: #ae8f00;                  /* secondary color, darker shade */
+
+$spc-text-high: rgba(255, 255, 255, 0.87);     /* high emphasis/high priority, white 87% opacity */
+$spc-text-medium: rgba(255, 255, 255, 0.60);   /* medium emphasis, white 60% opacity */
+$spc-text-low: rgba(255, 255, 255, 0.38);      /* disabled text, white 38% opacity */
+
+$spc-background-light: rgb(238, 238, 238);     /* light mode background */
+$spc-background-dark: rgba(18, 18, 18, 100);   /* dark mode background (00dp elevation level) */
+/* simulating an elevation white overlay transparency of 12% */
+$spc-background-med: mix($spc-background-dark, white, 88%); /* dark mode background 08dp elevation */
+$spc-test: mix($spc-primary, $spc-background-dark, 92);
+
+$spc-error: rgba(169, 5, 51, 1);
+$spc-error-light: rgba(253, 244, 244, 1);
+
+/* setting color variables using the lighten function as example
+$spc-lighten-percentage: 10%;
+$spc-darken-percentage: 10%;
+$spc-primary-light: lighten($spc-primary, $spc-lighten-percentage);
+$spc-primary-dark: darken($spc-primary, $sta-darken-percentage) */
+
+/*************************************************
+ *  CORE
+ **************************************************/
+/* headings: _root.scss */
+
+h1, h2, h3, h4, h5, h6 {
+  color: #333;
+  font-weight: 400;
+}
+
+body {
+  color: #333;
+  font-size: 0.9rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
 
 /* links */
 
 a {
-  color: #e5be00;
+  color: $spc-secondary;
   cursor: pointer;
 }
 
 a:active,
 a:focus,
 a:hover {
-  color: #ceab00;
+  color: $spc-secondary-dark;
 }
 
-/* nav */
+/*************************************************
+ *  NAVIGATION BAR: _nav.scss
+ **************************************************/
 
 .navbar-light .navbar-nav>.nav-item>.nav-link,
 .navbar-light .navbar-nav>.nav-item>.nav-link:focus,
@@ -49,7 +98,7 @@ a:hover {
 
 /* -- underline for navigation bar links
 .navbar-nav {
-  border-bottom: 2px solid #d53135;
+  border-bottom: 2px solid $spc-secondary;
 }*/
 
 .navbar-brand {
@@ -61,26 +110,13 @@ a:hover {
 /* -- underline for search magnifying glass
 .navbar-light .navbar-brand:focus,
 .navbar-light .navbar-brand:hover {
-  color: #d03b39;
+  color: $spc-secondary;
 }
 
-/* text */
 
-h1, h2, h3, h4, h5, h6 {
-  color: #333;
-  font-weight: 400;
-}
-
-body {
-  color: #333;
-  font-size: 0.9rem;
-}
-
-h1 {
-  font-size: 2rem;
-}
-
-/* home page */
+/*************************************************
+ *  HOME PAGE: _widgets.scss
+ **************************************************/
 
 .portrait-title h2 {
   color: #333;
@@ -111,7 +147,6 @@ h1 {
 }
 
 /* this erases the margin-bottom for h1 */
-
 .home-section.wg-pages .section-heading h1 {
   margin: 0 0 0 0;
 }
@@ -132,7 +167,10 @@ h1 {
 }
 
 
-/* code */
+/*************************************************
+ *  CODE
+ **************************************************/
+/* https://bookdown.org/yihui/blogdown/templates.html */
 /* https://github.com/rstudio/blogdown/blob/master/docs/02-hugo.Rmd */
 
 /* code chunk background layer*/
@@ -152,7 +190,7 @@ pre code {
 
 /* inline code */
 code {
-  color: #122140;
+  color: $spc-primary;
   /*background: #fff;*/
   background: #cfd2d8;
   font-size: 0.9em;
@@ -162,20 +200,22 @@ code {
 	background: #fdfbf2; /* code chunk background */
 }
 
+/*************************************************
+ *  SHORTCODE ALERTS: _root.scss
+ **************************************************/
 
-/* alerts */
 
 div.alert-note > div:first-child::before {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
-  color: #122140;
+  color: $spc-primary;
   content: "\f00c"; /* check mark icon */
 }
 
 .alert-note {
   color: #333;
   background-color: #e7e8eb;
-  border-top: 2px solid #122140;
+  border-top: 2px solid $spc-primary;
   border-radius: 0px; /*undo rounded corners*/
   border-right-style: none;
   border-bottom-style: none;
@@ -205,7 +245,9 @@ div.alert.alert-warning {
   padding: 23px 10px 21px 10px;
 }
 
-/* buttons (i.e. download PDF) */
+/*************************************************
+ *  TOOLBAR BUTTONS (i.e. download PDF)
+ **************************************************/
 
 .btn.btn-sm, .btn-group-sm > .btn {
   background: #fff;
@@ -245,6 +287,9 @@ div.universal-wrapper.pt-3 h1 {
   text-transform: capitalize;
 }
 
+/*************************************************
+ *  ABOUT
+ **************************************************/
 /* about-contact helpers */
 /* Used by Alison -- helpers = horizontal separators for sections? */
 
@@ -270,8 +315,7 @@ hr {
  }
 
 
-/* images more like cards; iframes more seamless */
-/* Used by Alison */
+/* images more like cards; iframes more seamless -- used by Alison*/
 
 img {
 	margin-bottom: 1.5rem;
@@ -284,20 +328,22 @@ iframe {
 	border: 0;
 }
 
-/* pagination buttons at bottom of screen */
+/*************************************************
+ *  PAGINATION (buttons at bottom of list)
+ **************************************************/
 
 .page-link {
-	color: #e5be00;
+	color: $spc-secondary;
 	background-color: #fbf9f4;
-	border: 1px solid #e5be00;
+	border: 1px solid $spc-secondary;
   border-radius: 0px; /*undo rounded corners*/
 
 }
 
 .page-link:hover {
 	color: #fff;
-	background-color: #e5be00;
-	border-color: #ceab00;
+	background-color: $spc-secondary;
+	border-color: $spc-secondary-dark;
 }
 
 .page-item:first-child .page-link {
@@ -310,8 +356,9 @@ iframe {
 	border-bottom-right-radius: 0rem;
 }
 
-/* DARK MODE CUSTOMIZATION */
-/* modified from themes/hugo-academic/assets/scss/academic/_dark.scss */
+/*************************************************
+ *  DARK MODE CUSTOMIZATION -- _dark.scss
+ **************************************************/
 
 /* body of site */
 body.dark,
@@ -322,15 +369,15 @@ body.dark,
 .dark .form-control,
 .dark .form-control:focus {
   color: #fff; /* text of search filter field and summary text*/
-  background: #293753; /* page background - publications and posts */
+  background: $spc-background-dark; /* page background - publications and posts */
 }
 
 .dark .form-control {
-  background-color: #122140; /* color of search filter field */
+  background-color: $spc-primary; /* color of search filter field */
 }
 
 .dark .form-control:focus {
-  background-color: #122140; /* color of search filter field drop down menu */
+  background-color: $spc-primary; /* color of search filter field drop down menu */
   border-color: $sta-primary;
   box-shadow: 0 0 0 .2rem $sta-primary-dark;
 }
@@ -343,29 +390,31 @@ body.dark,
 .dark h4,
 .dark h5,
 .dark h6 {
-  color: rgb(152, 166, 173);
+  color: $spc-text-high;
 }
+
+/* code blocks */
 
 .dark pre,
 .dark code {
-  color: #cfd2d8;
-  background-color: #122140;
+  color: $spc-text-medium;                     /* code block text (e.g. functions) */
+  background-color: $spc-background-med; /* code block text background */
 }
 
 .dark pre {
-  background-color: rgb(68, 71, 90);
-  border-color: rgb(68, 71, 90);
+  background-color: $spc-background-med;    /* code block background */
+  border-color: $spc-background-med;            /* code block border */
 }
 
 /**/
 
 /*
 .dark .pagination li > a, .pagination li > span {
-	border: 1px solid #e5be00;
+	border: 1px solid $spc-secondary$spc-secondary;
 }
 
 .dark .page-link:hover {
-	background-color: #ceab00;
+	background-color: $spc-secondary-dark;
 }
 
 .dark a:active,
