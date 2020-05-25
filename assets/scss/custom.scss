@@ -467,3 +467,10 @@ so I converted to single value */
 .dark .card .card-image.hover-overlay::after {
   color: #fff;      /* not sure what this is */
 }
+
+/* card component: _cards.scss */
+.dark .card-simple {
+  background: $spc-background-dark-primary;         /* text background for post cards */
+  box-shadow: 0 1px 1px $spc-background-light;      /* card shadow (values: top bottom sides)*/
+  border: 1px solid $spc-background-dark-primary;   /* card border*/
+}
