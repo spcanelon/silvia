@@ -37,8 +37,8 @@ $spc-error-light: rgba(253, 244, 244, 1);
 /* setting color variables using the lighten function as example
 $spc-lighten-percentage: 10%;
 $spc-darken-percentage: 10%;
-$spc-primary-light: lighten($spc-primary, $spc-lighten-percentage);
-$spc-primary-dark: darken($spc-primary, $sta-darken-percentage) */
+$spc-primary-light-ex: lighten($spc-primary, $spc-lighten-percentage);
+$spc-primary-dark-ex: darken($spc-primary, $sta-darken-percentage) */
 
 /*************************************************
  *  CORE
@@ -368,18 +368,20 @@ body.dark,
 .dark input,
 .dark .form-control,
 .dark .form-control:focus {
-  color: #fff; /* text of search filter field and summary text*/
+  color: $spc-text-medium;          /* text of search filter field and summary text*/
   background: $spc-background-dark; /* page background - publications and posts */
 }
 
+/* search forms (e.g. full list of publications) */
+
 .dark .form-control {
-  background-color: $spc-primary; /* color of search filter field */
+  background-color: $spc-primary;   /* background color of search filter field */
 }
 
 .dark .form-control:focus {
-  background-color: $spc-primary; /* color of search filter field drop down menu */
-  border-color: $sta-primary;
-  box-shadow: 0 0 0 .2rem $sta-primary-dark;
+  background-color: $spc-primary;                /* color of search filter field drop down menu */
+  border-color: $spc-background-light;           /* border color of search filter field when clicked */
+  box-shadow: 0 0 0 .2rem $spc-background-light; /* shadow box color of search filder field when clicked */
 }
 
 /* heading*/
@@ -397,29 +399,62 @@ body.dark,
 
 .dark pre,
 .dark code {
-  color: $spc-text-medium;                     /* code block text (e.g. functions) */
-  background-color: $spc-background-med; /* code block text background */
+  color: $spc-text-medium;                  /* code block text (e.g. functions) */
+  background-color: $spc-background-med;    /* code block text background */
 }
 
 .dark pre {
   background-color: $spc-background-med;    /* code block background */
-  border-color: $spc-background-med;            /* code block border */
+  border-color: $spc-background-med;        /* code block border */
 }
 
-/**/
 
-/*
+
+/* Markup -- not currently being used */
+.dark .markup-quote {
+  background-image: linear-gradient(to bottom, rgba(233, 231, 245, 0.2), rgba(233, 231, 245, 0.2));
+}
+
+.dark #MathJax_Zoom {
+  background-color: rgb(68, 71, 90) !important;
+}
+
+.dark table table {
+  background-color: rgb(40, 42, 54);
+}
+
+/* Table Striped */
+.dark table > tbody > tr:nth-child(odd) > td,
+.dark table > tbody > tr:nth-child(odd) > th {
+  background-color: $spc-background-med;                   /* text background for odd table rows */
+}
+
+/* Table Hover */
+.dark table > tbody > tr:hover > td,
+.dark table > tbody > tr:hover > th {
+  background-color: mix($spc-background-med, white, 90%);  /* text background for odd table rows when hovering */
+}
+
+/* pagination -- not currently being used */
 .dark .pagination li > a, .pagination li > span {
-	border: 1px solid $spc-secondary$spc-secondary;
+  background-color: rgb(40, 42, 54);
+  border: 1px solid #ddd;
 }
 
-.dark .page-link:hover {
-	background-color: $spc-secondary-dark;
+/* cards (i.e. experience) */
+.dark .card {
+  background: #343a40;
 }
 
-.dark a:active,
-.dark a:focus,
-.dark a:hover {
-	color: #fff;
+.dark .card h4 a {
+  color: $sta-primary;
+  border-bottom: solid 1px transparent;
 }
-*/
+
+.dark .card .card-image.hover-overlay::before {
+  background: #666;
+}
+
+.dark .card .card-image.hover-overlay::after {
+  color: #fff;
+}
