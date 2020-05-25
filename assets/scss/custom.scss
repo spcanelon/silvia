@@ -6,8 +6,8 @@
 /** CHANGES **/
 
 /*  change all rgb(152, 166, 173) --> rgba(255, 255, 255, 0.87) -- headings */
-/*  change all rgb(40, 42, 54)    --> #121212, rgba(18, 18, 18, 100) -- page background */
-/*  change all rgb(68, 71, 90)    --> mix(rgba(18, 18, 18, 100), white, 88%) -- dark mode inline code background */
+/*  change all rgb(40, 42, 54)    --> #1f222a -- page background */
+/*  change all rgb(68, 71, 90)    --> mix(#1f222a, white, 95%) */
 /*  change all rgb(139, 233, 253) --> #122140 -- dark mode inline code text */
 
 
@@ -24,10 +24,8 @@ $spc-secondary-dark: #ae8f00;                  /* secondary color, darker varian
 /* text colors */
 $spc-text-high: rgba(255, 255, 255, 0.87);     /* high emphasis/high priority, white 87% opacity */
 $spc-text-medium: rgba(255, 255, 255, 0.60);   /* medium emphasis, white 60% opacity */
-$spc-text-low: rgba(255, 255, 255, 0.38);      /* disabled text, white 38% opacity */
-
-
-
+$spc-text-low: rgba(255, 255, 255, 0.45);      /* disabled text, white 45% opacity */
+/*$spc-text-low: rgba(255, 255, 255, 0.38);    /* disabled text, white 38% opacity */
 
 
 
@@ -381,10 +379,25 @@ iframe {
 }
 
 /*************************************************
- *  DARK MODE CUSTOMIZATION -- _dark.scss
+ *  DARK MODE CUSTOMIZATION
  **************************************************/
 
-/* body of site */
+ /* Page builder: _widgets.scss */
+ .dark .home-section {
+   background-color: $spc-error;
+ }
+
+ .dark .home-section:nth-of-type(odd) {
+   background-color: mix($spc-00dp, white, 98%);   /* odd sections: about, recent pubs, contact */
+ }
+
+ .dark .home-section:nth-of-type(even) {
+   background-color: $spc-00dp;   /* even sections: experience, recents posts */
+ }
+
+
+
+/* body of site: _dark.scss */
 body.dark,
 .dark .docs-toc-link,
 .dark .docs-sidebar .nav > li:not(.active) > a,
@@ -393,24 +406,11 @@ body.dark,
 .dark .form-control,
 .dark .form-control:focus {
   color: $spc-text-medium;            /* text of search field and summary text */
-  background-color: $spc-00dp;        /* search field background */
+  background-color: $spc-00dp;    /* base surface */
   border-radius: .5rem;
   border-color: $spc-bkg-light-std;
   border: 0px solid;
   padding: 0.3em;
-}
-
-/* search forms (e.g. full list of publications) */
-
-.dark .form-control {
-  background-color: $spc-bkg-dark;    /* background color of search filter field */
-}
-
-.dark .form-control:focus {
-  background-color: $spc-02dp;        /* color of search filter field drop down menu */
-  border-color: $spc-01dp;            /* border color of search filter field when clicked */
-  box-shadow: 0 0 0 .1rem $spc-02dp;  /* shadow box color of search filter field when clicked */
-  border: 0px solid;
 }
 
 /* heading*/
@@ -437,15 +437,21 @@ a:hover {
   color: $spc-secondary-light;
 }
 
-/* code blocks */
+/* inline code */
+.dark code {
+  color: $spc-secondary-light;            /* inline and code block text */
+  background: $spc-04dp;
+  font-size: 0.9em;
+}
 
+/* code blocks */
 .dark pre {
-  border: 1px solid $spc-01dp; /* code block border */
-  box-shadow: 0px 0px 0px $spc-text-low;          /* code block shadow (values: h-shift v-shift intensity) */
+  border: 0px solid $spc-01dp;            /* code block border */
+  box-shadow: 0px 0px 0px $spc-bkg-dark;  /* code block shadow (values: h-shift v-shift intensity) */
   padding: 0.25em;
-  background: $spc-01dp;       /* code block backround */
+  background: $spc-01dp;                  /* code block backround */
   overflow-x: auto;
-  border-radius: 0px;                             /* corner rounding */
+  border-radius: 0px;                     /* corner rounding */
 }
 
 .dark pre code {
@@ -453,18 +459,10 @@ a:hover {
   font-size: 0.8rem;
 }
 
-/* inline code */
-.dark code {
-  color: $spc-secondary-light;    /* inline and code block text */
-  background: mix($spc-01dp, white, 96);
-  font-size: 0.9em;
-}
-
 .dark .hljs {
-	background-color: mix($spc-01dp, white, 96);        /* code block text background */
+	background-color: $spc-02dp;            /* code block text background */
+
 }
-
-
 
 /* Markup -- not currently being used */
 .dark .markup-quote {
@@ -482,18 +480,18 @@ a:hover {
 /* Table Striped */
 .dark table > tbody > tr:nth-child(odd) > td,
 .dark table > tbody > tr:nth-child(odd) > th {
-  background-color: $spc-bkg-dark;                   /* text background for odd table rows */
+  background-color: $spc-bkg-dark;              /* text background for odd table rows */
 }
 
 /* Table Hover */
 .dark table > tbody > tr:hover > td,
 .dark table > tbody > tr:hover > th {
-  background-color: mix($spc-bkg-dark, white, 90%);  /* text background for odd table rows when hovering */
+  background-color: mix($spc-00dp, white, 98);  /* text background for odd table rows when hovering */
 }
 
 /* pagination -- not currently being used */
 .dark .pagination li > a, .pagination li > span {
-  background-color: rgb(40, 42, 54);
+  background-color: $spc-00dp;
   border: 1px solid #ddd;
 }
 
@@ -501,27 +499,27 @@ a:hover {
 /* Note, 'background' doesn't accept functiosn like mix($spc-primary, white, 92)
 so I converted to single value at beginning of stylesheet */
 .dark .card {
-  background: $spc-01dp; /* text background for experience cards */
+  background: $spc-01dp;                        /* text background for experience cards */
 }
 
 .dark .card h4 a {
-  color: $spc-secondary; /* text for card institution link */
+  color: $spc-secondary;                        /* text for card institution link */
   border-bottom: solid 1px transparent;
 }
 
 .dark .card .card-image.hover-overlay::before {
-  background: #666; /* not sure what this is */
+  background: #666;                             /* not sure what this is */
 }
 
 .dark .card .card-image.hover-overlay::after {
-  color: #fff;      /* not sure what this is */
+  color: #fff;                                  /* not sure what this is */
 }
 
 /* card component: _cards.scss */
 .dark .card-simple {
-  background: $spc-01dp;         /* text background for post cards */
+  background: $spc-01dp;                        /* text background for post cards */
   box-shadow: 0 1px 1px $spc-bkg-dark-std;      /* card shadow (values: top bottom sides)*/
-  border: 1px solid $spc-01dp;   /* card border*/
+  border: 1px solid $spc-01dp;                  /* card border*/
 }
 
 /* pagination */
@@ -549,7 +547,7 @@ so I converted to single value at beginning of stylesheet */
 	border-bottom-right-radius: 0rem;
 }
 
-/* Toolbar buttons */
+/* Button size override */
 
 .dark .btn {
   font-family: Lora;
@@ -564,18 +562,6 @@ so I converted to single value at beginning of stylesheet */
 	color: #fff;
 	background-color: $spc-primary-dark;     /* page button text background when hovering*/
 	border-color: $spc-primary-dark;         /* page button border color when hovering */
-}
-
-.dark .btn-toolbar .btn:first-child {
-  border-radius: 0px;
-}
-
-.dark .btn-toolbar .btn:last-child {
-  border-radius: 0px;
-}
-
-.dark .btn-toolbar {
-  justify-content: center;
 }
 
 .dark .btn.btn-sm, .btn-group-sm > .btn {
@@ -595,4 +581,46 @@ so I converted to single value at beginning of stylesheet */
 .dark .btn.btn-outline-primary.my-1.mr-1 {
   border-radius: 0px;                      /* corner rounding */
   font-size: 0.8rem;
+}
+
+/* Toolbar buttons */
+
+.dark .btn-toolbar .btn:first-child {
+  border-radius: 0px;
+}
+
+.dark .btn-toolbar .btn:last-child {
+  border-radius: 0px;
+}
+
+.dark .btn-toolbar {
+  justify-content: center;
+}
+
+/** Search bar: _search.scss **/
+
+/* main page search bar */
+.dark .search-header {
+  background-color: $spc-00dp;
+}
+
+/* Algolia search input */
+.dark .ais-search-box--input {
+  background-color: $spc-bkg-dark;
+}
+
+.dark #search-query {
+  background-color: $spc-bkg-dark;         /* Search bar query text background */
+}
+
+/* search forms (e.g. full list of publications) */
+.dark .form-control {
+  background-color: $spc-bkg-dark;    /* background color of search filter field */
+}
+
+.dark .form-control:focus {
+  background-color: $spc-02dp;        /* color of search filter field drop down menu */
+  border-color: white;                /* border color of search filter field when clicked */
+  box-shadow: 0 0 0 .1rem $spc-02dp;  /* shadow box color of search filter field when clicked */
+  border: 0px solid;
 }

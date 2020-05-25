@@ -137,6 +137,7 @@ Coolors resources:
 >The level AA requires a contrast ratio of at least 4.5:1 for normal text and 3:1 for large text (at least 18pt) or bold text.
 > The level AAA requires a contrast ratio of at least 7:1 for normal text and 4.5:1 for large text or bold text.
 
+make sure you're light text color and highest/lightest elevation color have adequate contrast!
 
 > color systems are based on tonal palettes — these palettes use your brand colors to create a set of harmonious variants that come together in a comprehensive color system applied across your app, ensuring style and legibility.
 
@@ -163,10 +164,9 @@ Try out different dark mode colors by changing variables. Don't worry, the pigme
 
 TIP: I like using a bright color like my error color to test different CSS elements. It stands out and makes it easy to see what I modified.
 
-WARNING: 
-
-
-
+- changed background for posts/publications but home page is till eggplant -- SOLVED because it's overlaid with WIDGETS
+- search bar for posts/publications is same color as background
+- code block bkg and border don't matc
 
 
 # Other helpful tools
