@@ -126,6 +126,65 @@ $sta-primary: {{ $scr.Get "primary" }};
 <p><code>background: $sta-dark-background</code> was a little more interesting. The background of the body of the page is set in function <code>parse_theme</code> to default to dark mode color <code>rgb(40, 42, 54)</code> unless the “light” parameter within the theme file is set equal to “false”, in which case the background of the page becomes whatever we define as “background” in the theme file. This we probably learned from experience when we first modified our theme file. This just means the <code>$sta-dark-background</code> variable isn’t doing us any favors and we can <strong>replace it with a background color of our choosing</strong>.</p>
 <p>Anyway, I copied and pasted the <code>&lt;body/&gt;</code> elements to my custom SCSS and changed the background color fields to a dark gray.</p>
 </div>
+<div id="designing-your-dark-theme" class="section level1">
+<h1>Designing your dark theme</h1>
+<p>Inspiration for color palette:</p>
+<ul>
+<li><a href="https://coolors.co/palettes/trending" class="uri">https://coolors.co/palettes/trending</a></li>
+<li><a href="https://coolors.co/palettes/trending/dark" class="uri">https://coolors.co/palettes/trending/dark</a></li>
+</ul>
+<p>Material design guidance for dark themes: <a href="https://www.material.io/design/color/dark-theme.html" class="uri">https://www.material.io/design/color/dark-theme.html</a></p>
+<p>Tutorial: <a href="https://codelabs.developers.google.com/codelabs/design-material-darktheme/#0" class="uri">https://codelabs.developers.google.com/codelabs/design-material-darktheme/#0</a></p>
+<p>Palette generator: <a href="https://material.io/design/color/the-color-system.html#tools-for-picking-colors" class="uri">https://material.io/design/color/the-color-system.html#tools-for-picking-colors</a></p>
+<ul>
+<li>then view in Color Tool: <a href="https://material.io/resources/color/#!/?view.left=0&amp;view.right=0&amp;primary.color=122140&amp;secondary.color=e5bf00" class="uri">https://material.io/resources/color/#!/?view.left=0&amp;view.right=0&amp;primary.color=122140&amp;secondary.color=e5bf00</a>
+<ul>
+<li>personal link: <a href="https://material.io/resources/color/#!/?view.left=1&amp;view.right=0&amp;primary.color=122140&amp;secondary.color=e5bf00" class="uri">https://material.io/resources/color/#!/?view.left=1&amp;view.right=0&amp;primary.color=122140&amp;secondary.color=e5bf00</a></li>
+</ul></li>
+</ul>
+<p>Understanding contrast criterion: <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" class="uri">https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html</a></p>
+<blockquote>
+<p>the contrast is calculated in such a way that color is not a key factor so that people who have a color vision deficit will also have adequate contrast between the text and the background.
+body text should meet a contrast level of at least 4.5:1 (AA)</p>
+</blockquote>
+<p>Contrast color calculator: <a href="https://contrast-ratio.com/" class="uri">https://contrast-ratio.com/</a></p>
+<p>Coolors resources:
+- <a href="https://coolors.co/contrast-checker/112a46-acc8e5" class="uri">https://coolors.co/contrast-checker/112a46-acc8e5</a>
+&gt; This tool follows the Web Content Accessibility Guidelines (WCAG), which are a series of recommendations for making the web more accessible.
+&gt;Regarding colors, the standard defines two levels of contrast ratio: AA (minimum contrast) and AAA (enhanced contrast).
+&gt;The level AA requires a contrast ratio of at least 4.5:1 for normal text and 3:1 for large text (at least 18pt) or bold text.
+&gt; The level AAA requires a contrast ratio of at least 7:1 for normal text and 4.5:1 for large text or bold text.</p>
+<blockquote>
+<p>color systems are based on tonal palettes — these palettes use your brand colors to create a set of harmonious variants that come together in a comprehensive color system applied across your app, ensuring style and legibility.</p>
+</blockquote>
+<blockquote>
+<p>When crafting a dark theme with Material, lighter variants are chosen so that your color system can remain expressive and maintain appropriate contrast without causing eye strain. More saturated colors tend to visually “vibrate” against darker backgrounds, making them harder to read. Lighter tones also provide more flexibility in varying the color of elevated surfaces, which we’ll look at shortly.</p>
+</blockquote>
+<ul>
+<li>important to maintain visual hierarchy by having the darkest layer in back and lighter layers as they approach the ‘surface’</li>
+</ul>
+<blockquote>
+<p>The more elevated the surface is, the stronger and brighter the overlay becomes.</p>
+</blockquote>
+<ul>
+<li>establishing text hierarchy:
+<ul>
+<li>High emphasis has 87% opacity</li>
+<li>Medium emphasis has 60% opacity</li>
+<li>Disabled text has 38% opacity</li>
+</ul></li>
+</ul>
+<p>Control opacity by using <code>rgba()</code> in CSS where alpha is between 0 and 1.</p>
+<blockquote>
+<p>High priority text isn’t pure white because, as discussed in step 5, #FFFFFF—a bright color—would visually “vibrate” against our dark backgrounds. Additionally, pure #FFFFFF text against a dark background can harm legibility since the light from that text appears to bleed or blur against the dark background.</p>
+</blockquote>
+</div>
+<div id="using-variables-in-scss" class="section level1">
+<h1>Using variables in SCSS</h1>
+<p>Set variables at top of document and document changes from original Academic theme. Replace all color codes with defined variables.</p>
+<p>Try out different dark mode colors by changing variables. Don’t worry, the pigments package will still show you the variable colors! It’ll even show them to you in a little drop-down menu when you’re adding them.</p>
+<p>TIP: I like using a bright color like my error color to test different CSS elements. It stands out and makes it easy to see what I modified.</p>
+</div>
 <div id="other-helpful-tools" class="section level1">
 <h1>Other helpful tools</h1>
 <div id="html-sleuthing" class="section level2">
