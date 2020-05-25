@@ -14,11 +14,10 @@
 /** COLOR VARIABLES **/
 
 $spc-primary: #122140;                       /* primary color */
-/* below from mix($spc-primary, white, .92) */
-$spc-primary-low-op: rgba(36, 50, 79, 1);      /*primary color at 8% opacity*/
 $spc-primary-light: #3d486b;                   /* primary color, lighter shade */
+/* below from mix($spc-primary-light, white, .92) */
+$spc-primary-low-op: rgba(76, 86, 118, 1);      /*primary color at 8% opacity*/
 $spc-primary-dark: #00001b;                    /* primary color, darker shade */
-
 $spc-secondary: #e5be00;                       /* secondary color */
 $spc-secondary-light: #fff14d;                 /* secondary color, lighter shade */
 $spc-secondary-dark: #ae8f00;                  /* secondary color, darker shade */
@@ -30,12 +29,10 @@ $spc-text-low: rgba(255, 255, 255, 0.38);      /* disabled text, white 38% opaci
 $spc-background-light: rgb(238, 238, 238);     /* light mode background */
 $spc-background-dark: rgba(18, 18, 18, 100);   /* dark mode background (00dp elevation level) */
 
-/* below from mix($spc-primary-low-op, $spc-background-dark) */
-$spc-background-dark-primary: rgba(27, 34, 48, 50.5); /* primary mix with dark background */
-
-/* simulating an elevation white overlay transparency of 12% */
-/* below from mix($spc-background-dark, white, 88%) */
-$spc-background-med: rgba(46, 46, 46, 88.12); /* dark mode background 08dp elevation */
+/* below from mix($spc-primary-low-op, $spc-background-dark, 24) */
+$spc-background-dark-primary: rgba(31, 34, 42, 76.24); /* primary mix with dark background */
+/* below from mix($spc-background-dark, white, 91) */
+$spc-background-med: mix($spc-background-dark-primary, white, 91); /* dark mode background 08dp elevation */
 
 $spc-error: rgba(169, 5, 51, 1);
 $spc-error-light: rgba(253, 244, 244, 1);
@@ -368,27 +365,34 @@ iframe {
  **************************************************/
 
 /* body of site */
-body.dark,
+.dark body, {
+  color: $spc-error;
+}
 .dark .docs-toc-link,
 .dark .docs-sidebar .nav > li:not(.active) > a,
 .dark .modal button.close,
 .dark input,
 .dark .form-control,
 .dark .form-control:focus {
-  color: $spc-text-medium;          /* text of search filter field and summary text*/
-  background: $spc-background-dark; /* page background - publications and posts */
+  color: $spc-text-medium;                        /* text of search field and summary text */
+  background-color: $spc-background-dark-primary; /* search field background */
+  border-radius: .5rem;
+  border-color: $spc-background-light;
+  border: 0px solid;
+  padding: 0.3em;
 }
 
 /* search forms (e.g. full list of publications) */
 
 .dark .form-control {
-  background-color: $spc-primary;   /* background color of search filter field */
+  background-color: mix($spc-background-dark-primary, white, 84);  /* background color of search filter field */
 }
 
 .dark .form-control:focus {
-  background-color: $spc-primary;                /* color of search filter field drop down menu */
+  background-color: mix($spc-background-dark-primary, white, 84);  /* color of search filter field drop down menu */
   border-color: $spc-background-light;           /* border color of search filter field when clicked */
-  box-shadow: 0 0 0 .2rem $spc-background-light; /* shadow box color of search filder field when clicked */
+  box-shadow: 0 0 0 .1rem $spc-background-light; /* shadow box color of search filter field when clicked */
+  border: 0px solid;
 }
 
 /* heading*/
@@ -402,17 +406,44 @@ body.dark,
   color: $spc-text-high;
 }
 
-/* code blocks */
+/* links */
 
-.dark pre,
-.dark code {
-  color: $spc-text-medium;                  /* code block text (e.g. functions) */
-  background-color: $spc-background-med;    /* code block text background */
+a {
+  color: $spc-secondary;
+  cursor: pointer;
 }
 
+a:active,
+a:focus,
+a:hover {
+  color: $spc-secondary-light;
+}
+
+/* code blocks */
+
 .dark pre {
-  background-color: $spc-background-med;    /* code block background */
-  border-color: $spc-background-med;        /* code block border */
+  border: 1px solid $spc-background-dark-primary; /* code block border */
+  box-shadow: 0px 0px 0px $spc-text-low;          /* code block shadow (values: h-shift v-shift intensity) */
+  padding: 0.25em;
+  background: $spc-background-dark-primary;       /* code block backround */
+  overflow-x: auto;
+  border-radius: 0px;                             /* corner rounding */
+}
+
+.dark pre code {
+  background: none;
+  font-size: 0.8rem;
+}
+
+/* inline code */
+.dark code {
+  color: $spc-secondary-light;    /* inline and code block text */
+  background: mix($spc-background-dark-primary, white, 96);
+  font-size: 0.9em;
+}
+
+.dark .hljs {
+	background-color: mix($spc-background-dark-primary, white, 96);        /* code block text background */
 }
 
 
@@ -473,4 +504,77 @@ so I converted to single value */
   background: $spc-background-dark-primary;         /* text background for post cards */
   box-shadow: 0 1px 1px $spc-background-light;      /* card shadow (values: top bottom sides)*/
   border: 1px solid $spc-background-dark-primary;   /* card border*/
+}
+
+/* pagination */
+.dark .page-link {
+	color: $spc-secondary-light;
+	background-color: #fbf9f4;
+	border: 1px solid $spc-secondary-light;
+  border-radius: 0px; /*undo rounded corners*/
+
+}
+
+.dark .page-link:hover {
+	color: #fff;
+	background-color: $spc-secondary-light;
+	border-color: $spc-secondary;
+}
+
+.dark .page-item:first-child .page-link {
+	border-top-left-radius: 0rem;
+	border-bottom-left-radius: 0rem;
+}
+
+.dark .page-item:last-child .page-link {
+	border-top-right-radius: 0rem;
+	border-bottom-right-radius: 0rem;
+}
+
+/* Toolbar buttons */
+
+.dark .btn {
+  font-family: Lora;
+  text-transform: sentencecase;
+  font-style: regular;
+  color: $spc-primary-dark;                /* page button text */
+  border-color: $spc-primary-dark;         /* page button border */
+  background-color: $spc-background-light; /* page button background */
+}
+
+.dark .btn:hover {
+	color: #fff;
+	background-color: $spc-primary-dark;     /* page button text background when hovering*/
+	border-color: $spc-primary-dark;         /* page button border color when hovering */
+}
+
+.dark .btn-toolbar .btn:first-child {
+  border-radius: 0px;
+}
+
+.dark .btn-toolbar .btn:last-child {
+  border-radius: 0px;
+}
+
+.dark .btn-toolbar {
+  justify-content: center;
+}
+
+.dark .btn.btn-sm, .btn-group-sm > .btn {
+  border-radius: 0px; /*undo rounded corners*/
+  font-size: 0.8rem;
+  color: $spc-primary-dark;                /* link button text */
+  border-color: $spc-primary-dark;         /* link button border */
+  background-color: $spc-background-light; /* link button background */
+}
+
+.dark .btn.btn-sm:hover {
+	color: #fff;                             /* link button text when hovering */
+	background-color: $spc-primary-dark;     /* link button text background when hovering */
+	border-color: $spc-primary-dark;         /* link button border when hovering */
+}
+
+.dark .btn.btn-outline-primary.my-1.mr-1 {
+  border-radius: 0px;                      /* corner rounding */
+  font-size: 0.8rem;
 }
