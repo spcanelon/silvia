@@ -13,35 +13,55 @@
 
 /** COLOR VARIABLES **/
 
-$spc-primary: #122140;                       /* primary color */
-$spc-primary-light: #3d486b;                   /* primary color, lighter shade */
-/* below from mix($spc-primary-light, white, .92) */
-$spc-primary-low-op: rgba(76, 86, 118, 1);      /*primary color at 8% opacity*/
-$spc-primary-dark: #00001b;                    /* primary color, darker shade */
+/* primary and secondary colors and variants */
+$spc-primary: #122140;                         /* primary color */
+$spc-primary-light: #3d486b;                   /* primary color, lighter variant */
+$spc-primary-dark: #00001b;                    /* primary color, darker variant */
 $spc-secondary: #e5be00;                       /* secondary color */
-$spc-secondary-light: #fff14d;                 /* secondary color, lighter shade */
-$spc-secondary-dark: #ae8f00;                  /* secondary color, darker shade */
+$spc-secondary-light: #fff14d;                 /* secondary color, lighter variant */
+$spc-secondary-dark: #ae8f00;                  /* secondary color, darker variant */
 
+/* text colors */
 $spc-text-high: rgba(255, 255, 255, 0.87);     /* high emphasis/high priority, white 87% opacity */
 $spc-text-medium: rgba(255, 255, 255, 0.60);   /* medium emphasis, white 60% opacity */
 $spc-text-low: rgba(255, 255, 255, 0.38);      /* disabled text, white 38% opacity */
 
-$spc-background-light: rgb(238, 238, 238);     /* light mode background */
-$spc-background-dark: rgba(18, 18, 18, 100);   /* dark mode background (00dp elevation level) */
 
-/* below from mix($spc-primary-low-op, $spc-background-dark, 24) */
-$spc-background-dark-primary: rgba(31, 34, 42, 76.24); /* primary mix with dark background */
-/* below from mix($spc-background-dark, white, 91) */
-$spc-background-med: mix($spc-background-dark-primary, white, 91); /* dark mode background 08dp elevation */
 
+
+
+
+
+
+/* surface colors */
+$spc-bkg-light-std: #EEEEEE;                   /* light mode background */
+$spc-bkg-dark-std: #121212;                    /* dark mode background (00dp elevation level) */
+
+
+
+
+
+
+/* color calculations */
+
+/* below from mix($spc-primary-light, white, 92) */               /* primary color at 8% opacity */
+$spc-primary-low-op: #4c5676;                                     /* primary color low opacity */
+/* below from mix($spc-primary-low-op, $spc-bkg-dark-std, 8) primary low opacity + #121212 at 92% */
+$spc-bkg-dark: #16171a;                                           /* custom bkg */
+/* below from mix($spc-primary-low-op, $spc-bkg-dark-std, 24)     custom bkg + #121212 at 76% */
+$spc-00dp: #1f222a;                                               /* 00dp surface */
+/* below from mix($spc-00dp, white, 95) */     /* 00dp with 5% white overlay */
+$spc-01dp: #2a2d34;
+/* below from mix($spc-00dp, white, 93) */     /* 00dp with 7% white overlay */
+$spc-02dp: #2e3138;
+/* below from mix($spc-00dp, white, 92) */     /* 00dp with 8% white overlay */
+$spc-03dp: #30333b;
+/* below from mix($spc-00dp, white, 91)*/      /* 00dp with 9% white overlay */
+$spc-04dp: #33353d;
+
+/* error colors */
 $spc-error: rgba(169, 5, 51, 1);
 $spc-error-light: rgba(253, 244, 244, 1);
-
-/*setting color variables using the lighten function as example
-$spc-lighten-percentage: 10%;
-$spc-darken-percentage: 10%;
-$spc-primary-light-ex: lighten($spc-primary, $spc-lighten-percentage);
-$spc-primary-dark-ex: darken($spc-primary, $sta-darken-percentage)*/
 
 /*************************************************
  *  CORE
@@ -365,19 +385,17 @@ iframe {
  **************************************************/
 
 /* body of site */
-.dark body, {
-  color: $spc-error;
-}
+body.dark,
 .dark .docs-toc-link,
 .dark .docs-sidebar .nav > li:not(.active) > a,
 .dark .modal button.close,
 .dark input,
 .dark .form-control,
 .dark .form-control:focus {
-  color: $spc-text-medium;                        /* text of search field and summary text */
-  background-color: $spc-background-dark-primary; /* search field background */
+  color: $spc-text-medium;            /* text of search field and summary text */
+  background-color: $spc-00dp;        /* search field background */
   border-radius: .5rem;
-  border-color: $spc-background-light;
+  border-color: $spc-bkg-light-std;
   border: 0px solid;
   padding: 0.3em;
 }
@@ -385,13 +403,13 @@ iframe {
 /* search forms (e.g. full list of publications) */
 
 .dark .form-control {
-  background-color: mix($spc-background-dark-primary, white, 84);  /* background color of search filter field */
+  background-color: $spc-bkg-dark;    /* background color of search filter field */
 }
 
 .dark .form-control:focus {
-  background-color: mix($spc-background-dark-primary, white, 84);  /* color of search filter field drop down menu */
-  border-color: $spc-background-light;           /* border color of search filter field when clicked */
-  box-shadow: 0 0 0 .1rem $spc-background-light; /* shadow box color of search filter field when clicked */
+  background-color: $spc-02dp;        /* color of search filter field drop down menu */
+  border-color: $spc-01dp;            /* border color of search filter field when clicked */
+  box-shadow: 0 0 0 .1rem $spc-02dp;  /* shadow box color of search filter field when clicked */
   border: 0px solid;
 }
 
@@ -422,10 +440,10 @@ a:hover {
 /* code blocks */
 
 .dark pre {
-  border: 1px solid $spc-background-dark-primary; /* code block border */
+  border: 1px solid $spc-01dp; /* code block border */
   box-shadow: 0px 0px 0px $spc-text-low;          /* code block shadow (values: h-shift v-shift intensity) */
   padding: 0.25em;
-  background: $spc-background-dark-primary;       /* code block backround */
+  background: $spc-01dp;       /* code block backround */
   overflow-x: auto;
   border-radius: 0px;                             /* corner rounding */
 }
@@ -438,12 +456,12 @@ a:hover {
 /* inline code */
 .dark code {
   color: $spc-secondary-light;    /* inline and code block text */
-  background: mix($spc-background-dark-primary, white, 96);
+  background: mix($spc-01dp, white, 96);
   font-size: 0.9em;
 }
 
 .dark .hljs {
-	background-color: mix($spc-background-dark-primary, white, 96);        /* code block text background */
+	background-color: mix($spc-01dp, white, 96);        /* code block text background */
 }
 
 
@@ -464,13 +482,13 @@ a:hover {
 /* Table Striped */
 .dark table > tbody > tr:nth-child(odd) > td,
 .dark table > tbody > tr:nth-child(odd) > th {
-  background-color: $spc-background-dark-primary;                   /* text background for odd table rows */
+  background-color: $spc-bkg-dark;                   /* text background for odd table rows */
 }
 
 /* Table Hover */
 .dark table > tbody > tr:hover > td,
 .dark table > tbody > tr:hover > th {
-  background-color: mix($spc-background-dark-primary, white, 90%);  /* text background for odd table rows when hovering */
+  background-color: mix($spc-bkg-dark, white, 90%);  /* text background for odd table rows when hovering */
 }
 
 /* pagination -- not currently being used */
@@ -480,14 +498,14 @@ a:hover {
 }
 
 /* cards (i.e. experience) */
-/* Note, 'background' doesn't accept functiosn like mix(rgba(18, 33, 64, 1), white, .92)
-so I converted to single value */
+/* Note, 'background' doesn't accept functiosn like mix($spc-primary, white, 92)
+so I converted to single value at beginning of stylesheet */
 .dark .card {
-  background: $spc-background-dark-primary; /* text background for experience cards */
+  background: $spc-01dp; /* text background for experience cards */
 }
 
 .dark .card h4 a {
-  color: $sta-primary;
+  color: $spc-secondary; /* text for card institution link */
   border-bottom: solid 1px transparent;
 }
 
@@ -501,9 +519,9 @@ so I converted to single value */
 
 /* card component: _cards.scss */
 .dark .card-simple {
-  background: $spc-background-dark-primary;         /* text background for post cards */
-  box-shadow: 0 1px 1px $spc-background-light;      /* card shadow (values: top bottom sides)*/
-  border: 1px solid $spc-background-dark-primary;   /* card border*/
+  background: $spc-01dp;         /* text background for post cards */
+  box-shadow: 0 1px 1px $spc-bkg-dark-std;      /* card shadow (values: top bottom sides)*/
+  border: 1px solid $spc-01dp;   /* card border*/
 }
 
 /* pagination */
@@ -539,7 +557,7 @@ so I converted to single value */
   font-style: regular;
   color: $spc-primary-dark;                /* page button text */
   border-color: $spc-primary-dark;         /* page button border */
-  background-color: $spc-background-light; /* page button background */
+  background-color: $spc-bkg-light-std;   /* page button background */
 }
 
 .dark .btn:hover {
@@ -565,7 +583,7 @@ so I converted to single value */
   font-size: 0.8rem;
   color: $spc-primary-dark;                /* link button text */
   border-color: $spc-primary-dark;         /* link button border */
-  background-color: $spc-background-light; /* link button background */
+  background-color: $spc-bkg-light-std; /* link button background */
 }
 
 .dark .btn.btn-sm:hover {
