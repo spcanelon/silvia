@@ -13,7 +13,9 @@
 
 /** COLOR VARIABLES **/
 
-$spc-primary: #122140;                         /* primary color */
+$spc-primary: #122140;                       /* primary color */
+/* below from mix($spc-primary, white, .92) */
+$spc-primary-low-op: rgba(36, 50, 79, 1);      /*primary color at 8% opacity*/
 $spc-primary-light: #3d486b;                   /* primary color, lighter shade */
 $spc-primary-dark: #00001b;                    /* primary color, darker shade */
 
@@ -27,23 +29,28 @@ $spc-text-low: rgba(255, 255, 255, 0.38);      /* disabled text, white 38% opaci
 
 $spc-background-light: rgb(238, 238, 238);     /* light mode background */
 $spc-background-dark: rgba(18, 18, 18, 100);   /* dark mode background (00dp elevation level) */
+
+/* below from mix($spc-primary-low-op, $spc-background-dark) */
+$spc-background-dark-primary: rgba(27, 34, 48, 50.5); /* primary mix with dark background */
+
 /* simulating an elevation white overlay transparency of 12% */
-$spc-background-med: mix($spc-background-dark, white, 88%); /* dark mode background 08dp elevation */
-$spc-test: mix($spc-primary, $spc-background-dark, 92);
+/* below from mix($spc-background-dark, white, 88%) */
+$spc-background-med: rgba(46, 46, 46, 88.12); /* dark mode background 08dp elevation */
 
 $spc-error: rgba(169, 5, 51, 1);
 $spc-error-light: rgba(253, 244, 244, 1);
 
-/* setting color variables using the lighten function as example
+/*setting color variables using the lighten function as example
 $spc-lighten-percentage: 10%;
 $spc-darken-percentage: 10%;
 $spc-primary-light-ex: lighten($spc-primary, $spc-lighten-percentage);
-$spc-primary-dark-ex: darken($spc-primary, $sta-darken-percentage) */
+$spc-primary-dark-ex: darken($spc-primary, $sta-darken-percentage)*/
 
 /*************************************************
  *  CORE
  **************************************************/
 /* headings: _root.scss */
+
 
 h1, h2, h3, h4, h5, h6 {
   color: #333;
@@ -426,13 +433,13 @@ body.dark,
 /* Table Striped */
 .dark table > tbody > tr:nth-child(odd) > td,
 .dark table > tbody > tr:nth-child(odd) > th {
-  background-color: $spc-background-med;                   /* text background for odd table rows */
+  background-color: $spc-background-dark-primary;                   /* text background for odd table rows */
 }
 
 /* Table Hover */
 .dark table > tbody > tr:hover > td,
 .dark table > tbody > tr:hover > th {
-  background-color: mix($spc-background-med, white, 90%);  /* text background for odd table rows when hovering */
+  background-color: mix($spc-background-dark-primary, white, 90%);  /* text background for odd table rows when hovering */
 }
 
 /* pagination -- not currently being used */
@@ -442,8 +449,10 @@ body.dark,
 }
 
 /* cards (i.e. experience) */
+/* Note, 'background' doesn't accept functiosn like mix(rgba(18, 33, 64, 1), white, .92)
+so I converted to single value */
 .dark .card {
-  background: #343a40;
+  background: $spc-background-dark-primary; /* text background for experience cards */
 }
 
 .dark .card h4 a {
@@ -452,9 +461,9 @@ body.dark,
 }
 
 .dark .card .card-image.hover-overlay::before {
-  background: #666;
+  background: #666; /* not sure what this is */
 }
 
 .dark .card .card-image.hover-overlay::after {
-  color: #fff;
+  color: #fff;      /* not sure what this is */
 }

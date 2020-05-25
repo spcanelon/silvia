@@ -129,6 +129,7 @@ Contrast color calculator: https://contrast-ratio.com/
 
 
 
+
 Coolors resources:
 - https://coolors.co/contrast-checker/112a46-acc8e5
 > This tool follows the Web Content Accessibility Guidelines (WCAG), which are a series of recommendations for making the web more accessible.
@@ -161,6 +162,9 @@ Set variables at top of document and document changes from original Academic the
 Try out different dark mode colors by changing variables. Don't worry, the pigments package will still show you the variable colors! It'll even show them to you in a little drop-down menu when you're adding them.
 
 TIP: I like using a bright color like my error color to test different CSS elements. It stands out and makes it easy to see what I modified.
+
+WARNING: 
+
 
 
 # Other helpful tools
