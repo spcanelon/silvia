@@ -6,9 +6,9 @@
 /** CHANGES **/
 
 /*  change all rgb(152, 166, 173) --> rgba(255, 255, 255, 0.87) -- headings */
+/*  change all rgb(68, 71, 90)    --> mix(#1f222a, white, 98%) */
 /*  change all rgb(40, 42, 54)    --> #1f222a -- page background */
-/*  change all rgb(68, 71, 90)    --> mix(#1f222a, white, 95%) */
-/*  change all rgb(139, 233, 253) --> #122140 -- dark mode inline code text */
+/*  change all rgb(139, 233, 253) --> #fff14d -- dark mode inline code text */
 
 
 /** COLOR VARIABLES **/
@@ -27,9 +27,24 @@ $spc-text-medium: rgba(255, 255, 255, 0.60);   /* medium emphasis, white 60% opa
 $spc-text-low: rgba(255, 255, 255, 0.45);      /* disabled text, white 45% opacity */
 /*$spc-text-low: rgba(255, 255, 255, 0.38);    /* disabled text, white 38% opacity */
 
+/*
+mix($spc-primary, $spc-bkg-dark-std, 25)
+#12151d
+mix($spc-primary, $spc-bkg-dark-std, 30)
+#12161f
+mix($spc-primary, $spc-bkg-dark-std, 35)
+#121722
 
+mix($spc-primary, $spc-bkg-dark-std, 40)
+#121824
+mix($spc-primary, $spc-bkg-dark-std, 45)
+#121826
+mix($spc-primary, $spc-bkg-dark-std, 50)
+#121929
 
-
+mix($spc-primary, $spc-bkg-dark-std, 75)
+#121d34
+#ffffff*/
 
 /* surface colors */
 $spc-bkg-light-std: #EEEEEE;                   /* light mode background */
@@ -43,30 +58,32 @@ $spc-bkg-dark-std: #121212;                    /* dark mode background (00dp ele
 /* color calculations */
 
 /* below from mix($spc-primary-light, white, 92) */               /* primary color at 8% opacity */
-$spc-primary-low-op: #4c5676;                                     /* primary color low opacity */
-/* below from mix($spc-primary-low-op, $spc-bkg-dark-std, 8) primary low opacity + #121212 at 92% */
-$spc-bkg-dark: #16171a;                                           /* custom bkg */
-/* below from mix($spc-primary-low-op, $spc-bkg-dark-std, 24)     custom bkg + #121212 at 76% */
-$spc-00dp: #1f222a;                                               /* 00dp surface */
+$spc-primary-low-op: #4c5676;
+/* below from mix($spc-primary-low-op, $spc-bkg-dark-std, 8) */                                    /* primary color low opacity */
+/* below from mix($spc-primary, $spc-bkg-dark-std, 24) primary low opacity + #121212 at 92% */
+/* below from mix($spc-primary, $spc-bkg-dark-std, 25) */
+$spc-bkg-dark: #12151d;                                           /* custom bkg */
+/* below from mix($spc-primary, $spc-bkg-dark-std, 40)     custom bkg + #121212 at 76% */
+$spc-00dp: #121824;                                               /* 00dp surface */
 /* below from mix($spc-00dp, white, 95) */     /* 00dp with 5% white overlay */
-$spc-01dp: #2a2d34;
+$spc-01dp: #1d232e;
 /* below from mix($spc-00dp, white, 93) */     /* 00dp with 7% white overlay */
-$spc-02dp: #2e3138;
+$spc-02dp: #222833;
 /* below from mix($spc-00dp, white, 92) */     /* 00dp with 8% white overlay */
-$spc-03dp: #30333b;
+$spc-03dp: #242a35;
 /* below from mix($spc-00dp, white, 91)*/      /* 00dp with 9% white overlay */
-$spc-04dp: #33353d;
+$spc-04dp: #272c37;
 
 /* error colors */
 $spc-error: rgba(169, 5, 51, 1);
 $spc-error-light: rgba(253, 244, 244, 1);
 
+
 /*************************************************
  *  CORE
  **************************************************/
+
 /* headings: _root.scss */
-
-
 h1, h2, h3, h4, h5, h6 {
   color: #333;
   font-weight: 400;
@@ -82,7 +99,6 @@ h1 {
 }
 
 /* links */
-
 a {
   color: $spc-secondary;
   cursor: pointer;
@@ -389,13 +405,13 @@ iframe {
 
  .dark .home-section:nth-of-type(odd) {
    background-color: mix($spc-00dp, white, 98%);   /* odd sections: about, recent pubs, contact */
+   /* : mix($spc-primary, $spc-bkg-dark-std, 30); */
  }
 
  .dark .home-section:nth-of-type(even) {
-   background-color: $spc-00dp;   /* even sections: experience, recents posts */
+   background-color: $spc-00dp;   /* even sections: experience, recent posts */
+   /* background-color: mix($spc-primary, $spc-bkg-dark-std, 40);*/
  }
-
-
 
 /* body of site: _dark.scss */
 body.dark,
@@ -406,11 +422,24 @@ body.dark,
 .dark .form-control,
 .dark .form-control:focus {
   color: $spc-text-medium;            /* text of search field and summary text */
-  background-color: $spc-00dp;    /* base surface */
+  background-color: $spc-00dp;        /* base surface */
   border-radius: .5rem;
   border-color: $spc-bkg-light-std;
   border: 0px solid;
   padding: 0.3em;
+}
+
+/* Navigation bar: _nav.scss */
+
+.dark .navbar {
+  background-color: $spc-00dp;
+  box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,.11);
+  font-size: #{$sta-font-size-small}px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
 }
 
 /* heading*/
@@ -426,14 +455,14 @@ body.dark,
 
 /* links */
 
-a {
+.dark a {
   color: $spc-secondary;
   cursor: pointer;
 }
 
-a:active,
-a:focus,
-a:hover {
+.dark a:active,
+.dark a:focus,
+.dark a:hover {
   color: $spc-secondary-light;
 }
 
