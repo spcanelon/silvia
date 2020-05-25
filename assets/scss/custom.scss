@@ -5,6 +5,7 @@
 
 /** CHANGES **/
 
+/*  change all #ffffff            --> rgba(255, 255, 255, 0.87) */
 /*  change all rgb(152, 166, 173) --> rgba(255, 255, 255, 0.87) -- headings */
 /*  change all rgb(68, 71, 90)    --> mix(#1f222a, white, 98%) */
 /*  change all rgb(40, 42, 54)    --> #1f222a -- page background */
@@ -198,16 +199,8 @@ a:hover {
   letter-spacing: .08em;
 }
 
-/* make dark even/odd sections same color so less stripey */
 
-.dark .home-section:nth-of-type(n) {
-	background-color: #282a36;
-}
-
-
-/*************************************************
- *  CODE
- **************************************************/
+/***** CODE **************************************/
 /* https://bookdown.org/yihui/blogdown/templates.html */
 /* https://github.com/rstudio/blogdown/blob/master/docs/02-hugo.Rmd */
 
@@ -220,7 +213,6 @@ pre {
   overflow-x: auto;
   border-radius: 0px; /* modify rounding of corners */
 }
-
 pre code {
   background: none;
   font-size: 0.8rem;
@@ -229,7 +221,6 @@ pre code {
 /* inline code */
 code {
   color: $spc-primary;
-  /*background: #fff;*/
   background: #cfd2d8;
   font-size: 0.9em;
 }
@@ -288,7 +279,7 @@ div.alert.alert-warning {
  **************************************************/
 
 .btn.btn-sm, .btn-group-sm > .btn {
-  background: #fff;
+  background: $spc-text-high;
   border-radius: 0px; /*undo rounded corners*/
   font-size: 0.8rem;
 }
@@ -325,9 +316,7 @@ div.universal-wrapper.pt-3 h1 {
   text-transform: capitalize;
 }
 
-/*************************************************
- *  ABOUT
- **************************************************/
+/***** ABOUT **************************************/
 /* about-contact helpers */
 /* Used by Alison -- helpers = horizontal separators for sections? */
 
@@ -440,8 +429,19 @@ body.dark,
   right: 0;
   left: 0;
   z-index: 1030;
+  border-bottom: 2px solid $spc-bkg-light-std;
+}
+.dropdown-menu {
+  background-color: $spc-00dp !important; /* top and bottom border of dropdown */
+  color: $sta-menu-text !important;
+  z-index: 1032;  // I18n dropdown over mobile expanded menu.
+  border-color: $spc-bkg-dark;
 }
 
+.dropdown-item {
+  background-color: $spc-00dp !important;
+  color: $sta-menu-text !important;
+}
 /* heading*/
 
 .dark h1,
@@ -490,18 +490,15 @@ body.dark,
 
 .dark .hljs {
 	background-color: $spc-02dp;            /* code block text background */
-
 }
 
 /* Markup -- not currently being used */
 .dark .markup-quote {
   background-image: linear-gradient(to bottom, rgba(233, 231, 245, 0.2), rgba(233, 231, 245, 0.2));
 }
-
 .dark #MathJax_Zoom {
   background-color: rgb(68, 71, 90) !important;
 }
-
 .dark table table {
   background-color: rgb(40, 42, 54);
 }
@@ -521,25 +518,20 @@ body.dark,
 /* pagination -- not currently being used */
 .dark .pagination li > a, .pagination li > span {
   background-color: $spc-00dp;
-  border: 1px solid #ddd;
+  border: 1px solid $spc-bkg-light-std;
 }
 
 /* cards (i.e. experience) */
-/* Note, 'background' doesn't accept functiosn like mix($spc-primary, white, 92)
-so I converted to single value at beginning of stylesheet */
 .dark .card {
   background: $spc-01dp;                        /* text background for experience cards */
 }
-
 .dark .card h4 a {
   color: $spc-secondary;                        /* text for card institution link */
   border-bottom: solid 1px transparent;
 }
-
 .dark .card .card-image.hover-overlay::before {
   background: #666;                             /* not sure what this is */
 }
-
 .dark .card .card-image.hover-overlay::after {
   color: #fff;                                  /* not sure what this is */
 }
@@ -559,18 +551,15 @@ so I converted to single value at beginning of stylesheet */
   border-radius: 0px; /*undo rounded corners*/
 
 }
-
 .dark .page-link:hover {
 	color: #fff;
 	background-color: $spc-secondary-light;
 	border-color: $spc-secondary;
 }
-
 .dark .page-item:first-child .page-link {
 	border-top-left-radius: 0rem;
 	border-bottom-left-radius: 0rem;
 }
-
 .dark .page-item:last-child .page-link {
 	border-top-right-radius: 0rem;
 	border-bottom-right-radius: 0rem;
@@ -584,29 +573,25 @@ so I converted to single value at beginning of stylesheet */
   font-style: regular;
   color: $spc-primary-dark;                /* page button text */
   border-color: $spc-primary-dark;         /* page button border */
-  background-color: $spc-bkg-light-std;   /* page button background */
+  background-color: $spc-bkg-light-std;    /* page button background */
 }
-
 .dark .btn:hover {
-	color: #fff;
+	color: $spc-bkg-light-std;
 	background-color: $spc-primary-dark;     /* page button text background when hovering*/
 	border-color: $spc-primary-dark;         /* page button border color when hovering */
 }
-
 .dark .btn.btn-sm, .btn-group-sm > .btn {
   border-radius: 0px; /*undo rounded corners*/
   font-size: 0.8rem;
   color: $spc-primary-dark;                /* link button text */
   border-color: $spc-primary-dark;         /* link button border */
-  background-color: $spc-bkg-light-std; /* link button background */
+  background-color: $spc-bkg-light-std;    /* link button background */
 }
-
 .dark .btn.btn-sm:hover {
-	color: #fff;                             /* link button text when hovering */
+	color: $spc-bkg-light-std;                             /* link button text when hovering */
 	background-color: $spc-primary-dark;     /* link button text background when hovering */
 	border-color: $spc-primary-dark;         /* link button border when hovering */
 }
-
 .dark .btn.btn-outline-primary.my-1.mr-1 {
   border-radius: 0px;                      /* corner rounding */
   font-size: 0.8rem;
@@ -617,11 +602,9 @@ so I converted to single value at beginning of stylesheet */
 .dark .btn-toolbar .btn:first-child {
   border-radius: 0px;
 }
-
 .dark .btn-toolbar .btn:last-child {
   border-radius: 0px;
 }
-
 .dark .btn-toolbar {
   justify-content: center;
 }
@@ -637,19 +620,18 @@ so I converted to single value at beginning of stylesheet */
 .dark .ais-search-box--input {
   background-color: $spc-bkg-dark;
 }
-
 .dark #search-query {
-  background-color: $spc-bkg-dark;         /* Search bar query text background */
+  background-color: $spc-bkg-dark;    /* Search bar query text background */
 }
 
 /* search forms (e.g. full list of publications) */
 .dark .form-control {
   background-color: $spc-bkg-dark;    /* background color of search filter field */
+  border-color: $spc-bkg-light-std;
 }
-
 .dark .form-control:focus {
   background-color: $spc-02dp;        /* color of search filter field drop down menu */
-  border-color: white;                /* border color of search filter field when clicked */
+  border-color: $spc-bkg-light-std;   /* border color of search filter field when clicked */
   box-shadow: 0 0 0 .1rem $spc-02dp;  /* shadow box color of search filter field when clicked */
   border: 0px solid;
 }
