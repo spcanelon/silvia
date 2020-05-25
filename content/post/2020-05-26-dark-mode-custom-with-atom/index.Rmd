@@ -128,6 +128,7 @@ Understanding contrast criterion: https://www.w3.org/TR/UNDERSTANDING-WCAG20/vis
 Contrast color calculator: https://contrast-ratio.com/
 
 
+
 Coolors resources:
 - https://coolors.co/contrast-checker/112a46-acc8e5
 > This tool follows the Web Content Accessibility Guidelines (WCAG), which are a series of recommendations for making the web more accessible.
