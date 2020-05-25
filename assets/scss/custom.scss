@@ -616,6 +616,10 @@ body.dark,
   background-color: $spc-00dp;
 }
 
+.dark .search-results {
+  background-color: $spc-00dp;
+}
+
 /* Algolia search input */
 .dark .ais-search-box--input {
   background-color: $spc-bkg-dark;
