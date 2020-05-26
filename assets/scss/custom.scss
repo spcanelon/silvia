@@ -429,7 +429,16 @@ body.dark,
   right: 0;
   left: 0;
   z-index: 1030;
-  border-bottom: 2px solid $spc-bkg-light-std;
+  border-bottom: 1px solid $spc-bkg-light-std;
+}
+.dark .navbar-collapse {
+  z-index: 1031 !important;  // Appear just over navbar.
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  background-color: $spc-00dp;
+  text-align: center !important;
 }
 .dropdown-menu {
   background-color: $spc-00dp !important; /* top and bottom border of dropdown */
@@ -615,23 +624,52 @@ body.dark,
 .dark .search-header {
   background-color: $spc-00dp;
 }
-
 .dark .search-results {
   background-color: $spc-00dp;
 }
 
 /* Algolia search input */
 .dark .ais-search-box--input {
-  background-color: $spc-bkg-dark;
+  background-color: transparent;
 }
-.dark #search-query {
-  background-color: $spc-bkg-dark;    /* Search bar query text background */
+/*.dark #search-query {
+  color: $spc-primary-dark;                /* Search bar query text
+  background-color: $spc-bkg-light-std;    /* Search bar query text background
+} */
+
+.dark #search-box {
+  position: relative; /* Required for search icon positioning. */
+  margin-bottom: 0.5rem;
+}
+
+.dark #search-box::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: "\f002";
+  font-size: 1rem;
+  opacity: 0.25;
+  line-height: 1rem;
+  position: absolute;
+  left: 0.7rem;
+  top: 0.6rem;
+  overflow-x: hidden;
+}
+
+.dark #search-box #search-query {
+  border: 1px solid #dedede;
+  border-radius: 1rem;
+  padding: 1rem 1rem 1rem 2rem; /* Wider left padding for search icon to fit in. */
+  /*width: 250px;*/
+  line-height: 1rem;
+  height: 1rem;
+  font-size: 0.8rem;
 }
 
 /* search forms (e.g. full list of publications) */
 .dark .form-control {
   background-color: $spc-bkg-dark;    /* background color of search filter field */
   border-color: $spc-bkg-light-std;
+  border-width: 1px;
 }
 .dark .form-control:focus {
   background-color: $spc-02dp;        /* color of search filter field drop down menu */
