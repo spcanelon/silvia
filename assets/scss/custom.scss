@@ -1,90 +1,73 @@
-/*************************************************
- *  Saved as custom.scss in `/assets/scss/custom.scss` relative to the website root
- *  https://sourcethemes.com/academic/docs/customization/
- **************************************************/
+// Saved as custom.scss in `/assets/scss/custom.scss` relative to the website root
+// https://sourcethemes.com/academic/docs/customization/
 
-/** CHANGES **/
+// CHANGES
+//  change all #ffffff            --> rgba(255, 255, 255, 0.87)
+//  change all rgb(152, 166, 173) --> rgba(255, 255, 255, 0.87) -- headings
+//  change all rgb(68, 71, 90)    --> mix(#1f222a, white, 98%)
+//  change all rgb(40, 42, 54)    --> #1f222a -- page background
+//  change all rgb(139, 233, 253) --> #fff14d -- dark mode inline code text
 
-/*  change all #ffffff            --> rgba(255, 255, 255, 0.87) */
-/*  change all rgb(152, 166, 173) --> rgba(255, 255, 255, 0.87) -- headings */
-/*  change all rgb(68, 71, 90)    --> mix(#1f222a, white, 98%) */
-/*  change all rgb(40, 42, 54)    --> #1f222a -- page background */
-/*  change all rgb(139, 233, 253) --> #fff14d -- dark mode inline code text */
+// COLOR VARIABLES
+// primary and secondary colors and variants
+$spc-primary:            #122140; // primary color
+$spc-primary-light:      #3d486b; // primary color, lighter variant
+$spc-primary-dark:       #00001b; // primary color, darker variant
+$spc-secondary:          #e5be00; // secondary color
+$spc-secondary-light:    #fff14d; // secondary color, lighter variant
+$spc-secondary-dark:     #ae8f00; // secondary color, darker variant
 
+// text colors
+$spc-text-high:          rgba(255, 255, 255, 0.87); // high emphasis/high priority, white 87% opacity
+$spc-text-medium:        rgba(255, 255, 255, 0.60); // medium emphasis, white 60% opacity
+$spc-text-low:           rgba(255, 255, 255, 0.45); // disabled text, white 45% opacity
+//$spc-text-low:         rgba(255, 255, 255, 0.38); // disabled text, white 38% opacity
 
-/** COLOR VARIABLES **/
-
-/* primary and secondary colors and variants */
-$spc-primary: #122140;                         /* primary color */
-$spc-primary-light: #3d486b;                   /* primary color, lighter variant */
-$spc-primary-dark: #00001b;                    /* primary color, darker variant */
-$spc-secondary: #e5be00;                       /* secondary color */
-$spc-secondary-light: #fff14d;                 /* secondary color, lighter variant */
-$spc-secondary-dark: #ae8f00;                  /* secondary color, darker variant */
-
-/* text colors */
-$spc-text-high: rgba(255, 255, 255, 0.87);     /* high emphasis/high priority, white 87% opacity */
-$spc-text-medium: rgba(255, 255, 255, 0.60);   /* medium emphasis, white 60% opacity */
-$spc-text-low: rgba(255, 255, 255, 0.45);      /* disabled text, white 45% opacity */
-/*$spc-text-low: rgba(255, 255, 255, 0.38);    /* disabled text, white 38% opacity */
+// surface colors
+$spc-bkg-light-std: #EEEEEE;                   // light mode background
+$spc-bkg-dark-std: #121212;                    // dark mode background (00dp elevation level)
 
 /*
+// TESTING COLORS
 mix($spc-primary, $spc-bkg-dark-std, 25)
 #12151d
 mix($spc-primary, $spc-bkg-dark-std, 30)
 #12161f
 mix($spc-primary, $spc-bkg-dark-std, 35)
 #121722
-
 mix($spc-primary, $spc-bkg-dark-std, 40)
 #121824
 mix($spc-primary, $spc-bkg-dark-std, 45)
 #121826
 mix($spc-primary, $spc-bkg-dark-std, 50)
 #121929
-
 mix($spc-primary, $spc-bkg-dark-std, 75)
 #121d34
-#ffffff*/
+*/
 
-/* surface colors */
-$spc-bkg-light-std: #EEEEEE;                   /* light mode background */
-$spc-bkg-dark-std: #121212;                    /* dark mode background (00dp elevation level) */
-
-
-
-
-
-
-/* color calculations */
-
-/* below from mix($spc-primary-light, white, 92) */               /* primary color at 8% opacity */
-$spc-primary-low-op: #4c5676;
-/* below from mix($spc-primary-low-op, $spc-bkg-dark-std, 8) */                                    /* primary color low opacity */
-/* below from mix($spc-primary, $spc-bkg-dark-std, 24) primary low opacity + #121212 at 92% */
-/* below from mix($spc-primary, $spc-bkg-dark-std, 25) */
-$spc-bkg-dark: #12151d;                                           /* custom bkg */
-/* below from mix($spc-primary, $spc-bkg-dark-std, 40)     custom bkg + #121212 at 76% */
-$spc-00dp: #121824;                                               /* 00dp surface */
-/* below from mix($spc-00dp, white, 95) */     /* 00dp with 5% white overlay */
+// COLOR CALCULATIONS
+// below from mix($spc-primary, $spc-bkg-dark-std, 25)
+$spc-bkg-dark: #12151d;                                 // custom bkg
+// below from mix($spc-primary, $spc-bkg-dark-std, 40)
+$spc-00dp: #121824;                                     // 00dp surface
+// below from mix($spc-00dp, white, 95)                 // 00dp with 5% white overlay
 $spc-01dp: #1d232e;
-/* below from mix($spc-00dp, white, 93) */     /* 00dp with 7% white overlay */
+// below from mix($spc-00dp, white, 93)                 // 00dp with 7% white overlay
 $spc-02dp: #222833;
-/* below from mix($spc-00dp, white, 92) */     /* 00dp with 8% white overlay */
+// below from mix($spc-00dp, white, 92)                 // 00dp with 8% white overlay
 $spc-03dp: #242a35;
-/* below from mix($spc-00dp, white, 91)*/      /* 00dp with 9% white overlay */
+// below from mix($spc-00dp, white, 91)                 // 00dp with 9% white overlay
 $spc-04dp: #272c37;
 
-/* error colors */
+// error colors
 $spc-error: rgba(169, 5, 51, 1);
 $spc-error-light: rgba(253, 244, 244, 1);
 
+// ************************************************
+// CORE
+// ************************************************
 
-/*************************************************
- *  CORE
- **************************************************/
-
-/* headings: _root.scss */
+// headings: _root.scss
 h1, h2, h3, h4, h5, h6 {
   color: #333;
   font-weight: 400;
@@ -99,21 +82,21 @@ h1 {
   font-size: 2rem;
 }
 
-/* links */
+// links
 a {
-  color: $spc-secondary;
+  color: $spc-secondary;  // link color
   cursor: pointer;
 }
 
-a:active,
 a:focus,
-a:hover {
-  color: $spc-secondary-dark;
+a:hover,
+a:active {
+  color: $spc-secondary-dark;      // link color when hovering
 }
 
-/*************************************************
- *  NAVIGATION BAR: _nav.scss
- **************************************************/
+// ************************************************
+// NAVIGATION BAR: _nav.scss
+// ************************************************
 
 .navbar-light .navbar-nav>.nav-item>.nav-link,
 .navbar-light .navbar-nav>.nav-item>.nav-link:focus,
@@ -121,42 +104,26 @@ a:hover {
 .navbar-light .navbar-nav>.nav-item>.nav-link:active {
   font-weight: 700;
 }
-
 .navbar-light .navbar-nav > li.nav-item > a.active,
 .navbar-light .navbar-nav > li.nav-item > a.active:focus,
 .navbar-light .navbar-nav > li.nav-item > a.active:hover {
   font-weight: 700;
   transition: color .2s ease;
 }
-
 .navbar-light {
   box-shadow: none;
   text-transform: uppercase;
   letter-spacing: .08em;
 }
-
-/* -- underline for navigation bar links
-.navbar-nav {
-  border-bottom: 2px solid $spc-secondary;
-}*/
-
 .navbar-brand {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: .08em;
 }
 
-/* -- underline for search magnifying glass
-.navbar-light .navbar-brand:focus,
-.navbar-light .navbar-brand:hover {
-  color: $spc-secondary;
-}
-
-
-/*************************************************
- *  HOME PAGE: _widgets.scss
- **************************************************/
-
+// ************************************************
+// HOME PAGE: _widgets.scss
+// ************************************************
 .portrait-title h2 {
   color: #333;
 }
@@ -178,20 +145,19 @@ a:hover {
 }
 
 .home-section.wg-experience .card-body {
-  padding: 2em; /* padding around text in experience cards*/
+  padding: 2em; // padding around text in experience cards
 }
 
 .home-section.wg-experience .card .card-text{
   padding: 0;
 }
 
-/* this erases the margin-bottom for h1 */
+// this erases the margin-bottom for h1
 .home-section.wg-pages .section-heading h1 {
   margin: 0 0 0 0;
 }
 
-/* this is the section subtitle */
-
+// this is the section subtitle
 .home-section.wg-pages .section-heading p {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -199,26 +165,27 @@ a:hover {
   letter-spacing: .08em;
 }
 
+// ************************************************
+// CODE
+// ************************************************
+// https://bookdown.org/yihui/blogdown/templates.html
+// https://github.com/rstudio/blogdown/blob/master/docs/02-hugo.Rmd
 
-/***** CODE **************************************/
-/* https://bookdown.org/yihui/blogdown/templates.html */
-/* https://github.com/rstudio/blogdown/blob/master/docs/02-hugo.Rmd */
-
-/* code chunk background layer*/
+// code chunk background layer
 pre {
-  border: 1px solid #fdfbf2; /* code chunk border */
+  border: 1px solid #fdfbf2; // code chunk border
   box-shadow: 2px 2px 2px #eee;
   padding: 0.25em;
   background: #fdfbf2;
   overflow-x: auto;
-  border-radius: 0px; /* modify rounding of corners */
+  border-radius: 0px; // modify rounding of corners
 }
 pre code {
   background: none;
   font-size: 0.8rem;
 }
 
-/* inline code */
+// inline code
 code {
   color: $spc-primary;
   background: #cfd2d8;
@@ -226,26 +193,25 @@ code {
 }
 
 .hljs {
-	background: #fdfbf2; /* code chunk background */
+	background: #fdfbf2; // code chunk background
 }
 
-/*************************************************
- *  SHORTCODE ALERTS: _root.scss
- **************************************************/
-
+// ************************************************
+// SHORTCODE ALERTS: _root.scss
+// ************************************************
 
 div.alert-note > div:first-child::before {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   color: $spc-primary;
-  content: "\f00c"; /* check mark icon */
+  content: "\f00c"; // check mark icon
 }
 
 .alert-note {
   color: #333;
   background-color: #e7e8eb;
   border-top: 2px solid $spc-primary;
-  border-radius: 0px; /*undo rounded corners*/
+  border-radius: 0px; //undo rounded corners
   border-right-style: none;
   border-bottom-style: none;
   border-left-style: none;
@@ -260,66 +226,78 @@ div.alert-warning > div:first-child::before {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   color: #a90533;
-  content: "\f12a"; /* exclamation point icon */
+  content: "\f12a"; // exclamation point icon
 }
 
 div.alert.alert-warning {
   color: #a90533;
   background-color: #fdf4f4;
   border-top: 2px solid #a90533;
-  border-radius: 0px; /*undo rounded corners*/
+  border-radius: 0px; //undo rounded corners
   border-right-style: none;
   border-bottom-style: none;
   border-left-style: none;
   padding: 23px 10px 21px 10px;
 }
 
-/*************************************************
- *  TOOLBAR BUTTONS (i.e. download PDF)
- **************************************************/
+// ************************************************
+// TOOLBAR BUTTONS (i.e. download PDF)
+// ************************************************
 
-.btn.btn-sm, .btn-group-sm > .btn {
-  background: $spc-text-high;
-  border-radius: 0px; /*undo rounded corners*/
-  font-size: 0.8rem;
-}
-
-.btn.btn-outline-primary.my-1.mr-1 {
-  border-radius: 0px; /*undo rounded corners*/
-  font-size: 0.8rem;
-}
-
+// buttons like "send" in the contact section
 .btn {
+  color: $spc-secondary;                  // page button text
+  border-color: $spc-secondary;           // page button border
+  background-color: white;      // page button background
   font-family: Lora;
   text-transform: sentencecase;
   font-style: regular;
   border-radius: 0px;
 }
-
+.btn:hover {
+	color: $spc-primary-dark;                   // text
+	background-color: $spc-secondary;  // page button text background when hovering
+	border-color: $spc-secondary;      // page button border color when hovering
+}
+.btn.btn-sm, .btn-group-sm > .btn {
+  color: $spc-secondary;                // document link button text
+  border-color: $spc-secondary;         // document link button border
+  background-color: white;    // document link button background
+  border-radius: 0px;                      // corner rounding
+  font-size: 0.8rem;
+}
+.btn.btn-sm:hover {
+	color: $spc-primary-dark;               // link button text when hovering
+	background-color: $spc-secondary;     // link button text background when hovering
+	border-color: $spc-secondary;         // link button border when hovering
+}
+.btn.btn-outline-primary.my-1.mr-1 {
+  border-radius: 0px;                       // corner rounding
+  font-size: 0.8rem;
+}
 .btn-toolbar .btn:first-child {
   border-radius: 0px;
 }
-
 .btn-toolbar .btn:last-child {
   border-radius: 0px;
 }
-
 .btn-toolbar {
   justify-content: center;
 }
 
-/* section headers */
+// section headers
 
 div.universal-wrapper.pt-3 h1 {
   text-align: center;
   padding-bottom: 50px;
   text-transform: capitalize;
 }
+// ************************************************
+// ABOUT
+// ************************************************
 
-/***** ABOUT **************************************/
-/* about-contact helpers */
-/* Used by Alison -- helpers = horizontal separators for sections? */
-
+// about-contact helpers
+// Used by Alison -- helpers = horizontal separators for sections?
 .mini {
 	text-align: left;
 	margin-left: 10rem;
@@ -327,14 +305,12 @@ div.universal-wrapper.pt-3 h1 {
 	padding-bottom: 68px;
   border-bottom: 1px solid #d53135;
 }
-
 hr {
   border: 0;
   height: 1px;
   background: #d53135;
   background-image: none;
 }
-
 .center-block {
     display: block;
     margin-left: auto;
@@ -342,28 +318,26 @@ hr {
  }
 
 
-/* images more like cards; iframes more seamless -- used by Alison*/
-
+// images more like cards; iframes more seamless -- used by Alison
 img {
 	margin-bottom: 1.5rem;
 	overflow: hidden;
 	background: #fff;
 	box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
-
 iframe {
 	border: 0;
 }
 
-/*************************************************
- *  PAGINATION (buttons at bottom of list)
- **************************************************/
+// ************************************************
+// PAGINATION (buttons at bottom of list -- N/A
+// ************************************************
 
 .page-link {
 	color: $spc-secondary;
 	background-color: #fbf9f4;
 	border: 1px solid $spc-secondary;
-  border-radius: 0px; /*undo rounded corners*/
+  border-radius: 0px; //undo rounded corners
 
 }
 
@@ -383,26 +357,29 @@ iframe {
 	border-bottom-right-radius: 0rem;
 }
 
-/*************************************************
- *  DARK MODE CUSTOMIZATION
- **************************************************/
+// ************************************************
+// ************************************************
+// DARK MODE CUSTOMIZATION
+// ************************************************
+// ************************************************
 
- /* Page builder: _widgets.scss */
- .dark .home-section {
-   background-color: $spc-error;
- }
+// Page builder: _widgets.scss
+/*
+.dark .home-section {
+ background-color: $spc-error;
+}
+*/
+.dark .home-section:nth-of-type(odd) {
+ background-color: mix($spc-00dp, white, 98%);   // odd sections: about, recent pubs, contact
+ // : mix($spc-primary, $spc-bkg-dark-std, 30);
+}
 
- .dark .home-section:nth-of-type(odd) {
-   background-color: mix($spc-00dp, white, 98%);   /* odd sections: about, recent pubs, contact */
-   /* : mix($spc-primary, $spc-bkg-dark-std, 30); */
- }
+.dark .home-section:nth-of-type(even) {
+ background-color: $spc-00dp;   // even sections: experience, recent posts
+ // background-color: mix($spc-primary, $spc-bkg-dark-std, 40);
+}
 
- .dark .home-section:nth-of-type(even) {
-   background-color: $spc-00dp;   /* even sections: experience, recent posts */
-   /* background-color: mix($spc-primary, $spc-bkg-dark-std, 40);*/
- }
-
-/* body of site: _dark.scss */
+// body of site: _dark.scss
 body.dark,
 .dark .docs-toc-link,
 .dark .docs-sidebar .nav > li:not(.active) > a,
@@ -410,16 +387,17 @@ body.dark,
 .dark input,
 .dark .form-control,
 .dark .form-control:focus {
-  color: $spc-text-medium;            /* text of search field and summary text */
-  background-color: $spc-00dp;        /* base surface */
+  color: $spc-text-medium;            // text of search field and summary text
+  background-color: $spc-00dp;        // base surface
   border-radius: .5rem;
   border-color: $spc-bkg-light-std;
   border: 0px solid;
   padding: 0.3em;
 }
 
-/* Navigation bar: _nav.scss */
-
+// ************************************************
+// Navigation bar: _nav.scss
+// ************************************************
 .dark .navbar {
   background-color: $spc-00dp;
   box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,.11);
@@ -428,11 +406,11 @@ body.dark,
   top: 0;
   right: 0;
   left: 0;
-  z-index: 1030;
+  z-index: 1030;                         // controls vertical stacking order
   border-bottom: 1px solid $spc-bkg-light-std;
 }
 .dark .navbar-collapse {
-  z-index: 1031 !important;  // Appear just over navbar.
+  z-index: 1031 !important;              // appear just over navbar
   position: absolute;
   left: 0;
   top: 50px;
@@ -440,18 +418,18 @@ body.dark,
   background-color: $spc-00dp;
   text-align: center !important;
 }
-.dropdown-menu {
-  background-color: $spc-00dp !important; /* top and bottom border of dropdown */
+.dark .dropdown-menu {
+  background-color: $spc-00dp !important; // top and bottom border of dropdown
   color: $sta-menu-text !important;
-  z-index: 1032;  // I18n dropdown over mobile expanded menu.
+  z-index: 1032;                          // I18n dropdown over mobile expanded menu
   border-color: $spc-bkg-dark;
 }
-
-.dropdown-item {
+.dark .dropdown-item {
   background-color: $spc-00dp !important;
   color: $sta-menu-text !important;
 }
-/* heading*/
+
+// heading
 
 .dark h1,
 .dark h2,
@@ -462,34 +440,32 @@ body.dark,
   color: $spc-text-high;
 }
 
-/* links */
-
+// links
 .dark a {
-  color: $spc-secondary;
+  color: $spc-secondary-dark;        // link color
   cursor: pointer;
 }
-
-.dark a:active,
 .dark a:focus,
-.dark a:hover {
-  color: $spc-secondary-light;
+.dark a:hover,
+.dark a:active {
+  color: $spc-secondary-dark;  // link color when hovering
 }
 
-/* inline code */
+// inline code
 .dark code {
-  color: $spc-secondary-light;            /* inline and code block text */
+  color: mix($spc-secondary-dark, white, 70);            // inline and code block text
   background: $spc-04dp;
   font-size: 0.9em;
 }
 
-/* code blocks */
+// code blocks
 .dark pre {
-  border: 0px solid $spc-01dp;            /* code block border */
-  box-shadow: 0px 0px 0px $spc-bkg-dark;  /* code block shadow (values: h-shift v-shift intensity) */
+  border: 0px solid $spc-01dp;            // code block border
+  box-shadow: 0px 0px 0px $spc-bkg-dark;  // code block shadow (values: h-shift v-shift intensity)
   padding: 0.25em;
-  background: $spc-01dp;                  /* code block backround */
+  background: $spc-01dp;                  // code block backround
   overflow-x: auto;
-  border-radius: 0px;                     /* corner rounding */
+  border-radius: 0px;                     // corner rounding
 }
 
 .dark pre code {
@@ -498,10 +474,10 @@ body.dark,
 }
 
 .dark .hljs {
-	background-color: $spc-02dp;            /* code block text background */
+	background-color: $spc-02dp;            // code block text background
 }
 
-/* Markup -- not currently being used */
+// Markup -- not currently being used
 .dark .markup-quote {
   background-image: linear-gradient(to bottom, rgba(233, 231, 245, 0.2), rgba(233, 231, 245, 0.2));
 }
@@ -512,102 +488,81 @@ body.dark,
   background-color: rgb(40, 42, 54);
 }
 
-/* Table Striped */
+// Table Striped
 .dark table > tbody > tr:nth-child(odd) > td,
 .dark table > tbody > tr:nth-child(odd) > th {
-  background-color: $spc-bkg-dark;              /* text background for odd table rows */
+  background-color: $spc-bkg-dark;              // text background for odd table rows
 }
 
-/* Table Hover */
+// Table Hover
 .dark table > tbody > tr:hover > td,
 .dark table > tbody > tr:hover > th {
-  background-color: mix($spc-00dp, white, 98);  /* text background for odd table rows when hovering */
+  background-color: mix($spc-00dp, white, 98);  // text background for odd table rows when hovering
 }
 
-/* pagination -- not currently being used */
-.dark .pagination li > a, .pagination li > span {
-  background-color: $spc-00dp;
-  border: 1px solid $spc-bkg-light-std;
-}
+// ************************************************
+// CARDS
+// ************************************************
 
-/* cards (i.e. experience) */
+// cards (i.e. experience)
 .dark .card {
-  background: $spc-01dp;                        /* text background for experience cards */
+  background: $spc-01dp;                        // text background for experience cards
 }
 .dark .card h4 a {
-  color: $spc-secondary;                        /* text for card institution link */
+  color: $spc-secondary;                        // text for card institution link
   border-bottom: solid 1px transparent;
 }
 .dark .card .card-image.hover-overlay::before {
-  background: #666;                             /* not sure what this is */
+  background: #666;                             // not sure what this is
 }
 .dark .card .card-image.hover-overlay::after {
-  color: #fff;                                  /* not sure what this is */
+  color: #fff;                                  // not sure what this is
 }
 
-/* card component: _cards.scss */
+// card component: _cards.scss
 .dark .card-simple {
-  background: $spc-01dp;                        /* text background for post cards */
-  box-shadow: 0 1px 1px $spc-bkg-dark-std;      /* card shadow (values: top bottom sides)*/
-  border: 1px solid $spc-01dp;                  /* card border*/
+  background: $spc-01dp;                        // text background for post cards
+  box-shadow: 0 1px 1px $spc-bkg-dark-std;      // card shadow (values: top bottom sides)
+  border: 1px solid $spc-01dp;                  // card border
 }
 
-/* pagination */
-.dark .page-link {
-	color: $spc-secondary-light;
-	background-color: #fbf9f4;
-	border: 1px solid $spc-secondary-light;
-  border-radius: 0px; /*undo rounded corners*/
+// ************************************************
+// BUTTONS
+// ************************************************
 
-}
-.dark .page-link:hover {
-	color: #fff;
-	background-color: $spc-secondary-light;
-	border-color: $spc-secondary;
-}
-.dark .page-item:first-child .page-link {
-	border-top-left-radius: 0rem;
-	border-bottom-left-radius: 0rem;
-}
-.dark .page-item:last-child .page-link {
-	border-top-right-radius: 0rem;
-	border-bottom-right-radius: 0rem;
-}
+// Button size override
 
-/* Button size override */
-
+.dark .btn.btn-sm, .btn-group-sm > .btn {
+  color: $spc-primary-dark;                 // link button text
+  border-color: $spc-bkg-light-std;         // link button border
+  background-color: $spc-bkg-light-std;     // link button background
+  border-radius: 0px;                       // corner rounding
+  font-size: 0.8rem;
+}
+.dark .btn.btn-sm:hover {
+	color: $spc-primary-dark;                 // link button text when hovering
+	background-color: $spc-secondary-dark;    // link button text background when hovering
+	border-color: $spc-secondary-dark;        // link button border when hovering
+}
+.dark .btn.btn-outline-primary.my-1.mr-1 {
+  border-radius: 0px;                       // corner rounding
+  font-size: 0.8rem;
+}
 .dark .btn {
   font-family: Lora;
   text-transform: sentencecase;
   font-style: regular;
-  color: $spc-primary-dark;                /* page button text */
-  border-color: $spc-primary-dark;         /* page button border */
-  background-color: $spc-bkg-light-std;    /* page button background */
+  color: $spc-primary-dark;                 // page button text
+  border-color: $spc-secondary-dark;        // page button border
+  background-color: $spc-secondary-dark;    // page button background
 }
 .dark .btn:hover {
-	color: $spc-bkg-light-std;
-	background-color: $spc-primary-dark;     /* page button text background when hovering*/
-	border-color: $spc-primary-dark;         /* page button border color when hovering */
-}
-.dark .btn.btn-sm, .btn-group-sm > .btn {
-  border-radius: 0px; /*undo rounded corners*/
-  font-size: 0.8rem;
-  color: $spc-primary-dark;                /* link button text */
-  border-color: $spc-primary-dark;         /* link button border */
-  background-color: $spc-bkg-light-std;    /* link button background */
-}
-.dark .btn.btn-sm:hover {
-	color: $spc-bkg-light-std;                             /* link button text when hovering */
-	background-color: $spc-primary-dark;     /* link button text background when hovering */
-	border-color: $spc-primary-dark;         /* link button border when hovering */
-}
-.dark .btn.btn-outline-primary.my-1.mr-1 {
-  border-radius: 0px;                      /* corner rounding */
-  font-size: 0.8rem;
+	color: $spc-primary-dark;
+	background-color: $spc-bkg-light-std;     // page button text background when hovering
+	border-color: $spc-bkg-light-std;         // page button border color when hovering
 }
 
-/* Toolbar buttons */
-
+// Toolbar buttons
 .dark .btn-toolbar .btn:first-child {
   border-radius: 0px;
 }
@@ -618,9 +573,12 @@ body.dark,
   justify-content: center;
 }
 
-/** Search bar: _search.scss **/
 
-/* main page search bar */
+// ************************************************
+// SEARCH BAR: _search.scss *
+// ************************************************
+
+// main page search bar
 .dark .search-header {
   background-color: $spc-00dp;
 }
@@ -628,17 +586,18 @@ body.dark,
   background-color: $spc-00dp;
 }
 
-/* Algolia search input */
+// Algolia search input
 .dark .ais-search-box--input {
   background-color: transparent;
 }
-/*.dark #search-query {
-  color: $spc-primary-dark;                /* Search bar query text
-  background-color: $spc-bkg-light-std;    /* Search bar query text background
+/*
+.dark #search-query {
+  color: $spc-primary-dark;                // Search bar query text
+  background-color: $spc-bkg-light-std;    // Search bar query text background
 } */
 
 .dark #search-box {
-  position: relative; /* Required for search icon positioning. */
+  position: relative; // Required for search icon positioning.
   margin-bottom: 0.5rem;
 }
 
@@ -658,22 +617,23 @@ body.dark,
 .dark #search-box #search-query {
   border: 1px solid #dedede;
   border-radius: 1rem;
-  padding: 1rem 1rem 1rem 2rem; /* Wider left padding for search icon to fit in. */
-  /*width: 250px;*/
+  padding: 1rem 1rem 1rem 2rem; // Wider left padding for search icon to fit in.
+  //width: 250px;
   line-height: 1rem;
   height: 1rem;
   font-size: 0.8rem;
 }
 
-/* search forms (e.g. full list of publications) */
+// Search forms (e.g. full list of publications)
+
 .dark .form-control {
-  background-color: $spc-bkg-dark;    /* background color of search filter field */
+  background-color: $spc-bkg-dark;    // background color of search filter field
   border-color: $spc-bkg-light-std;
-  border-width: 1px;
+  border-width: 0.5px;
 }
 .dark .form-control:focus {
-  background-color: $spc-02dp;        /* color of search filter field drop down menu */
-  border-color: $spc-bkg-light-std;   /* border color of search filter field when clicked */
-  box-shadow: 0 0 0 .1rem $spc-02dp;  /* shadow box color of search filter field when clicked */
-  border: 0px solid;
+  background-color: $spc-02dp;        // color of search filter field drop down menu
+  border-color: $spc-bkg-light-std;   // border color of search filter field when clicked
+  box-shadow: 0 0 0 .1rem $spc-bkg-light-std;  // shadow box color of search filter field when clicked
+  //border: 0px solid;
 }

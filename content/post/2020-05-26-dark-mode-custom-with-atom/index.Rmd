@@ -166,7 +166,8 @@ TIP: I like using a bright color like my error color to test different CSS eleme
 
 - changed background for posts/publications but home page is till eggplant -- SOLVED because it's overlaid with WIDGETS
 - search bar for posts/publications is same color as background
-
+  - check for #ffc107, $yellow, or $warning
+  - also 'orange'
 
 
 
