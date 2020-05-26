@@ -398,16 +398,50 @@ body.dark,
 // ************************************************
 // Navigation bar: _nav.scss
 // ************************************************
+
+.dark .navbar-light .navbar-nav>.nav-item>.nav-link,
+.dark .navbar-light .navbar-nav>.nav-item>.nav-link:focus,
+.dark .navbar-light .navbar-nav>.nav-item>.nav-link:hover,
+.dark .navbar-light .navbar-nav>.nav-item>.nav-link:active {
+  font-weight: 700;
+  //color: $spc-bkg-dark; // didn't change section text color
+  //border-bottom: 1px solid $spc-bkg-light-std;            // text underline for sections
+}
+.dark .navbar-light .navbar-nav > li.nav-item > a.active,
+.dark .navbar-light .navbar-nav > li.nav-item > a.active:focus,
+.dark .navbar-light .navbar-nav > li.nav-item > a.active:hover {
+  font-weight: 700;
+  transition: color .2s ease;
+  //color: $spc-bkg-dark; didn't change section text color
+}
+.dark .navbar-light {
+  box-shadow: none;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  box-shadow: 0 0.125rem 0 0 $spc-bkg-dark;
+  background-color: $spc-bkg-light-std;                              // text background
+  color: $spc-bkg-dark;
+  //border-bottom: 1px solid $spc-bkg-light-std;              // underline for entire nav bar
+}
+.dark .navbar-brand {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: $spc-bkg-dark;
+  //border-bottom: 1px solid $spc-bkg-light-std;              // text underline for name
+}
+
+/*
 .dark .navbar {
   background-color: $spc-00dp;
-  box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,.11);
+  box-shadow: 0 0.125rem 0.25rem 0 $spc-primary-dark;
   font-size: #{$sta-font-size-small}px;
-  position: fixed;
+  //position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 1030;                         // controls vertical stacking order
-  border-bottom: 1px solid $spc-bkg-light-std;
+  //border-bottom: 1px solid $spc-bkg-light-std;
 }
 .dark .navbar-collapse {
   z-index: 1031 !important;              // appear just over navbar
@@ -428,6 +462,7 @@ body.dark,
   background-color: $spc-00dp !important;
   color: $sta-menu-text !important;
 }
+*/
 
 // heading
 
@@ -448,7 +483,7 @@ body.dark,
 .dark a:focus,
 .dark a:hover,
 .dark a:active {
-  color: $spc-secondary-dark;  // link color when hovering
+  color: $spc-secondary;  // link color when hovering
 }
 
 // inline code
