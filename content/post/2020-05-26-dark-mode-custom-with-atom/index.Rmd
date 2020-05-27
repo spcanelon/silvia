@@ -162,13 +162,21 @@ Set variables at top of document and document changes from original Academic the
 
 Try out different dark mode colors by changing variables. Don't worry, the pigments package will still show you the variable colors! It'll even show them to you in a little drop-down menu when you're adding them.
 
-TIP: I like using a bright color like my error color to test different CSS elements. It stands out and makes it easy to see what I modified.
+
+TIP: I like using a bright color like my error color to test different CSS elements. It stands out and makes it easy to see what I modified.  
 
 - changed background for posts/publications but home page is till eggplant -- SOLVED because it's overlaid with WIDGETS
 - search bar for posts/publications is same color as background
   - check for #ffc107, $yellow, or $warning
   - also 'orange'
-
+  
+Process:
+1. Web inspector
+2. Search for item in themes folder
+3. Copy/paste NON dark items into custom CSS
+4. add ".dark" class before each item you want to modify
+5. test color swaps with a bright color
+6. carefully delete any light theme code that you're ok inheriting
 
 
 
@@ -177,3 +185,5 @@ TIP: I like using a bright color like my error color to test different CSS eleme
 ## HTML sleuthing
 
 I started by figuring out which out-of-the-box colors were the ones I wanted to change by using my browser's **Inspect Element** tool on various elements of a [Hugo Academic theme documentation site](https://sourcethemes.com/academic/docs/customization/) in dark mode. In particular, the teal color used for inline code stands out to me. 
+
+
