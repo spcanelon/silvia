@@ -394,6 +394,11 @@ body.dark,
   padding: 0.3em;
 }
 
+.dark .form-control:active {
+    background-color: rgb(68, 71, 90);
+
+    border-color: rgb(229, 190, 0);
+}
 
 // ************************************************
 // Navigation bar: _nav.scss
@@ -442,64 +447,20 @@ body.dark,
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: .08em;
-  color: $spc-bkg-dark; // text for name/website title
+  color: $spc-bkg-dark;                            // text for name/website title
 }
 
 .dark .navbar-toggler {
-    color: $spc-bkg-dark; // menu bar toggler
+    color: $spc-bkg-dark;                          // menu bar toggler
 }
 
 .dark #navbar-main .main-menu-item ul li .nav-link {
-  color: $spc-bkg-dark; // text for nav bar menu dropdown
+  color: $spc-bkg-dark;                            // text for nav bar menu dropdown
 }
 
 .dark .navbar-collapse {
   background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 93);
 }
-
-
-
-/*
-.dark .navbar-light .navbar-nav> .dark .nav-item> .dark .nav-link,
-.dark .navbar-light .navbar-nav> .dark .nav-item> .dark .nav-link:focus,
-.dark .navbar-light .navbar-nav> .dark .nav-item> .dark .nav-link:hover,
-.dark .navbar-light .navbar-nav> .dark .nav-item> .dark .nav-link:active {
-  font-weight: 700;
-  color: $spc-bkg-dark; // didn't change section text color
-  //border-bottom: 1px solid $spc-bkg-light-std;            // text underline for sections
-}
-.dark .navbar-light .navbar-nav > li.nav-item > .dark a.active,
-.dark .navbar-light .navbar-nav > li.nav-item > .dark a.active:focus,
-.dark .navbar-light .navbar-nav > li.nav-item > .dark a.active:hover {
-  font-weight: 700;
-  transition: color .2s ease;
-  color: $spc-bkg-dark; //didn't change section text color
-}
-.dark .navbar-light {
-  box-shadow: none;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-  box-shadow: 0 0.125rem 0 0 $spc-bkg-dark;                            // shadow for entire nav bar
-  background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 95); // background for entire nav bar
-  color: $spc-bkg-dark;
-  //border-bottom: 1px solid $spc-bkg-light-std;                    // underline for entire nav bar
-}
-.dark .navbar-brand {
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: .08em;
-  color: $spc-bkg-dark;
-  //border-bottom: 1px solid $spc-bkg-light-std;                    // text underline for name
-}
-.dark .navbar-toggler {
-    color: $spc-bkg-dark; // menu bar toggler
-}
-//.dark @media (max-width: 991.98px)
-.dark .navbar-collapse {
-    background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 95); // menu bar drop down background for entire nav bar
-    color: $spc-bkg-dark; // didn't change drop down text color
-}
-*/
 
 // heading
 .dark h1, h2, h3, h4, h5, h6 {
@@ -511,7 +472,9 @@ body.dark,
   color: $spc-secondary-dark;        // link color
   cursor: pointer;
 }
-.dark a:focus, a:hover, a:active {
+.dark a:focus,
+a:hover,
+a:active {
   color: $spc-secondary;  // link color when hovering
 }
 
@@ -636,7 +599,6 @@ body.dark,
   justify-content: center;
 }
 
-
 // ************************************************
 // SEARCH BAR: _search.scss *
 // ************************************************
@@ -659,35 +621,14 @@ body.dark,
   background-color: $spc-bkg-light-std;    // Search bar query text background
 } */
 
-
-
-
-.dark #search-box {
-  position: relative; // Required for search icon positioning.
-  margin-bottom: 0.5rem;
-}
-
 .dark #search-box::before {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  content: "\f002";
-  font-size: 1rem;
-  opacity: 0.25;
-  line-height: 1rem;
-  position: absolute;
-  left: 0.7rem;
-  top: 0.6rem;
-  overflow-x: hidden;
+  color: $spc-bkg-light-std;    // magnifying glass icon in main search bar
 }
 
 .dark #search-box #search-query {
-  border: 1px solid #dedede;
-  border-radius: 1rem;
-  padding: 1rem 1rem 1rem 2rem; // Wider left padding for search icon to fit in.
-  //width: 250px;
-  line-height: 1rem;
-  height: 1rem;
-  font-size: 0.8rem;
+  color: $spc-text-high;        // text for search queries
+  background-color: $spc-04dp;  // text for search queries
+  border: 1px solid $spc-text-medium;
 }
 
 // Search forms (e.g. full list of publications)
@@ -702,4 +643,9 @@ body.dark,
   border-color: $spc-bkg-light-std;   // border color of search filter field when clicked
   box-shadow: 0 0 0 .1rem $spc-bkg-light-std;  // shadow box color of search filter field when clicked
   //border: 0px solid;
+}
+
+.dark .docs-search .form-control:focus {
+  border-color: $spc-error;
+  box-shadow: 0 0 0 3px $sta-primary-light;
 }
