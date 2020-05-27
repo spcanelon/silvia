@@ -179,7 +179,6 @@ Process:
 6. carefully delete any light theme code that you're ok inheriting
 
 
-
 # Other helpful tools
 
 ## HTML sleuthing
