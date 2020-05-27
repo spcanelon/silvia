@@ -373,7 +373,6 @@ iframe {
  background-color: mix($spc-00dp, white, 98%);   // odd sections: about, recent pubs, contact
  // : mix($spc-primary, $spc-bkg-dark-std, 30);
 }
-
 .dark .home-section:nth-of-type(even) {
  background-color: $spc-00dp;   // even sections: experience, recent posts
  // background-color: mix($spc-primary, $spc-bkg-dark-std, 40);
@@ -395,83 +394,115 @@ body.dark,
   padding: 0.3em;
 }
 
+
 // ************************************************
 // Navigation bar: _nav.scss
 // ************************************************
 
-.dark .navbar-light .navbar-nav>.nav-item>.nav-link,
-.dark .navbar-light .navbar-nav>.nav-item>.nav-link:focus,
-.dark .navbar-light .navbar-nav>.nav-item>.nav-link:hover,
-.dark .navbar-light .navbar-nav>.nav-item>.nav-link:active {
+.dark .navbar {
+  background: mix($spc-bkg-light-std, $spc-bkg-dark-std, 95); // background for entire navbar
+  padding: 0 1rem;
+  box-shadow: 0 0.125rem 0.25rem 0 rgba(255, 255, 255, .11);
+
+  .navbar-nav {
+    display: flex;
+
+    .nav-link {
+      color: rgba($spc-bkg-dark-std, .85); // search and palette icons in nav bar
+
+      &.active,
+      &:hover,
+      &:focus {
+        color: $spc-bkg-dark-std;          // search and palette icons in nav bar when hovering
+      }
+    }
+  }
+  // Note: dedicated `dropdown-item-active` class to prevent ScrollSpy removing `active` class from language chooser.
+  // takes precedence over .dropdown changes later
+  .dropdown-item.active,
+  .dropdown-item-active {
+    font-weight: bold;
+    color: $spc-secondary-dark !important;
+  }
+}
+
+.dark .dropdown-menu {
+  background-color: $spc-bkg-light-std !important; // top/bottom borders for theme menu dropdown
+  color: $spc-bkg-dark !important;
+  z-index: 1032;  // I18n dropdown over mobile expanded menu.
+}
+
+.dark .dropdown-item {
+  background-color: $spc-bkg-light-std !important; // theme dropdown background
+  color: $spc-primary-dark !important;             // text for theme dropdown menu
+  font-weight: 600;
+}
+
+.dark .navbar-brand {
+  text-transform: uppercase;
   font-weight: 700;
-  //color: $spc-bkg-dark; // didn't change section text color
+  letter-spacing: .08em;
+  color: $spc-bkg-dark; // text for name/website title
+}
+
+.dark .navbar-toggler {
+    color: $spc-bkg-dark; // menu bar toggler
+}
+
+.dark #navbar-main .main-menu-item ul li .nav-link {
+  color: $spc-bkg-dark; // text for nav bar menu dropdown
+}
+
+.dark .navbar-collapse {
+  background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 93);
+}
+
+
+
+/*
+.dark .navbar-light .navbar-nav> .dark .nav-item> .dark .nav-link,
+.dark .navbar-light .navbar-nav> .dark .nav-item> .dark .nav-link:focus,
+.dark .navbar-light .navbar-nav> .dark .nav-item> .dark .nav-link:hover,
+.dark .navbar-light .navbar-nav> .dark .nav-item> .dark .nav-link:active {
+  font-weight: 700;
+  color: $spc-bkg-dark; // didn't change section text color
   //border-bottom: 1px solid $spc-bkg-light-std;            // text underline for sections
 }
-.dark .navbar-light .navbar-nav > li.nav-item > a.active,
-.dark .navbar-light .navbar-nav > li.nav-item > a.active:focus,
-.dark .navbar-light .navbar-nav > li.nav-item > a.active:hover {
+.dark .navbar-light .navbar-nav > li.nav-item > .dark a.active,
+.dark .navbar-light .navbar-nav > li.nav-item > .dark a.active:focus,
+.dark .navbar-light .navbar-nav > li.nav-item > .dark a.active:hover {
   font-weight: 700;
   transition: color .2s ease;
-  //color: $spc-bkg-dark; didn't change section text color
+  color: $spc-bkg-dark; //didn't change section text color
 }
 .dark .navbar-light {
   box-shadow: none;
   text-transform: uppercase;
   letter-spacing: .08em;
-  box-shadow: 0 0.125rem 0 0 $spc-bkg-dark;
-  background-color: $spc-bkg-light-std;                              // text background
+  box-shadow: 0 0.125rem 0 0 $spc-bkg-dark;                            // shadow for entire nav bar
+  background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 95); // background for entire nav bar
   color: $spc-bkg-dark;
-  //border-bottom: 1px solid $spc-bkg-light-std;              // underline for entire nav bar
+  //border-bottom: 1px solid $spc-bkg-light-std;                    // underline for entire nav bar
 }
 .dark .navbar-brand {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: .08em;
   color: $spc-bkg-dark;
-  //border-bottom: 1px solid $spc-bkg-light-std;              // text underline for name
+  //border-bottom: 1px solid $spc-bkg-light-std;                    // text underline for name
 }
-
-/*
-.dark .navbar {
-  background-color: $spc-00dp;
-  box-shadow: 0 0.125rem 0.25rem 0 $spc-primary-dark;
-  font-size: #{$sta-font-size-small}px;
-  //position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030;                         // controls vertical stacking order
-  //border-bottom: 1px solid $spc-bkg-light-std;
+.dark .navbar-toggler {
+    color: $spc-bkg-dark; // menu bar toggler
 }
+//.dark @media (max-width: 991.98px)
 .dark .navbar-collapse {
-  z-index: 1031 !important;              // appear just over navbar
-  position: absolute;
-  left: 0;
-  top: 50px;
-  width: 100%;
-  background-color: $spc-00dp;
-  text-align: center !important;
-}
-.dark .dropdown-menu {
-  background-color: $spc-00dp !important; // top and bottom border of dropdown
-  color: $sta-menu-text !important;
-  z-index: 1032;                          // I18n dropdown over mobile expanded menu
-  border-color: $spc-bkg-dark;
-}
-.dark .dropdown-item {
-  background-color: $spc-00dp !important;
-  color: $sta-menu-text !important;
+    background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 95); // menu bar drop down background for entire nav bar
+    color: $spc-bkg-dark; // didn't change drop down text color
 }
 */
 
 // heading
-
-.dark h1,
-.dark h2,
-.dark h3,
-.dark h4,
-.dark h5,
-.dark h6 {
+.dark h1, h2, h3, h4, h5, h6 {
   color: $spc-text-high;
 }
 
@@ -480,9 +511,7 @@ body.dark,
   color: $spc-secondary-dark;        // link color
   cursor: pointer;
 }
-.dark a:focus,
-.dark a:hover,
-.dark a:active {
+.dark a:focus, a:hover, a:active {
   color: $spc-secondary;  // link color when hovering
 }
 
@@ -566,8 +595,7 @@ body.dark,
 // ************************************************
 
 // Button size override
-
-.dark .btn.btn-sm, .btn-group-sm > .btn {
+.dark .btn.btn-sm, .dark .btn-group-sm > .dark .btn {
   color: $spc-primary-dark;                 // link button text
   border-color: $spc-bkg-light-std;         // link button border
   background-color: $spc-bkg-light-std;     // link button background
@@ -630,6 +658,9 @@ body.dark,
   color: $spc-primary-dark;                // Search bar query text
   background-color: $spc-bkg-light-std;    // Search bar query text background
 } */
+
+
+
 
 .dark #search-box {
   position: relative; // Required for search icon positioning.
