@@ -364,11 +364,6 @@ iframe {
 // ************************************************
 
 // Page builder: _widgets.scss
-/*
-.dark .home-section {
- background-color: $spc-error;
-}
-*/
 .dark .home-section:nth-of-type(odd) {
  background-color: mix($spc-00dp, white, 98%);   // odd sections: about, recent pubs, contact
  // : mix($spc-primary, $spc-bkg-dark-std, 30);
@@ -382,10 +377,7 @@ iframe {
 body.dark,
 .dark .docs-toc-link,
 .dark .docs-sidebar .nav > li:not(.active) > a,
-.dark .modal button.close,
-.dark input,
-.dark .form-control,
-.dark .form-control:focus {
+.dark .modal button.close {
   color: $spc-text-medium;            // text of search field and summary text
   background-color: $spc-00dp;        // base surface
   border-radius: .5rem;
@@ -394,16 +386,9 @@ body.dark,
   padding: 0.3em;
 }
 
-.dark .form-control:active {
-    background-color: rgb(68, 71, 90);
-
-    border-color: rgb(229, 190, 0);
-}
-
 // ************************************************
 // Navigation bar: _nav.scss
 // ************************************************
-
 .dark .navbar {
   background: mix($spc-bkg-light-std, $spc-bkg-dark-std, 95); // background for entire navbar
   padding: 0 1rem;
@@ -574,6 +559,8 @@ a:active {
   border-radius: 0px;                       // corner rounding
   font-size: 0.8rem;
 }
+
+// "Send" button in contact section
 .dark .btn {
   font-family: Lora;
   text-transform: sentencecase;
@@ -615,37 +602,73 @@ a:active {
 .dark .ais-search-box--input {
   background-color: transparent;
 }
-/*
 .dark #search-query {
-  color: $spc-primary-dark;                // Search bar query text
-  background-color: $spc-bkg-light-std;    // Search bar query text background
-} */
-
+  color: $spc-text-high;                // Search bar query text
+  background-color: $spc-04dp;          // Search bar query text background
+  outline-style: none;                  // Removes the default primary color outline
+}
 .dark #search-box::before {
-  color: $spc-bkg-light-std;    // magnifying glass icon in main search bar
+  color: $spc-bkg-light-std;            // magnifying glass icon in main search bar
 }
 
-.dark #search-box #search-query {
-  color: $spc-text-high;        // text for search queries
-  background-color: $spc-04dp;  // text for search queries
-  border: 1px solid $spc-text-medium;
+// Search forms
+
+// search field in publications list
+.dark input.filter-search {
+  background-color: $spc-bkg-dark;      // field background
+  border-color: $spc-bkg-light-std;     // border background
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  margin-left: 10px;
+  padding: 2.5px;
+  &:hover {
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: $spc-secondary-dark;
+  }
+  &:focus {
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: $spc-secondary-dark;
+  }
 }
 
-// Search forms (e.g. full list of publications)
-
-.dark .form-control {
-  background-color: $spc-bkg-dark;    // background color of search filter field
-  border-color: $spc-bkg-light-std;
-  border-width: 0.5px;
+// search filter for publication type
+.dark select.pub-filters.pubtype-select.form-control.form-control-sm {
+  background-color: $spc-00dp;
+  &.active,
+  &:hover {
+    color: $spc-text-high;
+    outline-style: solid;
+    outline-color: $spc-secondary-dark;
+    outline-width: 2px;
+  }
+  &:focus {
+    color: $spc-text-medium;
+    background-color: $spc-00dp;
+    outline-style: none;
+  }
 }
-.dark .form-control:focus {
-  background-color: $spc-02dp;        // color of search filter field drop down menu
-  border-color: $spc-bkg-light-std;   // border color of search filter field when clicked
-  box-shadow: 0 0 0 .1rem $spc-bkg-light-std;  // shadow box color of search filter field when clicked
-  //border: 0px solid;
+
+// search filter for publication date
+.dark select.pub-filters.form-control.form-control-sm {
+  background-color: $spc-00dp;
+  &.active,
+  &:hover {
+    color: $spc-text-high;
+    outline-style: solid;
+    outline-color: $spc-secondary-dark;
+    outline-width: 2px;
+  }
+  &:focus {
+    color: $spc-text-medium;
+    background-color: $spc-00dp;
+    outline-style: none;
+  }
 }
 
-.dark .docs-search .form-control:focus {
-  border-color: $spc-error;
-  box-shadow: 0 0 0 3px $sta-primary-light;
+//OPTIONS FOR EXPERIMENTING
+.dark #navbar-main .main-menu-item ul li .nav-link {
+  color: $spc-bkg-dark;                            // text for nav bar menu dropdown
 }
