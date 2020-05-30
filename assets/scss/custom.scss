@@ -252,7 +252,7 @@ div.alert.alert-warning {
   font-family: Lora;
   text-transform: sentencecase;
   font-style: regular;
-  border-radius: 0px;
+  border-radius: 1px;
 }
 .btn:hover {
 	color: $spc-primary-dark;                   // text
@@ -263,8 +263,8 @@ div.alert.alert-warning {
   color: $spc-secondary;                // document link button text
   border-color: $spc-secondary;         // document link button border
   background-color: white;    // document link button background
-  border-radius: 0px;                      // corner rounding
   font-size: 0.8rem;
+  border-radius: 1px;
 }
 .btn.btn-sm:hover {
 	color: $spc-primary-dark;               // link button text when hovering
@@ -272,7 +272,6 @@ div.alert.alert-warning {
 	border-color: $spc-secondary;         // link button border when hovering
 }
 .btn.btn-outline-primary.my-1.mr-1 {
-  border-radius: 0px;                       // corner rounding
   font-size: 0.8rem;
 }
 .btn-toolbar .btn:first-child {
@@ -383,7 +382,16 @@ body.dark,
   border-radius: .5rem;
   border-color: $spc-bkg-light-std;
   border: 0px solid;
-  padding: 0.3em;
+  padding: 10px;
+}
+
+.dark .form-control {
+  color: $spc-text-medium;            // text of contact boxes
+  background-color: $spc-bkg-dark;
+  border-radius: 2px;
+  border-color: $spc-bkg-light-std;
+  border: 0.5px solid $spc-text-low;
+  padding: 10px;
 }
 
 // ************************************************
@@ -430,9 +438,12 @@ body.dark,
 
 .dark .navbar-brand {
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 900;
   letter-spacing: .08em;
   color: $spc-bkg-dark;                            // text for name/website title
+  &:hover {
+    color: $spc-secondary-dark;
+  }
 }
 
 .dark .navbar-toggler {
@@ -547,7 +558,6 @@ a:active {
   color: $spc-primary-dark;                 // link button text
   border-color: $spc-bkg-light-std;         // link button border
   background-color: $spc-bkg-light-std;     // link button background
-  border-radius: 0px;                       // corner rounding
   font-size: 0.8rem;
 }
 .dark .btn.btn-sm:hover {
@@ -556,7 +566,6 @@ a:active {
 	border-color: $spc-secondary-dark;        // link button border when hovering
 }
 .dark .btn.btn-outline-primary.my-1.mr-1 {
-  border-radius: 0px;                       // corner rounding
   font-size: 0.8rem;
 }
 
@@ -575,15 +584,15 @@ a:active {
 	border-color: $spc-bkg-light-std;         // page button border color when hovering
 }
 
-// Toolbar buttons
-.dark .btn-toolbar .btn:first-child {
-  border-radius: 0px;
-}
-.dark .btn-toolbar .btn:last-child {
-  border-radius: 0px;
-}
-.dark .btn-toolbar {
+// Toolbar buttons in posts
+.btn-toolbar {
   justify-content: center;
+  .btn:first-child {
+    border-radius: 0px;
+  }
+  .btn:last-child {
+    border-radius: 0px;
+  }
 }
 
 // ************************************************
@@ -620,7 +629,7 @@ a:active {
   border-style: solid;
   border-width: 1px;
   border-radius: 5px;
-  padding: 2.5px;
+  padding: 2px;
   &:hover {
     border: $spc-secondary-dark;
     border-style: solid;
@@ -649,7 +658,6 @@ a:active {
     border: $spc-secondary-dark;
   }
 }
-
 
 
 //OPTIONS FOR EXPERIMENTING
