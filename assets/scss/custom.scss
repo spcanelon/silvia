@@ -383,6 +383,21 @@ body.dark,
   border-color: $spc-bkg-light-std;
   border: 0px solid;
   padding: 10px;
+
+}
+
+// still needs tweaking
+//TODO:
+a,
+h3.article-title a:hover {
+  color: $spc-secondary;
+  text-decoration: none;
+  transition: color 0.6s ease;
+}
+
+a:hover,
+a:focus {
+  color: $spc-secondary;
 }
 
 .dark .form-control {
@@ -556,8 +571,8 @@ a:active {
 // Button size override
 .dark .btn.btn-sm, .dark .btn-group-sm > .dark .btn {
   color: $spc-primary-dark;                 // link button text
-  border-color: $spc-bkg-light-std;         // link button border
-  background-color: $spc-bkg-light-std;     // link button background
+  border-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 90);         // link button border
+  background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 90);     // link button background
   font-size: 0.8rem;
 }
 .dark .btn.btn-sm:hover {
