@@ -1,5 +1,6 @@
 # Theme metadata
-name = "My Theme: Minimal"
+# Based off of the Hugo Academic "minimal" theme
+name = "My Theme: Silvia"
 
 # Is theme light or dark?
 light = true
