@@ -620,53 +620,37 @@ a:active {
   border-style: solid;
   border-width: 1px;
   border-radius: 5px;
-  margin-left: 10px;
   padding: 2.5px;
   &:hover {
-    outline-style: solid;
-    outline-width: 2px;
-    outline-color: $spc-secondary-dark;
+    border: $spc-secondary-dark;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
   }
   &:focus {
-    outline-style: solid;
-    outline-width: 2px;
-    outline-color: $spc-secondary-dark;
+    border-style: none;
+    box-shadow: 0 0 0 1px $spc-secondary-dark;
   }
 }
 
-// search filter for publication type
-.dark select.pub-filters.pubtype-select.form-control.form-control-sm {
-  background-color: $spc-00dp;
-  &.active,
-  &:hover {
-    color: $spc-text-high;
-    outline-style: solid;
-    outline-color: $spc-secondary-dark;
-    outline-width: 2px;
-  }
-  &:focus {
-    color: $spc-text-medium;
-    background-color: $spc-00dp;
-    outline-style: none;
-  }
-}
-
-// search filter for publication date
+// search filters on full publication list
 .dark select.pub-filters.form-control.form-control-sm {
   background-color: $spc-00dp;
-  &.active,
+  border-color: $spc-bkg-light-std;
+  border-style: solid;
+  border-width: 1px;
   &:hover {
-    color: $spc-text-high;
-    outline-style: solid;
-    outline-color: $spc-secondary-dark;
-    outline-width: 2px;
+    border-style: none;
+    box-shadow: 0 0 0 2px $spc-secondary-dark;
   }
   &:focus {
-    color: $spc-text-medium;
-    background-color: $spc-00dp;
-    outline-style: none;
+    border-style: solid;
+    border-width: 1px;
+    border: $spc-secondary-dark;
   }
 }
+
+
 
 //OPTIONS FOR EXPERIMENTING
 .dark #navbar-main .main-menu-item ul li .nav-link {
