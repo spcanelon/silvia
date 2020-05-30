@@ -128,8 +128,6 @@ Understanding contrast criterion: https://www.w3.org/TR/UNDERSTANDING-WCAG20/vis
 Contrast color calculator: https://contrast-ratio.com/
 
 
-
-
 Coolors resources:
 - https://coolors.co/contrast-checker/112a46-acc8e5
 > This tool follows the Web Content Accessibility Guidelines (WCAG), which are a series of recommendations for making the web more accessible.
@@ -179,10 +177,11 @@ Process:
 6. carefully delete any light theme code that you're ok inheriting
 
 
+
+
+
 # Other helpful tools
 
 ## HTML sleuthing
 
 I started by figuring out which out-of-the-box colors were the ones I wanted to change by using my browser's **Inspect Element** tool on various elements of a [Hugo Academic theme documentation site](https://sourcethemes.com/academic/docs/customization/) in dark mode. In particular, the teal color used for inline code stands out to me. 
-
-
