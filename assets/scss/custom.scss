@@ -27,24 +27,6 @@ $spc-text-low:           rgba(255, 255, 255, 0.45); // disabled text, white 45% 
 $spc-bkg-light-std: #EEEEEE;                   // light mode background
 $spc-bkg-dark-std: #121212;                    // dark mode background (00dp elevation level)
 
-/*
-// TESTING COLORS
-mix($spc-primary, $spc-bkg-dark-std, 25)
-#12151d
-mix($spc-primary, $spc-bkg-dark-std, 30)
-#12161f
-mix($spc-primary, $spc-bkg-dark-std, 35)
-#121722
-mix($spc-primary, $spc-bkg-dark-std, 40)
-#121824
-mix($spc-primary, $spc-bkg-dark-std, 45)
-#121826
-mix($spc-primary, $spc-bkg-dark-std, 50)
-#121929
-mix($spc-primary, $spc-bkg-dark-std, 75)
-#121d34
-*/
-
 // COLOR CALCULATIONS
 // below from mix($spc-primary, $spc-bkg-dark-std, 25)
 $spc-bkg-dark: #12151d;                                 // custom bkg
@@ -67,15 +49,15 @@ $spc-error-light: rgba(253, 244, 244, 1);
 // CORE
 // ************************************************
 
+body {
+  color: #333;
+  font-size: 0.9rem;
+}
+
 // headings: _root.scss
 h1, h2, h3, h4, h5, h6 {
   color: #333;
   font-weight: 400;
-}
-
-body {
-  color: #333;
-  font-size: 0.9rem;
 }
 
 h1 {
@@ -86,40 +68,44 @@ h1 {
 a {
   color: $spc-secondary;  // link color
   cursor: pointer;
-}
-
-a:focus,
-a:hover,
-a:active {
-  color: $spc-secondary-dark;      // link color when hovering
+  &:focus,
+  &:hover,
+  &:active {
+    color: $spc-secondary-dark !important;      // link color when hovering
+  }
 }
 
 // ************************************************
 // NAVIGATION BAR: _nav.scss
 // ************************************************
 
-.navbar-light .navbar-nav>.nav-item>.nav-link,
-.navbar-light .navbar-nav>.nav-item>.nav-link:focus,
-.navbar-light .navbar-nav>.nav-item>.nav-link:hover,
-.navbar-light .navbar-nav>.nav-item>.nav-link:active {
-  font-weight: 700;
-}
-.navbar-light .navbar-nav > li.nav-item > a.active,
-.navbar-light .navbar-nav > li.nav-item > a.active:focus,
-.navbar-light .navbar-nav > li.nav-item > a.active:hover {
-  font-weight: 700;
-  transition: color .2s ease;
-}
+
 .navbar-light {
+  font-weight: 700;
   box-shadow: none;
   text-transform: uppercase;
   letter-spacing: .08em;
+  .navbar-nav > {
+    .nav-item > .nav-link {                 // magnifying glass & palette menus
+      &:focus,
+      &:hover,
+      &:active {
+        font-weight: 700;
+        color: $spc-secondary !important;   // color upon hovering over magnifying glass & palette icons
+      }
+    }
+  }
+  .navbar-brand {                           // website title aka name
+    &:focus,
+    &:hover,
+    &:active {
+      font-weight: 700;
+      color: $spc-secondary !important;     // color upon hovering over name
+      
+  }
 }
-.navbar-brand {
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: .08em;
-}
+
+
 
 // ************************************************
 // HOME PAGE: _widgets.scss
@@ -599,7 +585,7 @@ a:active {
 	border-color: $spc-bkg-light-std;         // page button border color when hovering
 }
 
-// Toolbar buttons in posts
+// Toolbar buttons
 .btn-toolbar {
   justify-content: center;
   .btn:first-child {
