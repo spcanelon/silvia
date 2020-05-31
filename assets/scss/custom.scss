@@ -79,7 +79,6 @@ a {
 // NAVIGATION BAR: _nav.scss
 // ************************************************
 
-
 .navbar-light {
   font-weight: 700;
   box-shadow: none;
@@ -101,11 +100,9 @@ a {
     &:active {
       font-weight: 700;
       color: $spc-secondary !important;     // color upon hovering over name
-      
+    }
   }
 }
-
-
 
 // ************************************************
 // HOME PAGE: _widgets.scss
@@ -115,13 +112,42 @@ a {
 }
 
 #about .col-12.col-lg-8 {
-  padding-top: 30px !important;
+  padding-top: 28px !important; // aligns "interests/education" headings with name
 }
 
 .network-icon li:hover {
   transform: scale(1.05);
 }
 
+
+.home-section {
+  &:first-of-type {
+    padding: 50px 0 50px 0;
+  }
+  &:not(:first-of-type) {
+    padding: 25px 0 50px 0;
+  }
+  .wg-experience .card-body {
+    padding: 2em;                // padding around text in experience cards
+  }
+  .wg-experience .card .card-text {
+    padding: 0;
+  }
+  .wg-pages .section-heading {
+    h1 { // erases the margin-bottomfor h1
+      margin: 0 0 0 0;
+    }
+    p { // section subtitle
+      margin-top: 0;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+  }
+}
+
+
+/*
 .home-section:first-of-type {
   padding: 50px 0 50px 0;
 }
@@ -149,7 +175,8 @@ a {
   margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: .08em;
-}
+}*/
+
 
 // ************************************************
 // CODE
@@ -348,6 +375,8 @@ iframe {
 // ************************************************
 // ************************************************
 
+
+
 // Page builder: _widgets.scss
 .dark .home-section:nth-of-type(odd) {
  background-color: mix($spc-00dp, white, 98%);   // odd sections: about, recent pubs, contact
@@ -460,8 +489,10 @@ a:focus {
 }
 
 // heading
-.dark h1, h2, h3, h4, h5, h6 {
-  color: $spc-text-high;
+.dark {
+  h1, h2, h3, h4, h5, h6 {
+    color: $spc-text-high;
+  }
 }
 
 // links
