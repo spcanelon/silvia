@@ -112,13 +112,12 @@ a {
 }
 
 #about .col-12.col-lg-8 {
-  padding-top: 28px !important; // aligns "interests/education" headings with name
+  padding-top: 28px !important;   // aligns "interests/education" headings with name
 }
 
 .network-icon li:hover {
   transform: scale(1.05);
 }
-
 
 .home-section {
   &:first-of-type {
@@ -134,10 +133,10 @@ a {
     padding: 0;
   }
   .wg-pages .section-heading {
-    h1 { // erases the margin-bottomfor h1
+    h1 {                         // erases the margin-bottomfor h1
       margin: 0 0 0 0;
     }
-    p { // section subtitle
+    p {                          // section subtitle
       margin-top: 0;
       margin-bottom: 1rem;
       text-transform: uppercase;
@@ -145,38 +144,6 @@ a {
     }
   }
 }
-
-
-/*
-.home-section:first-of-type {
-  padding: 50px 0 50px 0;
-}
-
-.home-section:not(:first-of-type) {
-  padding: 25px 0 50px 0;
-}
-
-.home-section.wg-experience .card-body {
-  padding: 2em; // padding around text in experience cards
-}
-
-.home-section.wg-experience .card .card-text{
-  padding: 0;
-}
-
-// this erases the margin-bottom for h1
-.home-section.wg-pages .section-heading h1 {
-  margin: 0 0 0 0;
-}
-
-// this is the section subtitle
-.home-section.wg-pages .section-heading p {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-}*/
-
 
 // ************************************************
 // CODE
@@ -192,10 +159,14 @@ pre {
   background: #fdfbf2;
   overflow-x: auto;
   border-radius: 0px; // modify rounding of corners
+  code {
+    background: none;
+    font-size: 0.8rem;
+  }
 }
-pre code {
-  background: none;
-  font-size: 0.8rem;
+
+.hljs {
+	background: #fdfbf2; // code chunk background
 }
 
 // inline code
@@ -203,10 +174,6 @@ code {
   color: $spc-primary;
   background: #cfd2d8;
   font-size: 0.9em;
-}
-
-.hljs {
-	background: #fdfbf2; // code chunk background
 }
 
 // ************************************************
