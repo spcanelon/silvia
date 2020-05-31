@@ -224,45 +224,48 @@ div.alert.alert-warning {
 // TOOLBAR BUTTONS (i.e. download PDF)
 // ************************************************
 
-// buttons like "send" in the contact section
+// buttons for "send" button in the contact section
 .btn {
-  color: $spc-secondary;                  // page button text
-  border-color: $spc-secondary;           // page button border
-  background-color: white;      // page button background
+  color: $spc-secondary;                   // text
+  border-color: $spc-secondary;            // border
+  background-color: white;                 // button background
   font-family: Lora;
   text-transform: sentencecase;
   font-style: regular;
   border-radius: 1px;
+  &:hover {
+    color: $spc-primary-dark;              // text when hovering
+    border-color: $spc-secondary;          // border color when hovering
+    background-color: $spc-secondary;      // button background when hovering
+  }
 }
-.btn:hover {
-	color: $spc-primary-dark;                   // text
-	background-color: $spc-secondary;  // page button text background when hovering
-	border-color: $spc-secondary;      // page button border color when hovering
-}
-.btn.btn-sm, .btn-group-sm > .btn {
-  color: $spc-secondary;                // document link button text
-  border-color: $spc-secondary;         // document link button border
-  background-color: white;    // document link button background
+
+// buttons for document links
+.btn-sm, .btn-group-sm > .btn {
+  color: $spc-secondary;                   // text
+  border-color: $spc-secondary;            // border
+  background-color: white;                 // button background
   font-size: 0.8rem;
   border-radius: 1px;
+  &:hover {
+    color: $spc-primary-dark !important;    // text when hovering
+    border-color: $spc-secondary;           // border when hovering
+    background-color: $spc-secondary;       // button background when hovering
+  }
 }
-.btn.btn-sm:hover {
-	color: $spc-primary-dark;               // link button text when hovering
-	background-color: $spc-secondary;     // link button text background when hovering
-	border-color: $spc-secondary;         // link button border when hovering
-}
-.btn.btn-outline-primary.my-1.mr-1 {
-  font-size: 0.8rem;
-}
-.btn-toolbar .btn:first-child {
-  border-radius: 0px;
-}
-.btn-toolbar .btn:last-child {
-  border-radius: 0px;
-}
+
 .btn-toolbar {
   justify-content: center;
+  .btn:first-child {
+    border-radius: 0px;
+  }
+  .btn:last-child {
+    border-radius: 0px;
+  }
 }
+
+
+
 
 // section headers
 
