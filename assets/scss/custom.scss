@@ -370,12 +370,15 @@ body.dark {
   .docs-sidebar .nav > li:not(.active) > a,
   .modal button.close {
     color: $spc-text-medium;            // text of search field and summary text
-    background-color: $spc-00dp;        // base surface
     border-radius: .5rem;
     border-color: $spc-bkg-light-std;
     border: 0px solid;
     padding: 10px;
   }
+}
+
+body.dark {
+  background-color: $spc-00dp;         // base surface
 }
 
 // still needs tweaking
@@ -460,7 +463,10 @@ a:focus {
   }
 }
 
-// heading
+// ************************************************
+// HEADINGS/LINKS
+// ************************************************
+
 .dark { // headings
   h1, h2, h3, h4, h5, h6 {
     color: $spc-text-high;
@@ -476,45 +482,48 @@ a:focus {
   }
 }
 
-
-
 // ************************************************
 // CODE
 // ************************************************
 
-// inline code
-.dark code {
-  color: mix($spc-secondary-dark, white, 70);            // inline and code block text
-  background: $spc-04dp;
-  font-size: 0.9em;
+.dark {
+  code {
+    color: mix($spc-secondary-dark, white, 70);   // inline and code block text
+    background: $spc-04dp;
+    font-size: 0.9em;
+  }
+  pre {
+    border: 0px solid $spc-01dp;                 // code block border
+    box-shadow: 0px 0px 0px $spc-bkg-dark;       // code block shadow (values: h-shift v-shift intensity)
+    padding: 0.25em;
+    background: $spc-01dp;                       // code block backround
+    overflow-x: auto;
+    border-radius: 0px;                          // corner rounding
+  }
+  pre code {
+    background: none;
+    font-size: 0.8rem;
+  }
+  .hljs {
+  	background-color: $spc-02dp;                // code block text background
+  }
 }
 
-// code blocks
-.dark pre {
-  border: 0px solid $spc-01dp;            // code block border
-  box-shadow: 0px 0px 0px $spc-bkg-dark;  // code block shadow (values: h-shift v-shift intensity)
-  padding: 0.25em;
-  background: $spc-01dp;                  // code block backround
-  overflow-x: auto;
-  border-radius: 0px;                     // corner rounding
-}
 
-.dark pre code {
-  background: none;
-  font-size: 0.8rem;
-}
 
-.dark .hljs {
-	background-color: $spc-02dp;            // code block text background
-}
-
-// Markup -- not currently being used
+// ************************************************
+// MARKUP
+// ************************************************
+// Not all currently being used
 .dark .markup-quote {
   background-image: linear-gradient(to bottom, rgba(233, 231, 245, 0.2), rgba(233, 231, 245, 0.2));
 }
 .dark #MathJax_Zoom {
   background-color: rgb(68, 71, 90) !important;
 }
+
+
+
 .dark table table {
   background-color: rgb(40, 42, 54);
 }
