@@ -188,3 +188,4 @@ Process:
 I started by figuring out which out-of-the-box colors were the ones I wanted to change by using my browser's **Inspect Element** tool on various elements of a [Hugo Academic theme documentation site](https://sourcethemes.com/academic/docs/customization/) in dark mode. In particular, the teal color used for inline code stands out to me. 
 
 
+
