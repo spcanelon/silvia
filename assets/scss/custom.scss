@@ -563,39 +563,35 @@ a:focus {
 // BUTTONS
 // ************************************************
 
-// Button size override
-.dark .btn.btn-sm, .dark .btn-group-sm > .dark .btn {
-  color: $spc-primary-dark;                 // link button text
-  border-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 90);         // link button border
-  background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 90);     // link button background
+
+// Buttons for "send" button in the contact section
+.dark .btn {
+  color: $spc-primary-dark;                   // text
+  border-color: $spc-secondary-dark;            // border
+  background-color: $spc-secondary-dark;                 // button background
   font-size: 0.8rem;
-}
-.dark .btn.btn-sm:hover {
-	color: $spc-primary-dark;                 // link button text when hovering
-	background-color: $spc-secondary-dark;    // link button text background when hovering
-	border-color: $spc-secondary-dark;        // link button border when hovering
-}
-.dark .btn.btn-outline-primary.my-1.mr-1 {
-  font-size: 0.8rem;
+  &:hover {
+    color: $spc-primary-dark;              // text when hovering
+    border-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 90);          // border color when hovering
+    background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 90);      // button background when hovering
+  }
 }
 
-// "Send" button in contact section
-.dark .btn {
-  font-family: Lora;
-  text-transform: sentencecase;
-  font-style: regular;
-  color: $spc-primary-dark;                 // page button text
-  border-color: $spc-secondary-dark;        // page button border
-  background-color: $spc-secondary-dark;    // page button background
-}
-.dark .btn:hover {
-	color: $spc-primary-dark;
-	background-color: $spc-bkg-light-std;     // page button text background when hovering
-	border-color: $spc-bkg-light-std;         // page button border color when hovering
+// Buttons for document links
+.dark .btn-sm, .btn-group-sm > .btn {
+  color: $spc-primary-dark;                   // text
+  border-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 90);            // border
+  background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 90);                 // button background
+  font-size: 0.8rem;
+  &:hover {
+    color: $spc-primary-dark !important;    // text when hovering
+    border-color: $spc-secondary-dark;           // border when hovering
+    background-color: $spc-secondary-dark;       // button background when hovering
+  }
 }
 
 // Toolbar buttons
-.btn-toolbar {
+.dark .btn-toolbar {
   justify-content: center;
   .btn:first-child {
     border-radius: 0px;
