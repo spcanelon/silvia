@@ -538,25 +538,25 @@ a:focus {
 // ************************************************
 
 // cards (i.e. experience)
-.dark .card {
+.dark {
+  .card {
   background: $spc-01dp;                        // text background for experience cards
-}
-.dark .card h4 a {
-  color: $spc-secondary;                        // text for card institution link
-  border-bottom: solid 1px transparent;
-}
-.dark .card .card-image.hover-overlay::before {
-  background: #666;                             // not sure what this is
-}
-.dark .card .card-image.hover-overlay::after {
-  color: #fff;                                  // not sure what this is
-}
-
-// card component: _cards.scss
-.dark .card-simple {
-  background: $spc-01dp;                        // text background for post cards
-  box-shadow: 0 1px 1px $spc-bkg-dark-std;      // card shadow (values: top bottom sides)
-  border: 1px solid $spc-01dp;                  // card border
+    h4 a {
+      color: $spc-secondary;                        // text for card institution link
+      border-bottom: solid 1px transparent;
+    }
+    .card-image.hover-overlay::before {
+      background: #666;                             // not sure what this is
+    }
+    .card-image.hover-overlay::after {
+      color: #fff;                                  // not sure what this is
+    }
+  }
+  .card-simple {
+    background: $spc-01dp;                        // text background for post cards
+    box-shadow: 0 1px 1px $spc-bkg-dark-std;      // card shadow (values: top bottom sides)
+    border: 1px solid $spc-01dp;                  // card border
+  }
 }
 
 // ************************************************
