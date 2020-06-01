@@ -461,22 +461,22 @@ a:focus {
 }
 
 // heading
-.dark {
+.dark { // headings
   h1, h2, h3, h4, h5, h6 {
     color: $spc-text-high;
   }
+  a { // links
+    color: $spc-secondary-dark;        // link color
+    cursor: pointer;
+    &:focus,
+    &:hover,
+    &:active {
+      color: $spc-secondary !important;           // link color when hovering
+    }
+  }
 }
 
-// links
-.dark a {
-  color: $spc-secondary-dark;        // link color
-  cursor: pointer;
-}
-.dark a:focus,
-a:hover,
-a:active {
-  color: $spc-secondary;  // link color when hovering
-}
+
 
 // ************************************************
 // CODE
