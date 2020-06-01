@@ -79,27 +79,39 @@ a {
 // NAVIGATION BAR: _nav.scss
 // ************************************************
 
-.navbar-light {
-  font-weight: 700;
-  box-shadow: none;
+.navbar {
+  font-weight: 700;                         // weight for navbar text
+  box-shadow: 0 0 0.5px 0.5px $spc-primary-dark;
   text-transform: uppercase;
-  letter-spacing: .08em;
-  .navbar-nav > {
-    .nav-item > .nav-link {                 // magnifying glass & palette menus
+  letter-spacing: .08em;                    // horizontal padding
+  padding: 0 2em;
+  .navbar-nav {
+    .nav-link {
       &:focus,
       &:hover,
       &:active {
-        font-weight: 700;
-        color: $spc-secondary !important;   // color upon hovering over magnifying glass & palette icons
+        color: $spc-secondary !important;   // magnifying glass & palette icon color when hovering
+      }
+    }
+    .dropdown-menu {
+      .dropdown-item {
+        font-weight: 700;                   // sets weight for text in theme selection dropdown
       }
     }
   }
-  .navbar-brand {                           // website title aka name
+  .navbar-brand {
     &:focus,
     &:hover,
     &:active {
       font-weight: 700;
-      color: $spc-secondary !important;     // color upon hovering over name
+      color: $spc-secondary !important;   // text color of name when hovering
+    }
+  }
+  .navbar-toggler {
+    &:focus,
+    &:hover,
+    &:active {
+      color: $spc-secondary;               // color of toggle menu
     }
   }
 }
@@ -340,29 +352,30 @@ iframe {
 // ************************************************
 // ************************************************
 
-
 // Page builder: _widgets.scss
-.dark .home-section:nth-of-type(odd) {
- background-color: mix($spc-00dp, white, 98%);   // odd sections: about, recent pubs, contact
+.dark {
+  .home-section:nth-of-type(odd) {
+    background-color: mix($spc-00dp, white, 98%);   // odd sections: about, recent pubs, contact
  // : mix($spc-primary, $spc-bkg-dark-std, 30);
-}
-.dark .home-section:nth-of-type(even) {
- background-color: $spc-00dp;   // even sections: experience, recent posts
+  }
+  .home-section:nth-of-type(even) {
+    background-color: $spc-00dp;   // even sections: experience, recent posts
  // background-color: mix($spc-primary, $spc-bkg-dark-std, 40);
+  }
 }
 
 // body of site: _dark.scss
-body.dark,
-.dark .docs-toc-link,
-.dark .docs-sidebar .nav > li:not(.active) > a,
-.dark .modal button.close {
-  color: $spc-text-medium;            // text of search field and summary text
-  background-color: $spc-00dp;        // base surface
-  border-radius: .5rem;
-  border-color: $spc-bkg-light-std;
-  border: 0px solid;
-  padding: 10px;
-
+body.dark {
+  .docs-toc-link,
+  .docs-sidebar .nav > li:not(.active) > a,
+  .modal button.close {
+    color: $spc-text-medium;            // text of search field and summary text
+    background-color: $spc-00dp;        // base surface
+    border-radius: .5rem;
+    border-color: $spc-bkg-light-std;
+    border: 0px solid;
+    padding: 10px;
+  }
 }
 
 // still needs tweaking
@@ -391,65 +404,60 @@ a:focus {
 // ************************************************
 // Navigation bar: _nav.scss
 // ************************************************
-.dark .navbar {
-  background: mix($spc-bkg-light-std, $spc-bkg-dark-std, 95); // background for entire navbar
-  padding: 0 1rem;
-  box-shadow: 0 0.125rem 0.25rem 0 rgba(255, 255, 255, .11);
 
+.dark .navbar {
+  font-weight: 700;                              // weight for navbar text
+  background: mix($spc-bkg-light-std, $spc-bkg-dark-std, 95);    // background for entire navbar
+  box-shadow: 0 0.125rem 0.25rem 0 rgba(255, 255, 255, .11);
+  text-transform: uppercase;
+  letter-spacing: .08em;                         // horizontal padding
+  padding: 0 2rem;
   .navbar-nav {
     display: flex;
-
     .nav-link {
-      color: rgba($spc-bkg-dark-std, .85); // search and palette icons in nav bar
-
-      &.active,
+      color: rgba($spc-bkg-dark-std, .85);
+      &:focus,
       &:hover,
-      &:focus {
-        color: $spc-bkg-dark-std;          // search and palette icons in nav bar when hovering
+      &:active {
+        color: $spc-secondary-dark !important;   // magnifying glass & palette icon color when hovering
+      }
+    }
+    .dropdown-menu {
+      border: 0.5px solid mix($spc-bkg-light-std, $spc-bkg-dark-std, 95);
+      background-color: mix($spc-00dp, white, 98%) !important;   // top/bottom borders for theme menu dropdown
+      z-index: 1032;                             // I18n dropdown over mobile expanded menu.
+      .dropdown-item {
+        background-color: mix($spc-00dp, white, 98%) !important; // theme dropdown background
+        font-weight: 700;                        // sets weight for text in theme selection dropdown
       }
     }
   }
-  // Note: dedicated `dropdown-item-active` class to prevent ScrollSpy removing `active` class from language chooser.
-  // takes precedence over .dropdown changes later
   .dropdown-item.active,
   .dropdown-item-active {
     font-weight: bold;
-    color: $spc-secondary-dark !important;
+    color: $spc-secondary !important;
   }
-}
-
-.dark .dropdown-menu {
-  background-color: $spc-bkg-light-std !important; // top/bottom borders for theme menu dropdown
-  color: $spc-bkg-dark !important;
-  z-index: 1032;  // I18n dropdown over mobile expanded menu.
-}
-
-.dark .dropdown-item {
-  background-color: $spc-bkg-light-std !important; // theme dropdown background
-  color: $spc-primary-dark !important;             // text for theme dropdown menu
-  font-weight: 600;
-}
-
-.dark .navbar-brand {
-  text-transform: uppercase;
-  font-weight: 900;
-  letter-spacing: .08em;
-  color: $spc-bkg-dark;                            // text for name/website title
-  &:hover {
-    color: $spc-secondary-dark;
+  .navbar-brand {
+    color: rgba($spc-bkg-dark-std, .85);
+    &:focus,
+    &:hover,
+    &:active {
+      font-weight: 700;
+      color: $spc-secondary-dark !important;   // text color of name when hovering
+    }
   }
-}
-
-.dark .navbar-toggler {
-    color: $spc-bkg-dark;                          // menu bar toggler
-}
-
-.dark #navbar-main .main-menu-item ul li .nav-link {
-  color: $spc-bkg-dark;                            // text for nav bar menu dropdown
-}
-
-.dark .navbar-collapse {
-  background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 93);
+  .navbar-toggler {
+    color: rgba($spc-bkg-dark-std, .85);
+    background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 95);
+    &:focus,
+    &:hover,
+    &:active {
+      color: $spc-secondary-dark;              // color of toggle menu
+    }
+  }
+  .navbar-collapse {                           // navbar collapsible dropdown menu
+    background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 95);
+  }
 }
 
 // heading
@@ -469,6 +477,10 @@ a:hover,
 a:active {
   color: $spc-secondary;  // link color when hovering
 }
+
+// ************************************************
+// CODE
+// ************************************************
 
 // inline code
 .dark code {
