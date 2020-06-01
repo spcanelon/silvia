@@ -75,6 +75,14 @@ a {
   }
 }
 
+// Contact form
+.form-control {
+  color: $spc-bkg-dark;            // text of contact boxes
+  background-color: white;
+  border-radius: 2px;
+  border-color: $spc-primary;
+}
+
 // ************************************************
 // NAVIGATION BAR: _nav.scss
 // ************************************************
@@ -189,6 +197,32 @@ code {
 }
 
 // ************************************************
+// CARDS
+// ************************************************
+
+.card {
+background: white;                        // text background for experience cards
+  h4 a {
+    color: $spc-secondary;                        // text for card institution link
+    border-bottom: solid 1px transparent;
+    &:hover {
+      color: $spc-secondary-dark;
+    }
+  }
+  .card-image.hover-overlay::before {
+    background: #666;                             // not sure what this is
+  }
+  .card-image.hover-overlay::after {
+    color: #fff;                                  // not sure what this is
+  }
+}
+.card-simple {
+  background: white;                        // text background for post cards
+  box-shadow: 0 1px 1px $spc-bkg-dark-std;      // card shadow (values: top bottom sides)
+  border: 1px solid $spc-01dp;                  // card border
+}
+
+// ************************************************
 // SHORTCODE ALERTS: _root.scss
 // ************************************************
 
@@ -236,37 +270,30 @@ div.alert.alert-warning {
 // TOOLBAR BUTTONS (i.e. download PDF)
 // ************************************************
 
-// buttons for "send" button in the contact section
-.btn {
-  color: $spc-secondary;                   // text
-  border-color: $spc-secondary;            // border
-  background-color: white;                 // button background
-  font-family: Lora;
-  text-transform: sentencecase;
-  font-style: regular;
-  border-radius: 1px;
+.btn { // Buttons for "send" button in the contact section
+color: $spc-primary-dark;                   // text
+border-color: $spc-secondary;            // border
+background-color: $spc-secondary;                 // button background
+font-size: 0.8rem;
+border-radius: 0.5px;
   &:hover {
-    color: $spc-primary-dark;              // text when hovering
-    border-color: $spc-secondary;          // border color when hovering
-    background-color: $spc-secondary;      // button background when hovering
+    color: $spc-text-high;              // text when hovering
+    border-color: $spc-primary;          // border color when hovering
+    background-color: $spc-primary;      // button background when hovering
   }
 }
-
-// buttons for document links
-.btn-sm, .btn-group-sm > .btn {
+.btn-links .btn { // Buttons for document links
   color: $spc-secondary;                   // text
   border-color: $spc-secondary;            // border
   background-color: white;                 // button background
   font-size: 0.8rem;
-  border-radius: 1px;
   &:hover {
     color: $spc-primary-dark !important;    // text when hovering
     border-color: $spc-secondary;           // border when hovering
     background-color: $spc-secondary;       // button background when hovering
   }
 }
-
-.btn-toolbar {
+.btn-toolbar { // Toolbar buttons
   justify-content: center;
   .btn:first-child {
     border-radius: 0px;
@@ -379,20 +406,7 @@ body.dark {
   background-color: $spc-00dp;         // base surface
 }
 
-// still needs tweaking
-//TODO:
-a,
-h3.article-title a:hover {
-  color: $spc-secondary;
-  text-decoration: none;
-  transition: color 0.6s ease;
-}
-
-a:hover,
-a:focus {
-  color: $spc-secondary;
-}
-
+// Contact form
 .dark .form-control {
   color: $spc-text-medium;            // text of contact boxes
   background-color: $spc-bkg-dark;
@@ -544,12 +558,9 @@ a:focus {
     h4 a {
       color: $spc-secondary;                        // text for card institution link
       border-bottom: solid 1px transparent;
-    }
-    .card-image.hover-overlay::before {
-      background: #666;                             // not sure what this is
-    }
-    .card-image.hover-overlay::after {
-      color: #fff;                                  // not sure what this is
+      &:hover {
+        color: $spc-secondary-dark !important;
+      }
     }
   }
   .card-simple {
@@ -563,35 +574,21 @@ a:focus {
 // BUTTONS
 // ************************************************
 
-
 .dark {
   .btn { // Buttons for "send" button in the contact section
   color: $spc-primary-dark;                   // text
   border-color: $spc-secondary-dark;            // border
   background-color: $spc-secondary-dark;                 // button background
-  font-size: 0.8rem;
     &:hover {
       color: $spc-primary-dark;              // text when hovering
       border-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 90);          // border color when hovering
       background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 90);      // button background when hovering
     }
   }
-  .btn-sm, .btn-group-sm > .btn { // Buttons for document links
-    color: $spc-primary-dark;                   // text
-    border-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 90);            // border
-    background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 90);                 // button background
-    font-size: 0.8rem;
-    &:hover {
-      color: $spc-primary-dark !important;    // text when hovering
-      border-color: $spc-secondary-dark;           // border when hovering
-      background-color: $spc-secondary-dark;       // button background when hovering
-    }
-  }
   .btn-links .btn { // Buttons for in-post document links
     color: $spc-primary-dark;                   // text
     border-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 90);            // border
     background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 90);                 // button background
-    font-size: 0.8rem;
     &:hover {
       color: $spc-primary-dark !important;    // text when hovering
       border-color: $spc-secondary-dark;           // border when hovering
