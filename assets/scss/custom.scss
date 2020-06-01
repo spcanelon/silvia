@@ -430,7 +430,7 @@ body.dark {
   .navbar-nav {
     display: flex;
     .nav-link {
-      color: rgba($spc-bkg-dark-std, .85);
+      color: rgba($spc-bkg-dark-std, .85) !important;
       &:focus,
       &:hover,
       &:active {
@@ -520,8 +520,6 @@ body.dark {
   	background-color: $spc-02dp;                // code block text background
   }
 }
-
-
 
 // ************************************************
 // MARKUP
