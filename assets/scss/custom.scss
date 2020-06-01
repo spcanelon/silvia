@@ -356,11 +356,9 @@ iframe {
 .dark {
   .home-section:nth-of-type(odd) {
     background-color: mix($spc-00dp, white, 98%);   // odd sections: about, recent pubs, contact
- // : mix($spc-primary, $spc-bkg-dark-std, 30);
   }
   .home-section:nth-of-type(even) {
     background-color: $spc-00dp;   // even sections: experience, recent posts
- // background-color: mix($spc-primary, $spc-bkg-dark-std, 40);
   }
 }
 
@@ -515,29 +513,24 @@ a:focus {
 // MARKUP
 // ************************************************
 // Not all currently being used
-.dark .markup-quote {
+.dark {
+  .markup-quote {
   background-image: linear-gradient(to bottom, rgba(233, 231, 245, 0.2), rgba(233, 231, 245, 0.2));
-}
-.dark #MathJax_Zoom {
+  }
+  #MathJax_Zoom {
   background-color: rgb(68, 71, 90) !important;
-}
-
-
-
-.dark table table {
-  background-color: rgb(40, 42, 54);
-}
-
-// Table Striped
-.dark table > tbody > tr:nth-child(odd) > td,
-.dark table > tbody > tr:nth-child(odd) > th {
-  background-color: $spc-bkg-dark;              // text background for odd table rows
-}
-
-// Table Hover
-.dark table > tbody > tr:hover > td,
-.dark table > tbody > tr:hover > th {
-  background-color: mix($spc-00dp, white, 98);  // text background for odd table rows when hovering
+  }
+  table table {
+    background-color: rgb(40, 42, 54);
+  }
+  table > tbody > tr:nth-child(odd) > td,         // table striped rows
+  table > tbody > tr:nth-child(odd) > th {
+    background-color: $spc-bkg-dark;              // text background for odd table rows
+  }
+  table > tbody > tr:hover > td,                  // row hover
+  table > tbody > tr:hover > th {
+    background-color: mix($spc-00dp, white, 98);  // text background for odd table rows when hovering
+  }
 }
 
 // ************************************************
