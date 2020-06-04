@@ -29,89 +29,70 @@ With Alison Hill's [Up and Running with Blogdown](https://alison.rbind.io/post/2
 
 The [going futher](https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/#going-further) section in Alison's post specifically talks about customizing the out-of-the-box theme and Alison directly links to her custom CSS file, which I closely referred to when changing colors in [my custom SCSS file](https://github.com/spcanelon/silvia/blob/master/assets/scss/custom.scss).
 
-Alison's well-commented CSS helped me customize everything from text colors and fonts to alert colors and borders for Academic's light mode. At this point I had the light mode looking the way I wanted but the dark mode still used out-of-the-box colors for the most part and they **_just didn't go_**. [INSERT DARK MODE SCREENSHOT HERE]()
+Alison's CSS helped me customize everything from text colors and fonts to alert colors and borders for Academic's light mode. At this point I had the light mode looking the way I wanted but the dark mode still used out-of-the-box colors for the most part and they **_just didn't go_**. [INSERT DARK MODE SCREENSHOT HERE]()
 
 So I decided not to enable the dark-mode option in `params.toml` until I could figure out how to customize my stylesheet accordingly. That time has come because it turns out [it's pretty straightforward](https://github.com/gcushen/hugo-academic/issues/988#issuecomment-475896178)! 
 
-The [Blogdown book](https://bookdown.org/yihui/blogdown/css.html) does an excellent job summarizing what you need to know about CSS. This tutorial builds on that a little by incorporating [features made possible by SCSS](https://sass-lang.com/guide) including variables and nested syntax. 
+The [Blogdown book](https://bookdown.org/yihui/blogdown/css.html) does an excellent job summarizing what you need to know about CSS. This tutorial builds on that a little by incorporating [features made possible by SCSS](https://sass-lang.com/guide) including **variables and nested syntax**. 
 
 # Why Atom?
 
 [Atom](https://atom.io/) is a text editor that I like to use to _modify_ any files in my website directory. I say modify because I much prefer to _create_ content for posts like this one using the [Blogdown addins in RStudio](https://bookdown.org/yihui/blogdown/rstudio-ide.html). It's such a breeze! But here's why I think Atom is a fantastic companion to the RStudio IDE:
 
 1. **Seeing your directory files is made friendly in Tree View** when you open your website folder as a 'project folder'. You can just click on the file once to preview it and double-click if you want to actually open it. I find this to be really helpful when I can't remember which file contains what I'm looking for because I don't have to actually open each file to see what's in it.
-2. **Searching for something specific is easy with the built-in search tool**. I've used this many times when I can't remember where that specific parameter (e.g. fonts) or file type (e.g. `.scss`) is located within my directory. In particular I find it super handy to find specific HTML color codes, but more on that later! This brings me to my most favorite feature in Atom...
-3. **The [pigments](https://atom.io/packages/pigments) package!** Like R, Atom has a universe of handy packages and `pigments` will **display colors** behind the color code that you type out. It's kind of magical and has been a real game changer for me. Having this package will make customizing your scss file much easier on the eyes and brain.
+2. **Searching for something specific is easy with the built-in search tool**. I've used this many times when I can't remember where that specific parameter (e.g. fonts) or file type (e.g. `.scss`) is located within my directory. I also find it super handy to find specific HTML color codes or color variables. This brings me to my most favorite feature in Atom...
+3. **The [pigments](https://atom.io/packages/pigments) package!** Like R, Atom has a universe of handy packages and `pigments` will **display colors** behind the code text that represents it. It's kind of magical and has been a real game changer for me. Having this package will make customizing your scss file much easier on the eyes and brain.
 
-- You may also choose to install the [highlight-selected](https://atom.io/packages/highlight-selected) package to make highlighted text easier to spot throughout your file and the [file-icons](https://atom.io/packages/file-icons) package to make it easier to discern between different file types in your tree view. You can install packages in _Atom > Packages > Settings View > Install Packages/Themes_.
+- You may also choose to install the [highlight-selected](https://atom.io/packages/highlight-selected) package to make highlighted text easier to spot throughout your file and the [file-icons](https://atom.io/packages/file-icons) package to make it easier to discern between different file types in your tree view. You can install packages in _Atom > Preferences > Install_.
 
 # Choose your own adventure
+
 1. **Check out the SCSS file** linked above <i class="fas fa-hand-point-up"></i> to see how I customized my theme.
 2. **Keep reading** to follow along and learn with me < class="fas fa-user-friends"></i>.
 
 # Adding dark mode definitions to stylesheet
+
 Looking through GitHub issues I found that including two sub-themes, one for light mode and one for dark mode, [may be considered for Academic in the future but is not a priority](https://github.com/gcushen/hugo-academic/issues/995). A related issue shared that if you use a custom CSS, you can [define `.dark .<SELECTOR-NAME> {...}` for dark mode](https://github.com/gcushen/hugo-academic/issues/988).
 
 Not knowing what all of the options were for dark mode, I took a look at the `dark.scss` dark mode stylesheet built in to Academic in `themes/hugo-academic/assets/scss/academic/` folder. You can see the `pigments` package in action here! It makes it easier to identify elements with colors that you want to change. I'm looking at you inline code text color rgb(139, 233, 253). 
 
-[INSERT CODE SCREENSHOT FROM ATOM]()
+[INSERT CODE SCREENSHOT FROM ATOM WITH RGB(139,233,253)]()
 
-## <body/>
+Another way to find the css for the element you want to change is to use your browser's web inspector tool. In the screenshot below I right-clicked on `program-mgmt.json` and then clicked on "inspect element". The element code was `.dark pre, .dark code` which you might recognize from the code in `dark.scss`. 
 
-This is the CSS corresponding to the body of the page. I've commented the lines with examples of variables defined with the `$` sign prefix. Having learned that [variables can be used to store colors](https://sass-lang.com/guide), I wanted to make I knew what these variables were pointing to, particularly the one for `border-color`. This led me down a bit of rabbit hole... 
+[INSERT SCREENSHOT OF ELEMENT INSPECTOR]()
 
-```{css}
-body.dark,
-.dark .docs-toc-link,
-.dark .docs-sidebar .nav > li:not(.active) > a,
-.dark .modal button.close,
-.dark input,
-.dark .form-control,
-.dark .form-control:focus {
-  color: rgb(248, 248, 242);
-  background: $sta-dark-background;              ### <---
-}
+You can copy and paste this new `.dark` theme code a new (or existing) `custom.scss` file saved in the `assets/scss/` folder of your directory to start seeing how changes you make affect the look of your site. Later on we'll change the background color of our site as an example.
 
-.dark .form-control {
-  background-color: rgb(68, 71, 90);
-}
+# Choosing dark theme colors
 
-.dark .form-control:focus {
-  background-color: rgb(68, 71, 90);
-  border-color: $sta-primary;                    ### <---
-  box-shadow: 0 0 0 .2rem $sta-primary-dark;     ### <---
-}
-```
+Alright. Now that we have some new dark theme code in our custom file, we can move on to the exciting task of **choosing colors**! If you're looking for some inspiration, [Coolors has some dark color palettes](https://coolors.co/palettes/trending/dark). Coolors is also a great place to save colors into custom palettes. Here's a basic example of mine:
 
-I found these three variables defined in `main.scss` within the `themes/hugo-academic/assets/scss/` folder. I'll start with `border-color: $sta-primary`. It was defined in `main.scss` as `{{ $scr.Get "primary" }}`
+[INSERT COOLORS DARK THEME SCREENSHOT]()
 
-```{css}
-$sta-primary: {{ $scr.Get "primary" }};
-```
+If you're like me and want to design a dark theme that uses the primary and secondary colors you picked for your light theme, keep reading! I'm gonna share highlights from what I learned about dark theme design and how to ensure your color combinations meet [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/). 
 
-The double brackets around `$scr.Get "primary"` implied it's some kind of template and these definitions at the top of `main.scss` confirmed it's a [partial template](https://gohugo.io/templates/partials/):
-```{css}
-{{- $scr := .Scratch -}}
-{{- $site := $scr.Get "site" -}}
-{{- partial "functions/parse_theme" . -}}
-```
+The bulk of what I learned came from the extensive Material Design resources, including (of course) the [dark theme foundational material](https://www.material.io/design/color/dark-theme.html), which will look familiar if you've ever used an Android device. 
 
-The `$scr.Get "primary"` partial call passes site variable "primary" down to function "Scratch.Get". This function [_gets_ and _writes_ the value of a given key](https://gohugo.io/functions/scratch/) which in this case is "primary". This key is set in partial function `parse_theme` in the `themes/hugo-academic/layouts/partials/functions/` folder to correspond to a parameter in our theme `.toml` file. All that to say that **`$border-color: $sta-primary` really just corresponds to the primary color we define in the theme file**! 
+## Basics of dark theme design
 
-> **Note**: `$sta-primary-dark` and `$sta-primary-light` are the same primary color but made 10% darker and lighter, respectively. This is reflected in the `main.scss` file.
+- The primary **surface color** for dark themes should be dark gray, rather than black. The recommended color is #121212.
+- As you layer components, surfaces with a higher elevation (closer to the hypothetical 'light source') should be lighter than those below it to create a visual hierarchy. This can be achieved by applying a semi-transparent white overlay to the primary dark gray surface. 
 
-`background: $sta-dark-background` was a little more interesting. The background of the body of the page is set in function `parse_theme` to default to dark mode color `rgb(40, 42, 54)` unless the "light" parameter within the theme file is set equal to "false", in which case the background of the page becomes whatever we define as "background" in the theme file. This we probably learned from experience when we first modified our theme file. This just means the `$sta-dark-background` variable isn't doing us any favors and we can **replace it with a background color of our choosing**.
+[FIGURE WITH SURFACE OVERLAYS]()
 
-Anyway, I copied and pasted the `<body/>` elements to my custom SCSS and changed the background color fields to a dark gray.
+- The primary **text color** for dark themes should not be 100% opaque white (i.e. #FFFFFF) because it can appear to bleed or blur against dark backgrounds and be difficult to read. 
+- Text hierarchy is established by controlling the opacity, for example: 
+  - High emphasis text is white with 87% opacity
+  - Medium emphasis is white with 60% opacity
+  - Disabled text is white with 38% opacity
+- To meet WCAG AA standard, there must be a 4.5:1 contrast level between the body text and the dark theme surface at the highest/lightest elevation. The contrast level is 7:1 for the WCAG AAA standard.
+  
+## Tools to explore palettes
 
-# Designing your dark theme
 
-Inspiration for color palette: 
-
-- https://coolors.co/palettes/trending
-- https://coolors.co/palettes/trending/dark
-
-Material design guidance for dark themes: https://www.material.io/design/color/dark-theme.html
+  
+Control opacity by using `rgba()` in CSS where alpha is between 0 and 1.
 
 Tutorial: https://codelabs.developers.google.com/codelabs/design-material-darktheme/#0
 
@@ -120,10 +101,6 @@ Palette generator: https://material.io/design/color/the-color-system.html#tools-
 - then view in Color Tool: https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=122140&secondary.color=e5bf00
   - personal link: https://material.io/resources/color/#!/?view.left=1&view.right=0&primary.color=122140&secondary.color=e5bf00
 
-Understanding contrast criterion: https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html
-
-> the contrast is calculated in such a way that color is not a key factor so that people who have a color vision deficit will also have adequate contrast between the text and the background.
-> body text should meet a contrast level of at least 4.5:1 (AA)
 
 Contrast color calculator: https://contrast-ratio.com/
 
@@ -135,26 +112,8 @@ Coolors resources:
 >The level AA requires a contrast ratio of at least 4.5:1 for normal text and 3:1 for large text (at least 18pt) or bold text.
 > The level AAA requires a contrast ratio of at least 7:1 for normal text and 4.5:1 for large text or bold text.
 
-make sure you're light text color and highest/lightest elevation color have adequate contrast!
-
-> color systems are based on tonal palettes — these palettes use your brand colors to create a set of harmonious variants that come together in a comprehensive color system applied across your app, ensuring style and legibility.
-
-> When crafting a dark theme with Material, lighter variants are chosen so that your color system can remain expressive and maintain appropriate contrast without causing eye strain. More saturated colors tend to visually "vibrate" against darker backgrounds, making them harder to read. Lighter tones also provide more flexibility in varying the color of elevated surfaces, which we'll look at shortly.
-
-- important to maintain visual hierarchy by having the darkest layer in back and lighter layers as they approach the 'surface'
-
-> The more elevated the surface is, the stronger and brighter the overlay becomes.
   
-- establishing text hierarchy:
-  - High emphasis has 87% opacity
-  - Medium emphasis has 60% opacity
-  - Disabled text has 38% opacity
-  
-Control opacity by using `rgba()` in CSS where alpha is between 0 and 1.
-  
-  > High priority text isn't pure white because, as discussed in step 5, #FFFFFF—a bright color—would visually "vibrate" against our dark backgrounds. Additionally, pure #FFFFFF text against a dark background can harm legibility since the light from that text appears to bleed or blur against the dark background.
-  
-# Using variables in SCSS
+# Using color variables in SCSS
 
 Set variables at top of document and document changes from original Academic theme. Replace all color codes with defined variables.
 
@@ -165,24 +124,3 @@ TIP: I like using a bright color like my error color to test different CSS eleme
 
 - changed background for posts/publications but home page is till eggplant -- SOLVED because it's overlaid with WIDGETS
 - search bar for posts/publications is same color as background
-  - check for #ffc107, $yellow, or $warning
-  - also 'orange'
-  
-Process:
-1. Web inspector
-2. Search for item in themes folder
-3. Copy/paste NON dark items into custom CSS
-4. add ".dark" class before each item you want to modify
-5. test color swaps with a bright color
-6. carefully delete any light theme code that you're ok inheriting
-
-
-
-
-
-
-# Other helpful tools
-
-## HTML sleuthing
-
-I started by figuring out which out-of-the-box colors were the ones I wanted to change by using my browser's **Inspect Element** tool on various elements of a [Hugo Academic theme documentation site](https://sourcethemes.com/academic/docs/customization/) in dark mode. In particular, the teal color used for inline code stands out to me. 
