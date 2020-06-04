@@ -9,7 +9,6 @@
 #   Latest themes (may require updating): https://sourcethemes.com/academic/themes/
 #   Browse built-in themes in `themes/academic/data/themes/`
 #   Browse user installed themes in `data/themes/`
-
 theme = "silvia" # "custom theme"
 
 # Enable users to switch between day and night mode?
