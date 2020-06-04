@@ -1,177 +1,243 @@
-/*************************************************
- *  A custom theme for Hugo Academic
- *  Modified from Alison Hill's custom file:
- *  https://github.com/rbind/apreshill/blob/master/assets/css/alison.css
- *  Saved as custom.scss in `/assets/scss/custom.scss` relative to your website root
- *  https://sourcethemes.com/academic/docs/customization/
- **************************************************/
+// Saved as custom.scss in `/assets/scss/custom.scss` relative to the website root
+// https://sourcethemes.com/academic/docs/customization/
 
-/* from rgb(127,140,180) to gold */
-/*  change all rgb(127,140,180) --> to rgb(127,140,180) */
-/*  change all rgb(52,60,86) --> to #f7ebb2 */
-/*  change all rgba(127,140,180,0.6) --> rgba(127,140,180,0.6) */
-/*  change all rgba(52,60,86,1) --> #b79800 */
+// CHANGES
+//  change all #ffffff            --> rgba(255, 255, 255, 0.87)
+//  change all rgb(152, 166, 173) --> rgba(255, 255, 255, 0.87) -- headings
+//  change all rgb(68, 71, 90)    --> mix(#1f222a, white, 98%)
+//  change all rgb(40, 42, 54)    --> #1f222a -- page background
+//  change all rgb(139, 233, 253) --> #fff14d -- dark mode inline code text
 
-/* links */
+// COLOR VARIABLES
+// primary and secondary colors and variants
+$spc-primary:            #122140; // primary color
+$spc-primary-light:      #3d486b; // primary color, lighter variant
+$spc-primary-dark:       #00001b; // primary color, darker variant
+$spc-secondary:          #e5be00; // secondary color
+$spc-secondary-light:    #fff14d; // secondary color, lighter variant
+$spc-secondary-dark:     #ae8f00; // secondary color, darker variant
 
-a {
-  /*color: #d53135;*/
-  color: #e5be00;
-  cursor: pointer;
-}
+// text colors
+$spc-text-high:          rgba(255, 255, 255, 0.87); // high emphasis/high priority, white 87% opacity
+$spc-text-medium:        rgba(255, 255, 255, 0.60); // medium emphasis, white 60% opacity
+$spc-text-low:           rgba(255, 255, 255, 0.45); // disabled text, white 45% opacity
+//$spc-text-low:         rgba(255, 255, 255, 0.38); // disabled text, white 38% opacity
 
-a:active,
-a:focus,
-a:hover {
-  /*color: #d03b39;*/
-  color: #ceab00;
-}
+// surface colors
+$spc-bkg-light-std: #EEEEEE;                   // light mode background
+$spc-bkg-dark-std: #121212;                    // dark mode background (00dp elevation level)
 
-/* nav */
+// COLOR CALCULATIONS
+// below from mix($spc-primary, $spc-bkg-dark-std, 25)
+$spc-bkg-dark: #12151d;                                 // custom bkg
+// below from mix($spc-primary, $spc-bkg-dark-std, 40)
+$spc-00dp: #121824;                                     // 00dp surface
+// below from mix($spc-00dp, white, 95)                 // 00dp with 5% white overlay
+$spc-01dp: #1d232e;
+// below from mix($spc-00dp, white, 93)                 // 00dp with 7% white overlay
+$spc-02dp: #222833;
+// below from mix($spc-00dp, white, 92)                 // 00dp with 8% white overlay
+$spc-03dp: #242a35;
+// below from mix($spc-00dp, white, 91)                 // 00dp with 9% white overlay
+$spc-04dp: #272c37;
 
-.navbar-light .navbar-nav>.nav-item>.nav-link,
-.navbar-light .navbar-nav>.nav-item>.nav-link:focus,
-.navbar-light .navbar-nav>.nav-item>.nav-link:hover,
-.navbar-light .navbar-nav>.nav-item>.nav-link:active {
-  font-weight: 700;
-}
+// error colors
+$spc-error: rgba(169, 5, 51, 1);
+$spc-error-light: rgba(253, 244, 244, 1);
 
-.navbar-light .navbar-nav > li.nav-item > a.active,
-.navbar-light .navbar-nav > li.nav-item > a.active:focus,
-.navbar-light .navbar-nav > li.nav-item > a.active:hover {
-  font-weight: 700;
-  transition: color .2s ease;
-}
-
-.navbar-light {
-  box-shadow: none;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-}
-
-/* -- underline for navigation bar links
-.navbar-nav {
-  border-bottom: 2px solid #d53135;
-}*/
-
-.navbar-brand {
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: .08em;
-}
-
-/* -- underline for search magnifying glass
-.navbar-light .navbar-brand:focus,
-.navbar-light .navbar-brand:hover {
-  color: #d03b39;
-}
-
-/* text */
-
-h1, h2, h3, h4, h5, h6 {
-  color: #333;
-  font-weight: 400;
-}
+// ************************************************
+// CORE
+// ************************************************
 
 body {
   color: #333;
   font-size: 0.9rem;
 }
 
+// headings: _root.scss
+h1, h2, h3, h4, h5, h6 {
+  color: #333;
+  font-weight: 400;
+}
+
 h1 {
   font-size: 2rem;
 }
 
-/* home page */
+// links
+a {
+  color: $spc-secondary;  // link color
+  cursor: pointer;
+  &:focus,
+  &:hover,
+  &:active {
+    color: $spc-secondary-dark !important;      // link color when hovering
+  }
+}
 
+// Contact form
+.form-control {
+  color: $spc-bkg-dark;            // text of contact boxes
+  background-color: white;
+  border-radius: 2px;
+  border-color: $spc-primary;
+}
+
+// ************************************************
+// NAVIGATION BAR: _nav.scss
+// ************************************************
+
+.navbar {
+  font-weight: 700;                         // weight for navbar text
+  box-shadow: 0 0 0.5px 0.5px $spc-primary-dark;
+  text-transform: uppercase;
+  letter-spacing: .08em;                    // horizontal padding
+  padding: 0 2em;
+  .navbar-nav {
+    .nav-link {
+      &:focus,
+      &:hover,
+      &:active {
+        color: $spc-secondary !important;   // magnifying glass & palette icon color when hovering
+      }
+    }
+    .dropdown-menu {
+      .dropdown-item {
+        font-weight: 700;                   // sets weight for text in theme selection dropdown
+      }
+    }
+  }
+  .navbar-brand {
+    &:focus,
+    &:hover,
+    &:active {
+      font-weight: 700;
+      color: $spc-secondary !important;   // text color of name when hovering
+    }
+  }
+  .navbar-toggler {
+    &:focus,
+    &:hover,
+    &:active {
+      color: $spc-secondary;               // color of toggle menu
+    }
+  }
+}
+
+// ************************************************
+// HOME PAGE: _widgets.scss
+// ************************************************
 .portrait-title h2 {
   color: #333;
 }
 
 #about .col-12.col-lg-8 {
-  padding-top: 30px !important;
+  padding-top: 28px !important;   // aligns "interests/education" headings with name
 }
 
 .network-icon li:hover {
   transform: scale(1.05);
 }
 
-.home-section:first-of-type {
-  padding: 50px 0 50px 0;
+.home-section {
+  &:first-of-type {
+    padding: 50px 0 50px 0;
+  }
+  &:not(:first-of-type) {
+    padding: 25px 0 50px 0;
+  }
+  .wg-experience .card-body {
+    padding: 2em;                // padding around text in experience cards
+  }
+  .wg-experience .card .card-text {
+    padding: 0;
+  }
+  .wg-pages .section-heading {
+    h1 {                         // erases the margin-bottomfor h1
+      margin: 0 0 0 0;
+    }
+    p {                          // section subtitle
+      margin-top: 0;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+  }
 }
 
-.home-section:not(:first-of-type) {
-  padding: 25px 0 50px 0;
-}
+// ************************************************
+// CODE
+// ************************************************
+// https://bookdown.org/yihui/blogdown/templates.html
+// https://github.com/rstudio/blogdown/blob/master/docs/02-hugo.Rmd
 
-/* this erases the margin-bottom for h1 */
-
-.home-section.wg-pages .section-heading h1 {
-  margin: 0 0 0 0;
-}
-
-/* this is the section subtitle */
-
-.home-section.wg-pages .section-heading p {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-}
-
-/* make dark even/odd sections same color so less stripey */
-
-.dark .home-section:nth-of-type(n) {
-	background-color: #282a36;
-}
-
-
-/* code */
-/* https://github.com/rstudio/blogdown/blob/master/docs/02-hugo.Rmd */
-
-/* code chunk background layer*/
+// code chunk background layer
 pre {
-  border: 1px solid #fdfbf2; /* code chunk border */
+  border: 1px solid #fdfbf2; // code chunk border
   box-shadow: 2px 2px 2px #eee;
   padding: 0.25em;
   background: #fdfbf2;
   overflow-x: auto;
-  border-radius: 0px; /* modify rounding of corners */
+  border-radius: 0px; // modify rounding of corners
+  code {
+    background: none;
+    font-size: 0.8rem;
+  }
 }
 
-pre code {
-  background: none;
-  font-size: 0.8rem;
+.hljs {
+	background: #fdfbf2; // code chunk background
 }
 
-/* inline code */
+// inline code
 code {
-  /*color: #d03b39;*/
-  color: #122140;
-  /*background: #fff;*/
+  color: $spc-primary;
   background: #cfd2d8;
   font-size: 0.9em;
 }
 
-.hljs {
-	background: #fdfbf2; /* code chunk background */
+// ************************************************
+// CARDS
+// ************************************************
+
+.card {
+background: white;                        // text background for experience cards
+  h4 a {
+    color: $spc-secondary;                        // text for card institution link
+    border-bottom: solid 1px transparent;
+    &:hover {
+      color: $spc-secondary-dark;
+    }
+  }
+  .card-image.hover-overlay::before {
+    background: #666;                             // not sure what this is
+  }
+  .card-image.hover-overlay::after {
+    color: #fff;                                  // not sure what this is
+  }
+}
+.card-simple {
+  background: white;                        // text background for post cards
+  box-shadow: 0 1px 1px $spc-bkg-dark-std;      // card shadow (values: top bottom sides)
+  border: 1px solid $spc-01dp;                  // card border
 }
 
-
-/* alerts */
+// ************************************************
+// SHORTCODE ALERTS: _root.scss
+// ************************************************
 
 div.alert-note > div:first-child::before {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
-  color: #122140;
-  content: "\f00c"; /* check mark icon */
+  color: $spc-primary;
+  content: "\f00c"; // check mark icon
 }
 
 .alert-note {
   color: #333;
   background-color: #e7e8eb;
-  border-top: 2px solid #122140;
-  border-radius: 0px; /*undo rounded corners*/
+  border-top: 2px solid $spc-primary;
+  border-radius: 0px; //undo rounded corners
   border-right-style: none;
   border-bottom-style: none;
   border-left-style: none;
@@ -186,62 +252,69 @@ div.alert-warning > div:first-child::before {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   color: #a90533;
-  content: "\f12a"; /* exclamation point icon */
+  content: "\f12a"; // exclamation point icon
 }
 
 div.alert.alert-warning {
   color: #a90533;
   background-color: #fdf4f4;
   border-top: 2px solid #a90533;
-  border-radius: 0px; /*undo rounded corners*/
+  border-radius: 0px; //undo rounded corners
   border-right-style: none;
   border-bottom-style: none;
   border-left-style: none;
   padding: 23px 10px 21px 10px;
 }
 
-/* buttons (i.e. download PDF) */
+// ************************************************
+// TOOLBAR BUTTONS (i.e. download PDF)
+// ************************************************
 
-.btn.btn-sm, .btn-group-sm > .btn {
-  background: #fff;
-  border-radius: 0px; /*undo rounded corners*/
+.btn { // Buttons for "send" button in the contact section
+color: $spc-primary-dark;                   // text
+border-color: $spc-secondary;            // border
+background-color: $spc-secondary;                 // button background
+font-size: 0.8rem;
+border-radius: 0.5px;
+  &:hover {
+    color: $spc-text-high;              // text when hovering
+    border-color: $spc-primary;          // border color when hovering
+    background-color: $spc-primary;      // button background when hovering
+  }
+}
+.btn-links .btn { // Buttons for document links
+  color: $spc-secondary;                   // text
+  border-color: $spc-secondary;            // border
+  background-color: white;                 // button background
   font-size: 0.8rem;
+  &:hover {
+    color: $spc-primary-dark !important;    // text when hovering
+    border-color: $spc-secondary;           // border when hovering
+    background-color: $spc-secondary;       // button background when hovering
+  }
 }
-
-.btn.btn-outline-primary.my-1.mr-1 {
-  border-radius: 0px; /*undo rounded corners*/
-  font-size: 0.8rem;
-}
-
-.btn {
-  font-family: Lora;
-  text-transform: sentencecase;
-  font-style: regular;
-  border-radius: 0px;
-}
-
-.btn-toolbar .btn:first-child {
-  border-radius: 0px;
-}
-
-.btn-toolbar .btn:last-child {
-  border-radius: 0px;
-}
-
-.btn-toolbar {
+.btn-toolbar { // Toolbar buttons
   justify-content: center;
+  .btn:first-child {
+    border-radius: 0px;
+  }
+  .btn:last-child {
+    border-radius: 0px;
+  }
 }
 
-/* section headers */
-
+// section headers
 div.universal-wrapper.pt-3 h1 {
   text-align: center;
   padding-bottom: 50px;
   text-transform: capitalize;
 }
+// ************************************************
+// ABOUT
+// ************************************************
 
-/* about-contact helpers */
-
+// about-contact helpers
+// Used by Alison -- helpers = horizontal separators for sections?
 .mini {
 	text-align: left;
 	margin-left: 10rem;
@@ -249,80 +322,324 @@ div.universal-wrapper.pt-3 h1 {
 	padding-bottom: 68px;
   border-bottom: 1px solid #d53135;
 }
-
 hr {
   border: 0;
   height: 1px;
   background: #d53135;
   background-image: none;
 }
-
 .center-block {
     display: block;
     margin-left: auto;
     margin-right: auto;
  }
 
-.home-section.wg-experience .card-body {
-	/*padding: .5rem;*/
-  padding: 2em; /* padding around text in experience cards*/
-}
 
-.home-section.wg-experience .card .card-text{
-  padding: 0;
-}
-
-/* images more like cards; iframes more seamless */
-
+// images more like cards; iframes more seamless -- used by Alison
 img {
 	margin-bottom: 1.5rem;
 	overflow: hidden;
 	background: #fff;
 	box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
-
 iframe {
 	border: 0;
 }
 
-/* pagination buttons */
+// ************************************************
+// PAGINATION (buttons at bottom of list -- N/A
+// ************************************************
 
 .page-link {
-	color: #d53135;
+	color: $spc-secondary;
 	background-color: #fbf9f4;
-	border: 1px solid #d53135;
-  border-radius: 0px; /*undo rounded corners*/
-
+	border: 1px solid $spc-secondary;
+  border-radius: 0px; //undo rounded corners
+  &:hover {
+    color: #fff;
+    background-color: $spc-secondary;
+    border-color: $spc-secondary-dark;
+  }
 }
 
-.page-link:hover {
-	color: #fff;
-	background-color: #d53135;
-	border-color: #d53135;
+.page-item {
+  &:first-child .page-link {
+    border-top-left-radius: 0rem;
+	  border-bottom-left-radius: 0rem;
+  }
+  &:last-child .page-link {
+   	border-top-right-radius: 0rem;
+   	border-bottom-right-radius: 0rem;
+   }
 }
 
-.page-item:first-child .page-link {
-	border-top-left-radius: 0rem;
-	border-bottom-left-radius: 0rem;
+// ************************************************
+// ************************************************
+// DARK MODE CUSTOMIZATION
+// ************************************************
+// ************************************************
+
+// Page builder: _widgets.scss
+.dark {
+  .home-section:nth-of-type(odd) {
+    background-color: mix($spc-00dp, white, 98%);   // odd sections: about, recent pubs, contact
+  }
+  .home-section:nth-of-type(even) {
+    background-color: $spc-00dp;   // even sections: experience, recent posts
+  }
 }
 
-.page-item:last-child .page-link {
-	border-top-right-radius: 0rem;
-	border-bottom-right-radius: 0rem;
+// body of site: _dark.scss
+body.dark {
+  .docs-toc-link,
+  .docs-sidebar .nav > li:not(.active) > a,
+  .modal button.close {
+    color: $spc-text-medium;            // text of search field and summary text
+    border-radius: .5rem;
+    border-color: $spc-bkg-light-std;
+    border: 0px solid;
+    padding: 10px;
+  }
 }
 
-/* dark fixes */
-
-.dark .pagination li > a, .pagination li > span {
-	border: 1px solid #d53135;
+body.dark {
+  background-color: $spc-00dp;         // base surface
 }
 
-.dark .page-link:hover {
-	background-color: #d53135;
+// Contact form
+.dark .form-control {
+  color: $spc-text-medium;            // text of contact boxes
+  background-color: $spc-bkg-dark;
+  border-radius: 2px;
+  border-color: $spc-bkg-light-std;
+  border: 0.5px solid $spc-text-low;
+  padding: 10px;
 }
 
-.dark a:active,
-.dark a:focus,
-.dark a:hover {
-	color: #fff;
+// ************************************************
+// Navigation bar: _nav.scss
+// ************************************************
+
+.dark .navbar {
+  font-weight: 700;                              // weight for navbar text
+  background: mix($spc-bkg-light-std, $spc-bkg-dark-std, 95);    // background for entire navbar
+  box-shadow: 0 0.125rem 0.25rem 0 rgba(255, 255, 255, .11);
+  text-transform: uppercase;
+  letter-spacing: .08em;                         // horizontal padding
+  padding: 0 2rem;
+  .navbar-nav {
+    display: flex;
+    .nav-link {
+      color: rgba($spc-bkg-dark-std, .85) !important;
+      &:focus,
+      &:hover,
+      &:active {
+        color: $spc-secondary-dark !important;   // magnifying glass & palette icon color when hovering
+      }
+    }
+    .dropdown-menu {
+      border: 0.5px solid mix($spc-bkg-light-std, $spc-bkg-dark-std, 95);
+      background-color: mix($spc-00dp, white, 98%) !important;   // top/bottom borders for theme menu dropdown
+      z-index: 1032;                             // I18n dropdown over mobile expanded menu.
+      .dropdown-item {
+        background-color: mix($spc-00dp, white, 98%) !important; // theme dropdown background
+        font-weight: 700;                        // sets weight for text in theme selection dropdown
+      }
+    }
+  }
+  .dropdown-item.active,
+  .dropdown-item-active {
+    font-weight: bold;
+    color: $spc-secondary !important;
+  }
+  .navbar-brand {
+    color: rgba($spc-bkg-dark-std, .85);
+    &:focus,
+    &:hover,
+    &:active {
+      font-weight: 700;
+      color: $spc-secondary-dark !important;   // text color of name when hovering
+    }
+  }
+  .navbar-toggler {
+    color: rgba($spc-bkg-dark-std, .85);
+    background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 95);
+    &:focus,
+    &:hover,
+    &:active {
+      color: $spc-secondary-dark;              // color of toggle menu
+    }
+  }
+  .navbar-collapse {                           // navbar collapsible dropdown menu
+    background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 95);
+  }
 }
+
+// ************************************************
+// HEADINGS/LINKS
+// ************************************************
+
+.dark { // headings
+  h1, h2, h3, h4, h5, h6 {
+    color: $spc-text-high;
+  }
+  a { // links
+    color: $spc-secondary-dark;        // link color
+    cursor: pointer;
+    &:focus,
+    &:hover,
+    &:active {
+      color: $spc-secondary !important;           // link color when hovering
+    }
+  }
+}
+
+// ************************************************
+// CODE
+// ************************************************
+
+.dark {
+  code {
+    color: mix($spc-secondary-dark, white, 70);   // inline and code block text
+    background: $spc-04dp;
+    font-size: 0.9em;
+  }
+  pre {
+    border: 0px solid $spc-01dp;                 // code block border
+    box-shadow: 0px 0px 0px $spc-bkg-dark;       // code block shadow (values: h-shift v-shift intensity)
+    padding: 0.25em;
+    background: $spc-01dp;                       // code block backround
+    overflow-x: auto;
+    border-radius: 0px;                          // corner rounding
+  }
+  pre code {
+    background: none;
+    font-size: 0.8rem;
+  }
+  .hljs {
+  	background-color: $spc-02dp;                // code block text background
+  }
+}
+
+// ************************************************
+// MARKUP
+// ************************************************
+// Not all currently being used
+.dark {
+  .markup-quote {
+  background-image: linear-gradient(to bottom, rgba(233, 231, 245, 0.2), rgba(233, 231, 245, 0.2));
+  }
+  #MathJax_Zoom {
+  background-color: rgb(68, 71, 90) !important;
+  }
+  table table {
+    background-color: rgb(40, 42, 54);
+  }
+  table > tbody > tr:nth-child(odd) > td,         // table striped rows
+  table > tbody > tr:nth-child(odd) > th {
+    background-color: $spc-bkg-dark;              // text background for odd table rows
+  }
+  table > tbody > tr:hover > td,                  // row hover
+  table > tbody > tr:hover > th {
+    background-color: mix($spc-00dp, white, 98);  // text background for odd table rows when hovering
+  }
+}
+
+// ************************************************
+// CARDS
+// ************************************************
+
+// cards (i.e. experience)
+.dark {
+  .card {
+  background: $spc-01dp;                        // text background for experience cards
+    h4 a {
+      color: $spc-secondary;                        // text for card institution link
+      border-bottom: solid 1px transparent;
+      &:hover {
+        color: $spc-secondary-dark !important;
+      }
+    }
+  }
+  .card-simple {
+    background: $spc-01dp;                        // text background for post cards
+    box-shadow: 0 1px 1px $spc-bkg-dark-std;      // card shadow (values: top bottom sides)
+    border: 1px solid $spc-01dp;                  // card border
+  }
+}
+
+// ************************************************
+// BUTTONS
+// ************************************************
+
+.dark {
+  .btn { // Buttons for "send" button in the contact section
+  color: $spc-primary-dark;                   // text
+  border-color: $spc-secondary-dark;            // border
+  background-color: $spc-secondary-dark;                 // button background
+    &:hover {
+      color: $spc-primary-dark;              // text when hovering
+      border-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 90);          // border color when hovering
+      background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 90);      // button background when hovering
+    }
+  }
+  .btn-links .btn { // Buttons for in-post document links
+    color: $spc-primary-dark;                   // text
+    border-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 90);            // border
+    background-color: mix($spc-bkg-light-std, $spc-bkg-dark-std, 90);                 // button background
+    &:hover {
+      color: $spc-primary-dark !important;    // text when hovering
+      border-color: $spc-secondary-dark;           // border when hovering
+      background-color: $spc-secondary-dark;       // button background when hovering
+    }
+  }
+  .btn-toolbar { // Toolbar buttons
+    justify-content: center;
+    .btn:first-child {
+      border-radius: 0px;
+    }
+    .btn:last-child {
+      border-radius: 0px;
+    }
+  }
+}
+
+// ************************************************
+// SEARCH BAR: _search.scss *
+// ************************************************
+
+.dark {
+  .search-header {                                  // main page search bar
+  background-color: $spc-00dp;
+  }
+  .search-results {
+  background-color: $spc-00dp;
+  }
+  .ais-search-box--input {                          // Algolia search input
+    background-color: transparent;
+  }
+  #search-query {
+    color: $spc-text-high;                          // Search bar query text
+    background-color: $spc-04dp;                    // Search bar query text background
+    outline-style: none;                            // Removes the default primary color outline
+  }
+  #search-box::before {
+    color: $spc-bkg-light-std;                      // magnifying glass icon in main search bar
+  }
+  select.pub-filters.form-control.form-control-sm { // search filters on full publication list
+    background-color: $spc-00dp;
+    border-color: $spc-bkg-light-std;
+    border-style: solid;
+    border-width: 1px;
+    &:hover {
+      border-style: none;
+      box-shadow: 0 0 0 2px $spc-secondary-dark;
+    }
+    &:focus {
+      border-style: solid;
+      border-width: 1px;
+      border: $spc-secondary-dark;
+    }
+  }
+}
+
