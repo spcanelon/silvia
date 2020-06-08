@@ -24,7 +24,8 @@ $spc-text-low:           rgba(255, 255, 255, 0.45); // disabled text, white 45% 
 //$spc-text-low:         rgba(255, 255, 255, 0.38); // disabled text, white 38% opacity
 
 // surface colors
-$spc-bkg-light-std: #EEEEEE;                   // light mode background
+$spc-bkg-light-std: #F8F8F8;
+//$spc-bkg-light-std: #EEEEEE;                   // light mode background
 $spc-bkg-dark-std: #121212;                    // dark mode background (00dp elevation level)
 
 // COLOR CALCULATIONS
@@ -642,4 +643,3 @@ body.dark {
     }
   }
 }
-

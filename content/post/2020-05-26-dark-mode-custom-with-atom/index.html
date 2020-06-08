@@ -41,7 +41,7 @@ projects: []
 <p><a href="https://atom.io/">Atom</a> is a text editor that I like to use to <em>modify</em> any files in my website directory. I say modify because I much prefer to <em>create</em> content for posts like this one using the <a href="https://bookdown.org/yihui/blogdown/rstudio-ide.html">Blogdown addins in RStudio</a>. It’s such a breeze! But here’s why I think Atom is a fantastic companion to the RStudio IDE:</p>
 <ol style="list-style-type: decimal">
 <li><strong>Seeing your directory files is made friendly in Tree View</strong> when you open your website folder as a ‘project folder’. You can just click on the file once to preview it and double-click if you want to actually open it. I find this to be really helpful when I can’t remember which file contains what I’m looking for because I don’t have to actually open each file to see what’s in it.</li>
-<li><strong>Searching for something specific is easy with the built-in search tool</strong>. I’ve used this many times when I can’t remember where that specific parameter (e.g. fonts) or file type (e.g. <code>.scss</code>) is located within my directory. I also find it super handy to find specific HTML color codes or color variables. This brings me to my most favorite feature in Atom…</li>
+<li><strong>Searching for something specific is easy with the built-in search tool</strong>. I’ve used this many times when I can’t remember where that specific parameter (e.g. fonts) or file type (e.g. <code>.scss</code>) is located within my directory. I also find it super handy to find specific HTML color codes or color variables. This brings me to my most favorite feature in Atom…</li>
 <li><strong>The <a href="https://atom.io/packages/pigments">pigments</a> package!</strong> Like R, Atom has a universe of handy packages and <code>pigments</code> will <strong>display colors</strong> behind the code text that represents it. It’s kind of magical and has been a real game changer for me. Having this package will make customizing your scss file much easier on the eyes and brain.</li>
 </ol>
 <ul>
@@ -58,7 +58,10 @@ projects: []
 <div id="adding-dark-mode-definitions-to-stylesheet" class="section level1">
 <h1>Adding dark mode definitions to stylesheet</h1>
 <p>Looking through GitHub issues I found that including two sub-themes, one for light mode and one for dark mode, <a href="https://github.com/gcushen/hugo-academic/issues/995">may be considered for Academic in the future but is not a priority</a>. A related issue shared that if you use a custom CSS, you can <a href="https://github.com/gcushen/hugo-academic/issues/988">define <code>.dark .&lt;SELECTOR-NAME&gt; {...}</code> for dark mode</a>.</p>
-<p>Not knowing what all of the options were for dark mode, I took a look at the <code>dark.scss</code> dark mode stylesheet built in to Academic in <code>themes/hugo-academic/assets/scss/academic/</code> folder. You can see the <code>pigments</code> package in action here! It makes it easier to identify elements with colors that you want to change. I’m looking at you inline code text color rgb(139, 233, 253).</p>
+Not knowing what all of the options were for dark mode, I took a look at the <code>dark.scss</code> dark mode stylesheet built in to Academic in <code>themes/hugo-academic/assets/scss/academic/</code> folder. You can see the <code>pigments</code> package in action here! It makes it easier to identify elements with colors that you want to change. I’m looking at you inline code text color
+<html>
+<span style="background-color:#44475a; color:rgb(139, 233, 253)">rgb(139, 233, 253) </span><span>.</span>
+</html>
 <p><a href="">INSERT CODE SCREENSHOT FROM ATOM WITH RGB(139,233,253)</a></p>
 <p>Another way to find the css for the element you want to change is to use your browser’s web inspector tool. In the screenshot below I right-clicked on <code>program-mgmt.json</code> and then clicked on “inspect element”. The element code was <code>.dark pre, .dark code</code> which you might recognize from the code in <code>dark.scss</code>.</p>
 <p><a href="">INSERT SCREENSHOT OF ELEMENT INSPECTOR</a></p>
@@ -73,17 +76,51 @@ projects: []
 <div id="basics-of-dark-theme-design" class="section level2">
 <h2>Basics of dark theme design</h2>
 <ul>
-<li>The primary <strong>surface color</strong> for dark themes should be dark gray, rather than black. The recommended color is #121212.</li>
+<li>The primary <strong>surface color</strong> for dark themes should be dark gray, rather than black. The recommended color is #121212
+<html>
+<svg width="11" height="11">
+<rect width="11" height="11" style="fill:#121212;stroke-width:2;stroke:#F8F8F8" />
+</svg>
+<span>.</span>
+</html></li>
 <li>As you layer components, surfaces with a higher elevation (closer to the hypothetical ‘light source’) should be lighter than those below it to create a visual hierarchy. This can be achieved by applying a semi-transparent white overlay to the primary dark gray surface.</li>
 </ul>
 <p><a href="">FIGURE WITH SURFACE OVERLAYS</a></p>
 <ul>
-<li>The primary <strong>text color</strong> for dark themes should not be 100% opaque white (i.e. #FFFFFF) because it can appear to bleed or blur against dark backgrounds and be difficult to read.</li>
+<li>The primary <strong>text color</strong> for dark themes should not be 100% opaque white (i.e. #FFFFFF
+<html>
+<svg width="11" height="11">
+<rect width="11" height="11"
+style="fill:#FFFFFF;stroke-width:3;stroke:#000000" />
+</svg>
+</html>
+) because it can appear to bleed or blur against dark backgrounds and be difficult to read.</li>
 <li>Text hierarchy is established by controlling the opacity, for example:
 <ul>
-<li>High emphasis text is white with 87% opacity</li>
-<li>Medium emphasis is white with 60% opacity</li>
-<li>Disabled text is white with 38% opacity</li>
+<li>High emphasis text is white with 87% opacity
+<html>
+<svg width="11" height="11">
+<rect width="11" height="11" 
+style="fill:rgba(255, 255, 255, 0.87);
+stroke-width:3;stroke:#000000" />
+</svg>
+</html></li>
+<li>Medium emphasis is white with 60% opacity
+<html>
+<svg width="11" height="11">
+<rect width="11" height="11" 
+style="fill:rgba(255, 255, 255, 0.60);
+stroke-width:3;stroke:#000000" />
+</svg>
+</html></li>
+<li>Disabled text is white with 38% opacity
+<html>
+<svg width="11" height="11">
+<rect width="11" height="11" 
+style="fill:rgba(255, 255, 255, 0.38);
+stroke-width:3;stroke:#000000" />
+</svg>
+</html></li>
 </ul></li>
 <li>To meet WCAG AA standard, there must be a 4.5:1 contrast level between the body text and the dark theme surface at the highest/lightest elevation. The contrast level is 7:1 for the WCAG AAA standard.</li>
 </ul>
