@@ -54,7 +54,8 @@ The [Blogdown book](https://bookdown.org/yihui/blogdown/css.html) does an excell
 
 Looking through GitHub issues I found that including two sub-themes, one for light mode and one for dark mode, [may be considered for Academic in the future but is not a priority](https://github.com/gcushen/hugo-academic/issues/995). A related issue shared that if you use a custom CSS, you can [define `.dark .<SELECTOR-NAME> {...}` for dark mode](https://github.com/gcushen/hugo-academic/issues/988).
 
-Not knowing what all of the options were for dark mode, I took a look at the `dark.scss` dark mode stylesheet built in to Academic in `themes/hugo-academic/assets/scss/academic/` folder. You can see the `pigments` package in action here! It makes it easier to identify elements with colors that you want to change. I'm looking at you inline code text color rgb(139, 233, 253). 
+Not knowing what all of the options were for dark mode, I took a look at the `dark.scss` dark mode stylesheet built in to Academic in `themes/hugo-academic/assets/scss/academic/` folder. You can see the `pigments` package in action here! It makes it easier to identify elements with colors that you want to change. I'm looking at you inline code text color 
+<html><span style="background-color:#44475a; color:rgb(139, 233, 253)">rgb(139, 233, 253) </span><span>.</span></html> 
 
 [INSERT CODE SCREENSHOT FROM ATOM WITH RGB(139,233,253)]()
 
@@ -76,19 +77,49 @@ The bulk of what I learned came from the extensive Material Design resources, in
 
 ## Basics of dark theme design
 
-- The primary **surface color** for dark themes should be dark gray, rather than black. The recommended color is #121212.
+- The primary **surface color** for dark themes should be dark gray, rather than black. The recommended color is #121212
+<html><svg width="11" height="11"> 
+<rect width="11" height="11" style="fill:#121212;stroke-width:2;stroke:#F8F8F8" />
+</svg><span>.</span></html>
+
 - As you layer components, surfaces with a higher elevation (closer to the hypothetical 'light source') should be lighter than those below it to create a visual hierarchy. This can be achieved by applying a semi-transparent white overlay to the primary dark gray surface. 
 
 [FIGURE WITH SURFACE OVERLAYS]()
 
-- The primary **text color** for dark themes should not be 100% opaque white (i.e. #FFFFFF) because it can appear to bleed or blur against dark backgrounds and be difficult to read. 
+- The primary **text color** for dark themes should not be 100% opaque white (i.e. #FFFFFF 
+  <html><svg width="11" height="11">
+  <rect width="11" height="11"
+  style="fill:#FFFFFF;stroke-width:3;stroke:#000000" />
+  </svg>
+  </html>
+) because it can appear to bleed or blur against dark backgrounds and be difficult to read. 
 - Text hierarchy is established by controlling the opacity, for example: 
-  - High emphasis text is white with 87% opacity
+  - High emphasis text is white with 87% opacity 
+    <html><svg width="11" height="11"> 
+    <rect width="11" height="11" 
+    style="fill:rgba(255, 255, 255, 0.87);
+    stroke-width:3;stroke:#000000" />
+  </svg></html>
   - Medium emphasis is white with 60% opacity
+    <html><svg width="11" height="11"> 
+    <rect width="11" height="11" 
+    style="fill:rgba(255, 255, 255, 0.60);
+    stroke-width:3;stroke:#000000" />
+    </svg></html>
   - Disabled text is white with 38% opacity
+    <html><svg width="11" height="11"> 
+    <rect width="11" height="11" 
+    style="fill:rgba(255, 255, 255, 0.38);
+    stroke-width:3;stroke:#000000" />
+    </svg></html>
+
 - To meet WCAG AA standard, there must be a 4.5:1 contrast level between the body text and the dark theme surface at the highest/lightest elevation. The contrast level is 7:1 for the WCAG AAA standard.
   
+
+
+  
 ## Tools to explore palettes
+
 
 
   
