@@ -10,9 +10,9 @@ tags:
   - r
   - scss
 slug: dark-theme-custom-with-atom
-draft: yes
-subtitle: Tutorial on how to customize the dark mode in Hugo's Academic theme with help from the Atom text editor package pigments.
-summary: Tutorial on how to customize the dark mode in Hugo's Academic theme with help from the Atom text editor package pigments.
+draft: no
+subtitle: Tutorial on how to customize the dark mode in Hugo's Academic theme with help from the Atom text editor package Pigments.
+summary: Tutorial on how to customize the dark mode in Hugo's Academic theme with help from the Atom text editor package Pigments.
 lastmod: '2020-06-16T13:22:13-04:00'
 featured: no
 image:
@@ -160,4 +160,4 @@ his `mix()` function also came in handy when defining background surfaces with s
 
 ![](atom-background-color-definitions.png)
 
-And that's a wrap. Have fun playing around with your new custom dark theme!
+**And that's a wrap**. Have fun building your new custom dark theme!
