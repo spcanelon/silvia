@@ -3,7 +3,7 @@ title: Customizing Hugo Academic's Dark Mode with Help from Atom
 author: silvia
 date: '2020-06-16'
 categories:
-  - R minis
+  - Website
 tags:
   - atom
   - blogdown
@@ -54,7 +54,7 @@ links:
 <p>Alison’s CSS helped me customize everything from text colors and fonts to alert colors and borders for Academic’s light mode. At this point I had the light mode looking the way I wanted but the dark mode still used out-of-the-box colors for the most part and they <strong><em>just didn’t go</em></strong>.</p>
 <p><img src="academic-minimal-dark-theme.png" width="50%" /></p>
 <p>So I decided not to enable the dark-mode option in <code>params.toml</code> until I could figure out how to customize my stylesheet accordingly. That time has come because it turns out <a href="https://github.com/gcushen/hugo-academic/issues/988#issuecomment-475896178">it’s pretty straightforward</a>!</p>
-<p>The <a href="https://bookdown.org/yihui/blogdown/css.html">Blogdown book</a> does an excellent job summarizing what you need to know about CSS. This post builds on that a little by incorporating <a href="https://sass-lang.com/guide">features made possible by SCSS</a> including <strong>variables and nested syntax</strong>.</p>
+<p>The <a href="https://bookdown.org/yihui/blogdown/css.html">Blogdown book</a> does an excellent job summarizing what you need to know about CSS. This post builds on that a little by incorporating <a href="https://sass-lang.com/guide">features made possible by SCSS</a> including <strong>variables</strong>.</p>
 </div>
 <div id="choose-your-own-adventure" class="section level1">
 <h1><span class="header-section-number">2</span> Choose your own adventure</h1>
@@ -85,7 +85,7 @@ Not knowing what all of the options were for dark mode, I took a look at the <co
 <p><img src="atom-inline-text-color.png" /></p>
 <p>Another way to find the css for the element you want to change is to use your browser’s web inspector tool. In the screenshot below from Hugo Academic’s <a href="">customization documentation</a> I right-clicked on <code>program-mgmt.json</code> and then clicked on “inspect element”. The element code was <code>.dark pre, .dark code</code> which you might recognize from the code in <code>dark.scss</code>.</p>
 <p><img src="web-element-inspector.png" /></p>
-<p>You can copy and paste this new <code>.dark</code> theme code a new (or existing) <code>custom.scss</code> file saved in the <code>assets/scss/</code> folder of your directory to start seeing how changes you make affect the look of your site. Later on we’ll change the background color of our site as an example.</p>
+<p>You can copy and paste this new <code>.dark</code> theme code a new (or existing) <code>custom.scss</code> file saved in the <code>assets/scss/</code> folder of your directory to start seeing how changes you make affect the look of your site.</p>
 </div>
 <div id="choosing-dark-theme-colors" class="section level1">
 <h1><span class="header-section-number">5</span> Choosing dark theme colors</h1>
@@ -170,7 +170,7 @@ stroke-width:3;stroke:#000000" />
 </blockquote>
 <p>Now, ideally I’d be able to define the result of this <code>mix()</code> as a color variable, but some CSS properties like <code>background-color</code> don’t recognize it. So I had to convert the result to a color code and define that as a variable instead. <code>Pigments</code> made this conversion easy when I toggled the menu (Shift+Command+P on a Mac) and searched for the <code>Pigments: Convert</code> options.</p>
 <p><img src="atom-pigments-menu.png" /></p>
-<p>his <code>mix()</code> function also came in handy when defining background surfaces with semi-transparent white overlays.</p>
+<p>This <code>mix()</code> function also came in handy when defining background surfaces with semi-transparent white overlays.</p>
 <p><img src="atom-background-color-definitions.png" /></p>
 <p><strong>And that’s a wrap</strong>. Have fun building your new custom dark theme!</p>
 </div>
