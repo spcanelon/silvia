@@ -3,7 +3,7 @@ title: Customizing Hugo Academic's Dark Mode with Help from Atom
 author: silvia
 date: '2020-06-16'
 categories:
-  - R minis
+  - Website
 tags:
   - atom
   - blogdown
@@ -49,7 +49,7 @@ knitr::include_graphics('academic-minimal-dark-theme.png')
 
 So I decided not to enable the dark-mode option in `params.toml` until I could figure out how to customize my stylesheet accordingly. That time has come because it turns out [it's pretty straightforward](https://github.com/gcushen/hugo-academic/issues/988#issuecomment-475896178)! 
 
-The [Blogdown book](https://bookdown.org/yihui/blogdown/css.html) does an excellent job summarizing what you need to know about CSS. This post builds on that a little by incorporating [features made possible by SCSS](https://sass-lang.com/guide) including **variables and nested syntax**. 
+The [Blogdown book](https://bookdown.org/yihui/blogdown/css.html) does an excellent job summarizing what you need to know about CSS. This post builds on that a little by incorporating [features made possible by SCSS](https://sass-lang.com/guide) including **variables**. 
 
 # Choose your own adventure
 
@@ -79,7 +79,7 @@ Another way to find the css for the element you want to change is to use your br
 
 ![](web-element-inspector.png)
 
-You can copy and paste this new `.dark` theme code a new (or existing) `custom.scss` file saved in the `assets/scss/` folder of your directory to start seeing how changes you make affect the look of your site. Later on we'll change the background color of our site as an example.
+You can copy and paste this new `.dark` theme code a new (or existing) `custom.scss` file saved in the `assets/scss/` folder of your directory to start seeing how changes you make affect the look of your site.
 
 # Choosing dark theme colors
 
@@ -156,7 +156,7 @@ Now, ideally I'd be able to define the result of this `mix()` as a color variabl
 
 ![](atom-pigments-menu.png)
 
-his `mix()` function also came in handy when defining background surfaces with semi-transparent white overlays.
+This `mix()` function also came in handy when defining background surfaces with semi-transparent white overlays.
 
 ![](atom-background-color-definitions.png)
 
