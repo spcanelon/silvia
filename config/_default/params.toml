@@ -114,7 +114,7 @@ office_hours = '' #["Monday 10:00 to 13:00", "Wednesday 09:00 to 10:00"]
 contact_links = [
   {icon = "twitter", icon_pack = "fab", name = "Find me on Twitter", link = "https://twitter.com/spcanelon"},
   #{icon = "skype", icon_pack = "fab", name = "Skype Me", link = "skype:echo123?call"},
-  #{icon = "keybase", icon_pack = "fab", name = "Chat on Keybase", link = "https://keybase.io/"},
+  {icon = "keybase", icon_pack = "fab", name = "Chat on Keybase", link = "https://keybase.io/spcanelon"},
   #{icon = "comments", icon_pack = "fas", name = "Discuss on Forum", link = "https://discourse.gohugo.io"},
   # {icon = "telegram", icon_pack = "fab", name = "Telegram Me", link = "https://telegram.me/@Telegram"},
   ]
