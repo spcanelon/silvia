@@ -75,7 +75,7 @@ Not knowing what all of the options were for dark mode, I took a look at the `da
 
 ![](atom-inline-text-color.png)
 
-Another way to find the css for the element you want to change is to use your browser's web inspector tool. In the screenshot below from Hugo Academic's [customization documentation]() I right-clicked on `program-mgmt.json` and then clicked on "inspect element". The element code was `.dark pre, .dark code` which you might recognize from the code in `dark.scss`. 
+Another way to find the css for the element you want to change is to use your browser's web inspector tool. In the screenshot below from Hugo Academic's [customization documentation]() I right-clicked on `themes/academic/data/themes/minimal.toml` and then clicked on "inspect element". The element code was `.dark pre, .dark code` which you might recognize from the code in `dark.scss`. 
 
 ![](web-element-inspector.png)
 
