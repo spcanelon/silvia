@@ -54,12 +54,14 @@ $spc-error-light: rgba(253, 244, 244, 1);
 body {
   color: #333;
   font-size: 0.9rem;
+  letter-spacing: 0.04em;
 }
 
 // headings: _root.scss
 h1, h2, h3, h4, h5, h6 {
   color: #333;
   font-weight: 400;
+  letter-spacing: 0.04em;
 }
 
 h1 {
