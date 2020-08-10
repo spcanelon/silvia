@@ -19,7 +19,8 @@ interests:
 - Prenatal & perinatal health
 - Social determinants of health
 - Environmental exposures
-- Data science
+- Data science for good
+- R education
 
 education:
   courses:
