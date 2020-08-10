@@ -53,7 +53,7 @@ $spc-error-light: rgba(253, 244, 244, 1);
 
 body {
   color: #333;
-  font-size: 0.9rem;
+  font-size: 0.9rem; // ~90% of base font size
   letter-spacing: 0.04em;
 }
 
@@ -136,7 +136,21 @@ a {
 }
 
 #about .col-12.col-lg-8 {
-  padding-top: 28px !important;   // aligns "interests/education" headings with name
+    padding-top: 12px !important;   // aligns "interests/education" headings with name
+    flex: 0 0 65%;
+    max-width: 65%;
+    .col-md-5 {
+      flex: 0 0 56%;
+      max-width: 56%;
+    }
+     .col-md-7 {
+      flex: 0 0 44%;
+      max-width: 44%;
+    }
+}
+#about .col-12.col-lg-4 {
+    flex: 0 0 35%;
+    max-width: 35%;
 }
 
 .network-icon li:hover {
