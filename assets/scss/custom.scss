@@ -135,23 +135,26 @@ a {
   color: #333;
 }
 
-#about .col-12.col-lg-8 {
+/* WIP: Playing with container sizes
+#about .col-12.col-lg-4 {           // Photo and name container
+    //flex: 0 0 content;
+    //min-width: 35%;
+}
+
+#about .col-12.col-lg-8 {           // About me container
     padding-top: 12px !important;   // aligns "interests/education" headings with name
-    flex: 0 0 65%;
-    max-width: 65%;
-    .col-md-5 {
-      flex: 0 0 56%;
+    //flex: 0 0 auto;
+    //min-width: 65% !important;
+    .col-md-5 {                     // Education sub-container
+      //flex: 0 0 56%;
       max-width: 56%;
     }
-     .col-md-7 {
-      flex: 0 0 44%;
-      max-width: 44%;
+     .col-md-7 {                    // Interests sub-container
+       //flex: 0 0 44%;
+       max-width: 44%;
     }
 }
-#about .col-12.col-lg-4 {
-    flex: 0 0 35%;
-    max-width: 35%;
-}
+*/
 
 .network-icon li:hover {
   transform: scale(1.05);
@@ -572,12 +575,18 @@ body.dark {
   .card {
   background: $spc-01dp;                        // text background for experience cards
     h4 a {
-      color: $spc-secondary;                        // text for card institution link
+      color: $spc-secondary-dark;                        // text for card institution link
       border-bottom: solid 1px transparent;
       &:hover {
-        color: $spc-secondary-dark !important;
+        color: $spc-secondary !important;
       }
     }
+  }
+  .experience .m-2 .border.exp-fill {           // timeline diagram for experience cards -- fill
+    background-color: $spc-secondary-dark !important;
+  }
+  .experience .m-2 .border, .experience .col.border-right {
+      border-color: $spc-secondary-dark !important;
   }
   .card-simple {
     background: $spc-01dp;                        // text background for post cards
