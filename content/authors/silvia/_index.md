@@ -24,13 +24,14 @@ interests:
 
 education:
   courses:
-  - certificate: RStudio Tidyverse Instructor Certification
+  - certificate: Tidyverse Instructor Certification
     institution: RStudio
-    url_institution: ""
+    links:
+      - url: https://education.rstudio.com/trainers/#intro
     year: 2020 (expected)
   - certificate: Certificate in Biomedical Informatics
     institution: University of Pennsylvania
-    url_institution: ""
+    url: https://www.med.upenn.edu/mbmi/certificate.html
     year: 2020
   - course: Ph.D. in Biomedical Engineering
     institution: Purdue University
