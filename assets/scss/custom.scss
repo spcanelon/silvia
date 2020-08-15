@@ -131,9 +131,15 @@ a {
 // ************************************************
 // HOME PAGE: _widgets.scss
 // ************************************************
-.portrait-title h2 {
+.portrait-title {
+  h2 {
   color: #333;
   font-size: 1.73em;
+  }
+  h3 {
+    font-size: 0.96rem;
+    font-weight: 300;
+  }
 }
 
 // WIP: Playing with Interests & Education sizes
