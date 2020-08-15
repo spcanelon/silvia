@@ -133,26 +133,39 @@ a {
 // ************************************************
 .portrait-title h2 {
   color: #333;
+  font-size: 1.73em;
 }
 
-/* WIP: Playing with container sizes
-#about .col-12.col-lg-4 {           // Photo and name container
-    //flex: 0 0 content;
-    //min-width: 35%;
+// WIP: Playing with Interests & Education sizes
+/*
+.col-12.col-lg-8 {                // About me container
+  padding-top: 12px !important;   // aligns "interests/education" headings with name
+  //flex: 0 0 auto;               // flex: -grow -shrink -basis
+  //min-width: 65% !important;
+  .row {
+    .col-md-5 {                     // Interests child-container
+    flex: 3 0 100%;
+    //max-width: 56%;
+    order: 1;
+    //flex: 2 2 0;
+    }
+    .col-md-7 {                     // Education child-container
+      //display: flex;
+      flex: 0 3 50%;
+      //max-width: 40%;
+      order:2;
+    }
+  }
 }
 
-#about .col-12.col-lg-8 {           // About me container
-    padding-top: 12px !important;   // aligns "interests/education" headings with name
-    //flex: 0 0 auto;
-    //min-width: 65% !important;
-    .col-md-5 {                     // Education sub-container
-      //flex: 0 0 56%;
-      max-width: 56%;
-    }
-     .col-md-7 {                    // Interests sub-container
-       //flex: 0 0 44%;
-       max-width: 44%;
-    }
+ul.ul-interests li {
+  padding: 0px 0px 4px 3px;
+}
+
+ul.ul-edu li {
+  position: relative;
+  //padding: 0px 15px 4px 3px;
+  padding: 0px 10px 5px 5px;
 }
 */
 
@@ -174,7 +187,7 @@ a {
     padding: 0;
   }
   .wg-pages .section-heading {
-    h1 {                         // erases the margin-bottomfor h1
+    h1 {                         // erases the margin-bottom for h1
       margin: 0 0 0 0;
     }
     p {                          // section subtitle
