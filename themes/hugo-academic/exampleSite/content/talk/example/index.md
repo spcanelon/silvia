@@ -1,5 +1,6 @@
 ---
 title: Example Talk
+draft: true
 event: Academic Theme Conference
 event_url: https://example.org
 
