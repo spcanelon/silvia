@@ -868,12 +868,9 @@ within advocacy in the form of promoting Vivitrol, which has disadvantages when 
 &lt;p&gt;I used &lt;strong&gt;R&lt;/strong&gt; to play around with &lt;strong&gt;webscraping&lt;/strong&gt; and create an &lt;a href=&#34;https://spcanelon.github.io/CCDSips2019.html/&#34;&gt;interactive map&lt;/a&gt; showing restaurants participating in Philly’s 2019 &lt;a href=&#34;https://centercityphila.org/explore-center-city/ccdsips&#34;&gt;Center City District Sips&lt;/a&gt;. Center City Sips is a series of summer Wednesday evenings filled with &lt;strong&gt;happy hour specials&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;This mini-project was motivated by two of my close friends’ frustration with the website shortcomings. &lt;strong&gt;The information was presented beautifully, but there was no map view&lt;/strong&gt;! This made it difficult to figure out what happy hours you could check out nearby.&lt;/p&gt;
 &lt;p&gt;The map pop-ups could use information on the specials for each restaurant, but my newly acquired skills with the &lt;code&gt;RSelenium&lt;/code&gt; and &lt;code&gt;Leaflet&lt;/code&gt; packages weren’t quite up to the task! &lt;strong&gt;Suggestions and advice are welcome!&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;I haven’t figured out how to fix the cute, but useless, baby &lt;code&gt;&amp;lt;iframe&amp;gt;&lt;/code&gt; below but the link button at the top of the post will take you to a full screen version.&lt;/p&gt;
-&lt;iframe src=&#34;https://spcanelon.github.io/CCDSips2019.html&#34;&gt;
-width= “1000px”
-height= “500px”
-style=“border:none”&amp;gt;
-&lt;/iframe&gt;
+&lt;div style=&#34;align: center; margin-left: -150px;&#34;&gt;
+&lt;iframe src=&#34;https://spcanelon.github.io/CCDSips2019.html&#34; width=&#34;1000px&#34; height=&#34;900px&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
 </description>
     </item>
     
