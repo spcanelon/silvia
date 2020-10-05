@@ -26,12 +26,12 @@ education:
   courses:
   - certificate: Tidyverse Instructor Certification
     institution: RStudio
-    certificate_url: https://education.rstudio.com/trainers/#intro
-    year: 2020 (expected)
+    certificate_url: https://education.rstudio.com/trainers/people/canelon+silvia/
+    year: 2020
   - certificate: Certificate in Biomedical Informatics
     institution: University of Pennsylvania
     certificate_url: https://www.med.upenn.edu/mbmi/certificate.html
-    year: 2020
+    year: 2019
   - course: Ph.D. in Biomedical Engineering
     institution: Purdue University
     year: 2018
@@ -61,4 +61,6 @@ user_groups:
 - Visitors
 ---
 
-**Hello, and welcome!** I'm a postdoctoral research scientist in the [Department of Biostatistics, Epidemiology, and Informatics](https://www.dbei.med.upenn.edu/) at the University of Pennsylvania Perelman School of Medicine. My research interests include applications of biomedical informatics in the public and population health fields. I work in the [Boland Lab](https://www.med.upenn.edu/bolandlab/) on projects that develop novel data mining methods to extract pregnancy-related information from Electronic Health Records (EHR) and study the relationship between environment and disease. I enjoy using [R](https://www.r-project.org/about.html) to optimize my research workflow and have noticed it making guest appearances elsewhere in my life. Keep up with my R tinkering in [posts](post) and my research interests in [publications](publication). **Thanks** for stopping by!
+**Hello, and welcome!** I'm a postdoctoral research scientist in the [Department of Biostatistics, Epidemiology, and Informatics](https://www.dbei.med.upenn.edu/) at the University of Pennsylvania Perelman School of Medicine. My research interests include applications of biomedical informatics in the public and population health fields. I work in the [Boland Lab](https://www.med.upenn.edu/bolandlab/) on projects that develop novel data mining methods to extract pregnancy-related information from Electronic Health Records (EHR) and study the relationship between environment and disease. Learn more about my research interests in [publications](publication).
+
+I enjoy using [R](https://www.r-project.org/about.html) to optimize my research workflow and have noticed it making guest appearances elsewhere in my life. I'm certified as an [RStudio Tidyverse Instructor](https://education.rstudio.com/trainers/people/canelon+silvia/) and am passionate about R education for the public good. Keep up with my R tinkering in [posts](post) and teaching in [talks](talk). **Thanks** for stopping by!
