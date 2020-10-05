@@ -18,37 +18,47 @@
   </url>
   
   <url>
+    <loc>/2020-10-05-rstudio-instructor-certification-tidyverse/</loc>
+    <lastmod>2020-10-05T13:55:03-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2020-10-05T13:55:03-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2020-10-05T13:55:03-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/r/</loc>
+    <lastmod>2020-10-05T13:55:03-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/r/</loc>
+    <lastmod>2020-10-05T13:55:03-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-10-05T13:55:03-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/tidyverse/</loc>
+    <lastmod>2020-10-05T13:55:03-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/talk/2020-08-31-tour-of-the-tidyverse/</loc>
     <lastmod>2020-08-31T17:40:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/</loc>
-    <lastmod>2020-08-31T17:40:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/r/</loc>
-    <lastmod>2020-08-31T17:40:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/r/</loc>
-    <lastmod>2020-08-31T17:40:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/talk/</loc>
-    <lastmod>2020-08-31T17:40:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-08-31T17:40:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/tidyverse/</loc>
     <lastmod>2020-08-31T17:40:00+00:00</lastmod>
   </url>
   
@@ -119,11 +129,6 @@
   
   <url>
     <loc>/2020-06-16-dark-theme-custom-with-atom/</loc>
-    <lastmod>2020-06-16T13:22:13-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
     <lastmod>2020-06-16T13:22:13-04:00</lastmod>
   </url>
   

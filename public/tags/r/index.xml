@@ -5,12 +5,30 @@
     <link>/tags/r/</link>
       <atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     <description>R</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Silvia Canelón, 2020</copyright><lastBuildDate>Mon, 31 Aug 2020 17:40:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Silvia Canelón, 2020</copyright><lastBuildDate>Mon, 05 Oct 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hud586b8bf8dfe31bebdd5c85bf61695a2_5299802_512x512_fill_lanczos_center_2.png</url>
       <title>R</title>
       <link>/tags/r/</link>
     </image>
+    
+    <item>
+      <title>Becoming certified as an RStudio Tidyverse Instructor</title>
+      <link>/2020-10-05-rstudio-instructor-certification-tidyverse/</link>
+      <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>/2020-10-05-rstudio-instructor-certification-tidyverse/</guid>
+      <description>
+
+
+&lt;div id=&#34;why-did-i-get-trained&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Why did I get trained?&lt;/h1&gt;
+&lt;p&gt;Teaching R was not something I thought I’d ever get into when I started using R for my postdoc position. I had taken programming courses as an undergraduate student and still found myself hiking up a learning curve. My learning came primarily from code chunks from coworkers, StackOverflow, and the as-needed browsing of &lt;a href=&#34;https://r4ds.had.co.nz/&#34;&gt;R for Data Science&lt;/a&gt;. This approach was &lt;em&gt;ok&lt;/em&gt; and served me to get where I needed to go for work projects, but it wasn’t methodical by any stretch of the imagination.&lt;/p&gt;
+&lt;p&gt;Meanwhile, &lt;a href=&#34;https://education.arcus.chop.edu/user-groups/&#34;&gt;CHOP R User group&lt;/a&gt; lunch-and-learns and &lt;a href=&#34;https://www.rladiesphilly.org/&#34;&gt;R-Ladies Philly&lt;/a&gt; meet-ups were showing me the robustness and versatility of R across disciplines and it quickly became clear there were very tangible ways I could use these skills to support a community organizing collective that I’m a part of. This would require teaching R to folks that don’t program and have very little, if any, experience handling data. I didn’t feel prepared to take this on knowing I had hiked down learning paths that I wouldn’t necessarily recommend to others.&lt;/p&gt;
+&lt;p&gt;Fast-forward and I can now say I feel prepared because the RStudio Instructor Training provided all the tools I need in order to take the next steps with my collective!&lt;/p&gt;
+&lt;p&gt;Read on to find out what I learned before I decided to pursue the certification, what the certification experience was like for me, and resources to support you in your own journey if you decide to take this path.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>An Antarctic Tour of the Tidyverse</title>
