@@ -5,7 +5,7 @@
     <link>/tags/r/</link>
       <atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     <description>R</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Silvia Canelón, 2020</copyright><lastBuildDate>Mon, 05 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Silvia Canelón, 2020</copyright><lastBuildDate>Tue, 06 Oct 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hud586b8bf8dfe31bebdd5c85bf61695a2_5299802_512x512_fill_lanczos_center_2.png</url>
       <title>R</title>
@@ -14,18 +14,117 @@
     
     <item>
       <title>Becoming certified as an RStudio Tidyverse Instructor</title>
-      <link>/2020-10-05-rstudio-instructor-certification-tidyverse/</link>
-      <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/2020-10-05-rstudio-instructor-certification-tidyverse/</guid>
+      <link>/2020-10-06-rstudio-instructor-certification-tidyverse/</link>
+      <pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>/2020-10-06-rstudio-instructor-certification-tidyverse/</guid>
       <description>
+&lt;script src=&#34;../../rmarkdown-libs/fitvids/fitvids.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;why-did-i-get-trained&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Why did I get trained?&lt;/h1&gt;
-&lt;p&gt;Teaching R was not something I thought I’d ever get into when I started using R for my postdoc position. I had taken programming courses as an undergraduate student and still found myself hiking up a learning curve. My learning came primarily from code chunks from coworkers, StackOverflow, and the as-needed browsing of &lt;a href=&#34;https://r4ds.had.co.nz/&#34;&gt;R for Data Science&lt;/a&gt;. This approach was &lt;em&gt;ok&lt;/em&gt; and served me to get where I needed to go for work projects, but it wasn’t methodical by any stretch of the imagination.&lt;/p&gt;
-&lt;p&gt;Meanwhile, &lt;a href=&#34;https://education.arcus.chop.edu/user-groups/&#34;&gt;CHOP R User group&lt;/a&gt; lunch-and-learns and &lt;a href=&#34;https://www.rladiesphilly.org/&#34;&gt;R-Ladies Philly&lt;/a&gt; meet-ups were showing me the robustness and versatility of R across disciplines and it quickly became clear there were very tangible ways I could use these skills to support a community organizing collective that I’m a part of. This would require teaching R to folks that don’t program and have very little, if any, experience handling data. I didn’t feel prepared to take this on knowing I had hiked down learning paths that I wouldn’t necessarily recommend to others.&lt;/p&gt;
-&lt;p&gt;Fast-forward and I can now say I feel prepared because the RStudio Instructor Training provided all the tools I need in order to take the next steps with my collective!&lt;/p&gt;
-&lt;p&gt;Read on to find out what I learned before I decided to pursue the certification, what the certification experience was like for me, and resources to support you in your own journey if you decide to take this path.&lt;/p&gt;
+&lt;p&gt;Teaching R was not something I thought I’d ever get into but a couple of reasons were nudging me towards getting some formal training.&lt;/p&gt;
+&lt;p&gt;I wanted to be able to…&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;…support my coworkers in their own data analysis projects and be better prepared to introduce R to undergraduate students coming through and hoping to apply learned skills elsewhere&lt;/li&gt;
+&lt;li&gt;…incorporate data analysis into the research efforts of my local organizing collective, and was feeling ill-equipped to lead our group. Most collective members have very little experience with data analysis, if any, and none have programming experience&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;After the RStudio Instructor training I can confidently say I feel prepared for both of these challenges!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;choose-your-own-adventure&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Choose your own adventure&lt;/h1&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Jump down to a &lt;a href=&#34;&#34;&gt;panel on the RStudio Certification&lt;/a&gt; hosted by the &lt;a href=&#34;https://twitter.com/miR_community&#34;&gt;MiR Community&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Jump down to a list of &lt;a href=&#34;teaching-exam-examples&#34;&gt;teaching exam examples&lt;/a&gt; and &lt;a href=&#34;tidyverse-sample-exam-solutions&#34;&gt;Tidyverse sample exam solutions&lt;/a&gt; made available by other instructors&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Keep reading&lt;/strong&gt; to find out what I learned before I decided to pursue the certification and what the certification experience was like for me.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;deciding-to-become-certified&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Deciding to become certified&lt;/h1&gt;
+&lt;div id=&#34;asking-around&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Asking around&lt;/h2&gt;
+&lt;p&gt;In the interest of making an informed decision, I asked a few instructors to share a bit about their experience with the certification process before I made the commitment.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🇺🇸 &lt;a href=&#34;https://education.rstudio.com/trainers/people/kadauke+stephan/&#34;&gt;Stephan Kadauke&lt;/a&gt; is a colleague I met through the Children’s Hospital of Philadelphia R User group. Specifically at an &lt;a href=&#34;https://alison.rbind.io/post/2020-06-02-tidymodels-virtually/&#34;&gt;Intro to Machine Learning with the Tidyverse&lt;/a&gt; workshop led by Alison Hill.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I met these wonderful people through the &lt;a href=&#34;https://twitter.com/RLadiesGlobal&#34;&gt;R-Ladies Global&lt;/a&gt; Slack workspace:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🇦🇷 &lt;a href=&#34;https://education.rstudio.com/trainers/people/bellini_saibene+yanina/&#34;&gt;Yanina Bellini Saibene&lt;/a&gt; shared her experience with this process in her blog post &lt;a href=&#34;https://yabellini.netlify.app/post/rstudiocertification/&#34;&gt;Obtaining RStudio certification. A shared path&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;🇳🇱 &lt;a href=&#34;https://education.rstudio.com/trainers/people/rojas-saunero+paloma/&#34;&gt;Paloma Rojas-Saunero&lt;/a&gt; shared her view as a Ph.D. candidate with experience teaching R in R-Ladies workshops and as a teaching assistant in biostatistics courses.&lt;/li&gt;
+&lt;li&gt;🇰🇪 &lt;a href=&#34;https://education.rstudio.com/trainers/people/kariuki+shelmith/&#34;&gt;Shelmith Kariuki&lt;/a&gt; speaks to her experience in her blog post &lt;a href=&#34;https://shelkariuki.netlify.app/post/certification/&#34;&gt;The RStudio Certification Process&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;heres-what-folks-had-to-say&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Here’s what folks had to say!&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Highlights are shared with the authors’ permission and my gratitude to them.&lt;/em&gt;&lt;/p&gt;
+&lt;div id=&#34;what-made-you-want-to-pursue-the-certification&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;1. What made you want to pursue the certification?&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;One, it gave me incentive to read &lt;a href=&#34;https://r4ds.had.co.nz/&#34;&gt;R for Data Science&lt;/a&gt; cover to cover which I had been meaning to do for a while. Two, I’m teaching R and the certification gives me some gravitas to do that. Three, it forced me to critically think about cognitive load theory, concept mapping, and lesson development, all of which are super useful when you actually have to develop lessons. &lt;strong&gt;–Stephan&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I pursued the certification for a few reasons. First because I am really enthusiastic about teaching and I love the tidyverse, so I wanted to find opportunities of teaching it outside my university. Second because I feel that RStudio is growing so fast on teaching materials that sharing with other instructors would be a great way to always keep updated. And last but not least, I was also encouraged by the idea of going through the process with Yanina Bellini Saibene and other amazing women as she discusses in her blog post. &lt;strong&gt;–Paloma&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-did-you-think-of-the-training-itself-particularly-the-pedagogical-aspects&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;2. What did you think of the training itself, particularly the pedagogical aspects?&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The training is top notch. In my mind, Greg Wilson is the #1 authority when it comes to teaching programming and R in particular. &lt;strong&gt;–Stephan&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I think the best part is to take and learn the pedagogical aspect. Greg Wilson is an awesome trainer and you will love as a student all the tools and techniques that he [teaches] you. For learning this, the course is already worth it. All the content is more developed in the book &lt;a href=&#34;teachtogether.tech/&#34;&gt;Teaching Tech Together&lt;/a&gt; by Greg Wilson if you want to look [it] over. &lt;strong&gt;–Yanina&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;About the training, it was mind blowing, it changed my view of teaching not only programming but everything. Greg’s book is amazing and the way he teaches is outstanding. I learned so much. &lt;strong&gt;–Paloma&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div id=&#34;have-you-been-able-to-implement-what-you-learned-in-some-way-either-at-work-or-elsewhere&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;3. Have you been able to implement what you learned in some way either at work or elsewhere?&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Yes! As you probably saw, I’m teaching the intro to R course for &lt;a href=&#34;https://www.youtube.com/playlist?list=PL4IzsxWztPdljYo7uE5G_R2PtYw3fUReo&#34;&gt;R/Medicine&lt;/a&gt;. And I’ve been teaching a similar course to doctors, in addition to some other teaching sessions that I’ve done for the CHOP R User group and/or medical resident teaching. &lt;strong&gt;–Stephan&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Yes! Immediately. I delivered 3 in-person courses after training and more than 15 courses on-line using all the pedagogical tools. I also co-founded &lt;a href=&#34;https://metadocencia.netlify.app/en/&#34;&gt;Metadocencia&lt;/a&gt; where we share practical tools to help teachers teach online (volunteer-run and free) using these principles learned in the training. I also use some of the tools for my work as the chief of a research group for some meetings and identifying the target of some of our development (especially concept maps and learner personas). &lt;strong&gt;–Yanina&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;attending-the-mir-panel&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Attending the MiR panel&lt;/h2&gt;
+&lt;p&gt;If you read the questions and responses above you might have noticed one character in this story that I haven’t introduced yet. His name is &lt;strong&gt;&lt;a href=&#34;https://twitter.com/gvwilson&#34;&gt;Greg Wilson&lt;/a&gt;&lt;/strong&gt;. I tend to take such strong endorsements with a spoonful of skepticism and (spoiler alert) I’m happy to say I &lt;strong&gt;fully&lt;/strong&gt; agree with everything that was said above. In that spirit, I’ll add my own glowing recommendation:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Greg Wilson is truly a programming pedagogy expert, as well as an incredibly kind human being, and I’m grateful to have learned from him.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Nevertheless, I’m glad I got to do a gut-check beforehand when I attended the &lt;a href=&#34;https://www.youtube.com/watch?v=582tMkPvloU&#34;&gt;RStudio Instructor Certification Panel&lt;/a&gt; hosted by the MiR Community and facilitated by &lt;a href=&#34;https://twitter.com/Dorris_Scott&#34;&gt;Dorris Scott&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/smallperks&#34;&gt;Danielle Smalls-Perkins&lt;/a&gt;. You’ll notice Yanina and Shelmith were two of the panelists! Hearing from this panel was the last piece of the puzzle I needed to feel like pursuing the certification was an &lt;strong&gt;enthusiastic yes&lt;/strong&gt;:&lt;/p&gt;
+&lt;iframe style=&#34;display: block; margin: auto;&#34; width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/582tMkPvloU&#34; frameborder=&#34;0&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;training-on-programming-pedagogy&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Training on programming pedagogy&lt;/h1&gt;
+&lt;p&gt;The s&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;preparing-for-my-exams&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Preparing for my exams&lt;/h1&gt;
+&lt;div id=&#34;teaching-exam&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Teaching exam&lt;/h2&gt;
+&lt;div class=&#34;shareagain&#34; style=&#34;min-width:300px;margin:1em auto;&#34;&gt;
+&lt;iframe src=&#34;https://spcanelon.github.io/rit-teaching-exam&#34; width=&#34;1600&#34; height=&#34;900&#34; style=&#34;border:2px solid currentColor;&#34; loading=&#34;lazy&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;script&gt;fitvids(&#39;.shareagain&#39;, {players: &#39;iframe&#39;});&lt;/script&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tidyverse-exam&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Tidyverse exam&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;additional-resources&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Additional resources&lt;/h1&gt;
+&lt;div id=&#34;teaching-exam-examples&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Teaching exam examples&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tidyverse-sample-exam-solutions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Tidyverse sample exam solutions&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/marlycormar/tidyverse_sample_exam&#34; class=&#34;uri&#34;&gt;https://github.com/marlycormar/tidyverse_sample_exam&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>
