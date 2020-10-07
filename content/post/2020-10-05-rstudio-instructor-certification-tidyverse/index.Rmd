@@ -8,15 +8,15 @@ tags:
   - r
   - tidyverse
 slug: rstudio-instructor-certification-tidyverse
-subtitle: An overview of the RStudio Instructor certification process and collection
+subtitle: An overview of the [RStudio Instructor certification](https://education.rstudio.com/trainers/#info) process and collection
   of resources to support anyone on the certification journey.
-summary: An overview of the RStudio Instructor certification process and collection
+summary: An overview of the [RStudio Instructor certification](https://education.rstudio.com/trainers/#info) process and collection
   of resources to support anyone on the certification journey.
 lastmod: '2020-10-05T13:55:03-04:00'
 featured: yes
 draft: yes
 image:
-  caption: ''
+  caption: '[Screenshot from the RStudio Instructor Training slides (RStudio Education)](https://docs.google.com/presentation/d/1aOnX-B9XlAzkrlIeZa5db3_X2Dk8cS27k3klvPn1SQI/edit#slide=id.g39e398e252_0_14)'
   focal_point: ''
   preview_only: no
 ---
@@ -85,13 +85,23 @@ Nevertheless, I'm glad I got to do a gut-check beforehand when I attended the [R
 
 <iframe style="display: block; margin: auto;" width="560" height="315" src="https://www.youtube.com/embed/582tMkPvloU" frameborder="0" allowfullscreen></iframe>
 
-# Training on programming pedagogy
+# Training on pedagogy
 
-The s
+The certification itself has three components:
 
-# Preparing for my exams
+1. **Instructor training covering modern teaching methods**. Materials for this training are [available here](https://drive.google.com/drive/folders/13ohFt3D0EJ5PDbMaWTxnHH-hwA7G0IvY) and are based on the book [Teaching Tech Together](https://teachtogether.tech/) written by Greg (and currently undergoing translation into Spanish by a team of volunteers!).
+
+2. A 90-minute **teaching exam** based on content from the instructor training. This includes a 15-minute demonstration lesson and a written component.
+
+3. A 90-minute **Tidyverse exam** to test your knowledge of the subject matter in [R for Data Science](https://r4ds.had.co.nz/) (make sure to check the [program FAQs](https://education.rstudio.com/trainers/#faq) for information about the Shiny exam)
+
+# Preparing for the exams
 
 ## Teaching exam
+
+I relied on the [instructor training materials](https://drive.google.com/drive/folders/13ohFt3D0EJ5PDbMaWTxnHH-hwA7G0IvY) and my in-class notes to prepare my demonstration lesson and study for the written component of the teaching exam. For anything that didn't fully sink in, I consulted [Teaching Tech Together](https://teachtogether.tech/).
+
+You can find [all materials for my teaching demonstration](https://github.com/spcanelon/rit-teaching-exam) on GitHub. They include the slides below and [this R Markdown file](https://github.com/spcanelon/rit-teaching-exam/blob/master/lubridate_livecode.Rmd) that I to incorporate live coding into the lesson.
 
 ```{r setup, include=FALSE}
 library(xaringanExtra)
