@@ -125,7 +125,7 @@ Overall it was an experience that made me reflect a lot on how teaching is usual
 &lt;/div&gt;
 &lt;div id=&#34;learning-the-pedagogy&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Learning the pedagogy&lt;/h1&gt;
-&lt;p&gt;When I completed the instructor training on pedagogy it took place completely online over three days. The first two days were dedicated to the materials linked in the earlier section and were taught by Greg Wilson. Despite the training starting at 7am for me, I &lt;em&gt;really&lt;/em&gt; enjoyed it! There were 12 of us in the cohort and there were a handful of opportunities for us to do activities in small groups and multiple opportunities to practice the teaching tools that will help us better support R learners in our own teaching.&lt;/p&gt;
+&lt;p&gt;When I completed the instructor training on pedagogy it took place completely online over three days. The first two days were dedicated to the materials linked in the earlier section and were taught by Greg. Despite the training starting at 7am for me, I &lt;em&gt;really&lt;/em&gt; enjoyed it! There were 12 of us in the cohort and there were a handful of opportunities for us to do activities in small groups and multiple opportunities to practice the teaching tools that will help us better support R learners in our own teaching.&lt;/p&gt;
 &lt;p&gt;Some of my favorite topics were mental models, cognitive capacity, and formative assessments. At the heart of all three is the concept map, which serves as a guide for reverse-designing a lesson and delivering it effectively. You can find examples of concept maps &lt;a href=&#34;https://docs.google.com/presentation/d/1ForBjP0pVhljBLuqOyYfyHw_1rrwJzpWW1ZHzCqAJpU/edit?ts=5f10c02e#slide=id.p&#34;&gt;here as slides&lt;/a&gt; and &lt;a href=&#34;https://github.com/rstudio/concept-maps/&#34;&gt;here on GitHub&lt;/a&gt;. I’ve found concept maps to come in handy in so many other places in my life and I even made one to help me plan out this blog post. Check it out:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;RIT-post-concept-map.jpg&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;The third day of training, our cohort had the pleasure of learning all about using the &lt;a href=&#34;https://rstudio.github.io/learnr/&#34;&gt;&lt;code&gt;learnr&lt;/code&gt; 📦&lt;/a&gt; to build interactive R tutorials, from &lt;a href=&#34;https://education.rstudio.com/trainers/people/cetinkaya-rundel+mine/&#34;&gt;Mine Çetinkaya-Rundel&lt;/a&gt;:&lt;/p&gt;
@@ -181,15 +181,17 @@ Overall it was an experience that made me reflect a lot on how teaching is usual
 &lt;li&gt;&lt;a href=&#34;https://spcanelon.github.io/rit-teaching-exam&#34;&gt;Lesson slides: Using lubridate to work with time intervals&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/spcanelon/rit-teaching-exam&#34;&gt;GitHub repo&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Florencia D’Andrea
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://flor14.github.io/purrr_slides/purrr_class_15min#1&#34;&gt;Lesson slides: Iteration with purrr package for automatized file management&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://florencia.netlify.app/2020/06/two-examples-of-iteration-with-purrr.en-us/&#34;&gt;Blog post: Two examples of iteration with purrr - Class for the RStudio certification&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Yanina Bellini Saibene
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://docs.google.com/document/d/1Z8zhRjK7tQ-VcOUMnOmxKNb2Ra_3DKsvMzo1iGeIt0I/edit&#34;&gt;Lesson materials: Concept map and formative assessments&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://docs.google.com/presentation/d/1Uzb5sHM54_t6NWLSDely6fCi8Nu4qhCT-qxMKY-vh78/edit#slide=id.p&#34;&gt;Lesson slides: Código en R Markdown&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/yabellini/RStudioCT&#34;&gt;GitHub repo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Florencia D’Andrea
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://flor14.github.io/purrr_slides/purrr_class_15min#1&#34;&gt;Lesson slides: Iteration with purrr package for automatized file management&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://florencia.netlify.app/2020/06/two-examples-of-iteration-with-purrr.en-us/&#34;&gt;Blog post: Two examples of iteration with purrr - Class for the RStudio certification&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/flor14?tab=repositories&amp;amp;q=purrr_&amp;amp;type=&amp;amp;language=&#34;&gt;GitHub repo&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Beatriz Milz
 &lt;ul&gt;
@@ -205,6 +207,7 @@ Overall it was an experience that made me reflect a lot on how teaching is usual
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://columnwise-operations-dplyr.netlify.app/&#34;&gt;Lesson slides: Column-wise operations with dplyr: Old and New&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://bcullen.rbind.io/post/2020-09-03-reflections-on-rstudio-instructor-training/&#34;&gt;Blog post: Reflections on RStudio Instructor Training&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/brendanhcullen/rstudio-instructor-certification&#34;&gt;GitHub repo&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Adi Sarid
 &lt;ul&gt;
