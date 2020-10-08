@@ -115,7 +115,7 @@ The certification itself has three components:
 
 # Learning the pedagogy
 
-When I completed the instructor training on pedagogy it took place completely online over three days. The first two days were dedicated to the materials linked in the earlier section and were taught by Greg Wilson. Despite the training starting at 7am for me, I _really_ enjoyed it! There were 12 of us in the cohort and there were a handful of opportunities for us to do activities in small groups and multiple opportunities to practice the teaching tools that will help us better support R learners in our own teaching.
+When I completed the instructor training on pedagogy it took place completely online over three days. The first two days were dedicated to the materials linked in the earlier section and were taught by Greg. Despite the training starting at 7am for me, I _really_ enjoyed it! There were 12 of us in the cohort and there were a handful of opportunities for us to do activities in small groups and multiple opportunities to practice the teaching tools that will help us better support R learners in our own teaching.
 
 Some of my favorite topics were mental models, cognitive capacity, and formative assessments. At the heart of all three is the concept map, which serves as a guide for reverse-designing a lesson and delivering it effectively. You can find examples of concept maps [here as slides](https://docs.google.com/presentation/d/1ForBjP0pVhljBLuqOyYfyHw_1rrwJzpWW1ZHzCqAJpU/edit?ts=5f10c02e#slide=id.p) and [here on GitHub](https://github.com/rstudio/concept-maps/). I've found concept maps to come in handy in so many other places in my life and I even made one to help me plan out this blog post. Check it out:
 
@@ -178,12 +178,14 @@ If you're a member of the MiR Community and like the idea of studying with some 
 - Silvia Canelón 
   - [Lesson slides: Using lubridate to work with time intervals](https://spcanelon.github.io/rit-teaching-exam)
   - [GitHub repo](https://github.com/spcanelon/rit-teaching-exam)
-- Florencia D'Andrea
-  - [Lesson slides: Iteration with purrr package for automatized file management](https://flor14.github.io/purrr_slides/purrr_class_15min#1)
-  - [Blog post: Two examples of iteration with purrr - Class for the RStudio certification](https://florencia.netlify.app/2020/06/two-examples-of-iteration-with-purrr.en-us/)
 - Yanina Bellini Saibene
   - [Lesson materials: Concept map and formative assessments](https://docs.google.com/document/d/1Z8zhRjK7tQ-VcOUMnOmxKNb2Ra_3DKsvMzo1iGeIt0I/edit)
   - [Lesson slides: Código en R Markdown](https://docs.google.com/presentation/d/1Uzb5sHM54_t6NWLSDely6fCi8Nu4qhCT-qxMKY-vh78/edit#slide=id.p)
+  - [GitHub repo](https://github.com/yabellini/RStudioCT)
+- Florencia D'Andrea
+  - [Lesson slides: Iteration with purrr package for automatized file management](https://flor14.github.io/purrr_slides/purrr_class_15min#1)
+  - [Blog post: Two examples of iteration with purrr - Class for the RStudio certification](https://florencia.netlify.app/2020/06/two-examples-of-iteration-with-purrr.en-us/)
+  - [GitHub repo](https://github.com/flor14?tab=repositories&q=purrr_&type=&language=)
 - Beatriz Milz
   - [Lesson slides: Adding figures in R Markdown](https://beatrizmilz.github.io/RStudio_Certification)
   - [GitHub repo](https://github.com/beatrizmilz/RStudio_Certification)
@@ -193,6 +195,7 @@ If you're a member of the MiR Community and like the idea of studying with some 
 - Brendan Cullen
   - [Lesson slides: Column-wise operations with dplyr: Old and New](https://columnwise-operations-dplyr.netlify.app/)
   - [Blog post: Reflections on RStudio Instructor Training](https://bcullen.rbind.io/post/2020-09-03-reflections-on-rstudio-instructor-training/)
+  - [GitHub repo](https://github.com/brendanhcullen/rstudio-instructor-certification)
 - Adi Sarid 
   - [GitHub repo: Exercise on purrr](https://github.com/adisarid/rstudio_certification_exam)
 - David John Baker
