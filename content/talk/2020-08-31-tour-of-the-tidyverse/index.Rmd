@@ -19,7 +19,8 @@ date_end: '2020-08-31T19:40:00Z'
 all_day: no
 publishDate: '2020-09-01'
 featured: yes
-image:
+image: 
+  url: https://nhsrcommunity.com/wp-content/uploads/2018/02/logo.png
   caption: ''
   focal_point: 'center'
   preview_only: no
