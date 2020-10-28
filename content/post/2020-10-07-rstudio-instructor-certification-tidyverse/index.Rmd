@@ -190,8 +190,8 @@ If you're a member of the MiR Community and like the idea of studying with some 
   - [Lesson slides: Adding figures in R Markdown](https://beatrizmilz.github.io/RStudio_Certification)
   - [GitHub repo](https://github.com/beatrizmilz/RStudio_Certification)
 - Laurie Baker
-  - [Lesson slides](https://LaurieBaker.github.io/r-studio-instructor-training/slides/lubridate_slides.html)
-  - [GitHub repo](https://github.com/LaurieLBaker/r-studio-instructor-training)
+  - [Lesson slides](https://laurielbaker.github.io/r-studio-instructor-training/slides/lubridate_slides.html#1)
+  - [GitHub repo](https://github.com/LaurieLBaker/r-studio-instructor-training#rstudio-instructor-certification-teaching-exam)
 - Corrado Lanera
   - [Lesson slides: (Meta)data texting in {ggplot2}](https://corradolanera.github.io/rs-teaching-exam/)
   - [GitHub repo](https://github.com/CorradoLanera/rs-teaching-exam)
