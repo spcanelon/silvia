@@ -210,3 +210,4 @@ If you're a member of the MiR Community and like the idea of studying with some 
 - Silvia Canelón -- [August 2020 sample exam (v2.0)](tidyverse-sample-exam-solutions.html)
 - Marly Gotti -- [February 2020 sample exam (v1.0)](https://marlycormar.github.io/tidyverse_sample_exam/sample_exam_sols/sols.html)
 - Brendan Cullen -- [August 2020 sample exam (v2.0)](https://tidyverse-exam-v2-solutions.netlify.app/)
+- Ezekiel Adebayo Ogundepo -- [August 2020 sample exam (v2.0)](https://rpubs.com/gbganalyst/tidyverse-sample-exam)
