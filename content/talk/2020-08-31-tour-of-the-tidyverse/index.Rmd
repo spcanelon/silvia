@@ -28,7 +28,7 @@ links:
 - icon: images
   icon_pack: fas
   name: slides
-  url: "https://spcanelon.github.io/2020-rladies-chi-tidyverse"
+  url: "https://spcanelon.github.io/tour-of-the-tidyverse"
 - icon: play-circle
   icon_pack: fas
   name: video
@@ -36,7 +36,7 @@ links:
 - icon: github
   icon_pack: fab
   name: materials
-  url: "https://github.com/spcanelon/2020-rladies-chi-tidyverse"
+  url: "https://github.com/spcanelon/tour-of-the-tidyverse#an-antarctic-tour-of-the-tidyverse"
 ---
 
 ```{r setup, include=FALSE}
@@ -45,6 +45,6 @@ library(xaringanExtra)
 
 ```{r echo=FALSE}
 xaringanExtra::embed_xaringan(
-  url = "https://spcanelon.github.io/2020-rladies-chi-tidyverse",
+  url = "https://spcanelon.github.io/tour-of-the-tidyverse",
   ratio = "16:9")
 ```
