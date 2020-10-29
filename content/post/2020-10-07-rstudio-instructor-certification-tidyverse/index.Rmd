@@ -147,7 +147,7 @@ library(xaringanExtra)
 ```{r echo=FALSE}
 xaringanExtra::embed_xaringan(
   url = "https://spcanelon.github.io/rit-teaching-exam",
-  ratio = "16:9")
+  ratio = "4:3")
 ```
 
 ## Tidyverse exam
