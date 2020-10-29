@@ -46,5 +46,5 @@ library(xaringanExtra)
 ```{r echo=FALSE}
 xaringanExtra::embed_xaringan(
   url = "https://spcanelon.github.io/tour-of-the-tidyverse",
-  ratio = "4:3")
+  ratio = "16:9")
 ```
