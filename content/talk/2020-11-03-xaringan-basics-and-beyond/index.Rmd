@@ -49,5 +49,3 @@ url_video: ~
 slides: ''
 projects: []
 ---
-
-![](nhsr-logo.png)
