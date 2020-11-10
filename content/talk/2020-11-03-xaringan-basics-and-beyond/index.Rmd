@@ -1,5 +1,5 @@
 ---
-title: 'Sharing Your Work with Xaringan: The Basics and Beyond'
+title: 'Sharing Your Work with xaringan: The Basics and Beyond'
 subtitle: An introduction to xaringan for presentations, created for the [NHS-R Community](https://nhsrcommunity.com/about/) [2020 Virtual Conference](https://nhsrcommunity.com/nhsr-conference-2020/)
 summary: An introduction to xaringan for presentations, created for the [NHS-R Community](https://nhsrcommunity.com/about/) [2020 Virtual Conference](https://nhsrcommunity.com/nhsr-conference-2020/)
 author: silvia
