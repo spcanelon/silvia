@@ -26,13 +26,13 @@ publishDate: '2020-10-20'
 authors: []
 featured: yes
 image:
-  caption: "[NHS-R Community](https://nhsrcommunity.com/about)"
+  caption: "[xaringan Workshop](https://bit.ly/xaringan-nhsr)"
   focal_point: center
   preview_only: no
 links:
 - icon: book-open
   icon_pack: fas
-  name: course site
+  name: workshop site
   url: "https://spcanelon.github.io/xaringan-basics-and-beyond"
 - icon: calendar-check
   icon_pack: fas
@@ -49,3 +49,5 @@ url_video: ~
 slides: ''
 projects: []
 ---
+
+![](nhsr-logo.png)
