@@ -3,377 +3,382 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/courses/example/example1/</loc>
+    <loc>https://silvia.rbind.io/courses/example/example1/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/example/</loc>
+    <loc>https://silvia.rbind.io/courses/example/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/example/example2/</loc>
+    <loc>https://silvia.rbind.io/courses/example/example2/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/2020-10-07-rstudio-instructor-certification-tidyverse/</loc>
+    <loc>https://silvia.rbind.io/categories/</loc>
+    <lastmod>2020-11-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://silvia.rbind.io/categories/r/</loc>
+    <lastmod>2020-11-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://silvia.rbind.io/talk/</loc>
+    <lastmod>2020-11-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://silvia.rbind.io/talk/xaringan-basics-and-beyond/</loc>
+    <lastmod>2020-11-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://silvia.rbind.io/tags/</loc>
+    <lastmod>2020-11-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://silvia.rbind.io/tags/xaringan/</loc>
+    <lastmod>2020-11-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://silvia.rbind.io/2020-10-07-rstudio-instructor-certification-tidyverse/</loc>
     <lastmod>2020-10-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://silvia.rbind.io/post/</loc>
     <lastmod>2020-10-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/</loc>
+    <loc>https://silvia.rbind.io/tags/r/</loc>
     <lastmod>2020-10-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/r/</loc>
+    <loc>https://silvia.rbind.io/tags/tidyverse/</loc>
     <lastmod>2020-10-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/r/</loc>
-    <lastmod>2020-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/tidyverse/</loc>
-    <lastmod>2020-10-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/talk/2020-08-31-tour-of-the-tidyverse/</loc>
+    <loc>https://silvia.rbind.io/talk/2020-08-31-tour-of-the-tidyverse/</loc>
     <lastmod>2020-08-31T17:40:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/talk/</loc>
-    <lastmod>2020-08-31T17:40:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication_types/3/</loc>
+    <loc>https://silvia.rbind.io/publication_types/3/</loc>
     <lastmod>2020-08-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/algorithm/</loc>
+    <loc>https://silvia.rbind.io/tags/algorithm/</loc>
     <lastmod>2020-08-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/</loc>
+    <loc>https://silvia.rbind.io/authors/</loc>
     <lastmod>2020-08-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/preprint-delivery-episode-algorithm-maddie/</loc>
+    <loc>https://silvia.rbind.io/publication/preprint-delivery-episode-algorithm-maddie/</loc>
     <lastmod>2020-08-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/heather-h.-burris/</loc>
+    <loc>https://silvia.rbind.io/authors/heather-h.-burris/</loc>
     <lastmod>2020-08-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/lisa-d.-levine/</loc>
+    <loc>https://silvia.rbind.io/authors/lisa-d.-levine/</loc>
     <lastmod>2020-08-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/mary-regina-boland/</loc>
+    <loc>https://silvia.rbind.io/authors/mary-regina-boland/</loc>
     <lastmod>2020-08-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/pregnancy/</loc>
+    <loc>https://silvia.rbind.io/tags/pregnancy/</loc>
     <lastmod>2020-08-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication_types/</loc>
+    <loc>https://silvia.rbind.io/publication_types/</loc>
     <lastmod>2020-08-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/</loc>
+    <loc>https://silvia.rbind.io/publication/</loc>
     <lastmod>2020-08-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/silvia/</loc>
+    <loc>https://silvia.rbind.io/authors/silvia/</loc>
     <lastmod>2020-08-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/atom/</loc>
+    <loc>https://silvia.rbind.io/tags/atom/</loc>
     <lastmod>2020-06-16T13:22:13-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/blogdown/</loc>
+    <loc>https://silvia.rbind.io/tags/blogdown/</loc>
     <lastmod>2020-06-16T13:22:13-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/2020-06-16-dark-theme-custom-with-atom/</loc>
+    <loc>https://silvia.rbind.io/2020-06-16-dark-theme-custom-with-atom/</loc>
     <lastmod>2020-06-16T13:22:13-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/scss/</loc>
+    <loc>https://silvia.rbind.io/tags/scss/</loc>
     <lastmod>2020-06-16T13:22:13-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/website/</loc>
+    <loc>https://silvia.rbind.io/categories/website/</loc>
     <lastmod>2020-06-16T13:22:13-04:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/json/</loc>
+    <loc>https://silvia.rbind.io/tags/json/</loc>
     <lastmod>2020-05-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/2020-05-12-trello-to-airtable/</loc>
+    <loc>https://silvia.rbind.io/2020-05-12-trello-to-airtable/</loc>
     <lastmod>2020-05-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/r-minis/</loc>
+    <loc>https://silvia.rbind.io/categories/r-minis/</loc>
     <lastmod>2020-05-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/covid-19/</loc>
+    <loc>https://silvia.rbind.io/tags/covid-19/</loc>
     <lastmod>2020-05-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/preprint-hydroxychloroquine-pregnancy/</loc>
+    <loc>https://silvia.rbind.io/publication/preprint-hydroxychloroquine-pregnancy/</loc>
     <lastmod>2020-05-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/lena-m.-davidson/</loc>
+    <loc>https://silvia.rbind.io/authors/lena-m.-davidson/</loc>
     <lastmod>2020-05-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/medications/</loc>
+    <loc>https://silvia.rbind.io/tags/medications/</loc>
     <lastmod>2020-05-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication_types/4/</loc>
+    <loc>https://silvia.rbind.io/publication_types/4/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/adnette-kamugisha/</loc>
+    <loc>https://silvia.rbind.io/authors/adnette-kamugisha/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/alyssa-hernandez/</loc>
+    <loc>https://silvia.rbind.io/authors/alyssa-hernandez/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/ben-miller/</loc>
+    <loc>https://silvia.rbind.io/authors/ben-miller/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/catherine-weiss/</loc>
+    <loc>https://silvia.rbind.io/authors/catherine-weiss/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/data-hack/</loc>
+    <loc>https://silvia.rbind.io/tags/data-hack/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/jessica-streeter/</loc>
+    <loc>https://silvia.rbind.io/authors/jessica-streeter/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/laura-mullin/</loc>
+    <loc>https://silvia.rbind.io/authors/laura-mullin/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/opioid/</loc>
+    <loc>https://silvia.rbind.io/tags/opioid/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/pete-arriaza/</loc>
+    <loc>https://silvia.rbind.io/authors/pete-arriaza/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/selah-lynch/</loc>
+    <loc>https://silvia.rbind.io/authors/selah-lynch/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/spriha-jha/</loc>
+    <loc>https://silvia.rbind.io/authors/spriha-jha/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/vince-giorno/</loc>
+    <loc>https://silvia.rbind.io/authors/vince-giorno/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/data-hack-opiod/</loc>
+    <loc>https://silvia.rbind.io/publication/data-hack-opiod/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication_types/2/</loc>
+    <loc>https://silvia.rbind.io/publication_types/2/</loc>
     <lastmod>2020-03-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/climate-change-menarche/</loc>
+    <loc>https://silvia.rbind.io/publication/climate-change-menarche/</loc>
     <lastmod>2020-03-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/climate-change/</loc>
+    <loc>https://silvia.rbind.io/tags/climate-change/</loc>
     <lastmod>2020-03-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/menstruation/</loc>
+    <loc>https://silvia.rbind.io/tags/menstruation/</loc>
     <lastmod>2020-03-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication_types/0/</loc>
+    <loc>https://silvia.rbind.io/publication_types/0/</loc>
     <lastmod>2019-11-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/amia/</loc>
+    <loc>https://silvia.rbind.io/tags/amia/</loc>
     <lastmod>2019-11-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/amia-annual-symposium/</loc>
+    <loc>https://silvia.rbind.io/publication/amia-annual-symposium/</loc>
     <lastmod>2019-11-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/poster/</loc>
+    <loc>https://silvia.rbind.io/tags/poster/</loc>
     <lastmod>2019-11-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication_types/1/</loc>
+    <loc>https://silvia.rbind.io/publication_types/1/</loc>
     <lastmod>2019-09-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/joseph-m.-wallace/</loc>
+    <loc>https://silvia.rbind.io/authors/joseph-m.-wallace/</loc>
     <lastmod>2019-09-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/bapn-substrate-strain/</loc>
+    <loc>https://silvia.rbind.io/publication/bapn-substrate-strain/</loc>
     <lastmod>2019-09-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/mapping/</loc>
+    <loc>https://silvia.rbind.io/tags/mapping/</loc>
     <lastmod>2019-08-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/2019-08-04-ccd-sips/</loc>
+    <loc>https://silvia.rbind.io/2019-08-04-ccd-sips/</loc>
     <lastmod>2019-08-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/</loc>
+    <loc>https://silvia.rbind.io/courses/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/slides/</loc>
+    <loc>https://silvia.rbind.io/slides/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/slides/example/</loc>
+    <loc>https://silvia.rbind.io/slides/example/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/license/</loc>
+    <loc>https://silvia.rbind.io/license/</loc>
     <lastmod>2018-06-28T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>https://silvia.rbind.io/</loc>
     <lastmod>2018-06-28T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/terms/</loc>
-    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/dissertation/</loc>
+    <loc>https://silvia.rbind.io/publication/dissertation/</loc>
     <lastmod>2018-05-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/bapn-morphology/</loc>
+    <loc>https://silvia.rbind.io/publication/bapn-morphology/</loc>
     <lastmod>2016-11-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/deep-learning/</loc>
+    <loc>https://silvia.rbind.io/tags/deep-learning/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/demo/</loc>
+    <loc>https://silvia.rbind.io/tags/demo/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/project/external-project/</loc>
+    <loc>https://silvia.rbind.io/project/external-project/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/project/internal-project/</loc>
+    <loc>https://silvia.rbind.io/project/internal-project/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/project/</loc>
+    <loc>https://silvia.rbind.io/project/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url>
   

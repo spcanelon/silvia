@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>0 | Silvia Canelón</title>
+    <link>https://silvia.rbind.io/publication_types/0/</link>
+      <atom:link href="https://silvia.rbind.io/publication_types/0/index.xml" rel="self" type="application/rss+xml" />
+    <description>0</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Silvia Canelón, 2020</copyright><lastBuildDate>Wed, 20 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://silvia.rbind.io/images/icon_hud586b8bf8dfe31bebdd5c85bf61695a2_5299802_512x512_fill_lanczos_center_2.png</url>
+      <title>0</title>
+      <link>https://silvia.rbind.io/publication_types/0/</link>
+    </image>
+    
+    <item>
+      <title>Investigating Pregnancy-Related Health Outcomes Among Patients with Sickle Cell Disease and Linking with Health Disparities</title>
+      <link>https://silvia.rbind.io/publication/amia-annual-symposium/</link>
+      <pubDate>Wed, 20 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>https://silvia.rbind.io/publication/amia-annual-symposium/</guid>
+      <description>
+
+
+&lt;p&gt;Poster presented at the 2019 American Medical Informatics Association Annual Symposium held November 16th-20th in Washington D.C.&lt;/p&gt;
+&lt;iframe src=&#34;./2019_AMIA_annual_symposium.pdf&#34; width=&#34;100%&#34; height=&#34;950px&#34; style=&#34;border:none;&#34;&gt;
+&lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Characterization of Type I Collagen and Osteoblast Response to Mechanical Loading</title>
+      <link>https://silvia.rbind.io/publication/dissertation/</link>
+      <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
+      <guid>https://silvia.rbind.io/publication/dissertation/</guid>
+      <description>
+
+
+
+</description>
+    </item>
+    
+  </channel>
+</rss>

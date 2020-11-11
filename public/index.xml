@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Silvia Canelón</title>
-    <link>/</link>
-      <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://silvia.rbind.io/</link>
+      <atom:link href="https://silvia.rbind.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Silvia Canelón</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Silvia Canelón, 2020</copyright><lastBuildDate>Thu, 28 Jun 2018 00:00:00 +0100</lastBuildDate>
     <image>
-      <url>/images/icon_hud586b8bf8dfe31bebdd5c85bf61695a2_5299802_512x512_fill_lanczos_center_2.png</url>
+      <url>https://silvia.rbind.io/images/icon_hud586b8bf8dfe31bebdd5c85bf61695a2_5299802_512x512_fill_lanczos_center_2.png</url>
       <title>Silvia Canelón</title>
-      <link>/</link>
+      <link>https://silvia.rbind.io/</link>
     </image>
     
     <item>
       <title>Example Page 1</title>
-      <link>/courses/example/example1/</link>
+      <link>https://silvia.rbind.io/courses/example/example1/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/courses/example/example1/</guid>
+      <guid>https://silvia.rbind.io/courses/example/example1/</guid>
       <description>&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
 &lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
@@ -35,9 +35,9 @@
     
     <item>
       <title>Example Page 2</title>
-      <link>/courses/example/example2/</link>
+      <link>https://silvia.rbind.io/courses/example/example2/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/courses/example/example2/</guid>
+      <guid>https://silvia.rbind.io/courses/example/example2/</guid>
       <description>&lt;p&gt;Here are some more tips for getting started with Academic:&lt;/p&gt;
 &lt;h2 id=&#34;tip-3&#34;&gt;Tip 3&lt;/h2&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
@@ -55,12 +55,28 @@
     </item>
     
     <item>
-      <title>Becoming certified as an RStudio Tidyverse Instructor</title>
-      <link>/2020-10-07-rstudio-instructor-certification-tidyverse/</link>
-      <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/2020-10-07-rstudio-instructor-certification-tidyverse/</guid>
+      <title>Sharing Your Work with xaringan: The Basics and Beyond</title>
+      <link>https://silvia.rbind.io/talk/xaringan-basics-and-beyond/</link>
+      <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://silvia.rbind.io/talk/xaringan-basics-and-beyond/</guid>
       <description>
-&lt;script src=&#34;./rmarkdown-libs/fitvids/fitvids.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;index_files/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;index_files/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;&lt;img src=&#34;nhsr-logo.png&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Becoming certified as an RStudio Tidyverse Instructor</title>
+      <link>https://silvia.rbind.io/2020-10-07-rstudio-instructor-certification-tidyverse/</link>
+      <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>https://silvia.rbind.io/2020-10-07-rstudio-instructor-certification-tidyverse/</guid>
+      <description>
+&lt;link href=&#34;index_files/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;index_files/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;index_files/fitvids/fitvids.min.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -240,6 +256,11 @@ Overall it was an experience that made me reflect a lot on how teaching is usual
 &lt;li&gt;&lt;a href=&#34;https://beatrizmilz.github.io/RStudio_Certification&#34;&gt;Lesson slides: Adding figures in R Markdown&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/beatrizmilz/RStudio_Certification&#34;&gt;GitHub repo&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Laurie Baker
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://laurielbaker.github.io/r-studio-instructor-training/slides/lubridate_slides.html#1&#34;&gt;Lesson slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/LaurieLBaker/r-studio-instructor-training#rstudio-instructor-certification-teaching-exam&#34;&gt;GitHub repo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Corrado Lanera
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://corradolanera.github.io/rs-teaching-exam/&#34;&gt;Lesson slides: (Meta)data texting in {ggplot2}&lt;/a&gt;&lt;/li&gt;
@@ -268,6 +289,7 @@ Overall it was an experience that made me reflect a lot on how teaching is usual
 &lt;li&gt;Silvia Canelón – &lt;a href=&#34;tidyverse-sample-exam-solutions.html&#34;&gt;August 2020 sample exam (v2.0)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Marly Gotti – &lt;a href=&#34;https://marlycormar.github.io/tidyverse_sample_exam/sample_exam_sols/sols.html&#34;&gt;February 2020 sample exam (v1.0)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Brendan Cullen – &lt;a href=&#34;https://tidyverse-exam-v2-solutions.netlify.app/&#34;&gt;August 2020 sample exam (v2.0)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Ezekiel Adebayo Ogundepo – &lt;a href=&#34;https://rpubs.com/gbganalyst/tidyverse-sample-exam&#34;&gt;August 2020 sample exam (v2.0)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -276,15 +298,17 @@ Overall it was an experience that made me reflect a lot on how teaching is usual
     
     <item>
       <title>An Antarctic Tour of the Tidyverse</title>
-      <link>/talk/2020-08-31-tour-of-the-tidyverse/</link>
+      <link>https://silvia.rbind.io/talk/2020-08-31-tour-of-the-tidyverse/</link>
       <pubDate>Mon, 31 Aug 2020 17:40:00 +0000</pubDate>
-      <guid>/talk/2020-08-31-tour-of-the-tidyverse/</guid>
+      <guid>https://silvia.rbind.io/talk/2020-08-31-tour-of-the-tidyverse/</guid>
       <description>
-&lt;script src=&#34;./rmarkdown-libs/fitvids/fitvids.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;index_files/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;index_files/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;index_files/fitvids/fitvids.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div class=&#34;shareagain&#34; style=&#34;min-width:300px;margin:1em auto;&#34;&gt;
-&lt;iframe src=&#34;https://spcanelon.github.io/2020-rladies-chi-tidyverse&#34; width=&#34;1600&#34; height=&#34;900&#34; style=&#34;border:2px solid currentColor;&#34; loading=&#34;lazy&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe src=&#34;https://spcanelon.github.io/tour-of-the-tidyverse&#34; width=&#34;1600&#34; height=&#34;900&#34; style=&#34;border:2px solid currentColor;&#34; loading=&#34;lazy&#34; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;script&gt;fitvids(&#39;.shareagain&#39;, {players: &#39;iframe&#39;});&lt;/script&gt;
 &lt;/div&gt;
 </description>
@@ -292,9 +316,9 @@ Overall it was an experience that made me reflect a lot on how teaching is usual
     
     <item>
       <title>Development and Evaluation of MADDIE: Method to Acquire Delivery Date Information from Electronic Health Records</title>
-      <link>/publication/preprint-delivery-episode-algorithm-maddie/</link>
+      <link>https://silvia.rbind.io/publication/preprint-delivery-episode-algorithm-maddie/</link>
       <pubDate>Sun, 02 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/preprint-delivery-episode-algorithm-maddie/</guid>
+      <guid>https://silvia.rbind.io/publication/preprint-delivery-episode-algorithm-maddie/</guid>
       <description>
 
 
@@ -304,9 +328,9 @@ Overall it was an experience that made me reflect a lot on how teaching is usual
     
     <item>
       <title>Customizing Hugo Academic&#39;s Dark Mode with Help from Atom</title>
-      <link>/2020-06-16-dark-theme-custom-with-atom/</link>
+      <link>https://silvia.rbind.io/2020-06-16-dark-theme-custom-with-atom/</link>
       <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>/2020-06-16-dark-theme-custom-with-atom/</guid>
+      <guid>https://silvia.rbind.io/2020-06-16-dark-theme-custom-with-atom/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -455,9 +479,9 @@ stroke-width:3;stroke:#000000&#34; /&gt;
     
     <item>
       <title>Migrating from Trello to Airtable: Working with JSON Data in R</title>
-      <link>/2020-05-12-trello-to-airtable/</link>
+      <link>https://silvia.rbind.io/2020-05-12-trello-to-airtable/</link>
       <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
-      <guid>/2020-05-12-trello-to-airtable/</guid>
+      <guid>https://silvia.rbind.io/2020-05-12-trello-to-airtable/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -971,9 +995,9 @@ More detailed instructions can be found in &lt;a href=&#34;https://support.airta
     
     <item>
       <title>Is Hydroxychloroquine Safe During Pregnancy? Observations from Penn Medicine</title>
-      <link>/publication/preprint-hydroxychloroquine-pregnancy/</link>
+      <link>https://silvia.rbind.io/publication/preprint-hydroxychloroquine-pregnancy/</link>
       <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/preprint-hydroxychloroquine-pregnancy/</guid>
+      <guid>https://silvia.rbind.io/publication/preprint-hydroxychloroquine-pregnancy/</guid>
       <description>
 
 
@@ -983,9 +1007,9 @@ More detailed instructions can be found in &lt;a href=&#34;https://support.airta
     
     <item>
       <title>Visualizing the Inside Journey of Recovery from Opioid Use Disorder</title>
-      <link>/publication/data-hack-opiod/</link>
+      <link>https://silvia.rbind.io/publication/data-hack-opiod/</link>
       <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/data-hack-opiod/</guid>
+      <guid>https://silvia.rbind.io/publication/data-hack-opiod/</guid>
       <description>
 
 
@@ -1041,9 +1065,9 @@ within advocacy in the form of promoting Vivitrol, which has disadvantages when 
     
     <item>
       <title>A Systematic Literature Review of Factors Affecting the Timing of Menarche: The Potential for Climate Change to Impact Women’s Health</title>
-      <link>/publication/climate-change-menarche/</link>
+      <link>https://silvia.rbind.io/publication/climate-change-menarche/</link>
       <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/climate-change-menarche/</guid>
+      <guid>https://silvia.rbind.io/publication/climate-change-menarche/</guid>
       <description>
 
 
@@ -1053,9 +1077,9 @@ within advocacy in the form of promoting Vivitrol, which has disadvantages when 
     
     <item>
       <title>Investigating Pregnancy-Related Health Outcomes Among Patients with Sickle Cell Disease and Linking with Health Disparities</title>
-      <link>/publication/amia-annual-symposium/</link>
+      <link>https://silvia.rbind.io/publication/amia-annual-symposium/</link>
       <pubDate>Wed, 20 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>/publication/amia-annual-symposium/</guid>
+      <guid>https://silvia.rbind.io/publication/amia-annual-symposium/</guid>
       <description>
 
 
@@ -1067,9 +1091,9 @@ within advocacy in the form of promoting Vivitrol, which has disadvantages when 
     
     <item>
       <title>Substrate Strain Mitigates Effects of β-Aminopropionitrile-Induced Reduction in Enzymatic Crosslinking</title>
-      <link>/publication/bapn-substrate-strain/</link>
+      <link>https://silvia.rbind.io/publication/bapn-substrate-strain/</link>
       <pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>/publication/bapn-substrate-strain/</guid>
+      <guid>https://silvia.rbind.io/publication/bapn-substrate-strain/</guid>
       <description>
 
 
@@ -1079,9 +1103,9 @@ within advocacy in the form of promoting Vivitrol, which has disadvantages when 
     
     <item>
       <title>Philly Center City Sips 2019: An Interactive Map</title>
-      <link>/2019-08-04-ccd-sips/</link>
+      <link>https://silvia.rbind.io/2019-08-04-ccd-sips/</link>
       <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>/2019-08-04-ccd-sips/</guid>
+      <guid>https://silvia.rbind.io/2019-08-04-ccd-sips/</guid>
       <description>
 
 
@@ -1096,9 +1120,9 @@ within advocacy in the form of promoting Vivitrol, which has disadvantages when 
     
     <item>
       <title>Slides</title>
-      <link>/slides/example/</link>
+      <link>https://silvia.rbind.io/slides/example/</link>
       <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>/slides/example/</guid>
+      <guid>https://silvia.rbind.io/slides/example/</guid>
       <description>&lt;h1 id=&#34;welcome-to-slides&#34;&gt;Welcome to Slides&lt;/h1&gt;
 &lt;p&gt;
 &lt;a href=&#34;https://sourcethemes.com/academic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic&lt;/a&gt;&lt;/p&gt;
@@ -1229,9 +1253,9 @@ Three
     
     <item>
       <title>LICENSE: CC-BY-SA</title>
-      <link>/license/</link>
+      <link>https://silvia.rbind.io/license/</link>
       <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
-      <guid>/license/</guid>
+      <guid>https://silvia.rbind.io/license/</guid>
       <description>&lt;p&gt;My 
 &lt;a href=&#34;./post/&#34;&gt;blog posts&lt;/a&gt; are released under a 
 &lt;a href=&#34;http://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Creative Commons Attribution-ShareAlike 4.0 International License&lt;/a&gt;.&lt;/p&gt;
@@ -1242,19 +1266,10 @@ Three
     </item>
     
     <item>
-      <title>Terms</title>
-      <link>/terms/</link>
-      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
-      <guid>/terms/</guid>
-      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Characterization of Type I Collagen and Osteoblast Response to Mechanical Loading</title>
-      <link>/publication/dissertation/</link>
+      <link>https://silvia.rbind.io/publication/dissertation/</link>
       <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
-      <guid>/publication/dissertation/</guid>
+      <guid>https://silvia.rbind.io/publication/dissertation/</guid>
       <description>
 
 
@@ -1264,9 +1279,9 @@ Three
     
     <item>
       <title>β-Aminopropionitrile-Induced Reduction in Enzymatic Crosslinking Causes In Vitro Changes in Collagen Morphology and Molecular Composition</title>
-      <link>/publication/bapn-morphology/</link>
+      <link>https://silvia.rbind.io/publication/bapn-morphology/</link>
       <pubDate>Sun, 06 Nov 2016 00:00:00 +0000</pubDate>
-      <guid>/publication/bapn-morphology/</guid>
+      <guid>https://silvia.rbind.io/publication/bapn-morphology/</guid>
       <description>
 
 
@@ -1276,17 +1291,17 @@ Three
     
     <item>
       <title>External Project</title>
-      <link>/project/external-project/</link>
+      <link>https://silvia.rbind.io/project/external-project/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/project/external-project/</guid>
+      <guid>https://silvia.rbind.io/project/external-project/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Internal Project</title>
-      <link>/project/internal-project/</link>
+      <link>https://silvia.rbind.io/project/internal-project/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/project/internal-project/</guid>
+      <guid>https://silvia.rbind.io/project/internal-project/</guid>
       <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
 &lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
 &lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
