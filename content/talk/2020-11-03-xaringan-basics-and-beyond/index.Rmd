@@ -34,7 +34,7 @@ all_day: no
 publishDate: '2020-10-20'
 featured: yes
 image:
-  caption: '[xaringan Workshop](https://bit.ly/xaringan-nhsr)'
+  caption: '[xaringan workshop](https://bit.ly/xaringan-nhsr)'
   focal_point: center
   preview_only: no
 links:
