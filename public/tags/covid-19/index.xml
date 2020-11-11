@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>covid-19 | Silvia Canelón</title>
+    <link>https://silvia.rbind.io/tags/covid-19/</link>
+      <atom:link href="https://silvia.rbind.io/tags/covid-19/index.xml" rel="self" type="application/rss+xml" />
+    <description>covid-19</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Silvia Canelón, 2020</copyright><lastBuildDate>Wed, 06 May 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://silvia.rbind.io/images/icon_hud586b8bf8dfe31bebdd5c85bf61695a2_5299802_512x512_fill_lanczos_center_2.png</url>
+      <title>covid-19</title>
+      <link>https://silvia.rbind.io/tags/covid-19/</link>
+    </image>
+    
+    <item>
+      <title>Is Hydroxychloroquine Safe During Pregnancy? Observations from Penn Medicine</title>
+      <link>https://silvia.rbind.io/publication/preprint-hydroxychloroquine-pregnancy/</link>
+      <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://silvia.rbind.io/publication/preprint-hydroxychloroquine-pregnancy/</guid>
+      <description>
+
+
+
+</description>
+    </item>
+    
+  </channel>
+</rss>

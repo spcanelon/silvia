@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>xaringan | Silvia Canelón</title>
+    <link>https://silvia.rbind.io/tags/xaringan/</link>
+      <atom:link href="https://silvia.rbind.io/tags/xaringan/index.xml" rel="self" type="application/rss+xml" />
+    <description>xaringan</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Silvia Canelón, 2020</copyright><lastBuildDate>Tue, 03 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://silvia.rbind.io/images/icon_hud586b8bf8dfe31bebdd5c85bf61695a2_5299802_512x512_fill_lanczos_center_2.png</url>
+      <title>xaringan</title>
+      <link>https://silvia.rbind.io/tags/xaringan/</link>
+    </image>
+    
+    <item>
+      <title>Sharing Your Work with xaringan: The Basics and Beyond</title>
+      <link>https://silvia.rbind.io/talk/xaringan-basics-and-beyond/</link>
+      <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://silvia.rbind.io/talk/xaringan-basics-and-beyond/</guid>
+      <description>
+&lt;link href=&#34;index_files/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;index_files/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;&lt;img src=&#34;nhsr-logo.png&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
