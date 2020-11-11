@@ -18,37 +18,12 @@
   </url>
   
   <url>
-    <loc>https://silvia.rbind.io/categories/</loc>
-    <lastmod>2020-11-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://silvia.rbind.io/categories/r/</loc>
-    <lastmod>2020-11-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://silvia.rbind.io/talk/</loc>
-    <lastmod>2020-11-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://silvia.rbind.io/talk/xaringan-basics-and-beyond/</loc>
-    <lastmod>2020-11-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://silvia.rbind.io/tags/</loc>
-    <lastmod>2020-11-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://silvia.rbind.io/tags/xaringan/</loc>
-    <lastmod>2020-11-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://silvia.rbind.io/2020-10-07-rstudio-instructor-certification-tidyverse/</loc>
+    <lastmod>2020-10-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://silvia.rbind.io/categories/</loc>
     <lastmod>2020-10-07T00:00:00+00:00</lastmod>
   </url>
   
@@ -63,12 +38,27 @@
   </url>
   
   <url>
+    <loc>https://silvia.rbind.io/categories/r/</loc>
+    <lastmod>2020-10-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://silvia.rbind.io/tags/</loc>
+    <lastmod>2020-10-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://silvia.rbind.io/tags/tidyverse/</loc>
     <lastmod>2020-10-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://silvia.rbind.io/talk/2020-08-31-tour-of-the-tidyverse/</loc>
+    <lastmod>2020-08-31T17:40:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://silvia.rbind.io/talk/</loc>
     <lastmod>2020-08-31T17:40:00+00:00</lastmod>
   </url>
   
