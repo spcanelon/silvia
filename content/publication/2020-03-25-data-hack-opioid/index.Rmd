@@ -2,7 +2,7 @@
 title: 'Visualizing the Inside Journey of Recovery from Opioid Use Disorder'
 author:
 date: '2020-03-25'
-slug: data-hack-opiod
+slug: data-hack-opioid
 categories: []
 tags:
   - data hack
@@ -73,6 +73,7 @@ Be sure to check out these **Freakonomics Radio podcast episodes** to learn more
 ## Data Hack hosts
 - [Code for Philly ](https://codeforphilly.org/)
 - [DataPhilly](https://www.meetup.com/DataPhilly/)
+- [R-Ladies Philly](https://www.rladiesphilly.org/)
 - [Philly Data Jawn](https://www.rladiesphilly.org/)
 - [City of Philadelphia](https://www.phila.gov/programs/combating-the-opioid-epidemic/)
 
