@@ -53,3 +53,5 @@ links:
   name: medRxiv Preprint
   url: https://www.medrxiv.org/content/10.1101/2020.07.30.20165381v1
 ---
+
+![[2020 AMIA Poster (letter)](2020_AMIA_Annual_v2_letter.pdf)](2020_AMIA_Annual_v2_letter.png)
