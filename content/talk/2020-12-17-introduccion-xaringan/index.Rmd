@@ -35,4 +35,4 @@ links:
   url: https://github.com/spcanelon/xaringan-rladies-xalapa#introducci%C3%B3n-al-paquete-xaringan
 ---
 
-![](https://pbs.twimg.com/profile_images/1124352295448092672/kruQyvMK_400x400.jpg)
+![](rladies-xalapa.jpg)
