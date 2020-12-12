@@ -182,6 +182,9 @@ If you're a member of the MiR Community and like the idea of studying with some 
   - [Lesson materials: Concept map and formative assessments](https://docs.google.com/document/d/1Z8zhRjK7tQ-VcOUMnOmxKNb2Ra_3DKsvMzo1iGeIt0I/edit)
   - [Lesson slides: Código en R Markdown](https://docs.google.com/presentation/d/1Uzb5sHM54_t6NWLSDely6fCi8Nu4qhCT-qxMKY-vh78/edit#slide=id.p)
   - [GitHub repo](https://github.com/yabellini/RStudioCT)
+- Paloma Rojas-Saunero
+  - [Lesson slides: Tidy data](https://palolili23.github.io/texam/slides.html)
+  - [Lesson materials: Tidyr: Reshape](https://palolili23.github.io/texam/tidyr.html)
 - Florencia D'Andrea
   - [Lesson slides: Iteration with purrr package for automatized file management](https://flor14.github.io/purrr_slides/purrr_class_15min#1)
   - [Blog post: Two examples of iteration with purrr - Class for the RStudio certification](https://florencia.netlify.app/2020/06/two-examples-of-iteration-with-purrr.en-us/)
