@@ -14,7 +14,7 @@ draft: no
 event: R-Ladies Chicago Meetup
 event_url: https://www.meetup.com/rladies-chicago/events/272755101/
 location: Online
-abstract: "Learn how to explore and manipulate data in R with packages from the Tidyverse. We'll introduce the [8 core packages](https://www.tidyverse.org/packages/) that make up the Tidyverse and use at least one function from each package while exploring a dataset on the migration of penguins."
+abstract: Learn how to explore and manipulate data in R with packages from the Tidyverse. We'll introduce the [8 core packages](https://www.tidyverse.org/packages/) that make up the Tidyverse and use at least one function from each package while exploring a dataset on the migration of penguins.
 date_end: 2020-08-31T19:40:00
 all_day: no
 publishDate: '2020-09-01'
