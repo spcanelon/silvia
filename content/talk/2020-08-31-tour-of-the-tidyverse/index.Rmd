@@ -1,7 +1,7 @@
 ---
 title: 'An Antarctic Tour of the Tidyverse'
 author: silvia
-date: '2020-08-31T17:40:00Z'
+date: 2020-08-31T17:40:00
 categories:
   - R
 tags:
@@ -11,10 +11,11 @@ subtitle: An introductory tidyverse tutorial created and presented for [R-Ladies
 summary: An introductory tidyverse tutorial created and presented for R-Ladies Chicago
 slug: 2020-08-31-tour-of-the-tidyverse
 draft: no
+event: R-Ladies Chicago Meetup
 event_url: https://www.meetup.com/rladies-chicago/events/272755101/
-location: Chicago, IL, USA (virtual)
+location: Online
 abstract: "Learn how to explore and manipulate data in R with packages from the Tidyverse. We'll introduce the [8 core packages](https://www.tidyverse.org/packages/) that make up the Tidyverse and use at least one function from each package while exploring a dataset on the migration of penguins."
-date_end: '2020-08-31T19:40:00Z'
+date_end: 2020-08-31T19:40:00
 all_day: no
 publishDate: '2020-09-01'
 featured: yes
