@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories | Silvia Canelón</title>
-    <link>https://silvia.rbind.io/categories/</link>
-      <atom:link href="https://silvia.rbind.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <link>/categories/</link>
+      <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <description>Categories</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Silvia Canelón, 2020</copyright><lastBuildDate>Wed, 07 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Silvia Canelón, 2021</copyright><lastBuildDate>Thu, 17 Dec 2020 18:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://silvia.rbind.io/images/icon_hud586b8bf8dfe31bebdd5c85bf61695a2_5299802_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hud586b8bf8dfe31bebdd5c85bf61695a2_5299802_512x512_fill_lanczos_center_2.png</url>
       <title>Categories</title>
-      <link>https://silvia.rbind.io/categories/</link>
+      <link>/categories/</link>
     </image>
     
   </channel>

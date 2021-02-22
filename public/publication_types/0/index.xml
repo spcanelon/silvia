@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>0 | Silvia Canelón</title>
-    <link>https://silvia.rbind.io/publication_types/0/</link>
-      <atom:link href="https://silvia.rbind.io/publication_types/0/index.xml" rel="self" type="application/rss+xml" />
+    <link>/publication_types/0/</link>
+      <atom:link href="/publication_types/0/index.xml" rel="self" type="application/rss+xml" />
     <description>0</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Silvia Canelón, 2020</copyright><lastBuildDate>Wed, 20 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Silvia Canelón, 2021</copyright><lastBuildDate>Wed, 20 Nov 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://silvia.rbind.io/images/icon_hud586b8bf8dfe31bebdd5c85bf61695a2_5299802_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hud586b8bf8dfe31bebdd5c85bf61695a2_5299802_512x512_fill_lanczos_center_2.png</url>
       <title>0</title>
-      <link>https://silvia.rbind.io/publication_types/0/</link>
+      <link>/publication_types/0/</link>
     </image>
     
     <item>
       <title>Investigating Pregnancy-Related Health Outcomes Among Patients with Sickle Cell Disease and Linking with Health Disparities</title>
-      <link>https://silvia.rbind.io/publication/amia-annual-symposium/</link>
+      <link>/publication/amia-annual-symposium/</link>
       <pubDate>Wed, 20 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>https://silvia.rbind.io/publication/amia-annual-symposium/</guid>
+      <guid>/publication/amia-annual-symposium/</guid>
       <description>
 
 
@@ -28,9 +28,9 @@
     
     <item>
       <title>Characterization of Type I Collagen and Osteoblast Response to Mechanical Loading</title>
-      <link>https://silvia.rbind.io/publication/dissertation/</link>
+      <link>/publication/dissertation/</link>
       <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
-      <guid>https://silvia.rbind.io/publication/dissertation/</guid>
+      <guid>/publication/dissertation/</guid>
       <description>
 
 

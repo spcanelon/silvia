@@ -2,21 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Recent &amp; Upcoming Talks | Silvia Canelón</title>
-    <link>https://silvia.rbind.io/talk/</link>
-      <atom:link href="https://silvia.rbind.io/talk/index.xml" rel="self" type="application/rss+xml" />
+    <link>/talk/</link>
+      <atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
     <description>Recent &amp; Upcoming Talks</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Silvia Canelón, 2020</copyright><lastBuildDate>Mon, 31 Aug 2020 17:40:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Silvia Canelón, 2021</copyright><lastBuildDate>Thu, 17 Dec 2020 18:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://silvia.rbind.io/images/icon_hud586b8bf8dfe31bebdd5c85bf61695a2_5299802_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hud586b8bf8dfe31bebdd5c85bf61695a2_5299802_512x512_fill_lanczos_center_2.png</url>
       <title>Recent &amp; Upcoming Talks</title>
-      <link>https://silvia.rbind.io/talk/</link>
+      <link>/talk/</link>
     </image>
     
     <item>
+      <title>Introducción al Paquete xaringan</title>
+      <link>/talk/introduccion-xaringan/</link>
+      <pubDate>Thu, 17 Dec 2020 18:00:00 +0000</pubDate>
+      <guid>/talk/introduccion-xaringan/</guid>
+      <description>
+&lt;script src=&#34;../talk/introduccion-xaringan/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;../talk/introduccion-xaringan/index_files/fitvids/fitvids.min.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;&lt;img src=&#34;rladies-xalapa.jpg&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;shareagain&#34; style=&#34;min-width:300px;margin:1em auto;&#34;&gt;
+&lt;iframe src=&#34;https://spcanelon.github.io/xaringan-rladies-xalapa/diapositivas/introduccion-xaringan.html&#34; width=&#34;1600&#34; height=&#34;900&#34; style=&#34;border:2px solid currentColor;&#34; loading=&#34;lazy&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;script&gt;fitvids(&#39;.shareagain&#39;, {players: &#39;iframe&#39;});&lt;/script&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sharing Your Work with xaringan: The Basics and Beyond</title>
+      <link>/talk/2020-11-03-xaringan-basics-and-beyond/</link>
+      <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>/talk/2020-11-03-xaringan-basics-and-beyond/</guid>
+      <description>
+&lt;link href=&#34;index_files/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;index_files/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;&lt;img src=&#34;nhsr-logo.png&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>An Antarctic Tour of the Tidyverse</title>
-      <link>https://silvia.rbind.io/talk/2020-08-31-tour-of-the-tidyverse/</link>
+      <link>/talk/2020-08-31-tour-of-the-tidyverse/</link>
       <pubDate>Mon, 31 Aug 2020 17:40:00 +0000</pubDate>
-      <guid>https://silvia.rbind.io/talk/2020-08-31-tour-of-the-tidyverse/</guid>
+      <guid>/talk/2020-08-31-tour-of-the-tidyverse/</guid>
       <description>
 &lt;link href=&#34;index_files/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;script src=&#34;index_files/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;

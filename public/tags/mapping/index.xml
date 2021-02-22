@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>mapping | Silvia Canelón</title>
-    <link>https://silvia.rbind.io/tags/mapping/</link>
-      <atom:link href="https://silvia.rbind.io/tags/mapping/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tags/mapping/</link>
+      <atom:link href="/tags/mapping/index.xml" rel="self" type="application/rss+xml" />
     <description>mapping</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Silvia Canelón, 2020</copyright><lastBuildDate>Sun, 04 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Silvia Canelón, 2021</copyright><lastBuildDate>Sun, 04 Aug 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://silvia.rbind.io/images/icon_hud586b8bf8dfe31bebdd5c85bf61695a2_5299802_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hud586b8bf8dfe31bebdd5c85bf61695a2_5299802_512x512_fill_lanczos_center_2.png</url>
       <title>mapping</title>
-      <link>https://silvia.rbind.io/tags/mapping/</link>
+      <link>/tags/mapping/</link>
     </image>
     
     <item>
       <title>Philly Center City Sips 2019: An Interactive Map</title>
-      <link>https://silvia.rbind.io/2019-08-04-ccd-sips/</link>
+      <link>/2019-08-04-ccd-sips/</link>
       <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://silvia.rbind.io/2019-08-04-ccd-sips/</guid>
+      <guid>/2019-08-04-ccd-sips/</guid>
       <description>
 
 
