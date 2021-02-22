@@ -42,7 +42,6 @@ links:
 
 ![](rladies-xalapa.jpg)
 
-<!--xaringanExtra interferes with the social media preview-->
 
 ```{r setup, include=FALSE}
 library(xaringanExtra)
