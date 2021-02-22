@@ -41,13 +41,11 @@ links:
   url: https://github.com/spcanelon/tour-of-the-tidyverse#an-antarctic-tour-of-the-tidyverse
 ---
 
-<!--xaringanExtra interferes with the social media preview-->
-
-```{r setup, include=FALSE, eval=FALSE}
+```{r setup, include=FALSE, eval=TRUE}
 library(xaringanExtra)
 ```
 
-```{r echo=FALSE, eval=FALSE}
+```{r echo=FALSE, eval=TRUE}
 xaringanExtra::embed_xaringan(
   url = "https://spcanelon.github.io/tour-of-the-tidyverse",
   ratio = "16:9")
