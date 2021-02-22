@@ -172,6 +172,7 @@ If you're a member of the MiR Community and like the idea of studying with some 
 - Ted Laderas -- [My Experience with RStudio Instructor Training](https://education.rstudio.com/blog/2019/11/my-experience-with-rstudio-instructor-training/#tidyverse-certification-exam)
 - Rayna Harris -- [A Review: RStudio Teaching Certification Course](https://www.raynamharris.com/blog/rstudioTTT/)
 - Brendan Cullen -- [Reflections on RStudio Instructor Training](https://bcullen.rbind.io/post/2020-09-03-reflections-on-rstudio-instructor-training/)
+- Yuqi Liao -- [Getting Certified as an RStudio Instructor](https://www.yuqiliao.com/blog/rstudiocertification/)
 
 ## Teaching exam examples
 
@@ -208,6 +209,9 @@ If you're a member of the MiR Community and like the idea of studying with some 
 - David John Baker
   - [Lesson slides: Learn to Pivot!](https://docs.google.com/presentation/d/1MFstJ3qFF1kK5dHJubn7KsPb2kcPSmuLnvHSP3QiFEA/edit?usp=sharing)
   - [GitHub repo](https://github.com/davidjohnbaker1/rstudio_certification_training)
+- Yuqi Liao
+  - [Lesson slides: Creating animated visualizations in R](https://animationr.netlify.app/#1)
+  - [GitHub repo](https://github.com/yuqiliao/RStudio_TeachingSample)
 
 ## Tidyverse sample exam solutions
 
