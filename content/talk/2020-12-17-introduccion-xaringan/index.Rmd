@@ -20,7 +20,7 @@ publishDate: '2020-12-10'
 authors: []
 featured: yes
 image:
-  caption: '[Introducción a xaringan](https://www.meetup.com/rladies-xalapa/events/274906676/)'
+  caption: '[Introducción a xaringan | R-Ladies Xalapa](https://spcanelon.github.io/xaringan-rladies-xalapa/diapositivas/introduccion-xaringan.html)'
   focal_point: center
   preview_only: no
 slides: ''
@@ -42,11 +42,13 @@ links:
 
 ![](rladies-xalapa.jpg)
 
-```{r setup, include=FALSE, eval=FALSE}
+<!--xaringanExtra interferes with the social media preview-->
+
+```{r setup, include=FALSE}
 library(xaringanExtra)
 ```
 
-```{r echo=FALSE, eval=FALSE}
+```{r echo=FALSE}
 xaringanExtra::embed_xaringan(
   url = "https://spcanelon.github.io/xaringan-rladies-xalapa/diapositivas/introduccion-xaringan.html",
   ratio = "16:9")
