@@ -8,11 +8,11 @@ categories:
 tags:
   - xaringan
   - R-Ladies
-event: Meetup
+event: R-Ladies Xalapa Meetup
 event_url: https://www.meetup.com/rladies-xalapa/events/274906676/
 location: Xalapa, Veracruz, México (virtual)
 subtitle: Taller del paquete xaringan para presentaciones,<br>creado para [R-Ladies Xalapa](https://twitter.com/RLadiesXalapa)
-summary: Taller del paquete xaringan para presentaciones,<br>creado para [R-Ladies Xalapa](https://twitter.com/RLadiesXalapa)
+summary: Taller del paquete xaringan para presentaciones,<br>creado para R-Ladies Xalapa
 abstract: El taller tiene por objetivo introducir a las participantes al paquete xaringan de R como una herramienta para crear diapositivas de presentación impresionantes que se pueden implementar en la web para compartir fácilmente.
 date_end: 2020-12-17T20:00:00
 all_day: no
@@ -42,11 +42,11 @@ links:
 
 ![](rladies-xalapa.jpg)
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, eval=FALSE}
 library(xaringanExtra)
 ```
 
-```{r echo=FALSE}
+```{r echo=FALSE, eval=FALSE}
 xaringanExtra::embed_xaringan(
   url = "https://spcanelon.github.io/xaringan-rladies-xalapa/diapositivas/introduccion-xaringan.html",
   ratio = "16:9")
