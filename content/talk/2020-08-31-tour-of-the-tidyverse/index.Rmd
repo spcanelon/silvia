@@ -13,14 +13,14 @@ slug: 2020-08-31-tour-of-the-tidyverse
 draft: no
 event: R-Ladies Chicago Meetup
 event_url: https://www.meetup.com/rladies-chicago/events/272755101/
-location: Online
+location: Chicago, IL, USA (virtual)
 abstract: Learn how to explore and manipulate data in R with packages from the Tidyverse. We'll introduce the [8 core packages](https://www.tidyverse.org/packages/) that make up the Tidyverse and use at least one function from each package while exploring a dataset on the migration of penguins.
 date_end: 2020-08-31T19:40:00
 all_day: no
 publishDate: '2020-09-01'
 featured: yes
 image: 
-  caption: 'Antarctic Tour of the Tidyverse'
+  caption: '[Antarctic Tour of the Tidyverse](https://spcanelon.github.io/tour-of-the-tidyverse)'
   focal_point: center
   preview_only: no
 links:
@@ -38,11 +38,13 @@ links:
   url: https://github.com/spcanelon/tour-of-the-tidyverse#an-antarctic-tour-of-the-tidyverse
 ---
 
-```{r setup, include=FALSE}
+<!--xaringanExtra interferes with the social media preview-->
+
+```{r setup, include=FALSE, eval=FALSE}
 library(xaringanExtra)
 ```
 
-```{r echo=FALSE}
+```{r echo=FALSE, eval=FALSE}
 xaringanExtra::embed_xaringan(
   url = "https://spcanelon.github.io/tour-of-the-tidyverse",
   ratio = "16:9")
