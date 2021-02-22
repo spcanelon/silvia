@@ -2,22 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>data hack | Silvia Canelón</title>
-    <link>https://silvia.rbind.io/tags/data-hack/</link>
-      <atom:link href="https://silvia.rbind.io/tags/data-hack/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tags/data-hack/</link>
+      <atom:link href="/tags/data-hack/index.xml" rel="self" type="application/rss+xml" />
     <description>data hack</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Silvia Canelón, 2020</copyright><lastBuildDate>Wed, 25 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Silvia Canelón, 2021</copyright><lastBuildDate>Wed, 25 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://silvia.rbind.io/images/icon_hud586b8bf8dfe31bebdd5c85bf61695a2_5299802_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hud586b8bf8dfe31bebdd5c85bf61695a2_5299802_512x512_fill_lanczos_center_2.png</url>
       <title>data hack</title>
-      <link>https://silvia.rbind.io/tags/data-hack/</link>
+      <link>/tags/data-hack/</link>
     </image>
     
     <item>
       <title>Visualizing the Inside Journey of Recovery from Opioid Use Disorder</title>
-      <link>https://silvia.rbind.io/publication/data-hack-opiod/</link>
+      <link>/publication/data-hack-opioid/</link>
       <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://silvia.rbind.io/publication/data-hack-opiod/</guid>
+      <guid>/publication/data-hack-opioid/</guid>
       <description>
+&lt;link href=&#34;index_files/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;index_files/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;opioid-data-hackathon&#34; class=&#34;section level1&#34;&gt;
@@ -35,6 +37,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://codeforphilly.org/&#34;&gt;Code for Philly&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.meetup.com/DataPhilly/&#34;&gt;DataPhilly&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.rladiesphilly.org/&#34;&gt;R-Ladies Philly&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.rladiesphilly.org/&#34;&gt;Philly Data Jawn&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.phila.gov/programs/combating-the-opioid-epidemic/&#34;&gt;City of Philadelphia&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;

@@ -2,33 +2,64 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>pregnancy | Silvia Canelón</title>
-    <link>https://silvia.rbind.io/tags/pregnancy/</link>
-      <atom:link href="https://silvia.rbind.io/tags/pregnancy/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tags/pregnancy/</link>
+      <atom:link href="/tags/pregnancy/index.xml" rel="self" type="application/rss+xml" />
     <description>pregnancy</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Silvia Canelón, 2020</copyright><lastBuildDate>Sun, 02 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Silvia Canelón, 2021</copyright><lastBuildDate>Thu, 10 Dec 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://silvia.rbind.io/images/icon_hud586b8bf8dfe31bebdd5c85bf61695a2_5299802_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hud586b8bf8dfe31bebdd5c85bf61695a2_5299802_512x512_fill_lanczos_center_2.png</url>
       <title>pregnancy</title>
-      <link>https://silvia.rbind.io/tags/pregnancy/</link>
+      <link>/tags/pregnancy/</link>
     </image>
     
     <item>
-      <title>Development and Evaluation of MADDIE: Method to Acquire Delivery Date Information from Electronic Health Records</title>
-      <link>https://silvia.rbind.io/publication/preprint-delivery-episode-algorithm-maddie/</link>
-      <pubDate>Sun, 02 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>https://silvia.rbind.io/publication/preprint-delivery-episode-algorithm-maddie/</guid>
+      <title>Not All C-sections Are the Same: Investigating Emergency vs. Elective C-section Deliveries as an Adverse Pregnancy Outcome</title>
+      <link>/publication/csections-emergency-admissions/</link>
+      <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/csections-emergency-admissions/</guid>
       <description>
+&lt;script src=&#34;index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;index_files/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;index_files/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
+&lt;div id=&#34;conference&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Conference&lt;/h2&gt;
+&lt;p&gt;Pacific Symposium on Biocomputing (PSB) 2021&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;session&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Session&lt;/h2&gt;
+&lt;p&gt;Advanced Methods for Big Data Analytics in Women’s Health&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;PSB2021_poster_letter.png&#34; alt=&#34;&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;&lt;a href=&#34;PSB2021_poster_letter.pdf&#34;&gt;2021 PSB Poster (letter)&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Development and Evaluation of MADDIE: Method to Acquire Delivery Date Information from Electronic Health Records</title>
+      <link>/publication/maddie-ehr-delivery-episode-algorithm/</link>
+      <pubDate>Tue, 17 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/maddie-ehr-delivery-episode-algorithm/</guid>
+      <description>
+&lt;link href=&#34;index_files/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;index_files/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
+
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;2020_AMIA_Annual_v2_letter.png&#34; alt=&#34;&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;&lt;a href=&#34;2020_AMIA_Annual_v2_letter.pdf&#34;&gt;2020 AMIA Poster (letter)&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Is Hydroxychloroquine Safe During Pregnancy? Observations from Penn Medicine</title>
-      <link>https://silvia.rbind.io/publication/preprint-hydroxychloroquine-pregnancy/</link>
+      <link>/publication/preprint-hydroxychloroquine-pregnancy/</link>
       <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
-      <guid>https://silvia.rbind.io/publication/preprint-hydroxychloroquine-pregnancy/</guid>
+      <guid>/publication/preprint-hydroxychloroquine-pregnancy/</guid>
       <description>
 
 

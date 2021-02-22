@@ -2,22 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tidyverse | Silvia Canelón</title>
-    <link>https://silvia.rbind.io/tags/tidyverse/</link>
-      <atom:link href="https://silvia.rbind.io/tags/tidyverse/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tags/tidyverse/</link>
+      <atom:link href="/tags/tidyverse/index.xml" rel="self" type="application/rss+xml" />
     <description>tidyverse</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Silvia Canelón, 2020</copyright><lastBuildDate>Wed, 07 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Silvia Canelón, 2021</copyright><lastBuildDate>Wed, 07 Oct 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://silvia.rbind.io/images/icon_hud586b8bf8dfe31bebdd5c85bf61695a2_5299802_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hud586b8bf8dfe31bebdd5c85bf61695a2_5299802_512x512_fill_lanczos_center_2.png</url>
       <title>tidyverse</title>
-      <link>https://silvia.rbind.io/tags/tidyverse/</link>
+      <link>/tags/tidyverse/</link>
     </image>
     
     <item>
       <title>Becoming certified as an RStudio Tidyverse Instructor</title>
-      <link>https://silvia.rbind.io/2020-10-07-rstudio-instructor-certification-tidyverse/</link>
+      <link>/2020-10-07-rstudio-instructor-certification-tidyverse/</link>
       <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>https://silvia.rbind.io/2020-10-07-rstudio-instructor-certification-tidyverse/</guid>
+      <guid>/2020-10-07-rstudio-instructor-certification-tidyverse/</guid>
       <description>
+&lt;script src=&#34;index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;index_files/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;script src=&#34;index_files/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;index_files/fitvids/fitvids.min.js&#34;&gt;&lt;/script&gt;
@@ -189,6 +190,12 @@ Overall it was an experience that made me reflect a lot on how teaching is usual
 &lt;li&gt;&lt;a href=&#34;https://docs.google.com/presentation/d/1Uzb5sHM54_t6NWLSDely6fCi8Nu4qhCT-qxMKY-vh78/edit#slide=id.p&#34;&gt;Lesson slides: Código en R Markdown&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/yabellini/RStudioCT&#34;&gt;GitHub repo&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Paloma Rojas-Saunero
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://palolili23.github.io/texam/teaching_exam.html&#34;&gt;Lesson overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://palolili23.github.io/texam/slides.html&#34;&gt;Lesson slides: Tidy data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://palolili23.github.io/texam/tidyr.html&#34;&gt;Lesson script: Tidyr: Reshape&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Florencia D’Andrea
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://flor14.github.io/purrr_slides/purrr_class_15min#1&#34;&gt;Lesson slides: Iteration with purrr package for automatized file management&lt;/a&gt;&lt;/li&gt;
@@ -242,9 +249,9 @@ Overall it was an experience that made me reflect a lot on how teaching is usual
     
     <item>
       <title>An Antarctic Tour of the Tidyverse</title>
-      <link>https://silvia.rbind.io/talk/2020-08-31-tour-of-the-tidyverse/</link>
+      <link>/talk/2020-08-31-tour-of-the-tidyverse/</link>
       <pubDate>Mon, 31 Aug 2020 17:40:00 +0000</pubDate>
-      <guid>https://silvia.rbind.io/talk/2020-08-31-tour-of-the-tidyverse/</guid>
+      <guid>/talk/2020-08-31-tour-of-the-tidyverse/</guid>
       <description>
 &lt;link href=&#34;index_files/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;script src=&#34;index_files/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;

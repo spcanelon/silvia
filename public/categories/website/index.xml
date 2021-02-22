@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Website | Silvia Canelón</title>
-    <link>https://silvia.rbind.io/categories/website/</link>
-      <atom:link href="https://silvia.rbind.io/categories/website/index.xml" rel="self" type="application/rss+xml" />
+    <link>/categories/website/</link>
+      <atom:link href="/categories/website/index.xml" rel="self" type="application/rss+xml" />
     <description>Website</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Silvia Canelón, 2020</copyright><lastBuildDate>Tue, 16 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Silvia Canelón, 2021</copyright><lastBuildDate>Tue, 16 Jun 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://silvia.rbind.io/images/icon_hud586b8bf8dfe31bebdd5c85bf61695a2_5299802_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hud586b8bf8dfe31bebdd5c85bf61695a2_5299802_512x512_fill_lanczos_center_2.png</url>
       <title>Website</title>
-      <link>https://silvia.rbind.io/categories/website/</link>
+      <link>/categories/website/</link>
     </image>
     
     <item>
       <title>Customizing Hugo Academic&#39;s Dark Mode with Help from Atom</title>
-      <link>https://silvia.rbind.io/2020-06-16-dark-theme-custom-with-atom/</link>
+      <link>/2020-06-16-dark-theme-custom-with-atom/</link>
       <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>https://silvia.rbind.io/2020-06-16-dark-theme-custom-with-atom/</guid>
+      <guid>/2020-06-16-dark-theme-custom-with-atom/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
