@@ -1,0 +1,62 @@
+---
+title: "Deploying xaringan Slides: A Ten-Step GitHub Pages Workflow"
+author: ''
+date: '2021-02-27'
+slug: deploying-xaringan-slides
+categories:
+tags:
+  - R
+  - xaringan
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2021-02-27T18:38:02-05:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: 
+  - xaringan
+---
+
+# 10-Step Workflow
+
+Packages required
+
+```{r, eval = FALSE}
+library(xaringan)
+library(usethis)
+```
+
+## Creating a project for your presentation
+
+1. Check working directory with `getwd()`
+2. Create a new project for your presentation with `usethis::create_project("filepath/for/your/presentation")`
+
+## Creating a xaringan slide deck
+
+3. Create a xaringan deck using a xaringan template: _File_ > _New File_ > _R Markdown_ > _From Template_ > _Ninja Presentation_ > _OK_
+4. Save your file with whatever name you like. If you pick `index.Rmd` the link you share at the end will be relatively short.
+4. Create HTML slides from template using xaringan's infinite moon reader `xaringan::inf_mr()`
+
+## Initialize version control with git
+
+5. Initialize version control of your slides with git using `usethis::use_git()`. By default this will commit the files in your project with the message "Init commit"
+6. Connect your local project with a GitHub repo with `usethis::use_github(private = TRUE)`. This will create a private GitHub repository
+> Note: At the moment {usethis} names the primary branch "master" by default. [Issue #1341](https://github.com/r-lib/usethis/issues/1341) suggests the option to instead name it "main" is in the works.
+7. Edit your slides as you wish. Commit often! And then push to GitHub. Use the tools provided by the Git pane in RStudio, or use the following commands in the Terminal: 
+  - `git add .` to stage all modified files in preparation for a commit
+  - `git commit -m "<A descriptive commit message here>"` to describe the changes you made to your files. Consider writing a message that finishes the following sentence: "These changes will..." (e.g. "change the slide theme", "change the slide size")
+  - `git push` to push the changes to your GitHub repository
+  
+## Deploying your slides
+
+8. When you're ready to deploy your slides, go to the settings of your GitHub repo, scroll to the "Danger Zone" area at bottom and change the repository visibility to _public_
+9. In the "GitHub Pages" section of the settings, select your primary branch from the _Source_ dropdown menu (e.g. main, master)
+10. Visit the link provided to see your newly deployed slides! Don't panic if you don't see them right away, sometimes it takes a little time. This is the link you will share with the world when you present. Notice it looks _very_ similar to your GitHub repo link.
+
+# Bonus steps
+
+11. Go to the main repository page and add a description of your presentation and the link to your slides to the About section of your repo page. That way it's easily available to anyone visiting your repo.
+12. Check out Garrick Aden-Buie's blog post [Sharing Your xaringan Slides](https://www.garrickadenbuie.com/blog/sharing-xaringan-slides/) to learn how to [create a social media card](https://www.garrickadenbuie.com/blog/sharing-xaringan-slides/#create-a-social-media-card) for your slides and use your new link to share your slides in more places (e.g. [embedded on a website](https://www.garrickadenbuie.com/blog/sharing-xaringan-slides/#embed-your-slides), etc.)
