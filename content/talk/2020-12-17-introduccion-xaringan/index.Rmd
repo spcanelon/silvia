@@ -2,12 +2,14 @@
 title: Introducción al Paquete xaringan
 author: silvia
 date: 2020-12-17T18:00:00
-slug: introduccion-xaringan
+slug: 2020-12-17-introduccion-xaringan
 categories:
   - R
+  - xaringan
 tags:
   - xaringan
   - R-Ladies
+  - Español
 event: R-Ladies Xalapa Meetup
 event_url: https://www.meetup.com/rladies-xalapa/events/274906676/
 location: Xalapa, Veracruz, México (virtual)
@@ -41,7 +43,6 @@ links:
 ---
 
 ![](rladies-xalapa.jpg)
-
 
 ```{r setup, include=FALSE}
 library(xaringanExtra)
