@@ -30,10 +30,6 @@ output:
 links:
   - icon: file-code
     icon_pack: far
-    name: R script
-    url: index.R
-  - icon: file-code
-    icon_pack: far
     name: R Markdown
     url: index.Rmd
   - icon: table
@@ -75,8 +71,7 @@ Last but not least -- we'll be keeping things tidy, with the help of the [**tidy
 # Importing JSON file
 
 ```{r, include = FALSE}
-knitr::opts_chunk$set(warning = FALSE, message = FALSE,
-                      eval=FALSE)
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 ```
 
 ```{r import, results=FALSE}
@@ -260,7 +255,7 @@ glimpse(tidy_cards)
 ```
 
 ## Data exporting
-```{r export-csv, eval=FALSE}
+```{r export-csv, eval=TRUE}
 write.csv(tidy_cards, file = "tidy_cards.csv")
 ```
 
