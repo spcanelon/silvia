@@ -6,6 +6,8 @@ slug: 2020-12-17-introduccion-xaringan
 categories:
   - R
   - xaringan
+  - Tutorial
+  - Teaching
 tags:
   - R-Ladies
   - Español
