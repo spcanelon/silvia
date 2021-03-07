@@ -1,15 +1,15 @@
 ---
 title: 'Development and Evaluation of MADDIE: Method to Acquire Delivery Date Information from Electronic Health Records'
-author: Silvia P. Canelón
 date: '2020-11-17'
 slug: maddie-ehr-delivery-episode-algorithm
-categories: []
+categories:
+  - Research
 tags:
   - pregnancy
   - algorithm
-  - r
   - AMIA
   - EHR
+  - R
 authors:
   - silvia
   - Heather H. Burris
