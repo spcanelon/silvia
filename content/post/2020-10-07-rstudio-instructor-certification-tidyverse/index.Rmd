@@ -214,6 +214,8 @@ If you're a member of the MiR Community and like the idea of studying with some 
 - Yuqi Liao
   - [Lesson slides: Creating animated visualizations in R](https://animationr.netlify.app/#1)
   - [GitHub repo](https://github.com/yuqiliao/RStudio_TeachingSample)
+- Luis Verde
+  - [GitHub repo](https://github.com/luisDVA/example-lesson)
 
 ## Tidyverse sample exam solutions
 
