@@ -4,15 +4,16 @@ author: silvia
 date: '2020-10-07'
 categories:
   - R
-tags:
-  - r
+  - Teaching
   - tidyverse
+tags:
+  - RStudio
 slug: rstudio-instructor-certification-tidyverse
 subtitle: An overview of the [RStudio Instructor certification](https://education.rstudio.com/trainers/#info)
   process and collection of resources to support anyone on their certification journey.
 summary: An overview of the [RStudio Instructor certification](https://education.rstudio.com/trainers/#info)
   process and collection of resources to support anyone on their certification journey.
-lastmod: '2020-10-07'
+lastmod: '2021-03-07'
 featured: yes
 draft: no
 image:
@@ -173,6 +174,7 @@ If you're a member of the MiR Community and like the idea of studying with some 
 - Rayna Harris -- [A Review: RStudio Teaching Certification Course](https://www.raynamharris.com/blog/rstudioTTT/)
 - Brendan Cullen -- [Reflections on RStudio Instructor Training](https://bcullen.rbind.io/post/2020-09-03-reflections-on-rstudio-instructor-training/)
 - Yuqi Liao -- [Getting Certified as an RStudio Instructor](https://www.yuqiliao.com/blog/rstudiocertification/)
+- Beatriz Milz -- [Certificação da RStudio](https://beatrizmilz.com/posts/2021-03-02-certificacao-rstudio/)
 
 ## Teaching exam examples
 
