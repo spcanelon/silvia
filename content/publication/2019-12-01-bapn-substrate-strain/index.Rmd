@@ -2,8 +2,15 @@
 title: 'Substrate Strain Mitigates Effects of β-Aminopropionitrile-Induced Reduction in Enzymatic Crosslinking'
 date: '2019-09-03'
 slug: bapn-substrate-strain
-categories: []
-tags: []
+categories:
+  - Research
+tags:
+  - osteoblasts
+  - Type I collagen
+  - BAPN
+  - AFM
+  - crosslinking
+  - mechanical loading
 authors:
   - silvia
   - Joseph M. Wallace
