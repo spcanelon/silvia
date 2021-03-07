@@ -2,7 +2,8 @@
 title: 'A Systematic Literature Review of Factors Affecting the Timing of Menarche: The Potential for Climate Change to Impact Women’s Health'
 date: '2020-03-05'
 slug: climate-change-menarche
-categories: []
+categories:
+  - Research
 tags:
   - climate change
   - menstruation

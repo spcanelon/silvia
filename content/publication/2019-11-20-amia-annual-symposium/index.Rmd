@@ -2,13 +2,16 @@
 title: 'Investigating Pregnancy-Related Health Outcomes Among Patients with Sickle Cell Disease and Linking with Health Disparities'
 date: '2019-11-20'
 slug: amia-annual-symposium
-categories: []
+categories:
+  - Research
 tags:
+  - pregnancy
   - AMIA
-  - poster
+  - EHR
+  - sickle cell disease
 authors:
-- silvia
-- Mary Regina Boland
+  - silvia
+  - Mary Regina Boland
 doi: ''
 publishDate: ''
 publication_types:
