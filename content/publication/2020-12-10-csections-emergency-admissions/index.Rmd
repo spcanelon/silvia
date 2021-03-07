@@ -1,6 +1,6 @@
 ---
 title: "Not All C-sections Are the Same: Investigating Emergency vs. Elective C-section Deliveries as an Adverse Pregnancy Outcome"
-author: 
+authors: 
   - silvia
   - Mary Regina Boland
 date: '2020-12-10'
@@ -11,7 +11,6 @@ tags:
   - pregnancy
   - PSB
   - EHR
-authors: []
 doi: ''
 publishDate: '2020-12-10T16:26:27-05:00'
 publication_types:
