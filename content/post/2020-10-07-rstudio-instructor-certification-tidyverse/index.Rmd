@@ -65,7 +65,7 @@ In the interest of making an informed decision, I asked a few instructors to sha
 I met these wonderful people through the [R-Ladies Global](https://twitter.com/RLadiesGlobal) Slack workspace:
 
 - `r emo::ji("argentina")` [Yanina Bellini Saibene](https://education.rstudio.com/trainers/people/bellini_saibene+yanina/) shared her experience with this process in her blog post [Obtaining RStudio certification. A shared path](https://yabellini.netlify.app/post/rstudiocertification/).
-- `r emo::ji("netherlands")` [Paloma Rojas-Saunero](https://education.rstudio.com/trainers/people/rojas-saunero+paloma/) shared her view as a Ph.D. candidate with experience teaching R in R-Ladies workshops and as a teaching assistant in biostatistics courses.
+- `r emo::ji("bolivia")` `r emo::ji("netherlands")` [Paloma Rojas-Saunero](https://education.rstudio.com/trainers/people/rojas-saunero+paloma/) shared her view as a Ph.D. candidate with experience teaching R in R-Ladies workshops and as a teaching assistant in biostatistics courses.
 - `r emo::ji("kenya")` [Shelmith Kariuki](https://education.rstudio.com/trainers/people/kariuki+shelmith/) speaks to her experience in her blog post [The RStudio Certification Process](https://shelkariuki.netlify.app/post/certification/). 
 
 ### Here's what folks had to say!
