@@ -12,7 +12,6 @@ organizations:
   url: ""
 
 role: Postdoctoral Research Scientist
-social:
 
 interests:
 - Reproductive & sexual health

@@ -3,10 +3,12 @@ title: 'Philly Center City Sips 2019: An Interactive Map'
 author: silvia
 date: '2019-08-04'
 slug: ccd-sips
-categories: [R minis]
+categories:
+  - R
 tags:
   - mapping
-  - R
+  - Leaflet
+  - RSelenium
 subtitle: 'An interactive map showing restaurants participating in Philly’s Center City District Sips 2019.'
 summary: 'An interactive map showing restaurants participating in Philly’s Center City District Sips 2019.'
 authors: []
@@ -22,7 +24,7 @@ links:
 - icon: map-marked-alt
   icon_pack: fas
   name: Interactive Map
-  url: https://spcanelon.github.io/CCDSips2019.html
+  url: CCDSips2019.html
 ---
 
 I used **R** to play around with **webscraping** and create an [interactive map](https://spcanelon.github.io/CCDSips2019.html/) showing restaurants participating in Philly’s 2019 [Center City District Sips](https://centercityphila.org/explore-center-city/ccdsips). Center City Sips is a series of summer Wednesday evenings filled with **happy hour specials**.
@@ -31,7 +33,7 @@ This mini-project was motivated by two of my close friends' frustration with the
 
 The map pop-ups could use information on the specials for each restaurant, but my newly acquired skills with the `RSelenium` and `Leaflet` packages weren't quite up to the task!
 
-<div style="align: center; margin-left: -150px;"> <iframe src="https://spcanelon.github.io/CCDSips2019.html" width="1000px" height="900px" frameborder="0"></iframe> </div> 
+<div style="align: center; margin-left: -150px;"> <iframe src="CCDSips2019.html" width="1000px" height="900px" frameborder="0"></iframe> </div> 
 
 ```{r setup, eval=TRUE, include=FALSE}
 library(tidyverse)

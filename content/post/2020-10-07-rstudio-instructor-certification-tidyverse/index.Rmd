@@ -4,15 +4,16 @@ author: silvia
 date: '2020-10-07'
 categories:
   - R
-tags:
-  - r
+  - Teaching
   - tidyverse
+tags:
+  - RStudio
 slug: rstudio-instructor-certification-tidyverse
 subtitle: An overview of the [RStudio Instructor certification](https://education.rstudio.com/trainers/#info)
   process and collection of resources to support anyone on their certification journey.
 summary: An overview of the [RStudio Instructor certification](https://education.rstudio.com/trainers/#info)
   process and collection of resources to support anyone on their certification journey.
-lastmod: '2020-10-07'
+lastmod: 2021-03-14
 featured: yes
 draft: no
 image:
@@ -64,7 +65,7 @@ In the interest of making an informed decision, I asked a few instructors to sha
 I met these wonderful people through the [R-Ladies Global](https://twitter.com/RLadiesGlobal) Slack workspace:
 
 - `r emo::ji("argentina")` [Yanina Bellini Saibene](https://education.rstudio.com/trainers/people/bellini_saibene+yanina/) shared her experience with this process in her blog post [Obtaining RStudio certification. A shared path](https://yabellini.netlify.app/post/rstudiocertification/).
-- `r emo::ji("netherlands")` [Paloma Rojas-Saunero](https://education.rstudio.com/trainers/people/rojas-saunero+paloma/) shared her view as a Ph.D. candidate with experience teaching R in R-Ladies workshops and as a teaching assistant in biostatistics courses.
+- `r emo::ji("bolivia")` `r emo::ji("netherlands")` [Paloma Rojas-Saunero](https://education.rstudio.com/trainers/people/rojas-saunero+paloma/) shared her view as a Ph.D. candidate with experience teaching R in R-Ladies workshops and as a teaching assistant in biostatistics courses.
 - `r emo::ji("kenya")` [Shelmith Kariuki](https://education.rstudio.com/trainers/people/kariuki+shelmith/) speaks to her experience in her blog post [The RStudio Certification Process](https://shelkariuki.netlify.app/post/certification/). 
 
 ### Here's what folks had to say!
@@ -172,6 +173,9 @@ If you're a member of the MiR Community and like the idea of studying with some 
 - Ted Laderas -- [My Experience with RStudio Instructor Training](https://education.rstudio.com/blog/2019/11/my-experience-with-rstudio-instructor-training/#tidyverse-certification-exam)
 - Rayna Harris -- [A Review: RStudio Teaching Certification Course](https://www.raynamharris.com/blog/rstudioTTT/)
 - Brendan Cullen -- [Reflections on RStudio Instructor Training](https://bcullen.rbind.io/post/2020-09-03-reflections-on-rstudio-instructor-training/)
+- Yuqi Liao -- [Getting Certified as an RStudio Instructor](https://www.yuqiliao.com/blog/rstudiocertification/)
+- Beatriz Milz -- [Certificação da RStudio](https://beatrizmilz.com/posts/2021-03-02-certificacao-rstudio/)
+- Rohan Alexander -- [In Appreciation of Greg Wilson](https://rohanalexander.com/posts/2021-03-14-greg-wilson/)
 
 ## Teaching exam examples
 
@@ -201,13 +205,17 @@ If you're a member of the MiR Community and like the idea of studying with some 
   - [GitHub repo](https://github.com/CorradoLanera/rs-teaching-exam)
 - Brendan Cullen
   - [Lesson slides: Column-wise operations with dplyr: Old and New](https://columnwise-operations-dplyr.netlify.app/)
-  - [Blog post: Reflections on RStudio Instructor Training](https://bcullen.rbind.io/post/2020-09-03-reflections-on-rstudio-instructor-training/)
   - [GitHub repo](https://github.com/brendanhcullen/rstudio-instructor-certification)
 - Adi Sarid 
   - [GitHub repo: Exercise on purrr](https://github.com/adisarid/rstudio_certification_exam)
 - David John Baker
   - [Lesson slides: Learn to Pivot!](https://docs.google.com/presentation/d/1MFstJ3qFF1kK5dHJubn7KsPb2kcPSmuLnvHSP3QiFEA/edit?usp=sharing)
   - [GitHub repo](https://github.com/davidjohnbaker1/rstudio_certification_training)
+- Yuqi Liao
+  - [Lesson slides: Creating animated visualizations in R](https://animationr.netlify.app/#1)
+  - [GitHub repo](https://github.com/yuqiliao/RStudio_TeachingSample)
+- Luis Verde
+  - [GitHub repo](https://github.com/luisDVA/example-lesson)
 
 ## Tidyverse sample exam solutions
 

@@ -3,10 +3,13 @@ title: 'Migrating from Trello to Airtable: Working with JSON Data in R'
 author: silvia
 date: '2020-05-12'
 slug: trello-to-airtable
-categories: [R minis]
+categories:
+  - R
+  - Tutorial
 tags:
-  - r
   - json
+  - jsonlite
+  - tidyverse
 subtitle: 'Tutorial on how to migrate your current Trello board to an Airtable base from start to finish.'
 summary: 'Tutorial on how to migrate your current Trello board to an Airtable base from start to finish.'
 authors: []
@@ -25,6 +28,10 @@ output:
     number_sections: true
     toc_depth: 1
 links:
+  - icon: file-code
+    icon_pack: far
+    name: R script
+    url: index.R
   - icon: file-code
     icon_pack: far
     name: R Markdown
@@ -68,7 +75,8 @@ Last but not least -- we'll be keeping things tidy, with the help of the [**tidy
 # Importing JSON file
 
 ```{r, include = FALSE}
-knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+knitr::opts_chunk$set(warning = FALSE, message = FALSE,
+                      eval=FALSE)
 ```
 
 ```{r import, results=FALSE}
@@ -252,7 +260,7 @@ glimpse(tidy_cards)
 ```
 
 ## Data exporting
-```{r export-csv, eval=TRUE}
+```{r export-csv, eval=FALSE}
 write.csv(tidy_cards, file = "tidy_cards.csv")
 ```
 
