@@ -2,17 +2,20 @@
 title: Introducción al Paquete xaringan
 author: silvia
 date: 2020-12-17T18:00:00
-slug: introduccion-xaringan
+slug: 2020-12-17-introduccion-xaringan
 categories:
   - R
-tags:
   - xaringan
+  - Tutorial
+  - Teaching
+tags:
   - R-Ladies
-event: Meetup
+  - Español
+event: R-Ladies Xalapa Meetup
 event_url: https://www.meetup.com/rladies-xalapa/events/274906676/
 location: Xalapa, Veracruz, México (virtual)
 subtitle: Taller del paquete xaringan para presentaciones,<br>creado para [R-Ladies Xalapa](https://twitter.com/RLadiesXalapa)
-summary: Taller del paquete xaringan para presentaciones,<br>creado para [R-Ladies Xalapa](https://twitter.com/RLadiesXalapa)
+summary: Taller del paquete xaringan para presentaciones,<br>creado para R-Ladies Xalapa
 abstract: El taller tiene por objetivo introducir a las participantes al paquete xaringan de R como una herramienta para crear diapositivas de presentación impresionantes que se pueden implementar en la web para compartir fácilmente.
 date_end: 2020-12-17T20:00:00
 all_day: no
@@ -20,7 +23,7 @@ publishDate: '2020-12-10'
 authors: []
 featured: yes
 image:
-  caption: '[Introducción a xaringan](https://www.meetup.com/rladies-xalapa/events/274906676/)'
+  caption: '[Introducción a xaringan | R-Ladies Xalapa](https://spcanelon.github.io/xaringan-rladies-xalapa/diapositivas/introduccion-xaringan.html)'
   focal_point: center
   preview_only: no
 slides: ''

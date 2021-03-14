@@ -3,8 +3,14 @@ title: 'β-Aminopropionitrile-Induced Reduction in Enzymatic Crosslinking Causes
 author:
 date: '2016-11-06'
 slug: bapn-morphology
-categories: []
-tags: []
+categories:
+  - Research
+tags:
+  - osteoblasts
+  - Type I collagen
+  - BAPN
+  - AFM
+  - crosslinking
 authors:
   - silvia
   - Joseph M. Wallace 

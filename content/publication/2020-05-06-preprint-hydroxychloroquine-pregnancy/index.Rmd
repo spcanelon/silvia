@@ -2,11 +2,14 @@
 title: 'Is Hydroxychloroquine Safe During Pregnancy? Observations from Penn Medicine'
 date: '2020-05-06'
 slug: preprint-hydroxychloroquine-pregnancy
-categories: []
+categories:
+  - Research
 tags:
+  - EHR
   - 'covid-19'
   - medications
   - pregnancy
+  - English
 authors:
   - Lena M. Davidson
   - silvia

@@ -3,10 +3,13 @@ title: 'Migrating from Trello to Airtable: Working with JSON Data in R'
 author: silvia
 date: '2020-05-12'
 slug: trello-to-airtable
-categories: [R minis]
+categories:
+  - R
+  - Tutorial
 tags:
-  - r
   - json
+  - jsonlite
+  - tidyverse
 subtitle: 'Tutorial on how to migrate your current Trello board to an Airtable base from start to finish.'
 summary: 'Tutorial on how to migrate your current Trello board to an Airtable base from start to finish.'
 authors: []
@@ -27,6 +30,10 @@ output:
 links:
   - icon: file-code
     icon_pack: far
+    name: R script
+    url: index.R
+  - icon: file-code
+    icon_pack: far
     name: R Markdown
     url: index.Rmd
   - icon: table
@@ -35,9 +42,7 @@ links:
     url: program-mgmt.json
 ---
 
-<script src="index_files/header-attrs/header-attrs.js"></script>
-<link href="index_files/anchor-sections/anchor-sections.css" rel="stylesheet" />
-<script src="index_files/anchor-sections/anchor-sections.js"></script>
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 <div id="TOC">
 <ul>
@@ -97,43 +102,6 @@ library(lubridate)
 library(tidyverse)</code></pre>
 <pre class="r"><code>trello &lt;- stream_in(file(&quot;program-mgmt.json&quot;)) # produces a data frame</code></pre>
 <pre class="r"><code>glimpse(trello)</code></pre>
-<pre><code>## Rows: 1
-## Columns: 35
-## $ id                &lt;chr&gt; &quot;5eb0d2732976430b950123eb&quot;
-## $ name              &lt;chr&gt; &quot;Program Management Template&quot;
-## $ desc              &lt;chr&gt; &quot;A simple template with valuable links to resources…
-## $ descData          &lt;lgl&gt; NA
-## $ closed            &lt;lgl&gt; FALSE
-## $ idOrganization    &lt;lgl&gt; NA
-## $ shortLink         &lt;chr&gt; &quot;AENSPbmG&quot;
-## $ powerUps          &lt;list&gt; [[]]
-## $ dateLastActivity  &lt;chr&gt; &quot;2020-05-05T02:41:56.852Z&quot;
-## $ idTags            &lt;list&gt; [[]]
-## $ datePluginDisable &lt;lgl&gt; NA
-## $ creationMethod    &lt;lgl&gt; NA
-## $ idBoardSource     &lt;chr&gt; &quot;5e2440092eecc03dab3d216b&quot;
-## $ idEnterprise      &lt;lgl&gt; NA
-## $ pinned            &lt;lgl&gt; FALSE
-## $ starred           &lt;lgl&gt; FALSE
-## $ url               &lt;chr&gt; &quot;https://trello.com/b/AENSPbmG/program-management-t…
-## $ shortUrl          &lt;chr&gt; &quot;https://trello.com/b/AENSPbmG&quot;
-## $ ixUpdate          &lt;chr&gt; &quot;4&quot;
-## $ limits            &lt;df[,11]&gt; &lt;data.frame[1 x 11]&gt;
-## $ enterpriseOwned   &lt;lgl&gt; FALSE
-## $ prefs             &lt;df[,22]&gt; &lt;data.frame[1 x 22]&gt;
-## $ subscribed        &lt;lgl&gt; FALSE
-## $ templateGallery   &lt;lgl&gt; NA
-## $ labelNames        &lt;df[,10]&gt; &lt;data.frame[1 x 10]&gt;
-## $ dateLastView      &lt;chr&gt; &quot;2020-05-06T15:48:51.390Z&quot;
-## $ actions           &lt;list&gt; [&lt;data.frame[2 x 7]&gt;]
-## $ cards             &lt;list&gt; [&lt;data.frame[32 x 37]&gt;]
-## $ labels            &lt;list&gt; [&lt;data.frame[7 x 4]&gt;]
-## $ lists             &lt;list&gt; [&lt;data.frame[11 x 9]&gt;]
-## $ members           &lt;list&gt; [&lt;data.frame[1 x 20]&gt;]
-## $ checklists        &lt;list&gt; [&lt;data.frame[2 x 8]&gt;]
-## $ customFields      &lt;list&gt; [[]]
-## $ memberships       &lt;list&gt; [&lt;data.frame[1 x 5]&gt;]
-## $ pluginData        &lt;list&gt; [[]]</code></pre>
 <p>A <em>lot</em> of information about the Trello board is contained in JSON data. We’ll be parsing information about the <code>cards</code> as well as the <code>lists</code> and then joining them together by a common identifier <code>id</code> or <code>idShort</code>.</p>
 </div>
 <div id="parsing-information" class="section level1" number="5">
@@ -150,47 +118,9 @@ cards_flat &lt;- flatten(cards) #list of 37
 
 # tibble time
 cards_flat_tbl &lt;- as_tibble(cards_flat) # 32 obs of 37 variables
-glimpse(cards_flat_tbl)</code></pre>
-<pre><code>## Rows: 32
-## Columns: 37
-## $ id                    &lt;chr&gt; &quot;5eb0d2732976430b95012422&quot;, &quot;5eb0d2732976430b95…
-## $ address               &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-## $ checkItemStates       &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-## $ closed                &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE…
-## $ coordinates           &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-## $ creationMethod        &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-## $ dateLastActivity      &lt;chr&gt; &quot;2020-05-05T02:41:56.366Z&quot;, &quot;2020-05-05T02:41:5…
-## $ desc                  &lt;chr&gt; &quot;- Limit Objectives To a Quarter\n- Use OKRs to…
-## $ descData              &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-## $ dueReminder           &lt;int&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, -1, -1,…
-## $ idBoard               &lt;chr&gt; &quot;5eb0d2732976430b950123eb&quot;, &quot;5eb0d2732976430b95…
-## $ idLabels              &lt;list&gt; [&lt;&gt;, &quot;5eb0d2732976430b9501245a&quot;, &quot;5eb0d2732976…
-## $ idList                &lt;chr&gt; &quot;5eb0d2732976430b950123ec&quot;, &quot;5eb0d2732976430b95…
-## $ idMembersVoted        &lt;list&gt; [[], [], [], [], [], [], [], [], [], [], [], […
-## $ idShort               &lt;int&gt; 7, 17, 18, 19, 8, 21, 22, 32, 16, 20, 25, 26, 9…
-## $ idAttachmentCover     &lt;chr&gt; &quot;5eb0d2742976430b950124e1&quot;, NA, NA, NA, &quot;5eb0d2…
-## $ locationName          &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-## $ manualCoverAttachment &lt;lgl&gt; TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, …
-## $ name                  &lt;chr&gt; &quot;Key Objectives that the program will focus on …
-## $ pos                   &lt;dbl&gt; 65535.0, 131071.0, 196607.0, 262143.0, 65535.0,…
-## $ shortLink             &lt;chr&gt; &quot;qvqixygv&quot;, &quot;4rOLZNMw&quot;, &quot;KgVOC3qc&quot;, &quot;4Fly9akh&quot;,…
-## $ isTemplate            &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE…
-## $ badges                &lt;df[,14]&gt; &lt;data.frame[26 x 14]&gt;
-## $ dueComplete           &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE…
-## $ due                   &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-## $ email                 &lt;chr&gt; &quot;spcanelon+2rt0kpr4pzcxfhsnf6o+2ua72xba0q9l7pk1…
-## $ idChecklists          &lt;list&gt; [&lt;&gt;, &lt;&gt;, &lt;&gt;, &lt;&gt;, &lt;&gt;, &lt;&gt;, &lt;&gt;, &lt;&gt;, &lt;&gt;, &lt;&gt;, &lt;&gt;, &lt;…
-## $ idMembers             &lt;list&gt; [[], [], [], [], [], [], [], [], [], [], [], […
-## $ labels                &lt;list&gt; [&lt;data.frame[0 x 0]&gt;, &lt;data.frame[1 x 4]&gt;, &lt;da…
-## $ limits                &lt;df[,3]&gt; &lt;data.frame[26 x 3]&gt;
-## $ shortUrl              &lt;chr&gt; &quot;https://trello.com/c/qvqixygv&quot;, &quot;https://trell…
-## $ subscribed            &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE…
-## $ url                   &lt;chr&gt; &quot;https://trello.com/c/qvqixygv/7-key-objectives…
-## $ cover                 &lt;df[,6]&gt; &lt;data.frame[26 x 6]&gt;
-## $ attachments           &lt;list&gt; [&lt;data.frame[1 x 11]&gt;, &lt;data.frame[0 x 0]&gt;, &lt;d…
-## $ pluginData            &lt;list&gt; [[], [], [], [], [], [], [], [], [], [], [], […
-## $ customFieldItems      &lt;list&gt; [[], [], [], [], [], [], [], [], [], [], [], […</code></pre>
-<pre class="r"><code># selecting wanted variables
+glimpse(cards_flat_tbl)
+
+# selecting wanted variables
 cards_trim &lt;- cards_flat_tbl %&gt;%
   select(id, idShort, idList, dateLastActivity, name, desc, dueComplete, due,
          labels, attachments, shortUrl, closed) %&gt;%
@@ -213,38 +143,9 @@ labels_info &lt;- cards_trim %&gt;%
   mutate(labelList_tidy = str_remove_all(labelList_tidy, pattern =&quot;\\)&quot;)) %&gt;%
   unique()
 
-knitr::kable(labels_info %&gt;% head(n = 3L))</code></pre>
-<table>
-<thead>
-<tr class="header">
-<th align="left">id</th>
-<th align="right">idShort</th>
-<th align="left">labelList</th>
-<th align="left">labelList_tidy</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">5eb0d2732976430b95012436</td>
-<td align="right">17</td>
-<td align="left">Product</td>
-<td align="left">Product</td>
-</tr>
-<tr class="even">
-<td align="left">5eb0d2732976430b95012438</td>
-<td align="right">18</td>
-<td align="left">Sales &amp; Marketing</td>
-<td align="left">Sales &amp; Marketing</td>
-</tr>
-<tr class="odd">
-<td align="left">5eb0d2732976430b9501243a</td>
-<td align="right">19</td>
-<td align="left">Engineering</td>
-<td align="left">Engineering</td>
-</tr>
-</tbody>
-</table>
-<pre class="r"><code># joining back with main cards data frame
+knitr::kable(labels_info %&gt;% head(n = 3L))
+
+# joining back with main cards data frame
 ct_labels &lt;- left_join(cards_trim %&gt;% select(-labels), labels_info %&gt;% select(-labelList))</code></pre>
 </div>
 <div id="attachments" class="section level3" number="5.1.2">
@@ -257,39 +158,9 @@ att_urls &lt;- ct_labels %&gt;%
   select(idShort, url) %&gt;%
   mutate(url = as.character(url),
          attachmentError = &#39;FALSE&#39;)
-knitr::kable(att_urls %&gt;% head(n = 3L))</code></pre>
-<table>
-<colgroup>
-<col width="4%" />
-<col width="85%" />
-<col width="9%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="right">idShort</th>
-<th align="left">url</th>
-<th align="left">attachmentError</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="right">10</td>
-<td align="left"><a href="https://trello-attachments.s3.amazonaws.com/5eb0d2732976430b950123eb/5eb0d2732976430b95012428/x/65f56db0b02c7d71fbb20c23c6923ecf/risk.png" class="uri">https://trello-attachments.s3.amazonaws.com/5eb0d2732976430b950123eb/5eb0d2732976430b95012428/x/65f56db0b02c7d71fbb20c23c6923ecf/risk.png</a></td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="right">13</td>
-<td align="left"><a href="https://trello-attachments.s3.amazonaws.com/5eb0d2732976430b950123eb/5eb0d2732976430b9501242e/x/f400e4051bafe46d0a2918ce429c77b3/scrum.png" class="uri">https://trello-attachments.s3.amazonaws.com/5eb0d2732976430b950123eb/5eb0d2732976430b9501242e/x/f400e4051bafe46d0a2918ce429c77b3/scrum.png</a></td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="odd">
-<td align="right">6</td>
-<td align="left"><a href="https://trello-attachments.s3.amazonaws.com/5eb0d2732976430b950123eb/5eb0d2732976430b95012420/x/4c5034647d03e2bfd7c8f3d95989dd84/party.png" class="uri">https://trello-attachments.s3.amazonaws.com/5eb0d2732976430b950123eb/5eb0d2732976430b95012420/x/4c5034647d03e2bfd7c8f3d95989dd84/party.png</a></td>
-<td align="left">FALSE</td>
-</tr>
-</tbody>
-</table>
-<pre class="r"><code># creating directory for attachments
+knitr::kable(att_urls %&gt;% head(n = 3L))
+
+# creating directory for attachments
 dirAttachments &lt;- &quot;attachments/&quot;
 dir.create(dirAttachments)
 
@@ -332,54 +203,18 @@ ct_labels &lt;- ct_labels %&gt;%
 <p>The <code>lists</code> information is extracted similarly to the <code>cards</code> information, but flattening is a little more straightforward because it involves only one data frame. With more data frames, the <code>unnest</code> function is a better choice.</p>
 <pre class="r"><code># selecting lists information
 lists &lt;- trello$lists # list of 1 data frame
-glimpse(lists)</code></pre>
-<pre><code>## List of 1
-##  $ :&#39;data.frame&#39;:    11 obs. of  9 variables:
-##   ..$ id            : chr [1:11] &quot;5eb0d2732976430b950123ec&quot; &quot;5eb0d2732976430b950123ed&quot; &quot;5eb0d2732976430b950123ee&quot; &quot;5eb0d2732976430b950123ef&quot; ...
-##   ..$ name          : chr [1:11] &quot;Focus Objectives For The Quarter&quot; &quot;Key Performance Indicators For The Quarter&quot; &quot;Metrics and Reporting&quot; &quot;Milestones &amp; Important Dates&quot; ...
-##   ..$ closed        : logi [1:11] FALSE FALSE FALSE FALSE FALSE FALSE ...
-##   ..$ pos           : int [1:11] 65535 131071 147455 163839 180223 188415 196607 262143 327679 393215 ...
-##   ..$ softLimit     : logi [1:11] NA NA NA NA NA NA ...
-##   ..$ creationMethod: logi [1:11] NA NA NA NA NA NA ...
-##   ..$ idBoard       : chr [1:11] &quot;5eb0d2732976430b950123eb&quot; &quot;5eb0d2732976430b950123eb&quot; &quot;5eb0d2732976430b950123eb&quot; &quot;5eb0d2732976430b950123eb&quot; ...
-##   ..$ limits        :&#39;data.frame&#39;:   11 obs. of  1 variable:
-##   .. ..$ cards:&#39;data.frame&#39;: 11 obs. of  2 variables:
-##   ..$ subscribed    : logi [1:11] FALSE FALSE FALSE FALSE FALSE FALSE ...</code></pre>
-<pre class="r"><code># flattening
+glimpse(lists)
+
+# flattening
 lists_flat &lt;- lists[[1]] # 17 obs of 9 variables
 
 # selecting wanted variables
 lists_trim &lt;- lists_flat %&gt;%
   select(id, name, closed) %&gt;%
   rename(idList = id, nameList = name, closedList = closed)
-knitr::kable(lists_trim %&gt;% head(n = 3L))</code></pre>
-<table>
-<thead>
-<tr class="header">
-<th align="left">idList</th>
-<th align="left">nameList</th>
-<th align="left">closedList</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">5eb0d2732976430b950123ec</td>
-<td align="left">Focus Objectives For The Quarter</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="even">
-<td align="left">5eb0d2732976430b950123ed</td>
-<td align="left">Key Performance Indicators For The Quarter</td>
-<td align="left">FALSE</td>
-</tr>
-<tr class="odd">
-<td align="left">5eb0d2732976430b950123ee</td>
-<td align="left">Metrics and Reporting</td>
-<td align="left">FALSE</td>
-</tr>
-</tbody>
-</table>
-<pre class="r"><code># joining back with main cards+labels data frame
+knitr::kable(lists_trim %&gt;% head(n = 3L))
+
+# joining back with main cards+labels data frame
 ct_labels_list &lt;- left_join(ct_labels, lists_trim) %&gt;%
   select(id:shortUrl, labelList_tidy:nameList, closed, closedList)</code></pre>
 </div>
@@ -403,23 +238,9 @@ tidy_cards &lt;- ct_labels_list %&gt;%
 <p>The last step before exporting the final data frame <code>tidy_cards</code> is to check the unique number of tasks to make sure it matches the number of records in the data frame (i.e. one task per observation).</p>
 <pre class="r"><code># determining the number of unique tasks
 length(unique(tidy_cards$Task_ID))
-## [1] 32
 
 # final look at tidy_cards
-glimpse(tidy_cards)
-## Rows: 32
-## Columns: 11
-## $ Task                 &lt;chr&gt; &quot;Risks, dependencies, status and mitigation plan…
-## $ Task_ID              &lt;int&gt; 10, 13, 6, 14, 11, 8, 16, 15, 12, 9, 7, 2, 3, 4,…
-## $ Notes                &lt;chr&gt; &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;### OKR Examples\n\n- Plent…
-## $ Done                 &lt;chr&gt; &quot;NA&quot;, &quot;NA&quot;, &quot;NA&quot;, &quot;NA&quot;, &quot;NA&quot;, &quot;NA&quot;, &quot;NA&quot;, &quot;NA&quot;, …
-## $ Date_Due             &lt;dttm&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-## $ Labels               &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …
-## $ Trello_List          &lt;chr&gt; &quot;Risks &amp; Dependencies&quot;, &quot;Release Management&quot;, &quot;E…
-## $ Trello_Last_Modified &lt;dttm&gt; 2020-05-04 22:41:56, 2020-05-04 22:41:56, 2020-…
-## $ Trello_Url           &lt;chr&gt; &quot;https://trello.com/c/gu8n5Tmt&quot;, &quot;https://trello…
-## $ Trello_Attachments   &lt;lgl&gt; TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, …
-## $ Archived             &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE,…</code></pre>
+glimpse(tidy_cards)</code></pre>
 </div>
 <div id="data-exporting" class="section level2" number="6.2">
 <h2><span class="header-section-number">6.2</span> Data exporting</h2>
