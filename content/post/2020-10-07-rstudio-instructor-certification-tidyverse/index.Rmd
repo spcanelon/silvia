@@ -175,6 +175,7 @@ If you're a member of the MiR Community and like the idea of studying with some 
 - Brendan Cullen -- [Reflections on RStudio Instructor Training](https://bcullen.rbind.io/post/2020-09-03-reflections-on-rstudio-instructor-training/)
 - Yuqi Liao -- [Getting Certified as an RStudio Instructor](https://www.yuqiliao.com/blog/rstudiocertification/)
 - Beatriz Milz -- [Certificação da RStudio](https://beatrizmilz.com/posts/2021-03-02-certificacao-rstudio/)
+- Rohan Alexander -- [In Appreciation of Greg Wilson](https://rohanalexander.com/posts/2021-03-14-greg-wilson/)
 
 ## Teaching exam examples
 
@@ -204,7 +205,6 @@ If you're a member of the MiR Community and like the idea of studying with some 
   - [GitHub repo](https://github.com/CorradoLanera/rs-teaching-exam)
 - Brendan Cullen
   - [Lesson slides: Column-wise operations with dplyr: Old and New](https://columnwise-operations-dplyr.netlify.app/)
-  - [Blog post: Reflections on RStudio Instructor Training](https://bcullen.rbind.io/post/2020-09-03-reflections-on-rstudio-instructor-training/)
   - [GitHub repo](https://github.com/brendanhcullen/rstudio-instructor-certification)
 - Adi Sarid 
   - [GitHub repo: Exercise on purrr](https://github.com/adisarid/rstudio_certification_exam)
