@@ -36,10 +36,10 @@ projects: []
 #   icon_pack: fas
 #   name: video
 #   url: https://www.youtube.com/watch?v=d1vLx2vDbU8
-# - icon: pencil-alt
-#   icon_pack: fas
-#   name: R-Ladies blog post
-#   url: https://www.rladiesphilly.org/post/recap_teachr/
+- icon: pencil-alt
+  icon_pack: fas
+  name: "Blog post: Deploying xaringan Slides"
+  url: https://silvia.rbind.io/2021-03-16-deploying-xaringan-slides
 ---
 
 ![](rladies-seattle.png)
