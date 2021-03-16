@@ -27,7 +27,7 @@ image:
   preview_only: no
 slides: ''
 projects: []
-# links:
+links:
 # - icon: images
 #   icon_pack: fas
 #   name: slides
