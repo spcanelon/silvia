@@ -56,6 +56,8 @@ links:
 
 # The Ten-Step Workflow
 
+This workflow assumes you have already connected RStudio to Git and GitHub.^[[Chapter 12 Connect RStudio to Git and GitHub | Happy Git and GitHub for the useR](https://happygitwithr.com/rstudio-git-github.html)]
+
 ## Packages
 
 This code-through was developed using:
