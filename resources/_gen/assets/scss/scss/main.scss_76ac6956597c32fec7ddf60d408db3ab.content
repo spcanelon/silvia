@@ -9250,8 +9250,13 @@ pre {
 
 code {
   color: #122140;
-  background: #cfd2d8;
-  font-size: 0.9em; }
+  background: rgba(207, 210, 216, 0.5);
+  font-size: 0.9em;
+  padding: 4px 5px 4px 5px;
+  border-radius: 1px; }
+
+.element.style {
+  color: #122140; }
 
 .card {
   background: white; }
@@ -9348,13 +9353,16 @@ div.universal-wrapper.pt-3 h1 {
 hr {
   border: 0;
   height: 1px;
-  background: #d53135;
+  background: #122140;
   background-image: none; }
 
 .center-block {
   display: block;
   margin-left: auto;
   margin-right: auto; }
+
+.dark blockquote {
+  border-left: 0.25rem solid rgba(255, 255, 255, 0.45); }
 
 img {
   margin-bottom: 1.5rem;
@@ -9400,6 +9408,12 @@ body.dark .modal button.close {
 
 body.dark {
   background-color: #121824; }
+
+.dark hr {
+  border: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.87);
+  background-image: none; }
 
 .dark .form-control {
   color: rgba(255, 255, 255, 0.6);
@@ -9474,6 +9488,22 @@ body.dark {
 
 .dark .hljs {
   background-color: #222833; }
+
+div.alert-note > div:first-child::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #ae8f00;
+  content: "\f00c"; }
+
+.dark .alert-note {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #1d232e;
+  border-top: 2px solid rgba(255, 255, 255, 0.87);
+  border-radius: 0px;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+  padding: 23px 10px 21px 10px; }
 
 .dark .markup-quote {
   background-image: linear-gradient(to bottom, rgba(233, 231, 245, 0.2), rgba(233, 231, 245, 0.2)); }

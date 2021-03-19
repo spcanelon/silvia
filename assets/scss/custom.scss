@@ -232,8 +232,15 @@ pre {
 // inline code
 code {
   color: $spc-primary;
-  background: #cfd2d8;
+  background: rgba(207,210,216,0.5);
   font-size: 0.9em;
+  padding: 4px 5px 4px 5px;
+  border-radius: 1px;
+}
+
+// copy code button
+.element.style {
+  color: $spc-primary;
 }
 
 // ************************************************
@@ -365,7 +372,7 @@ div.universal-wrapper.pt-3 h1 {
 hr {
   border: 0;
   height: 1px;
-  background: #d53135;
+  background: $spc-primary;
   background-image: none;
 }
 .center-block {
@@ -373,7 +380,9 @@ hr {
     margin-left: auto;
     margin-right: auto;
  }
-
+.dark blockquote {
+  border-left: 0.25rem solid $spc-text-low;
+}
 
 // images more like cards; iframes more seamless -- used by Alison
 img {
@@ -413,11 +422,11 @@ iframe {
    }
 }
 
-// ************************************************
-// ************************************************
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 // DARK MODE CUSTOMIZATION
-// ************************************************
-// ************************************************
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 
 // Page builder: _widgets.scss
 .dark {
@@ -444,6 +453,13 @@ body.dark {
 
 body.dark {
   background-color: $spc-00dp;         // base surface
+}
+
+.dark hr {
+  border: 0;
+  height: 1px;
+  background: $spc-text-high;
+  background-image: none;
 }
 
 // Contact form
@@ -559,6 +575,26 @@ body.dark {
   .hljs {
   	background-color: $spc-02dp;                // code block text background
   }
+}
+
+// SHORTCODE
+// icon
+div.alert-note > div:first-child::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: $spc-secondary-dark;
+  content: "\f00c"; // check mark icon
+}
+// message box
+.dark .alert-note {
+  color: $spc-text-high;
+  background-color: $spc-01dp;
+  border-top: 2px solid $spc-text-high;
+  border-radius: 0px; //undo rounded corners
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+  padding: 23px 10px 21px 10px;
 }
 
 // ************************************************
