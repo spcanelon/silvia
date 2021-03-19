@@ -38,6 +38,16 @@ links:
     name: R-Ladies template slides
     url: https://spcanelon.github.io/RLadies-xaringan-template
 ---
+```{r setup, echo=FALSE}
+htmltools::tagList(
+  xaringanExtra::use_clipboard(
+    button_text = "<i class=\"fa fa-clipboard\"></i> Copy Code",
+    success_text = "<i class=\"fa fa-check\" style=\"color: #90BE6D\"></i> Copied!",
+  ),
+  rmarkdown::html_dependency_font_awesome()
+)
+```
+
 
 {{% alert note %}}
 **Note:** This workflow is not exclusive to xaringan slides! Try it out with any other HTML file.

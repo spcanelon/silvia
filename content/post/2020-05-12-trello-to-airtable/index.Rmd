@@ -42,6 +42,16 @@ links:
     url: program-mgmt.json
 ---
 
+```{r setup, echo=FALSE}
+htmltools::tagList(
+  xaringanExtra::use_clipboard(
+    button_text = "<i class=\"fa fa-clipboard\"></i> Copy Code",
+    success_text = "<i class=\"fa fa-check\" style=\"color: #90BE6D\"></i> Copied!",
+  ),
+  rmarkdown::html_dependency_font_awesome()
+)
+```
+
 **[Airtable](https://airtable.com/) is a user-friendly and _powerful_ tool** that until recently I'd been using for personal projects (i.e. document organizing, apartment hunting, etc.). A couple of weeks ago I leaned on Airtable to create a base designed for the [Philadelphia Reproductive Freedom Collective](https://www.womensmedicalfund.org/prfc) to support our COVID-19 mutual aid efforts. 
 
 > Shout out to the [Silicon Valley Democratic Socialists of America](https://siliconvalleydsa.org/) who provided inspiration and support! Their mutual aid network is extensive and operates at an impressive scale. Get connected with the South Bay Mutual Aid network here: https://www.aidnetwork.org/
