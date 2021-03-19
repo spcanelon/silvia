@@ -39,6 +39,10 @@ links:
     url: https://spcanelon.github.io/RLadies-xaringan-template
 ---
 
+{{% alert note %}}
+**Note:** This workflow is not exclusive to xaringan slides! Try it out with any other HTML file.
+{{% /alert %}}
+
 # Choose your own adventure
 - **Option 1:** Keep reading to make a xaringan slide deck from scratch!
 - **Option 2:** Start with an R-Ladies themed xaringan template
@@ -234,19 +238,20 @@ Selection:
 # Learn more
 
 ## Foundation
-- [Sharing Your Work with xaringan • Silvia Canelón](https://spcanelon.github.io/xaringan-basics-and-beyond/index.html)
-- [Introducción al Paquete xaringan • Silvia Canelón](https://silvia.rbind.io/talk/2020-12-17-introduccion-xaringan/)
-- [Making Slides with R Markdown • Alison Hill](https://arm.rbind.io/slides/xaringan.html)
-- [Presentation Ninja • xaringan Official Document](https://slides.yihui.org/xaringan/)
-- [Chapter 7 xaringan Presentations • R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/xaringan.html)
+- [Sharing Your Work with xaringan • Silvia Canelón](https://spcanelon.github.io/xaringan-basics-and-beyond/index.html) -- workshop site
+- [Introducción al Paquete xaringan • Silvia Canelón](https://silvia.rbind.io/talk/2020-12-17-introduccion-xaringan/) -- R-Ladies Meetup
+- [Making Slides with R Markdown • Alison Hill](https://arm.rbind.io/slides/xaringan.html) -- workshop slides
+- [Presentation Ninja • xaringan Official Document](https://slides.yihui.org/xaringan/) -- package documentation
+- [Chapter 7 xaringan Presentations • R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/xaringan.html) -- book chapter
 
 ## Sharing your slides
-- [Sharing Your xaringan Slides • Garrick Aden‑Buie](https://www.garrickadenbuie.com/blog/sharing-xaringan-slides/)
-- [Functions For Building Xaringan Slides To Different Outputs. • xaringanBuilder](https://jhelvy.github.io/xaringanBuilder/)
-- [Sharing on Short Notice • Alison Hill & Desirée De Leon](https://alison.rbind.io/talk/2020-sharing-short-notice/)
+- [Sharing Your xaringan Slides • Garrick Aden‑Buie](https://www.garrickadenbuie.com/blog/sharing-xaringan-slides/) -- blog post
+- [Functions For Building Xaringan Slides To Different Outputs. • xaringanBuilder](https://jhelvy.github.io/xaringanBuilder/) -- package site
+- [Sharing on Short Notice • Alison Hill & Desirée De Leon](https://alison.rbind.io/talk/2020-sharing-short-notice/) -- video resource for deploying via Netlify
 
 ## Making your slides extra special
-- [Home · yihui/xaringan Wiki · GitHub](https://github.com/yihui/xaringan/wiki)
-- [Making Extra Great Slides • Garrick Aden‑Buie](https://www.garrickadenbuie.com/talk/extra-great-slides-nyhackr/)
-- [A playground of extensions for xaringan • xaringanExtra](https://pkg.garrickadenbuie.com/xaringanExtra/#/?id=xaringanextra)
-- [Custom xaringan CSS Themes • xaringanthemer](https://pkg.garrickadenbuie.com/xaringanthemer/)
+- [Home · yihui/xaringan Wiki • GitHub](https://github.com/yihui/xaringan/wiki) -- wiki of customizations for xaringan
+- [Making Extra Great Slides • Garrick Aden‑Buie](https://www.garrickadenbuie.com/talk/extra-great-slides-nyhackr/) -- talk & slides with xaringan overview and featuring CSS styling and xaringanthemer
+- [Applying design guidelines to slides with {xaringanthemer} • katie jolly](https://www.katiejolly.io/blog/2021-03-16/designing-slides) -- blog post
+- [A playground of extensions for xaringan • xaringanExtra](https://pkg.garrickadenbuie.com/xaringanExtra/#/?id=xaringanextra) -- package site
+- [Custom xaringan CSS Themes • xaringanthemer](https://pkg.garrickadenbuie.com/xaringanthemer/) -- package site
