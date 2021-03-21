@@ -33,16 +33,23 @@ projects: []
 links:
 - icon: images
   icon_pack: fas
-  name: slides (coming soon!)
-  #url: http://tiny.cc/rladies-phl-teaching-spc
-# - icon: play-circle
-#   icon_pack: fas
-#   name: video
-#   url: https://www.youtube.com/watch?v=d1vLx2vDbU8
+  name: slides
+  url: https://spcanelon.github.io/2021-AMIA-sickle-cell
+- icon: youtube
+  icon_pack: fab
+  name: video
+  url: https://youtu.be/d1IpkCim5F4
 - icon: calendar-check
   icon_pack: fas
   name: Oral Presentation Schedule
   url: https://www.amia.org/summit2021/oral-presentations
 ---
 
-![]()
+```{r echo=FALSE}
+xaringanExtra::embed_xaringan(
+  "https://spcanelon.github.io/2021-AMIA-sickle-cell",
+  ratio = "16:9")
+```
+
+![Banner for the 2021 AMIA Informatics Summit (March 22-25)](2021-AMIA-IS-banner.jpg)
+
