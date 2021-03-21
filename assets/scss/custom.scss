@@ -579,7 +579,7 @@ body.dark {
 
 // SHORTCODE
 // icon
-div.alert-note > div:first-child::before {
+.dark div.alert-note > div:first-child::before {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   color: $spc-secondary-dark;
