@@ -46,6 +46,8 @@ htmltools::tagList(
   ),
   rmarkdown::html_dependency_font_awesome()
 )
+
+library(xaringanExtra)
 ```
 
 
@@ -67,6 +69,13 @@ htmltools::tagList(
     ```
 
     > Note: After copying the files to your machine you'll probably want to rename the file folder to whatever makes sense for your presentation.
+
+```{r, echo=FALSE}
+xaringanExtra::embed_xaringan("https://spcanelon.github.io/RLadies-xaringan-template", 
+                              ratio = "4:3")
+```
+
+> Try navigating through the slides `r emo::ji("point_up")` with your left/right arrow keys and press the letter "P" on your keyboard to see some notes in Presenter View
 
 # The Ten-Step Workflow
 
