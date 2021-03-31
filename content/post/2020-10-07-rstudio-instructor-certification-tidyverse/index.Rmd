@@ -13,7 +13,7 @@ subtitle: An overview of the [RStudio Instructor certification](https://educatio
   process and collection of resources to support anyone on their certification journey.
 summary: An overview of the [RStudio Instructor certification](https://education.rstudio.com/trainers/#info)
   process and collection of resources to support anyone on their certification journey.
-lastmod: 2021-03-14
+lastmod: 2021-03-31
 featured: yes
 draft: no
 image:
@@ -38,7 +38,7 @@ links:
 ---
 
 {{% alert note %}}
-February 12th, 2021 was [Greg Wilson's last day at RStudio](https://twitter.com/gvwilson/status/1360304482496614402?s=20). This means he is no longer running the instructor training program, so the future of the program is unclear. You may want to reach out to [traininginstructor@rstudio.com](mailto:traininginstructor@rstudio.com) with any specific questions.
+February 12th, 2021 was [Greg Wilson's last day at RStudio](https://twitter.com/gvwilson/status/1360304482496614402?s=20). This means he is no longer running the [instructor training program](https://education.rstudio.com/trainers/#info), so the future of the program is unclear. You may want to contact [traininginstructor@rstudio.com](mailto:traininginstructor@rstudio.com) with any specific questions.
 
 You can also jump down in this blog post to [Teaching resources](#teaching-resources) to find a consolidated list of materials previously taught as part of the RStudio certification program, in addition to some related resources (thanks to Yanina for adding to this list!).
 
