@@ -25,7 +25,7 @@ all_day: yes
 publishDate: '2021-03-07'
 featured: yes
 image:
-  caption: '[2021 AMIA Informatics Summit Podium Presentation](gthttps://spcanelon.github.io/2021-AMIA-sickle-cell)'
+  caption: '[2021 AMIA Informatics Summit Podium Presentation](bit.ly/AMIA-sickle-cell)'
   focal_point: center
   preview_only: no
 slides: ''
@@ -34,7 +34,7 @@ links:
 - icon: images
   icon_pack: fas
   name: slides
-  url: https://spcanelon.github.io/2021-AMIA-sickle-cell
+  url: bit.ly/AMIA-sickle-cell
 - icon: youtube
   icon_pack: fab
   name: video

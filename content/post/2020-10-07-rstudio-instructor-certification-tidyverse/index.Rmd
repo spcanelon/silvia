@@ -37,6 +37,14 @@ links:
     url: https://silvia.rbind.io/2020-10-07-rstudio-instructor-certification-tidyverse/tidyverse-sample-exam-solutions.html
 ---
 
+{{% alert note %}}
+February 12th, 2021 was [Greg Wilson's last day at RStudio](https://twitter.com/gvwilson/status/1360304482496614402?s=20). This means he is no longer running the instructor training program, so the future of the program is unclear. You may want to reach out to [traininginstructor@rstudio.com](mailto:traininginstructor@rstudio.com) with any specific questions.
+
+You can also jump down in this blog post to [Teaching resources](#teaching-resources) to find a consolidated list of materials previously taught as part of the RStudio certification program (slide deck, Teaching Tech Together), along with some additional videos on evidence-based teaching -- thanks to Yanina for digging up these videos!
+
+Lastly, you may want to consider becoming certified through [The Carpentries](https://carpentries.org/blog/2018/07/apply-to-train/). Yanina Bellini Saibene ([\@yabellini](https://twitter.com/yabellini)) and Dorris Scott ([\@Dorris_Scott](https://twitter.com/Dorris_Scott)) are a couple of RStudio instructors that have also been certified through The Carpentries.
+{{% /alert %}}
+
 # Why did I get trained?
 
 Teaching R was not something I thought I'd ever get into but a couple of reasons were nudging me towards getting some formal training.
@@ -165,6 +173,14 @@ In real life, both the written portion of the teaching exam and the Tidyverse ex
 If you're a member of the MiR Community and like the idea of studying with some structure and friendly accountability, join us for the study group! And if you're not, you can [learn more about joining MiR as a member or ally here](https://docs.google.com/forms/d/1x3eFj0syKeFkEQVg1XNSDOFlbOCkIDseKxKeC8or1-U/viewform?edit_requested=true).
 
 # Additional resources
+
+## Teaching resources
+
+- [Slides for the instructor training course by Greg Wilson - Google Drive](https://drive.google.com/drive/folders/13ohFt3D0EJ5PDbMaWTxnHH-hwA7G0IvY)
+- [Teaching Tech Together](https://teachtogether.tech/)
+- [Greg Wilson | Teaching Online at Short Notice | RStudio (2020) - YouTube](https://www.youtube.com/watch?v=-2enQV3Dfng)
+- [Greg Wilson | Evidence Based Teaching What We Know and How to Use I EuroSciPy 2015 - YouTube](https://www.youtube.com/watch?v=kmVKGxPlTvc)
+- [rstudio-education/r4ds-instructors: Instructors' Guide to accompany "R for Data Science"](https://github.com/rstudio-education/r4ds-instructors)
 
 ## Experiences with the certification process
 
