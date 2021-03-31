@@ -40,7 +40,7 @@ links:
 {{% alert note %}}
 February 12th, 2021 was [Greg Wilson's last day at RStudio](https://twitter.com/gvwilson/status/1360304482496614402?s=20). This means he is no longer running the instructor training program, so the future of the program is unclear. You may want to reach out to [traininginstructor@rstudio.com](mailto:traininginstructor@rstudio.com) with any specific questions.
 
-You can also jump down in this blog post to [Teaching resources](#teaching-resources) to find a consolidated list of materials previously taught as part of the RStudio certification program (slide deck, Teaching Tech Together), along with some additional videos on evidence-based teaching -- thanks to Yanina for digging up these videos!
+You can also jump down in this blog post to [Teaching resources](#teaching-resources) to find a consolidated list of materials previously taught as part of the RStudio certification program, in addition to some related resources (thanks to Yanina for adding to this list!).
 
 Lastly, you may want to consider becoming certified through [The Carpentries](https://carpentries.org/blog/2018/07/apply-to-train/). Yanina Bellini Saibene ([\@yabellini](https://twitter.com/yabellini)) and Dorris Scott ([\@Dorris_Scott](https://twitter.com/Dorris_Scott)) are a couple of RStudio instructors that have also been certified through The Carpentries.
 {{% /alert %}}
@@ -132,7 +132,7 @@ Some of my favorite topics were mental models, cognitive capacity, and formative
 
 The third day of training, our cohort had the pleasure of learning all about using the [`learnr` `r emo::ji("package")`](https://rstudio.github.io/learnr/) to build interactive R tutorials, from [Mine Çetinkaya-Rundel](https://education.rstudio.com/trainers/people/cetinkaya-rundel+mine/):
 
-- <i class="fas fa-link"></i> Course website: [rstudio/io/rit](https://rstudio-education.github.io/instructor-training/)
+- <i class="fas fa-link"></i> Course website: [rstd.io/rit](https://rstudio-education.github.io/instructor-training/)
 - <i class="fas fa-images"></i> Slides: [building interactive tutorials in R](https://rstudio-education.github.io/instructor-training/slides/tutorial.html)
 - <i class="fas fa-folder"></i> RStudio Cloud project: [rstd.io/rit-cloud](https://rstd.io/rit-cloud)
 - <i class="fab fa-github"></i> Source materials: [rstudio-education/instructor-training](https://github.com/rstudio-education/instructor-training)
@@ -176,11 +176,14 @@ If you're a member of the MiR Community and like the idea of studying with some 
 
 ## Teaching resources
 
-- [Slides for the instructor training course by Greg Wilson - Google Drive](https://drive.google.com/drive/folders/13ohFt3D0EJ5PDbMaWTxnHH-hwA7G0IvY)
-- [Teaching Tech Together](https://teachtogether.tech/)
-- [Greg Wilson | Teaching Online at Short Notice | RStudio (2020) - YouTube](https://www.youtube.com/watch?v=-2enQV3Dfng)
-- [Greg Wilson | Evidence Based Teaching What We Know and How to Use I EuroSciPy 2015 - YouTube](https://www.youtube.com/watch?v=kmVKGxPlTvc)
-- [rstudio-education/r4ds-instructors: Instructors' Guide to accompany "R for Data Science"](https://github.com/rstudio-education/r4ds-instructors)
+- <i class="fas fa-images"></i> [Slides for the instructor training course • Greg Wilson](https://drive.google.com/drive/folders/13ohFt3D0EJ5PDbMaWTxnHH-hwA7G0IvY)
+- <i class="fas fa-book"></i> [Teaching Tech Together • Greg Wilson](https://teachtogether.tech/)
+- <i class="fas fa-link"></i> [Teaching R and Data Science with RStudio • Mine Çetinkaya-Rundel](rstd.io/rit)
+- <i class="fas fa-link"></i> [Teaching in Production • Alison Hill](rstd.io/tip)
+- <i class="fab fa-youtube"></i> [Teaching Online at Short Notice - RStudio 2020 • Greg Wilson](https://www.youtube.com/watch?v=-2enQV3Dfng)
+- <i class="fab fa-youtube"></i> [Sharing on Short Notice - RStudio 2020 • Alison Hill & Desirée De Leon](https://www.youtube.com/watch?v=QcE4RBH2auQ)
+- <i class="fab fa-youtube"></i> [Evidence Based Teaching: What We Know and How to Use It - EuroSciPy 2015 • Greg Wilson](https://www.youtube.com/watch?v=kmVKGxPlTvc)
+- <i class="fab fa-github"></i> [rstudio-education/r4ds-instructors: Instructors' Guide to accompany "R for Data Science" • RStudio Education](https://github.com/rstudio-education/r4ds-instructors)
 
 ## Experiences with the certification process
 
