@@ -184,6 +184,8 @@ If you're a member of the MiR Community and like the idea of studying with some 
 - <i class="fab fa-youtube"></i> [Sharing on Short Notice - RStudio 2020 • Alison Hill & Desirée De Leon](https://www.youtube.com/watch?v=QcE4RBH2auQ)
 - <i class="fab fa-youtube"></i> [Evidence Based Teaching: What We Know and How to Use It - EuroSciPy 2015 • Greg Wilson](https://www.youtube.com/watch?v=kmVKGxPlTvc)
 - <i class="fab fa-github"></i> [rstudio-education/r4ds-instructors: Instructors' Guide to accompany "R for Data Science" • RStudio Education](https://github.com/rstudio-education/r4ds-instructors)
+- <i class="fas fa-link"></i> [Cursos cortos para enseñar online • MetaDocencia](https://www.metadocencia.org/)
+- <i class="fas fa-link"></i> [Flattening the leaRning curve: Teaching R online during COVID-19 • Brendan Cullen](https://bcullen.rbind.io/post/2020-10-19-teaching-an-r-bootcamp-remotely/)
 
 ## Experiences with the certification process
 
