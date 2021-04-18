@@ -233,6 +233,8 @@ Selection:
     
     > Note: Your repository must be **public** for your deployed slides to be available publicly, unless you have a paid GitHub account.
     
+    > Also, you only need to follow this step _once_ to deploy your slides to the web. As long as you remember to push to your repo any changes that you make to your slides (Rmd and HTML), GitHub Pages will know how to render them.
+    
 <!--Output:
 > usethis::use_github_pages(branch = "master")
 ✓ Setting active project to '/Users/scanelon/Box/2-Teaching/R-Projects/R-Ladies/RLadies-xaringan-template'
