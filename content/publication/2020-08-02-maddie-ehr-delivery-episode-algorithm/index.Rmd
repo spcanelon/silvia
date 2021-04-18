@@ -42,7 +42,7 @@ slides: ''
 links:
 - icon: doi
   icon_pack: ai
-  name: Full Publication
+  name: Publication
   url: https://doi.org/10.1016/j.ijmedinf.2020.104339
 - icon: file-pdf
   icon_pack: fas
