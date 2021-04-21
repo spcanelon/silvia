@@ -13,8 +13,10 @@
 [context.deploy-preview.environment]
   HUGO_VERSION = "0.82.1"
 
+# netlify.toml
+# source: https://www.garrickadenbuie.com/blog/blogdown-netlify-new-post-workflow/#netlify-toml
 [context.deploy-preview]
-  command = "hugo -b $DEPLOY_PRIME_URL --buildFuture"
+command = "hugo -b $DEPLOY_PRIME_URL --buildFuture"
 
 [context.branch-deploy]
-  command = "hugo -b $DEPLOY_PRIME_URL --buildFuture"
+command = "hugo -b $DEPLOY_PRIME_URL --buildFuture"
