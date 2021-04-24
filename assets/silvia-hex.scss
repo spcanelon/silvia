@@ -1,0 +1,37 @@
+// Override this file to add your own SCSS styling.
+
+// basic color options: use only hex colors
+// "Color Palette" ideas of https://tachyons.io/docs/themes/skins/
+
+// custom color variables
+$spc-primary: #122140; // rgba(18, 33, 64)
+$spc-primary-dark: #121824; // rgba(18, 24, 36)
+$spc-primary-light: #626b7d; // rgba(58, 70, 95, 1)
+$spc-secondary: #ffc74a; // rgba(255, 199, 174, 1)
+$spc-secondary-dark: #88630F; // rgba(232, 174, 44, 1)
+$spc-red: #600018;
+$spc-coral: #903030;
+$spc-gray: #e9e9e9; // rgba(233, 233, 233)
+$spc-test: #FF725C;
+$spc-white: #FFFFFF;
+
+// set custom hex colors
+$siteBgColorCustom: $spc-gray;              // site background
+$textColorCustom: $spc-primary;             // all text, including headings
+$bodyLinkColorCustom: $spc-secondary-dark;  // main body links/anchors
+
+$sidebarBgColorCustom: $spc-test;           // ?
+$sidebarTextColorCustom: $spc-test;         // ?
+$headlineColorCustom: $spc-test;            // ?
+$headingColorCustom: $spc-test;             // ?
+
+$navLinkColorCustom: $spc-primary-light;    // navbar & footer links/icons
+$sidebarLinkColorCustom: $spc-test;         // ?
+$footerTextColorCustom: $spc-primary-dark;  // footer text
+
+$buttonBgColorCustom: $spc-test;            // ?
+$buttonTextColorCustom: $spc-test;          // ?
+$buttonHoverBgColorCustom: $spc-primary-light;    // button background w/ hover
+$buttonHoverTextColorCustom: $spc-white;     // button text w/ hover
+
+$borderColorCustom: $spc-secondary-dark;    // quote bar, horizontal bars
