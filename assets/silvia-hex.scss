@@ -9,6 +9,7 @@ $spc-blue-dark: #121824; // rgba(18, 24, 36)
 $spc-blue-light: #475269; // rgba(58, 70, 95, 1)
 $spc-latte: #FFF8E7; // rgba(255, 199, 174, 1)
 $spc-gold: #936C10; // rgba(232, 174, 44, 1)
+$spc-caramel: #8F6400;
 $spc-bg: #F8F8F8;
 $spc-gray: #E5E5E3; // rgba(233, 233, 233)
 $spc-coral: #903030;
@@ -20,13 +21,13 @@ $siteBgColorCustom: $spc-latte;              // site background
 $textColorCustom: $spc-blue;                 // all text, including headings
 $bodyLinkColorCustom: $spc-gold;             // main body links/anchors
 
-$sidebarBgColorCustom: $spc-test;           // ?
-$sidebarTextColorCustom: $spc-test;         // ?
-$headlineColorCustom: $spc-gold;            // event detail text
+$sidebarBgColorCustom: $spc-gray;           // sidebar background
+$sidebarTextColorCustom: $spc-blue;         // text in sidebar
+$sidebarLinkColorCustom: $spc-blue;         // links in sidebar
 
+$headlineColorCustom: $spc-blue;            // name text in about & event detail text
 $headingColorCustom: $spc-blue;             // headings (in browser only)
 $navLinkColorCustom: $spc-blue-light;       // navbar & footer links/icons
-$sidebarLinkColorCustom: $spc-test;         // ?
 $footerTextColorCustom: $spc-blue-light;    // footer text
 
 $buttonBgColorCustom: $spc-test;            // ?
