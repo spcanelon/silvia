@@ -1,7 +1,8 @@
 baseURL = "/"
 theme = "hugo-apero"
 languageCode = "en"
-title = "Hugo Apéro"
+#title = "Hugo Apéro"
+title = "Silvia Canelón"
 author = "Silvia Canelón"
 copyright = "" # set to override the auto generated copyright using org info and now year
 googleAnalytics = ""
@@ -25,15 +26,17 @@ enableEmoji = true
     ordered = false
   [markup.highlight]
     # one of: https://xyproto.github.io/splash/docs/ 
-    style = "github"
+    style = "github" # "github"
     
 [params]
-  orgName = "RStudio"
-  orgLocal = "Anywhere"
-  description = "A modern, beautiful, and easily configurable blog theme for Hugo."
+  orgName = "Silvia Canelón"
+  orgLocal = "Philadelphia, PA"
+  #description = "A modern, beautiful, and easily configurable blog theme for Hugo."
+  description = "Personal website of Silvia Canelón"
+  #favicon = "/img/favicon.ico"
   favicon = "/img/favicon.ico"
   logo = "/img/blogophonic-mark-dark.png"
-  mainSections = ["blog", "project", "talk"]
+  mainSections = ["blog", "talk"]
   navallcaps = true
   # show/hide social icons in site header & footer
   # configure social icons and links below in [[params.social]]
@@ -41,7 +44,8 @@ enableEmoji = true
   socialInFooter = true
   # Default image for social sharing and search engines. 
   # Place image file in `static` folder and specify image name here.
-  sharing_image = "/img/papillons.jpg"
+  #sharing_image = "/img/papillons.jpg"
+  sharing_image = "/img/Lake_Pink_Social.png"
   # Twitter username (without @). Used when a visitor shares your site on Twitter.
   twitter = "spcanelon"
   
