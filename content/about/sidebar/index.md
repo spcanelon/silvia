@@ -8,7 +8,6 @@ audio_link_label: "she/her/ella" # leave blank to exclude
 link_list_label: "Interests" # bookmarks, elsewhere, etc.
 link_list:
 - name: Reproductive & sexual health
-- name: Perinatal health
 - name: Social determinants of health
 - name: Data science for good
 - name: R education
