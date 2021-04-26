@@ -9,7 +9,7 @@ $spc-blue-dark: #121824; // rgba(18, 24, 36)
 $spc-blue-light: #475269; // rgba(58, 70, 95, 1)
 $spc-latte: #FFF8E7; // rgba(255, 199, 174, 1)
 $spc-gold: #936C10; // rgba(232, 174, 44, 1)
-$spc-caramel: #8F6400;
+//$spc-caramel: #8F6400;
 $spc-coffee: #F2E7CD;
 $spc-bg: #F8F8F8;
 $spc-gray: #E5E5E3; // rgba(233, 233, 233)
@@ -31,9 +31,9 @@ $headingColorCustom: $spc-blue;             // headings (in browser only)
 $navLinkColorCustom: $spc-blue-light;       // navbar & footer links/icons
 $footerTextColorCustom: $spc-blue-light;    // footer text
 
-$buttonBgColorCustom: $spc-test;            // ?
-$buttonTextColorCustom: $spc-test;          // ?
-$buttonHoverBgColorCustom: $spc-blue-light; // button background w/ hover
-$buttonHoverTextColorCustom: $spc-white;    // button text w/ hover
+$buttonBgColorCustom: $spc-coffee;          // contact form button background
+$buttonTextColorCustom: $spc-blue-light;    // contact form button 
+$buttonHoverBgColorCustom: $spc-blue-light; // any button background w/ hover
+$buttonHoverTextColorCustom: $spc-white;    // any button text w/ hover
 
 $borderColorCustom: $spc-gold;              // quote bar, horizontal bars
