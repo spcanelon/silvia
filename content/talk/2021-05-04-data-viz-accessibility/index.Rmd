@@ -48,6 +48,8 @@ links:
   url: https://github.com/spcanelon/csvConf2021
 ---
 
+Presented with [Liz Hare, PhD](https://www.twitter.com/DogGeneticsLLC) from Dog Genetics, LLC
+
 ```{r echo=FALSE, eval=FALSE}
 xaringanExtra::embed_xaringan(
   "https://spcanelon.github.io/csvConf2021",
