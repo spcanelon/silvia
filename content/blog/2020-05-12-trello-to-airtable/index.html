@@ -278,26 +278,22 @@ More detailed instructions can be found in <a href="https://support.airtable.com
 <div id="labels-1" class="section level2" number="7.4">
 <h2><span class="header-section-number">7.4</span> Labels</h2>
 <ol style="list-style-type: decimal">
-<li>Change <code>Labels</code> field type to “multiple select” so that it turns each item in each list into a label.</li>
-<li><em><strong>Optional</strong></em>: Create a new <code>Projects</code> column next to <code>Labels</code> and use the labels to guide you in creating <code>Project</code> labels/categories: Group the records by <code>Labels</code> field and add to <code>Projects</code> field as appropriate.</li>
-</ol>
-<p>{{% alert note %}}
-I recommend creating an <code>NA</code> project from the <code>NA</code> labels so that these tasks aren’t marked as “uncategorized” in the <code>Projects</code> column. Having records with an “empty” assignment gets in the way whenever you want to group by that category. To that end, it’s helpful to group by <code>Project</code> and make sure any “empty” records get assigned to the “NA” <code>Project</code>.
-{{% /alert %}}</p>
-<ol start="3" style="list-style-type: decimal">
-<li>Delete from <code>Labels</code> any labels that were converted to <code>Projects</code> and ungroup the records.</li>
+<li><p>Change <code>Labels</code> field type to “multiple select” so that it turns each item in each list into a label.</p></li>
+<li><p><em><strong>Optional</strong></em>: Create a new <code>Projects</code> column next to <code>Labels</code> and use the labels to guide you in creating <code>Project</code> labels/categories: Group the records by <code>Labels</code> field and add to <code>Projects</code> field as appropriate.</p>
+<blockquote>
+<p>I recommend creating an <code>NA</code> project from the <code>NA</code> labels so that these tasks aren’t marked as “uncategorized” in the <code>Projects</code> column. Having records with an “empty” assignment gets in the way whenever you want to group by that category. To that end, it’s helpful to group by <code>Project</code> and make sure any “empty” records get assigned to the “NA” <code>Project</code>.</p>
+</blockquote></li>
+<li><p>Delete from <code>Labels</code> any labels that were converted to <code>Projects</code> and ungroup the records.</p></li>
 </ol>
 </div>
 <div id="trello_lists" class="section level2" number="7.5">
 <h2><span class="header-section-number">7.5</span> Trello_Lists</h2>
 <ol style="list-style-type: decimal">
-<li>Convert <code>Trello_Lists</code> column field type into “single select”. This gives us the option of using the Kanban style we were used to in Trello.</li>
-</ol>
-<p>{{% alert note %}}
-Every record should already be associated with a Trello_List.
-{{% /alert %}}</p>
-<ol start="2" style="list-style-type: decimal">
-<li>If you want to replicate the Trello kanban layout, change the order of the single select options in <code>Trello_Lists</code> to match the order from left-to-right of your Trello board</li>
+<li><p>Convert <code>Trello_Lists</code> column field type into “single select”. This gives us the option of using the Kanban style we were used to in Trello.</p>
+<blockquote>
+<p>Every record should already be associated with a Trello_List.</p>
+</blockquote></li>
+<li><p>If you want to replicate the Trello kanban layout, change the order of the single select options in <code>Trello_Lists</code> to match the order from left-to-right of your Trello board</p></li>
 </ol>
 </div>
 <div id="trello_url" class="section level2" number="7.6">
@@ -309,29 +305,27 @@ Every record should already be associated with a Trello_List.
 <div id="trello_attachments" class="section level2" number="7.7">
 <h2><span class="header-section-number">7.7</span> Trello_Attachments</h2>
 <ol style="list-style-type: decimal">
-<li>Convert <code>Trello_Attachments</code> field type to “single select”</li>
-<li>Create a new <code>Attachments</code> column with field type “attachment”. This is where you’ll upload your downloaded attachments.</li>
-<li>Filter your records by <code>Trello_Attachments</code> so only show “TRUE” results</li>
-<li>Sort records by <code>Task_ID</code> and simplify your view by temporarily hiding all columns except for <code>Task_Name</code> (primary field), <code>Task_ID</code>, <code>Trello_Attachments</code>, and the new <code>Attachments</code> column.</li>
-<li>Open your local <code>attachments</code> folder and drag and drop the files to their corresponding <code>Attachments</code> field according to their <code>Task_ID</code> in the filename.</li>
-</ol>
-<p>{{% alert note %}}
-Increase the height of the records for this step. It’ll make it easier to make sure you’re dragging and dropping to the correct record
-{{% /alert %}}</p>
-<ol start="6" style="list-style-type: decimal">
-<li>If you encountered errors downloading some of your attachment URLs, now is the time to check your local <code>attachment_errors.csv</code> file for the URLs with errors during the download process. These are attachments you’ll have to find elsewhere and upload to the <code>Attachments</code> field as needed.</li>
-<li>Remove the filter to your view and unhide any columns you wish to remain visible.</li>
+<li><p>Convert <code>Trello_Attachments</code> field type to “single select”</p></li>
+<li><p>Create a new <code>Attachments</code> column with field type “attachment”. This is where you’ll upload your downloaded attachments.</p></li>
+<li><p>Filter your records by <code>Trello_Attachments</code> so only show “TRUE” results</p></li>
+<li><p>Sort records by <code>Task_ID</code> and simplify your view by temporarily hiding all columns except for <code>Task_Name</code> (primary field), <code>Task_ID</code>, <code>Trello_Attachments</code>, and the new <code>Attachments</code> column.</p></li>
+<li><p>Open your local <code>attachments</code> folder and drag and drop the files to their corresponding <code>Attachments</code> field according to their <code>Task_ID</code> in the filename.</p>
+<blockquote>
+<p>Increase the height of the records for this step. It’ll make it easier to make sure you’re dragging and dropping to the correct record</p>
+</blockquote></li>
+<li><p>If you encountered errors downloading some of your attachment URLs, now is the time to check your local <code>attachment_errors.csv</code> file for the URLs with errors during the download process. These are attachments you’ll have to find elsewhere and upload to the <code>Attachments</code> field as needed.</p></li>
+<li><p>Remove the filter to your view and unhide any columns you wish to remain visible.</p></li>
 </ol>
 </div>
 <div id="done-archived" class="section level2" number="7.8">
 <h2><span class="header-section-number">7.8</span> Done &amp; Archived</h2>
 <ol style="list-style-type: decimal">
-<li>Convert the <code>Done</code> and <code>Archived</code> field types to “Checkbox” and it will automatically assign a “check” to all records marked “TRUE” and leave the ones marked “FALSE” or “NA” unchecked. So easy!</li>
-<li>There is no direct option to “archive” tasks that have been completed like you can do in Trello, <em>but</em> you can apply a filter to your table view to hide the tasks that are complete. To do this, set the filter so that the <code>Done</code> and <code>Archived</code> fields are unchecked.</li>
+<li><p>Convert the <code>Done</code> and <code>Archived</code> field types to “Checkbox” and it will automatically assign a “check” to all records marked “TRUE” and leave the ones marked “FALSE” or “NA” unchecked. So easy!</p></li>
+<li><p>There is no direct option to “archive” tasks that have been completed like you can do in Trello, <em>but</em> you can apply a filter to your table view to hide the tasks that are complete. To do this, set the filter so that the <code>Done</code> and <code>Archived</code> fields are unchecked.</p>
+<blockquote>
+<p>This must be repeated for each saved View of your records.</p>
+</blockquote></li>
 </ol>
-<p>{{% alert note %}}
-This must be repeated for each saved View of your records.
-{{% /alert %}}</p>
 </div>
 </div>
 <div id="moving-forward" class="section level1" number="8">

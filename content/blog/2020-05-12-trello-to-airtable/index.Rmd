@@ -165,7 +165,7 @@ ct_labels <- left_join(cards_trim %>% select(-labels), labels_info %>% select(-l
 
 The next step is to download all of the items attached to the cards onto a local folder. I found [this StackOverflow post](https://stackoverflow.com/questions/32174306/download-url-links-using-r) really helpful. When I tried this out on my own Trello board I also found that I couldn't download the few attachments I had made from my local drive. [This StackOverflow post](https://stackoverflow.com/questions/2158780/catching-an-error-and-then-branching-logic/2158803#2158803) helped me figure out how to flag and catch these download errors so that I could create a list of the urls with "attachment errors" that I could follow up with manually. 
 
-```{r}
+```{r eval=FALSE}
 # expanding the attachment lists into separate url records
 att_urls <- ct_labels %>%
   select(idShort, attachments) %>%
@@ -192,7 +192,7 @@ for (i in 1:length(att_urls$url)){
 ```
 
 The following selects the attachment records with errors, renames somes variables, and exports the data frame as a CSV. 
-```{r}
+```{r eval=FALSE}
 # preparing data frame for export to CSV
 attachment_errors <- att_urls %>%
   filter(attachmentError == TRUE) %>%
@@ -215,7 +215,7 @@ for (i in 1:length(att_urls$url)){
 ```
 
 Records in the main `cards` data frame are labeled "TRUE" within the `attachments` column if they have attachments and "FALSE" if they don't.
-```{r}
+```{r eval=FALSE}
 # converts the attachment column to a categorical variable in the main cards+labels data frame
 ct_labels <- ct_labels %>%
   mutate(attachments = ifelse(idShort %in% att_urls$idShort, TRUE, FALSE))
@@ -291,18 +291,14 @@ More detailed instructions can be found in [this Airtable article](https://suppo
 1. Change `Labels` field type to "multiple select" so that it turns each item in each list into a label.
 2. _**Optional**_: Create a new `Projects` column next to `Labels` and use the labels to guide you in creating `Project` labels/categories: Group the records by `Labels` field and add to `Projects` field as appropriate.
 
-{{% alert note %}}
-I recommend creating an `NA` project from the `NA` labels so that these tasks aren't marked as "uncategorized" in the `Projects` column. Having records with an "empty" assignment gets in the way whenever you want to group by that category. To that end, it's helpful to group by `Project` and make sure any "empty" records get assigned to the "NA" `Project`.
-{{% /alert %}}
+    > I recommend creating an `NA` project from the `NA` labels so that these tasks aren't marked as "uncategorized" in the `Projects` column. Having records with an "empty" assignment gets in the way whenever you want to group by that category. To that end, it's helpful to group by `Project` and make sure any "empty" records get assigned to the "NA" `Project`.
 
 3. Delete from `Labels` any labels that were converted to `Projects` and ungroup the records.
 
 ## Trello_Lists
 1. Convert `Trello_Lists` column field type into "single select". This gives us the option of using the Kanban style we were used to in Trello.
 
-{{% alert note %}}
-Every record should already be associated with a Trello_List.
-{{% /alert %}}
+    > Every record should already be associated with a Trello_List.
 
 2. If you want to replicate the Trello kanban layout, change the order of the single select options in `Trello_Lists` to match the order from left-to-right of your Trello board
 
@@ -316,9 +312,7 @@ Every record should already be associated with a Trello_List.
 4. Sort records by `Task_ID` and simplify your view by temporarily hiding all columns except for `Task_Name` (primary field), `Task_ID`, `Trello_Attachments`, and the new `Attachments` column.
 5. Open your local `attachments` folder and drag and drop the files to their corresponding `Attachments` field according to their `Task_ID` in the filename.
 
-{{% alert note %}}
-Increase the height of the records for this step. It'll make it easier to make sure you're dragging and dropping to the correct record
-{{% /alert %}}
+    > Increase the height of the records for this step. It'll make it easier to make sure you're dragging and dropping to the correct record
 
 6. If you encountered errors downloading some of your attachment URLs, now is the time to check your local `attachment_errors.csv` file for the URLs with errors during the download process. These are attachments you'll have to find elsewhere and upload to the `Attachments` field as needed.
 7. Remove the filter to your view and unhide any columns you wish to remain visible.
@@ -327,9 +321,7 @@ Increase the height of the records for this step. It'll make it easier to make s
 1. Convert the `Done` and `Archived` field types to "Checkbox" and it will automatically assign a "check" to all records marked "TRUE" and leave the ones marked "FALSE" or "NA" unchecked. So easy!
 2. There is no direct option to "archive" tasks that have been completed like you can do in Trello, _but_ you can apply a filter to your table view to hide the tasks that are complete. To do this, set the filter so that the `Done` and `Archived` fields are unchecked.
 
-{{% alert note %}}
-This must be repeated for each saved View of your records.
-{{% /alert %}}
+    > This must be repeated for each saved View of your records.
 
 # Moving forward
 
