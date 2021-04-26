@@ -9,9 +9,7 @@ tags:
   - AMIA
   - EHR
   - sickle cell disease
-authors:
-  - silvia
-  - Mary Regina Boland
+authors: "Silvia P. Canelón & Mary Regina Boland"
 doi: ''
 publishDate: ''
 publication_types:

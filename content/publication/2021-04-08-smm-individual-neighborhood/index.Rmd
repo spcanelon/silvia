@@ -1,11 +1,6 @@
 ---
 title: "Individual-Level and Neighborhood-Level Risk Factors for Severe Maternal Morbidity"
-authors: 
-  - Jessica R. Meeker
-  - silvia
-  - Ray Bai
-  - Lisa D. Levine
-  - Mary Regina Boland
+author: "Jessica R. Meeker, Silvia P. Canelón, Ray Bai, Lisa D. Levine, Mary Regina Boland"
 date: '2021-04-08'
 slug: smm-individual-neighborhood
 categories:

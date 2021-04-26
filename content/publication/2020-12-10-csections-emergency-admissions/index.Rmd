@@ -1,8 +1,6 @@
 ---
 title: "Not All C-sections Are the Same: Investigating Emergency vs. Elective C-section Deliveries as an Adverse Pregnancy Outcome"
-authors: 
-  - silvia
-  - Mary Regina Boland
+author: "Silvia P. Canelón & Mary Regina Boland"
 date: '2020-12-10'
 slug: csections-emergency-admissions
 categories:

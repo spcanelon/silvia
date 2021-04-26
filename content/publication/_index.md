@@ -23,8 +23,8 @@ sidebar:
 
 # set up common front matter for all pages inside publication/
 cascade:
-  author: ""
-  show_author_byline: false
+  author: "Silvia Canelón"
+  show_author_byline: true
   show_post_date: true
   show_comments: false # see site config to choose Disqus or Utterances
   # for single-sidebar layout
