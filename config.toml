@@ -78,8 +78,8 @@ enableEmoji = true
   [params.utterances]
     use_utterances = true
     repo_name = "spcanelon/silvia"
-    issue_term = "pathname" # url, pathname, or title
-    theme = "boxy-light"
+    issue_term = "title" # url, pathname, or title
+    theme = "boxy-light" # TODO: change to "preferred-color-scheme" when you enable dark mode toggle
     label = "comments :crystal_ball:"
 
   # Social icons may appear on homepage and in site header or footer
