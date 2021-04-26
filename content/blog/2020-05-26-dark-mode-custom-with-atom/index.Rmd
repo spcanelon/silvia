@@ -1,6 +1,5 @@
 ---
 title: Customizing Hugo Academic's Dark Mode with Help from Atom
-author: silvia
 date: '2020-06-16'
 categories:
   - Website
@@ -40,9 +39,9 @@ The [going futher](https://alison.rbind.io/post/2017-06-12-up-and-running-with-b
 
 Alison's CSS helped me customize everything from text colors and fonts to alert colors and borders for Academic's light mode. At this point I had the light mode looking the way I wanted but the dark mode still used out-of-the-box colors for the most part and they **_just didn't go_**.
 
-```{r, echo=FALSE, out.width='50%'}
+```{r, echo=FALSE, out.width='50%', fig.align='center', fig.alt='Out-of-the-box colors included an eggplant page background with a light purple foreground. The issue I perceived was that these colors clashed with the navy blue and gold color changes I had made and was happy with in the light mode. I particularly was bothered by a cyan color highlight for code text'}
 library(knitr)
-knitr::include_graphics('academic-minimal-dark-theme.png')
+knitr::include_graphics('img/academic-minimal-dark-theme.png')
 ```
 
 
@@ -72,11 +71,36 @@ Looking through GitHub issues I found that including two sub-themes, one for lig
 Not knowing what all of the options were for dark mode, I took a look at the `dark.scss` dark mode stylesheet built in to Academic in `themes/hugo-academic/assets/scss/academic/` folder. You can see the `pigments` package in action here! It makes it easier to identify elements with colors that you want to change. I'm looking at you inline code text color 
 <html><span style="background-color:#44475a; color:rgb(139, 233, 253)">rgb(139, 233, 253) </span><span>.</span></html> 
 
-![](atom-inline-text-color.png)
+<!--Panelset test: failed
+{{< panelset class="greetings" >}}
+{{< panel name="Hello! :wave:" >}}
+  hello
+{{< /panel >}}
+{{< panel name="Goodbye :dash:" >}}
+  goodbye
+{{< /panel >}}
+{{< /panelset >}}
+-->
+<details><summary>CSS code</summary>
+Note that in SCSS syntax `//` indicates comments and `#` indicates hex codes
+```{css inline-code, eval=FALSE}
+.dark pre,
+.dark code {
+  color: rgb(139, 233, 253); // cyan code text color
+  background-color: rgb(68, 71, 90); // light purple code background
+}
+```
+</details>
+
+```{r echo=FALSE, fig.align='center', fig.alt='CSS code chunk styling inline code. The Atom editor enables viewers to see the color that hex and rgb color codes correspond to, as the background of the color code text. This screenshot demonstrates that the inline code text color was cyan and the inline code background was light purple.'}
+knitr::include_graphics("img/atom-inline-text-color.png")
+```
 
 Another way to find the css for the element you want to change is to use your browser's web inspector tool. In the screenshot below from Hugo Academic's [customization documentation]() I right-clicked on `themes/academic/data/themes/minimal.toml` and then clicked on "inspect element". The element code was `.dark pre, .dark code` which you might recognize from the code in `dark.scss`. 
 
-![](web-element-inspector.png)
+```{r web-inspector, echo=FALSE, fig.align='center', fig.alt='A view of the Firefox web inspector inspecting some inline code available on the Hugo Academic documentation site which used the out-of-the-box dark mode colors. The inspector reveals that the selected text was styled by the CSS code chunk included earlier and includes color previews so you can visually identify elements by color.'}
+knitr::include_graphics("img/web-element-inspector.png")
+```
 
 You can copy and paste this new `.dark` theme code a new (or existing) `custom.scss` file saved in the `assets/scss/` folder of your directory to start seeing how changes you make affect the look of your site.
 
@@ -84,10 +108,16 @@ You can copy and paste this new `.dark` theme code a new (or existing) `custom.s
 
 Alright. Now that we have some new dark theme code in our custom file, we can move on to the exciting task of **choosing colors**! If you're looking for some inspiration, [Coolors has some dark color palettes](https://coolors.co/palettes/trending/dark):
 
-![](coolors-dark-palettes.png)
+```{r dark-palettes, echo=FALSE, fig.align='center', fig.alt='Six different palettes available under the "Dark" category in the Coolors galleries, which feature deeper colors'}
+knitr::include_graphics("img/coolors-dark-palettes.png")
+```
+
+
 Coolors is also a great place to save colors into custom palettes. Here's a basic example of mine:
 
-![](coolors-my-basic-palette.png)
+```{r my-palette, echo=FALSE, fig.align='center', fig.alt='My palette saved in Coolors, featuring a navy blue primary color with a darker and lighter variant, a gold secondary color also with variants, and a neutral off-white color between them'}
+knitr::include_graphics("img/coolors-my-basic-palette.png")
+```
 
 If you're like me and want to design a dark theme that uses the primary and secondary colors you picked for your light theme, keep reading! I'm gonna share highlights from what I learned about dark theme design and how to ensure your color combinations meet [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/). 
 
@@ -102,7 +132,10 @@ The bulk of what I learned came from the extensive Material Design resources, in
 
 - As you layer components, surfaces with a higher elevation (closer to the hypothetical 'light source') should be lighter than those below it to create a visual hierarchy. This can be achieved by applying a semi-transparent white overlay to the primary dark gray surface. 
 
-![](material-surface-overlays.png)
+```{r surface-overlays, echo=FALSE, fig.align='center', fig.alt='Ten different dark mode overlay examples from Material Design. The darkest/base layer contains 0% white overlay, elevation level 01 has 5% of a white overlay, level 02 has 7%, level 04 has 8%, level 05 has 9%, level 06 has 11%, level 08 has 12%, level 12 has 14%, level 16 has 15%, and level 24 has 16%'}
+knitr::include_graphics("img/material-surface-overlays.png")
+```
+
 
 - The primary **text color** for dark themes should not be 100% opaque white (i.e. #FFFFFF 
   <html><svg width="11" height="11">
@@ -137,15 +170,19 @@ The bulk of what I learned came from the extensive Material Design resources, in
 
 Material Design has a [color palette generator](https://material.io/design/color/the-color-system.html#tools-for-picking-colors) and a [color tool](https://material.io/resources/color/) that can be used to dark and light variants of a color. I used the color tool to find a dark and light variant of my primary and secondary colors. The accessibility feature of the color tool is helpful to determine the minimum opacity for white text to ensure enough contrast. The [Coolors color contrast checker](https://coolors.co/contrast-checker) is another great tool.
 
-![](material-color-tool.png)
+```{r color-tool, include=FALSE, fig.align='center', fig.alt='Material Design color tool that lets you pick a primary and secondary color, shows you the dark and light variants, and also tells you how opaque your white text can be while still maintaining adequate contrast.'}
+knitr::include_graphics("img/material-color-tool.png")
+```
 
 # Color variables
 
 One of the cool features of SCSS is the ability to use variables defined by prefix `$` (i.e. `$spc-primary: #122140;`. You can set your variables at the top of your SCSS file and use the variable name throughout the file. This makes it super easy to try out different dark mode colors without having to use find-and-replace. If you're using the `pigments` package in Atom, it'll even show you the variable colors in a dropdown!
 
-![](atom-pigments-dropdown.png)
+```{r pigments-dropdown, include=FALSE, fig.align='center', fig.alt='Atom editor dropdown menu showing a color preview for each color variable assigned in your CSS or SCSS style sheet. It shows up when you begin typing the name of an assigned color variable.'}
+knitr::include_graphics("img/atom-pigments-dropdown.png")
+```
 
-> **Tip:** I like using a bright color like <html><span style="background-color:#FDF4F4; color:#A90533">red </span></html> to test color changes for different CSS elements because stands out and makes it easier to see what was modified.  
+> **Tip:** I like using a bright color like <html><span style="background-color:#FDF4F4; color:#A90533">red </span></html> to test color changes for different CSS elements because stands out and makes it easier to see what was modified.
 
 I defined my primary colors and variants, text colors, and various background colors as variables. And although dark gray (#121212) is recommended as a standard dark theme background, you can also create a custom background color by mixing it with your primary color. In my case I used `mix(#122140, #121212, 40)` to create a color that was 40% my primary color and 60% dark gray.
 
@@ -153,10 +190,40 @@ I defined my primary colors and variants, text colors, and various background co
 
 Now, ideally I'd be able to define the result of this `mix()` as a color variable, but some CSS properties like `background-color` don't recognize it. So I had to convert the result to a color code and define that as a variable instead. `Pigments` made this conversion easy when I toggled the menu (Shift+Command+P on a Mac) and searched for the `Pigments: Convert` options.
 
-![](atom-pigments-menu.png)
+```{r pigments-menu, echo=FALSE, fig.align='center', fig.alt='The command palette in the Atom editor lets you search for packages and functions. When you type "pigments: convert" you can see the options like "Pigments: Convert To Hex", "Pigments: Convert to Rgba", etc.'}
+knitr::include_graphics("img/atom-pigments-menu.png")
+```
 
 This `mix()` function also came in handy when defining background surfaces with semi-transparent white overlays.
 
-![](atom-background-color-definitions.png)
+<details><summary>CSS code</summary>
+Note that in SCSS syntax `//` indicates comments and `#` indicates hex codes
+```{scss background-colors, eval=FALSE}
+// COLOR CALCULATIONS
+// below from mix($spc-primary, $spc-bkg-dark-std, 25)
+// custom bkg
+$spc-bkg-dark: #12151d;
+// below from mix($spc-primary, $spc-bkg-dark-std, 40)
+// 00dp surface
+$spc-00dp: #121824;     
+// below from mix($spc-00dp, white, 95)
+// 00dp with 5% white overlay
+$spc-01dp: #1d232e;
+// below from mix($spc-00dp, white, 93)
+// 00dp with 7% white overlay
+$spc-02dp: #222833;
+// below from mix($spc-00dp, white, 92)
+// 00dp with 8% white overlay
+$spc-03dp: #242a35;
+// below from mix($spc-00dp, white, 91)
+// 00dp with 9% white overlay
+$spc-04dp: #272c37;
+```
+</details>
+
+```{r background-color-variables, echo=FALSE, fig.align='center', fig.alt='Atom editor showing the color variables I assigned to different elevation levels of my base background color. The mix() SCSS function let me mix by base dark color with white to create the effect of a white overlay as recommended by Material Design.'}
+knitr::include_graphics("img/atom-background-color-definitions.png")
+```
+
 
 **And that's a wrap**. Have fun building your new custom dark theme!
