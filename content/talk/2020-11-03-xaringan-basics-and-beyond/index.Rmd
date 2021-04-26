@@ -54,4 +54,11 @@ links:
   url: https://github.com/nhs-r-community/Conference_2020#nhs-r-community-conference-workshops-2020-
 ---
 
-![](nhsr-logo.png)
+## Description
+
+This four-hour hands-on workshop will be a gentle introduction to the xaringan package as a tool to create impressive presentation slides that can be deployed to the web for easy sharing. <br/><br/>Day 1 (Nov. 3, 3-5pm BST) will cover the nuts and bolts of creating presentation slides using xaringan and deploying them in HTML format for easy sharing with others. <br/><br/>Day 2 (Nov. 5, 3-5pm BST) will cover how to take your slides to the next level with the xaringanExtra package and how to customize slides with CSS.<br/><br/>This workshop is designed for R users already familiar with R Markdown and GitHub.
+
+```{r, echo=FALSE, out.width = '60%', fig.align='center', fig.alt='Logo for the NHS-R Community featuring the R logo forming the R of NHS-R'}
+knitr::include_graphics('nhsr-logo.png')
+```
+
