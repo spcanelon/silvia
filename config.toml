@@ -36,7 +36,7 @@ enableEmoji = true
   #favicon = "/img/favicon.ico"
   favicon = "/img/favicon.ico"
   logo = "/img/blogophonic-mark-dark.png"
-  mainSections = ["blog", "talk"]
+  mainSections = ["blog", "talk", "publication"]
   navallcaps = true
   # show/hide social icons in site header & footer
   # configure social icons and links below in [[params.social]]
@@ -153,11 +153,6 @@ enableEmoji = true
     title = "Publications"
     url = "/publication/"
     weight = 4
-  [[menu.header]]
-    name = "Contact"
-    title = "Contact"
-    url = "/contact/"
-    weight = 5
   #[[menu.header]]
   #  name = "Projects"
   #  title = "Project Portfolio"
@@ -179,17 +174,17 @@ enableEmoji = true
     name = "License"
     title = "License"
     url = "/license/"
-    weight = 1
+    weight = 2
   [[menu.footer]]
     name = "Contact"
     title = "Contact form"
     url = "/contact/"
-    weight = 2
-  [[menu.footer]]
-    name = "Contributors"
-    title = "Contributors"
-    url = "/contributors/"
-    weight = 3
+    weight = 1
+  #[[menu.footer]]
+  #  name = "Contributors"
+  #  title = "Contributors"
+  #  url = "/contributors/"
+  #  weight = 3
 
 # see https://gohugo.io/about/hugo-and-gdpr/    
 [privacy]
