@@ -1,5 +1,6 @@
 ---
 title: Becoming certified as an RStudio Tidyverse Instructor
+layout: single-sidebar
 date: '2020-10-07'
 categories:
   - R
@@ -9,8 +10,7 @@ tags:
   - RStudio
 slug: rstudio-instructor-certification-tidyverse
 subtitle: An overview of the RStudio Instructor certification process and collection of resources to support anyone on their certification journey.
-summary: An overview of the [RStudio Instructor certification](https://education.rstudio.com/trainers/#info)
-  process and collection of resources to support anyone on their certification journey.
+summary: An overview of the [RStudio Instructor certification](https://education.rstudio.com/trainers/#info) process and collection of resources to support anyone on their certification journey.
 lastmod: 2021-03-31
 featured: yes
 draft: no

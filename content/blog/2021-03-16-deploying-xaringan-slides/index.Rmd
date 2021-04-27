@@ -1,5 +1,6 @@
 ---
 title: "Deploying xaringan Slides: A Ten-Step GitHub Pages Workflow"
+layout: single-sidebar
 date: '2021-03-16'
 slug: deploying-xaringan-slides
 categories:
