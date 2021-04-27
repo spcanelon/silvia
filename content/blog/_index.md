@@ -1,7 +1,7 @@
 ---
-title: Blog
+title: Meeting People Where They R
 description: |
-  A home for my writing about R.
+  A blog where I practice sharing my curiosity about R. It includes notes and tutorials for my future self and hopefully also for you.
 author: "Silvia Canelón"
 show_post_thumbnail: true
 thumbnail_left: true # for list-sidebar only
@@ -12,10 +12,9 @@ layout: list-sidebar # list, list-sidebar, list-grid
 
 # for list-sidebar layout
 sidebar: 
-  title: Blog
+  title: Meeting People Where They R
   description: |
-    This is a home for my writing about R. It includes notes and tutorials for my future self and hopefully also for you.
-    
+    This is my blog where I practice sharing my curiosity about R. It includes notes and tutorials for my future self and hopefully also for you.
   author: "Silvia Canelón"
   text_link_label: Subscribe via RSS
   text_link_url: /index.xml
