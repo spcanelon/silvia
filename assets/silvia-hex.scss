@@ -4,36 +4,47 @@
 // "Color Palette" ideas of https://tachyons.io/docs/themes/skins/
 
 // custom color variables
-$spc-blue: #122140; // rgba(18, 33, 64)
-$spc-blue-dark: #121824; // rgba(18, 24, 36)
-$spc-blue-light: #475269; // rgba(58, 70, 95, 1)
-$spc-latte: #FFF8E7; // rgba(255, 199, 174, 1)
-$spc-gold: #936C10; // rgba(232, 174, 44, 1)
-//$spc-caramel: #8F6400;
-$spc-coffee: #F2E7CD;
-$spc-bg: #F8F8F8;
+
+// latte palette
+
+$spc-bg: #FFF8E7; // rgba(255, 199, 174, 1)
+$spc-bg-dark: #F2E7CD;
+$spc-primary: #122140; // rgba(18, 33, 64)
+$spc-primary-light: #475269; // rgba(58, 70, 95, 1)
+$spc-secondary: #936C10; // rgba(232, 174, 44, 1)
 $spc-gray: #E5E5E3; // rgba(233, 233, 233)
-$spc-coral: #903030;
 $spc-test: #FF725C;
 $spc-white: #FFFFFF;
 
+/*
+// gray palette
+$spc-bg: #F7F4F3;
+$spc-bg-dark: #EFE3E2;
+$spc-primary: #122140; // rgba(18, 33, 64)
+$spc-primary-light: #475269; // rgba(58, 70, 95, 1)
+$spc-secondary: #9D5D58; // rgba(232, 174, 44, 1)
+$spc-gray: #E5E5E3; // rgba(233, 233, 233)
+$spc-test: #FF725C;
+$spc-white: #FFFFFF;
+*/
+
 // set custom hex colors
-$siteBgColorCustom: $spc-latte;              // site background
-$textColorCustom: $spc-blue;                 // all text, including headings
-$bodyLinkColorCustom: $spc-gold;             // main body links/anchors
+$siteBgColorCustom: $spc-bg;                   // site background
+$textColorCustom: $spc-primary;                // all text, including headings
+$bodyLinkColorCustom: $spc-secondary;          // main body links/anchors
 
-$sidebarBgColorCustom: $spc-coffee;         // sidebar background
-$sidebarTextColorCustom: $spc-blue-light;         // text in sidebar
-$sidebarLinkColorCustom: $spc-blue;         // links in sidebar
+$sidebarBgColorCustom: $spc-bg-dark;           // sidebar background
+$sidebarTextColorCustom: $spc-primary-light;   // text in sidebar
+$sidebarLinkColorCustom: $spc-primary;         // links in sidebar
 
-$headlineColorCustom: $spc-blue;            // name text in about & event detail text
-$headingColorCustom: $spc-blue;             // headings (in browser only)
-$navLinkColorCustom: $spc-blue-light;       // navbar & footer links/icons
-$footerTextColorCustom: $spc-blue-light;    // footer text
+$headlineColorCustom: $spc-primary;            // name text in about & event detail text
+$headingColorCustom: $spc-primary;             // headings (in browser only)
+$navLinkColorCustom: $spc-primary-light;       // navbar & footer links/icons
+$footerTextColorCustom: $spc-primary-light;    // footer text
 
-$buttonBgColorCustom: $spc-coffee;          // contact form button background
-$buttonTextColorCustom: $spc-blue-light;    // contact form button 
-$buttonHoverBgColorCustom: $spc-blue-light; // any button background w/ hover
-$buttonHoverTextColorCustom: $spc-white;    // any button text w/ hover
+$buttonBgColorCustom: $spc-secondary;          // contact form button background
+$buttonTextColorCustom: $spc-white;    // contact form button
+$buttonHoverBgColorCustom: $spc-primary-light; // any button background w/ hover
+$buttonHoverTextColorCustom: $spc-white;       // any button text w/ hover
 
-$borderColorCustom: $spc-gold;              // quote bar, horizontal bars
+$borderColorCustom: $spc-secondary;            // quote bar, horizontal bars
