@@ -5,6 +5,11 @@
 
 // custom color variables
 
+$spc-blue: #122140;
+$spc-gray: #E5E5E3; // rgba(233, 233, 233)
+$spc-test: #FF725C;
+$spc-white: #FFFFFF;
+
 // latte palette
 /*
 $spc-bg: #FFF8E7; // rgba(255, 199, 174, 1)
@@ -12,39 +17,43 @@ $spc-bg-dark: #F2E7CD;
 $spc-primary: #122140; // rgba(18, 33, 64)
 $spc-primary-light: #475269; // rgba(58, 70, 95, 1)
 $spc-secondary: #936C10; // rgba(232, 174, 44, 1)
-$spc-gray: #E5E5E3; // rgba(233, 233, 233)
-$spc-test: #FF725C;
-$spc-white: #FFFFFF;
 */
 
-// gray palette
+// blush palette
+/*
 $spc-bg: #F7F4F3;
 $spc-bg-dark: #EFE3E2;
 $spc-primary: #122140; // rgba(18, 33, 64)
 $spc-primary-light: #475269; // rgba(58, 70, 95, 1)
 $spc-secondary: #9D5D58; // rgba(232, 174, 44, 1)
-$spc-gray: #E5E5E3; // rgba(233, 233, 233)
-$spc-test: #FF725C;
-$spc-white: #FFFFFF;
+*/
 
+// pink lake palette
+$spc-bg: #FFF8E7;
+$spc-bg-dark: #F2E7CD;
+$spc-primary: #183B25; // rgba(18, 33, 64)
+$spc-primary-light: #274D35; // rgba(58, 70, 95, 1)
+$spc-secondary: #936C10; // rgba(232, 174, 44, 1)
+$spc-blue-green: #1A3F3D;
+$spc-blue-light: #456473;
 
 // set custom hex colors
 $siteBgColorCustom: $spc-bg;                   // site background
-$textColorCustom: $spc-primary;                // all text, including headings
+$textColorCustom: $spc-blue-green;                // all text, including headings
 $bodyLinkColorCustom: $spc-secondary;          // main body links/anchors
 
 $sidebarBgColorCustom: $spc-bg-dark;           // sidebar background
 $sidebarTextColorCustom: $spc-primary-light;   // text in sidebar
-$sidebarLinkColorCustom: $spc-primary;         // links in sidebar
+$sidebarLinkColorCustom: $spc-primary-light;         // links in sidebar
 
-$headlineColorCustom: $spc-primary;            // name text in about & event detail text
-$headingColorCustom: $spc-primary;             // headings (in browser only)
-$navLinkColorCustom: $spc-primary-light;       // navbar & footer links/icons
-$footerTextColorCustom: $spc-primary-light;    // footer text
+$headlineColorCustom: $spc-primary;            // headline & name in About, event detail text
+$headingColorCustom: $spc-primary-light;             // headings (in browser only)
+$navLinkColorCustom: $spc-secondary;       // navbar & footer links/icons
+$footerTextColorCustom: $spc-blue-green;    // footer text
 
 $buttonBgColorCustom: $spc-secondary;          // contact form button background
 $buttonTextColorCustom: $spc-white;    // contact form button
-$buttonHoverBgColorCustom: $spc-primary-light; // any button background w/ hover
+$buttonHoverBgColorCustom: rgba(26,63,61,0.9); // any button background w/ hover
 $buttonHoverTextColorCustom: $spc-white;       // any button text w/ hover
 
-$borderColorCustom: $spc-secondary;            // quote bar, horizontal bars
+$borderColorCustom: $spc-primary-light;            // quote bar, horizontal bars
