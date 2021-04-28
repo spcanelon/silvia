@@ -30,7 +30,7 @@ enableEmoji = true
     
 [params]
   orgName = "Silvia Canelón"
-  orgLocal = "Philadelphia, PA"
+  orgLocal = ""
   #description = "A modern, beautiful, and easily configurable blog theme for Hugo."
   description = "Personal website of Silvia Canelón"
   #favicon = "/img/favicon.ico"
