@@ -1,24 +1,12 @@
 ---
 title: 'Visualizing the Inside Journey of Recovery from Opioid Use Disorder'
-author:
 date: '2020-03-25'
 slug: data-hack-opioid
 categories: []
 tags:
   - data hack
   - opioid
-authors:
-- silvia
-- Pete Arriaza
-- Vince Giorno
-- Alyssa Hernandez
-- Spriha Jha
-- Adnette Kamugisha
-- Selah Lynch
-- Ben Miller
-- Laura Mullin
-- Jessica Streeter
-- Catherine Weiss
+author: "Silvia P. Canelón, Pete Arriaza, Vince Giorno, Alyssa Hernandez, Spriha Jha, Adnette Kamugisha, Selah Lynch, Ben Miller, Laura Mullin, Jessica Streeter, Catherine Weiss"
 doi: ''
 publishDate: '2020-03-25'
 publication_types:

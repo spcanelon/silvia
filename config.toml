@@ -1,8 +1,9 @@
 baseURL = "/"
 theme = "hugo-apero"
 languageCode = "en"
-title = "Hugo Apéro"
-author = "Alison Hill"
+#title = "Hugo Apéro"
+title = "Silvia Canelón"
+author = "Silvia Canelón"
 copyright = "" # set to override the auto generated copyright using org info and now year
 googleAnalytics = ""
 disqusShortname = "" # see params.utterances to use utterances instead of Disqus
@@ -25,15 +26,17 @@ enableEmoji = true
     ordered = false
   [markup.highlight]
     # one of: https://xyproto.github.io/splash/docs/ 
-    style = "github"
+    style = "github" # "github"
     
 [params]
-  orgName = "RStudio"
-  orgLocal = "Anywhere"
-  description = "A modern, beautiful, and easily configurable blog theme for Hugo."
+  orgName = "Silvia Canelón"
+  orgLocal = ""
+  #description = "A modern, beautiful, and easily configurable blog theme for Hugo."
+  description = "Personal website of Silvia Canelón"
+  #favicon = "/img/favicon.ico"
   favicon = "/img/favicon.ico"
   logo = "/img/blogophonic-mark-dark.png"
-  mainSections = ["blog", "project", "talk"]
+  mainSections = ["blog", "talk", "publication"]
   navallcaps = true
   # show/hide social icons in site header & footer
   # configure social icons and links below in [[params.social]]
@@ -41,39 +44,42 @@ enableEmoji = true
   socialInFooter = true
   # Default image for social sharing and search engines. 
   # Place image file in `static` folder and specify image name here.
-  sharing_image = "/img/papillons.jpg"
+  #sharing_image = "/img/papillons.jpg"
+  sharing_image = "/img/Lake_Pink_Social.png"
   # Twitter username (without @). Used when a visitor shares your site on Twitter.
-  twitter = "apreshill"
+  twitter = "spcanelon"
   
   # use a built-in color theme
   # one of: forest / grayscale / peach / plum /
   #         poppy / sky / violet / water 
-  theme = "sky"
+  theme = ""
   
   # or, leave theme empty & make your own palette
   # see docs at https://hugo-apero.netlify.app/blog/color-themes/
   # the custom scss file must be in the assets/ folder
   # add the filename name here, without extension
   # to use hex colors instead of named tachyons colors, include "hex" in filename
-  custom_theme = "" 
+  custom_theme = "silvia-hex"
   
   # use an embedded font-family
   # serif options: Fraunces / EB Garamond / Bitter
   # sans-serif options: Commissioner / Alegreya Sans / Metropolis
   # if you import your own fonts, name them here too
   customtextFontFamily = "Commissioner"
-  customheadingFontFamily = "Fraunces"
+  customheadingFontFamily = ""
   # alternatively, leave empty and select basic font options: sans-serif or serif
   # for more http://tachyons.io/docs/typography/font-family/
   textFontFamily = "sans-serif"
-  headingFontFamily = "sans-serif"
+  #headingFontFamily = "serif"
+  #textFontFamily = "avenir"
+  headingFontFamily = "athelas"
 
   # Configuration of https://utteranc.es/ for comments
   [params.utterances]
     use_utterances = true
-    repo_name = "apreshill/apero"
-    issue_term = "pathname" # url, pathname, or title
-    theme = "boxy-light"
+    repo_name = "spcanelon/silvia"
+    issue_term = "title" # url, pathname, or title
+    theme = "boxy-light" # TODO: change to "preferred-color-scheme" when you enable dark mode toggle
     label = "comments :crystal_ball:"
 
   # Social icons may appear on homepage and in site header or footer
@@ -81,30 +87,40 @@ enableEmoji = true
   # Icon pack "fab" includes brand icons, see: https://fontawesome.com/icons?d=gallery&s=brands&m=free
   # Icon pack "fas" includes solid icons, see: https://fontawesome.com/icons?d=gallery&s=solid&m=free
   # Icon pack "far" includes regular icons, see: https://fontawesome.com/icons?d=gallery&s=regular&m=free
-  [[params.social]]
-      icon      = "github" # icon name without the 'fa-'
-      icon_pack = "fab"
-      url       = "https://github.com/apreshill/apero"
-  [[params.social]]
-      icon      = "facebook-square" # icon name without the 'fa-'
-      icon_pack = "fab"
-      url       = "https://www.facebook.com/hashtag/ap%C3%A9ro"
-  [[params.social]]
-      icon      = "instagram" # icon name without the 'fa-'
-      icon_pack = "fab"
-      url       = "https://www.instagram.com/explore/tags/apero/"
+  # Icon pack "ai" includes academic icons, see: https://jpswalsh.github.io/academicons/
   [[params.social]]
       icon      = "twitter" # icon name without the 'fa-'
       icon_pack = "fab"
-      url       = "https://twitter.com/hashtag/apéro"
+      url       = "https://twitter.com/spcanelon"
   [[params.social]]
-      icon      = "impactstory" # icon name without the 'fa-'
-      icon_pack = "ai"
-      url       = "https://impactstory.org/u/0000-0002-8082-1890"
+      icon      = "github" # icon name without the 'fa-'
+      icon_pack = "fab"
+      url       = "https://github.com/spcanelon/silvia"
+  #[[params.social]]
+  #    icon      = "facebook-square" # icon name without the 'fa-'
+  #    icon_pack = "fab"
+  #    url       = "https://www.facebook.com/hashtag/ap%C3%A9ro"
+  #[[params.social]]
+  #    icon      = "instagram" # icon name without the 'fa-'
+  #    icon_pack = "fab"
+  #    url       = "https://www.instagram.com/explore/tags/apero/"
+
+  #[[params.social]]
+  #    icon      = "impactstory" # icon name without the 'fa-'
+  #    icon_pack = "ai"
+  #    url       = "https://impactstory.org/u/0000-0002-8082-1890"
   [[params.social]]
       icon      = "orcid" # icon name without the 'fa-'
       icon_pack = "ai"
-      url       = "http://orcid.org/0000-0002-8082-1890"
+      url       = "https://orcid.org/0000-0003-1709-1394"
+  [[params.social]]
+      icon      = "google-scholar" # icon name without the 'fa-'
+      icon_pack = "ai"
+      url       = "https://scholar.google.com/citations?user=GAzkvpcAAAAJ&hl=en&oi=ao"
+  [[params.social]]
+      icon      = "linkedin" # icon name without the 'fa-'
+      icon_pack = "fab"
+      url       = "https://linkedin.com/in/spcanelon"
   [[params.social]]
       icon      = "rss" # icon name without the 'fa-'
       icon_pack = "fas"
@@ -119,7 +135,7 @@ enableEmoji = true
   # Configure header 
   [[menu.header]]
     name = "About"
-    title = "About Blogophonic"
+    title = "About Me"
     url = "/about/"
     weight = 1
   [[menu.header]]
@@ -128,42 +144,46 @@ enableEmoji = true
     url = "/blog/"
     weight = 2
   [[menu.header]]
-    name = "Projects"
-    title = "Project Portfolio"
-    url = "/project/"
-    weight = 3
-  [[menu.header]]
     name = "Talks"
     title = "Talks"
     url = "/talk/"
+    weight = 3
+  [[menu.header]]
+    name = "Publications"
+    title = "Publications"
+    url = "/publication/"
     weight = 4
-  [[menu.header]]
-    name = "A collection"
-    title = "A collection"
-    url = "/collection/"
-    weight = 5
-  [[menu.header]]
-    name = "Elements"
-    title = "Element Page"
-    url = "/elements/"
-    weight = 6
-    
+  #[[menu.header]]
+  #  name = "Projects"
+  #  title = "Project Portfolio"
+  #  url = "/project/"
+  #  weight = 5
+  #[[menu.header]]
+  #  name = "A collection"
+  #  title = "A collection"
+  #  url = "/collection/"
+  #  weight = 6
+  #[[menu.header]]
+  #  name = "Elements"
+  #  title = "Element Page"
+  #  url = "/elements/"
+  #  weight = 7
   # Configure footer  
   [[menu.footer]]
     name = "License"
     title = "License"
     url = "/license/"
-    weight = 1
+    weight = 2
   [[menu.footer]]
     name = "Contact"
     title = "Contact form"
     url = "/contact/"
-    weight = 2
-  [[menu.footer]]
-    name = "Contributors"
-    title = "Contributors"
-    url = "/contributors/"
-    weight = 3
+    weight = 1
+  #[[menu.footer]]
+  #  name = "Contributors"
+  #  title = "Contributors"
+  #  url = "/contributors/"
+  #  weight = 3
 
 # see https://gohugo.io/about/hugo-and-gdpr/    
 [privacy]

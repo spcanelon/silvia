@@ -1,20 +1,19 @@
 ---
 title: "Writing Presentations in R"
-author: silvia
 date: 2021-03-16T17:30:00
 slug: 2021-03-16-xaringan-deploy-demo
 categories:
   - R
-  - xaringan
   - Demo
   - Teaching
 tags:
   - R-Ladies
   - English
+  - xaringan
 event: R-Ladies Seattle Meetup
 event_url: https://www.meetup.com/rladies-seattle/events/276570832/
 location: Seattle, Washington, US (virtual)
-subtitle: Two [R-Ladies Seattle](https://twitter.com/RLadiesSeattle) package demonstrations showing how to make beautiful slides with xaringan and how to deploy them.
+subtitle: Two R-Ladies Seattle package demonstrations showing how to make beautiful slides with xaringan and how to deploy them.
 summary: R-Ladies Seattle package demonstrations showing how to make beautiful slides with xaringan and how to deploy them.
 abstract: ""
 date_end: 2021-03-16T18:30:00
@@ -42,4 +41,4 @@ links:
   url: https://silvia.rbind.io/2021-03-16-deploying-xaringan-slides
 ---
 
-![](rladies-seattle.png)
+![Hex logo for R-Ladies Seattle featuring some ggplot2-created mountain ranges](rladies-seattle.png)
