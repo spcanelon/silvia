@@ -1,0 +1,41 @@
+// Override this file to add your own SCSS styling.
+
+// basic color options: use only hex colors
+// "Color Palette" ideas of https://tachyons.io/docs/themes/skins/
+
+// custom color variables
+
+$spc-blue: #122140;
+$spc-gray: #E5E5E3; // rgba(233, 233, 233)
+$spc-test: #FF725C;
+$spc-white: #FFFFFF;
+
+// latte palette
+$spc-bg: #FFF8E7;
+$spc-bg-dark: #F2E7CD;
+$spc-primary: #122140; // rgba(18, 33, 64)
+$spc-primary-light: #475269; // rgba(58, 70, 95, 1)
+$spc-secondary: #936C10; // rgba(232, 174, 44, 1)
+$spc-blue-green: #1A3F3D;
+$spc-blue-light: #456473;
+
+// set custom hex colors
+$siteBgColorCustom: $spc-bg;                   // site background
+$textColorCustom: $spc-primary-light;          // all text, including headings
+$bodyLinkColorCustom: $spc-secondary;          // main body links/anchors
+
+$sidebarBgColorCustom: $spc-bg-dark;           // sidebar background
+$sidebarTextColorCustom: $spc-primary-light;   // text in sidebar
+$sidebarLinkColorCustom: $spc-primary-light;   // links in sidebar
+
+$headlineColorCustom: $spc-primary;            // headline & name in About, event detail text
+$headingColorCustom: $spc-primary;             // headings (in browser only)
+$navLinkColorCustom: $spc-secondary;           // navbar & footer links/icons
+$footerTextColorCustom: $spc-primary-light;    // footer text
+
+$buttonBgColorCustom: $spc-secondary;          // contact form button background
+$buttonTextColorCustom: $spc-white;            // contact form button
+$buttonHoverBgColorCustom: $spc-primary-light; // any button background w/ hover
+$buttonHoverTextColorCustom: $spc-white;       // any button text w/ hover
+
+$borderColorCustom: $spc-primary-light;        // quote bar, horizontal bars

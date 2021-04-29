@@ -1,5 +1,5 @@
 ---
-title: Silvia P. Canelón
+title: Silvia Canelón
 avatar_image: "avatar.png"
 
 authors:
