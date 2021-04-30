@@ -40,16 +40,14 @@ links:
     name: JSON example file
     url: program-mgmt.json
 ---
+<script src="{{< blogdown/postref >}}index_files/clipboard/clipboard.min.js"></script>
+<link href="{{< blogdown/postref >}}index_files/xaringanExtra-clipboard/xaringanExtra-clipboard.css" rel="stylesheet" />
+<script src="{{< blogdown/postref >}}index_files/xaringanExtra-clipboard/xaringanExtra-clipboard.js"></script>
+<script>window.xaringanExtraClipboard(null, {"button":"<i class=\"fa fa-clipboard\"><\/i> Copy Code","success":"<i class=\"fa fa-check\" style=\"color: #90BE6D\"><\/i> Copied!","error":"Press Ctrl+C to Copy"})</script>
+<link href="{{< blogdown/postref >}}index_files/font-awesome/css/all.css" rel="stylesheet" />
+<link href="{{< blogdown/postref >}}index_files/font-awesome/css/v4-shims.css" rel="stylesheet" />
 
-```{r setup, echo=FALSE}
-htmltools::tagList(
-  xaringanExtra::use_clipboard(
-    button_text = "<i class=\"fa fa-clipboard\"></i> Copy Code",
-    success_text = "<i class=\"fa fa-check\" style=\"color: #90BE6D\"></i> Copied!",
-  ),
-  rmarkdown::html_dependency_font_awesome()
-)
-```
+
 
 **[Airtable](https://airtable.com/) is a user-friendly and _powerful_ tool** that until recently I'd been using for personal projects (i.e. document organizing, apartment hunting, etc.). A couple of weeks ago I leaned on Airtable to create a base designed for the [Philadelphia Reproductive Freedom Collective](https://www.womensmedicalfund.org/prfc) to support our COVID-19 mutual aid efforts. 
 
@@ -83,12 +81,10 @@ Last but not least -- we'll be keeping things tidy, with the help of the [**tidy
 
 # Importing JSON file
 
-```{r, include = FALSE}
-knitr::opts_chunk$set(warning = FALSE, message = FALSE,
-                      eval=FALSE)
-```
 
-```{r import, results=FALSE}
+
+
+```r
 # clearing environment
 rm(list = ls())
 
@@ -98,15 +94,15 @@ library(lubridate)
 library(tidyverse)
 ```
 
-```{r, eval=FALSE,include=FALSE}
-library(emo)
-```
 
-```{r, results=FALSE}
+
+
+```r
 trello <- stream_in(file("program-mgmt.json")) # produces a data frame
 ```
 
-```{r}
+
+```r
 glimpse(trello)
 ```
 A _lot_ of information about the Trello board is contained in JSON data. We'll be parsing information about the `cards` as well as the `lists` and then joining them together by a common identifier `id` or `idShort`.
@@ -118,7 +114,8 @@ Parsing information from JSON data was not something I was familiar with and fou
 ## Cards
 
 The first step is to extract information about the Trello `cards` themselves. This information is contained within a list of data frames and requires **flattening** which makes the nested hierarchical data structure into a flatter structure by assigning each of the nested variables its own column as much as possible. Then, the most important variables are selected as `cards_trim` before moving on to extracting `label` information.
-```{r tibble-time, paged.print=TRUE}
+
+```r
 # selecting cards information
 cards <- trello$cards # list of 1
 
@@ -139,7 +136,8 @@ cards_trim <- cards_flat_tbl %>%
 ### Labels
 Relevant information about the labels is selected and the `unnest` function is used to flatten because `labels` is a list of data frames. Again, I found [Kan's post](https://blog.exploratory.io/working-with-json-data-in-very-simple-way-ad7ebcc0bb89) helpful here! Particularly for saving the label details as a character list, which is helpful later on. Once we get to Airtable it'll be important that label information for each `card` be structured as a simple list of words (i.e. label1, label2, label3). 
 We get close once the `labels` are contained within a character list `labelList`, but there are still "c"s and parentheses that need to be removed. String manipulation is something I'm still learning about so the code below is far from elegant!
-```{r labels}
+
+```r
 # extracting labels details
 labels_info <- cards_trim %>%
   select(id, idShort, labels) %>%
@@ -164,7 +162,8 @@ ct_labels <- left_join(cards_trim %>% select(-labels), labels_info %>% select(-l
 
 The next step is to download all of the items attached to the cards onto a local folder. I found [this StackOverflow post](https://stackoverflow.com/questions/32174306/download-url-links-using-r) really helpful. When I tried this out on my own Trello board I also found that I couldn't download the few attachments I had made from my local drive. [This StackOverflow post](https://stackoverflow.com/questions/2158780/catching-an-error-and-then-branching-logic/2158803#2158803) helped me figure out how to flag and catch these download errors so that I could create a list of the urls with "attachment errors" that I could follow up with manually. 
 
-```{r eval=FALSE}
+
+```r
 # expanding the attachment lists into separate url records
 att_urls <- ct_labels %>%
   select(idShort, attachments) %>%
@@ -191,7 +190,8 @@ for (i in 1:length(att_urls$url)){
 ```
 
 The following selects the attachment records with errors, renames somes variables, and exports the data frame as a CSV. 
-```{r eval=FALSE}
+
+```r
 # preparing data frame for export to CSV
 attachment_errors <- att_urls %>%
   filter(attachmentError == TRUE) %>%
@@ -203,7 +203,8 @@ write.csv(attachment_errors, file = "attachment_errors.csv")
 
 > **_Aside:_** *If you have a lot of attachments _per card_, you may want to create a directory folder for each card. This for loop will get you there -- use it instead of the one above:*
 
-```{r, eval=FALSE}
+
+```r
 # creates individual directory folders for each card id
 for (i in 1:length(att_urls$url)){
   dirAttachments <- paste(dirFiles, "attachments", att_urls$idShort[i], sep = "/")
@@ -214,7 +215,8 @@ for (i in 1:length(att_urls$url)){
 ```
 
 Records in the main `cards` data frame are labeled "TRUE" within the `attachments` column if they have attachments and "FALSE" if they don't.
-```{r eval=FALSE}
+
+```r
 # converts the attachment column to a categorical variable in the main cards+labels data frame
 ct_labels <- ct_labels %>%
   mutate(attachments = ifelse(idShort %in% att_urls$idShort, TRUE, FALSE))
@@ -222,7 +224,8 @@ ct_labels <- ct_labels %>%
 
 ## Lists
 The `lists` information is extracted similarly to the `cards` information, but flattening is a little more straightforward because it involves only one data frame. With more data frames, the `unnest` function is a better choice.
-```{r}
+
+```r
 # selecting lists information
 lists <- trello$lists # list of 1 data frame
 glimpse(lists)
@@ -245,7 +248,8 @@ ct_labels_list <- left_join(ct_labels, lists_trim) %>%
 
 ## Data prepping
 Columns in the new `ct_labels_list` data frame are given new names, and the `lubridate` package is used next to convert the date fields. [This resource](http://biostat.mc.vanderbilt.edu/wiki/pub/Main/ColeBeck/datestimes.pdf) was helpful in understanding date conversions and formatting.
-```{r export-prep, paged.print=TRUE}
+
+```r
 # changing variable names
 tidy_cards <- ct_labels_list %>%
   select(-id, -idList, -closedList) %>%
@@ -260,7 +264,8 @@ tidy_cards <- ct_labels_list %>%
 ```
 
 The last step before exporting the final data frame `tidy_cards` is to check the unique number of tasks to make sure it matches the number of records in the data frame (i.e. one task per observation).
-```{r collapse=TRUE}
+
+```r
 # determining the number of unique tasks
 length(unique(tidy_cards$Task_ID))
 
@@ -269,7 +274,8 @@ glimpse(tidy_cards)
 ```
 
 ## Data exporting
-```{r export-csv, eval=FALSE}
+
+```r
 write.csv(tidy_cards, file = "tidy_cards.csv")
 ```
 

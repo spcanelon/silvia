@@ -52,10 +52,7 @@ htmltools::tagList(
 library(xaringanExtra)
 ```
 
-
-{{% alert note %}}
 **Note:** This workflow is not exclusive to xaringan slides! Try it out with any other HTML file.
-{{% /alert %}}
 
 # Choose your own adventure
 - **Option 1:** Keep reading to make a xaringan slide deck from scratch!
@@ -72,12 +69,12 @@ library(xaringanExtra)
 
     > Note: After copying the files to your machine you'll probably want to rename the file folder to whatever makes sense for your presentation.
 
-```{r, echo=FALSE}
-xaringanExtra::embed_xaringan("https://spcanelon.github.io/RLadies-xaringan-template", 
-                              ratio = "4:3")
-```
+    ```{r, echo=FALSE}
+    xaringanExtra::embed_xaringan("https://spcanelon.github.io/RLadies-xaringan-template", 
+                                  ratio = "4:3")
+    ```
 
-> Try navigating through the slides `r emo::ji("point_up")` with your left/right arrow keys and press the letter "P" on your keyboard to see some notes in Presenter View
+    > Try navigating through the slides `r emo::ji("point_up")` with your left/right arrow keys and press the letter "P" on your keyboard to see some notes in Presenter View
 
 # The Ten-Step Workflow
 
@@ -102,13 +99,13 @@ install.packages("usethis")
 
 ## Creating your xaringan slide deck
 
-1. Create a new RStudio project for your presentation:
+**1\. Create a new RStudio project for your presentation:**
 
-    ```{r, eval = FALSE}
-    usethis::create_project("filepath/for/your/presentation/repo-name")
-    ```
+```{r, eval = FALSE}
+usethis::create_project("filepath/for/your/presentation/repo-name")
+```
 
-    > `r emo::ji("round_pushpin")` If you're not sure where you are on your computer, check your working directory with `getwd()` and use it as a filepath reference point
+> `r emo::ji("round_pushpin")` If you're not sure where you are on your computer, check your working directory with `getwd()` and use it as a filepath reference point
     
 <!--Output:    
     ```{r, eval=FALSE}
@@ -124,28 +121,29 @@ install.packages("usethis")
     ```
 -->
 
-2. Create a xaringan deck using a xaringan template:<br>
+**2\. Create a xaringan deck using a xaringan template:**<br>
 _File_ > _New File_ > _R Markdown_ > _From Template_ > _Ninja Presentation_ > _OK_
-3. Delete what you don't need and save your R Markdown file with whatever name you like. If you pick `index.Rmd` the live link you share at the end will be relatively short.
 
-6. Render HTML slides from the open Rmd file using xaringan's infinite moon reader:
+**3\. Delete what you don't need and save your R Markdown file with whatever name you like.** If you pick `index.Rmd` the live link you share at the end will be relatively short.
+
+**4\. Render HTML slides from the open Rmd file using xaringan's infinite moon reader:**
   
-    ```{r, eval = FALSE}
-      xaringan::infinite_moon_reader()
-    ```
+```{r, eval = FALSE}
+  xaringan::infinite_moon_reader()
+```
 
 
 ## Initialize version control with git
 
-5. Initialize version control of your slides with git: 
+**5\. Initialize version control of your slides with git:**
 
-    ```{r, eval = FALSE}
-    usethis::use_git()
-    ```
+```{r, eval = FALSE}
+usethis::use_git()
+```
 
-    You'll be asked if you want to commit the files in your project (with the message "Initial commit") and then if you want to restart to activate the Git pane.  Say yes to both `r emo::ji("check")`
+You'll be asked if you want to commit the files in your project (with the message "Initial commit") and then if you want to restart to activate the Git pane.  Say yes to both `r emo::ji("check")`
 
-    > Note: At the moment {usethis} names the primary branch "master" by default. [Issue #1341](https://github.com/r-lib/usethis/issues/1341) suggests the option to instead name it "main" is in the works.
+> Note: At the moment {usethis} names the primary branch "master" by default. [Issue #1341](https://github.com/r-lib/usethis/issues/1341) suggests the option to instead name it "main" is in the works.
 
 <!--Output:
 > usethis::use_git()
@@ -181,13 +179,13 @@ Selection:
 
 -->
 
-6. Connect your local project with a GitHub repo:
+**6\. Connect your local project with a GitHub repo:**
 
-    ```{r, eval = FALSE}
-    usethis::use_github()
-    ```
+```{r, eval = FALSE}
+usethis::use_github()
+```
 
-    > You could use the function argument `private = TRUE` to create a private GitHub repository. But you may have to remember to change the visibility before [deploying to GitHub Pages](#deploying-your-slides).
+> You could use the function argument `private = TRUE` to create a private GitHub repository. But you may have to remember to change the visibility before [deploying to GitHub Pages](#deploying-your-slides).
 
 <!--Output:
 > usethis::use_github(private = TRUE)
@@ -200,42 +198,42 @@ Selection:
 ✓ Opening URL 'https://github.com/spcanelon/rladies-xaringan-template'
 -->
 
-7. Your new GitHub repo with all of your xaringan project files will automatically open up in your browser
+**7\. Your new GitHub repo with all of your xaringan project files will automatically open up in your browser**
 
-    > Repo for the R-Ladies xaringan template:<br>
-    https://github.com/spcanelon/RLadies-xaringan-template
+> Repo for the R-Ladies xaringan template:<br>
+https://github.com/spcanelon/RLadies-xaringan-template
 
 ## Making and committing changes to your slides
 
-8. Edit your slides as you wish. Commit often! And then push to GitHub. Use the tools provided by the Git pane in RStudio, or use the following commands in the Terminal: 
+**8\. Edit your slides as you wish.** Commit often! And then push to GitHub. Use the tools provided by the Git pane in RStudio, or use the following commands in the Terminal: 
 
-    ```{bash, eval = FALSE}
-    # Step 1: Stage all modified files
-    git add .
-    ```
+```{bash, eval = FALSE}
+# Step 1: Stage all modified files
+git add .
+```
 
-    ```{bash, eval = FALSE}
-    # Step 2: Describe the changes you made to your files
-    git commit -m "<A brief but descriptive commit message>"
-    ```
+```{bash, eval = FALSE}
+# Step 2: Describe the changes you made to your files
+git commit -m "<A brief but descriptive commit message>"
+```
 > Consider writing a commit message that finishes the following sentence:^[[How to Write a Git Commit Message | Chris Beams](https://chris.beams.io/posts/git-commit/#imperative)] "If applied, this commit will..." (e.g. "Change the slide theme", "Add hello slide")
 
-    ```{bash, eval = FALSE}
-    # Step 3: Push the changes to your GitHub repository
-    git push
-    ```
+```{bash, eval = FALSE}
+# Step 3: Push the changes to your GitHub repository
+git push
+```
   
 ## Deploying your slides
 
-9. When you're ready to deploy your slides, you can use the `usethis::use_github_pages()` function which makes the process of deploying via GitHub Pages super easy. I recommend pointing `branch` to the name of your primary branch.
+**9\. When you're ready to deploy your slides, you can use the `usethis::use_github_pages()` function** which makes the process of deploying via GitHub Pages super easy. I recommend pointing `branch` to the name of your primary branch.
 
-    ```{r eval=FALSE}
-    usethis::use_github_pages(branch = "master")
-    ```
-    
-    > Note: Your repository must be **public** for your deployed slides to be available publicly, unless you have a paid GitHub account.
-    
-    > Also, you only need to follow this step _once_ to deploy your slides to the web. As long as you remember to push to your repo any changes that you make to your slides (Rmd and HTML), GitHub Pages will know how to render them.
+```{r eval=FALSE}
+usethis::use_github_pages(branch = "master")
+```
+
+> Note: Your repository must be **public** for your deployed slides to be available publicly, unless you have a paid GitHub account.
+
+> Also, you only need to follow this step _once_ to deploy your slides to the web. As long as you remember to push to your repo any changes that you make to your slides (Rmd and HTML), GitHub Pages will know how to render them.
     
 <!--Output:
 > usethis::use_github_pages(branch = "master")
@@ -247,16 +245,17 @@ Selection:
 ● Path: '/'
 -->
 
-10. Visit the link provided to see your newly deployed slides! `r emo::ji("rocket")`<br>Don't panic if you don't see them right away, sometimes it takes a little time. This is the link you will share with the world when you present. Notice it looks _very_ similar to your GitHub repo link.
+**10\. Visit the link provided to see your newly deployed slides!** `r emo::ji("rocket")`<br>Don't panic if you don't see them right away, sometimes it takes a little time. This is the link you will share with the world when you present. Notice it looks _very_ similar to your GitHub repo link.
 
-    > Link to the R-Ladies xaringan template rendered slides:<br>
-    https://spcanelon.github.io/RLadies-xaringan-template
+> Link to the R-Ladies xaringan template rendered slides:<br>
+https://spcanelon.github.io/RLadies-xaringan-template
 
 
 # Bonus steps
 
-11. Go to the [repository home page](https://github.com/spcanelon/RLadies-xaringan-template) and find the About section on the right hand side. Add a description of your presentation and the link to your slides, that way your presentation is easily available to anyone visiting your repo.
-12. Check out Garrick Aden-Buie's blog post Sharing Your xaringan Slides to learn how to [create a social media card](https://www.garrickadenbuie.com/blog/sharing-xaringan-slides/#create-a-social-media-card) for your slides and use your new link to share your slides in more places (e.g. [embedded on a website](https://www.garrickadenbuie.com/blog/sharing-xaringan-slides/#embed-your-slides), etc.)
+11\. Go to the [repository home page](https://github.com/spcanelon/RLadies-xaringan-template) and find the About section on the right hand side. Add a description of your presentation and the link to your slides, that way your presentation is easily available to anyone visiting your repo.
+
+12\. Check out Garrick Aden-Buie's blog post Sharing Your xaringan Slides to learn how to [create a social media card](https://www.garrickadenbuie.com/blog/sharing-xaringan-slides/#create-a-social-media-card) for your slides and use your new link to share your slides in more places (e.g. [embedded on a website](https://www.garrickadenbuie.com/blog/sharing-xaringan-slides/#embed-your-slides), etc.)
 
 # Learn more
 
