@@ -168,7 +168,6 @@ enableEmoji = true
   #  title = "Element Page"
   #  url = "/elements/"
   #  weight = 7
-    
   # Configure footer  
   [[menu.footer]]
     name = "License"
