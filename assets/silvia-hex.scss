@@ -6,18 +6,16 @@
 // custom color variables
 
 $spc-blue: #122140;
-$spc-gray: #E5E5E3; // rgba(233, 233, 233)
-$spc-test: #FF725C;
-$spc-white: #FFFFFF;
+$spc-test: #FF725C; // orange pink color for testing changes
+$white: #FFFFFF;
 
-// latte palette
-$spc-bg: #FFF8E7;
-$spc-bg-dark: #F2E7CD;
-$spc-primary: #122140; // rgba(18, 33, 64)
-$spc-primary-light: #475269; // rgba(58, 70, 95, 1)
-$spc-secondary: #936C10; // rgba(232, 174, 44, 1)
-$spc-blue-green: #1A3F3D;
-$spc-blue-light: #456473;
+// cool palette
+$spc-bg: #F5F5F5;
+$spc-bg-dark: #EBEBEB;
+$spc-primary: #1C304A; // formerly #122140
+$spc-primary-light: #32415A ; // formerly #475269
+$spc-secondary: #815E0E; // formerly #936C10
+$spc-secondary-light: #936c10;
 
 // set custom hex colors
 $siteBgColorCustom: $spc-bg;                   // site background
@@ -33,9 +31,9 @@ $headingColorCustom: $spc-primary;             // headings (in browser only)
 $navLinkColorCustom: $spc-secondary;           // navbar & footer links/icons
 $footerTextColorCustom: $spc-primary-light;    // footer text
 
-$buttonBgColorCustom: $spc-secondary;          // contact form button background
-$buttonTextColorCustom: $spc-white;            // contact form button
-$buttonHoverBgColorCustom: $spc-primary-light; // any button background w/ hover
-$buttonHoverTextColorCustom: $spc-white;       // any button text w/ hover
+$buttonBgColorCustom: $spc-primary-light;    // contact form button background
+$buttonTextColorCustom: $white;                // contact form button
+$buttonHoverBgColorCustom: mix($spc-secondary, $white, 85); // any button background w/ hover
+$buttonHoverTextColorCustom: $white;           // any button text w/ hover
 
 $borderColorCustom: $spc-primary-light;        // quote bar, horizontal bars
