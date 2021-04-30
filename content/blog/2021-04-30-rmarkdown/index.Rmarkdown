@@ -1,0 +1,21 @@
+---
+title: Rmarkdown
+author: ''
+date: '2021-04-30'
+slug: []
+categories: []
+tags:
+  - test
+subtitle: ''
+excerpt: ''
+images: ~
+series: ~
+layout: single
+---
+
+```{r embed-xaringan, echo=TRUE}
+xaringanExtra::embed_xaringan(
+  url = "https://iyo-rstudio-global.netlify.app/slides/01-why-online.html", 
+  ratio = "16:9")
+```
+
