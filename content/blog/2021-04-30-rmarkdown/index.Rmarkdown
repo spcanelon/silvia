@@ -6,8 +6,8 @@ slug: []
 categories: []
 tags:
   - test
-subtitle: ''
-excerpt: ''
+subtitle: 'Test post for .Rmarkdown'
+excerpt: 'Test post for .Rmarkdown'
 images: ~
 series: ~
 layout: single
