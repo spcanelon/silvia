@@ -36,21 +36,25 @@ links:
   url: https://csvconf.com/speakers/
 - icon: images
   icon_pack: fas
-  name: slides (coming soon!)
-  url: bit.ly/csv-conf-tidy-tuesday
+  name: slides
+  url: bit.ly/TidyTuesday
 - icon: youtube
   icon_pack: fab
   name: video (coming soon!)
   url: https://www.youtube.com/c/csvconf/featured
 - icon: github
   icon_pack: fab
-  name: alt text analysis (coming soon!)
+  name: alt text analysis
   url: https://github.com/spcanelon/csvConf2021
+- icon: box
+  icon_pack: fas
+  name: TidyTuesdayAltText
+  url: https://github.com/spcanelon/TidyTuesdayAltText
 ---
 
-```{r echo=FALSE, eval=FALSE}
+```{r echo=FALSE, eval=TRUE}
 xaringanExtra::embed_xaringan(
-  "https://spcanelon.github.io/csvConf2021",
+  "https://spcanelon.github.io/csvConf2021/slides",
   ratio = "16:9")
 ```
 
