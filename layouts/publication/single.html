@@ -1,8 +1,8 @@
-<!--copied from Wowchemy repo in a last attempt to fix the following error:
+<!--copied from Wowchemy repo in a last attempt (after triple-checking Hugo versions in all the places) to fix the following error:
 
 Error building site: failed to render pages: render of "page" failed: "/Users/scanelon/Documents/Repos/Website/silvia/themes/hugo-academic/layouts/publication/single.html:14:10": execute of template failed: template: publication/single.html:14:10: executing "main" at <(.Params.publication_types) and (ne (index .Params.publication_types 0) "0")>: can't give argument to non-function .Params.publication_types
 
-Source: https://github.com/wowchemy/wowchemy-hugo-modules/blob/main/wowchemy/layouts/publication/single.html-->
+Source: https://github.com/wowchemy/wowchemy-hugo-modules/blob/2d9c18ecf0ef268ccc9f3688a06cc83217344d30/wowchemy/layouts/publication/single.html-->
 
 {{- define "main" -}}
 {{ $pub_types := partial "functions/get_pub_types" $ }}
