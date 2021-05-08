@@ -38,6 +38,10 @@ links:
   icon_pack: fas
   name: slides
   url: https://bit.ly/TidyTuesday
+- icon: doi
+  icon_pack: ai
+  name: Zenodo
+  url: https://doi.org/10.5281/zenodo.4743271
 - icon: youtube
   icon_pack: fab
   name: video (coming soon!)
