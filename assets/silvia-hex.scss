@@ -10,12 +10,16 @@ $spc-test: #FF725C; // orange pink color for testing changes
 $white: #FFFFFF;
 
 // cool palette
-$spc-bg: #F5F5F5;
-$spc-bg-dark: #EBEBEB;
-$spc-primary: #1C304A; // formerly #122140
-$spc-primary-light: #32415A ; // formerly #475269
-$spc-secondary: #815E0E; // formerly #936C10
+$spc-bg: #fffbf2; // formerly #F5F5F5, #fffcf7, fffbf5
+$spc-bg-dark: #FAF0E3; // formerly #EBEBEB, #FBEBDA
+$spc-primary: #002642; // formerly #122140, 1C304A, 002642
+$spc-primary-light: #2E4963 ; // formerly #475269, 32415A, 2E4963
+$spc-secondary: #A23E02; // formerly #936C10, 815E0E, b04303
 $spc-secondary-light: #936c10;
+
+// other highlight options
+// terra: A44200*
+// blue: (002642), 006E90*
 
 // set custom hex colors
 $siteBgColorCustom: $spc-bg;                   // site background
