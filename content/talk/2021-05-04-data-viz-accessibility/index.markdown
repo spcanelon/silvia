@@ -34,16 +34,24 @@ links:
   url: https://csvconf.com/speakers/
 - icon: images
   icon_pack: fas
-  name: slides (coming soon!)
-  url: bit.ly/csv-conf-tidy-tuesday
+  name: slides
+  url: https://bit.ly/TidyTuesday
+- icon: doi
+  icon_pack: ai
+  name: Zenodo
+  url: https://doi.org/10.5281/zenodo.4743271
 - icon: youtube
   icon_pack: fab
   name: video (coming soon!)
   url: https://www.youtube.com/c/csvconf/featured
 - icon: github
   icon_pack: fab
-  name: alt text analysis (coming soon!)
+  name: alt text analysis
   url: https://github.com/spcanelon/csvConf2021
+- icon: box
+  icon_pack: fas
+  name: TidyTuesdayAltText
+  url: https://github.com/spcanelon/TidyTuesdayAltText
 ---
 
 Presented with [Liz Hare, PhD](https://www.twitter.com/DogGeneticsLLC) from Dog Genetics, LLC
