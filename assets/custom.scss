@@ -1,3 +1,5 @@
+// Installed following guidance at https://hugo-apero-docs.netlify.app/blog/fonts/
+
 // Ovo: https://www.fontsquirrel.com/fonts/ovo
 
 @font-face {
@@ -11,3 +13,31 @@
 	src: local(''),
 	     url('../static/fonts/Alice-Regular-webfont.woff') format('woff');
 }
+
+// ----custom styling---------------------------------------------------
+
+// headline: make smaller than default
+.f1-m {
+  font-size: 5.7rem;
+}
+
+// sidebar: widen container for blog post TOC
+details#PageTableOfContents {
+  padding: 0em 8em 0em 0em;
+}
+
+// sidebar: widen text area for blog post TOC
+.mh0, form textarea, form fieldset, form legend {
+    margin-right: -10em;
+}
+
+// sidebar: widen text area for TOC heading
+.mv0.f5.fw7.ttu.tracked.dib {
+  margin-right: -10em;
+}
+
+// sidebar: move TOC closer to "details"
+.sticky, .about-sidebar {
+  padding-top: 1em;
+}
+
