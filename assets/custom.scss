@@ -21,23 +21,46 @@
   font-size: 5.7rem;
 }
 
-// sidebar: widen container for blog post TOC
-details#PageTableOfContents {
-  padding: 0em 8em 0em 0em;
+// sidebar: move ToC lower so navbar doesn't cover heading when scrolling up
+.sticky {
+  padding-top: 5em;
 }
 
-// sidebar: widen text area for blog post TOC
-.mh0, form textarea, form fieldset, form legend {
-    margin-right: -10em;
+// ToC -----
+// source: https://github.com/rbind/apreshill/blob/784d739f78c785417268c8351333ed131fe75677/themes/hugo-academic/assets/scss/academic/_docs.scss#L202-L248
+
+// sidebar: ToC
+#TableOfContents {
+  padding-left: 0em;
+  border-left: 2px solid $spc-bg;
 }
 
-// sidebar: widen text area for TOC heading
-.mv0.f5.fw7.ttu.tracked.dib {
-  margin-right: -10em;
+// sidebar: TOC indentation for each level
+// one level in
+#TableOfContents ul ul {
+  padding-left: 0.8rem;
 }
 
-// sidebar: move TOC closer to "details"
-.sticky, .about-sidebar {
-  padding-top: 1em;
+// sidebar: ToC list items
+#TableOfContents li {
+  display: block;
 }
 
+// sidebar: ToC list item links
+#TableOfContents li a {
+  display: block;
+  padding: .125rem 1.5rem;
+  color: $spc-primary-light;
+  font-size: 0.9rem;
+  &:hover {
+    color: $spc-primary;
+    //font-weight: 700;
+    text-decoration: none;
+    background-color: $spc-bg;
+  }
+  // WIP: ScrollSpy active link style
+  // doesn't work at the moment
+  &.active {
+    border-left: 2px solid $spc-primary-light;
+  }
+}
