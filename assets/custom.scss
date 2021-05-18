@@ -16,6 +16,16 @@
 
 // ----custom styling---------------------------------------------------
 
+// Experimental: ToC: navigating up or down the ToC is smooth not jumpy
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+    scroll-padding-top: 0px;
+}
+
+
 // headline: make smaller than default
 .f1-m {
   font-size: 5.7rem;
@@ -23,7 +33,9 @@
 
 // sidebar: move ToC lower so navbar doesn't cover heading when scrolling up
 .sticky {
-  padding-top: 5em;
+  //padding-top: 5em;
+  position: sticky;
+  top: 2em;
 }
 
 // ToC -----
@@ -41,17 +53,14 @@
   padding-left: 0.8rem;
 }
 
-// sidebar: ToC list items
-#TableOfContents li {
-  display: block;
-}
-
 // sidebar: ToC list item links
-#TableOfContents li a {
+#TableOfContents a {
   display: block;
   padding: .125rem 1.5rem;
   color: $spc-primary-light;
   font-size: 0.9rem;
+  transition: all 50ms ease-in-out;
+  /*
   &:hover {
     color: $spc-primary;
     //font-weight: 700;
@@ -59,8 +68,22 @@
     background-color: $spc-bg;
   }
   // WIP: ScrollSpy active link style
-  // doesn't work at the moment
   &.active {
+    text-decoration: none;
+    background-color: $spc-bg;
     border-left: 2px solid $spc-primary-light;
-  }
+  }*/
+}
+
+// WIP: sidebar: ToC list item links when active
+#TableOfContents li.active > a {
+    text-decoration: none;
+    background-color: $spc-bg;
+    border-left: 2px solid $spc-primary-light;
+}
+
+#TableOfContents a:hover,
+#TableOfContents a:focus {
+    text-decoration: none;
+    background-color: $spc-bg;
 }
