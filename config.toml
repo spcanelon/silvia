@@ -153,11 +153,11 @@ enableEmoji = true
     title = "Publications"
     url = "/publication/"
     weight = 4
-  #[[menu.header]]
-  #  name = "Projects"
-  #  title = "Project Portfolio"
-  #  url = "/project/"
-  #  weight = 5
+ [[menu.header]]
+   name = "Projects"
+   title = "Project Portfolio"
+   url = "/project/"
+   weight = 5
   #[[menu.header]]
   #  name = "A collection"
   #  title = "A collection"
