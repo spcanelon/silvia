@@ -53,6 +53,7 @@ links:
   name: TidyTuesdayAltText
   url: https://github.com/spcanelon/TidyTuesdayAltText
 ---
+<script src="{{< blogdown/postref >}}index_files/fitvids/fitvids.min.js"></script>
 
 Presented with [Liz Hare, PhD](https://www.twitter.com/DogGeneticsLLC) from Dog Genetics, LLC
 
@@ -60,14 +61,14 @@ Presented with [Liz Hare, PhD](https://www.twitter.com/DogGeneticsLLC) from Dog 
 
 We all aim to use data to tell a compelling story, and many of us enjoy sharing how we got there by open-sourcing our code, but we don't always share our story with everyone. Even kind, supportive, and open communities like the #TidyTuesday R learning community on Twitter has a ways to go before the content shared can be accessible to everyone.<br><br>Lived experiences of blind R users tell us that most data visualizations shared for TidyTuesday are inaccessible to screen reading technology because they lack alternative text (i.e. alt text) descriptions. Our goal was to bring this hidden lack of accessibility to the surface by examining the alternative text accompanying data visualizations shared as part of the TidyTuesday social project.<br><br>We scraped the alternative text from 6,443 TidyTuesday images posted on Twitter between April 2, 2018 and January 31, 2021. The first image attached to each tweet was considered the primary image and was scraped for alternative text. Manual web inspection revealed the CSS class and HTML element corresponding to the primary image, as well as the attribute containing the alternative text. We used this information and the ROpenSci {RSelenium} package to scrape the alternative text. Our preliminary analysis found that only 2.4% of the images contained a text description entered by the tweet author compared to 84% which were described by default as 'Image.'<br><br>This small group of intentional alternative text descriptions had a median word count of 18 (range: 1-170), and a median character count of 83 (range: 8-788). As a reference point, Twitter allows 240 characters in a single tweet and 1,000 characters for image descriptions. This analysis was made possible thanks to a dataset of historical TidyTuesday tweet data collected using the ROpenSci {rtweet} package, and openly available in the [TidyTuesday GitHub repository](https://github.com/rfordatascience/tidytuesday).<br><br>The conference takes place May 4-5, 2021.
 
-```{r echo=FALSE, eval=TRUE}
-xaringanExtra::embed_xaringan(
-  "https://spcanelon.github.io/csvConf2021/slides",
-  ratio = "16:9")
+
+```{=html}
+<div class="shareagain" style="min-width:300px;margin:1em auto;">
+<iframe src="https://spcanelon.github.io/csvConf2021/slides" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
+<script>fitvids('.shareagain', {players: 'iframe'});</script>
+</div>
 ```
 
 
-```{r, echo=FALSE, eval=FALSE, fig.alt=}
-knitr::include_graphics()
-```
+
 
