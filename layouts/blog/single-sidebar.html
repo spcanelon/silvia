@@ -22,8 +22,9 @@
 </main>
 <aside class="page-sidebar" role="complementary">
   {{ partial "shared/sidebar-scaffold.html" . }}
-  {{ .Scratch.Set "details" "open" }}
+  <!--{{ .Scratch.Set "details" "open" }}-->
+  {{ .Scratch.Set "details" "closed" }}
   {{ partial "shared/post-details.html" . }}
-  {{ partial "shared/toc.html" . }}
+  {{ partial "shared/post-toc.html" . }}
 </aside>
 {{ end }}
