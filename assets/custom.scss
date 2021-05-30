@@ -31,6 +31,7 @@
 // modified from: scaffold.scss, series + collections table of contents
 
 nav#TableOfContents ul li {
+  @extend .f6, .lh-title-ns;
   // all links
   a {
     @extend .no-underline;
