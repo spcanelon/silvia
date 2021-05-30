@@ -14,7 +14,8 @@
 	     url('../static/fonts/Alice-Regular-webfont.woff') format('woff');
 }
 
-// ----custom styling---------------------------------------------------
+// ----------------------------------------------------------------------------
+// ----custom styling----------------------------------------------------------
 
 // Experimental: ToC: navigating up or down the ToC is smooth not jumpy
 /*html {
@@ -26,7 +27,7 @@
   font-size: 5.7rem;
 }
 
-// ToC -----
+// ToC ------------------------------------------------------------------------
 // modified from: scaffold.scss, series + collections table of contents
 
 nav#TableOfContents ul li {
@@ -84,4 +85,32 @@ nav#TableOfContents ul li {
       grid-column: 1 / 7;
     }
   }
+}
+
+// inline code ----------------------------------------------------------------
+// apply tachyons classes to blog post and single page markdown
+
+.post-body,
+.page-body {
+  
+  > p > code,   // code within paragraphs
+  li > code,    // level 1 list item 
+  li li > code, // level 2 list item
+  li p > code { // paragaph in list item
+    @extend .f6, .pa1, .ba, .bw1, .br0, .bg-white;
+    color: #415200; // 415200 434f54
+    background-color: #EEF1E0; // DCE3C0 EEF1E0
+    border-color: #b9c680;// 728e00 b9c680 ebebeb
+  }
+  
+}
+
+// Style code chunks ----------------------------------------------------------
+pre {
+  @extend .pre, .br1, .pa3, .bg-transparent;
+  border: 1px solid #ebebeb;
+}
+
+pre code span {
+	font-weight: normal !important;
 }
