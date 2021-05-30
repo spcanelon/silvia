@@ -17,86 +17,71 @@
 // ----custom styling---------------------------------------------------
 
 // Experimental: ToC: navigating up or down the ToC is smooth not jumpy
-html {
+/*html {
   scroll-behavior: smooth;
-}
-
-html, body {
-    scroll-padding-top: 0px;
-}
+}*/
 
 // headline: make smaller than default
 .f1-m {
   font-size: 5.7rem;
 }
 
-// sidebar: move ToC lower so navbar doesn't cover heading when scrolling up
-// stickies should make room for headroom to peek down: assets/scaffold.scss
-.sticky { 
-   position: -webkit-sticky; 
-   position: sticky; 
-   @extend .static-l, .top-2-l, .pt5; //spc mod
- }
-
 // ToC -----
-// source: https://github.com/rbind/apreshill/blob/784d739f78c785417268c8351333ed131fe75677/themes/hugo-academic/assets/scss/academic/_docs.scss#L202-L248
+// modified from: scaffold.scss, series + collections table of contents
 
-// spc version
-// sidebar: ToC
-nav#TableOfContents {
-  padding-left: 0em;
-  border-left: 2px solid $spc-bg;
-}
-
-// sidebar: TOC indentation for each level
-// one level in
-nav#TableOfContents ul ul {
-  padding-left: 0.8rem;
-}
-
-// sidebar: ToC list item links
-nav#TableOfContents a {
-  display: block;
-  padding: .125rem 1.5rem;
-  color: $spc-primary-light;
-  font-size: 0.9rem;
-  transition: all 50ms ease-in-out;
-}
-
-// WIP: sidebar: ToC list item links when active
-nav#TableOfContents li.active > a {
-    text-decoration: none;
-    background-color: $spc-bg;
-    border-left: 2px solid $spc-primary-light;
-}
-
-nav#TableOfContents a:hover,
-nav#TableOfContents a:focus {
-    text-decoration: none;
-    background-color: $spc-bg;
-}
-
-/* theme scaffold.scss
-// Series + collections table of contents
-
-// Notes from SPC: testing
-// white instead of #{$siteBgColor}
-// navy instead of #{$borderColor}
-// dark-blue instead of #{$headingColor}
-// light-blue instead of #{$sidebarLinkColor}
-
-nav#TableOfContents ul li,
-nav#SectionTableOfContents ul li,
-nav#SeriesTableOfContents ul li {
-  @extend .pl2, .bl, .bw1, .b--transparent;
+nav#TableOfContents ul li {
+  // all links
+  a {
+    @extend .no-underline;
+    // transition: all 50mx ease-in-out;
+  }
+  // active list items
   &.active {
-    @extend .pl3, .bg-white, .bl, .b--navy, .bw1;
+    @extend .pl3, .bg-#{$siteBgColor}, .bl, .b--#{$borderColor}, .bw1;
   }
+  // non-active list items
   &:not(.active) {
-    @extend .pl3, .dim, .bl, .bw1, .b--transparent;
+    @extend .pl3, .bl, .bw1, .b--transparent;
   }
+  // hovering over active links
+  &:hover.active a {
+    @extend .underline;
+  }
+  // hovering over non-active links
   &:hover:not(.active) a {
-    @extend .dark-blue, .b--navy;
+    @extend .underline;
+  }
+  // within nested list items
+  li {
+    // hovering over active links
+    &:hover.active a {
+      @extend .dim;
+    }
+    // hovering over non-active links
+    &:hover:not(.active) a {
+      @extend .underline, .dim;
+    }
   }
 }
-*/
+
+// single post 
+
+.single {
+  .page-main {
+    grid-column: 1 / 5;
+  }
+  .page-sidebar {
+    @extend .mt7;
+    grid-column: 5 / 7;
+    @extend .bg-transparent;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .single {
+    .page-main,
+    .page-sidebar {
+      grid-column: 1 / 7;
+    }
+  }
+}
