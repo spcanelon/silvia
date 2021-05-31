@@ -91,19 +91,31 @@ nav#TableOfContents ul li {
 // inline code ----------------------------------------------------------------
 // apply tachyons classes to blog post and single page markdown
 
+// increase line spacing within panels
+.panelset * {
+  @extend .lh-copy;
+}
+
 .post-body,
 .page-body {
   
-  > p > code,   // code within paragraphs
-  li > code,    // level 1 list item 
-  li li > code, // level 2 list item
-  li p > code { // paragaph in list item
-    @extend .f6, .pa1, .ba, .bw1, .br0, .bg-white;
+  .panelset * > code, // code within panelsets
+  > p > code,         // code within paragraphs
+  li > code,          // level 1 list item 
+  li li > code,       // level 2 list item
+  li p > code {       // paragaph in list item
+    @extend .f6, .pa1, .ba, .bw1, .br0;
     color: #415200; // 415200 434f54
     background-color: #EEF1E0; // DCE3C0 EEF1E0
     border-color: #b9c680;// 728e00 b9c680 ebebeb
   }
   
+}
+
+// wrap code chunks
+// source: https://stackoverflow.com/a/56469907
+code {
+  white-space : pre-wrap !important;
 }
 
 // Style code chunks ----------------------------------------------------------
