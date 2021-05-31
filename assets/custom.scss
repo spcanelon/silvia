@@ -101,11 +101,11 @@ nav#TableOfContents ul li {
 .post-body,
 .page-body {
   
-  .panelset * > code, // code within panelsets
-  > p > code,         // code within paragraphs
-  li > code,          // level 1 list item 
-  li li > code,       // level 2 list item
-  li p > code {       // paragaph in list item
+  .panelset * p > code, // code within panelset paragraphs
+  > p > code,           // code within paragraphs
+  li > code,            // level 1 list item 
+  li li > code,         // level 2 list item
+  li p > code {         // paragaph in list item
     @extend .f6, .pa1, .ba, .bw1, .br0;
     color: #415200; // 415200 434f54
     background-color: #EEF1E0; // DCE3C0 EEF1E0
