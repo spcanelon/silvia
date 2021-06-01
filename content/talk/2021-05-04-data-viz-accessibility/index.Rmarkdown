@@ -66,8 +66,3 @@ xaringanExtra::embed_xaringan(
   ratio = "16:9")
 ```
 
-
-```{r, echo=FALSE, eval=FALSE, fig.alt=}
-knitr::include_graphics()
-```
-
