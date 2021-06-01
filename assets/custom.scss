@@ -168,7 +168,14 @@ pre code span {
 	font-weight: normal !important;
 }
 
-// a11y: scaling up to 18px font size for paragraph text ----------------------
-p {
+// a11y: scaling up to 18px font size -----------------------------------------
+p, summary {
   font-size: 1.125em;
+}
+
+ul {
+  font-size: 1.125em;
+  > li > p {
+    font-size: 1em;
+  }
 }
