@@ -1,5 +1,5 @@
 ---
-title: "Hello Hugo Apéro: Migrating to Hugo Apéro from Hugo Academic"
+title: "Hello Hugo Apéro: Converting a Blogdown Site from Hugo Academic"
 #layout: single
 layout: single-sidebar
 date: '2021-06-01'
@@ -12,8 +12,8 @@ tags:
   - git
   - blogdown
   - Hugo
-subtitle: 'A tutorial on how to take your Hugo Academic/Wowchemy website and migrate it to the Hugo Apéro theme'
-summary: 'A tutorial on how to take your Hugo Academic/Wowchemy website and migrate it to the Hugo Apéro theme'
+subtitle: 'A tutorial on how to take your personal Hugo Academic/Wowchemy website and convert it to the Hugo Apéro theme'
+summary: 'A tutorial on how to take your personal Hugo Academic/Wowchemy website and convert it to the Hugo Apéro theme'
 lastmod: '2021-05-29'
 featured: yes
 draft: no
@@ -26,7 +26,8 @@ links:
 
 ```{r setup, echo=FALSE}
 knitr::opts_chunk$set(eval=FALSE, 
-                      echo=FALSE)
+                      echo=FALSE,
+                      fig.align = "center")
 
 htmltools::tagList(
   xaringanExtra::use_clipboard(
@@ -40,19 +41,37 @@ library(xaringanExtra)
 library(formatR)
 ```
 
+## What to expect
+
+By the end of the tutorial you will have switched your website from using the Hugo Academic theme to using the new [Hugo Apéro theme designed by Alison Hill](https://alison.rbind.io/project/hugo-apero/) <i class="fas fa-glass-cheers pr2"></i> 
+
+Specifically you'll be able to migrate your blog, publications, and talks. If you need to migrate courses, I recommend taking a look at how [Alison](https://alison.rbind.io/project/) and [Kelly Bodwin](https://www.kelly-bodwin.com/courses/) organized their courses and workshops into projects using this theme.
+
+<details><summary>Projects on my site: https://silvia.rbind.io/project</summary>
+```{r, eval=TRUE, fig.align="center", fig.cap="My Project listing: https://silvia.rbind.io/project", fig.alt="The Project listing page for my site with a grid layout featuring thumbnail images. The top of the page says 'Projects' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There are three projects featured with a decorative thumbnail image, a title, and a summary. Items also include an author and category links but they are cut off in this screenshot."}
+knitr::include_graphics("img/silvia-project-list.png")
+```
+</details>
+
+**What _not_ to expect**
+
+A tutorial on how to create a Hugo Apéro site from scratch -- but don't worry! Alison covers this in a [workshop she gave for R-Ladies Tunis](https://www.youtube.com/watch?v=RksaNh5Ywbo) and in the [Get started series of blog posts](https://hugo-apero-docs.netlify.app/start/) included in the documentation site.
+
+## The Plan
+
+I was lucky that Alison had already started converting her own personal site because she gave me a template and example to follow! <i class="fas fa-hands-helping"></i>
+
+We'll follow the steps below throughout the tutorial and each of the six steps comes with its own commit in my git history, so you can see exactly what I changed and when. <i class="fas fa-code-branch"></i>
+
 {{< tweet 1370027805543698432 >}}
 
-{{< tweet 1384930524834185223 >}}
-
-silvia: for later
-
-{{< tweet 1370021643221864448 >}}
+Then we'll [reuse and migrate](#migrating-the-content) your existing content, set up a [contact form](#contact-form), [tidy up your directory](#tidying-up-your-directory), and end with some resources for [customizing your new site](#customizing-your-site). 
 
 ## Prework
 
 ### Branch deploy
 
-Create new `apero` branch from the primary branch of your website repository
+Create a new `apero` branch from the primary branch of your website repository
 
 1. `git checkout -b apero` to create new local branch
 
@@ -62,7 +81,7 @@ Create a new Netlify deploy from your `apero` branch by enabling branch deploys 
 
 <i class="fas fa-route pr2"></i>Site settings: Build & deploy > Continuous Deployment > Deploy contexts
 
-```{r, eval=TRUE, out.width="75%", fig.align='center', fig.alt="The deploy contexts section after clicking the Edit settings button. This section shows three settings that can be edited. The first is the production branch which is set to 'main' in a free text box. The second is deploy previews which is a radio button set to 'any pull request against your production branch/branch deploy branches (as opposed to 'none'). The third is branch deploys which is a radio button set to 'all' (as opposed to 'none' and 'let me add individual branches'). There are two buttons at the bottom of this section, Save and Cancel."}
+```{r, eval=TRUE, out.width="75%", fig.cap="Netlify site settings for deploy contexts", fig.align='center', fig.alt="The deploy contexts section after clicking the Edit settings button. This section shows three settings that can be edited. The first is the production branch which is set to 'main' in a free text box. The second is deploy previews which is a radio button set to 'any pull request against your production branch/branch deploy branches (as opposed to 'none'). The third is branch deploys which is a radio button set to 'all' (as opposed to 'none' and 'let me add individual branches'). There are two buttons at the bottom of this section, Save and Cancel."}
 knitr::include_graphics("img/netlify-branch-deploy.png")
 ```
 
@@ -105,13 +124,14 @@ The last piece of prework before we dive in is to update your local version of H
 
     <i class="fas fa-route pr2"></i>Site settings: Build & deploy > Environment > Environment variables > Edit variables
     
-    ```{r, eval=TRUE, fig.alt="The environment variables section after clicking the Edit settings button. This section shows the key HUGO_VERSION has a value of 0.82.1 corresponding to the version of Hugo being used by blogdown. Both the key and the value fields are free text boxes. There are two buttons at the bottom of this section, Save and Cancel."}
+    ```{r, eval=TRUE, fig.cap="", fig.alt="The environment variables section after clicking the Edit settings button. This section shows the key HUGO_VERSION has a value of 0.82.1 corresponding to the version of Hugo being used by blogdown. Both the key and the value fields are free text boxes. There are two buttons at the bottom of this section, Save and Cancel."}
     knitr::include_graphics("img/netlify-hugo-version.png")
     ```
 
 5. Run `blogdown::check_site()` to find any issues. In my case these checking functions found a Hugo version mismatch and I ended up having to specifically run `blogdown::install_hugo("0.82.1")` to resolve it.
 
     <details><summary>Console output</summary>
+    
     ```r
     ― Checking netlify.toml...
     ○ Found HUGO_VERSION = 0.82.1 in [build] context of netlify.toml.
@@ -123,9 +143,14 @@ The last piece of prework before we dive in is to update your local version of H
     ○ Good to go - blogdown and Netlify are using the same publish directory: public
     ― Check complete: netlify.toml
     ```
+    
     </details>
     
-If you end up needing to make your own changes, I recommend running `blogdown::check_site()` again when you're done to make sure you've resolved all of the issues. And then run `blogdown::serve_site()` to render a live preview of your site :rocket:
+If you end up needing to make your own changes, I recommend running `blogdown::check_site()` again when you're done to make sure you've resolved all of the issues. 
+
+And then run `blogdown::serve_site()` to render a live preview of your site :rocket:
+
+---
 
 ## 1. Install theme alongside Academic, change in **config.toml**
 
@@ -136,7 +161,7 @@ The first step is to add all of the Hugo Apéro theme files to the `theme/` fold
 ```{r, echo=TRUE}
 usethis::use_course(
   "hugo-apero/hugo-apero", 
-  destdir = "/Users/scanelon/Sync/GH-analog/silvia/themes"
+  destdir = "/Users/silvia/Documents/Website/silvia/themes"
 )
 ```
 
@@ -144,7 +169,7 @@ usethis::use_course(
 
 ```{r, echo=TRUE}
 ✓ Downloading from 'https://github.com/hugo-apero/hugo-apero/zipball/HEAD'Downloaded: 21.23 MB  
-✓ Download stored in '/Users/scanelon/Documents/Repos/Website/silvia/themes/hugo-apero-hugo-apero-05497e6.zip'
+✓ Download stored in '/Users/silvia/Documents/Website/silvia/themes/hugo-apero-hugo-apero-05497e6.zip'
 ✓ Unpacking ZIP file into 'hugo-apero-hugo-apero-05497e6/' (429 files extracted)Shall we delete the ZIP file ('hugo-apero-hugo-apero-05497e6.zip')?
 ```
 
@@ -159,28 +184,30 @@ This step will create and open a new project for you, which you don't want or ne
     - `.Rproj.user/`
     - **.Rhistory**
 
-[Modify the **config.toml** file](https://github.com/spcanelon/silvia/blob/main/config.toml#L28) so it points to your new theme folder instead of `hugo-academic`
+Modify the **config.toml** file so it points to your new theme folder instead of `hugo-academic`
 
 ```toml
 #theme = "hugo-academic"
 theme = "hugo-apero"
 ```
 
-<i class="fas fa-exclamation-circle pr2"></i> At this point you'll probably start to get some error messages like the one below. Don't panic! Let's get through the rest of the steps first. I'm including all of my errors in this post in case they are helpful/validating for you!
+<i class="fas fa-exclamation-circle pr2"></i> At this point you'll probably start to get some error messages like the one below. Don't panic! Let's get through the rest of the steps first. I'm including my errors in this post in case they are helpful/validating for you!
 
 ```r
 Could not build site because certain shortcodes weren't found
 
-Error: Error building site: "/Users/scanelon/Documents/Repos/Website/silvia/content/home/demo.md:58:1": failed to extract shortcode: template for shortcode "alert" not found
+Error: Error building site: "/Users/silvia/Documents/Website/silvia/content/home/demo.md:58:1": failed to extract shortcode: template for shortcode "alert" not found
 ```
 
 ## 2. Copy all Academic shortcodes to **layouts/** root (remove later)
 
 > <i class='fas fa-code-branch pr2'></i> Follow along with me at [commit f3c7d53](https://github.com/spcanelon/silvia/commit/f3c7d5334b4effbd850b204eb267425f6740b4af)
 
-Copied from here: `silvia/themes/hugo-academic/layouts/shortcodes`
+Copy the shortcodes
 
-To here: `silvia/layouts/shortcodes`
+- From `themes/hugo-academic/layouts/shotcodes/` 
+
+- To `layouts/shortcodes/`
 
 <i class="fas fa-exclamation-circle pr2"></i> My error message:
 
@@ -192,12 +219,13 @@ Error: Error building site: TOCSS: failed to transform "style.main.scss" (text/x
 
 > <i class='fas fa-code-branch pr2'></i> Follow along with me at [commit 3843c76](https://github.com/spcanelon/silvia/commit/3843c76a5da6184b2d9b547b18f96ec6810a695a)
 
-Made backup of entire website folder
+Before deleting anything, I recommend making a backup of your entire website folder, just in case.
 
-In `assets/` root folder I deleted
+In the `assets/` root folder, delete:
 
-- `images/` folder which contained my site icon
-- `scss/` folder which contained my `custom.scss` file
+- the `images/` folder which might contain your site icon
+
+- the `scss/` folder which might contain your `custom.scss` file
 
 <i class="fas fa-exclamation-circle pr2"></i> My error message:
 
@@ -209,13 +237,10 @@ Error: Error building site: TOCSS: failed to transform "style.main.scss" (text/x
 
 > <i class='fas fa-code-branch pr2'></i> Follow along with me at [commit 1ad7e3d](https://github.com/spcanelon/silvia/commit/1ad7e3d491d309e71e1b4fa0bbad1e3af6b9d322)
 
-In `layouts/`  I deleted
+I had a couple of partials that I deleted from the `layouts/` folder:
 
-- **partials/site_footer.html** which provided the custom footer for my website (made with curiosity, etc)
-- **partials/widgets/about.html** which included the custom formatting for certificates in Education section of Academic (on the About/Home page)
-- During attempt 1
-
-    Result: After the blogdown live reload (or maybe serving again?) I could confirm that both were gone. The certificates were gone and the footer reverted back to "© Silvia Canelón, 2021 · Powered by the Academic theme for Hugo."
+- **partials/site_footer.html** which provided a custom footer for my website
+- **partials/widgets/about.html** which included the custom formatting for certificates in the Education section of the About page of my Academic site
 
 <i class="fas fa-exclamation-circle pr2"></i> My error message:
 
@@ -227,208 +252,260 @@ Error: Error building site: TOCSS: failed to transform "style.main.scss" (text/x
 
 > <i class='fas fa-code-branch pr2'></i> Follow along with me at [commit db37289](https://github.com/spcanelon/silvia/commit/db37289e768640522130f98353996de4a6e0abfc)
 
-Why do we need to modify **config.toml** in step 1 if we're going to copy over this one anyway?
+Rename **config.toml** in the root folder to **config_old.toml**
 
-Rename **config.toml** in root to **config_old.toml**
+Copy **config.toml** 
 
-Copied **config.toml** 
+- From `themes/hugo-apero/exampleSite/`
 
-From: **silvia/themes/hugo-apero/exampleSite/config.toml**
-
-To here (and replaced): **silvia/config.toml**
-
-- During attempt 1
-
-    Result: Could then see Hugo Apéro instead of SILVIA CANELÓN on my site, some styling had changed (post titles were a different font, for example) and nothing was clickable anymore
+- To your root directory (in my case it was `silvia/`)
 
 <i class="fas fa-exclamation-circle pr2"></i> My error message:
 
 ```r
-Error: Error building site: failed to render pages: render of "page" failed: execute of template failed: template: _default/single.html:3:8: executing "_default/single.html" at <partial "head.html" .>: error calling partial: "/Users/scanelon/Documents/Repos/Website/silvia/themes/hugo-apero/layouts/partials/head.html:14:53": execute of template failed: template: partials/head.html:14:53: executing "partials/head.html" at <js>: can't evaluate field Build in type string
+Error: Error building site: failed to render pages: render of "page" failed: execute of template failed: template: _default/single.html:3:8: executing "_default/single.html" at <partial "head.html" .>: error calling partial: "/Users/silvia/Documents/Website/silvia/themes/hugo-apero/layouts/partials/head.html:14:53": execute of template failed: template: partials/head.html:14:53: executing "partials/head.html" at <js>: can't evaluate field Build in type string
 ```
 
-## 6. Remove Academic config/ directory
+## 6. Remove Academic **config/** directory
 
 > <i class='fas fa-code-branch pr2'></i> Follow along with me at [commit 5541f38](https://github.com/spcanelon/silvia/commit/5541f38871911d5067c6c8856936d54d183b3ec9)
 
-In `silvia/` I deleted the `config/` folder
+Delete the `config/` folder from your root directory (in my case `silvia/`)
 
 I learned [the hard way](https://github.com/hugo-apero/hugo-apero-docs/issues/78) that the error below was due to not using an updated version of Hugo, which is why I included that step in the [Prework](#hugo-version). All this to say, I'm hoping you don't see the error below!
 
 <i class="fas fa-exclamation-circle pr2"></i> My error message:
 
 ```r
-Error: Error building site: failed to render pages: render of "page" failed: execute of template failed: template: _default/single.html:3:8: executing "_default/single.html" at <partial "head.html" .>: error calling partial: "/Users/scanelon/Documents/Repos/Website/silvia/themes/hugo-apero/layouts/partials/head.html:14:53": execute of template failed: template: partials/head.html:14:53: executing "partials/head.html" at <js>: can't evaluate field Build in type string
+Error: Error building site: failed to render pages: render of "page" failed: execute of template failed: template: _default/single.html:3:8: executing "_default/single.html" at <partial "head.html" .>: error calling partial: "/Users/silvia/Documents/Website/silvia/themes/hugo-apero/layouts/partials/head.html:14:53": execute of template failed: template: partials/head.html:14:53: executing "partials/head.html" at <js>: can't evaluate field Build in type string
 ```
 
 ---
 
-## Converting your content
+## Migrating the content
+
+Assuming you have made it this far and are able to at least serve a live site that uses the new Hugo Apéro theme, you are ready to start converting your content! :tada:
+
+File are organized differently in Hugo Apéro and the next steps detail the high-level changes I made to get my content to fit the new structure. The goal was to have my site parallel the [Hugo Apéro example site](https://hugo-apero.netlify.app/) and [Alison's personal site](https://alison.rbind.io).
 
 ### File organization
 
-When looking at the exampleSite I'm seeing that the information is organized differently so I might have to rename folders etc. to match whatever the config.toml is trying to do 🤷🏽‍♀️
+To get an overview of how the file structure is different between the Academic and Apéro themes we'll look at the  `content/` folder of the Apéro example site, my old Academic site, and my current Apéro site. These are organized into the panelsets below.
 
-- Alison's current Apéro mod has differently-labeled folders and things.
+{{< panelset class="content directory" >}}
+{{< panel name="Example Site" >}}
+  
+<i class="fas fa-route pr2"></i>Location: `silvia/themes/hugo-apero/exampleSite`
 
 ```bash
-# in silvia directory:
-tree -L 2
+├── config.toml
+├── content
+    ├── _index.md
+    ├── about
+    ├── blog
+    ├── collection
+    ├── contributors.md
+    ├── elements
+    ├── form
+    ├── license.md
+    ├── project
+    └── talk
 ```
+{{< /panel >}}
+{{< panel name="My Academic site" >}}
+
+<i class="fas fa-route pr2"></i>Location: `silvia/`
+  
+```bash
+.
+├── config.toml
+├── content
+    ├── authors
+    ├── courses
+    ├── home
+    ├── license.md
+    ├── post
+    ├── project
+    ├── publication
+    ├── slides
+    └── talk
+```
+{{< /panel >}}
+
+{{< panel name="My Apéro site" >}}
+
+<i class="fas fa-route pr2"></i>Location: `silvia/`
 
 ```bash
 .
-├── README.md
-├── assets
 ├── config.toml
 ├── content
-│   ├── authors
-│   ├── courses
-│   ├── home
-│   ├── license.md
-│   ├── post
-│   ├── project
-│   ├── publication
-│   ├── slides
-│   └── talk
-├── data
-│   ├── fonts
-│   └── themes
-├── index.Rmd
-├── index.html
-├── layouts
-│   ├── partials
-│   └── shortcodes
-├── netlify.toml
-├── resources
-│   ├── _gen
-│   └── config.toml
-├── silvia.Rproj
-├── static
-│   ├── img
-│   ├── keybase.txt
-│   ├── post
-│   ├── publications
-│   └── rmarkdown-libs
-└── themes
-    ├── hugo-academic
-    └── hugo-apero
+    ├── _index.md       # <-- new!
+    ├── about           # <-- new!
+    ├── blog            # <-- renamed (formerly post)
+    ├── collection      # <-- new!
+    ├── form            # <-- new!
+    ├── license.md
+    ├── project
+    ├── publication
+    └── talk
 ```
-
-```bash
-tree /themes/hugo-apero/example-Site -L 3
-```
-
-```bash
-├── config.toml
-├── content
-│   ├── _index.md
-│   ├── about
-│   ├── blog
-│   ├── collection
-│   ├── contributors.md
-│   ├── elements
-│   ├── form
-│   ├── license.md
-│   ├── project
-│   └── talk
-└── data
-    └── ads
-```
+{{< /panel >}}
+{{< /panelset >}}
 
 ### About page
 
-[Customize your about page | Hugo Apéro](https://hugo-apero-docs.netlify.app/blog/about-page/)
+Resource: [Customize your about page | Hugo Apéro](https://hugo-apero-docs.netlify.app/learn/about-page/)
 
-Copied the `about/` folder from `exampleSite` into `silvia/content`
+My About page:
 
-Copied biography from `content/authors/silvia/_index.md` to `content/about/header`
+- [content/about/header/index.md](https://github.com/spcanelon/silvia/blob/bef8a7c9fd7b529e7cb58c3c92dafe59aa8d2259/content/about/header/index.md)
+- [content/about/main/index.md](https://github.com/spcanelon/silvia/blob/bef8a7c9fd7b529e7cb58c3c92dafe59aa8d2259/content/about/main/index.md)
+- [content/about/sidebar/index.md](https://github.com/spcanelon/silvia/blob/bef8a7c9fd7b529e7cb58c3c92dafe59aa8d2259/content/about/sidebar/index.md)
 
-[Copy-and-paste](https://www.notion.so/f35a883c9a5d4f7bbce0cb18e107fb76)
 
-Fixed the SCSS to style the sidebar
+```{r, eval=TRUE, fig.align="center", fig.cap="The header of my About page: https://silvia.rbind.io/about/", fig.alt="My About page featuring a large headline to greet visitors and a short blurb about me in the header of the site. Below this area on the left in the main area of the page is more information with a heading and some prose. To the right of the main area is the sidebar which includes a small image, a name in large font, a subheading for the name, social media icons, and a spot for an audio clip for a name pronunciation. On the top edge of the page is a navigation bar with 'About' highlighted"}
+knitr::include_graphics("img/silvia-about-page-1.png")
+```
 
-Added recording of name pronunciation
+```{r, eval=TRUE, fig.align="center", fig.cap="The main section of my About page: https://silvia.rbind.io/about/", fig.alt="Below the header is the main area of the page on the left with more information about me with a heading and some prose. To the right of the main area is the sidebar which includes a small image of me, my name in large font, my professional title underneath along with social media icons and a short list of my interests."}
+knitr::include_graphics("img/silvia-about-page-2.png")
+```
+
+I wanted to reuse by content from the About section of my Academic site, so I did a lot of copy-and-pasting into the right spots before editing. These steps are outlined in the table below. 
+
+| Step | Content to copy      | From                                          | To                               |
+|------|--------------------- |-----------------------------------------------|----------------------------------|
+| 1    | Folder               | themes/hugo-apero/exampleSite/content/about/  | content/                         |
+| 2    | Body part 1          | content/authors/silvia/_index.md              | content/about/header/index.md    |
+| 3    | Body part 2          | content/authors/silvia/_index.md              | content/about/main/index.md      |
+| 4    | Biography → outro    | content/authors/silvia/_index.md              | content/about/main/index.md      |
+| 5    | Interests → link_list| content/authors/silvia/_index.md              | content/about/sidebar/index.md   |
+| 6    | Photo                | content/authors/silvia/avatar.png             | content/about/sidebar/avatar.png |
 
 ### Homepage
 
-[Customize your homepage | Hugo Apéro](https://hugo-apero-docs.netlify.app/blog/homepage/)
+Resource: [Customize your homepage | Hugo Apéro](https://hugo-apero-docs.netlify.app/blog/homepage/)
 
-Copy `themes/hugo-apero/content/_index.md` to `content/`
+My homepage: [content/_index.md](https://github.com/spcanelon/silvia/blob/bef8a7c9fd7b529e7cb58c3c92dafe59aa8d2259/content/_index.md)
 
-Specify image in the `static/img/` folder. Can be horizontal or vertical
+```{r, eval=TRUE, fig.align="center", fig.cap="My Homepage: https://silvia.rbind.io", fig.alt="The homepage of my site which shows my name in large font on the left, my title, social media icons, a short blurb about me, and a link that says 'Read More' that can be clicked to enter the site. On the right side is a photo of one of my favorite lakes."}
+knitr::include_graphics("img/silvia-home-page.png")
+```
+
+1. Copy **_index.md** from `themes/hugo-apero/content/` to `content/`
+
+1. Save an image for your homepage in the `static/img/` folder
+
+1. Specify your homepage image in **_index.md**
 
 ### Blog
 
-- Update `[menu]` options in **config.toml** to activate Blog by changing `url = "/blog/"` and rename `content/post/` to `content/blog/` to activate the new Apéro layout with the sidebar and enable thumbnails
-- Update `content/post/_index.md` with heading for Blog page. Make sure `text_link_url: /blog/` is pointing to the right spot. I had some conflicts with `_index-old.md` and the new `_index.md` had to point to `/posts/`
-- [x]  Update blog posts with image alt text
-- [ ]  Include panelsets for dark mode post: [https://hugo-apero-docs.netlify.app/blog/seedling/](https://hugo-apero-docs.netlify.app/blog/seedling/)
+My blog listing: [content/blog/_index.md](https://github.com/spcanelon/silvia/blob/bef8a7c9fd7b529e7cb58c3c92dafe59aa8d2259/content/blog/_index.md)
 
-The author in the by-line is "silvia", not "Silvia Canelón" — fixed by deleting "author" field from each post's YAML
+```{r, eval=TRUE, fig.align="center", fig.cap="My Blog listing: https://silvia.rbind.io/blog", fig.alt="The Blog listing page for my site with a sidebar layout and thumbnails enabled. There is a sidebar on the left side with some information about my blog including a blog name 'Meeting People Where They R'. It also includes my name as the blog author, a link to subscribe via RSS, and a decorative image of a small potted cactus plant sitting on top of a stack of books. On the right side in the main area of the page there are two blog posts featured, including this one. Each has a title, a summary, the date, and a decorative image as the thumbnail."}
+knitr::include_graphics("img/silvia-blog-list.png")
+```
 
-Panelsets not working in dark mode post
+Update `[menu]` options in **config.toml** to activate Blog by changing `url = "/blog/"` and renaming `content/post/` to `content/blog/` to activate the new Apéro layout with the sidebar on the blog post listing and to enable thumbnails
+
+```toml
+[[menu.header]]
+  name = "Blog"
+  title = "Blog"
+  url = "/blog/"
+  weight = 2            # <-- item 2 in the navigation bar
+```
+
+Edit **content/blog/_index.md** with heading for the Blog listing page
+
+- Make sure `text_link_url: /blog/`
+
+- The `author:` field will populate the by-line in each blog post unless another author is indicated in the YAML of the blog post.
 
 ### Publications
 
-- Update `[menu]` options in **config.toml** to activate Publications
-- Rename `content/publication/_index.md` to `_index-old.md` and copy over `themes/hugo-apero/exampleSite/content/blog/_index.md`
-- Edit new `_index.md` and copy "abstract:" content from YAML into the area below the YAML
+My publication listing: [content/publication/_index.md](https://github.com/spcanelon/silvia/blob/bef8a7c9fd7b529e7cb58c3c92dafe59aa8d2259/content/publication/_index.md)
 
-I can't find a way to display all authors in the by-line, not just me — fixed by collapsing all authors into one string in `author:` (no "s")
+```{r, eval=TRUE, fig.align="center", fig.cap="My Publication listing: https://silvia.rbind.io/publication", fig.alt="The Publication listing page for my site with a single layout which doesn't have a sidebar. The top of the page says 'Publications' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There is primarily one publication featured with a title, a summary, the authors, and the date. This listing visually separates publications in the list with a horizontal bar"}
+knitr::include_graphics("img/silvia-publication-list.png")
+```
+
+Update `[menu]` options in **config.toml** to activate Publications
+
+```toml
+[[menu.header]]
+  name = "Publications"
+  title = "Publications"
+  url = "/publication/"
+  weight = 4            # <-- item 4 in the navigation bar
+```
+
+Rename **content/publication/_index.md** to **_index-old.md** and copy over **_index.md** from `themes/hugo-apero/exampleSite/content/blog/`
+
+Edit **content/publication/_index.md** to suit your preferences
+
+Modify individual publications:
+
+- The Apéro theme doesn't have a built-in "abstract" field so I copied and pasted the content in this field from the YAML of each publication page into the area below the YAML.
+- If your publications have multiple authors, they can be included as a string list in the `author:` field of the YAML
 
 ### Talks
 
-- Rename `content/talk/_index.md` to `_index-old.md` and copy over `themes/hugo-apero/exampleSite/content/talk/_index.md`
+My talk listing: [content/talk/_index.md](https://github.com/spcanelon/silvia/blob/bef8a7c9fd7b529e7cb58c3c92dafe59aa8d2259/content/talk/_index.md)
+
+```{r, eval=TRUE, fig.align="center", fig.cap="My Talk listing: https://silvia.rbind.io/talk", fig.alt="The Talk listing page for my site with a single layout which doesn't have a sidebar and features decorative thumbnail images on the left. The top of the page says 'Talks' and below is a short description of what can be found on the page. This listing visually separates talks in the list by year with a horizontal bar."}
+knitr::include_graphics("img/silvia-talk-list.png")
+```
+
+Rename **content/talk/_index.md** to **_index-old.md** and copy over **_index.md** from `themes/hugo-apero/exampleSite/content/talk/`
+
+Edit **content/talk/_index.md** to suit your preferences
+
+### .Rmd → .Rmarkdown
+
+You can create content for your blogdown site from **.md**, **.Rmd**, and **.Rmarkdown** files, anytime and anywhere. However, there are some limitations:
+- **.md** is great if your file doesn't contain any R code
+- **.Rmd** files generate **.html** files while **.Rmarkdown** files generate **.markdown** files. Both can run R code, but only **.markdown** files generated from **.Rmarkdown** benefit from some of the features available from Hugo, like the syntax highlighting built-in to Apéro.
+
+If you were writing R tutorials/posts/etc. in **.Rmd** (like me), you'll notice any code chunks you were showing won't be formatted with proper syntax highlighting :cry: To remedy this you'll have to:
+
+1. Change these **index.Rmd** files to **index.Rmarkdown** (I recommend using your computer's file explorer for this)
+
+1. Rebuild your **index.Rmarkdown** files to **index.markdown** (using `blogdown::build_site(build_rmd = TRUE)`, see the [helper functions](https://pkgs.rstudio.com/blogdown/reference/build_site.html) for more granular control)
+
+1. Delete the **index.html** output files that had previously been generated
+
+<i class="fas fa-exclamation-triangle pr2"></i> Rebuilding your R Markdown pages may not be a good idea if they contain code that might break, so please proceed with caution!
+
+If you made it this far, **congratulations**! You have a brand new site! :partying-face:
+
+## Final touches
 
 ### Contact form
 
-- Copy `themes/hugo-apero/exampleSite/content/form/` into `content/` and modify `contact.md`
+Resource: [Built-in Contact Form | Hugo Apéro](https://hugo-apero-docs.netlify.app/learn/built-in-contact-form/)
 
-### Odds & ends
+If you'd like to use Apéro's built-in contact form powered by Formspree, copy the `themes/hugo-apero/exampleSite/content/form/` folder into `content/` and edit **contact.md**.
 
-- Delete `resources/` folder
-- Delete `static/publications/` and `static/rmarkdown-libs/`
-- Delete `content/authors/`, `content/home/`, `content/post`, `content/courses/` and `content/slides/`  — all carry-overs from Hugo Academi
-- Delete old config file, that had been renamed `config_old.toml`
-- Delete `data/` containing `fonts` and `themes`
-- Delete `themes/Hugo-Academic/`!
-- Cannot delete partials in `layouts/shortcodes/`
+### Tidying up your directory
 
-## Customizing
+Now you can delete all of the files and folders you don't need anymore! In my case I deleted:
 
-[Style your site colors | Hugo Apéro](https://hugo-apero.netlify.app/blog/color-themes/)
+- All of the **index.html** files in the blog, publication, and talks folders
+- The content folders carried over from Hugo Academic: authors, home, post, courses, and slides
+- The resources folder
+- The static/img/headers, static/publications, and static/rmarkdown-libs folders
+- The old config file, that I had renamed **config_old.toml**
+- Old index files that I had renamed **_index-old.md**
+- The data folder containing fonts and themes folders
+- The partials in layouts/shortcodes
+- And finally the themes/Hugo-Academic folder! :fire:
 
-- [x]  Site colors: [https://hugo-apero-docs.netlify.app/blog/color-themes/](https://hugo-apero-docs.netlify.app/blog/color-themes/)
-- [x]  Fonts: [https://hugo-apero-docs.netlify.app/blog/fonts/](https://hugo-apero-docs.netlify.app/blog/fonts/)
+## Customizing your site
 
-## Rmd -> Rmarkdown
+Hopefully all of that wasn't too bad. Now you get to the fun part which is customizing your site! The documentation goes through this in detail:
 
-Code chunks are transparent OR embedded slides show as raw html. *Maybe related to why panelsets doesn't work? In other words, a JavaScript library issue?*
-
-- Syntax highlighting is only working for `.Rmarkdown` posts, not `.Rmd` posts
-- When rendering `.Rmarkdown` posts, it doesn't display embedded xaringan slides. Seems to be one way or the other
-    - [x]  Solved the issue by re-knitting one post (`knitr::render()` or 🧶). **BLOGDOWN NO LONGER RE-KNITS BY DEFAULT.** have to remember to do this on my own. see blogdown blog post above
-    - changed all `.Rmd` extensions to `.Rmarkdown` . Blogs, publications, talks, everything.
-    - delete the "extra" `index.html` that had been generated from the `.Rmd` files
-    - re-knit all posts using `blogdown::build_site(build_rmd = TRUE)` — not a good idea if you have built-in code-throughs that might break. Just be careful.
-
-## Bugs
-
-- these may be due to the Hugo Academic partials that are still hanging around 👇
-- Paragraphs are narrow
-- Newer and Older directions are not consistent interposts and intraposts. On main pages Newer is to the left, and within a post/publication/talk, Newer entries are to the right.
-
-## Contributing
-
-- [ ]  Add reference to Academic icons in **config.toml**
-- [ ]  Specify extension means ".scss" in **config.toml**
-- [ ]  Specify you need to rename `content/post/` to `content/blog` to enable new Apéro `content/blog/_index.md`
-- [ ]  Specify you need to copy the "abstract" from YAML into the body of your publication
-- [ ]  Blog-specific featured image can also appear in post. Maybe in sidebar?
-- [ ]  Floating TOC for blog posts? [https://github.com/rbind/apreshill/tree/apero/layouts/partials/shared/sidebar](https://github.com/rbind/apreshill/tree/apero/layouts/partials/shared/sidebar)
-    - [ ]  [https://github.com/isabellabenabaye/isabella-b.com/commit/f7e5dfeab5e64ebd738523a9faccadc32c6520f3](https://github.com/isabellabenabaye/isabella-b.com/commit/f7e5dfeab5e64ebd738523a9faccadc32c6520f3) seen originally on [https://twitter.com/apreshill/status/1288675572466380800?s=20](https://twitter.com/apreshill/status/1288675572466380800?s=20)
-
-## Todo
-
-- [ ]  CSS: Soften the hovering effect to match current site
+- [Set up your social | Hugo Apéro](https://hugo-apero-docs.netlify.app/learn/social/)
+- [Style your site typography | Hugo Apéro](https://hugo-apero-docs.netlify.app/learn/fonts/)
+- [Style your site colors | Hugo Apéro](https://hugo-apero-docs.netlify.app/learn/color-themes/)
