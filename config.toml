@@ -34,8 +34,9 @@ enableEmoji = true
   #description = "A modern, beautiful, and easily configurable blog theme for Hugo."
   description = "Personal website of Silvia Canelón"
   #favicon = "/img/favicon.ico"
-  favicon = "/img/favicon.ico"
-  logo = "/img/blogophonic-mark-dark.png"
+  favicon = "/img/logo_rounded.ico"
+  #logo = "/img/blogophonic-mark-dark.png"
+  logo = "/img/logo_noBg.svg"
   mainSections = ["blog", "talk", "publication"]
   navallcaps = true
   # show/hide social icons in site header & footer
@@ -88,6 +89,11 @@ enableEmoji = true
   # Icon pack "fas" includes solid icons, see: https://fontawesome.com/icons?d=gallery&s=solid&m=free
   # Icon pack "far" includes regular icons, see: https://fontawesome.com/icons?d=gallery&s=regular&m=free
   # Icon pack "ai" includes academic icons, see: https://jpswalsh.github.io/academicons/
+
+  [[params.social]]
+      icon      = "universal-access" # icon name without the 'fa-'
+      icon_pack = "fas"
+      url       = "/accessibility/"
   [[params.social]]
       icon      = "twitter" # icon name without the 'fa-'
       icon_pack = "fab"
@@ -121,10 +127,10 @@ enableEmoji = true
       icon      = "linkedin" # icon name without the 'fa-'
       icon_pack = "fab"
       url       = "https://linkedin.com/in/spcanelon"
-  [[params.social]]
-      icon      = "rss" # icon name without the 'fa-'
-      icon_pack = "fas"
-      url       = "/blog/index.xml"
+#  [[params.social]]
+#      icon      = "rss" # icon name without the 'fa-'
+#      icon_pack = "fas"
+#      url       = "/blog/index.xml"
 
 [taxonomies]
   category = "categories"
@@ -173,12 +179,22 @@ enableEmoji = true
     name = "License"
     title = "License"
     url = "/license/"
-    weight = 2
+    weight = 3
   [[menu.footer]]
     name = "Contact"
     title = "Contact form"
     url = "/contact/"
+    weight = 2
+  [[menu.footer]]
+    name = "Accessibility"
+    title = "Accessibility commitment"
+    url = "/accessibility/"
     weight = 1
+  [[menu.footer]]
+    name = "RSS"
+    title = "RSS"
+    url = "/blog/index.xml/"
+    weight = 5
   #[[menu.footer]]
   #  name = "Contributors"
   #  title = "Contributors"
