@@ -1,7 +1,7 @@
 ---
 title: Talks
 description: |
-  This is a home for my talks and workshops.
+  This is a home for invited talks and workshops, each linked with accompanying materials.
 author: "Silvia Canelón"
 show_post_thumbnail: true
 show_author_byline: false
