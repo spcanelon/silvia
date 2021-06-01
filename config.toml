@@ -22,7 +22,7 @@ enableEmoji = true
     hardwraps = false 
   [markup.tableOfContents]
     startLevel = 1
-    endLevel = 3
+    endLevel = 2
     ordered = false
   [markup.highlight]
     # one of: https://xyproto.github.io/splash/docs/ 
@@ -66,8 +66,8 @@ enableEmoji = true
   # serif options: Fraunces / EB Garamond / Bitter
   # sans-serif options: Commissioner / Alegreya Sans / Metropolis
   # if you import your own fonts, name them here too
-  customtextFontFamily = "Commissioner"
-  customheadingFontFamily = "Ovo"
+  customtextFontFamily = "Cyntho Next"
+  customheadingFontFamily = "Ovo" # Libre Baskerville / Heuristica / Ovo
   # alternatively, leave empty and select basic font options: sans-serif or serif
   # for more http://tachyons.io/docs/typography/font-family/
   textFontFamily = "sans-serif"
