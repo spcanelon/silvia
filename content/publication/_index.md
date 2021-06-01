@@ -1,7 +1,7 @@
 ---
 title: Publications
 description: |
-  A home for my research publications.
+  This is home for my research publications, each linked with accompanying preprints, posters, and/or news pieces.
 author: "Silvia Canelón"
 show_post_thumbnail: false
 thumbnail_left: true # for list-sidebar only
