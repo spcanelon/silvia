@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://silvia.rbind.io/"
 theme = "hugo-apero"
 languageCode = "en"
 #title = "Hugo Apéro"
