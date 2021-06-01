@@ -72,16 +72,6 @@ Looking through GitHub issues I found that including two sub-themes, one for lig
 Not knowing what all of the options were for dark mode, I took a look at the `dark.scss` dark mode stylesheet built in to Academic in `themes/hugo-academic/assets/scss/academic/` folder. You can see the `pigments` package in action here! It makes it easier to identify elements with colors that you want to change. I'm looking at you inline code text color 
 <html><span style="background-color:#44475a; color:rgb(139, 233, 253)">rgb(139, 233, 253) </span><span>.</span></html> 
 
-<!--Panelset test: failed
-{{< panelset class="greetings" >}}
-{{< panel name="Hello! :wave:" >}}
-  hello
-{{< /panel >}}
-{{< panel name="Goodbye :dash:" >}}
-  goodbye
-{{< /panel >}}
-{{< /panelset >}}
--->
 <details><summary>CSS code</summary>
 Note that in SCSS syntax `//` indicates comments and `#` indicates hex codes
 ```{css inline-code, eval=FALSE}
