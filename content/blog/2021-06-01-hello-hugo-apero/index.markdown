@@ -57,7 +57,7 @@ We'll follow the steps below throughout the tutorial and each of the six steps c
 
 {{< tweet 1370027805543698432 >}}
 
-Then we'll [reuse and migrate](#migrating-the-content) your existing content, set up a [contact form](#contact-form), [tidy up your directory](#tidying-up-your-directory), and end with some resources for [customizing your new site](#customizing-your-site). 
+Then we'll [reuse and migrate](#migrating-the-content) your existing content, set up a [contact form](#contact-form), [tidy up your directory](#tidying-up-your-directory), explore some resources for [customizing your new site](#customizing-your-site), and end with the grand finale: [deploying your new site](#deploying-your-new-site)!
 
 ## Prework
 
@@ -508,3 +508,21 @@ Hopefully all of that wasn't too bad. Now you get to the fun part which is custo
 - [Set up your social | Hugo Apéro](https://hugo-apero-docs.netlify.app/learn/social/)
 - [Style your site typography | Hugo Apéro](https://hugo-apero-docs.netlify.app/learn/fonts/)
 - [Style your site colors | Hugo Apéro](https://hugo-apero-docs.netlify.app/learn/color-themes/)
+
+## Deploying your new site
+
+Once you're happy with your new Apéro site, the last step is to merge your `apero` branch with the primary branch of your website repository. But first, a few steps:
+
+1. **Optional:** Create a branch of your primary branch and call it `hugo-academic` so that you have a snapshot of your Academic files right before the merge. Since we set up Netlify to deploy all of our branches, there will now be a live link for this new branch that you can visit whenever you feel like time traveling back to your old site. For me this link is https://hugo-academic--silvia.netlify.app/
+
+2. Switch back to your `apero` branch and update the `baseURL` field in **config.toml** to your regular website path. In my case:
+
+    ```toml
+    baseURL = "https://silvia.rbind.io/"
+    ```
+
+    Then commit and push this change to your `apero` branch.
+    
+3. Merge your `apero` branch with your primary branch. I usually use git commands in a combination of the RStudio terminal and the Git pane, but for this big merge I felt more comfortable doing it on github.com! :sweat_smile: Do what feels most comfortable for you.
+
+4. <i class="fas fa-glass-cheers pr2"></i>Celebrate and share your brand new site! :tada: :partying_face: :champagne:<br>If you choose to share on Twitter, consider using the #HugoApero hashtag so the [Hugo Apéro squad](https://twitter.com/apreshill/status/1397052533588185092) can clap for you!
