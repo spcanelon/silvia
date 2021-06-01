@@ -1,0 +1,182 @@
+// Installed following guidance at https://hugo-apero-docs.netlify.app/blog/fonts/
+
+// Ovo: https://www.fontsquirrel.com/fonts/ovo
+
+@font-face {
+  src: local(''),
+       url('../static/fonts/Ovo-Regular.otf') format('otf');
+}
+
+// Libre Baskerville: https://www.fontsquirrel.com/fonts/libre-baskerville
+
+@font-face{
+	src: local(''),
+	     url('../static/fonts/LibreBaskerville-Bold.otf') format('otf');
+	src: local(''),
+	     url('../static/fonts/LibreBaskerville-Italic.otf') format('otf');
+	src: local(''),
+	     url('../static/fonts/LibreBaskerville-Regular.otf') format('otf');
+}
+
+// Heuristica: https://www.fontsquirrel.com/fonts/heuristica
+
+@font-face{
+	src: local(''),
+	     url('../static/fonts/Heuristica-Bold.otf') format('otf');
+	src: local(''),
+	     url('../static/fonts/Heuristica-Italic.otf') format('otf');
+	src: local(''),
+	     url('../static/fonts/Heuristica-Regular.otf') format('otf');
+}
+
+// Cyntho Next: https://www.fontspring.com/fonts/mint-type/cyntho-next
+
+@font-face{
+	src: local(''),
+	     url('../static/fonts/CynthoNext-Light.otf') format('otf');
+	src: local(''),
+	     url('../static/fonts/CynthoNext-LightItalic.otf') format('otf');
+}
+
+// ----------------------------------------------------------------------------
+// ----custom styling----------------------------------------------------------
+
+// Experimental: ToC: navigating up or down the ToC is smooth not jumpy
+/*html {
+  scroll-behavior: smooth;
+}*/
+
+// headline: make smaller than default
+.f1-m {
+  font-size: 5.7rem;
+}
+
+// ToC ------------------------------------------------------------------------
+// modified from: scaffold.scss, series + collections table of contents
+
+
+// styles h1 and h2
+nav#TableOfContents ul li {
+  @extend .f5, .lh-title-ns;
+  // all links
+  a {
+    @extend .no-underline;
+    // transition: all 50mx ease-in-out;
+  }
+  // active list items
+  &.active {
+    @extend .pl3, .bg-#{$siteBgColor}, .bl, .b--#{$borderColor}, .bw1;
+  }
+  // non-active list items
+  &:not(.active) {
+    @extend .pl3, .bl, .bw1, .b--transparent;
+  }
+  // hovering over active links
+  &:hover.active a {
+    @extend .underline;
+  }
+  // hovering over non-active links
+  &:hover:not(.active) a {
+   //@extend .underline;
+  }
+  &a:hover {
+    @extend .br;
+  }
+  // within nested list items
+  li {
+    // hovering over active links
+    &:hover.active a {
+      //@extend .dim;
+    }
+    // hovering over non-active links
+    &:hover:not(.active) a {
+      @extend .underline; //.dim;
+    }
+  }
+}
+
+// ----------------------------------------------------------------------------
+// WIP: a11y: add indicator for external links
+// source: https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_links#including_icons_on_links
+/*
+a[href*="http"] {
+  background: url('../static/img/external-link.png') no-repeat 100% 0;
+  background-size: 16px 16px;
+  padding-right: 19px;
+}
+*/
+
+// single post ----------------------------------------------------------------
+
+/*
+.single {
+  .page-main {
+    grid-column: 1 / 5;
+  }
+  .page-sidebar {
+    @extend .mt7;
+    grid-column: 5 / 7;
+    @extend .bg-transparent;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .single {
+    .page-main,
+    .page-sidebar {
+      grid-column: 1 / 7;
+    }
+  }
+}*/
+
+// inline code ----------------------------------------------------------------
+// apply tachyons classes to blog post and single page markdown
+
+// increase line spacing within panels
+.panelset * {
+  @extend .lh-copy;
+}
+
+.post-body,
+.page-body {
+  
+  .panelset * p > code, // code within panelset paragraphs
+  > p > code,           // code within paragraphs
+  li > code,            // level 1 list item 
+  li li > code,         // level 2 list item
+  li p > code {         // paragaph in list item
+    @extend .f6, .pa1, .ba, .bw1, .br0;
+    color: #415200;     // 415200 434f54
+    background-color: #EEF1E0; // DCE3C0 EEF1E0
+    border-color: #b9c680;// 728e00 b9c680 ebebeb
+  }
+  
+}
+
+// wrap code chunks
+// source: https://stackoverflow.com/a/56469907
+code {
+  white-space : pre-wrap !important;
+}
+
+// Style code chunks ----------------------------------------------------------
+pre {
+  @extend .pre, .br1, .pa3, .bg-transparent;
+  border: 1px solid #ebebeb;
+}
+
+pre code span {
+	font-weight: normal !important;
+}
+
+// a11y: scaling up to 18px font size -----------------------------------------
+p, summary {
+  font-size: 1.125em;
+}
+
+ul, ol {
+  font-size: 1.125em;
+  > li > p {
+    font-size: 1em;
+  }
+}
