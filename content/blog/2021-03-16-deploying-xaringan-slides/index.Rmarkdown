@@ -1,5 +1,6 @@
 ---
 title: "Deploying xaringan Slides: A Ten-Step GitHub Pages Workflow"
+#layout: single
 layout: single-sidebar
 date: '2021-03-16'
 slug: deploying-xaringan-slides
@@ -15,11 +16,6 @@ summary: 'A ten-step workflow for creating an HTML xaringan slide deck and deplo
 lastmod: '2021-03-16'
 featured: yes
 draft: no
-output:
-  blogdown::html_page:
-    toc: yes
-    number_sections: no
-    toc_depth: 2
 image:
   caption: 'Photo by [Vincentiu Solomon](https://unsplash.com/@vincentiu)'
   focal_point: 'Center'
