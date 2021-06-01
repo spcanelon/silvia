@@ -7,11 +7,35 @@
        url('../static/fonts/Ovo-Regular.otf') format('otf');
 }
 
-// Alice: https://www.fontsquirrel.com/fonts/alice
+// Libre Baskerville: https://www.fontsquirrel.com/fonts/libre-baskerville
 
 @font-face{
 	src: local(''),
-	     url('../static/fonts/Alice-Regular-webfont.woff') format('woff');
+	     url('../static/fonts/LibreBaskerville-Bold.otf') format('otf');
+	src: local(''),
+	     url('../static/fonts/LibreBaskerville-Italic.otf') format('otf');
+	src: local(''),
+	     url('../static/fonts/LibreBaskerville-Regular.otf') format('otf');
+}
+
+// Heuristica: https://www.fontsquirrel.com/fonts/heuristica
+
+@font-face{
+	src: local(''),
+	     url('../static/fonts/Heuristica-Bold.otf') format('otf');
+	src: local(''),
+	     url('../static/fonts/Heuristica-Italic.otf') format('otf');
+	src: local(''),
+	     url('../static/fonts/Heuristica-Regular.otf') format('otf');
+}
+
+// Cyntho Next: https://www.fontspring.com/fonts/mint-type/cyntho-next
+
+@font-face{
+	src: local(''),
+	     url('../static/fonts/CynthoNext-Light.otf') format('otf');
+	src: local(''),
+	     url('../static/fonts/CynthoNext-LightItalic.otf') format('otf');
 }
 
 // ----------------------------------------------------------------------------
@@ -53,22 +77,36 @@ nav#TableOfContents ul li {
   }
   // hovering over non-active links
   &:hover:not(.active) a {
-    @extend .underline;
+   //@extend .underline;
+  }
+  &a:hover {
+    @extend .br;
   }
   // within nested list items
   li {
     // hovering over active links
     &:hover.active a {
-      @extend .dim;
+      //@extend .dim;
     }
     // hovering over non-active links
     &:hover:not(.active) a {
-      @extend .underline, .dim;
+      @extend .underline; //.dim;
     }
   }
 }
 
-// single post 
+// ----------------------------------------------------------------------------
+// WIP: a11y: add indicator for external links
+// source: https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_links#including_icons_on_links
+/*
+a[href*="http"] {
+  background: url('../static/img/external-link.png') no-repeat 100% 0;
+  background-size: 16px 16px;
+  padding-right: 19px;
+}
+*/
+
+// single post ----------------------------------------------------------------
 
 .single {
   .page-main {
@@ -107,7 +145,7 @@ nav#TableOfContents ul li {
   li li > code,         // level 2 list item
   li p > code {         // paragaph in list item
     @extend .f6, .pa1, .ba, .bw1, .br0;
-    color: #415200; // 415200 434f54
+    color: #415200;     // 415200 434f54
     background-color: #EEF1E0; // DCE3C0 EEF1E0
     border-color: #b9c680;// 728e00 b9c680 ebebeb
   }
@@ -128,4 +166,9 @@ pre {
 
 pre code span {
 	font-weight: normal !important;
+}
+
+// a11y: scaling up to 18px font size for paragraph text ----------------------
+p {
+  font-size: 1.125em;
 }
