@@ -477,7 +477,7 @@ If you were writing R tutorials/posts/etc. in **.Rmd** (like me), you'll notice 
 
 <i class="fas fa-exclamation-triangle pr2"></i> Rebuilding your R Markdown pages may not be a good idea if they contain code that might break, so please proceed with caution!
 
-If you made it this far, **congratulations**! You have a brand new site! :partying-face:
+If you made it this far, **congratulations**! You have a brand new site! :partying_face:
 
 ## Final touches
 
@@ -489,21 +489,64 @@ If you'd like to use Apéro's built-in contact form powered by Formspree, copy t
 
 ### Tidying up your directory
 
-Now you can delete all of the files and folders you don't need anymore! In my case I deleted:
+Now you can delete all of the files and folders you don't need anymore! 
 
-- All of the **index.html** files in the blog, publication, and talks folders
+I'm including the files and folders I deleted as a list and as a directory tree. These are organized in the panelset below.
+
+{{< panelset class="files and folders to delete" >}}
+{{< panel name="List of items" >}}
+
 - The content folders carried over from Hugo Academic: authors, home, post, courses, and slides
+- The config folder
 - The resources folder
-- The static/img/headers, static/publications, and static/rmarkdown-libs folders
-- The old config file, that I had renamed **config_old.toml**
-- Old index files that I had renamed **_index-old.md**
 - The data folder containing fonts and themes folders
+- The assets/images folder
+- The static/img/headers, static/publications, and static/rmarkdown-libs folders
+- All of the **index.html** files in the blog, publication, and talks folders
+- The old config file, that I had renamed **config_old.toml**
+- The old index files that I had renamed **_index-old.md**
 - The partials in layouts/shortcodes
-- And finally the themes/Hugo-Academic folder! :fire:
+- And finally the themes/hugo-academic folder! :fire:  
+
+{{< /panel >}}
+
+{{< panel name="Directory tree" >}}
+
+I deleted the following files:
+- All of the **index.html** files in the blog, publication, and talks folders
+- The old config file, that I had renamed **config_old.toml**
+- The old index files that I had renamed **_index-old.md**
+
+And I deleted the folders indicated in this directory tree:
+
+<i class="fas fa-route pr2"></i>Location: `silvia/`
+
+```bash
+.
+├── config                # <-- this folder
+├── resources             # <-- this folder
+├── data                  # <-- this folder
+├── assets
+│   └── images            # <-- this folder
+├── static
+│   ├── img
+│   │   └── headers       # <-- this folder
+│   ├── publications      # <-- this folder
+│   └── rmarkdown-libs    # <-- this folder
+├── layouts
+│   └── shortcodes        # <-- custom partials in this folder
+└── themes
+    └── hugo-academic     # <-- this folder
+```
+
+{{< /panel >}}
+{{< /panelset >}}
 
 ## Customizing your site
 
-Hopefully all of that wasn't too bad. Now you get to the fun part which is customizing your site! The documentation goes through this in detail:
+Hopefully all of that wasn't terrible, and if it was, please know I'm rooting for you. You're doing great! :raised_hands: 
+
+Now you get to enjoy the fun part which is customizing your site! The theme documentation goes through this in detail:
 
 - [Set up your social | Hugo Apéro](https://hugo-apero-docs.netlify.app/learn/social/)
 - [Style your site typography | Hugo Apéro](https://hugo-apero-docs.netlify.app/learn/fonts/)
@@ -525,4 +568,31 @@ Once you're happy with your new Apéro site, the last step is to merge your `ape
     
 3. Merge your `apero` branch with your primary branch. I usually use git commands in a combination of the RStudio terminal and the Git pane, but for this big merge I felt more comfortable doing it on github.com! :sweat_smile: Do what feels most comfortable for you.
 
-4. <i class="fas fa-glass-cheers pr2"></i>Celebrate and share your brand new site! :tada: :partying_face: :champagne:<br>If you choose to share on Twitter, consider using the #HugoApero hashtag so the [Hugo Apéro squad](https://twitter.com/apreshill/status/1397052533588185092) can clap for you!
+4. Resolve any merge conflicts (I had a few!) in the git tool of your choosing. These are the git commands GitHub recommended:
+
+    ```bash
+    git fetch origin       # makes sure local files were recent
+    git checkout apero     # moves you to your `apero` branch
+    git merge main         # attempts a merge with your `main` branch
+    ```
+    
+    When you're finished, commit your changes and push. Then follow these next steps, also recommended by GitHub:
+    
+    ```bash
+    git checkout main       # moves you to your `main` branch
+    git merge --no-ff apero # creates a new commit for the merge
+    ```
+    
+    This step will sort of replace all of the files that both themes had in common with the `apero` version (e.g. **config.toml**, **netlify.toml**, **content/publication**), and leave the old Academic files alone. So you'll have to delete these ([again](#tidying-up-your-directory)!). I'm not sure how to avoid this -- maybe it's not an issue when you don't have merge conflicts? I don't know :thinking:
+    
+5. Tidy up your directory (again?)
+
+    Go through [the steps above](#tidying-up-your-directory) to clean out any residual Academic files from your directory. Make sure to check your `content/` folders for any example files from Academic that might still be hanging around and delete them.
+    
+    Then run `blogdown::serve_site()` to build your new Apéro site locally. Go through the site and make sure everything looks the way it should and that links are generally pointing to the right places. 
+    
+    When you're satisfied, commit the changes to your primary branch!<br>There may be *a lot* of files that were deleted and added during the switch to Apéro and, while not generally recommended, I used the `git add .` command to stage all of the changes at once and, commited the changes, and then pushed. This only after thoroughly looking through the list of changed files so I knew what was happening.
+
+6. Wait a couple of minutes for the changes to get pushed to your primary branch (e.g. `main`) and then wait patiently for Netlify to build your site after the merge.
+
+7. <i class="fas fa-glass-cheers pr2"></i>Celebrate and share your brand new site! :tada: :partying_face: :champagne:<br>If you share on Twitter, use the #HugoApero hashtag so the [Hugo Apéro squad](https://twitter.com/apreshill/status/1397052533588185092) can clap for you!
