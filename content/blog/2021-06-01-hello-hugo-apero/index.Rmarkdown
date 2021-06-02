@@ -25,6 +25,9 @@ links:
 ---
 
 ```{r setup, echo=FALSE}
+library(xaringanExtra)
+library(formatR)
+
 knitr::opts_chunk$set(eval=FALSE, 
                       echo=FALSE,
                       fig.align = "center")
@@ -36,16 +39,20 @@ htmltools::tagList(
   ),
   rmarkdown::html_dependency_font_awesome()
 )
-
-library(xaringanExtra)
-library(formatR)
 ```
+
+```{css, eval=TRUE}
+.page-main img {
+  box-shadow: 0px 0px 2px 2px rgba( 0, 0, 0, 0.2 );
+}
+```
+
 
 ## What to expect
 
 By the end of the tutorial you will have switched your website from using the Hugo Academic theme to using the new [Hugo Apéro theme designed by Alison Hill](https://alison.rbind.io/project/hugo-apero/) <i class="fas fa-glass-cheers pr2"></i> 
 
-Specifically you'll be able to migrate your blog, publications, and talks. If you need to migrate courses, I recommend taking a look at how [Alison](https://alison.rbind.io/project/) and [Kelly Bodwin](https://www.kelly-bodwin.com/courses/) organized their courses and workshops into projects using this theme.
+Specifically you will be able to migrate your blog, publications, and talks. If you need to migrate courses, I recommend taking a look at how [Alison](https://alison.rbind.io/project/) and [Kelly Bodwin](https://www.kelly-bodwin.com/courses/) organized their courses and workshops into projects using this theme. I didn't have projects prior to converting my site, but after creating a few projects post-Apéro I'm confident any projects you've created pre-Apéro will carry over easily.
 
 <details><summary>Projects on my site: https://silvia.rbind.io/project</summary>
 ```{r, eval=TRUE, fig.align="center", fig.cap="My Project listing: https://silvia.rbind.io/project", fig.alt="The Project listing page for my site with a grid layout featuring thumbnail images. The top of the page says 'Projects' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There are three projects featured with a decorative thumbnail image, a title, and a summary. Items also include an author and category links but they are cut off in this screenshot."}
@@ -55,7 +62,7 @@ knitr::include_graphics("img/silvia-project-list.png")
 
 **What _not_ to expect**
 
-A tutorial on how to create a Hugo Apéro site from scratch -- but don't worry! Alison covers this in a [workshop she gave for R-Ladies Tunis](https://www.youtube.com/watch?v=RksaNh5Ywbo) and in the [Get started series of blog posts](https://hugo-apero-docs.netlify.app/start/) included in the documentation site.
+A tutorial on how to create a Hugo Apéro site from scratch -- but don't worry! Alison covers this in a [workshop she gave for R-Ladies Tunis](https://alison.rbind.io/talk/2021-iyo-tunis/) and in the [Get started series of blog posts](https://hugo-apero-docs.netlify.app/start/) included in the documentation site.
 
 ## The Plan
 
@@ -191,7 +198,7 @@ Modify the **config.toml** file so it points to your new theme folder instead of
 theme = "hugo-apero"
 ```
 
-<i class="fas fa-exclamation-circle pr2"></i> At this point you'll probably start to get some error messages like the one below. Don't panic! Let's get through the rest of the steps first. I'm including my errors in this post in case they are helpful/validating for you!
+<i class="fas fa-exclamation-circle pr2"></i> At this point you will probably start to get some error messages like the one below. Don't panic! Let's get through the rest of the steps first. I'm including my errors in this post in case they are helpful/validating for you!
 
 ```r
 Could not build site because certain shortcodes weren't found
@@ -284,7 +291,7 @@ Error: Error building site: failed to render pages: render of "page" failed: exe
 
 ## Migrating the content
 
-Assuming you have made it this far and are able to at least serve a live site that uses the new Hugo Apéro theme, you are ready to start converting your content! :tada:
+Assuming you have made it this far and are able to at least serve a live site that uses the new Hugo Apéro theme, you are ready to start migrating your content! :tada:
 
 File are organized differently in Hugo Apéro and the next steps detail the high-level changes I made to get my content to fit the new structure. The goal was to have my site parallel the [Hugo Apéro example site](https://hugo-apero.netlify.app/) and [Alison's personal site](https://alison.rbind.io).
 
@@ -372,7 +379,7 @@ knitr::include_graphics("img/silvia-about-page-1.png")
 knitr::include_graphics("img/silvia-about-page-2.png")
 ```
 
-I wanted to reuse by content from the About section of my Academic site, so I did a lot of copy-and-pasting into the right spots before editing. These steps are outlined in the table below. 
+I wanted to reuse my content from the About section of my Academic site, so I did a lot of copy-and-pasting into the right spots before editing. These steps are outlined in the table below. 
 
 | Step | Content to copy      | From                                          | To                               |
 |------|--------------------- |-----------------------------------------------|----------------------------------|
@@ -466,9 +473,9 @@ Edit **content/talk/_index.md** to suit your preferences
 
 You can create content for your blogdown site from **.md**, **.Rmd**, and **.Rmarkdown** files, anytime and anywhere. However, there are some limitations:
 - **.md** is great if your file doesn't contain any R code
-- **.Rmd** files generate **.html** files while **.Rmarkdown** files generate **.markdown** files. Both can run R code, but only **.markdown** files generated from **.Rmarkdown** benefit from some of the features available from Hugo, like the syntax highlighting built-in to Apéro.
+- **.Rmd** files generate **.html** files while **.Rmarkdown** files generate **.markdown** files. Both can run R code, but only **.markdown** files generated from **.Rmarkdown** benefit from some of the features available from Hugo, like the syntax highlighting built into Apéro.
 
-If you were writing R tutorials/posts/etc. in **.Rmd** (like me), you'll notice any code chunks you were showing won't be formatted with proper syntax highlighting :cry: To remedy this you'll have to:
+If you were writing R tutorials/posts/etc. in **.Rmd** (like me), you will notice any code chunks you were displaying will not be formatted with proper syntax highlighting :cry: To remedy this, you will have to:
 
 1. Change these **index.Rmd** files to **index.Rmarkdown** (I recommend using your computer's file explorer for this)
 
@@ -584,7 +591,7 @@ Once you're happy with your new Apéro site, the last step is to merge your `ape
     git merge --no-ff apero # creates a new commit for the merge
     ```
     
-    This step will sort of replace all of the files that both themes had in common with the `apero` version (e.g. **config.toml**, **netlify.toml**, **content/publication**), and leave the old Academic files alone. So you'll have to delete these extra Academic files ([again](#tidying-up-your-directory)!). I'm not sure how to avoid this -- maybe it's not an issue when you don't have merge conflicts? I don't know :thinking:
+    This step will sort of replace all of the files that both themes had in common with the `apero` version (e.g. **config.toml**, **netlify.toml**, **content/publication**), and leave the old Academic files alone. So you will have to delete these extra Academic files ([again](#tidying-up-your-directory)!). I'm not sure how to avoid this -- maybe it's not an issue when you don't have merge conflicts? I don't know :thinking:
     
 5. Tidy up your directory (again?)
 
@@ -592,7 +599,7 @@ Once you're happy with your new Apéro site, the last step is to merge your `ape
     
     Then run `blogdown::serve_site()` to build your new Apéro site locally. Go through the site and make sure everything looks the way it should and that links are generally pointing to the right places. 
     
-    When you're satisfied, commit the changes to your primary branch!<br>There may be *a lot* of files that were deleted and added during the switch to Apéro and, while not generally recommended, I used the `git add .` command to stage all of the changes at once and, commited the changes, and then pushed. This only after thoroughly looking through the list of changed files so I knew what was happening.
+    When you're satisfied, commit the changes to your primary branch!<br>There may be *a lot* of files that were deleted and added during the switch to Apéro and, while not generally recommended, I used the `git add .` command to stage all of the changes at once, commited the changes, and then pushed. I did this after thoroughly looking through the list of changed files so I knew what was happening.
 
 6. Wait a couple of minutes for the changes to get pushed to your primary branch (e.g. `main`) and then wait patiently for Netlify to build your site after the merge.
 

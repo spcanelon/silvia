@@ -32,22 +32,29 @@ links:
 
 
 
+<style type="text/css">
+.page-main img {
+  box-shadow: 0px 0px 2px 2px rgba( 0, 0, 0, 0.2 );
+}
+</style>
+
+
 ## What to expect
 
 By the end of the tutorial you will have switched your website from using the Hugo Academic theme to using the new [Hugo Apéro theme designed by Alison Hill](https://alison.rbind.io/project/hugo-apero/) <i class="fas fa-glass-cheers pr2"></i> 
 
-Specifically you'll be able to migrate your blog, publications, and talks. If you need to migrate courses, I recommend taking a look at how [Alison](https://alison.rbind.io/project/) and [Kelly Bodwin](https://www.kelly-bodwin.com/courses/) organized their courses and workshops into projects using this theme.
+Specifically you will be able to migrate your blog, publications, and talks. If you need to migrate courses, I recommend taking a look at how [Alison](https://alison.rbind.io/project/) and [Kelly Bodwin](https://www.kelly-bodwin.com/courses/) organized their courses and workshops into projects using this theme. I didn't have projects prior to converting my site, but after creating a few projects post-Apéro I'm confident any projects you've created pre-Apéro will carry over easily.
 
 <details><summary>Projects on my site: https://silvia.rbind.io/project</summary>
 <div class="figure" style="text-align: center">
-<img src="img/silvia-project-list.png" alt="The Project listing page for my site with a grid layout featuring thumbnail images. The top of the page says 'Projects' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There are three projects featured with a decorative thumbnail image, a title, and a summary. Items also include an author and category links but they are cut off in this screenshot." width="1339" />
+<img src="img/silvia-project-list.png" alt="The Project listing page for my site with a grid layout featuring thumbnail images. The top of the page says 'Projects' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There are three projects featured with a decorative thumbnail image, a title, and a summary. Items also include an author and category links but they are cut off in this screenshot." width="1265" />
 <p class="caption">Figure 1: My Project listing: https://silvia.rbind.io/project</p>
 </div>
 </details>
 
 **What _not_ to expect**
 
-A tutorial on how to create a Hugo Apéro site from scratch -- but don't worry! Alison covers this in a [workshop she gave for R-Ladies Tunis](https://www.youtube.com/watch?v=RksaNh5Ywbo) and in the [Get started series of blog posts](https://hugo-apero-docs.netlify.app/start/) included in the documentation site.
+A tutorial on how to create a Hugo Apéro site from scratch -- but don't worry! Alison covers this in a [workshop she gave for R-Ladies Tunis](https://alison.rbind.io/talk/2021-iyo-tunis/) and in the [Get started series of blog posts](https://hugo-apero-docs.netlify.app/start/) included in the documentation site.
 
 ## The Plan
 
@@ -184,7 +191,7 @@ Modify the **config.toml** file so it points to your new theme folder instead of
 theme = "hugo-apero"
 ```
 
-<i class="fas fa-exclamation-circle pr2"></i> At this point you'll probably start to get some error messages like the one below. Don't panic! Let's get through the rest of the steps first. I'm including my errors in this post in case they are helpful/validating for you!
+<i class="fas fa-exclamation-circle pr2"></i> At this point you will probably start to get some error messages like the one below. Don't panic! Let's get through the rest of the steps first. I'm including my errors in this post in case they are helpful/validating for you!
 
 ```r
 Could not build site because certain shortcodes weren't found
@@ -277,7 +284,7 @@ Error: Error building site: failed to render pages: render of "page" failed: exe
 
 ## Migrating the content
 
-Assuming you have made it this far and are able to at least serve a live site that uses the new Hugo Apéro theme, you are ready to start converting your content! :tada:
+Assuming you have made it this far and are able to at least serve a live site that uses the new Hugo Apéro theme, you are ready to start migrating your content! :tada:
 
 File are organized differently in Hugo Apéro and the next steps detail the high-level changes I made to get my content to fit the new structure. The goal was to have my site parallel the [Hugo Apéro example site](https://hugo-apero.netlify.app/) and [Alison's personal site](https://alison.rbind.io).
 
@@ -358,16 +365,16 @@ My About page:
 
 
 <div class="figure" style="text-align: center">
-<img src="img/silvia-about-page-1.png" alt="My About page featuring a large headline to greet visitors and a short blurb about me in the header of the site. Below this area on the left in the main area of the page is more information with a heading and some prose. To the right of the main area is the sidebar which includes a small image, a name in large font, a subheading for the name, social media icons, and a spot for an audio clip for a name pronunciation. On the top edge of the page is a navigation bar with 'About' highlighted" width="1339" />
+<img src="img/silvia-about-page-1.png" alt="My About page featuring a large headline to greet visitors and a short blurb about me in the header of the site. Below this area on the left in the main area of the page is more information with a heading and some prose. To the right of the main area is the sidebar which includes a small image, a name in large font, a subheading for the name, social media icons, and a spot for an audio clip for a name pronunciation. On the top edge of the page is a navigation bar with 'About' highlighted" width="1265" />
 <p class="caption">Figure 3: The header of my About page: https://silvia.rbind.io/about/</p>
 </div>
 
 <div class="figure" style="text-align: center">
-<img src="img/silvia-about-page-2.png" alt="Below the header is the main area of the page on the left with more information about me with a heading and some prose. To the right of the main area is the sidebar which includes a small image of me, my name in large font, my professional title underneath along with social media icons and a short list of my interests." width="1339" />
+<img src="img/silvia-about-page-2.png" alt="Below the header is the main area of the page on the left with more information about me with a heading and some prose. To the right of the main area is the sidebar which includes a small image of me, my name in large font, my professional title underneath along with social media icons and a short list of my interests." width="1265" />
 <p class="caption">Figure 4: The main section of my About page: https://silvia.rbind.io/about/</p>
 </div>
 
-I wanted to reuse by content from the About section of my Academic site, so I did a lot of copy-and-pasting into the right spots before editing. These steps are outlined in the table below. 
+I wanted to reuse my content from the About section of my Academic site, so I did a lot of copy-and-pasting into the right spots before editing. These steps are outlined in the table below. 
 
 | Step | Content to copy      | From                                          | To                               |
 |------|--------------------- |-----------------------------------------------|----------------------------------|
@@ -385,7 +392,7 @@ Resource: [Customize your homepage | Hugo Apéro](https://hugo-apero-docs.netlif
 My homepage: [content/_index.md](https://github.com/spcanelon/silvia/blob/bef8a7c9fd7b529e7cb58c3c92dafe59aa8d2259/content/_index.md)
 
 <div class="figure" style="text-align: center">
-<img src="img/silvia-home-page.png" alt="The homepage of my site which shows my name in large font on the left, my title, social media icons, a short blurb about me, and a link that says 'Read More' that can be clicked to enter the site. On the right side is a photo of one of my favorite lakes." width="1444" />
+<img src="img/silvia-home-page.png" alt="The homepage of my site which shows my name in large font on the left, my title, social media icons, a short blurb about me, and a link that says 'Read More' that can be clicked to enter the site. On the right side is a photo of one of my favorite lakes." width="1280" />
 <p class="caption">Figure 5: My Homepage: https://silvia.rbind.io</p>
 </div>
 
@@ -400,7 +407,7 @@ My homepage: [content/_index.md](https://github.com/spcanelon/silvia/blob/bef8a7
 My blog listing: [content/blog/_index.md](https://github.com/spcanelon/silvia/blob/bef8a7c9fd7b529e7cb58c3c92dafe59aa8d2259/content/blog/_index.md)
 
 <div class="figure" style="text-align: center">
-<img src="img/silvia-blog-list.png" alt="The Blog listing page for my site with a sidebar layout and thumbnails enabled. There is a sidebar on the left side with some information about my blog including a blog name 'Meeting People Where They R'. It also includes my name as the blog author, a link to subscribe via RSS, and a decorative image of a small potted cactus plant sitting on top of a stack of books. On the right side in the main area of the page there are two blog posts featured, including this one. Each has a title, a summary, the date, and a decorative image as the thumbnail." width="1339" />
+<img src="img/silvia-blog-list.png" alt="The Blog listing page for my site with a sidebar layout and thumbnails enabled. There is a sidebar on the left side with some information about my blog including a blog name 'Meeting People Where They R'. It also includes my name as the blog author, a link to subscribe via RSS, and a decorative image of a small potted cactus plant sitting on top of a stack of books. On the right side in the main area of the page there are two blog posts featured, including this one. Each has a title, a summary, the date, and a decorative image as the thumbnail." width="1265" />
 <p class="caption">Figure 6: My Blog listing: https://silvia.rbind.io/blog</p>
 </div>
 
@@ -425,7 +432,7 @@ Edit **content/blog/_index.md** with heading for the Blog listing page
 My publication listing: [content/publication/_index.md](https://github.com/spcanelon/silvia/blob/bef8a7c9fd7b529e7cb58c3c92dafe59aa8d2259/content/publication/_index.md)
 
 <div class="figure" style="text-align: center">
-<img src="img/silvia-publication-list.png" alt="The Publication listing page for my site with a single layout which doesn't have a sidebar. The top of the page says 'Publications' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There is primarily one publication featured with a title, a summary, the authors, and the date. This listing visually separates publications in the list with a horizontal bar" width="1339" />
+<img src="img/silvia-publication-list.png" alt="The Publication listing page for my site with a single layout which doesn't have a sidebar. The top of the page says 'Publications' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There is primarily one publication featured with a title, a summary, the authors, and the date. This listing visually separates publications in the list with a horizontal bar" width="1265" />
 <p class="caption">Figure 7: My Publication listing: https://silvia.rbind.io/publication</p>
 </div>
 
@@ -453,7 +460,7 @@ Modify individual publications:
 My talk listing: [content/talk/_index.md](https://github.com/spcanelon/silvia/blob/bef8a7c9fd7b529e7cb58c3c92dafe59aa8d2259/content/talk/_index.md)
 
 <div class="figure" style="text-align: center">
-<img src="img/silvia-talk-list.png" alt="The Talk listing page for my site with a single layout which doesn't have a sidebar and features decorative thumbnail images on the left. The top of the page says 'Talks' and below is a short description of what can be found on the page. This listing visually separates talks in the list by year with a horizontal bar." width="1339" />
+<img src="img/silvia-talk-list.png" alt="The Talk listing page for my site with a single layout which doesn't have a sidebar and features decorative thumbnail images on the left. The top of the page says 'Talks' and below is a short description of what can be found on the page. This listing visually separates talks in the list by year with a horizontal bar." width="1265" />
 <p class="caption">Figure 8: My Talk listing: https://silvia.rbind.io/talk</p>
 </div>
 
@@ -465,9 +472,9 @@ Edit **content/talk/_index.md** to suit your preferences
 
 You can create content for your blogdown site from **.md**, **.Rmd**, and **.Rmarkdown** files, anytime and anywhere. However, there are some limitations:
 - **.md** is great if your file doesn't contain any R code
-- **.Rmd** files generate **.html** files while **.Rmarkdown** files generate **.markdown** files. Both can run R code, but only **.markdown** files generated from **.Rmarkdown** benefit from some of the features available from Hugo, like the syntax highlighting built-in to Apéro.
+- **.Rmd** files generate **.html** files while **.Rmarkdown** files generate **.markdown** files. Both can run R code, but only **.markdown** files generated from **.Rmarkdown** benefit from some of the features available from Hugo, like the syntax highlighting built into Apéro.
 
-If you were writing R tutorials/posts/etc. in **.Rmd** (like me), you'll notice any code chunks you were showing won't be formatted with proper syntax highlighting :cry: To remedy this you'll have to:
+If you were writing R tutorials/posts/etc. in **.Rmd** (like me), you will notice any code chunks you were displaying will not be formatted with proper syntax highlighting :cry: To remedy this, you will have to:
 
 1. Change these **index.Rmd** files to **index.Rmarkdown** (I recommend using your computer's file explorer for this)
 
@@ -583,7 +590,7 @@ Once you're happy with your new Apéro site, the last step is to merge your `ape
     git merge --no-ff apero # creates a new commit for the merge
     ```
     
-    This step will sort of replace all of the files that both themes had in common with the `apero` version (e.g. **config.toml**, **netlify.toml**, **content/publication**), and leave the old Academic files alone. So you'll have to delete these extra Academic files ([again](#tidying-up-your-directory)!). I'm not sure how to avoid this -- maybe it's not an issue when you don't have merge conflicts? I don't know :thinking:
+    This step will sort of replace all of the files that both themes had in common with the `apero` version (e.g. **config.toml**, **netlify.toml**, **content/publication**), and leave the old Academic files alone. So you will have to delete these extra Academic files ([again](#tidying-up-your-directory)!). I'm not sure how to avoid this -- maybe it's not an issue when you don't have merge conflicts? I don't know :thinking:
     
 5. Tidy up your directory (again?)
 
@@ -591,7 +598,7 @@ Once you're happy with your new Apéro site, the last step is to merge your `ape
     
     Then run `blogdown::serve_site()` to build your new Apéro site locally. Go through the site and make sure everything looks the way it should and that links are generally pointing to the right places. 
     
-    When you're satisfied, commit the changes to your primary branch!<br>There may be *a lot* of files that were deleted and added during the switch to Apéro and, while not generally recommended, I used the `git add .` command to stage all of the changes at once and, commited the changes, and then pushed. This only after thoroughly looking through the list of changed files so I knew what was happening.
+    When you're satisfied, commit the changes to your primary branch!<br>There may be *a lot* of files that were deleted and added during the switch to Apéro and, while not generally recommended, I used the `git add .` command to stage all of the changes at once, commited the changes, and then pushed. I did this after thoroughly looking through the list of changed files so I knew what was happening.
 
 6. Wait a couple of minutes for the changes to get pushed to your primary branch (e.g. `main`) and then wait patiently for Netlify to build your site after the merge.
 
