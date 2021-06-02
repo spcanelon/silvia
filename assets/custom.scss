@@ -232,4 +232,12 @@ ul, ol {
   > li > p {
     font-size: 1em;
   }
+  ul, ol {
+    li {
+      font-size: 0.9em;
+    }
+  }
+  p, summary {
+    font-size: 1em;
+  }
 }
