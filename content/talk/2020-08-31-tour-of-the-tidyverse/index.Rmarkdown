@@ -20,7 +20,6 @@ abstract: Learn how to explore and manipulate data in R with packages from the T
 date_end: 2020-08-31T19:40:00
 all_day: no
 publishDate: '2020-09-01'
-authors: []
 featured: yes
 image: 
   caption: '[Antarctic Tour of the Tidyverse | R-Ladies Chicago](https://spcanelon.github.io/tour-of-the-tidyverse)'
