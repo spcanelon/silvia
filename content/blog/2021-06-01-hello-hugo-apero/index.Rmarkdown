@@ -584,7 +584,7 @@ Once you're happy with your new Apéro site, the last step is to merge your `ape
     git merge --no-ff apero # creates a new commit for the merge
     ```
     
-    This step will sort of replace all of the files that both themes had in common with the `apero` version (e.g. **config.toml**, **netlify.toml**, **content/publication**), and leave the old Academic files alone. So you'll have to delete these ([again](#tidying-up-your-directory)!). I'm not sure how to avoid this -- maybe it's not an issue when you don't have merge conflicts? I don't know :thinking:
+    This step will sort of replace all of the files that both themes had in common with the `apero` version (e.g. **config.toml**, **netlify.toml**, **content/publication**), and leave the old Academic files alone. So you'll have to delete these extra Academic files ([again](#tidying-up-your-directory)!). I'm not sure how to avoid this -- maybe it's not an issue when you don't have merge conflicts? I don't know :thinking:
     
 5. Tidy up your directory (again?)
 
