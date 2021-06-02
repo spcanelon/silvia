@@ -1,6 +1,5 @@
 ---
 title: Introducción al Paquete xaringan
-author: silvia
 date: 2020-12-17T18:00:00
 slug: 2020-12-17-introduccion-xaringan
 categories:

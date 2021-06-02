@@ -1,6 +1,5 @@
 ---
 title: "From Learn-R to Teach-R: An Expert Panel on Effective R Instruction"
-author: silvia
 date: 2021-02-18T18:00:00
 slug: 2021-02-18-r-teaching-panel
 categories:

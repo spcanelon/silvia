@@ -13,7 +13,7 @@ tags:
 event: R-Ladies Seattle Meetup
 event_url: https://www.meetup.com/rladies-seattle/events/276570832/
 location: Seattle, Washington, US (virtual)
-subtitle: Two R-Ladies Seattle package demonstrations showing how to make beautiful slides with xaringan and how to deploy them.
+subtitle: R-Ladies Seattle package demonstrations showing how to make beautiful slides with xaringan and how to deploy them.
 summary: R-Ladies Seattle package demonstrations showing how to make beautiful slides with xaringan and how to deploy them.
 abstract: ""
 date_end: 2021-03-16T18:30:00

@@ -1,6 +1,5 @@
 ---
 title: 'Sharing Your Work with xaringan: The Basics and Beyond'
-author: silvia
 date: 2020-11-03T15:00:00
 categories:
   - R
@@ -9,20 +8,13 @@ categories:
 tags:
   - xaringan
   - English
-subtitle: An introduction to xaringan for presentations, created for the [NHS-R Community](https://nhsrcommunity.com/about/)
-  [2020 Virtual Conference](https://nhsrcommunity.com/nhsr-conference-2020/)
-summary: An introduction to xaringan for presentations, created for the NHS-R Community 2020 Virtual Conference
+subtitle: An introduction to xaringan for presentations, created for the NHS-R Community 2020 Virtual Conference
+summary: An introduction to xaringan for presentations, created for the [NHS-R Community](https://nhsrcommunity.com/about/) [2020 Virtual Conference](https://nhsrcommunity.com/nhsr-conference-2020/)
 slug: 2020-11-03-xaringan-basics-and-beyond
 draft: no
 event: NHS-R Conference 2020
 event_url: https://www.eventbrite.co.uk/e/nhs-r-virtual-conference-2020-tickets-116861085653
 location: Online
-address:
-  street: ~
-  city: ~
-  region: ~
-  postcode: ~
-  country: ~
 abstract: This four-hour hands-on workshop will be a gentle introduction to the xaringan
   package as a tool to create impressive presentation slides that can be deployed
   to the web for easy sharing. <br/><br/>Day 1 (Nov. 3, 3-5pm BST) will cover the
