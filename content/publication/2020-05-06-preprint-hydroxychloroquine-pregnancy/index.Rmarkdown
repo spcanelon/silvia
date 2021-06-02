@@ -10,7 +10,7 @@ tags:
   - medications
   - pregnancy
   - English
-authors: "Lena M. Davidson, Silvia P. Canelón, Mary Regina Boland"
+author: "Lena M. Davidson, Silvia P. Canelón, Mary Regina Boland"
 doi:
 publishDate: '2020-05-08T20:26:47-04:00'
 publication_types:
