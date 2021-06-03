@@ -7,6 +7,8 @@ author: "Silvia Canelón"
 draft: false
 tags:
   - useR
+  - tidyverse
+  - R
 categories:
   - R
 # layout options: single or single-sidebar

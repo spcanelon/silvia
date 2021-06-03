@@ -6,6 +6,7 @@ date: '2021-06-01'
 slug: hello-hugo-apero
 categories:
   - R
+  - Website
   - Tutorial
 tags:
   - R

@@ -5,12 +5,14 @@ date: 2021-05-04T10:20:00
 slug: 2021-05-04-data-viz-accessibility
 categories:
   - R
+  - Education
 tags:
   - TidyTuesday
-  - Accessibility
-  - a11y
-  - Data Viz
-  - English
+  - TidyTuesdayAltText
+  - rtweet
+  - RSelenium
+  - accessibility
+  - R
 event: "csv,conf,v6"
 event_url: https://www.eventbrite.com/e/csvconfv6-tickets-144250211265
 location: Virtual
@@ -26,7 +28,7 @@ image:
   focal_point: center
   preview_only: no
 projects:
-  - TidyTuesday
+  - TidyTuesdayAltText
 links:
 - icon: calendar-check
   icon_pack: fas

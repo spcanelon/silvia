@@ -4,11 +4,11 @@ date: 2021-03-16T17:30:00
 slug: 2021-03-16-xaringan-deploy-demo
 categories:
   - R
+  - Education
   - Demo
-  - Teaching
 tags:
+  - R
   - R-Ladies
-  - English
   - xaringan
 event: R-Ladies Seattle Meetup
 event_url: https://www.meetup.com/rladies-seattle/events/276570832/

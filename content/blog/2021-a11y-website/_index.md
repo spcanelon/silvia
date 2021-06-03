@@ -3,7 +3,7 @@ title: Auditing for Web Accessibility
 description: |
   An accessibility/a11y series.
 author: Silvia Canelón
-show_post_thumbnail: false
+show_post_thumbnail: true
 show_author_byline: false
 show_post_date: true
 # for series listing page layout
@@ -38,12 +38,13 @@ cascade:
     text_series_label: "In this series" 
     text_contents_label: "On this page" 
   tags:
-  - hugo
+  - R
+  - Hugo
   - blogdown
   - accessibility
-  - a11y
   categories:
-  - Teaching
+  - Website
+  - Education
 ---
 
 ** No content below YAML for the series _index. This file is a leaf bundle, and provides settings for the listing page layout and sidebar content.**

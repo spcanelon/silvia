@@ -7,6 +7,9 @@ author: "Silvia Canelón"
 draft: false
 tags:
   - TidyTuesday
+  - TidyTuesdayAltText
+  - accessibility
+  - R
 categories:
   - R
   - Package

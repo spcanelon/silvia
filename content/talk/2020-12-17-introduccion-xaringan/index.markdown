@@ -4,12 +4,13 @@ date: 2020-12-17T18:00:00
 slug: 2020-12-17-introduccion-xaringan
 categories:
   - R
-  - xaringan
-  - Tutorial
-  - Teaching
+  - Workshop
+  - Education
 tags:
+  - R
   - R-Ladies
   - Español
+  - xaringan
 event: R-Ladies Xalapa Meetup
 event_url: https://www.meetup.com/rladies-xalapa/events/274906676/
 location: Xalapa, Veracruz, México (virtual)

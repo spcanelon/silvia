@@ -5,12 +5,14 @@ date: 2021-05-04T10:20:00
 slug: 2021-05-04-data-viz-accessibility
 categories:
   - R
+  - Education
 tags:
   - TidyTuesday
-  - Accessibility
-  - a11y
-  - Data Viz
-  - English
+  - TidyTuesdayAltText
+  - rtweet
+  - RSelenium
+  - accessibility
+  - R
 event: "csv,conf,v6"
 event_url: https://www.eventbrite.com/e/csvconfv6-tickets-144250211265
 location: Virtual
@@ -26,7 +28,7 @@ image:
   focal_point: center
   preview_only: no
 projects:
-  - TidyTuesday
+  - TidyTuesdayAltText
 links:
 - icon: calendar-check
   icon_pack: fas
@@ -54,16 +56,11 @@ links:
   url: https://github.com/spcanelon/TidyTuesdayAltText
 ---
 
-<<<<<<< HEAD:content/talk/2021-05-04-data-viz-accessibility/index.markdown
 <script src="{{< blogdown/postref >}}index_files/fitvids/fitvids.min.js"></script>
 
 Presented with [Liz Hare, PhD](https://www.twitter.com/DogGeneticsLLC) from Dog Genetics, LLC
 
 ## Abstract
-=======
-<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
-<script src="{{< blogdown/postref >}}index_files/fitvids/fitvids.min.js"></script>
->>>>>>> main:content/talk/2021-05-04-data-viz-accessibility/index.html
 
 We all aim to use data to tell a compelling story, and many of us enjoy sharing how we got there by open-sourcing our code, but we don’t always share our story with everyone. Even kind, supportive, and open communities like the \#TidyTuesday R learning community on Twitter has a ways to go before the content shared can be accessible to everyone.<br><br>Lived experiences of blind R users tell us that most data visualizations shared for TidyTuesday are inaccessible to screen reading technology because they lack alternative text (i.e. alt text) descriptions. Our goal was to bring this hidden lack of accessibility to the surface by examining the alternative text accompanying data visualizations shared as part of the TidyTuesday social project.<br><br>We scraped the alternative text from 6,443 TidyTuesday images posted on Twitter between April 2, 2018 and January 31, 2021. The first image attached to each tweet was considered the primary image and was scraped for alternative text. Manual web inspection revealed the CSS class and HTML element corresponding to the primary image, as well as the attribute containing the alternative text. We used this information and the ROpenSci {RSelenium} package to scrape the alternative text. Our preliminary analysis found that only 2.4% of the images contained a text description entered by the tweet author compared to 84% which were described by default as ‘Image.’<br><br>This small group of intentional alternative text descriptions had a median word count of 18 (range: 1-170), and a median character count of 83 (range: 8-788). As a reference point, Twitter allows 240 characters in a single tweet and 1,000 characters for image descriptions. This analysis was made possible thanks to a dataset of historical TidyTuesday tweet data collected using the ROpenSci {rtweet} package, and openly available in the [TidyTuesday GitHub repository](https://github.com/rfordatascience/tidytuesday).<br><br>The conference takes place May 4-5, 2021.
 

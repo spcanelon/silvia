@@ -4,13 +4,12 @@ date: 2020-08-31T17:40:00
 slug: 2020-08-31-tour-of-the-tidyverse
 categories:
   - R
-  - Teaching
+  - Education
   - Tutorial
-  - tidyverse
 tags:
   - R-Ladies
   - tidyverse
-  - English
+  - R
 event: R-Ladies Chicago Meetup
 event_url: https://www.meetup.com/rladies-chicago/events/272755101/
 location: Chicago, IL, USA (virtual)

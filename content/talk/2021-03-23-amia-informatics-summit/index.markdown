@@ -9,7 +9,6 @@ tags:
   - EHR
   - pregnancy
   - sickle cell disease
-  - English
   - AMIA
 event: AMIA 2021 Informatics Summit
 event_url: https://www.amia.org/summit2021
