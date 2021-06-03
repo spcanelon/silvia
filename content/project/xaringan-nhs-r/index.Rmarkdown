@@ -7,10 +7,11 @@ author: "Silvia Canelón"
 featured: true
 draft: false
 tags:
-- xaringan
+  - xaringan
+  - R
 categories:
-- R
-- Teaching
+  - R
+  - Education
 # layout options: single or single-sidebar
 layout: single
 links:

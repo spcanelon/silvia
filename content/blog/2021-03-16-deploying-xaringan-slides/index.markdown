@@ -50,26 +50,25 @@ links:
 # Choose your own adventure
 
 -   **Option 1:** Keep reading to make a xaringan slide deck from scratch!
+-   **Option 2:** Start with an R-Ladies themed xaringan template (see below)
 
--   **Option 2:** Start with an R-Ladies themed xaringan template
+I made an [R-Ladies themed xaringan template](https://spcanelon.github.io/RLadies-xaringan-template) to use as a teaching tool and you are welcome to use/modify it to suit your needs! You can download the files to your machine 👇 and then skip down to [Initialize version control with git](#initialize-version-control-with-git)
 
-    I made an [R-Ladies themed xaringan template](https://spcanelon.github.io/RLadies-xaringan-template) to use as a teaching tool and you are welcome to use/modify it to suit your needs! You can download the files to your machine 👇 and then skip down to [Initialize version control with git](#initialize-version-control-with-git)
+``` r
+usethis::use_course(
+  repo_spec = "spcanelon/RLadies-xaringan-template",
+  destdir = "filepath/for/your/presentation"
+  )
+```
 
-    ``` r
-    usethis::use_course(
-      repo_spec = "spcanelon/RLadies-xaringan-template",
-      destdir = "filepath/for/your/presentation"
-      )
-    ```
+> Note: After copying the files to your machine you’ll probably want to rename the file folder to whatever makes sense for your presentation.
 
-    > Note: After copying the files to your machine you’ll probably want to rename the file folder to whatever makes sense for your presentation.
+<div class="shareagain" style="min-width:300px;margin:1em auto;">
+<iframe src="https://spcanelon.github.io/RLadies-xaringan-template" width="400" height="300" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
+<script>fitvids('.shareagain', {players: 'iframe'});</script>
+</div>
 
-    <div class="shareagain" style="min-width:300px;margin:1em auto;">
-    <iframe src="https://spcanelon.github.io/RLadies-xaringan-template" width="400" height="300" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
-    <script>fitvids('.shareagain', {players: 'iframe'});</script>
-    </div>
-
-    > Try navigating through the slides ☝️ with your left/right arrow keys and press the letter “P” on your keyboard to see some notes in Presenter View
+> Try navigating through the slides ☝️ with your left/right arrow keys and press the letter “P” on your keyboard to see some notes in Presenter View
 
 # The Ten-Step Workflow
 

@@ -6,8 +6,9 @@ slug: ccd-sips
 categories:
   - R
 tags:
-  - mapping
-  - Leaflet
+  - R
+  - maps
+  - leaflet
   - RSelenium
 subtitle: 'An interactive map showing restaurants participating in Philly’s Center City District Sips 2019.'
 summary: 'An interactive map showing restaurants participating in Philly’s Center City District Sips 2019.'

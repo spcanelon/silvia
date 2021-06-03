@@ -4,10 +4,10 @@ date: 2021-02-18T18:00:00
 slug: 2021-02-18-r-teaching-panel
 categories:
   - R
-  - Teaching
+  - Education
 tags:
   - R-Ladies
-  - English
+  - R
 event: R-Ladies Philly Meetup
 event_url: https://www.meetup.com/rladies-philly/events/275334017/
 location: Philadelphia, Pennsylvania, US (virtual)
