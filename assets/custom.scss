@@ -193,6 +193,7 @@ a[href*="http"] {
 .post-body,
 .page-body {
   
+  blockquote > p > code,// code within blockquote paragraphs
   .panelset * p > code, // code within panelset paragraphs
   > p > code,           // code within paragraphs
   li > code,            // level 1 list item 
