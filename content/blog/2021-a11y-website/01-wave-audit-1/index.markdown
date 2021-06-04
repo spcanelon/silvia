@@ -22,13 +22,13 @@ This finding is one of many from an accessibility analysis that non-profit WebAI
 
 Learning about all of the ways that digital content is made inaccessible to people with disabilities has made me take inventory of the different ways that I have contributed to this problem (there was some shame to process here :see_no_evil:). 
 
-The magic of [R Markdown](https://bookdown.org/yihui/rmarkdown/) has given me the gift of turning R code into a variety of HTML outputs including R notebooks, [xaringan presentation slides](http://localhost:4321/project/xaringan-nhs-r/), and websites like this one -- all of which I've been able to share freely online with others. This magic though (like all magic?) comes with limitations. R tools (and technology more broadly) can't automatically ensure that its various outputs are accessible to everyone. That's where we come in as software developers and content creators and take personal responsibility. At the risk of extending this metaphor too far, I'll finish by offering the framework that we all need to practice (accessibility) spells/skills in order to use these magical tools responsibly.
+The magic of [R Markdown](https://bookdown.org/yihui/rmarkdown/) has given me the gift of turning R code into a variety of HTML outputs including R notebooks, [xaringan presentation slides](/project/xaringan-nhs-r/), and websites like this one -- all of which I've been able to share freely online with others. This magic though (like all magic?) comes with limitations. R tools (and technology more broadly) can't automatically ensure that its various outputs are accessible to everyone. That's where we come in as software developers and content creators and take personal responsibility. At the risk of extending this metaphor too far, I'll finish by offering the framework that we all need to practice (accessibility) spells/skills in order to use these magical tools responsibly.
 
 All of this to say that gaining awareness about accessibility as a way to create the more inclusive world that I want to live in has motivated me to do better. I even found myself excited to conduct accessibility audits on my digital content, including my personal website ([data viz](https://chartability.fizz.studio/) too)! 
 
 ### My audit results
 
-I'm relied on WebAIM's [Web Accessibility Evaluation Tool (WAVE)](https://wave.webaim.org/) to help me get started. I installed the [Firefox extension](https://wave.webaim.org/extension/) to conduct my audit. Here's what I found at a high level, and each section of the post contains an itemized list of failures for the page along with a screenshot:
+I relied on WebAIM's [Web Accessibility Evaluation Tool (WAVE)](https://wave.webaim.org/) to help me get started. I installed the [Firefox extension](https://wave.webaim.org/extension/) to conduct my audit. Here's what I found at a high level, and each section of the post contains an itemized list of failures for the page along with a screenshot:
 
 - Most errors corresponded with missing alt-text for any images that are used to decorate page sidebars or populate thumbnails
 
@@ -60,7 +60,7 @@ It just means it's more accessible than when I began. There are numerous accessi
 
 ## Home page
 
-Link: https://silvia.rbind.io/
+Link: [https://silvia.rbind.io/](/)
 
 Audit results:
 - 1 error
@@ -77,7 +77,7 @@ Audit results:
 
 ## About page
 
-Link: https://silvia.rbind.io/about/
+Link: [https://silvia.rbind.io/about/](/about/)
 
 Audit results:
 
@@ -110,7 +110,7 @@ Audit results:
 
 ## Blog page
 
-Link: https://silvia.rbind.io/blog/
+Link: [https://silvia.rbind.io/blog/](/blog/)
 
 Audit results:
 
@@ -128,7 +128,7 @@ Audit results:
 
 ### Blog example
 
-Link: https://silvia.rbind.io/blog/hello-hugo-apero/
+Link: [https://silvia.rbind.io/blog/hello-hugo-apero/](/blog/hello-hugo-apero/)
 
 Audit results:
 
@@ -150,7 +150,7 @@ Audit results:
 
 ## Talk page
 
-Link: https://silvia.rbind.io/talk/
+Link: [https://silvia.rbind.io/talk/](/talk/)
 
 Audit results:
 
@@ -177,7 +177,7 @@ Audit results:
 
 ### Talk example
 
-Link: https://silvia.rbind.io/talk/2021-05-04-data-viz-accessibility/
+Link: [https://silvia.rbind.io/talk/2021-05-04-data-viz-accessibility/](/talk/2021-05-04-data-viz-accessibility/)
 
 Audit results:
 
@@ -194,7 +194,7 @@ Audit results:
 
 ## Publication page
 
-Link: https://silvia.rbind.io/publication/
+Link: [https://silvia.rbind.io/publication/](/publication/)
 
 Audit results:
 
@@ -218,7 +218,7 @@ Audit results:
 
 ### Publication example
 
-Link: https://silvia.rbind.io/publication/geospatial-analysis-pregnancy-outcomes/
+Link: [https://silvia.rbind.io/publication/geospatial-analysis-pregnancy-outcomes/](/publication/geospatial-analysis-pregnancy-outcomes/)
 
 Audit results:
 
@@ -235,7 +235,7 @@ Audit results:
 
 ## Project page
 
-Link: https://silvia.rbind.io/project/
+Link: [https://silvia.rbind.io/project/](/project/)
 
 Audit results:
 
@@ -251,7 +251,7 @@ Audit results:
 
 ### Project example
 
-Link: https://silvia.rbind.io/project/tidy-tuesday-alt-text/
+Link: [https://silvia.rbind.io/project/tidy-tuesday-alt-text/](/project/tidy-tuesday-alt-text/)
 
 Audit results:
 
