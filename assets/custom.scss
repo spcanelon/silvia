@@ -204,6 +204,14 @@ a[href*="http"] {
     border-color: #b9c680;// 728e00 b9c680 ebebeb
   }
   
+  // code inside links
+  a > code {
+    @extend .f6, .pa1, .ba, .bw1, .br0;
+    color: #415200;     // 415200 434f54
+    background-color: none; // DCE3C0 EEF1E0
+    border: none;  // 728e00 b9c680 ebebeb
+  }
+  
 }
 
 // wrap code chunks
