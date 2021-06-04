@@ -33,10 +33,30 @@ links:
     url: https://github.com/spcanelon/silvia/blob/master/assets/scss/custom.scss
 ---
 
-# Where I started
-With Alison Hill's [Up and Running with Blogdown](https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/) post! **Super helpful**, though because I came to it 2.5 years late, it was more like 'up and running with lots of water breaks' because I had to stop and account for changes made to the Hugo Academic theme in the meantime. 
+<style>.color-preview {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  margin: 0 0.33em;
+  vertical-align: middle;
+  transition: transform 100ms ease-in-out;
+}
+.color-preview:hover {
+  cursor: pointer;
+  transform: scale(2);
+  transform-origin: 50% 50%;
+}</style>
 
-- For example, prior to Academic version 4.6, custom CSS was added using the `plugins_css` option in `params.toml`, but [in current version 4.8](https://sourcethemes.com/academic/docs/customization/#customize-style-css), the theme supports SCSS (a superset of CSS) and a `custom.scss` file is added in the `assets/scss/` folder. 
+
+
+<!--`<span class="color-preview" style="background-color: 414073"></span><code>414073</code>`{=html}
+<span class="color-preview" style="background-color: #414073"></span><code>#414073</code>-->
+
+# Where I started
+With Alison Hill's [Up and Running with Blogdown](https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/) post! **Super helpful**, though because I came to it 2.5 years late, it was more like 'up and running with lots of water breaks' because I had to stop and account for changes made to the Hugo Academic theme in the meantime.
+
+- For example, prior to Academic version 4.6, custom CSS was added using the `plugins_css` option in `params.toml`, but [in current version 4.8](https://sourcethemes.com/academic/docs/customization/#customize-style-css), the theme supports SCSS (a superset of CSS) and a **custom.scss** file is added in the `assets/scss/` folder. 
 
 The [going futher](https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/#going-further) section in Alison's post specifically talks about customizing the out-of-the-box theme and Alison directly links to her custom CSS file, which I closely referred to when changing colors in [my custom SCSS file](https://github.com/spcanelon/silvia/blob/master/assets/scss/custom.scss).
 
@@ -45,7 +65,7 @@ Alison's CSS helped me customize everything from text colors and fonts to alert 
 <img src="img/academic-minimal-dark-theme.png" title="Out-of-the-box colors included an eggplant page background with a light purple foreground. The issue I perceived was that these colors clashed with the navy blue and gold color changes I had made and was happy with in the light mode. I particularly was bothered by a cyan color highlight for code text" alt="Out-of-the-box colors included an eggplant page background with a light purple foreground. The issue I perceived was that these colors clashed with the navy blue and gold color changes I had made and was happy with in the light mode. I particularly was bothered by a cyan color highlight for code text" width="50%" style="display: block; margin: auto;" />
 
 
-So I decided not to enable the dark-mode option in `params.toml` until I could figure out how to customize my stylesheet accordingly. That time has come because it turns out [it's pretty straightforward](https://github.com/gcushen/hugo-academic/issues/988#issuecomment-475896178)! 
+So I decided not to enable the dark-mode option in **params.toml** until I could figure out how to customize my stylesheet accordingly. That time has come because it turns out [it's pretty straightforward](https://github.com/gcushen/hugo-academic/issues/988#issuecomment-475896178)! 
 
 The [Blogdown book](https://bookdown.org/yihui/blogdown/css.html) does an excellent job summarizing what you need to know about CSS. This post builds on that a little by incorporating [features made possible by SCSS](https://sass-lang.com/guide) including **variables**. 
 
@@ -68,8 +88,7 @@ The [Blogdown book](https://bookdown.org/yihui/blogdown/css.html) does an excell
 
 Looking through GitHub issues I found that including two sub-themes, one for light mode and one for dark mode, [may be considered for Academic in the future but is not a priority](https://github.com/gcushen/hugo-academic/issues/995). A related issue shared that if you use a custom CSS, you can [define `.dark .<SELECTOR-NAME> {...}` for dark mode](https://github.com/gcushen/hugo-academic/issues/988).
 
-Not knowing what all of the options were for dark mode, I took a look at the `dark.scss` dark mode stylesheet built in to Academic in `themes/hugo-academic/assets/scss/academic/` folder. You can see the `pigments` package in action here! It makes it easier to identify elements with colors that you want to change. I'm looking at you inline code text color 
-<html><span style="background-color:#44475a; color:rgb(139, 233, 253)">rgb(139, 233, 253) </span><span>.</span></html> 
+Not knowing what all of the options were for dark mode, I took a look at the **dark.scss** dark mode stylesheet built in to Academic in `themes/hugo-academic/assets/scss/academic/` folder. You can see the `pigments` package in action here! It makes it easier to identify elements with colors that you want to change. I'm looking at you inline code text color <code>rgb(139, 233, 253)</code><span class="color-preview" style="background-color: rgb(139, 233, 253)"></span>
 
 <details><summary>CSS code</summary>
 Note that in SCSS syntax `//` indicates comments and `#` indicates hex codes
@@ -85,11 +104,11 @@ Note that in SCSS syntax `//` indicates comments and `#` indicates hex codes
 
 <img src="img/atom-inline-text-color.png" title="CSS code chunk styling inline code. The Atom editor enables viewers to see the color that hex and rgb color codes correspond to, as the background of the color code text. This screenshot demonstrates that the inline code text color was cyan and the inline code background was light purple." alt="CSS code chunk styling inline code. The Atom editor enables viewers to see the color that hex and rgb color codes correspond to, as the background of the color code text. This screenshot demonstrates that the inline code text color was cyan and the inline code background was light purple." width="726" style="display: block; margin: auto;" />
 
-Another way to find the css for the element you want to change is to use your browser's web inspector tool. In the screenshot below from Hugo Academic's [customization documentation]() I right-clicked on `themes/academic/data/themes/minimal.toml` and then clicked on "inspect element". The element code was `.dark pre, .dark code` which you might recognize from the code in `dark.scss`. 
+Another way to find the css for the element you want to change is to use your browser's web inspector tool. In the screenshot below from Hugo Academic's [customization documentation (available in the Internet Archive)](https://web.archive.org/web/20200512194921/https://sourcethemes.com/academic/docs/customization/) I right-clicked on **themes/academic/data/themes/minimal.toml** and then clicked on "inspect element". The element code was `.dark pre, .dark code` which you might recognize from the code in **dark.scss**. 
 
 <img src="img/web-element-inspector.png" title="A view of the Firefox web inspector inspecting some inline code available on the Hugo Academic documentation site which used the out-of-the-box dark mode colors. The inspector reveals that the selected text was styled by the CSS code chunk included earlier and includes color previews so you can visually identify elements by color." alt="A view of the Firefox web inspector inspecting some inline code available on the Hugo Academic documentation site which used the out-of-the-box dark mode colors. The inspector reveals that the selected text was styled by the CSS code chunk included earlier and includes color previews so you can visually identify elements by color." width="1006" style="display: block; margin: auto;" />
 
-You can copy and paste this new `.dark` theme code a new (or existing) `custom.scss` file saved in the `assets/scss/` folder of your directory to start seeing how changes you make affect the look of your site.
+You can copy and paste this new `.dark` theme code into a new (or existing) **custom.scss** file saved in the `assets/scss/` folder of your directory to start seeing how changes you make affect the look of your site.
 
 # Choosing dark theme colors
 
@@ -108,42 +127,18 @@ The bulk of what I learned came from the extensive Material Design resources, in
 
 ## Basics of dark theme design
 
-- The primary **surface color** for dark themes should be dark gray, rather than black. The recommended color is #121212
-<html><svg width="11" height="11"> 
-<rect width="11" height="11" style="fill:#121212;stroke-width:2;stroke:#F8F8F8" />
-</svg><span>.</span></html>
+- The primary **surface color** for dark themes should be dark gray, rather than black. The recommended color is <code>#121212</code><span class="color-preview" style="background-color: #121212"></span>
 
 - As you layer components, surfaces with a higher elevation (closer to the hypothetical 'light source') should be lighter than those below it to create a visual hierarchy. This can be achieved by applying a semi-transparent white overlay to the primary dark gray surface. 
 
 <img src="img/material-surface-overlays.png" title="Ten different dark mode overlay examples from Material Design. The darkest/base layer contains 0% white overlay, elevation level 01 has 5% of a white overlay, level 02 has 7%, level 04 has 8%, level 05 has 9%, level 06 has 11%, level 08 has 12%, level 12 has 14%, level 16 has 15%, and level 24 has 16%" alt="Ten different dark mode overlay examples from Material Design. The darkest/base layer contains 0% white overlay, elevation level 01 has 5% of a white overlay, level 02 has 7%, level 04 has 8%, level 05 has 9%, level 06 has 11%, level 08 has 12%, level 12 has 14%, level 16 has 15%, and level 24 has 16%" width="524" style="display: block; margin: auto;" />
 
 
-- The primary **text color** for dark themes should not be 100% opaque white (i.e. #FFFFFF 
-  <html><svg width="11" height="11">
-  <rect width="11" height="11"
-  style="fill:#FFFFFF;stroke-width:3;stroke:#000000" />
-  </svg>
-  </html>
-) because it can appear to bleed or blur against dark backgrounds and be difficult to read. 
+- The primary **text color** for dark themes should not be 100% opaque white (i.e. <code>#FFFFFF</code><span class="color-preview" style="background-color: #FFFFFF; border: 2px solid gray;"></span>) because it can appear to bleed or blur against dark backgrounds and be difficult to read. 
 - Text hierarchy is established by controlling the opacity, for example: 
-  - High emphasis text is white with 87% opacity 
-    <html><svg width="11" height="11"> 
-    <rect width="11" height="11" 
-    style="fill:rgba(255, 255, 255, 0.87);
-    stroke-width:3;stroke:#000000" />
-  </svg></html>
-  - Medium emphasis is white with 60% opacity
-    <html><svg width="11" height="11"> 
-    <rect width="11" height="11" 
-    style="fill:rgba(255, 255, 255, 0.60);
-    stroke-width:3;stroke:#000000" />
-    </svg></html>
-  - Disabled text is white with 38% opacity
-    <html><svg width="11" height="11"> 
-    <rect width="11" height="11" 
-    style="fill:rgba(255, 255, 255, 0.38);
-    stroke-width:3;stroke:#000000" />
-    </svg></html>
+  - High emphasis text is white with 87% opacity:<br><code>rgba(255, 255, 255, 0.87)</code><span class="color-preview" style="background-color: rgba(255, 255, 255, 0.87); border: 2px solid gray;"></span>
+  - Medium emphasis is white with 60% opacity:<br><code>rgba(255, 255, 255, 0.60)</code><span class="color-preview" style="background-color: rgba(255, 255, 255, 0.60); border: 2px solid gray;"></span>
+  - Disabled text is white with 38% opacity:<br><code>rgba(255, 255, 255, 0.38)</code><span class="color-preview" style="background-color: rgba(255, 255, 255, 0.38); border: 2px solid gray;"></span>
 
 - To meet WCAG AA standard, there must be a 4.5:1 contrast level between the body text and the dark theme surface at the highest/lightest elevation. The contrast level is 7:1 for the WCAG AAA standard.
   
@@ -165,7 +160,7 @@ I defined my primary colors and variants, text colors, and various background co
 
 > I controlled white text opacity by using `rgba()` in CSS which accepts an alpha value between 0 and 1.
 
-Now, ideally I'd be able to define the result of this `mix()` as a color variable, but some CSS properties like `background-color` don't recognize it. So I had to convert the result to a color code and define that as a variable instead. `Pigments` made this conversion easy when I toggled the menu (Shift+Command+P on a Mac) and searched for the `Pigments: Convert` options.
+Now, ideally I'd be able to define the result of this `mix()` as a color variable, but some CSS properties like `background-color` don't recognize it. So I had to convert the result to a color code and define that as a variable instead. `pigments` made this conversion easy when I toggled the menu (Shift+Command+P on a Mac) and searched for the `pigments: convert` options.
 
 <img src="img/atom-pigments-menu.png" title="The command palette in the Atom editor lets you search for packages and functions. When you type &quot;pigments: convert&quot; you can see the options like &quot;Pigments: Convert To Hex&quot;, &quot;Pigments: Convert to Rgba&quot;, etc." alt="The command palette in the Atom editor lets you search for packages and functions. When you type &quot;pigments: convert&quot; you can see the options like &quot;Pigments: Convert To Hex&quot;, &quot;Pigments: Convert to Rgba&quot;, etc." width="1010" style="display: block; margin: auto;" />
 
