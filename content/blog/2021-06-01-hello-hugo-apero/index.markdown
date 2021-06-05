@@ -155,37 +155,30 @@ And then run `blogdown::serve_site()` to render a live preview of your site :roc
 
 > <i class='fas fa-code-branch pr2'></i> Follow along with me at [commit cc5d24](https://github.com/spcanelon/silvia/commit/cc5d24d93676990675abc52145fd7a369c7bffa6)
 
-The first step is to add all of the Hugo Apéro theme files to the `theme/` folder in your site directory. You could manually download the zip file from https://github.com/hugo-apero/hugo-apero or you could ask `usethis` to do it for you:
+The first step is to install all of the Hugo Apéro theme files to the `theme/` folder in your site directory:
 
 
 ```r
-usethis::use_course(
-  "hugo-apero/hugo-apero", 
-  destdir = "/Users/silvia/Documents/Website/silvia/themes"
-)
+blogdown::install_theme(theme = "hugo-apero/hugo-apero",
+                        update_config = FALSE, 
+                        force = TRUE)
 ```
 
 <details><summary>Console output</summary>
 
 
 ```r
-✓ Downloading from 'https://github.com/hugo-apero/hugo-apero/zipball/HEAD'Downloaded: 21.23 MB  
-✓ Download stored in '/Users/silvia/Documents/Website/silvia/themes/hugo-apero-hugo-apero-05497e6.zip'
-✓ Unpacking ZIP file into 'hugo-apero-hugo-apero-05497e6/' (429 files extracted)Shall we delete the ZIP file ('hugo-apero-hugo-apero-05497e6.zip')?
+trying URL 'https://github.com/hugo-apero/hugo-apero/archive/main.tar.gz'
+downloaded 21.4 MB
+
+Do not forget to change the 'theme' option in 'config.toml' to "hugo-apero"
+Warning message:
+The theme has provided an example site. You should read the theme's documentation and at least take a look at the config file config.toml (or .yaml) of the example site, because not all Hugo themes work with any config files. 
 ```
 
 </details>
 
-This step will create and open a new project for you, which you don't want or need:
-
-1. Close the new project that gets automatically opened
-2. Rename the theme folder to `hugo-apero`
-3. Delete the following files/folders: 
-    - **hugo-apero.Rproj**
-    - `.Rproj.user/`
-    - **.Rhistory**
-
-Modify the **config.toml** file so it points to your new theme folder instead of `hugo-academic`
+As indicated in console output, modify the **config.toml** file so it points to your new theme folder instead of `hugo-academic`:
 
 ```toml
 #theme = "hugo-academic"
