@@ -11,7 +11,7 @@ title: "Accessibility commitment"
 linktitle: ""
 ---
 
-Travel back to the [homepage](https://silvia.rbind.io) or [about page](/about/).
+Travel back to the [home page](https://silvia.rbind.io), [about page](/about/), or [a11y series of blog posts](https://silvia.rbind.io/blog/2021-a11y-website/).
 
 ## Feedback
 
@@ -36,3 +36,4 @@ In addition, I'll document the failures and any corrective actions as issues in 
 ## Work related to accessibility
 
 - Talk: [Revealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community](/talk/2021-05-04-data-viz-accessibility/)
+- Blog series: [Auditing for Web Accessibility](https://silvia.rbind.io/blog/2021-a11y-website/)
