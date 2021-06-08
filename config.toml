@@ -146,17 +146,17 @@ enableEmoji = true
     weight = 1
   [[menu.header]]
     name = "Blog"
-    title = "Blog"
+    title = "Meeting People Where They R"
     url = "/blog/"
     weight = 2
   [[menu.header]]
     name = "Talks"
-    title = "Talks"
+    title = "Invited Talks"
     url = "/talk/"
     weight = 3
   [[menu.header]]
     name = "Publications"
-    title = "Publications"
+    title = "Research Publications"
     url = "/publication/"
     weight = 4
  [[menu.header]]
@@ -177,22 +177,22 @@ enableEmoji = true
   # Configure footer  
   [[menu.footer]]
     name = "License"
-    title = "License"
+    title = "License Details"
     url = "/license/"
     weight = 3
   [[menu.footer]]
     name = "Contact"
-    title = "Contact form"
+    title = "Contact Form"
     url = "/contact/"
     weight = 2
   [[menu.footer]]
     name = "Accessibility"
-    title = "Accessibility commitment"
+    title = "Accessibility Commitment"
     url = "/accessibility/"
     weight = 1
   [[menu.footer]]
     name = "RSS"
-    title = "RSS"
+    title = "Subscribe via RSS"
     url = "/blog/index.xml/"
     weight = 5
   #[[menu.footer]]
