@@ -1,0 +1,36 @@
+---
+title: "Enseñar Tecnología en Comunidad"
+subtitle: 'Traducción colaborativa al castellano del libro “Teaching Tech Together. How to create and deliver lessons that work and build a teaching community around them" de Greg Wilson'
+excerpt: 'Traducción colaborativa al castellano del libro "[Teaching Tech Together](https://teachtogether.tech/). How to create and deliver lessons that work and build a teaching community around them" de Greg Wilson'
+date: 2020-12-28
+author: "Silvia Canelón"
+featured: true
+draft: false
+tags:
+categories:
+  - Education
+  - Castellano
+# layout options: single or single-sidebar
+layout: single
+links:
+- icon: book
+  icon_pack: fas
+  name: Libro en castellano
+  url: https://teachtogether.tech/es/index.html
+- icon: github
+  icon_pack: fab
+  name: código
+  url: https://github.com/gvwilson/teachtogether.tech/tree/master/es#orientaciones-para-la-traducci%C3%B3n-
+- icon: book
+  icon_pack: fas
+  name: Libro en ingles
+  url: https://teachtogether.tech/en/index.html
+---
+
+## Enseñar Tecnología en Comunidad. Cómo crear lecciones que funcionen y construir una comunidad docente alrededor <a href='https://github.com/gvwilson/teachtogether.tech/tree/master/es#orientaciones-para-la-traducci%C3%B3n-'><img src='featured-hex.png' align="right" height="200" alt='Etiqueta hexagonal ("hex sticker") para el proyecto titulado "Enseñar Tecnología en Comunidad." Las palabras parecen parte de un mapa conceptual y hay manos diferentes apuntando hacia ellas.'/></a>
+
+Este proyecto llevó acabo la traducción al castellano del libro [Teaching Tech Together](https://teachtogether.tech/) escrito por [Greg Wilson](https://www.twitter.com/gvwilson). El proyecto fue coordinado por mi amiga y colega [Yanina Bellini Saibene](https://twitter.com/yabellini).
+
+Yo participé como traductora del capítulo "Motivation and Demotivation" y revisora del capítulo "Expertise and Memory."
+
+> Septiembre de 2020 – Diciembre de 2020. Traducción colaborativa al castellano del libro “Teaching Tech Together. How to create and deliver lessons that work and build a teaching community around them” de Greg Wilson (2019, Taylor & Francis, ISBN 978-0-367-35328-5, https://teachtogether.tech/). Coordinación general de la traducción: Yanina Bellini Saibene; Edición general: Yanina Bellini Saibene y Natalia Morandeira. Participación como traductora y revisora de capítulos. Más información y grupo de traductoras: https://github.com/gvwilson/teachtogether.tech/blob/master/es/README.md
