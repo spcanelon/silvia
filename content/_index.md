@@ -4,6 +4,7 @@ subtitle: "Postdoctoral Research Scientist at the University of Pennsylvania"
 description: "I am a researcher, community organizer, and R educator. My research leverages electronic health record data to study pregnancy-related outcomes, and  my organizing values data literacy as a way to build power and effect change."
 images:
   - img/Lake_Pink_lowExp_wide.jpg
+image_alt_text: "Photo of a lake with water reflecting a bright blue sky and nestled among lush trees"
 image_left: false
 text_align_left: false
 show_social_links: true # specify social accounts in site config
