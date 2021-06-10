@@ -7,7 +7,7 @@
 {{ range $grouped }}
   {{ $section := $.Site.GetPage "section" .Key }}
   {{ with $section }}
-    <h5 class="f4 fw7 tracked ttu lh-title mb0 bt pv3"><a href="{{ .RelPermalink }}" class="dim no-underline">{{ .Title }}</a></h5>
+    <h3 class="f4 fw7 tracked ttu lh-title mb0 bt pv3"><a href="{{ .RelPermalink }}" class="f5 dim no-underline">{{ .Title }}</a></h3>
   {{ else }}
   <!-- If no _index.md is available, ".Key" defaults to the section title and filters to title casing -->
     <h5 class="f4 fw7 tracked ttu lh-title mb0 bt pv4-ns pv3"><a href="{{ .RelPermalink }}" class="dim no-underline">{{ .Key | title }}</a></h5>
