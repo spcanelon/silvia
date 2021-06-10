@@ -35,7 +35,7 @@
         <div class="w-100 w-80-ns pl3-ns">
       {{ $summary := cond (ne .Params.excerpt nil) .Params.excerpt .Summary }}
       {{ with $summary }}<p class="measure lh-copy cf">{{ . | markdownify | emojify }}</p>{{ end }}
-          <a href="{{ .RelPermalink }}">Read more</a></p>
+          <!--<a href="{{ .RelPermalink }}">Read full post</a>--></p>
         </div>
     </article>
   {{ end }} <!--end range across grouped pages-->
