@@ -61,6 +61,10 @@ To obtain the tweet text, author screen name, and many other tweet attributes, y
 
 I use the data available in the TidyTuesday repository to populate some searchable TidyTuesday databases at [tiny.cc/notion-dataviz](https://tiny.cc/notion-dataviz) with data visualizations tagged by the dataset of the week, hashtags, mentions, etc.
 
-<img src="tt-db-notion.png" title="The Notion 2021 TidyTuesday database showing a gallery of the most recent data visualizations in the collection, organized in a grid" alt="The Notion 2021 TidyTuesday database showing a gallery of the most recent data visualizations in the collection, organized in a grid" width="2034" />
 
-{{< tweet 1349728938268962819 >}}
+<div class="figure" style="text-align: center">
+<img src="tt-db-notion.png" alt="The Notion 2021 TidyTuesday database showing a gallery of the most recent data visualizations in the collection, organized in a grid" width="2034" />
+<p class="caption">Figure 2: Screenshot of the 2021 TidyTuesday database on Notion, taken on June 1, 2021</p>
+</div>
+
+<span>{{< tweet 1349728938268962819 >}} align = "center" </span>

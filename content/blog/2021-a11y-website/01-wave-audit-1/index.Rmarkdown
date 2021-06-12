@@ -6,6 +6,7 @@ excerpt: "First audit using the [WebAIM Web Accessibility Evaluation Tool (WAVE)
 date: 2021-06-02
 lastmod: 2021-06-07
 draft: false
+alt: "Test for alt text in archetype"
 ---
 
 ```{r, echo=FALSE}

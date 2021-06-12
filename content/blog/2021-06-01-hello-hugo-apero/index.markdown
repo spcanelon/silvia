@@ -124,8 +124,8 @@ The last piece of prework before we dive in is to update your local version of H
 4. Update Hugo version on Netlify.com
 
     <i class="fas fa-route pr2"></i>Site settings: Build & deploy > Environment > Environment variables > Edit variables
-    
-    <img src="img/netlify-hugo-version.png" title="The environment variables section after clicking the Edit settings button. This section shows the key HUGO_VERSION has a value of 0.82.1 corresponding to the version of Hugo being used by blogdown. Both the key and the value fields are free text boxes. There are two buttons at the bottom of this section, Save and Cancel." alt="The environment variables section after clicking the Edit settings button. This section shows the key HUGO_VERSION has a value of 0.82.1 corresponding to the version of Hugo being used by blogdown. Both the key and the value fields are free text boxes. There are two buttons at the bottom of this section, Save and Cancel." width="641" style="display: block; margin: auto;" />
+
+<img src="img/netlify-hugo-version.png" alt="The environment variables section after clicking the Edit settings button. This section shows the key HUGO_VERSION has a value of 0.82.1 corresponding to the version of Hugo being used by blogdown. Both the key and the value fields are free text boxes. There are two buttons at the bottom of this section, Save and Cancel." style="display: block; margin: auto;" width="641">
 
 5. Run `blogdown::check_site()` to find any issues. In my case these checking functions found a Hugo version mismatch and I ended up having to specifically run `blogdown::install_hugo("0.82.1")` to resolve it.
 
