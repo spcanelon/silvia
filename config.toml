@@ -26,8 +26,13 @@ enableEmoji = true
     ordered = false
   [markup.highlight]
     # one of: https://xyproto.github.io/splash/docs/ 
-    style = "arduino" # "arduino" "github"
+    #style = "arduino" # "arduino" "github"
+    noClasses = false
     
+# Syntax highlighting
+pygmentsUseClasses = true  # use class names instead of directly inserting color codes
+#pygmentsCodeFences = true  # enable GitHub style code snippets
+
 [params]
   orgName = "Silvia Canelón"
   orgLocal = ""
