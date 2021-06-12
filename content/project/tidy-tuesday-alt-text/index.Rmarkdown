@@ -60,8 +60,9 @@ To obtain the tweet text, author screen name, and many other tweet attributes, y
 
 I use the data available in the TidyTuesday repository to populate some searchable TidyTuesday databases at [tiny.cc/notion-dataviz](https://tiny.cc/notion-dataviz) with data visualizations tagged by the dataset of the week, hashtags, mentions, etc.
 
-```{r, echo=FALSE, fig.caption="Screenshot of the 2021 TidyTuesday database on Notion, taken on June 1, 2021", fig.alt="The Notion 2021 TidyTuesday database showing a gallery of the most recent data visualizations in the collection, organized in a grid"}
+
+```{r, echo=FALSE, fig.align="center", fig.cap="Screenshot of the 2021 TidyTuesday database on Notion, taken on June 1, 2021", fig.alt="The Notion 2021 TidyTuesday database showing a gallery of the most recent data visualizations in the collection, organized in a grid"}
 knitr::include_graphics("tt-db-notion.png")
 ```
 
-{{< tweet 1349728938268962819 >}}
+<span>{{< tweet 1349728938268962819 >}} align = "center" </span>
