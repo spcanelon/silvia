@@ -26,7 +26,7 @@ links:
 - icon: comment
   icon_pack: fas
   name: talk post
-  url: "/talk/2020-07-07-presentable-user2021/"
+  url: "/talk/2021-07-07-presentable-user2021/"
 ---
 
 <div style="text-align: center"><img src="https://silvia.rbind.io/talk/2021-07-07-presentable-user2021/featured.png" alt="" width="75%"/></div>
