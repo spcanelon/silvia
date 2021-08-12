@@ -33,8 +33,8 @@ links:
   url: https://presentable-user2021.netlify.app/
 - icon: youtube
   icon_pack: fab
-  name: video (coming soon!)
-  url: 
+  name: video
+  url: https://youtu.be/RPFh3y9UAX4
 - icon: github
   icon_pack: fab
   name: presentable-user2021
