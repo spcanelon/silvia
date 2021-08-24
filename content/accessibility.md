@@ -24,7 +24,7 @@ Thank you for visiting my site and for taking the time to read this page <i clas
 This site has been designed with the following features in mind:
 - A color palette that meets WCAG 2.1 AA standards for contrast
 - Alternative text for all informative images
-- Readable font faces, specifically to avoid impostor letter shapes and mirroring
+- Readable font faces, specifically to avoid impostor letter shapes and mirroring. This site primarily uses the [Atkinson Hyperlegible typeface](https://brailleinstitute.org/freefont) designed by the Braille Institute.
 - A table of contents in the blog post sidebar for easier navigation
 
 I'm aware there is much more to inclusive and accessible design and I'm learning how to implement better accessibility practices in the content I create. I'm not a web developer but my plan is to regularly audit my site for accessibility failures and learn how to remedy them as best I can. I'll be using the following evaluation tools:
