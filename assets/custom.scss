@@ -1,67 +1,5 @@
 // Installed following guidance at https://hugo-apero-docs.netlify.app/blog/fonts/
 
-// Ovo: https://www.fontsquirrel.com/fonts/ovo
-
-@font-face {
-  //font-family: 'Ovo';
-  src: url('fonts/Ovo-Regular.otf') format('otf');
-}
-
-// Libre Baskerville: https://www.fontsquirrel.com/fonts/libre-baskerville
-
-@font-face{
-//	src: url('fonts/LibreBaskerville-Bold.otf') format('otf');
-	//src: url('fonts/LibreBaskerville-Italic.otf') format('otf');
-	src: url('fonts/LibreBaskerville-Regular.otf') format('otf');
-	//font-style: normal;
-}
-
-// Heuristica: https://www.fontsquirrel.com/fonts/heuristica
-
-@font-face{
-	src: local(''),
-	     url('../static/fonts/Heuristica-Bold.otf') format('otf');
-	src: local(''),
-	     url('../static/fonts/Heuristica-Italic.otf') format('otf');
-	src: local(''),
-	     url('../static/fonts/Heuristica-Regular.otf') format('otf');
-}
-
-// Cyntho Next: https://www.fontspring.com/fonts/mint-type/cyntho-next
-
-@font-face {
-    font-family: 'Cyntho Next';
-    src: url('fonts/cynthonext-light-webfont.woff2') format('woff2'),
-         url('fonts/cynthonext-light-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'cynthonext-lightitalic';
-    src: url('fonts/cynthonext-lightitalic-webfont.woff2') format('woff2'),
-         url('fonts/cynthonext-lightitalic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-/* crimson-pro-regular - latin */
-// source: https://google-webfonts-helper.herokuapp.com/fonts/crimson-pro?subsets=latin
-@font-face {
-  font-family: 'Crimson Pro';
-  font-style: normal;
-  font-weight: 400;
-  src: url('fonts/crimson-pro-v14-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('fonts/crimson-pro-v14-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/crimson-pro-v14-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('fonts/crimson-pro-v14-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('fonts/crimson-pro-v14-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('fonts/crimson-pro-v14-latin-regular.svg#CrimsonPro') format('svg'); /* Legacy iOS */
-}
-
 /* petrona-regular - latin */
 @font-face {
   font-family: 'Petrona';
@@ -90,6 +28,19 @@
        url('fonts/petrona-v16-latin-500.svg#Petrona') format('svg'); /* Legacy iOS */
 }
 
+/* work-sans-regular - latin */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/work-sans-v9-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('fonts/work-sans-v9-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/work-sans-v9-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/work-sans-v9-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('fonts/work-sans-v9-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/work-sans-v9-latin-regular.svg#Work-Sans') format('svg'); /* Legacy iOS */
+}
 
 // ----------------------------------------------------------------------------
 // ----custom styling----------------------------------------------------------
