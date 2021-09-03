@@ -10,7 +10,7 @@ tags:
   - health disparities
   - EHR
 doi: ''
-publishDate: '2021-04-08T10:00:00-05:00'
+publishDate: '2021-05-11'
 publication_types:
   - '2'
 publication: 'arXiv'
