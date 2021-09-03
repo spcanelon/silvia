@@ -69,9 +69,9 @@ pygmentsUseClasses = true  # use class names instead of directly inserting color
   
   # use an embedded font-family
   # serif options: Fraunces / EB Garamond / Bitter
-  # sans-serif options: Commissioner / Alegreya Sans / Metropolis / Atkinson Hyperlegible
+  # sans-serif options: Commissioner / Alegreya Sans / Metropolis / Red Hat Text
   # if you import your own fonts, name them here too
-  customtextFontFamily = "Atkinson Hyperlegible"
+  customtextFontFamily = "Red Hat Text"
   customheadingFontFamily = "Petrona" # Petrona
   # alternatively, leave empty and select basic font options: sans-serif or serif
   # for more http://tachyons.io/docs/typography/font-family/
