@@ -192,24 +192,24 @@ a[href*="http"] {
 .post-body,
 .page-body {
   
-  blockquote > p > code,// code within blockquote paragraphs
-  .panelset * p > code, // code within panelset paragraphs
-  > p > code,           // code within paragraphs
-  li > code,            // level 1 list item 
-  li li > code,         // level 2 list item
-  li p > code {         // paragaph in list item
-    @extend .f6, .pa1, .ba, .bw1, .br0;
-    color: #415200;     // 415200 434f54
-    background-color: #EEF1E0; // DCE3C0 EEF1E0
-    border-color: #b9c680;// 728e00 b9c680 ebebeb
-  }
-  
   // code inside links
   a > code {
+    // tachyon styles
     @extend .f6, .pa1, .ba, .bw1, .br0;
+    // standard css properties
     color: #415200;     // 415200 434f54
     background-color: none; // DCE3C0 EEF1E0
     border: none;  // 728e00 b9c680 ebebeb
+  }
+  
+  // inline code (not code in chunks)
+  :not(pre) > code {
+    // tachyon styles
+    @extend .f6, .pa1, .ba, .bw1 , .br1;
+    // standard css properties
+    color: #434f54;     // 415200 434f54 627A00
+    background-color: #EEF1E0; // DCE3C0 EEF1E0 fefefe
+    border: 1px solid #b9c680;// 728e00 b9c680 ebebeb 
   }
   
 }
