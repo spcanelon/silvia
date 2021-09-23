@@ -221,9 +221,10 @@ code {
 }
 
 // Style code chunks ----------------------------------------------------------
-pre {
-  @extend .pre, .br1, .pa3, .bg-transparent;
+pre, li > pre {
+  @extend .pre, .br1, .pa3, .bg-transparent, .f6;
   border: 1px solid #ebebeb;
+  line-height: 1.5em;
 }
 
 pre code span {
