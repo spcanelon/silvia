@@ -14,7 +14,40 @@ tags:
 
 
 
+<style type="text/css">
+/*.main {
+  display: grid | inline-grid;
+}
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-auto-flow: row;
+  grid-gap: 10px 10px;
+}
+
+
+.grid-item {
+  /*background-color: rgba(255, 255, 255, 0.8);*/
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  /*padding: 20px;
+  font-size: 18px;
+  line-height: 1.5em;*/
+  text-align: left;
+  height: auto;
+} */
+
+/* -- css for images --*/  
+.page-main img {
+  box-shadow: 0px 0px 2px 2px rgba( 0, 0, 0, 0.2 );
+  #/* ease | ease-in | ease-out | linear */
+  transition: transform ease-in-out 2s;
+}
+
+.page-main img:hover {
+  transform: scale(1.4);
+}
+</style>
 
 > [MiR Community](https://mircommunity.com/about/) (community for minority R users) recently learned that we received a grant to teach data viz accessibility practices to the R community! This educational event will take place as a TidyTuesday week in the spring of 2022. See the [news on Twitter](https://twitter.com/spcanelon/status/1438958412793065487?s=20) and stay tuned for updates! 🎉
 
