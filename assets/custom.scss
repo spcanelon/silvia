@@ -147,7 +147,8 @@ nav#TableOfContents ul li {
   }
 }
 
-// ----------------------------------------------------------------------------
+// links ----------------------------------------------------------------------
+
 // WIP: a11y: add indicator for external links
 // source: https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_links#including_icons_on_links
 /*
@@ -157,6 +158,14 @@ a[href*="http"] {
   padding-right: 19px;
 }
 */
+
+a {
+  text-decoration-thickness: 1.5px;
+}
+
+a:hover {
+  text-decoration: none;
+}
 
 // single post ----------------------------------------------------------------
 
@@ -248,5 +257,23 @@ ul, ol {
   }
   p, summary {
     font-size: 1em;
+  }
+}
+
+// WIP: headings with background
+
+.post-body {
+  h1, h2, h3 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    /*background: 
+      linear-gradient(
+        //180deg, 
+        rgba(255,255,255,0) 60%, 
+        #FFECE0 60%  // FFE6D7
+        );
+    background-position: center bottom;
+    background-position-x: 0%;
+    background-position-y: 0%;*/
   }
 }
