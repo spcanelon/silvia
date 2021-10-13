@@ -82,14 +82,18 @@ knitr::opts_chunk$set(echo=FALSE, fig.align = "center")
   - Related is a talk from The Readability Group sharing findings from a survey study about font preferences including 2000+ participants. Among these were participants with dyslexia characteristics and participants with poor near vision: [Don't Believe the Type!](https://youtu.be/h8IOqUl1zII?t=1029)
   
     <img src="img/typeface-poor-near-vision.png" width="100%" alt="The fonts selected most often in this group were San Francisco Pro, Red Hat Text, Calibri, and Segoe UI, in that order. San Francisco Pro was selected by 68% of participants The fonts selected least often were Open Dyslexic, Dyslexie, Comic Sans MS, and Sylexiad Sans. Open Dyslexic was selected by 12% of participants. Both Times New Roman and Helvetica are highlighted as showing the largest differences between users with poor near vision and those without. Times New Roman was the 6th least selected and Helvetica was in the middle learning towards the most selected fonts."/><p class="caption" style="text-align:center;">Bar graph showing the frequency by which 20 different fonts were selected by study participants with strong poor near vision in comparison with users with no poor near vision.</p>
+    
+- Sarah Fossheim authored a post titled [An intro to designing accessible data visualizations](https://fossheim.io/writing/posts/accessible-dataviz-design/) which uses real-word applications to demonstrate 10 different accessibility practices.
+  
+  Sarah also provides a code-through showing how to make screenreader-friendly graphs using D3.js: [How to create a screen reader accessible graph like Apple's with D3.js](https://fossheim.io/writing/posts/apple-dataviz-a11y-tutorial/)
+  
+  <img src="img/d3js-apple-rings.png" width="100%" alt=""/>
 
 - Amber Thomas provides an example of how to make scrollytales more accessible in a piece created with Ofunne Amaka for The Pudding: [The Naked Truth](https://pudding.cool/2021/03/foundation-names/)
 
     <blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">I&#39;m excited to release this project for many reasons, but one among them is that I introduced lots of new (to me) <a href="https://twitter.com/hashtag/a11y?src=hash&amp;ref_src=twsrc%5Etfw">#a11y</a> features. My favorite: the ability to turn off scrollytelling 💖 Would love to hear what folks think! <a href="https://t.co/eDSQr9RjFe">pic.twitter.com/eDSQr9RjFe</a></p>&mdash; Amber Thomas (@ProQuesAsker) <a href="https://twitter.com/ProQuesAsker/status/1375159092684058626?ref_src=twsrc%5Etfw">March 25, 2021</a></blockquote> <script async src="img/https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     
-- Sarah Fossheim provides a code-through showing how to make screenreader-friendly graphs using D3.js: [How to create a screen reader accessible graph like Apple's with D3.js](https://fossheim.io/writing/posts/apple-dataviz-a11y-tutorial/)
 
-    <img src="img/d3js-apple-rings.png" width="100%" alt=""/>
     
 - Chris DeMartini has a series of blog posts documenting his journey auditing one of his public Tableau visualizations for accessibility:
   1. [A Tableau Accessibility Journey](https://datablick.com/blog/2021/2/4/a-tableau-accessibility-journey-part-i)
@@ -140,5 +144,5 @@ knitr::opts_chunk$set(echo=FALSE, fig.align = "center")
 - The [Highcharter R package](https://jkunst.com/highcharter/index.html) developed by Joshua Kunst adds interactivity to data viz using Highcharts JavaScript components designed with web accessibility in mind. I haven't played with the package yet, but it looks awesome!
 
     <img src="img/highcharter.png" width="100%" alt="Scatterplot of the palmerpenguins dataset showing data points clustered by species and the highcharter package making it possible to focus on one cluster and identify the x and y values of a specific data point. In this case the data point was a Chinstrap penguin observation mapping to a flipper length of 201mm and bill length of 52.20mm."/><p class="caption" style="text-align:center;">Highcharter interactivity in action, showing x and y coordinates of a specific Chinstrap penguin data point in the scatterplot</p>
-    
+
 
