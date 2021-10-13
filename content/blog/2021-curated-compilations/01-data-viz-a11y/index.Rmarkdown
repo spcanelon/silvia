@@ -61,7 +61,7 @@ knitr::opts_chunk$set(echo=FALSE, fig.align = "center")
   
 - The [Chartability methodology](https://chartability.fizz.studio/) helps data viz practitioners audit their data viz, and it's language/tool-agnostic. Chartability was created by Frank Elavsky with input from the broader community and is the most thorough set of standards I've come across.
 
-- Øystein Moseng provides some basic practices to consider in the post [10 Guidelines for DataViz Accessibility](https://www.highcharts.com/blog/tutorials/10-guidelines-for-dataviz-accessibility/). Among those included are these two which I don't come across as often:
+- Øystein Moseng provides some basic practices to consider in the post [10 Guidelines for DataViz Accessibility](https://www.highcharts.com/blog/tutorials/10-guidelines-for-dataviz-accessibility/). Among those included are these two which I don't see covered as often:
 
     - Do not rely on color alone to convey information. I've also heard this referred to as "color independence" and in some cases as "dual-encoding" of information
     - Prefer simple, familiar visualizations over complex novelties.
@@ -105,7 +105,23 @@ knitr::opts_chunk$set(echo=FALSE, fig.align = "center")
     
     <img src="img/alt-text-silvia-liz.png" width="100%" alt="Effective alt includes a description that conveys meaning in the data, variables on the axes, scale described within the description, description of the type of plot. Direct link to slide: https://spcanelon.github.io/csvConf2021/slides/indexLH.html#11"/><p class="caption" style="text-align:center;">Slide from our presentation summarizing the most useful alt-text features found among 196 data viz tweets</p>
 
-- Post from RStudio on how to add alt text to visualizations produced in R Markdown (spoiler: you can use code chunk option `fig.alt`): [New in knitr: Improved accessibility with image alt text](https://blog.rstudio.com/2021/04/20/knitr-fig-alt/)
+- Post from RStudio on how to add alt text to visualizations produced in R Markdown using code chunk option `fig.alt`: [New in knitr: Improved accessibility with image alt text](https://blog.rstudio.com/2021/04/20/knitr-fig-alt/). <br>**New in knitr v1.35:** You can now add code chunk options [inside the code chunk](https://github.com/yihui/knitr/blob/master/NEWS.md#new-features-1)! 
+
+    Example from the post updated thanks to a [heads-up from Garrick](https://twitter.com/grrrck/status/1442941720455368704?s=20):
+    
+    ```{r eval=FALSE, echo=TRUE} 
+    #| fig.cap: Bigger flippers, bigger bills 
+    #| fig.alt: Scatterplot of flipper length by bill length of 3 penguin species, where we show penguins with bigger flippers have bigger bills.
+    
+    ggplot(data = penguins, aes(x = flipper_length_mm,
+                                y = bill_length_mm,
+                                color = species)) +
+      geom_point(aes(shape = species), alpha = 0.8) +
+      scale_color_manual(
+        values = c("darkorange","purple","cyan4")) 
+    ```
+    
+    <details><summary>Expand to see the same example with `fig.cap` and `fig.alt` in the code chunk heading</summary>
     
     ````
     ```{r fig.cap="Bigger flippers, bigger bills", fig.alt = "Scatterplot of flipper length by bill length of 3 penguin species, where we show penguins with bigger flippers have bigger bills."}`r ''`
@@ -118,6 +134,8 @@ knitr::opts_chunk$set(echo=FALSE, fig.align = "center")
         values = c("darkorange","purple","cyan4")) 
     ```
     ````
+    
+    </details>
 
 - The [Highcharter R package](https://jkunst.com/highcharter/index.html) developed by Joshua Kunst adds interactivity to data viz using Highcharts JavaScript components designed with web accessibility in mind. I haven't played with the package yet, but it looks awesome!
 
