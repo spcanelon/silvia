@@ -188,3 +188,16 @@ library(palmerpenguins)
     ```
     <p class="caption" style="text-align:center;">Different patterns mapped onto penguin species along with different colors</p>
 
+- The [Highcharter R package](https://jkunst.com/highcharter/index.html) developed by Joshua Kunst adds interactivity to data viz using Highcharts JavaScript components designed with [web accessibility in mind](https://www.highcharts.com/accessibility/#exploreFeatures). Below is one example:
+
+    ```{r echo=TRUE, fig.alt="Scatterplot of the palmerpenguins dataset showing data points clustered by species and the highcharter package making it possible to focus on one cluster and identify the x and y values of a specific data point. In this case the data point was a Chinstrap penguin observation mapping to a flipper length of 201mm and bill length of 52.20mm.", eval=TRUE}
+    library(highcharter)
+    
+    hchart(penguins, "scatter", hcaes(x = flipper_length_mm,
+                                      y = bill_length_mm,
+                                      group = species),
+           color = c("darkorange", "purple", "#057276")) %>%
+      hc_add_theme(
+        hc_theme(chart = list(backgroundColor = "white")))
+    ```
+    <p class="caption" style="text-align:center;">Highcharter visualization which responds to user interactivity</p>
