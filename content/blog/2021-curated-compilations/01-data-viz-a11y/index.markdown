@@ -4,7 +4,7 @@ weight: 1
 subtitle: "A selection of general and R-specific resources on how and why to make accessible data visualizations."
 excerpt: "A selection of general and R-specific resources on how and why to make accessible data visualizations."
 date: 2021-09-23
-lastmod: 2021-10-13
+lastmod: 2021-11-13
 draft: false
 tags: 
   - R
@@ -57,7 +57,7 @@ tags:
 }
 </style>
 
-**Updated on 2021-10-14** to include two additional blog posts, {ggpattern}, and a note on accessibility limitations of {highcharter}.
+**Updated on 2021-11-13** to include a link to an example of using {highcharter} with the accessibility module. Thank you Mara!
 
 ----
 
@@ -155,7 +155,7 @@ tags:
   
   </details>
 
-- The [ggpattern R package](https://coolbutuseless.github.io/package/ggpattern/index.html) developed by Mike FC supports filling ggplot2 geometries with patterns. If used judiciously, patterns can help make visualizations more accessible by providing an additional way to encode information without relying on color. Below is one example:
+- The [ggpattern R package](https://coolbutuseless.github.io/package/ggpattern/index.html) developed by Mike FC supports filling ggplot2 geometries with patterns. If used judiciously, patterns can help make visualizations more accessible by providing an additional way to encode information without relying on color. Below is one example using ggpattern v0.2.2:
   
     
     ```r
@@ -182,8 +182,8 @@ tags:
     <img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-3-1.png" title="Bar chart showing 3 penguin species along the x axis and the number of observations on the y axis. The bar for the Adelie species uses the color orange and diagonal stripes, the bar for Chinstrap species uses the color purple and crosshatches, and the bar for the Gentoo species uses the color cyan and a dotted pattern." alt="Bar chart showing 3 penguin species along the x axis and the number of observations on the y axis. The bar for the Adelie species uses the color orange and diagonal stripes, the bar for Chinstrap species uses the color purple and crosshatches, and the bar for the Gentoo species uses the color cyan and a dotted pattern." width="672" />
     <p class="caption" style="text-align:center;">Different patterns mapped onto penguin species along with different colors</p>
 
-- The [Highcharter R package](https://jkunst.com/highcharter/index.html) developed by Joshua Kunst adds interactivity to data viz using Highcharts JavaScript components designed with [web accessibility in mind](https://www.highcharts.com/accessibility/#exploreFeatures). Unfortunately though, the accessibility module isn't working in the current version of highcharter. I look forward to adding an example here once accessibility functionality is available (see also GitHub issues [#707](https://github.com/jbkunst/highcharter/issues/707) and [#719](https://github.com/jbkunst/highcharter/issues/719)).
+- The [Highcharter R package](https://jkunst.com/highcharter/index.html) developed by Joshua Kunst adds interactivity to data viz using Highcharts JavaScript components designed with [web accessibility in mind](https://www.highcharts.com/accessibility/#exploreFeatures). A working example will be added to this post soon. In the meantime, please see the example [kindly provided by Mara Averick](https://github.com/spcanelon/silvia/issues/48#issuecomment-953976492).
+
 
     
-    
-    <!--<p class="caption" style="text-align:center;">Highcharter visualization which responds to user interactivity but is currently missing accessibility features.</p>-->
+<!--<p class="caption" style="text-align:center;">Highcharter visualization which responds to user interactivity.</p>-->
