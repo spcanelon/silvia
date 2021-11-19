@@ -4,7 +4,7 @@ weight: 1
 subtitle: "A selection of general and R-specific resources on how and why to make accessible data visualizations."
 excerpt: "A selection of general and R-specific resources on how and why to make accessible data visualizations."
 date: 2021-09-23
-lastmod: 2021-11-13
+lastmod: 2021-11-19
 draft: false
 tags: 
   - R
@@ -67,7 +67,7 @@ library(palmerpenguins)
 }
 ```
 
-**Updated on 2021-11-13** to include a link to an example of using {highcharter} with the accessibility module. Thank you Mara!
+**Updated on 2021-11-19** to include a link to a series of educational blog posts written by Mara Averick that cover {highcharter} and the accessibility module in detail. Thank you Mara!
 
 ----
 
@@ -188,33 +188,6 @@ library(palmerpenguins)
     ```
     <p class="caption" style="text-align:center;">Different patterns mapped onto penguin species along with different colors</p>
 
-- The [Highcharter R package](https://jkunst.com/highcharter/index.html) developed by Joshua Kunst adds interactivity to data viz using Highcharts JavaScript components designed with [web accessibility in mind](https://www.highcharts.com/accessibility/#exploreFeatures). A working example will be added to this post soon. In the meantime, please see the example [kindly provided by Mara Averick](https://github.com/spcanelon/silvia/issues/48#issuecomment-953976492).
+- The [Highcharter R package](https://jkunst.com/highcharter/index.html) developed by Joshua Kunst adds interactivity to data viz using Highcharts JavaScript components designed with [web accessibility in mind](https://www.highcharts.com/accessibility/#exploreFeatures). The package has a learning curve, but lucky for us Mara Averick wrote an excellent [series of blog posts on using the Highcharts accessibility module with {highcharter}](https://dataand.me/index.html#category:highcharter).
 
-```{r wip-highcharter, echo=FALSE, eval=FALSE}
-library(highcharter)
-library(palmerpenguins)
-
-hchart(penguins, "scatter", hcaes(x = flipper_length_mm,
-                                  y = bill_length_mm,
-                                  group = species),
-       color = c("darkorange", "purple", "#057276")) %>%
-  hc_add_theme(
-    hc_theme(chart = list(backgroundColor = "white"))) %>%
-  hc_add_dependency(name = "modules/accessibility.js") %>%
-  hc_exporting(
-    enabled = TRUE,
-    accessibility = list(
-      enabled = TRUE
-    )
-  ) %>%
-  hc_plotOptions(
-    accessibility = list(
-      enabled = TRUE,
-      keyboardNavigation = list(enabled = TRUE)
-    )
-  ) %>%
-  hc_caption(text = "Scatterplot of the palmerpenguins dataset showing data points clustered by species and the highcharter package making it possible to focus on one cluster and identify the x and y values of a specific data point. In this case the data point is a Chinstrap penguin observation mapping to a flipper length of 201mm and bill length of 54.2mm.")
-
-```
-    
-<!--<p class="caption" style="text-align:center;">Highcharter visualization which responds to user interactivity.</p>-->
+  <img src="img/highcharter-mara-averick.png" alt="Scatterplot of the palmerpenguins dataset showing data points clustered by species and the highcharter package making it possible to focus on one cluster and identify the x and y values of a specific data point. In this case the data point is a Chinstrap penguin observation mapping to a flipper length of 201mm and bill length of 54.2mm. Explore this data viz with a screen reader in Mara's blog post: https://dataand.me/posts/2021-11-15-accessible-highcharter-part-4/#an-accessible-penguin-plot"><p class="caption" style="text-align:center;">Interactive scatterplot from Mara's post using color and shape to encode information about penguin species</p>
