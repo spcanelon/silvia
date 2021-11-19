@@ -45,9 +45,10 @@ links:
 <link href="{{< blogdown/postref >}}index_files/font-awesome/css/v4-shims.css" rel="stylesheet" />
 <script src="{{< blogdown/postref >}}index_files/fitvids/fitvids.min.js"></script>
 
-> This post was featured in the RStudio Blog *R Views* under a revised title: [Deploying xaringan Slides with GitHub Pages](https://rviews.rstudio.com/2021/11/18/deploying-xaringan-slides-a-ten-step-github-pages-workflow/). The original title was “Deploying xaringan Slides: A Ten-Step GitHub Pages Workflow.” Other changes include an introductory paragraph and greater clarity in the “Choose your own adventure” section. Many thanks to Chief Editor Joe Rickert for a very encouraging and helpful editorial process! I am humbled by his note on R Views:
->
-> *Silvia’s post is a mini masterpiece of clear, concise writing that elucidates complex technology within the narrow context of explaining a single well-defined task. Silvia does not attempt to say everything she knows about the subject, and she resists digressions that might obscure the path she is laying out. It is an example of achieving clarity through saying less.*
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+&gt; This post was featured in the RStudio Blog *R Views* under a revised title: [Deploying xaringan Slides with GitHub Pages](https://rviews.rstudio.com/2021/11/18/deploying-xaringan-slides-a-ten-step-github-pages-workflow/). The original title was “Deploying xaringan Slides: A Ten-Step GitHub Pages Workflow.” Other changes include an introductory paragraph and greater clarity in the “Choose your own adventure” section. Many thanks to Chief Editor Joe Rickert for a very encouraging and helpful editorial process! I am humbled by his note on R Views:
+&gt;
+&gt; *Silvia’s post is a mini masterpiece of clear, concise writing that elucidates complex technology within the narrow context of explaining a single well-defined task. Silvia does not attempt to say everything she knows about the subject, and she resists digressions that might obscure the path she is laying out. It is an example of achieving clarity through saying less.*
 
 ------------------------------------------------------------------------
 
@@ -55,7 +56,17 @@ This post will guide you step-by-step through the process of creating an HTML xa
 
 # Choose your own adventure
 
--   **Option 1:** Start at the [beginning of the workflow](#the-ten-step-workflow) to make a slide deck using the R Markdown template built into the `xaringan` package. The built-in template doubles as documentation for the `xaringan` package, so it is a great way to familiarize yourself with the package features, but it also includes a lot of content that you will probably want to remove and modify when creating your presentation.
+-   # **Option 1:** Start at the [beginning of the workflow](#the-ten-step-workflow) to make a slide deck using the R Markdown template built into the `xaringan` package. The built-in template doubles as documentation for the `xaringan` package, so it is a great way to familiarize yourself with the package features, but it also includes a lot of content that you will probably want to remove and modify when creating your presentation.
+
+    > 🎉 This post was invited to be featured in the RStudio Blog *R Views* under a revised title: [Deploying xaringan Slides with GitHub Pages](https://rviews.rstudio.com/2021/11/18/deploying-xaringan-slides-a-ten-step-github-pages-workflow/). The original title was “Deploying xaringan Slides: A Ten-Step GitHub Pages Workflow.” Other editorial changes include an introductory paragraph and greater clarity in the Choose Your Own Adventure section. Many thanks to chief editor Joe Rickert for a very encouraging and helpful editorial process!
+
+------------------------------------------------------------------------
+
+This post will guide you step-by-step through the process of creating an HTML `xaringan` slide deck and deploying it to the web for easy sharing with others. We will be using the `xaringan` package to build the slide deck, GitHub to help us host our slides for free with GitHub Pages, and the `usethis` package to help us out along the way. You will get the most out of this workflow if you are already familiar with R Markdown and GitHub, and if you have already connected RStudio (or your preferred IDE) to Git and GitHub.[^2] The post will not cover the nuts and bolts of xaringan or talk about slide design & customization, but you can find lots of [learning resources](#learn-more) listed at the end.
+
+# Choose your own adventure
+
+-   **Option 1:** Start at the [beginning of the workflow](#the-ten-step-workflow) to make a slide deck using the R Markdown template built into the xaringan package. The built-in template doubles as documentation for the xaringan package, so it is a great way to familiarize yourself with the package features, but it also includes a lot of content that you will probably want to remove and modify when creating your presentation. &gt;&gt;&gt;&gt;&gt;&gt;&gt; 63d175dd34aaa49129cc2bc85df567dc033b883d
 
 -   **Option 2:** Start with an [R-Ladies themed xaringan template](https://spcanelon.github.io/RLadies-xaringan-template) (embedded below). This is an example slide deck originally created as a teaching tool to highlight some of the main features of the `xaringan` package, and to demo some customization that incorporates the R-Ladies CSS theme built into xaringan. Please feel welcome to use/modify it to suit your needs! When you are ready, you can follow the steps immediately below 👇 to download the files to your machine, and then skip down to [Initialize version control with git](#initialize-version-control-with-git).
 
@@ -213,7 +224,7 @@ git add .
 git commit -m "<A brief but descriptive commit message>"
 ```
 
-> Consider writing a commit message that finishes the following sentence:[^2] “If applied, this commit will…” (e.g. “Change the slide theme,” “Add hello slide”)
+> Consider writing a commit message that finishes the following sentence:[^3] “If applied, this commit will…” (e.g. “Change the slide theme,” “Add hello slide”)
 
 ``` bash
 # Step 3: Push the changes to your GitHub repository
@@ -255,6 +266,8 @@ usethis::use_github_pages(branch = "master")
 
 13\. This GitHub Pages workflow is not exclusive to `xaringan` slides! Try it out with any other HTML file.
 
+13\. This GitHub Pages workflow is not exclusive to xaringan slides! Try it out with any other HTML file.
+
 # Learn more
 
 ## Foundation
@@ -282,4 +295,6 @@ usethis::use_github_pages(branch = "master")
 
 [^1]: [Chapter 12 Connect RStudio to Git and GitHub \| Happy Git and GitHub for the useR](https://happygitwithr.com/rstudio-git-github.html)
 
-[^2]: [How to Write a Git Commit Message \| Chris Beams](https://chris.beams.io/posts/git-commit/#imperative)
+[^2]: [Chapter 12 Connect RStudio to Git and GitHub \| Happy Git and GitHub for the useR](https://happygitwithr.com/rstudio-git-github.html)
+
+[^3]: [How to Write a Git Commit Message \| Chris Beams](https://chris.beams.io/posts/git-commit/#imperative)
