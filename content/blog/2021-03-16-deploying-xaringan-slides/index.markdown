@@ -255,8 +255,6 @@ usethis::use_github_pages(branch = "master")
 
 13\. This GitHub Pages workflow is not exclusive to `xaringan` slides! Try it out with any other HTML file.
 
-13\. This GitHub Pages workflow is not exclusive to xaringan slides! Try it out with any other HTML file.
-
 # Learn more
 
 ## Foundation
@@ -270,13 +268,13 @@ usethis::use_github_pages(branch = "master")
 ## Sharing your slides
 
 -   [Sharing Your xaringan Slides • Garrick Aden‑Buie](https://www.garrickadenbuie.com/blog/sharing-xaringan-slides/) – blog post
--   [Functions For Building Xaringan Slides To Different Outputs. • xaringanBuilder](https://jhelvy.github.io/xaringanBuilder/) – package site
+-   [Functions For Building Xaringan Slides To Different Outputs • xaringanBuilder](https://jhelvy.github.io/xaringanBuilder/) – package site
 -   [Sharing on Short Notice • Alison Hill & Desirée De Leon](https://alison.rbind.io/talk/2020-sharing-short-notice/) – video resource for deploying via Netlify
 
 ## Making your slides extra special
 
--   [Professional, Polished, Presentable • Garrick Aden‑Buie & Silvia Canelón • useR!2021](https://presentable-user2021.netlify.app/) – workshop site
--   [Home · yihui/xaringan Wiki • GitHub](https://github.com/yihui/xaringan/wiki) – wiki of customizations for xaringan
+-   [Professional, Polished, Presentable • Garrick Aden‑Buie & Silvia Canelón • useR!2021](https://presentable-user2021.netlify.app/) – site for an intermediate xaringan workshop
+-   [Home • yihui/xaringan Wiki • GitHub](https://github.com/yihui/xaringan/wiki) – wiki of customizations for xaringan
 -   [Making Extra Great Slides • Garrick Aden‑Buie](https://www.garrickadenbuie.com/talk/extra-great-slides-nyhackr/) – talk & slides with xaringan overview and featuring CSS styling and xaringanthemer
 -   [Applying design guidelines to slides with {xaringanthemer} • katie jolly](https://www.katiejolly.io/blog/2021-03-16/designing-slides) – blog post
 -   [A playground of extensions for xaringan • xaringanExtra](https://pkg.garrickadenbuie.com/xaringanExtra/#/?id=xaringanextra) – package site
