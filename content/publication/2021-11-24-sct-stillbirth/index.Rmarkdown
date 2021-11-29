@@ -25,11 +25,11 @@ links:
 - icon: file-word
   icon_pack: fas
   name: Supplemental Content (Accessible DocX)
-  url: SupplementaryMaterial.docx
+  url: publication/sct-stillbirth/SupplementaryMaterial.docx
 - icon: file-pdf
   icon_pack: fas
   name: Supplemental Content (Accessible PDF)
-  url: SupplementaryMaterial.pdf
+  url: publication/sct-stillbirth/SupplementaryMaterial.pdf
 ---
 
 ```{css, eval=TRUE, echo=FALSE}
