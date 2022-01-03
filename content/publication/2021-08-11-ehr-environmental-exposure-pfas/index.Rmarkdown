@@ -3,6 +3,8 @@ title: "Harnessing electronic health records to study emerging environmental dis
 author: "Mary Regina Boland, Lena M. Davidson, Silvia P. Canelón, Jessica Meeker, Trevor Penning, John H. Holmes & Jason H. Moore"
 date: '2021-08-11'
 slug: ehr-environmental-exposure-pfas
+alias:
+  - /publication/ehr-environmental-exposure-pfas/
 categories:
   - Research
 tags:

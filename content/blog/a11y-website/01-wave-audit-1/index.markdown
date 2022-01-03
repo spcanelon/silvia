@@ -3,17 +3,18 @@ title: "WAVE Audit No. 1"
 weight: 1
 subtitle: "First audit using the WebAIM Web Accessibility Evaluation Tool (WAVE)"
 excerpt: "First audit using the [WebAIM Web Accessibility Evaluation Tool (WAVE)](https://wave.webaim.org/)."
+slug: audit-1
+alias:
+  - /blog/2021-a11y-website/01-wave-audit-1/
 date: 2021-06-02
 lastmod: 2021-06-07
 draft: false
 alt: "Test for alt text in archetype"
 ---
 
-```{r, echo=FALSE}
-knitr::opts_chunk$set(echo=FALSE, fig.align = "center")
-```
 
-```{css, eval=TRUE}
+
+<style type="text/css">
 .page-main img {
   box-shadow: 0px 0px 2px 2px rgba( 0, 0, 0, 0.2 );
   #/* ease | ease-in | ease-out | linear */
@@ -23,7 +24,7 @@ knitr::opts_chunk$set(echo=FALSE, fig.align = "center")
 .page-main img:hover {
   transform: scale(1.4);
 }
-```
+</style>
 
 
 > **Did you know that 97.4% of home pages have web accessibility failures???** :scream: 
@@ -45,9 +46,7 @@ I relied on WebAIM's [Web Accessibility Evaluation Tool (WAVE)](https://wave.web
 - Some of my alt-text descriptions are too long! :laughing: I'll use this example to highlight some of the super helpful features of the WAVE tool. Below is a screenshot of the tool when I select the alert next to the super long alt-text description for a hex logo :woman_facepalming:
 
     <details><summary>WAVE tool reference and code accompanying an alert</summary>
-    ```{r, fig.cap="", fig.alt="Reference pane of the tool elaborates on what the alert means, why it matters, how to fix it, a note on the tool's algorithm, and a link to the WCAG standards and guidelines. Code section is expanded along the bottom and highlights exactly what part of the HTML code the alert is refering to."}
-    knitr::include_graphics("img/wave-ex-alt-text.png")
-    ```
+    <img src="img/wave-ex-alt-text.png" title="Reference pane of the tool elaborates on what the alert means, why it matters, how to fix it, a note on the tool's algorithm, and a link to the WCAG standards and guidelines. Code section is expanded along the bottom and highlights exactly what part of the HTML code the alert is refering to." alt="Reference pane of the tool elaborates on what the alert means, why it matters, how to fix it, a note on the tool's algorithm, and a link to the WCAG standards and guidelines. Code section is expanded along the bottom and highlights exactly what part of the HTML code the alert is refering to." width="1898" style="display: block; margin: auto;" />
     </details>
 
 - My blog and talk listings have redundant links because these layouts have thumbnails enabled and both the thumbnail and the title of the post are active links
@@ -82,9 +81,10 @@ Audit results:
   - 1 &#120; Suspicious link text
   - 5 &#120; Redundant title text
 
-```{r, fig.cap="Audit for my home page", fig.alt="There is an error symbol next to the decorative image on the home page. There are also alert symbols for links in the navigation bar and footer"}
-knitr::include_graphics("img/wave-home.png")
-```
+<div class="figure" style="text-align: center">
+<img src="img/wave-home.png" alt="There is an error symbol next to the decorative image on the home page. There are also alert symbols for links in the navigation bar and footer" width="950" />
+<p class="caption">Figure 1: Audit for my home page</p>
+</div>
 
 
 ## About page
@@ -103,18 +103,21 @@ Audit results:
   - 7 &#120; Redundant link
   - 5 &#120; Redundant title text
 
-```{r, fig.cap="Audit for my About page header",  fig.alt="About page showing an alert in my blurb"}
-knitr::include_graphics("img/wave-about-header.png")
-```
+<div class="figure" style="text-align: center">
+<img src="img/wave-about-header.png" alt="About page showing an alert in my blurb" width="1898" />
+<p class="caption">Figure 2: Audit for my About page header</p>
+</div>
 
-```{r, fig.cap="Audit for the main section of my About page", fig.alt="An alert is shown next to some heading items, and a link. An error is shown next to a thumbnail image for the featured blog post"}
-knitr::include_graphics("img/wave-about-main-top.png")
-```
+<div class="figure" style="text-align: center">
+<img src="img/wave-about-main-top.png" alt="An alert is shown next to some heading items, and a link. An error is shown next to a thumbnail image for the featured blog post" width="1898" />
+<p class="caption">Figure 3: Audit for the main section of my About page</p>
+</div>
 
 <details><summary>Full page screenshot</summary>
-```{r, fig.cap="Audit for my About page in full page view", fig.alt="Alerts are shown for links in the navigation bar and footer, for some heading items, and for a few links throughout the page"}
-knitr::include_graphics("img/wave-about.png")
-```
+<div class="figure" style="text-align: center">
+<img src="img/wave-about.png" alt="Alerts are shown for links in the navigation bar and footer, for some heading items, and for a few links throughout the page" width="950" />
+<p class="caption">Figure 4: Audit for my About page in full page view</p>
+</div>
 </details>
 
 ## Blog page
@@ -130,9 +133,10 @@ Audit results:
   - 5 &#120; Redundant link
   - 5 &#120; Redundant title text
 
-```{r, fig.cap="Audit for my Blog listing page in full page view", fig.alt="Alerts are shown for the navigation bar and footer, and for blog post links. Errors shown for the decorative image for the page and for the blog post thumbnails"}
-knitr::include_graphics("img/wave-blog.png")
-```
+<div class="figure" style="text-align: center">
+<img src="img/wave-blog.png" alt="Alerts are shown for the navigation bar and footer, and for blog post links. Errors shown for the decorative image for the page and for the blog post thumbnails" width="950" />
+<p class="caption">Figure 5: Audit for my Blog listing page in full page view</p>
+</div>
 
 ### Blog example
 
@@ -151,9 +155,10 @@ Audit results:
   - 1 &#120; Broken same-page link
   - 6 &#120; Redundant title text
 
-```{r, fig.cap="Audit for my Hello Hugo Apéro blog post", fig.alt="Alerts shown for links in the navigation bar and for a heading item. Errors shown for the blog decorative image and for a link symbol next to a header."}
-knitr::include_graphics("img/wave-blog-hha-top.png")
-```
+<div class="figure" style="text-align: center">
+<img src="img/wave-blog-hha-top.png" alt="Alerts shown for links in the navigation bar and for a heading item. Errors shown for the blog decorative image and for a link symbol next to a header." width="1898" />
+<p class="caption">Figure 6: Audit for my Hello Hugo Apéro blog post</p>
+</div>
 
 ## Talk page
 
@@ -170,14 +175,16 @@ Audit results:
   - 5 &#120; Redundant title text
   - 1 &#120; YouTube video
 
-```{r, fig.cap="Audit for my Talk listing page", fig.alt="Alerts displayed for a heading item and the primary link to a talk. An error is displayed for the talk thumbnail."}
-knitr::include_graphics("img/wave-talks-top.png")
-```
+<div class="figure" style="text-align: center">
+<img src="img/wave-talks-top.png" alt="Alerts displayed for a heading item and the primary link to a talk. An error is displayed for the talk thumbnail." width="1898" />
+<p class="caption">Figure 7: Audit for my Talk listing page</p>
+</div>
 
 <details><summary>Full page screenshot</summary>
-```{r, fig.cap="Audit for my About page header in full page view", fig.alt="Alerts displayed in the navigation bar and footer, some heading items, all primary talk links, and a YouTube button link. Errors displayed for all talk thumbnail images."}
-knitr::include_graphics("img/wave-talks.png")
-```
+<div class="figure" style="text-align: center">
+<img src="img/wave-talks.png" alt="Alerts displayed in the navigation bar and footer, some heading items, all primary talk links, and a YouTube button link. Errors displayed for all talk thumbnail images." width="950" />
+<p class="caption">Figure 8: Audit for my About page header in full page view</p>
+</div>
 </details>
 
 ### Talk example
@@ -192,9 +199,10 @@ Audit results:
   - 1 &#120; Skipped heading level
   - 5 &#120; Redundant title text
 
-```{r, fig.cap="Audit for my CSV Conf talk post in full page view", fig.alt="Alerts displayed for the navigation bar and footer, as well as the talk summary. No errors are displayed."}
-knitr::include_graphics("img/wave-talks-csvconf.png")
-```
+<div class="figure" style="text-align: center">
+<img src="img/wave-talks-csvconf.png" alt="Alerts displayed for the navigation bar and footer, as well as the talk summary. No errors are displayed." width="950" />
+<p class="caption">Figure 9: Audit for my CSV Conf talk post in full page view</p>
+</div>
 
 ## Publication page
 
@@ -206,15 +214,17 @@ Audit results:
 - 5 alerts
   - 5 &#120; Redundant title text
 
-```{r, fig.cap="Audit for my Publication listing page", fig.alt="No errors or alerts displayed for this view"}
-knitr::include_graphics("img/wave-pubs-top.png")
-```
+<div class="figure" style="text-align: center">
+<img src="img/wave-pubs-top.png" alt="No errors or alerts displayed for this view" width="1898" />
+<p class="caption">Figure 10: Audit for my Publication listing page</p>
+</div>
 
 <details><summary>Full page screenshot</summary>
 
-```{r, fig.cap="Audit for my Publication listing page in full page view", fig.alt="Alerts displayed for the navigation bar and footer"}
-knitr::include_graphics("img/wave-pubs.png")
-```
+<div class="figure" style="text-align: center">
+<img src="img/wave-pubs.png" alt="Alerts displayed for the navigation bar and footer" width="950" />
+<p class="caption">Figure 11: Audit for my Publication listing page in full page view</p>
+</div>
 
 </details>
 
@@ -230,9 +240,10 @@ Audit results:
   - 1 &#120; Skipped heading level
   - 5 &#120; Redundant title text
 
-```{r, fig.cap="Audit for my geospatial analysis publication in full page view", fig.alt="Alerts displayed for the header bar and footer and for the publication summary"}
-knitr::include_graphics("img/wave-pubs-geo.png")
-```
+<div class="figure" style="text-align: center">
+<img src="img/wave-pubs-geo.png" alt="Alerts displayed for the header bar and footer and for the publication summary" width="950" />
+<p class="caption">Figure 12: Audit for my geospatial analysis publication in full page view</p>
+</div>
 
 ## Project page
 
@@ -245,9 +256,10 @@ Audit results:
 - 5 alerts
   - 5 &#120; Redundant title text
 
-```{r, fig.cap="Audit for my Project listing page", fig.alt="Errors displayed next to each project thumbnail image"}
-knitr::include_graphics("img/wave-projects-top.png")
-```
+<div class="figure" style="text-align: center">
+<img src="img/wave-projects-top.png" alt="Errors displayed next to each project thumbnail image" width="1898" />
+<p class="caption">Figure 13: Audit for my Project listing page</p>
+</div>
 
 ### Project example
 
@@ -262,12 +274,14 @@ Audit results:
   - 1 &#120; Skipped heading level
   - 6 &#120; Redundant title text
 
-```{r, fig.cap="Audit for my TidyTuesdayAltText project post", fig.alt="Alert displayed in the project summary and next to an image alt-text. Error dislayed next to a link symbol accompanying a heading."}
-knitr::include_graphics("img/wave-projects-ttat-top.png")
-```
+<div class="figure" style="text-align: center">
+<img src="img/wave-projects-ttat-top.png" alt="Alert displayed in the project summary and next to an image alt-text. Error dislayed next to a link symbol accompanying a heading." width="1898" />
+<p class="caption">Figure 14: Audit for my TidyTuesdayAltText project post</p>
+</div>
 
 <details><summary>Full page screenshot</summary>
-```{r, fig.cap="Audit for my TidyTuesdayAltText project post in full page view", fig.alt="Alerts shown in the navigation bar and footer, project summary, and image alt-text. Errors shown next to link symbols accompanying headings."}
-knitr::include_graphics("img/wave-projects-ttat.png")
-```
+<div class="figure" style="text-align: center">
+<img src="img/wave-projects-ttat.png" alt="Alerts shown in the navigation bar and footer, project summary, and image alt-text. Errors shown next to link symbols accompanying headings." width="950" />
+<p class="caption">Figure 15: Audit for my TidyTuesdayAltText project post in full page view</p>
+</div>
 </details>

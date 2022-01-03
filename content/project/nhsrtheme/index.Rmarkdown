@@ -4,6 +4,9 @@ subtitle: "A CSS theme contributed to the nhsrtheme package to follow the NHS id
 excerpt: "A CSS theme contributed to the nhsrtheme package to follow the [NHS identity guidelines](https://www.england.nhs.uk/nhsidentity/identity-guidelines/)"
 date: 2020-10-29
 author: "Silvia Canelón"
+slug: nhsrtheme
+alias:
+  - /project/nhsrtheme/
 featured: true
 draft: false
 tags:
