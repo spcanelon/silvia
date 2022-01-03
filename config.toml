@@ -33,6 +33,16 @@ enableEmoji = true
 pygmentsUseClasses = true  # use class names instead of directly inserting color codes
 #pygmentsCodeFences = true  # enable GitHub style code snippets
 
+# URLs 
+[permalinks]
+  blog = "/blog/:year-:slug/"
+  publication = "/publication/:year-:slug/"
+  talk = "/talk/:year-:slug/"
+  project = "/project/:year-:slug/"
+  
+# https://gohugo.io/content-management/urls/#relative-urls
+relativeURLs = true
+
 [params]
   orgName = "Silvia Canelón"
   orgLocal = ""

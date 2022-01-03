@@ -4,6 +4,9 @@ subtitle: 'Traducción colaborativa al castellano del libro “Teaching Tech Tog
 excerpt: 'Traducción colaborativa al castellano del libro "[Teaching Tech Together](https://teachtogether.tech/). How to create and deliver lessons that work and build a teaching community around them" de Greg Wilson'
 date: 2020-12-28
 author: "Silvia Canelón"
+slug: teaching-tech-together-es
+alias:
+  - /project/teaching-tech-together-es/
 featured: true
 draft: false
 tags:

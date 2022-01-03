@@ -2,7 +2,9 @@
 title: "Revealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community"
 author: "Silvia Canelón & Liz Hare"
 date: 2021-05-04T10:20:00
-slug: 2021-05-04-data-viz-accessibility
+slug: data-viz-accessibility
+alias:
+  - /talk/2021-05-04-data-viz-accessibility/
 categories:
   - R
   - Education

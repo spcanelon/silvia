@@ -4,6 +4,9 @@ subtitle: "Making Great Slides with xaringan"
 excerpt: "A three hour intermediate xaringan tutorial created for [useR!2021](https://user2021.r-project.org/)"
 date: 2021-07-07
 author: "Garrick Aden-Buie & Silvia Canelón"
+slug: presentable-user2021
+alias:
+  - /project/presentable-user2021/
 featured: true
 draft: false
 tags:
@@ -26,7 +29,7 @@ links:
 - icon: comment
   icon_pack: fas
   name: talk post
-  url: "/talk/2021-07-07-presentable-user2021/"
+  url: /talk/2021-presentable-user2021/
 ---
 
 <div style="text-align: center"><img src="https://silvia.rbind.io/talk/2021-07-07-presentable-user2021/featured.png" alt="" width="75%"/></div>

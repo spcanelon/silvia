@@ -4,6 +4,9 @@ subtitle: "A cost-conversion tool created for the useR!2021 Conference (July 5-9
 excerpt: "A cost-conversion tool created for the useR!2021 Conference (July 5-9, 2021) that leverages Gross Domestic Product and Purchasing Power Parity to adapt sponsorship and registration fees according to the country of residence."
 date: 2021-01-01
 author: "Silvia Canelón"
+slug: user2021-cost-conversion-tool
+alias:
+  - /project/user-2021/
 draft: false
 tags:
   - useR
@@ -14,6 +17,14 @@ categories:
 # layout options: single or single-sidebar
 layout: single
 links:
+- icon: exchange-alt
+  icon_pack: fas
+  name: cost conversion tool
+  url: https://spcanelon.github.io/useR2021-cost-conversion-tool/
+- icon: github
+  icon_pack: fab
+  name: code
+  url: https://github.com/spcanelon/useR2021-cost-conversion-tool
 - icon: r-project
   icon_pack: fab
   name: useR2021! registration details

@@ -4,6 +4,8 @@ title: "Hello Hugo Apéro: Converting a Blogdown Site from Hugo Academic"
 layout: single-sidebar
 date: '2021-06-01'
 slug: hello-hugo-apero
+alias:
+  - /blog/hello-hugo-apero/
 categories:
   - R
   - Website

@@ -3,6 +3,8 @@ title: 'Migrating from Trello to Airtable: Working with JSON Data in R'
 layout: single-sidebar
 date: '2020-05-12'
 slug: trello-to-airtable
+alias:
+  - /blog/trello-to-airtable
 categories:
   - R
   - Tutorial
@@ -30,15 +32,15 @@ links:
   - icon: file-code
     icon_pack: far
     name: R script
-    url: index.R
+    url: /blog/2020-05-trello-to-airtable/index.R
   - icon: file-code
     icon_pack: far
     name: R Markdown
-    url: index.Rmd
+    url: /blog/2020-05-trello-to-airtable/index.Rmd
   - icon: table
     icon_pack: fas
     name: JSON example file
-    url: program-mgmt.json
+    url: /blog/2020-05-trello-to-airtable/program-mgmt.json
 ---
 <script src="{{< blogdown/postref >}}index_files/clipboard/clipboard.min.js"></script>
 <link href="{{< blogdown/postref >}}index_files/xaringanExtra-clipboard/xaringanExtra-clipboard.css" rel="stylesheet" />

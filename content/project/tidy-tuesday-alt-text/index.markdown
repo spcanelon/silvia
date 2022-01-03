@@ -4,6 +4,9 @@ subtitle: "An R package with the goal of providing insight into the alternative 
 excerpt: "An R package with the goal of providing insight into the alternative (alt) text accompanying the data visualizations shared on Twitter as part of the [TidyTuesday social project](https://github.com/rfordatascience/tidytuesday#a-weekly-social-data-project-in-r)."
 date: 2021-05-04
 author: "Silvia Canelón"
+slug: tidy-tuesday-alt-text
+alias:
+  - /project/tidy-tuesday-alt-text/
 draft: false
 tags:
   - TidyTuesday
