@@ -4,6 +4,8 @@ title: "Deploying xaringan Slides with GitHub Pages"
 layout: single-sidebar
 date: '2021-03-16'
 slug: deploying-xaringan-slides
+alias:
+  - /blog/deploying-xaringan-slides/
 categories:
   - R
   - Tutorial

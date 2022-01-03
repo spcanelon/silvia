@@ -2,7 +2,9 @@
 title: "Professional, Polished, Presentable: Making Great Slides with xaringan"
 author: "Garrick Aden-Buie & Silvia Canelón"
 date: 2021-07-07T16:00:00
-slug: 2021-07-07-presentable-user2021
+slug: presentable-user2021
+alias:
+  - /talk/2021-07-07-presentable-user2021/
 categories:
   - R
   - Education

@@ -1,7 +1,9 @@
 ---
 title: "Writing Presentations in R"
 date: 2021-03-16T17:30:00
-slug: 2021-03-16-xaringan-deploy-demo
+slug: xaringan-deploy-demo
+alias:
+  - /talk/2021-03-16-xaringan-deploy-demo/
 categories:
   - R
   - Education
@@ -38,7 +40,7 @@ links:
 - icon: pencil-alt
   icon_pack: fas
   name: "Blog post: Deploying xaringan Slides"
-  url: https://silvia.rbind.io/2021-03-16-deploying-xaringan-slides
+  url: /blog/2021-deploying-xaringan-slides/
 ---
 
 ![Hex logo for R-Ladies Seattle featuring some ggplot2-created mountain ranges](rladies-seattle.png)

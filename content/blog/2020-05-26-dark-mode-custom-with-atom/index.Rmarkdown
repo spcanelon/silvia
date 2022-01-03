@@ -11,6 +11,8 @@ tags:
   - Hugo
   - CSS
 slug: dark-theme-custom-with-atom
+alias:
+  - /blog/dark-theme-custom-with-atom/
 draft: no
 subtitle: Tutorial on how to customize the dark mode in Hugo's Academic theme with help from the Atom text editor package Pigments.
 summary: Tutorial on how to customize the dark mode in Hugo's Academic theme with help from the Atom text editor package Pigments.

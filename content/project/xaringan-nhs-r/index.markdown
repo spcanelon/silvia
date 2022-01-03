@@ -4,6 +4,9 @@ subtitle: "A four hour workshop introducing the xaringan package for presentatio
 excerpt: "A four hour workshop introducing the [xaringan](https://github.com/yihui/xaringan#xaringan) package for presentations, created for the [NHS-R Community](https://nhsrcommunity.com/about/) [2020 Virtual Conference](https://nhsrcommunity.com/nhsr-conference-2020/)"
 date: 2020-11-03
 author: "Silvia Canelón"
+slug: xaringan-nhs-r
+alias:
+  - /project/xaringan-nhs-r/
 featured: true
 draft: false
 tags:

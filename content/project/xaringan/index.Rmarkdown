@@ -4,6 +4,9 @@ subtitle: "A CSS theme contributed to the xaringan package to follow the NHS ide
 excerpt: "A CSS theme contributed to the xaringan package to follow the [NHS identity guidelines](https://www.england.nhs.uk/nhsidentity/identity-guidelines/)"
 date: 2020-12-09
 author: "Silvia Canelón"
+slug: xaringan
+alias:
+  - /project/xaringan/
 featured: true
 draft: false
 tags:

@@ -1,7 +1,9 @@
 ---
 title: An Antarctic Tour of the Tidyverse
 date: 2020-08-31T17:40:00
-slug: 2020-08-31-tour-of-the-tidyverse
+slug: tour-of-the-tidyverse
+alias:
+  - /talk/2020-08-31-tour-of-the-tidyverse/
 categories:
   - R
   - Education

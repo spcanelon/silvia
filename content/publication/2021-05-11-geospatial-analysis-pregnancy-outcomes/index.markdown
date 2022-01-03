@@ -3,6 +3,8 @@ title: "A Bayesian Hierarchical Modeling Framework for Geospatial Analysis of Ad
 author: "Cecilia Balocchi, Ray Bai, Jessica Liu, Silvia P. Canelón, Edward I. George, Yong Chen, Mary Regina Boland"
 date: '2021-05-11'
 slug: geospatial-analysis-pregnancy-outcomes
+alias:
+  - /publication/geospatial-analysis-pregnancy-outcomes/
 categories:
   - Research
 tags:
