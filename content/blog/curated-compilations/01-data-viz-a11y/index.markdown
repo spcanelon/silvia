@@ -3,6 +3,9 @@ title: "Resources for Data Viz Accessibility"
 weight: 1
 subtitle: "A selection of general and R-specific resources on how and why to make accessible data visualizations."
 excerpt: "A selection of general and R-specific resources on how and why to make accessible data visualizations."
+slug: data-viz-a11y
+aliases:
+    - /blog/2021-curated-compilations/01-data-viz-a11y/
 date: 2021-09-23
 lastmod: 2021-11-19
 draft: false

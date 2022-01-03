@@ -2,7 +2,10 @@
 title: 'Visualizing the Inside Journey of Recovery from Opioid Use Disorder'
 date: '2020-03-25'
 slug: data-hack-opioid
-categories: []
+alias:
+  - /publication/data-hack-opioid/
+categories:
+  - Education
 tags:
   - data hack
   - opioid
@@ -15,6 +18,7 @@ publication:
 publication_short:
 abstract: ''
 summary: 'Code for Philly 2020 Opioid Data Hackathon project to better understand recovery from opioid use disorder.'
+subtitle: 'Code for Philly 2020 Opioid Data Hackathon project to better understand recovery from opioid use disorder.'
 featured: no
 image:
   caption: '[Image credit: Silvia Canelón](featured.png)'
@@ -32,13 +36,17 @@ links:
   icon_pack: fas
   name: Data Hackathon Final Report
   url: https://github.com/CodeForPhilly/datahack2020/raw/master/analyses/team11/Final%20Report/2020_DataHackathon_Team11_FinalReport.pdf
+- icon: youtube
+  icon_pack: fab
+  name: Data Hackathon Presentation
+  url: https://youtu.be/ZN7HjZ6Glv4?t=8440
 - icon: images
   icon_pack: fas
-  name: Data Hackathon Presentation Slides
+  name: Data Hackathon Slides
   url: https://github.com/CodeForPhilly/datahack2020/raw/master/analyses/team11/Presentation/Team11_March17_Presentation.pptx
 - icon: images
   icon_pack: fas
-  name: Lab Meeting Presentation Slides
+  name: Lab Meeting Slides
   url: https://slides.com/spcanelon/2020datahack
 - icon: hand-holding-heart
   icon_pack: fas
@@ -46,8 +54,10 @@ links:
   url: https://codeforphilly.github.io/datahack2020/analyses/team11/
 ---
 
+[Referral process pipeline (PDF)](/project/2020-data-hack-opioid/pipeline.pdf)
+
 ```{r, eval=TRUE, echo=FALSE, fig.cap='Schematic representation of the Medication Assisted Treatment (MAT) referral process pipeline as part of the recovery for someone with Opioid Use Disorder (OUD)', fig.alt='Medication Assistment Treatment pipeline starting with the person with Opioid Use Disorder. They then might interact with the Payer (e.g. health insurance), a harm reduction center like Prevention Point Philadelphia, and/or a clinical setting like an Assessment Center or other location offering Withdrawal Management care. From there the person with Opioid Use Disorder might enter a Treatment Setting. This schematic depicts many possibilities and a very complex referral process that is difficult to navigate.'}
-knitr::include_graphics("featured.png")
+knitr::include_graphics("pipeline.png")
 ```
 
 

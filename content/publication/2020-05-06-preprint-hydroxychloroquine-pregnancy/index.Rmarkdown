@@ -2,6 +2,8 @@
 title: 'Is Hydroxychloroquine Safe During Pregnancy? Observations from Penn Medicine'
 date: '2020-05-06'
 slug: preprint-hydroxychloroquine-pregnancy
+alias:
+  - /publication/preprint-hydroxychloroquine-pregnancy/
 categories:
   - Research
 tags:
@@ -17,8 +19,8 @@ publication_types:
   - '3'
 publication: 'medRxiv'
 publication_short: 'medRxiv'
-abstract: 'A novel strain of coronavirus appeared in December 2019. Over the next few months, this novel coronavirus spread throughout the world, being declared a pandemic by the World Health Organization on March 11, 2020. As of this writing (March 28, 2020) over one hundred thousand individuals in the United States of America were confirmed cases. One way of treating the associated disease, COVID-19, is to reuse existing FDA-approved medications. One medication that has shown promise is hydroxychloroquine (HCQ). However, the utility and safety of HCQ among pregnant COVID-19 patients remains a concern.'
 summary: 'Preprint as a contribution from a rapid response exploration of hydroxychloroquine effects on pregnancy-related outcomes.'
+subtitle: 'Preprint as a contribution from a rapid response exploration of hydroxychloroquine effects on pregnancy-related outcomes.'
 featured: yes
 url_pdf:
 url_code: ~

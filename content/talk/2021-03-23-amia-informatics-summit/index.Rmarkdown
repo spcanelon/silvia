@@ -2,7 +2,9 @@
 title: "The Impact of Sickle Cell Status on Adverse Delivery Outcomes Using Electronic Health Record Data"
 author: "Silvia P. Canelón, Samantha Butts, Mary Regina Boland"
 date: 2021-03-22T11:30:00
-slug: 2021-03-22-amia-informatics-summit
+slug: amia-informatics-summit
+alias:
+  - /talk/2021-03-22-amia-informatics-summit/
 categories:
   - Research
 tags:
