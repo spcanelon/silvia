@@ -55,6 +55,8 @@ Specifically you will be able to migrate your blog, publications, and talks. If 
 </div>
 </details>
 
+If you like videos, Alison recorded a [walkthrough of this conversion process](https://youtu.be/oBtDgW9u7Nw) using Julia Silge's site as an example.
+
 **What _not_ to expect**
 
 A tutorial on how to create a Hugo Apéro site from scratch -- but don't worry! Alison covers this in a [workshop she gave for R-Ladies Tunis](https://alison.rbind.io/talk/2021-iyo-tunis/) and in the [Get started series of blog posts](https://hugo-apero-docs.netlify.app/start/) included in the documentation site.
@@ -123,13 +125,7 @@ The last piece of prework before we dive in is to update your local version of H
       HUGO_VERSION = "0.82.1"
     ```
 
-4. Update Hugo version on Netlify.com
-
-    <i class="fas fa-route pr2"></i>Site settings: Build & deploy > Environment > Environment variables > Edit variables
-
-<img src="img/netlify-hugo-version.png" alt="The environment variables section after clicking the Edit settings button. This section shows the key HUGO_VERSION has a value of 0.82.1 corresponding to the version of Hugo being used by blogdown. Both the key and the value fields are free text boxes. There are two buttons at the bottom of this section, Save and Cancel." style="display: block; margin: auto;" width="641">
-
-5. Run `blogdown::check_site()` to find any issues. In my case these checking functions found a Hugo version mismatch and I ended up having to specifically run `blogdown::install_hugo("0.82.1")` to resolve it.
+4. Run `blogdown::check_site()` to find any issues. In my case these checking functions found a Hugo version mismatch and I ended up having to specifically run `blogdown::install_hugo("0.82.1")` to resolve it.
 
     <details><summary>Console output</summary>
     
@@ -201,7 +197,7 @@ Error: Error building site: "/Users/silvia/Documents/Website/silvia/content/home
 
 Copy the shortcodes
 
-- From `themes/hugo-academic/layouts/shotcodes/` 
+- From `themes/hugo-academic/layouts/shortcodes/` 
 
 - To `layouts/shortcodes/`
 
