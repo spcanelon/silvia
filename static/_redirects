@@ -1,0 +1,14 @@
+# resources:
+# https://docs.netlify.com/routing/redirects/redirect-options/
+# https://explorers.netlify.com/learn/exploring-netlify-redirects/getting-started-configuring-redirects
+
+http://silvia.rbind.io/*            https://www.silviacanelon.com/:splat 301!
+https://silvia.rbind.io/*           https://www.silviacanelon.com/:splat 301!
+
+https://silvia.rbind.io/post/*      https://www.silviacanelon.com/blog/:splat 301!
+https://silvia.rbind.io/blog/*      https://www.silviacanelon.com/blog/:splat 301!
+https://silvia.rbind.io/talk/*      https://www.silviacanelon.com/talk/:splat 301!
+https://silvia.rbind.io/project/*   https://www.silviacanelon.com/project/:splat 301!
+
+http://silviacanelon.com/*          https://www.silviacanelon.com/:splat 301!
+https://silviacanelon.com/*         https://www.silviacanelon.com/:splat 301!
