@@ -32,7 +32,7 @@ links:
 - icon: images
   icon_pack: fas
   name: slides
-  url: https://spcanelon.github.io/tour-of-the-tidyverse
+  url: https://slides.silviacanelon.com/tour-of-the-tidyverse
 - icon: play-circle
   icon_pack: fas
   name: video
