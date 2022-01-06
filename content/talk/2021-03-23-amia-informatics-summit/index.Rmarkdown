@@ -32,7 +32,7 @@ links:
 - icon: images
   icon_pack: fas
   name: slides
-  url: bit.ly/AMIA-sickle-cell
+  url: https://slides.silviacanelon.com/2021-amia-informatics-summit
 - icon: youtube
   icon_pack: fab
   name: video
