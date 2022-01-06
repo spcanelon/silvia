@@ -34,7 +34,7 @@ links:
 - icon: images
   icon_pack: fas
   name: diapositivas
-  url: https://spcanelon.github.io/xaringan-rladies-xalapa/diapositivas/introduccion-xaringan.html
+  url: https://slides.silviacanelon.com/introduccion-xaringan
 - icon: github
   icon_pack: fab
   name: repositorio
@@ -42,7 +42,7 @@ links:
 - icon: file-code
   icon_pack: fas
   name: plantilla Rmd para R-Ladies Xalapa
-  url: https://github.com/spcanelon/xaringan-rladies-xalapa/blob/master/tutorial/ejemplo-de-diapositivas.Rmd
+  url: https://github.com/spcanelon/xaringan-rladies-xalapa/blob/main/tutorial/ejemplo-de-diapositivas.Rmd
 ---
 
 ## Description
