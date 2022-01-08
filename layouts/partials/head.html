@@ -19,4 +19,10 @@
   <!-- toc.js -->
   {{ $tocJs := resources.Get "js/toc.js" | js.Build "toc.js" | minify | fingerprint }}
   <script src="{{ $tocJs.RelPermalink }}" type="text/javascript"></script>
+  <script 
+  async 
+  defer 
+  data-domains="silviacanelon.com"
+  data-website-id="959d1d62-7a8b-41cd-92ca-be0884ebdf46" 
+  src="https://silvia.up.railway.app/umami.js"></script>
 </head>
