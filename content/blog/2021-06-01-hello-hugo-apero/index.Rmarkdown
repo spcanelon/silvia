@@ -49,7 +49,6 @@ htmltools::tagList(
 }
 ```
 
-
 ## What to expect
 
 By the end of the tutorial you will have switched your website from using the Hugo Academic theme to using the new [Hugo Apéro theme designed by Alison Hill](https://alison.rbind.io/project/hugo-apero/) <i class="fas fa-glass-cheers pr2"></i> 
@@ -95,7 +94,6 @@ Create a new Netlify deploy from your `apero` branch by enabling branch deploys 
 ```{r, eval=TRUE, out.width="75%", fig.cap="Netlify site settings for deploy contexts", fig.align='center', fig.alt="The deploy contexts section after clicking the Edit settings button. This section shows three settings that can be edited. The first is the production branch which is set to 'main' in a free text box. The second is deploy previews which is a radio button set to 'any pull request against your production branch/branch deploy branches (as opposed to 'none'). The third is branch deploys which is a radio button set to 'all' (as opposed to 'none' and 'let me add individual branches'). There are two buttons at the bottom of this section, Save and Cancel."}
 knitr::include_graphics("img/netlify-branch-deploy.png")
 ```
-
 
 Your new apero branch deploy at this point is an independent copy of your current website so from here on out you can make changes freely without affecting anything in your main branch :tada:
 
