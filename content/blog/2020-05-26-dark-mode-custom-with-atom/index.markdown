@@ -32,7 +32,7 @@ links:
   - icon: file-code
     icon_pack: far
     name: CSS
-    url: https://github.com/spcanelon/silvia/blob/master/assets/scss/custom.scss
+    url: https://github.com/spcanelon/silvia/blob/hugo-academic/assets/scss/custom.scss
 ---
 
 <style>.color-preview {

@@ -6,6 +6,7 @@ date: '2021-03-16'
 slug: deploying-xaringan-slides
 alias:
   - /blog/deploying-xaringan-slides/
+  - /blog/2021-03-16-deploying-xaringan-slides/
 categories:
   - R
   - Tutorial
@@ -28,7 +29,7 @@ links:
   - icon: calendar-check
     icon_pack: fas
     name: R-Ladies Talk
-    url: https://silvia.rbind.io/talk/2021-03-16-xaringan-deploy-demo/
+    url: /talk/2021-xaringan-deploy-demo/
   - icon: github
     icon_pack: fab
     name: R-Ladies template files

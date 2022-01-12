@@ -11,6 +11,7 @@ tags:
   - R
 slug: rstudio-instructor-certification-tidyverse
 alias:
+  - /blog/2020-10-07-rstudio-instructor-certification-tidyverse/
   - /blog/rstudio-instructor-certification-tidyverse/
 subtitle: An overview of the RStudio Instructor certification process and collection of resources to support anyone on their certification journey.
 summary: An overview of the RStudio Instructor certification process and collection of resources to support anyone on their certification journey.
@@ -35,7 +36,7 @@ links:
   - icon: file-code
     icon_pack: far
     name: Tidyverse exam v2.0 solution
-    url: https://silvia.rbind.io/2020-10-07-rstudio-instructor-certification-tidyverse/tidyverse-sample-exam-solutions.html
+    url: /blog/2020-rstudio-instructor-certification-tidyverse/tidyverse-sample-exam-solutions.html
 ---
 
 <script src="{{< blogdown/postref >}}index_files/fitvids/fitvids.min.js"></script>

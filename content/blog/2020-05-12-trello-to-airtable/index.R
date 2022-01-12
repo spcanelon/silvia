@@ -1,4 +1,4 @@
-## ----setup, echo=FALSE--------------------------------------------------------
+## ----setup, echo=FALSE-----------------------------------------------------------------
 htmltools::tagList(
   xaringanExtra::use_clipboard(
     button_text = "<i class=\"fa fa-clipboard\"></i> Copy Code",
@@ -10,34 +10,29 @@ htmltools::tagList(
 knitr::opts_chunk$set(eval = FALSE)
 
 
-## ---- include = FALSE---------------------------------------------------------
+## ---- include = FALSE------------------------------------------------------------------
+library(emo)
+
 knitr::opts_chunk$set(warning = FALSE, message = FALSE,
                       eval=FALSE)
 
 
-## ----import, results=FALSE----------------------------------------------------
-# clearing environment
-rm(list = ls())
-
+## ----import, results=FALSE-------------------------------------------------------------
 # loading libraries
 library(jsonlite)
 library(lubridate)
 library(tidyverse)
 
 
-## ---- eval=FALSE,include=FALSE------------------------------------------------
-## library(emo)
-
-
-## ---- results=FALSE-----------------------------------------------------------
+## ----import-json, results=FALSE--------------------------------------------------------
 trello <- stream_in(file("program-mgmt.json")) # produces a data frame
 
 
-## -----------------------------------------------------------------------------
+## ----glimpse-trello--------------------------------------------------------------------
 glimpse(trello)
 
 
-## ----tibble-time, paged.print=TRUE--------------------------------------------
+## ----flatten-and-wrangle, paged.print=TRUE---------------------------------------------
 # selecting cards information
 cards <- trello$cards # list of 1
 
@@ -55,7 +50,7 @@ cards_trim <- cards_flat_tbl %>%
   arrange(desc(dateLastActivity))
 
 
-## ----labels-------------------------------------------------------------------
+## ----wrangle-labels--------------------------------------------------------------------
 # extracting labels details
 labels_info <- cards_trim %>%
   select(id, idShort, labels) %>%
@@ -76,7 +71,7 @@ knitr::kable(labels_info %>% head(n = 3L))
 ct_labels <- left_join(cards_trim %>% select(-labels), labels_info %>% select(-labelList))
 
 
-## ----eval=FALSE---------------------------------------------------------------
+## ---- eval=FALSE-----------------------------------------------------------------------
 ## # expanding the attachment lists into separate url records
 ## att_urls <- ct_labels %>%
 ##   select(idShort, attachments) %>%
@@ -102,7 +97,7 @@ ct_labels <- left_join(cards_trim %>% select(-labels), labels_info %>% select(-l
 ## }
 
 
-## ----eval=FALSE---------------------------------------------------------------
+## ---- eval=FALSE-----------------------------------------------------------------------
 ## # preparing data frame for export to CSV
 ## attachment_errors <- att_urls %>%
 ##   filter(attachmentError == TRUE) %>%
@@ -112,7 +107,7 @@ ct_labels <- left_join(cards_trim %>% select(-labels), labels_info %>% select(-l
 ## write.csv(attachment_errors, file = "attachment_errors.csv")
 
 
-## ---- eval=FALSE--------------------------------------------------------------
+## ----attachment-dir, eval=FALSE--------------------------------------------------------
 ## # creates individual directory folders for each card id
 ## for (i in 1:length(att_urls$url)){
 ##   dirAttachments <- paste(dirFiles, "attachments", att_urls$idShort[i], sep = "/")
@@ -122,13 +117,13 @@ ct_labels <- left_join(cards_trim %>% select(-labels), labels_info %>% select(-l
 ## }
 
 
-## ----eval=FALSE---------------------------------------------------------------
+## ----attachment-var, eval=FALSE--------------------------------------------------------
 ## # converts the attachment column to a categorical variable in the main cards+labels data frame
 ## ct_labels <- ct_labels %>%
 ##   mutate(attachments = ifelse(idShort %in% att_urls$idShort, TRUE, FALSE))
 
 
-## -----------------------------------------------------------------------------
+## ----select-list-info------------------------------------------------------------------
 # selecting lists information
 lists <- trello$lists # list of 1 data frame
 glimpse(lists)
@@ -147,7 +142,7 @@ ct_labels_list <- left_join(ct_labels, lists_trim) %>%
   select(id:shortUrl, labelList_tidy:nameList, closed, closedList)
 
 
-## ----export-prep, paged.print=TRUE--------------------------------------------
+## ----export-prep, paged.print=TRUE-----------------------------------------------------
 # changing variable names
 tidy_cards <- ct_labels_list %>%
   select(-id, -idList, -closedList) %>%
@@ -161,7 +156,7 @@ tidy_cards <- ct_labels_list %>%
          Done = ifelse(is.na(Date_Due) == TRUE, 'NA', Done)) # ensures only undone tasks assigned a due date get marked as "FALSE"
 
 
-## ----collapse=TRUE------------------------------------------------------------
+## ----collapse=TRUE---------------------------------------------------------------------
 # determining the number of unique tasks
 length(unique(tidy_cards$Task_ID))
 
@@ -169,6 +164,6 @@ length(unique(tidy_cards$Task_ID))
 glimpse(tidy_cards)
 
 
-## ----export-csv, eval=FALSE---------------------------------------------------
+## ----export-csv, eval=FALSE------------------------------------------------------------
 ## write.csv(tidy_cards, file = "tidy_cards.csv")
 
