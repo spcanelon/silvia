@@ -25,10 +25,10 @@ links:
 - icon: map-marked-alt
   icon_pack: fas
   name: Interactive Map
-  url: CCDSips2019.html
+  url: /blog/2019-ccd-sips/CCDSips2019.html
 ---
 
-I used **R** to play around with **webscraping** and create an [interactive map](https://spcanelon.github.io/CCDSips2019.html/) showing restaurants participating in Philly’s 2019 [Center City District Sips](https://centercityphila.org/explore-center-city/ccdsips). Center City Sips is a series of summer Wednesday evenings filled with **happy hour specials**.
+I used **R** to play around with **webscraping** and create an [interactive map](/blog/2019-ccd-sips/CCDSips2019.html) showing restaurants participating in Philly’s 2019 [Center City District Sips](https://centercityphila.org/explore-center-city/ccdsips). Center City Sips is a series of summer Wednesday evenings filled with **happy hour specials**.
 
 This mini-project was motivated by two of my close friends' frustration with the website shortcomings. **The information was presented beautifully, but there was no map view**! This made it difficult to figure out what happy hours you could check out nearby.
 

@@ -32,15 +32,15 @@ links:
   - icon: file-code
     icon_pack: far
     name: R script
-    url: /blog/2020-05-trello-to-airtable/index.R
+    url: "https://github.com/spcanelon/silvia/blob/main/content/blog/2020-05-12-trello-to-airtable/index.R"
   - icon: file-code
     icon_pack: far
     name: R Markdown
-    url: /blog/2020-05-trello-to-airtable/index.Rmd
+    url: "https://github.com/spcanelon/silvia/blob/main/content/blog/2020-05-12-trello-to-airtable/index.Rmarkdown"
   - icon: table
     icon_pack: fas
     name: JSON example file
-    url: /blog/2020-05-trello-to-airtable/program-mgmt.json
+    url: /blog/2020-trello-to-airtable/program-mgmt.json
 ---
 <script src="{{< blogdown/postref >}}index_files/clipboard/clipboard.min.js"></script>
 <link href="{{< blogdown/postref >}}index_files/xaringanExtra-clipboard/xaringanExtra-clipboard.css" rel="stylesheet" />
@@ -64,13 +64,14 @@ The code provided in the R Markdown file requires the `tidyverse`, `JSONlite`, a
 - `attachments` folder containing any content you've attached to your cards using a URL. 
 - `attachment_errors.csv` file containing the card name, or task, as well as the URL/file path of any attachments that failed to download (i.e. links to files stored locally), so that you exactly which links you'll need to locate manually.
 
-**By the end of the tutorial** you'll have imported a CSV file into Airtable _**and**_ configured Airtable to match your Trello board. Specifically, you'll be able to migrate **labels**, **lists**, **attachments**, **card names**, **card descriptions**, **card due dates**, **date last modified**, and whether the cards were marked **"complete" or archived.**
+By the end of the tutorial you'll have imported a CSV file into Airtable _**and**_ configured Airtable to match your Trello board. Specifically, you'll be able to migrate **labels**, **lists**, **attachments**, **card names**, **card descriptions**, **card due dates**, **date last modified**, and whether the cards were marked **"complete" or archived.**
 
-## What _not_ to expect
-- Rendered markdown from your card descriptions. Airtable _does_ support markdown in its "long text" field type, but it doesn't automatically render from imported text.
+**What _not_ to expect**
+
+- Rendered markdown from your card descriptions. Airtable _does_ support markdown in its "long text" field type, but it does _not_ automatically render from imported text.
 
 # Choose your own adventure
-1. **Download the R Markdown file** linked above <i class="fas fa-hand-point-up"></i> and run with it. Jump down to section [Formatting in Airtable](#formatting-in-airtable) for pointers on how to get your Airtable base configured like your Trello board.
+1. **Download the R Markdown file or R script** linked above <i class="fas fa-hand-point-up"></i> and run with it. Jump down to section [Formatting in Airtable](#formatting-in-airtable) for pointers on how to get your Airtable base configured like your Trello board.
 2. **Keep reading** for a code-through of the R Markdown file, using the example featured in the picture above, with tips and resources along the way.
 
 # Follow along with me!
@@ -87,16 +88,11 @@ Last but not least -- we'll be keeping things tidy, with the help of the [**tidy
 
 
 ```r
-# clearing environment
-rm(list = ls())
-
 # loading libraries
 library(jsonlite)
 library(lubridate)
 library(tidyverse)
 ```
-
-
 
 
 ```r

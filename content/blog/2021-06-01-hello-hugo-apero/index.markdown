@@ -6,6 +6,7 @@ date: '2021-06-01'
 slug: hello-hugo-apero
 alias:
   - /blog/hello-hugo-apero/
+  - /blog/2021-06-01-hello-hugo-apero/
 categories:
   - R
   - Website
