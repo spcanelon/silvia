@@ -61,7 +61,7 @@ relativeURLs = true
   # Default image for social sharing and search engines. 
   # Place image file in `static` folder and specify image name here.
   #sharing_image = "/img/papillons.jpg"
-  sharing_image = "/img/silvia-social.png"
+  sharing_image = "/img/LakePink_Social.png"
   # Twitter username (without @). Used when a visitor shares your site on Twitter.
   twitter = "spcanelon"
   
