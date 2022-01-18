@@ -1,3 +1,5 @@
+<!--Source: https://github.com/presentable-user2021/website/pull/30/commits/23cf49bcf818c9ccc0b3682d75d64546882a8529-->
+
 {{ $permalink := .Permalink }}
 {{ $page := . }}                           <!--save current page-->
 {{ $section := $page.CurrentSection }}     <!--save branch section-->
@@ -45,33 +47,38 @@
 <!--sharing images-->
 <!--adapted from: https://github.com/kaushalmodi/hugo-bare-min-theme/blob/6195b5e377c56791ba4067ac0ec5286bf336aedf/layouts/partials/twitter_cards.html-->
 {{/* If images are specified as list variable in section front matter. */}}
-{{- with $.Params.images -}}
-    <meta name="twitter:card" content="summary_large_image"/>
-    {{- $image := (index . 0) -}}
-    {{- $image_link_absolute := (findRE "^/" $image) -}}
-    {{- if $image_link_absolute -}}
-        <meta name="twitter:image" content="{{- $image | absURL -}}"/>
-    {{- else -}}
-        <meta name="twitter:image" content="{{- (printf "%s%s" $permalink $image) -}}"/>
-    {{- end -}}
-<!--using featured images-->
-{{ else -}}
-    <!--featured image for the leaf bundle-->
-    {{- $images := $page.Resources.ByType "image" -}}
-    {{ $leaf := $images.GetMatch "*feature*" }}
-    {{- $hex := $images.GetMatch "*hex*" -}}
-    {{- $card := cond (ne $hex nil) $hex $leaf -}}
-    <!--sidebar image for the branch bundle-->
-    {{ $branch := ($section.Resources.ByType "image").GetMatch "*sidebar*" }}
-    {{- $card := cond (ne $card nil) $card $branch -}}
-    {{ with $card }}
-        <meta property="og:image" content="{{ .Permalink }}" >
-        <meta property="twitter:card" content="{{ if (ne $hex nil) }}summary{{ else }}summary_large_image{{ end }}">
-        <meta name="twitter:image" content="{{ .Permalink }}" >
-    <!--if no featured, use the site card-->
-    {{ else }}
-        <meta property="og:image" content="{{ $site_card }}" >
-        <meta property="twitter:card" content="summary_large_image">
-        <meta name="twitter:image" content="{{ $site_card }}" >
-    {{ end }}
+{{- with $.Params.sharing_image -}}
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image" content="{{- . | absURL -}}"/>
+{{- else -}}
+  {{- with $.Params.images -}}
+      <meta name="twitter:card" content="summary_large_image"/>
+      {{- $image := (index . 0) -}}
+      {{- $image_link_absolute := (findRE "^/" $image) -}}
+      {{- if $image_link_absolute -}}
+          <meta name="twitter:image" content="{{- $image | absURL -}}"/>
+      {{- else -}}
+          <meta name="twitter:image" content="{{- (printf "%s%s" $permalink $image) -}}"/>
+      {{- end -}}
+  <!--using featured images-->
+  {{ else -}}
+      <!--featured image for the leaf bundle-->
+      {{- $images := $page.Resources.ByType "image" -}}
+      {{ $leaf := $images.GetMatch "*feature*" }}
+      {{- $hex := $images.GetMatch "*hex*" -}}
+      {{- $card := cond (ne $hex nil) $hex $leaf -}}
+      <!--sidebar image for the branch bundle-->
+      {{ $branch := ($section.Resources.ByType "image").GetMatch "*sidebar*" }}
+      {{- $card := cond (ne $card nil) $card $branch -}}
+      {{ with $card }}
+          <meta property="og:image" content="{{ .Permalink }}" >
+          <meta property="twitter:card" content="{{ if (ne $hex nil) }}summary{{ else }}summary_large_image{{ end }}">
+          <meta name="twitter:image" content="{{ .Permalink }}" >
+      <!--if no featured, use the site card-->
+      {{ else }}
+          <meta property="og:image" content="{{ $site_card }}" >
+          <meta property="twitter:card" content="summary_large_image">
+          <meta name="twitter:image" content="{{ $site_card }}" >
+      {{ end }}
+  {{- end -}}
 {{- end -}}
