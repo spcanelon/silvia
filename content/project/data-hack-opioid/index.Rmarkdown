@@ -10,23 +10,8 @@ tags:
   - data hack
   - opioid
 author: "Pete Arriaza, Silvia Canelón, Vince Giorno, Alyssa Hernandez, Spriha Jha, Adnette Kamugisha, Selah Lynch, Ben Miller, Laura Mullin, Jessica Streeter, Catherine Weiss"
-doi: ''
-publishDate: '2020-03-25'
-publication_types:
-  - '4'
-publication:
-publication_short:
-abstract: ''
 summary: 'Code for Philly 2020 Opioid Data Hackathon project to better understand recovery from opioid use disorder.'
 subtitle: 'Code for Philly 2020 Opioid Data Hackathon project to better understand recovery from opioid use disorder.'
-featured: no
-image:
-  caption: '[Image credit: Silvia Canelón](featured.png)'
-  placement: 3
-  focal_point: 'Center'
-  preview_only: no
-projects: []
-slides: ''
 links:
 - icon: github
   icon_pack: fab
