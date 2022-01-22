@@ -1,0 +1,281 @@
+---
+title: "Hello Umami: Deploying a Privacy-Friendly Open Source Tool for Web Analytics"
+#layout: single
+layout: single-sidebar
+date: '2022-01-18'
+slug: hello-umami
+alias:
+categories:
+  - R
+  - Website
+tags:
+  - R
+  - blogdown
+  - Hugo
+subtitle: 'A use case for adding Umami web analytics to a blogdown site and deploying using Railway.'
+summary: 'A use case for adding Umami web analytics to a blogdown site and deploying using Railway.'
+lastmod: '2022-01-18'
+featured: yes
+draft: no
+links:
+  - icon: chart-line
+    icon_pack: fas
+    name: Umami Docs
+    url: umami.is
+---
+
+```{r setup, echo=FALSE, warning=FALSE, message=FALSE}
+library(xaringanExtra)
+library(tidyverse)
+library(rtweet)
+library(tweetrmd)
+
+knitr::opts_chunk$set(eval=TRUE, 
+                      echo=FALSE,
+                      fig.align = "center")
+
+options(htmltools.dir.version = TRUE)
+
+htmltools::tagList(
+  xaringanExtra::use_clipboard(
+    button_text = "<i class=\"fa fa-clipboard\"></i> Copy Code",
+    success_text = "<i class=\"fa fa-check\" style=\"color: #90BE6D\"></i> Copied!",
+  ),
+  rmarkdown::html_dependency_font_awesome()
+)
+```
+
+```{css, eval=TRUE}
+.page-main img {
+  box-shadow: 0px 0px 2px 2px rgba( 0, 0, 0, 0.2 );
+}
+
+.tweet-timestamp {
+  display: block;
+  position: relative;
+  font-size: 1em;
+}
+.tweet-timestamp a .tweet-timestamp__text {
+  color: var(--text-light);
+}
+.tweet-timestamp a:hover .tweet-timestamp__text {
+  color: var(--text-mild);
+}
+.tweet-timestamp .tweet-link > i {
+	display: inline-block;
+	position: absolute;
+  left: -1.5em;
+  top: 3px;
+}
+```
+
+## What to expect
+
+A brief walkthrough of the steps I took to deploy Umami web analytics for my personal website, as documented in a short Twitter thread.
+
+<!-- Code modified from https://github.com/gadenbuie/garrickadenbuie-com/blob/main/content/blog/2020/setting-up-a-new-macbook-pro/index.Rmarkdown -->
+
+```{r eval=FALSE}
+first_tweet_id <- "1480703744220319750"
+last_tweet_id <- "1483512641159147531"
+
+lookup_thread <- function(status_id, tweets = NULL) {
+  tweet <- rtweet::lookup_tweets(status_id)
+  tweets <- dplyr::bind_rows(tweet, tweets)
+  if (is.na(tweet$reply_to_status_id)) {
+    return(tweets)
+  } else {
+    lookup_thread(tweet$reply_to_status_id, tweets)
+  }
+}
+
+thread <- lookup_thread(last_tweet_id)
+thread$text_markdown <- purrr::map_chr(thread$status_url, tweetrmd::tweet_markdown)
+saveRDS(thread, "umami-deploy-thread.rds")
+```
+
+```{r trim-thread}
+thread <- readRDS("umami-deploy-thread.rds")
+
+lookup_urls <-
+  bind_rows(
+    thread %>%
+      select(short = media_t.co, long = media_url) %>%
+      unnest(everything()),
+    thread %>%
+      select(short = urls_t.co, long = urls_expanded_url) %>%
+      unnest(everything())
+  ) %>%
+  drop_na()
+```
+
+```{r functions}
+tweet_plain_markdown <- function(x) {
+  x <- sub("(\\[pic.+?)?\n>\n> --- Silvia.+$", "", x)
+  x <- strsplit(x, "\n")[[1]]
+  # clean blockquote markdown
+  x <- sub("^> ", "", x)
+  # twitter made this next one a linked URL but it shouldn't be
+  x <- sub("<https://t.co/FsubHkjqKd>", "https://t.co/FsubHkjqKd", x, fixed = TRUE)
+  # full inline links on new lines
+  x <- gsub("([^ ])<http", "\\1  \n<http", x)
+  # re-split because we may have added new lines
+  x <- strsplit(paste(x, collapse = "\n"), "\n")[[1]]
+  # # this one thing should be inline code
+  # x <- sub("brew install \\<x\\>", "`brew install <x>`", x, fixed = TRUE)
+  # # code chunks
+  # x <- gsub("^\\s*(xcode|brew (cask|install|tap|search)|npm)(.+)$",
+  #           "```\n\\1\\3\n```", x)
+  # x <- gsub("^\\s*(fish \\\\# to start|fisher install IlanCosman)(.+)$", "```\n\\1\\2\n```", x)
+  # # r code chunks
+  # x <- gsub("^\\s*(install\\.packages|pak::)(.+)$", "```r\n\\1\\2\n```", x)
+  x <- paste(x, collapse = "\n")
+  # collapse code chunks together
+  gsub("```\n```r?", "", x)
+}
+
+prepend_status_url <- function(text_markdown, status_url, created_at) {
+  ts <- as.POSIXct(created_at)
+  paste0(
+    '<span class="tweet-timestamp">',
+    '<a class="tweet-link" href="', 
+    status_url, '" title="', 
+    created_at, '" target="_blank" rel="noopener noreferrer">',
+    '<span class="tweet-timestamp__text">',
+    strftime(ts, "%I:%M%P", tz = "America/New_York"),
+    '<i class="pl2 fab fa-twitter fa-fw"></i>',
+    '</span></a></span>',
+    text_markdown
+  )
+}
+
+append_images <- function(text_markdown, ext_media_url) {
+  if (length(ext_media_url) == 1 && is.na(ext_media_url)) {
+    return(text_markdown)
+  }
+  if (!dir.exists("img")) {
+    dir.create("img")
+  }
+  for (ext_url in ext_media_url) {
+    image_path <- file.path("img", basename(ext_url))
+    if (!file.exists(image_path)) {
+      download.file(ext_url, image_path)
+    }
+    text_markdown <- paste0(text_markdown, "\n\n![](", image_path, ")")
+  }
+  text_markdown
+}
+
+add_headings <- function(text_markdown, .row) {
+  headings <- c(
+    "2" = "Installation",
+    "3" = "Railway",
+    "5" = "Tracker Configuration",
+    "6" = "Pricing",
+    "8" = "GoatCounter",
+    "9" = "Updating Umami"
+  )
+  .row <- paste(.row)
+  if (.row %in% names(headings)) {
+    text_markdown <- paste0("\n\n## ", headings[.row], "\n\n", text_markdown)
+  }
+  text_markdown
+}
+```
+
+
+```{r test-functions, eval=FALSE}
+thread %>% 
+  mutate(
+    text_markdown = map_chr(text_markdown,
+                            tweet_plain_markdown)
+  )
+
+thread[1,] %>%
+  mutate(text_markdown = tweet_plain_markdown(text_markdown),
+         text_markdown = prepend_status_url(
+           text_markdown,
+           status_url,
+           created_at),
+         # text_markdown = map2_chr(
+         #   text_markdown,
+         #   status_url,
+         #   created_at),
+         # text_markdown = imap(
+         #   text_markdown,
+         #   add_headings)
+         ) %>%
+  pull(text_markdown) %>% 
+  paste(collapse = "\n\n")
+
+```
+
+
+
+```{r use-functions}
+thread_markdown <-
+  thread %>%
+  mutate(
+    text_markdown = map_chr(
+      text_markdown, tweet_plain_markdown),
+    text_markdown = prepend_status_url(
+      text_markdown, status_url, created_at),
+    text_markdown = map2_chr(
+      text_markdown, ext_media_url, append_images),
+    text_markdown = imap(
+      text_markdown, add_headings)
+    ) %>%
+  pull(text_markdown) %>%
+  paste(collapse = "\n\n")
+
+for (i in seq_len(nrow(lookup_urls))) {
+  thread_markdown <- gsub(
+    lookup_urls$short[[i]], 
+    lookup_urls$long[[i]], 
+    thread_markdown, 
+    fixed = TRUE)
+}
+
+# the markdown tweet text escapes some weird things that I need to unescape
+thread_markdown <- gsub("\\\\([.\n<>_\"'`#~-])",
+                        "\\1", 
+                        thread_markdown)
+
+# but some __do__ need to be escaped
+thread_markdown <- gsub("  \n", "  \\\n",
+                        thread_markdown)
+
+thread_markdown <- sub("command line utility <x>",
+                       "command line utility `<x>`",
+                       thread_markdown)
+
+# inline referenced tweets
+# thread_markdown <- 
+#   stringr::str_replace_all(
+#     thread_markdown,
+#     pattern = "<https://twitter.com/.+?/status/\\d+?>",
+#     replacement = function(status_url) {
+#       paste0("\n\n",
+#              tweetrmd::tweet_markdown(
+#                gsub("^<|>$", "", status_url)), 
+#              "\n")
+#     }
+#   )
+
+# fix spelling mistakes and other small things
+# thread_markdown <- stringr::str_replace_all(
+#   thread_markdown,
+#   c(
+#     "Tog get" = "To get",
+#     "Big Sug" = "Big Sur",
+#     "(🍎.+?)\n" = "\\1  \n",
+#     "((↖️|↗️|↙️|↘️).+?)\n" = "\\1  \n",
+#     "(\\\\\\*reboots\\\\\\*)\n" = "\\1  \n",
+#     "\\{pak\\}" = "<span class=\"pkg\">[pak]</span>",
+#     "\\{tidyverse\\}" = "<span class=\"pkg\">[tidyverse]</span>"
+#   )
+# )
+```
+
+`r thread_markdown`
+
