@@ -24,8 +24,8 @@ links:
   url: https://rohanalexander.com/toronto_data_workshop.html#current-schedule
 - icon: images
   icon_pack: fas
-  name: slides (coming soon!)
-  url: https://tiny.cc/tdw-ehr-lessons
+  name: slides
+  url: https://slides.silviacanelon.com/2022-tdw-ehr-lessons
 - icon: youtube
   icon_pack: fab
   name: video (coming soon!)
