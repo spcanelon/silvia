@@ -28,6 +28,6 @@ links:
   url: https://slides.silviacanelon.com/2022-tdw-ehr-lessons
 - icon: youtube
   icon_pack: fab
-  name: video (coming soon!)
-  url: ""
+  name: video
+  url: https://youtu.be/4M8Op1oCN5U
 ---
