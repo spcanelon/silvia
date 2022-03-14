@@ -11,8 +11,6 @@ tags:
   - sickle cell disease
 doi: ''
 publishDate: '2021-11-24T10:00:00-00:00'
-publication_types:
-  - '2'
 publication: 'JAMA Network Open'
 summary: 'Retrospective cohort study finding both sickle cell trait and disease to be associated with an increased risk of stillbirth, suggesting that sickle cell carriers would benefit from additional risk assessment during pregnancy.'
 subtitle: 'Retrospective cohort study finding both sickle cell trait and disease to be associated with an increased risk of stillbirth, suggesting that sickle cell carriers would benefit from additional risk assessment during pregnancy.'
@@ -21,7 +19,7 @@ links:
 - icon: doi
   icon_pack: ai
   name: Publication
-  url: doi.org/10.1001/jamanetworkopen.2021.34274
+  url: https://doi.org/10.1001/jamanetworkopen.2021.34274
 - icon: file-word
   icon_pack: fas
   name: Supplemental Content (Accessible DocX)
