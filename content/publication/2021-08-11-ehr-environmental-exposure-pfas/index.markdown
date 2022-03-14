@@ -13,8 +13,6 @@ tags:
   - PFAS
 doi: ''
 publishDate: '2021-08-11T10:00:00-05:00'
-publication_types:
-  - '2'
 publication: 'npj Digital Medicine'
 summary: 'Proof-of-concept study detailing how Electronic Health Record (EHR) data can be leveraged to study the impacts of environmental disasters like widespread exposure perfluoroalkyl substances (PFAS).'
 subtitle: 'Proof-of-concept study detailing how Electronic Health Record (EHR) data can be leveraged to study the impacts of environmental disasters like widespread exposure to perfluoroalkyl substances (PFAS).'
