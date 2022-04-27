@@ -24,15 +24,15 @@ links:
 - icon: file-pdf
   icon_pack: fas
   name: poster
-  url: /talk/2022-04-27-dbei-research-day/Poster.pdf
+  url: /talk/2022-dbei-research-day/Poster.pdf
 - icon: play-circle
   icon_pack: fas
   name: flashtalk
-  url: https://www.dbei.med.upenn.edu/2022ResearchDay/canelon
-- icon: images
+  url: https://www.dbei.med.upenn.edu/2022ResearchDay/silvia-canel%C3%B3n
+- icon: file-download
   icon_pack: fas
   name: slides (pptx)
-  url: /talk/2022-04-27-dbei-research-day/CCEBDBEI-ResearchDay-slides.pptx
+  url: /talk/2022-dbei-research-day/DBEICCEB-ResearchDay-slides.pptx
 ---
 
 ![Poster thumbnail](PosterThumbnail.png)
