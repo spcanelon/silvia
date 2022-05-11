@@ -75,12 +75,16 @@ relativeURLs = true
   # the custom scss file must be in the assets/ folder
   # add the filename name here, without extension
   # to use hex colors instead of named tachyons colors, include "hex" in filename
+  # Note from Silvia: I designed this site's custom theme for me, 
+  # please do not reuse it without permission:
   custom_theme = "silvia-hex"
   
   # use an embedded font-family
   # serif options: Fraunces / EB Garamond / Bitter
   # sans-serif options: Commissioner / Alegreya Sans / Metropolis / Red Hat Text
   # if you import your own fonts, name them here too
+  # Note from Silvia: I designed this site's custom theme for me, 
+  # please do not reuse it without permission
   customtextFontFamily = "Red Hat Text"
   customheadingFontFamily = "Petrona" # Petrona
   # alternatively, leave empty and select basic font options: sans-serif or serif
