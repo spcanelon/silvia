@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="generator" content="quarto-0.9.230">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>webscraping</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+
+  <script src="webscraping_files/libs/clipboard/clipboard.min.js"></script>
+  <script src="webscraping_files/libs/quarto-html/quarto.js"></script>
+  <script src="webscraping_files/libs/quarto-html/popper.min.js"></script>
+  <script src="webscraping_files/libs/quarto-html/tippy.umd.min.js"></script>
+  <script src="webscraping_files/libs/quarto-html/anchor.min.js"></script>
+  <link href="webscraping_files/libs/quarto-html/tippy.css" rel="stylesheet">
+  <link id="quarto-text-highlighting-styles" href="webscraping_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+  <script src="webscraping_files/libs/bootstrap/bootstrap.min.js"></script>
+  <link href="webscraping_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+  <link href="webscraping_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <script src="webscraping_files/libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+  <script src="webscraping_files/libs/jquery-1.12.4/jquery.min.js"></script>
+  <link href="webscraping_files/libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+  <script src="webscraping_files/libs/leaflet-1.3.1/leaflet.js"></script>
+  <link href="webscraping_files/libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+  <script src="webscraping_files/libs/proj4-2.6.2/proj4.min.js"></script>
+  <script src="webscraping_files/libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+  <link href="webscraping_files/libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+  <script src="webscraping_files/libs/leaflet-binding-2.0.4.1/leaflet.js"></script>
+  <script src="webscraping_files/libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
+  <script src="webscraping_files/libs/leaflet-providers-plugin-2.0.4.1/leaflet-providers-plugin.js"></script>
+  <link href="webscraping_files/libs/leaflet-awesomemarkers-2.0.3/leaflet.awesome-markers.css" rel="stylesheet">
+  <script src="webscraping_files/libs/leaflet-awesomemarkers-2.0.3/leaflet.awesome-markers.min.js"></script>
+  <link href="webscraping_files/libs/fontawesome-4.7.0/font-awesome.min.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body class="fullcontent">
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  
+</div>
+
+<main class="content" id="quarto-document-content">
+<header id="title-block-header" class="quarto-title-block default">
+
+<div class="quarto-title"><h1 class="title display-7">webscraping</h1></div></header>
+<section id="checking-the-page" class="level2">
+<h2 class="anchored" data-anchor-id="checking-the-page">Checking the page</h2>
+<div class="cell">
+<div class="cell-output-stderr">
+<pre><code>Warning in request_handler_handler(request = request, handler = on_not_found, :
+Event: on_not_found</code></pre>
+</div>
+<div class="cell-output-stderr">
+<pre><code>Warning in request_handler_handler(request = request, handler =
+on_file_type_mismatch, : Event: on_file_type_mismatch</code></pre>
+</div>
+<div class="cell-output-stderr">
+<pre><code>Warning in request_handler_handler(request = request, handler =
+on_suspect_content, : Event: on_suspect_content</code></pre>
+</div>
+<div class="cell-output-stdout">
+<pre><code>[robots.txt]
+--------------------------------------
+
+# robots.txt overwrite by: on_suspect_content
+
+User-agent: *
+Allow: /
+
+
+
+[events]
+--------------------------------------
+
+requested:   https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view/robots.txt 
+downloaded:  https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view/robots.txt 
+
+$on_not_found
+$on_not_found$status_code
+[1] 404
+
+
+$on_file_type_mismatch
+$on_file_type_mismatch$content_type
+[1] "text/html; charset=utf-8"
+
+
+$on_suspect_content
+$on_suspect_content$parsable
+[1] FALSE
+
+$on_suspect_content$content_suspect
+[1] TRUE
+
+
+[attributes]
+--------------------------------------
+
+problems, cached, request, class</code></pre>
+</div>
+</div>
+</section>
+<section id="extract-information" class="level2">
+<h2 class="anchored" data-anchor-id="extract-information">Extract information</h2>
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># save page</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="st">"https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1"</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>html1 <span class="ot">&lt;-</span> <span class="fu">read_html</span>(url)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># extract table info</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>table1 <span class="ot">&lt;-</span> </span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  html1 <span class="sc">%&gt;%</span> </span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_node</span>(<span class="st">"table"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_table</span>()</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>links <span class="ot">&lt;-</span> </span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  html1 <span class="sc">%&gt;%</span> </span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_elements</span>(<span class="st">".o-table__tag.ccd-text-link"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_attr</span>(<span class="st">"href"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>()</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>table1Mod <span class="ot">&lt;-</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_cols</span>(table1, links) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Specials =</span> <span class="fu">paste0</span>(url, value)) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(<span class="st">`</span><span class="at">CCD SIPS Specials</span><span class="st">`</span>, value))</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>table1Mod <span class="sc">%&gt;%</span> </span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-stdout">
+<pre><code># A tibble: 6 × 4
+  Name                               Address                      Phone Specials
+  &lt;chr&gt;                              &lt;chr&gt;                        &lt;chr&gt; &lt;chr&gt;   
+1 1028 Yamitsuki Sushi &amp; Ramen       1028 Arch Street, Philadelp… 215.… https:/…
+2 1225 Raw Sushi and Sake Lounge     1225 Sansom St, Philadelphi… 215.… https:/…
+3 1518 Bar and Grill                 1518 Sansom St, Philadelphi… 267.… https:/…
+4 Air Grille Garden at Dilworth Park 1 S 15th St, Philadelphia, … 215.… https:/…
+5 Aki Nom Nom                        1210 Walnut St, Philadelphi… 215.… https:/…
+6 ArtBar                             1800 Market St, Philadelphi… 215.… https:/…</code></pre>
+</div>
+</div>
+</section>
+<section id="create-scraping-function" class="level2">
+<h2 class="anchored" data-anchor-id="create-scraping-function">Create scraping function</h2>
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>getTables <span class="ot">&lt;-</span> <span class="cf">function</span>(pageNumber) {</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">Sys.sleep</span>(<span class="dv">2</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  url <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page="</span>, pageNumber)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  html <span class="ot">&lt;-</span> <span class="fu">read_html</span>(url)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  table <span class="ot">&lt;-</span> </span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    html <span class="sc">%&gt;%</span> </span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">html_node</span>(<span class="st">"table"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">html_table</span>()</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  links <span class="ot">&lt;-</span> </span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    html <span class="sc">%&gt;%</span> </span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">html_elements</span>(<span class="st">".o-table__tag.ccd-text-link"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">html_attr</span>(<span class="st">"href"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as_tibble</span>()</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>  tableSpecials <span class="ot">&lt;&lt;-</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">bind_cols</span>(table, links) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">Specials =</span> <span class="fu">paste0</span>(url, value)) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(<span class="st">`</span><span class="at">CCD SIPS Specials</span><span class="st">`</span>, value))</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="scrape-all-pages" class="level2">
+<h2 class="anchored" data-anchor-id="scrape-all-pages">Scrape all pages</h2>
+<div class="cell">
+<div class="sourceCode" id="cb8"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>table2 <span class="ot">&lt;-</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">map_df</span>(<span class="dv">2</span><span class="sc">:</span><span class="dv">3</span>, getTables) </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>table <span class="ot">&lt;-</span> </span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(table1Mod, table2)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>table <span class="sc">%&gt;%</span> </span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-stdout">
+<pre><code># A tibble: 6 × 4
+  Name                               Address                      Phone Specials
+  &lt;chr&gt;                              &lt;chr&gt;                        &lt;chr&gt; &lt;chr&gt;   
+1 1028 Yamitsuki Sushi &amp; Ramen       1028 Arch Street, Philadelp… 215.… https:/…
+2 1225 Raw Sushi and Sake Lounge     1225 Sansom St, Philadelphi… 215.… https:/…
+3 1518 Bar and Grill                 1518 Sansom St, Philadelphi… 267.… https:/…
+4 Air Grille Garden at Dilworth Park 1 S 15th St, Philadelphia, … 215.… https:/…
+5 Aki Nom Nom                        1210 Walnut St, Philadelphi… 215.… https:/…
+6 ArtBar                             1800 Market St, Philadelphi… 215.… https:/…</code></pre>
+</div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write_rds</span>(table,</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">file =</span> <span class="fu">here</span>(<span class="st">"content/blog/2022-05-28-ccd-sips/specialsScraped.Rds"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="geocoding" class="level2">
+<h2 class="anchored" data-anchor-id="geocoding">Geocoding</h2>
+<ul>
+<li><a href="https://github.com/dkahle/ggmap">dkahle/ggmap: A package for plotting maps in R with ggplot2</a></li>
+<li><a href="https://developers.google.com/maps/documentation/geocoding/?csw=1">Google Maps Platform Documentation &nbsp;|&nbsp; Geocoding API &nbsp;|&nbsp; Google Developers</a></li>
+<li><a href="https://developers.google.com/maps/documentation/javascript/geocoding">Geocoding Service &nbsp;|&nbsp; Maps JavaScript API &nbsp;|&nbsp; Google Developers</a></li>
+<li><a href="https://developers.google.com/maps/documentation/geocoding/usage-and-billing">Geocoding API &nbsp;|&nbsp; Google Developers</a></li>
+</ul>
+<p>Created a new credential with 2 restrictions: Geocoding API and Geolocation API</p>
+<ul>
+<li>Google Cloud Platform &gt; Specific Project &gt; APIs and Services &gt; Credentials</li>
+</ul>
+<div class="cell">
+<div class="sourceCode" id="cb11"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>specials <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="at">file =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"content/blog/2022-05-28-ccd-sips/specialsScraped.Rds"</span>))</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Used ggmap::register_google(key = "[your key]") to temporarily register new API key</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>specials_ggmap <span class="ot">&lt;-</span> </span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  specials <span class="sc">%&gt;%</span> </span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_geocode</span>(Address)</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>specials_ggmap <span class="sc">%&gt;%</span> </span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">Longitude =</span> lon,</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">Latitude =</span> lat) <span class="sc">%&gt;%</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_rds</span>(<span class="at">file =</span> <span class="fu">here</span>(<span class="st">"content/blog/2022-05-28-ccd-sips/specialsGeocoded.Rds"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="creating-the-map" class="level2">
+<h2 class="anchored" data-anchor-id="creating-the-map">Creating the map</h2>
+<ul>
+<li><a href="https://rstudio.github.io/leaflet/">Leaflet for R - Introduction</a></li>
+</ul>
+<div class="cell">
+<div class="sourceCode" id="cb12"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import data</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>specials <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">here</span>(<span class="st">"content/blog/2022-05-28-ccd-sips/specialsGeocoded.Rds"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb13"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Notes -------------------------------------------------------------------</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co"># To save this map as a standalone HTML file:</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Run this script &gt; Viewer &gt; Export &gt; Save as Webpage</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="do">## ----setup, include=FALSE-------------------------------------------</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>xfun<span class="sc">::</span><span class="fu">pkg_attach</span>(<span class="st">"tidyverse"</span>, <span class="st">"rvest"</span>, <span class="st">"RSelenium"</span>, <span class="st">"robotstxt"</span>, <span class="st">"here"</span>, <span class="st">"ggmap"</span>, <span class="st">"leaflet"</span>)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="do">## ----import-map-data, echo=FALSE------------------------------------</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="co"># import data</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>specials <span class="ot">&lt;-</span> <span class="fu">read_rds</span>(<span class="fu">here</span>(<span class="st">"content/blog/2022-05-28-ccd-sips/specialsGeocoded.Rds"</span>))</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="do">## ----create-map, echo=FALSE-----------------------------------------</span></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the pop-up information with inline css styling ----</span></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a><span class="co"># marker for the specials</span></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>popInfoCircles<span class="ot">&lt;-</span><span class="fu">paste</span>(</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>  <span class="st">"&lt;h2 style='padding-bottom:4px; margin-bottom:4px;</span></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a><span class="st">    font-family: Red Hat Text, sans-serif;</span></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a><span class="st">    color:#43464C;'&gt;"</span>, <span class="st">"&lt;a style='color: #00857A' href="</span>, specials<span class="sc">$</span>Specials, <span class="st">"&gt;"</span>, specials<span class="sc">$</span>Name, <span class="st">"&lt;/a&gt;"</span>,</span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>  <span class="st">"&lt;h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;</span></span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a><span class="st">    color:#9197A6;'&gt;"</span>, specials<span class="sc">$</span>Address, <span class="st">"&lt;/h3&gt;"</span>)</span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a><span class="co"># marker for the center of the map</span></span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>popInfoMarker<span class="ot">&lt;-</span><span class="fu">paste</span>(<span class="st">"&lt;h1 style='padding-bottom:4px; margin-bottom:4px;</span></span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a><span class="st">    font-family: Red Hat Text, sans-serif;</span></span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a><span class="st">    color:#43464C;'&gt;"</span>, <span class="st">"&lt;a href='https://centercityphila.org/explore-center-city/ccdsips'&gt;"</span>, </span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Center City District Sips 2022"</span>, <span class="st">"&lt;/a&gt;&lt;/h1&gt;</span></span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;p style='color:#9197A6;'&gt;"</span>, <span class="st">"Philadelphia, PA"</span>, <span class="st">"&lt;/p&gt;"</span>)</span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>awesome <span class="ot">&lt;-</span></span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">makeAwesomeIcon</span>(</span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">icon =</span> <span class="st">"map-pin"</span>,</span>
+<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a>    <span class="at">iconColor =</span> <span class="st">"#FFFFFF"</span>,</span>
+<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">markerColor =</span> <span class="st">"darkblue"</span>,</span>
+<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">library =</span> <span class="st">"fa"</span></span>
+<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-41"><a href="#cb13-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating the map</span></span>
+<span id="cb13-42"><a href="#cb13-42" aria-hidden="true" tabindex="-1"></a><span class="fu">leaflet</span>(<span class="at">data =</span> specials) <span class="sc">%&gt;%</span></span>
+<span id="cb13-43"><a href="#cb13-43" aria-hidden="true" tabindex="-1"></a>  <span class="co"># add map markers</span></span>
+<span id="cb13-44"><a href="#cb13-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addCircles</span>(<span class="at">lat =</span> <span class="sc">~</span> specials<span class="sc">$</span>Latitude, </span>
+<span id="cb13-45"><a href="#cb13-45" aria-hidden="true" tabindex="-1"></a>             <span class="at">lng =</span> <span class="sc">~</span> specials<span class="sc">$</span>Longitude, </span>
+<span id="cb13-46"><a href="#cb13-46" aria-hidden="true" tabindex="-1"></a>             <span class="at">fillColor =</span> <span class="st">"#009E91"</span>, <span class="co">#olivedrab goldenrod</span></span>
+<span id="cb13-47"><a href="#cb13-47" aria-hidden="true" tabindex="-1"></a>             <span class="at">fillOpacity =</span> <span class="fl">0.6</span>, </span>
+<span id="cb13-48"><a href="#cb13-48" aria-hidden="true" tabindex="-1"></a>             <span class="at">stroke =</span> F,</span>
+<span id="cb13-49"><a href="#cb13-49" aria-hidden="true" tabindex="-1"></a>             <span class="at">radius =</span> <span class="dv">12</span>, </span>
+<span id="cb13-50"><a href="#cb13-50" aria-hidden="true" tabindex="-1"></a>             <span class="at">popup =</span> popInfoCircles,</span>
+<span id="cb13-51"><a href="#cb13-51" aria-hidden="true" tabindex="-1"></a>             <span class="at">label =</span> <span class="sc">~</span> Name) <span class="sc">%&gt;%</span></span>
+<span id="cb13-52"><a href="#cb13-52" aria-hidden="true" tabindex="-1"></a>  <span class="co"># add map tiles in the background</span></span>
+<span id="cb13-53"><a href="#cb13-53" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addProviderTiles</span>(providers<span class="sc">$</span>CartoDB.Positron) <span class="sc">%&gt;%</span></span>
+<span id="cb13-54"><a href="#cb13-54" aria-hidden="true" tabindex="-1"></a>  <span class="co"># set the map view</span></span>
+<span id="cb13-55"><a href="#cb13-55" aria-hidden="true" tabindex="-1"></a>  <span class="fu">setView</span>(<span class="fu">mean</span>(specials<span class="sc">$</span>Longitude), </span>
+<span id="cb13-56"><a href="#cb13-56" aria-hidden="true" tabindex="-1"></a>          <span class="fu">mean</span>(specials<span class="sc">$</span>Latitude), </span>
+<span id="cb13-57"><a href="#cb13-57" aria-hidden="true" tabindex="-1"></a>          <span class="at">zoom=</span><span class="dv">17</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb13-58"><a href="#cb13-58" aria-hidden="true" tabindex="-1"></a>  <span class="co"># add default view marker</span></span>
+<span id="cb13-59"><a href="#cb13-59" aria-hidden="true" tabindex="-1"></a>  <span class="co"># addMarkers(lng = mean(specials$Longitude), </span></span>
+<span id="cb13-60"><a href="#cb13-60" aria-hidden="true" tabindex="-1"></a>  <span class="co">#            lat = mean(specials$Latitude), </span></span>
+<span id="cb13-61"><a href="#cb13-61" aria-hidden="true" tabindex="-1"></a>  <span class="co">#            label = "Center City District Sips 2022",</span></span>
+<span id="cb13-62"><a href="#cb13-62" aria-hidden="true" tabindex="-1"></a>  <span class="co">#            popup = popInfoMarker,</span></span>
+<span id="cb13-63"><a href="#cb13-63" aria-hidden="true" tabindex="-1"></a>  <span class="co">#            popupOptions = popupOptions(maxWidth = 350)</span></span>
+<span id="cb13-64"><a href="#cb13-64" aria-hidden="true" tabindex="-1"></a><span class="co">#) %&gt;% </span></span>
+<span id="cb13-65"><a href="#cb13-65" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addAwesomeMarkers</span>(<span class="at">icon =</span> awesome,</span>
+<span id="cb13-66"><a href="#cb13-66" aria-hidden="true" tabindex="-1"></a>                    <span class="at">lng =</span> <span class="fu">mean</span>(specials<span class="sc">$</span>Longitude), </span>
+<span id="cb13-67"><a href="#cb13-67" aria-hidden="true" tabindex="-1"></a>                    <span class="at">lat =</span> <span class="fu">mean</span>(specials<span class="sc">$</span>Latitude), </span>
+<span id="cb13-68"><a href="#cb13-68" aria-hidden="true" tabindex="-1"></a>                    <span class="at">label =</span> <span class="st">"Center City District Sips 2022"</span>,</span>
+<span id="cb13-69"><a href="#cb13-69" aria-hidden="true" tabindex="-1"></a>                    <span class="at">popup =</span> popInfoMarker,</span>
+<span id="cb13-70"><a href="#cb13-70" aria-hidden="true" tabindex="-1"></a>                    <span class="at">popupOptions =</span> <span class="fu">popupOptions</span>(<span class="at">maxWidth =</span> <span class="dv">350</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="htmlwidget-6769503dab3aafba853d" style="width:100%;height:464px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6769503dab3aafba853d">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addCircles","args":[[39.9535423,39.9500363,39.9501977,39.9526642,39.9488888,39.9527827,39.9467935,39.9517476,39.9506007,39.9543618,39.9500062,39.9490852,39.9482475,39.950472,39.9477828,39.9520312,39.9554292,39.9511145,39.9557898,39.9524665,39.9645357,39.9557404,39.9519308,39.9491023,39.9518233,39.9497054,39.9521221,39.95006,39.949742,39.9592359,39.9504997,39.9510645,39.9504002,39.9512789,39.9505301,39.9502943,39.9502786,39.9496281,39.9503869,39.9543944,39.9486272,39.9485658,39.9556688,39.9539205,39.9477453,39.9499506,39.9495269,39.9498662,39.9485127,39.9500493,39.9495688,39.950494,39.9505038,39.9539766,39.9517805,39.9489914,39.9495639,39.9509174,39.9497121],[-75.1574552,-75.1614924,-75.1666453,-75.1649353,-75.1611295,-75.1703617,-75.165297,-75.1602294,-75.1703389,-75.1578357,-75.1621608,-75.1678993,-75.1666834,-75.1625679,-75.1621493,-75.1749899,-75.1664549,-75.17157,-75.1697556,-75.1562495,-75.160513,-75.1683553,-75.1704529,-75.1543329,-75.173394,-75.1621847,-75.1720716,-75.162397,-75.160578,-75.1617433,-75.1666931,-75.1713807,-75.1616684,-75.1695181,-75.1668181,-75.150981,-75.1669645,-75.1518931,-75.1671925,-75.16985,-75.1666453,-75.1598508,-75.1708177,-75.1736121,-75.159542,-75.1621737,-75.1622446,-75.1604892,-75.1680322,-75.1624957,-75.1589615,-75.162746,-75.1625185,-75.1696621,-75.1729152,-75.1701493,-75.1617091,-75.1596095,-75.1588397],12,null,null,{"interactive":true,"className":"","stroke":false,"color":"#03F","weight":5,"opacity":0.5,"fill":true,"fillColor":"#009E91","fillOpacity":0.6},["<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#1028-yamitsuki-sushi-ramen > 1028 Yamitsuki Sushi & Ramen <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1028 Arch Street, Philadelphia, PA 19107 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#1225-raw-sushi-and-sake-lounge > 1225 Raw Sushi and Sake Lounge <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1225 Sansom St, Philadelphia, PA 19102 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#1518-bar-and-grill > 1518 Bar and Grill <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1518 Sansom St, Philadelphia, PA 19102 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#air-grill-garden-dilworth-park > Air Grille Garden at Dilworth Park <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1 S 15th St, Philadelphia, PA 19102 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#aki-nom-nom > Aki Nom Nom <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1210 Walnut St, Philadelphia, PA 19107 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#artbar > ArtBar <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1800 Market St, Philadelphia, PA 19103 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#balcony-bar-at-the-kimmel-center > Balcony Bar at the Kimmel Center <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 300 S Broad St, Philadelphia, PA 19102 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#bank-and-bourbon > Bank and Bourbon <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1200 Market St, Philadelphia, PA 19107 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#bar-bombon > Bar Bombon <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 133 S 18th St, Philadelphia, PA 19103 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#bar-ly-chinatown > Bar-Ly Chinatown <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 101 N. 11th St, Philadelphia, PA 19107 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#barbuzzo > Barbuzzo <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 110 S 13th St, Philadelphia, PA 19107 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#bellini > Bellini <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 220 S 16th St, Philadelphia, PA 19102 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#blume > Blume <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1500 Locust Street, Philadelphia, PA, 19102 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#brü-craft-wurst > Brü Craft & Wurst <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1318 Chestnut St, Philadelphia, PA 19107 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#bud-marilyns > Bud & Marilyn's <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1234 Locust St, Philadephia, PA 19107 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#butcher-bar > Butcher Bar <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 2034 Chestnut St, Philadelphia PA 19103 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#capriccio-café-and-bar > Capriccio Café and Bar <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 110 N 16th St, Philadelphia PA, 19102 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#cavanaugh-s-rittenhouse > Cavanaugh's Rittenhouse <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1823 Sansom St, Philadelphia, PA 19103 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#city-tap-house-logan-square > City Tap House Logan Square <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 2 Logan Square, Philadelphia, PA 19103 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#city-winery > City Winery <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 990 Filbert St, Philadelphia, PA 19107 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=2#clementine-s-stable-cafe > Clementine's Stable Cafe <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 631 N. Broad St, Philadelphia, PA 19123 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=2#con-murphy-s-irish-pub > Con Murphy's Irish Pub <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1700 Ben Franklin Pkwy, Philadelphia, PA 19103 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=2#continental-midtown-2 > Continental Midtown <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1801 Chestnut St, Philadelphia, PA 19103 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=2#craftsman-row-saloon > Craftsman Row Saloon <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 112 S. 8th St, Philadelphia, PA 19107 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=2#dim-sum-house-by-jane-g-s > Dim Sum House by Jane G's <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1930 Chestnut St, Philadelphia, PA 19103 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=2#doubleknot > Double Knot <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 120 S 13th St. , Philadelphia, PA 19107 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=2#drinker-s-pub > Drinker's Pub <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1903 Chestnut St., Philadelphia, PA 19103 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=2#drury-beer-garden > Drury Beer Garden <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1311 Sansom St, Philadelphia, PA 19107 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=2#finn-mccools-ale-house > Finn McCools Ale House <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 118 S 12th Street, Philadelphia, PA 19107 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=2#gabi > Gabi <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 339 North Broad St, Philadelphia, PA 19107 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=2#giuseppe-and-sons > Giuseppe and Sons <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1523 Sansom St, Philadelphia, PA 19102 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=2#the-goat-rittenhouse > The Goat Rittenhouse <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1907 Sansom St, Philadelphia, PA 19103 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=2#good-luck-pizza-co > Good Luck Pizza Co. <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 105 S. 13th St., Philadelphia, PA 19107 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=2#gran-caffe-l-aquila > Gran Caffe L'Aquila <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1716 Chestnut St, Philadelphia, PA 19103 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=2#harp-crown1 > Harp & Crown <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1525 Sansom St, Philadelphia, PA, 19102 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=2#independence-beer-garden > Independence Beer Garden <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 100 S Independence Mall W, Philadelphia, PA 19106 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=2#ladder-15 > Ladder 15 <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1528 Sansom St, Philadelphia, PA 19102 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=2#lascalas > LaScala's Fire <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 615 Chestnut St, Philadelphia, PA 19106 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=2#marathon-16th-sansom > Marathon 16th & Sansom <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 121 S 16th St, Philadelphia, PA 19102 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=2#misconduct-tavern > Misconduct Tavern <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1801 John F Kennedy Blvd, Philadelphia, PA 19103 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=3#misconduct-tavern8 > Misconduct Tavern <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1511 Locust St, Philadelphia, PA 19102 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=3#moriarty-s-restaurant > Moriarty's Restaurant <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1116 Walnut St, Philadelphia, PA 19107 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=3#the-mulberry-on-arch > The Mulberry on Arch <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1835 Arch St, Philadelphia, PA 19103 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=3#paganos-market-and-bar > Pagano's Market and Bar <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 2001 Market St, Philadelphia, PA 19103 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=3#picanha-brazilian-steakhouse > Picanha Brazilian Steakhouse <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1111 Locust St, Philadelphia, PA 19107 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=3#prunella > Prunella <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 112 S 13th St, Philadelphia, PA 19107 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=3#sampan7 > Sampan <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 124 S 13th St, Philadelphia, PA 19107 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=3#sueno > Sueno <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 114 S. 12th St., Philadelphia PA, 19107 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=3#tequilas-restaurant > Tequilas Restaurant <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1602 Locust St, Philadelphia, PA 19103 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=3#time-restaurant > Time Restaurant <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1315 Sansom St, Philadelphia, PA 19107 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=3#top-tomato-bar-pizza > Top Tomato Bar & Pizza <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 116 S 11th St, Philadelphia, PA 19107 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=3#tradesman-s > Tradesman's <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1322 Chestnut Street, Philadelphia, PA 19107 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=3#u-bahn > U-Bahn <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1320 Chestnut St, Philadephia, PA 19107 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=3#uptown-beer-garden > Uptown Beer Garden <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1735 John F Kennedy Blvd, Philadelphia, PA 19103 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=3#veda > Veda <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1920 Chestnut St., Philadelphia PA 19103 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=3#via-locust > Via Locusta <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1723 Locust St,  Philadelphia PA 19103 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=3#vintage-wine-bar-bistro > Vintage Wine Bar & Bistro <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 129 S 13th St, Philadelphia, PA 19107 <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=3#the-wayward-canopy > The Wayward <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 1170 Ludlow St., Philadelphia, PA <\/h3>","<h2 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a style='color: #00857A' href= https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=3#wrap-shack > Wrap Shack <\/a> <h3 style=font-family: Red Hat Text, sans-serif; font-weight: normal;\n    color:#9197A6;'> 112 S 11th St., Philadelphia, PA 19107 <\/h3>"],null,["1028 Yamitsuki Sushi &amp; Ramen","1225 Raw Sushi and Sake Lounge","1518 Bar and Grill","Air Grille Garden at Dilworth Park","Aki Nom Nom","ArtBar","Balcony Bar at the Kimmel Center","Bank and Bourbon","Bar Bombon","Bar-Ly Chinatown","Barbuzzo","Bellini","Blume","Brü Craft &amp; Wurst","Bud &amp; Marilyn's","Butcher Bar","Capriccio Café and Bar","Cavanaugh's Rittenhouse","City Tap House Logan Square","City Winery","Clementine's Stable Cafe","Con Murphy's Irish Pub","Continental Midtown","Craftsman Row Saloon","Dim Sum House by Jane G's","Double Knot","Drinker's Pub","Drury Beer Garden","Finn McCools Ale House","Gabi","Giuseppe and Sons","The Goat Rittenhouse","Good Luck Pizza Co.","Gran Caffe L'Aquila","Harp &amp; Crown","Independence Beer Garden","Ladder 15","LaScala's Fire","Marathon 16th &amp; Sansom","Misconduct Tavern","Misconduct Tavern","Moriarty's Restaurant","The Mulberry on Arch","Pagano's Market and Bar","Picanha Brazilian Steakhouse","Prunella","Sampan","Sueno","Tequilas Restaurant","Time Restaurant","Top Tomato Bar &amp; Pizza","Tradesman's","U-Bahn","Uptown Beer Garden","Veda","Via Locusta","Vintage Wine Bar &amp; Bistro","The Wayward","Wrap Shack"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null,null]},{"method":"addProviderTiles","args":["CartoDB.Positron",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addAwesomeMarkers","args":[39.9512667101695,-75.1645457186441,{"icon":"map-pin","markerColor":"darkblue","iconColor":"#FFFFFF","spin":false,"squareMarker":false,"iconRotate":0,"font":"monospace","prefix":"fa"},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"<h1 style='padding-bottom:4px; margin-bottom:4px;\n    font-family: Red Hat Text, sans-serif;\n    color:#43464C;'> <a href='https://centercityphila.org/explore-center-city/ccdsips'> Center City District Sips 2022 <\/a><\/h1>\n    <p style='color:#9197A6;'> Philadelphia, PA <\/p>",{"maxWidth":350,"minWidth":50,"autoPan":true,"keepInView":false,"closeButton":true,"className":""},null,null,"Center City District Sips 2022",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[39.9467935,39.9645357],"lng":[-75.1749899,-75.150981]},"setView":[[39.9512667101695,-75.1645457186441],17,[]]},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+
+</section>
+</main>
+<!-- /main column -->
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    setTimeout(function() {
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+</body></html>
