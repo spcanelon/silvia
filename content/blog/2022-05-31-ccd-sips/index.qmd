@@ -30,7 +30,7 @@ Philly's Center City District posted a list of restaurants and bars participatin
 
 I prefer to take in this information as a **map** instead of a list, so I scraped some information from the website and made one! You can click or tap on the circle map markers to see information about each restaurant/bar along with a direct link to their posted happy hour specials.
 
-Check out the link at the top of this post for a full-screen version of the interactive map below. And jump down to the [tutorial](#overview) if you'd like to learn how I used R to build the interactive map!
+Check out the link at the top of this post for a larger version of the interactive map below. And jump down to the [tutorial](#tutorial-start) if you'd like to learn how I used R to build the interactive map!
 
 <div style="align: center; margin-left: -150px;"> <iframe src="map.html" width="1000px" height="850px" frameborder="0"></iframe></div>
 
@@ -343,7 +343,7 @@ leaflet(data = specials, width = "100%") %>%
              labelOptions = labelOptions(
                style = list("font-family" = "Red Hat Text, sans-serif",
                             "font-size" = "1.2em")
-             )) %>%
+               )) %>%
   # add map tiles in the background
   addProviderTiles(providers$CartoDB.Positron) %>%
   # set the map view
@@ -358,7 +358,7 @@ leaflet(data = specials, width = "100%") %>%
                     labelOptions = labelOptions(
                       style = list("font-family" = "Red Hat Text, sans-serif",
                                    "font-size" = "1.2em")
-             ),
+                      ),
                     popup = popInfoMarker,
                     popupOptions = popupOptions(maxWidth = 350))
 ```
@@ -394,7 +394,7 @@ leaflet(data = specials, width = "100%") %>%
                     labelOptions = labelOptions(
                       style = list("font-family" = "Red Hat Text, sans-serif",
                                    "font-size" = "1.2em")
-             ),
+                      ),
                     popup = popInfoMarker,
                     popupOptions = popupOptions(maxWidth = 350)) %>% 
   # add fullscreen control button
