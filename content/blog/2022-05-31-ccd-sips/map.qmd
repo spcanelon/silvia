@@ -76,6 +76,6 @@ leaflet(data = specials, width = "100%", height = "850px") %>%
                     popup = popInfoMarker,
                     popupOptions = popupOptions(maxWidth = 350)) %>% 
   # add fullscreen control button
-  addFullscreenControl()
+  leaflet.extras::addFullscreenControl()
 ```
 
