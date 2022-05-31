@@ -4,12 +4,30 @@ format:
     page-layout: custom
 ---
 
-```{r include=FALSE}
-# https://pkg.garrickadenbuie.com/metathis/reference/meta_viewport.html
-metathis::meta_viewport(width = "device-width",
+```{r meta, include=FALSE}
+library(metathis)
+meta() %>%
+  meta_general(
+    description = "An interactive map showing restaurants participating in Philadelphia's CCD Sips 2022",
+    generator = "quarto"
+  ) %>% 
+  meta_name("github-repo" = "spcanelon/silvia") %>% 
+  # https://pkg.garrickadenbuie.com/metathis/reference/meta_viewport.html
+  meta_viewport(width = "device-width",
                         initial_scale = "1.0",
                         maximum_scale = "1.0",
-                        user_scalable = "no")
+                        user_scalable = "no") %>% 
+  # tags for social media
+  meta_social(
+    title = "Philly CCD Sips 2022 Interactive Map",
+    url = "https://www.silviacanelon.com/blog/2022-ccd-sips/map.html",
+    image = "featured.png",
+    image_alt = "Map of Philly's Center City with a pop-up saying Center City District Sips 2022",
+    og_type = "website",
+    og_author = "Silvia Canelón",
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "@spcanelon"
+  )
 ```
 
 ```{r include=FALSE}
