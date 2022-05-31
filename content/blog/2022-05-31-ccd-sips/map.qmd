@@ -1,0 +1,81 @@
+---
+format: 
+  html:
+    page-layout: custom
+---
+
+```{r include=FALSE}
+# https://pkg.garrickadenbuie.com/metathis/reference/meta_viewport.html
+metathis::meta_viewport(width = "device-width",
+                        initial_scale = "1.0",
+                        maximum_scale = "1.0",
+                        user_scalable = "no")
+```
+
+```{r include=FALSE}
+xfun::pkg_attach("tidyverse", "rvest", "RSelenium", "robotstxt", "here", "ggmap", "leaflet")
+
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r}
+specials <- read_rds(here("content/blog/2022-05-31-ccd-sips/specialsGeocoded.Rds"))
+
+```
+
+```{r}
+# marker for the specials
+popInfoCircles<-paste("<h2 style='font-family: Red Hat Text, sans-serif; font-size: 1.6em; color:#43464C;'>", "<a style='color: #00857A;' href=", specials$Specials, ">", specials$Name, "</a></h2>", "<p style='font-family: Red Hat Text, sans-serif; font-weight: normal; font-size: 1.5em; color:#9197A6;'>", specials$Address, "</p>")
+
+# marker for the center of the map
+popInfoMarker<-paste("<h1 style='padding-top: 0.5em; margin-top: 1em; margin-bottom: 0.5em; font-family: Red Hat Text, sans-serif; font-size: 1.8em; color:#43464C;'>", "<a style='color: #00857A;' href='https://centercityphila.org/explore-center-city/ccdsips'>", "Center City District Sips 2022", "</a></h1><p style='color:#9197A6; font-family: Red Hat Text, sans-serif; font-size: 1.5em; padding-bottom: 1em;'>", "Philadelphia, PA", "</p>")
+
+awesome <-
+  makeAwesomeIcon(
+    icon = "map-pin",
+    iconColor = "#FFFFFF",
+    markerColor = "darkblue",
+    library = "fa"
+  )
+```
+
+```{r}
+
+# https://stackoverflow.com/a/52535649
+
+#leaflet(data = specials, width = "100%",, padding = 0) 
+library(leaflet.extras)
+leaflet(data = specials, width = "100%", height = "850px") %>%
+  # add map markers
+  addCircles(lat = ~ specials$Latitude, 
+             lng = ~ specials$Longitude, 
+             fillColor = "#009E91", #olivedrab goldenrod
+             fillOpacity = 0.6, 
+             stroke = F,
+             radius = 12, 
+             popup = popInfoCircles,
+             label = ~ Name,
+             labelOptions = labelOptions(
+               style = list("font-family" = "Red Hat Text, sans-serif",
+                            "font-size" = "1.2em")
+             )) %>%
+  # add map tiles in the background
+  addProviderTiles(providers$CartoDB.Positron) %>%
+  # set the map view
+  setView(mean(specials$Longitude), 
+          mean(specials$Latitude), 
+          zoom = 17) %>%
+  addAwesomeMarkers(icon = awesome,
+                    lng = mean(specials$Longitude), 
+                    lat = mean(specials$Latitude), 
+                    label = "Center City District Sips 2022",
+                    labelOptions = labelOptions(
+                      style = list("font-family" = "Red Hat Text, sans-serif",
+                                   "font-size" = "1.2em")
+                    ),
+                    popup = popInfoMarker,
+                    popupOptions = popupOptions(maxWidth = 350)) %>% 
+  # add fullscreen control button
+  leaflet.extras::addFullscreenControl()
+```
+
