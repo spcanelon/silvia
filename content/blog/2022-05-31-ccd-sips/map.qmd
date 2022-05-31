@@ -1,4 +1,6 @@
 ---
+pagetitle: "Philly CCD Sips 2022 Map"
+include-in-header: meta-map.html
 format: 
   html:
     page-layout: custom
@@ -6,6 +8,7 @@ format:
 
 ```{r meta, include=FALSE}
 library(metathis)
+
 meta() %>%
   meta_general(
     description = "An interactive map showing restaurants participating in Philadelphia's CCD Sips 2022",
@@ -27,7 +30,10 @@ meta() %>%
     og_author = "Silvia Canelón",
     twitter_card_type = "summary_large_image",
     twitter_creator = "@spcanelon"
-  )
+  ) %>% 
+  # https://pkg.garrickadenbuie.com/metathis/index.html
+  # https://pkg.garrickadenbuie.com/metathis/reference/write_meta.html
+  write_meta(path = "meta-map.html")
 ```
 
 ```{r include=FALSE}
