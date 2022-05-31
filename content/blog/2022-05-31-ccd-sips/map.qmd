@@ -24,7 +24,7 @@ meta() %>%
   meta_social(
     title = "Philly CCD Sips 2022 Interactive Map",
     url = "https://www.silviacanelon.com/blog/2022-ccd-sips/map.html",
-    image = "featured.png",
+    image = "https://github.com/spcanelon/silvia/blob/main/content/blog/2022-05-31-ccd-sips/featured.png?raw=true",
     image_alt = "Map of Philly's Center City with a pop-up saying Center City District Sips 2022",
     og_type = "website",
     og_author = "Silvia Canelón",
