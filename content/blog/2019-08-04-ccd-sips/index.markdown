@@ -19,7 +19,7 @@ links:
 - icon: map-marked-alt
   icon_pack: fas
   name: Interactive Map
-  url: http://tiny.cc/ccdsips2019
+  url: https://tiny.cc/ccdsips2019
 ---
 
 <script src="{{< blogdown/postref >}}index_files/htmlwidgets/htmlwidgets.js"></script>
