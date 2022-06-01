@@ -3,6 +3,7 @@ title: 'Philly Center City District Sips 2022: An Interactive Map'
 layout: single-sidebar
 date: '2022-05-31'
 publishDate: '2022-05-31'
+lastUpdated: '2022-06-01'
 slug: ccd-sips
 categories:
   - R
@@ -22,7 +23,7 @@ links:
 - icon: map-marked-alt
   icon_pack: fas
   name: Interactive Map
-  url: /blog/2022-ccd-sips/map.html
+  url: https://tiny.cc/ccdsips2022
 format: hugo
 ---
 
@@ -32,7 +33,18 @@ I prefer to take in this information as a **map** instead of a list, so I scrape
 
 Check out the link at the top of this post for a larger version of the interactive map below. And jump down to the [tutorial](#tutorial-start) if you'd like to learn how I used R to build the interactive map!
 
-<div style="align: center; margin-left: -150px;"> <iframe src="map.html" width="1000px" height="850px" frameborder="0"></iframe></div>
+<!--https://dannyda.com/2021/06/09/how-to-make-html-iframe-responsive-iframe-height-equal-to-viewport-screen-height/-->
+<style>
+iframe {
+display: block;
+background: #FFFFFF;
+border: none; /* Reset default border */
+height: 70vh; /* Viewport-relative units */
+width: 60vw;
+}
+</style>
+<iframe src="map.html" scrolling="no">
+</iframe>
 
 ## Tutorial start
 
@@ -233,15 +245,15 @@ write_rds(
   file = here("content/blog/2022-05-31-ccd-sips/specialsGeocoded.Rds"))
 ```
 
-## Creating the map
+## Building the map
 
-To create the map, I used the [leaflet](https://rstudio.github.io/leaflet/) package. Some of the resources I found helpful, in addition to the package documentation:
+To build the map, I used the [leaflet](https://rstudio.github.io/leaflet/) package. Some of the resources I found helpful, in addition to the package documentation:
 
 -   [Scrape website data with the new R package rvest (+ a postscript on interacting with web pages with RSelenium) · Hollie at ZevRoss](https://www.zevross.com/blog/2015/05/19/scrape-website-data-with-the-new-r-package-rvest/) -- how to style pop-ups
 -   [Leaflet Map Markers in R · Jindra Lacko](https://www.jla-data.net/eng/leaflet-markers-in-r/) -- how to customize marker icons
 -   [A guide to basic Leaflet accessibility · Leaflet](https://leafletjs.com/examples/accessibility/) -- accessibility considerations. Though it's unclear to me how these features built into the Leaflet library translate over to the leaflet R package. For example, I couldn't find an option for adding alt-text or a title to each marker, but maybe I wasn't looking in the right place within the documentation.
 
-### Customize map markers
+### Customizing map markers
 
 ```{r style-markers}
 # style pop-ups for the map with inline css styling
@@ -262,142 +274,277 @@ awesome <-
   )
 ```
 
-### Plot the restaurants/bars
+### Plotting the restaurants/bars
 
 ```{r add-restaurants}
-leaflet(data = specials, width = "100%") %>%
-  # add map markers
-  addCircles(lat = ~ specials$Latitude, 
-             lng = ~ specials$Longitude, 
-             fillColor = "#009E91",
-             fillOpacity = 0.6, 
-             stroke = F,
-             radius = 12, 
-             popup = popInfoCircles,
-             label = ~ Name,
-             labelOptions = labelOptions(
-               style = list("font-family" = "Red Hat Text, sans-serif",
-                            "font-size" = "1.2em")
-             ))
+leaflet(data = specials, 
+        width = "100%", 
+        height = "850px",
+        # https://stackoverflow.com/a/42170340
+        options = tileOptions(minZoom = 15,
+                              maxZoom = 19)) %>%
+  # add map markers ----
+  addCircles(
+    lat = ~ specials$Latitude, 
+    lng = ~ specials$Longitude, 
+    fillColor = "#009E91", #olivedrab goldenrod
+    fillOpacity = 0.6, 
+    stroke = F,
+    radius = 12, 
+    popup = popInfoCircles,
+    label = ~ Name,
+    labelOptions = labelOptions(
+      style = list(
+        "font-family" = "Red Hat Text, sans-serif",
+        "font-size" = "1.2em")
+      ))
 ```
 
-### Add map background
+### Adding the map background
 
 ```{r add-background}
-leaflet(data = specials, width = "100%") %>%
-  # add map markers
-  addCircles(lat = ~ specials$Latitude, 
-             lng = ~ specials$Longitude, 
-             fillColor = "#009E91",
-             fillOpacity = 0.6, 
-             stroke = F,
-             radius = 12, 
-             popup = popInfoCircles,
-             label = ~ Name,
-             labelOptions = labelOptions(
-               style = list("font-family" = "Red Hat Text, sans-serif",
-                            "font-size" = "1.2em")
-             )) %>%
-  # add map tiles in the background
+leaflet(data = specials, 
+        width = "100%", 
+        height = "850px",
+        # https://stackoverflow.com/a/42170340
+        options = tileOptions(minZoom = 15,
+                              maxZoom = 19)) %>%
+  # add map markers ----
+  addCircles(
+    lat = ~ specials$Latitude, 
+    lng = ~ specials$Longitude, 
+    fillColor = "#009E91", #olivedrab goldenrod
+    fillOpacity = 0.6, 
+    stroke = F,
+    radius = 12, 
+    popup = popInfoCircles,
+    label = ~ Name,
+    labelOptions = labelOptions(
+      style = list(
+        "font-family" = "Red Hat Text, sans-serif",
+        "font-size" = "1.2em")
+      )) %>%
+  # add map tiles in the background ----
   addProviderTiles(providers$CartoDB.Positron)
 ```
 
-### Set map view
+### Setting the map view
 
 ```{r set-view}
-leaflet(data = specials, width = "100%") %>%
-  # add map markers
-  addCircles(lat = ~ specials$Latitude, 
-             lng = ~ specials$Longitude, 
-             fillColor = "#009E91",
-             fillOpacity = 0.6, 
-             stroke = F,
-             radius = 12, 
-             popup = popInfoCircles,
-             label = ~ Name,
-             labelOptions = labelOptions(
-               style = list("font-family" = "Red Hat Text, sans-serif",
-                            "font-size" = "1.2em")
-             )) %>%
-  # add map tiles in the background
+leaflet(data = specials, 
+        width = "100%", 
+        height = "850px",
+        # https://stackoverflow.com/a/42170340
+        options = tileOptions(minZoom = 15,
+                              maxZoom = 19)) %>%
+  # add map markers ----
+  addCircles(
+    lat = ~ specials$Latitude, 
+    lng = ~ specials$Longitude, 
+    fillColor = "#009E91", #olivedrab goldenrod
+    fillOpacity = 0.6, 
+    stroke = F,
+    radius = 12, 
+    popup = popInfoCircles,
+    label = ~ Name,
+    labelOptions = labelOptions(
+      style = list(
+        "font-family" = "Red Hat Text, sans-serif",
+        "font-size" = "1.2em")
+      )) %>%
+  # add map tiles in the background ----
   addProviderTiles(providers$CartoDB.Positron) %>%
   # set the map view
   setView(mean(specials$Longitude), 
           mean(specials$Latitude), 
-          zoom = 17 )
+          zoom = 16)
 ```
 
-### Add marker at center
+### Adding a marker at the center
 
 ```{r add-marker}
-leaflet(data = specials, width = "100%") %>%
-  # add map markers
-  addCircles(lat = ~ specials$Latitude, 
-             lng = ~ specials$Longitude, 
-             fillColor = "#009E91",
-             fillOpacity = 0.6, 
-             stroke = F,
-             radius = 12, 
-             popup = popInfoCircles,
-             label = ~ Name,
-             labelOptions = labelOptions(
-               style = list("font-family" = "Red Hat Text, sans-serif",
-                            "font-size" = "1.2em")
-               )) %>%
-  # add map tiles in the background
+leaflet(data = specials, 
+        width = "100%", 
+        height = "850px",
+        # https://stackoverflow.com/a/42170340
+        options = tileOptions(minZoom = 15,
+                              maxZoom = 19)) %>%
+  # add map markers ----
+  addCircles(
+    lat = ~ specials$Latitude, 
+    lng = ~ specials$Longitude, 
+    fillColor = "#009E91", #olivedrab goldenrod
+    fillOpacity = 0.6, 
+    stroke = F,
+    radius = 12, 
+    popup = popInfoCircles,
+    label = ~ Name,
+    labelOptions = labelOptions(
+      style = list(
+        "font-family" = "Red Hat Text, sans-serif",
+        "font-size" = "1.2em")
+      )) %>%
+  # add map tiles in the background ----
   addProviderTiles(providers$CartoDB.Positron) %>%
   # set the map view
   setView(mean(specials$Longitude), 
           mean(specials$Latitude), 
-          zoom=17) %>%
-  # add center marker
-  addAwesomeMarkers(icon = awesome,
-                    lng = mean(specials$Longitude), 
-                    lat = mean(specials$Latitude), 
-                    label = "Center City District Sips 2022",
-                    labelOptions = labelOptions(
-                      style = list("font-family" = "Red Hat Text, sans-serif",
-                                   "font-size" = "1.2em")
-                      ),
-                    popup = popInfoMarker,
-                    popupOptions = popupOptions(maxWidth = 350))
+          zoom = 16) %>%
+  # add marker at the center ----
+  addAwesomeMarkers(
+    icon = awesome,
+    lng = mean(specials$Longitude), 
+    lat = mean(specials$Latitude), 
+    label = "Center City District Sips 2022",
+    labelOptions = labelOptions(
+      style = list(
+        "font-family" = "Red Hat Text, sans-serif",
+        "font-size" = "1.2em")
+      ),
+    popup = popInfoMarker,
+    popupOptions = popupOptions(maxWidth = 250))
 ```
 
-### Add fullscreen control
+### Adding fullscreen control
 
 ```{r add-fullscreen}
-leaflet(data = specials, width = "100%") %>%
-  # add map markers
-  addCircles(lat = ~ specials$Latitude, 
-             lng = ~ specials$Longitude, 
-             fillColor = "#009E91",
-             fillOpacity = 0.6, 
-             stroke = F,
-             radius = 12, 
-             popup = popInfoCircles,
-             label = ~ Name,
-             labelOptions = labelOptions(
-               style = list("font-family" = "Red Hat Text, sans-serif",
-                            "font-size" = "1.2em")
-             )) %>%
-  # add map tiles in the background
+leaflet(data = specials, 
+        width = "100%", 
+        height = "850px",
+        # https://stackoverflow.com/a/42170340
+        options = tileOptions(minZoom = 15,
+                              maxZoom = 19)) %>%
+  # add map markers ----
+  addCircles(
+    lat = ~ specials$Latitude, 
+    lng = ~ specials$Longitude, 
+    fillColor = "#009E91", #olivedrab goldenrod
+    fillOpacity = 0.6, 
+    stroke = F,
+    radius = 12, 
+    popup = popInfoCircles,
+    label = ~ Name,
+    labelOptions = labelOptions(
+      style = list(
+        "font-family" = "Red Hat Text, sans-serif",
+        "font-size" = "1.2em")
+      )) %>%
+  # add map tiles in the background ----
   addProviderTiles(providers$CartoDB.Positron) %>%
   # set the map view
   setView(mean(specials$Longitude), 
           mean(specials$Latitude), 
-          zoom=17) %>%
-  # add center marker
-  addAwesomeMarkers(icon = awesome,
-                    lng = mean(specials$Longitude), 
-                    lat = mean(specials$Latitude), 
-                    label = "Center City District Sips 2022",
-                    labelOptions = labelOptions(
-                      style = list("font-family" = "Red Hat Text, sans-serif",
-                                   "font-size" = "1.2em")
-                      ),
-                    popup = popInfoMarker,
-                    popupOptions = popupOptions(maxWidth = 350)) %>% 
-  # add fullscreen control button
+          zoom = 16) %>%
+  # add marker at the center ----
+  addAwesomeMarkers(
+    icon = awesome,
+    lng = mean(specials$Longitude), 
+    lat = mean(specials$Latitude), 
+    label = "Center City District Sips 2022",
+    labelOptions = labelOptions(
+      style = list(
+        "font-family" = "Red Hat Text, sans-serif",
+        "font-size" = "1.2em")
+      ),
+    popup = popInfoMarker,
+    popupOptions = popupOptions(maxWidth = 250)) %>% 
+  # add fullscreen control button ----
   leaflet.extras::addFullscreenControl()
 ```
 
+## Creating the map with Quarto
+
+The first time around, I created a standalone map by first running an R script with the necessary code, and then exporting the HTML output as a webpage. This worked well enough, except that I realized:
+
+1. The title of the map webpage (the name that is displayed on a browser tab) was just "map" because the name of the HTML file was `map.html`. I wanted something more descriptive.
+1. The map wasn't mobile-responsive. In other words, the map markers and text looked too small when viewed on a mobile device.
+
+### Changing the webpage title
+
+The webpage title was a quick one to fix thanks to a Stack Overflow response to a [question about turning off the title in an R Markdown document](https://stackoverflow.com/questions/59668347/rmarkdown-turn-off-title). The `pagetitle` YAML option lets you set the HTML's title tag independently of the document title:
+
+```yaml
+pagetitle: "Philly CCD Sips 2022 Map"
+```
+
+### Fixing the mobile-responsiveness
+
+The mobile-responsiveness issue could be solved by adding metadata to the map HTML, but I would need to be able to blend HTML with R code. I have been practicing using [Quarto](https://quarto.org/) and figured I could make a standalone map from a Quarto document (`.qmd`) rather than an R Markdown one (`.Rmd` or `.Rmarkdown`). You can find the map's Quarto document [alongside this blog post](https://github.com/spcanelon/silvia/blob/main/content/blog/2022-05-31-ccd-sips/map.qmd).
+
+According to the [Leaflet library documentation](https://leafletjs.com/examples/mobile/) and [this Stack Overflow answer](https://stackoverflow.com/a/42796918), fixing the map to be mobile-responsive required adding the following metadata to the HTML code:
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+```
+
+I used the [metathis](https://pkg.garrickadenbuie.com/metathis) R package to add this metadata to an R code chunk in my Quarto document using the `meta_viewport()` function:
+
+```{r meta-viewport, eval=FALSE}
+# make mobile-responsive
+meta_viewport(
+  width = "device-width",
+  initial_scale = "1.0",
+  maximum_scale = "1.0",
+  user_scalable = "no"
+  )
+```
+
+> Update: In the process of updating this post I'm noticing that specifying the viewport metadata tag doesn't seem to be necessary anymore, and I don't understand why 🤔 ...so I'll leave the step as is, just in case it's helpful to anyone 🤷🏽‍♀️
+
+### Adding social media tags
+
+Then I added more metadata. I was particularly interested in adding social media tags so that if I (or anyone else) shared this map webpage, [an informative preview would display as a social card](https://twitter.com/spcanelon/status/1531644079687229441).
+
+I used the `meta_social()` function to add these tags:
+
+```{r meta-social, eval=FALSE}
+# tags for social media
+meta_social(
+  title = "Philly CCD Sips 2022 Interactive Map",
+  url = "https://www.silviacanelon.com/blog/2022-ccd-sips/map.html",
+  image = "https://github.com/spcanelon/silvia/blob/main/content/blog/2022-05-31-ccd-sips/featured.png?raw=true",
+  image_alt = "Map of Philly's Center City with a pop-up saying Center City District Sips 2022",
+  og_type = "website",
+  og_author = "Silvia Canelón",
+  twitter_card_type = "summary_large_image",
+  twitter_creator = "@spcanelon"
+)
+```
+
+Great, I had added all of the metadata I was interested in! Except that because I was using Quarto, and not one of the [more common outputs](https://pkg.garrickadenbuie.com/metathis/index.html#works-in) I had a couple of extra steps to take: 
+
+1. Write my metadata tags to an HTML file, using the `write_meta()` function:
+
+    ```{r meta-write, eval=FALSE}
+    # write meta tags to file
+    write_meta(path = "meta-map.html")
+    ```
+
+2. Manually include this HTML in my webpage via the Quarto file. The [`include-in-header`](https://quarto.org/docs/output-formats/html-basics.html#includes) Quarto YAML option helped me here:
+
+    ```yaml
+    include-in-header: meta-map.html
+    ```
+
+### Making the map fullscreen
+
+A side effect of creating the map from a Quarto (or R Markdown) document is that the output is styled by default to fit within the width of an article (in this case 900 pixels). I wanted the map to take up the whole width of the page, so I made use of the [`page-layout`](https://quarto.org/docs/interactive/layout.html#full-page-layout) Quarto YAML option:
+
+```yaml
+format: 
+  html:
+    page-layout: custom
+```
+
+Another option that worked pretty well was to use the `column: screen` code chunk option built into Quarto. The Quarto documentation even shows an [example to display a Leaflet map](https://quarto.org/docs/authoring/article-layout.html#screen-column) I but it left a thin margin at the top margin, and I wanted the map to be flush against the top edge of the webpage.
+
+### Rendering the standalone map
+
+Lastly, I added one more option to the YAML that would render the Quarto document into a [self-contained HTML](https://quarto.org/docs/output-formats/html-publishing.html#standalone-html) with all of the content needed to create the map.
+
+```yaml
+format:
+  html:
+    page-layout: custom
+    self-contained: true
+```
