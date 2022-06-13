@@ -23,7 +23,7 @@ links:
 - icon: map-marked-alt
   icon_pack: fas
   name: Interactive Map
-  url: https://tiny.cc/ccdsips2022
+  url: http://tiny.cc/ccdsips2022
 format: hugo
 ---
 
@@ -40,7 +40,7 @@ display: block;
 background: #FFFFFF;
 border: none; /* Reset default border */
 height: 70vh; /* Viewport-relative units */
-width: 60vw;
+width: 100%;
 }
 </style>
 <iframe src="map.html" scrolling="no">
@@ -374,7 +374,7 @@ leaflet(data = specials,
     lat = ~ specials$Latitude, 
     lng = ~ specials$Longitude, 
     fillColor = "#009E91", #olivedrab goldenrod
-    fillOpacity = 0.6, 
+    fillOpacity = 0.6,
     stroke = F,
     radius = 12, 
     popup = popInfoCircles,
