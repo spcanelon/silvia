@@ -1,7 +1,7 @@
 ---
 title: Talks
 description: |
-  This is a home for invited talks and workshops, each linked with accompanying materials.
+  This is a home for invited talks and workshops, each linked with accompanying materials.<br><br>A collection of slide decks can be found at [slides.silviacanelon.com](https://slides.silviacanelon.com)
 author: "Silvia Canelón"
 show_post_thumbnail: true
 show_author_byline: false
