@@ -64,7 +64,7 @@ tags:
 
 ----
 
-> [MiR Community](https://mircommunity.com/about/) (community for minority R users) recently learned that we received a grant to teach data viz accessibility practices to the R community! This educational event will take place as a TidyTuesday week in the spring of 2022. See the [news on Twitter](https://twitter.com/spcanelon/status/1438958412793065487?s=20) and stay tuned for updates! 🎉
+> [MiR Community](https://mircommunity.com/about/) (community for minority R users) recently learned that we received a grant to teach data viz accessibility practices to the R community! This educational event will take place as a TidyTuesday week in the spring of 2023. See the [news on Twitter](https://twitter.com/spcanelon/status/1438958412793065487?s=20) and stay tuned for updates! 🎉
 
 ## General resources
 
@@ -127,9 +127,6 @@ tags:
   
     
     ```r
-    #| fig.cap: Bigger flippers, bigger bills 
-    #| fig.alt: Scatterplot of flipper length by bill length of 3 penguin species, where we show penguins with bigger flippers have bigger bills.
-    
     ggplot(data = penguins, aes(x = flipper_length_mm,
                                 y = bill_length_mm,
                                 color = species)) +
@@ -182,7 +179,7 @@ tags:
     theme(legend.position = 'none')
     ```
     
-    <img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-3-1.png" title="Bar chart showing 3 penguin species along the x axis and the number of observations on the y axis. The bar for the Adelie species uses the color orange and diagonal stripes, the bar for Chinstrap species uses the color purple and crosshatches, and the bar for the Gentoo species uses the color cyan and a dotted pattern." alt="Bar chart showing 3 penguin species along the x axis and the number of observations on the y axis. The bar for the Adelie species uses the color orange and diagonal stripes, the bar for Chinstrap species uses the color purple and crosshatches, and the bar for the Gentoo species uses the color cyan and a dotted pattern." width="672" />
+    <img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-3-1.png" alt="Bar chart showing 3 penguin species along the x axis and the number of observations on the y axis. The bar for the Adelie species uses the color orange and diagonal stripes, the bar for Chinstrap species uses the color purple and crosshatches, and the bar for the Gentoo species uses the color cyan and a dotted pattern." width="672" />
     <p class="caption" style="text-align:center;">Different patterns mapped onto penguin species along with different colors</p>
 
 - The [Highcharter R package](https://jkunst.com/highcharter/index.html) developed by Joshua Kunst adds interactivity to data viz using Highcharts JavaScript components designed with [web accessibility in mind](https://www.highcharts.com/accessibility/#exploreFeatures). The package has a learning curve, but lucky for us Mara Averick wrote an excellent [series of blog posts on using the Highcharts accessibility module with {highcharter}](https://dataand.me/index.html#category:highcharter).
