@@ -1,0 +1,154 @@
+// ┌ Hello! ────────────────────────────────────────┐
+// │                                                    │
+// │    I designed this theme for me,                   │
+// │    please do not reuse it without permission.      │
+// │                                                    │
+// │    You can learn how to make your own at:          │
+// │    https://hugo-apero-docs.netlify.app/learn/      │
+// │                                                    │
+// └───────────────────── Silvia Canelón • @spcanelon ┘
+
+// Override this file to add your own SCSS styling.
+
+// basic color options: use only hex colors
+
+// "Color Palette" ideas of https://tachyons.io/docs/themes/skins/
+
+// custom color variables
+
+$spc-blue: #122140;
+$spc-test: #FF725C; // orange pink color for testing changes
+$white: #FFFFFF;
+
+// cool palette
+$spc-bg: #fffbf2; // formerly #F5F5F5, #fffcf7, fffbf5
+$spc-bg-dark: #FAF0E3; // formerly #EBEBEB, #FBEBDA, FAF0E3, WIP FFF2EB 
+$spc-primary: #002642; // formerly #122140, 1C304A, 002642
+$spc-primary-light: #2E4963 ; // formerly #475269, 32415A, 2E4963
+$spc-secondary: #A23E02; // formerly #936C10, 815E0E, b04303
+$spc-secondary-light: #936c10;
+
+// other highlight options
+// terra: A44200*
+// blue: (002642), 006E90*
+
+// set custom hex colors
+$siteBgColorCustom: $spc-bg;                   // site background
+$textColorCustom: $spc-primary-light;          // all text, including headings
+$bodyLinkColorCustom: $spc-secondary;          // main body links/anchors
+
+$sidebarBgColorCustom: $spc-bg-dark;           // sidebar background
+$sidebarTextColorCustom: $spc-primary-light;   // text in sidebar
+$sidebarLinkColorCustom: $spc-primary-light;   // links in sidebar
+
+$headlineColorCustom: $spc-primary;            // headline & name in About, event detail text
+$headingColorCustom: $spc-primary;             // headings (in browser only)
+$navLinkColorCustom: $spc-secondary;           // navbar & footer links/icons
+$footerTextColorCustom: $spc-primary-light;    // footer text
+
+$buttonBgColorCustom: $spc-primary-light;      // contact form button background
+$buttonTextColorCustom: $white;                // contact form button
+$buttonHoverBgColorCustom: mix($spc-secondary, $white, 85); // any button background w/ hover
+$buttonHoverTextColorCustom: $white;           // any button text w/ hover
+
+$borderColorCustom: $spc-primary-light;        // quote bar, horizontal bars
+
+// syntax highlighting
+// generated using hugo gen chromastyles --style=arduino > assets/css/arduino.css then modified
+
+:root {
+    --error: #7a0062;
+    --orange: #B84900; // A23E02 C24E00
+    --green: #627A00;
+    --blue: #007faa;
+    --gray1: #434f54;
+    --gray2: #55646A;
+    --gray3: #66787F;
+    --gold: #815E0E;
+}
+
+/* Background */ .chroma { background-color: #fefefe }
+/* Other */ .chroma .x {  }
+/* Error */ .chroma .err { color: var(--error) }
+/* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
+/* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; width: auto; overflow: auto; display: block; }
+/* LineHighlight */ .chroma .hl { display: block; width: 100%;background-color: #ffffcc }
+/* LineNumbersTable */ .chroma .lnt { margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #7f7f7f }
+/* LineNumbers */ .chroma .ln { margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #7f7f7f }
+/* Keyword */ .chroma .k { color: var(--orange) }
+/* KeywordConstant */ .chroma .kc { color: var(--blue) }
+/* KeywordDeclaration */ .chroma .kd { color: var(--orange) }
+/* KeywordNamespace */ .chroma .kn { color: var(--orange) }
+/* KeywordPseudo */ .chroma .kp { color: var(--blue) }
+/* KeywordReserved */ .chroma .kr { color: var(--blue) }
+/* KeywordType */ .chroma .kt { color: var(--blue) }
+/* Name */ .chroma .n { color: var(--gray1) }
+/* NameAttribute */ .chroma .na { color: var(--gray1) }
+/* NameBuiltin */ .chroma .nb { color: var(--orange) }
+/* NameBuiltinPseudo */ .chroma .bp { color: var(--gray1) }
+/* NameClass */ .chroma .nc { color: var(--gray1) }
+/* NameConstant */ .chroma .no { color: var(--gray1) }
+/* NameDecorator */ .chroma .nd { color: var(--gray1) }
+/* NameEntity */ .chroma .ni { color: var(--gray1) }
+/* NameException */ .chroma .ne { color: var(--gray1) }
+/* NameFunction */ .chroma .nf { color: var(--green) } // functions
+///* NameFunction */ .chroma .nf { color: var(--orange) }
+/* NameFunctionMagic */ .chroma .fm { color: var(--gray1) }
+/* NameLabel */ .chroma .nl { color: var(--gray1) }
+/* NameNamespace */ .chroma .nn { color: var(--gray1) }
+/* NameOther */ .chroma .nx { color: var(--orange) }
+/* NameProperty */ .chroma .py { color: var(--gray1) }
+/* NameTag */ .chroma .nt { color: var } // html tags
+//* NameTag */ .chroma .nt { color: var(--gray1) }
+/* NameVariable */ .chroma .nv { color: var(--gray1) }
+/* NameVariableClass */ .chroma .vc { color: var(--gray1) }
+/* NameVariableGlobal */ .chroma .vg { color: var(--gray1) }
+/* NameVariableInstance */ .chroma .vi { color: var(--gray1) }
+/* NameVariableMagic */ .chroma .vm { color: var(--gray1) }
+/* Literal */ .chroma .l { }
+/* LiteralDate */ .chroma .ld { }
+/* LiteralString */ .chroma .s { color: var(--blue) } // css class
+//* LiteralString */ .chroma .s { color: var(--gray2) }
+/* LiteralStringAffix */ .chroma .sa { color: var(--gray2) }
+/* LiteralStringBacktick */ .chroma .sb { color: var(--gray2) }
+/* LiteralStringChar */ .chroma .sc { color: var(--gray2) }
+/* LiteralStringDelimiter */ .chroma .dl { color: var(--gray2) }
+/* LiteralStringDoc */ .chroma .sd { color: var(--gray2) }
+/* LiteralStringDouble */ .chroma .s2 { color: var(--gray2) }
+/* LiteralStringEscape */ .chroma .se { color: var(--gray2) }
+/* LiteralStringHeredoc */ .chroma .sh { color: var(--gray2) }
+/* LiteralStringInterpol */ .chroma .si { color: var(--gray2) }
+/* LiteralStringOther */ .chroma .sx { color: var(--gray2) }
+/* LiteralStringRegex */ .chroma .sr { color: var(--gray2) }
+/* LiteralStringSingle */ .chroma .s1 { color: var(--gray2) }
+/* LiteralStringSymbol */ .chroma .ss { color: var(--gray2) }
+/* LiteralNumber */ .chroma .m { color: var(--gold) }
+/* LiteralNumberBin */ .chroma .mb { color: var(--gold) }
+/* LiteralNumberFloat */ .chroma .mf { color: var(--gold) }
+/* LiteralNumberHex */ .chroma .mh { color: var(--gold) }
+/* LiteralNumberInteger */ .chroma .mi { color: var(--gold) }
+/* LiteralNumberIntegerLong */ .chroma .il { color: var(--gold) }
+/* LiteralNumberOct */ .chroma .mo { color: var(--gold) }
+/* Operator */ .chroma .o { color: var(--orange) }
+/* OperatorWord */ .chroma .ow { color: var(--orange) }
+/* Punctuation */ .chroma .p { color: var(--orange) }
+/* Comment */ .chroma .c { color: var(--gray3) }
+/* CommentHashbang */ .chroma .ch { color: var(--gray3) }
+/* CommentMultiline */ .chroma .cm { color: var(--gray3) }
+/* CommentSingle */ .chroma .c1 { color: var(--gray3) }
+/* CommentSpecial */ .chroma .cs { color: var(--gray3) }
+/* CommentPreproc */ .chroma .cp { color: var(--orange) }
+/* CommentPreprocFile */ .chroma .cpf { color: var(--orange) }
+/* Generic */ .chroma .g { }
+/* GenericDeleted */ .chroma .gd { }
+/* GenericEmph */ .chroma .ge {  }
+/* GenericError */ .chroma .gr {  }
+/* GenericHeading */ .chroma .gh {  }
+/* GenericInserted */ .chroma .gi {  }
+/* GenericOutput */ .chroma .go {  }
+/* GenericPrompt */ .chroma .gp {  }
+/* GenericStrong */ .chroma .gs {  }
+/* GenericSubheading */ .chroma .gu {  }
+/* GenericTraceback */ .chroma .gt {  }
+/* GenericUnderline */ .chroma .gl {  }
+/* TextWhitespace */ .chroma .w {  }
