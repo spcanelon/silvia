@@ -11,6 +11,3 @@ https://silvia.rbind.io/project/*                   https://www.silviacanelon.co
 
 http://silvia.rbind.io/*                            https://www.silviacanelon.com/:splat 301!
 https://silvia.rbind.io/*                           https://www.silviacanelon.com/:splat 301!
-
-http://silviacanelon.com/*                          https://www.silviacanelon.com/:splat 301!
-https://silviacanelon.com/*                         https://www.silviacanelon.com/:splat 301!
