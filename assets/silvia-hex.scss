@@ -1,12 +1,12 @@
-// ┌ Hello! ────────────────────────────────────────────┐
+// ┌ Hello! ────────────────────────────────────────┐
 // │                                                    │
 // │    I designed this theme for me,                   │
-// │    please do not reuse it without permission.     │
+// │    please do not reuse it without permission.      │
 // │                                                    │
-// |    You can learn how to make your own at:          │
-// |    https://hugo-apero-docs.netlify.app/learn/      │
+// │    You can learn how to make your own at:          │
+// │    https://hugo-apero-docs.netlify.app/learn/      │
 // │                                                    │
-// └─────────────────────── Silvia Canelón • @spcanelon ┘
+// └───────────────────── Silvia Canelón • @spcanelon ┘
 
 // Override this file to add your own SCSS styling.
 
@@ -46,7 +46,7 @@ $headingColorCustom: $spc-primary;             // headings (in browser only)
 $navLinkColorCustom: $spc-secondary;           // navbar & footer links/icons
 $footerTextColorCustom: $spc-primary-light;    // footer text
 
-$buttonBgColorCustom: $spc-primary-light;    // contact form button background
+$buttonBgColorCustom: $spc-primary-light;      // contact form button background
 $buttonTextColorCustom: $white;                // contact form button
 $buttonHoverBgColorCustom: mix($spc-secondary, $white, 85); // any button background w/ hover
 $buttonHoverTextColorCustom: $white;           // any button text w/ hover
