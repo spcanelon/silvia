@@ -45,7 +45,7 @@ February 12th, 2021 was [Greg Wilson’s last day at RStudio](https://twitter.co
 
 You can also jump down in this blog post to [Teaching resources](#teaching-resources) to find a consolidated list of materials previously taught as part of the RStudio certification program, in addition to some related resources (thanks to Yanina for adding to this list!).
 
-Lastly, you may want to consider becoming certified through [The Carpentries](https://carpentries.org/blog/2018/07/apply-to-train/). Yanina Bellini Saibene ([@yabellini](https://twitter.com/yabellini)) and Dorris Scott ([@Dorris\_Scott](https://twitter.com/Dorris_Scott)) are a couple of RStudio instructors that have also been certified through The Carpentries.
+Lastly, you may want to consider becoming certified through [The Carpentries](https://carpentries.org/blog/2018/07/apply-to-train/). Yanina Bellini Saibene ([@yabellini](https://twitter.com/yabellini)) and Dorris Scott ([@Dorris_Scott](https://twitter.com/Dorris_Scott)) are a couple of RStudio instructors that have also been certified through The Carpentries.
 
 # Why did I get trained?
 
@@ -132,7 +132,7 @@ When I completed the instructor training on pedagogy it took place completely on
 
 Some of my favorite topics were mental models, cognitive capacity, and formative assessments. At the heart of all three is the concept map, which serves as a guide for reverse-designing a lesson and delivering it effectively. You can find examples of concept maps [here as slides](https://docs.google.com/presentation/d/1ForBjP0pVhljBLuqOyYfyHw_1rrwJzpWW1ZHzCqAJpU/edit?ts=5f10c02e#slide=id.p) and [here on GitHub](https://github.com/rstudio/concept-maps/). I’ve found concept maps to come in handy in so many other places in my life and I even made one to help me plan out this blog post. Check it out:
 
-<img src="RIT-post-concept-map.jpg" title="Concept map showing &quot;RStudio Instructor Certification&quot; at the center and various concepts and connections pointing to it. Including MiR webinar, teaching exam, R4DS, and others. These form the different components of the blog post and was helpful in planning out what to write about." alt="Concept map showing &quot;RStudio Instructor Certification&quot; at the center and various concepts and connections pointing to it. Including MiR webinar, teaching exam, R4DS, and others. These form the different components of the blog post and was helpful in planning out what to write about." width="75%" style="display: block; margin: auto;" />
+<img src="RIT-post-concept-map.jpg" alt="Concept map showing &quot;RStudio Instructor Certification&quot; at the center and various concepts and connections pointing to it. Including MiR webinar, teaching exam, R4DS, and others. These form the different components of the blog post and was helpful in planning out what to write about." width="75%" style="display: block; margin: auto;" />
 
 The third day of training, our cohort had the pleasure of learning all about using the [`learnr` 📦](https://rstudio.github.io/learnr/) to build interactive R tutorials, from [Mine Çetinkaya-Rundel](https://education.rstudio.com/trainers/people/cetinkaya-rundel+mine/):
 
@@ -153,7 +153,7 @@ I found an excellent reference for a demonstration lesson in [Florencia D’Andr
 
 It comes highly recommended that someone take a look at each one of our lessons before it ships out because it seems it’s common not to realize we’ve packed too much in! Yanina was kind enough to sit through my lesson as a learner and provided fantastic feedback. Some of the things I was able to work on before my teaching exam included providing context for the lesson at the beginning (asking the learner to download the file, introducing the lesson in the context of a workshop, etc.) and talking through all my key strokes during the live coding portions. Thanks again Yani!
 
-<div class="shareagain" style="min-width:300px;margin:1em auto;">
+<div class="shareagain" style="min-width:300px;margin:1em auto;" data-exeternal="1">
 <iframe src="https://spcanelon.github.io/rit-teaching-exam" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
 <script>fitvids('.shareagain', {players: 'iframe'});</script>
 </div>
