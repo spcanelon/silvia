@@ -1,0 +1,294 @@
+// ┌ Hello! ────────────────────────────────────────────┐
+// │                                                    │
+// │    I designed this theme for me,                   │
+// │    please do not reuse it without permission.     │
+// │                                                    │
+// |    You can learn how to make your own at:          │
+// |    https://hugo-apero-docs.netlify.app/learn/      │
+// │                                                    │
+// └─────────────────────── Silvia Canelón • @spcanelon ┘
+
+// Installed following guidance at https://hugo-apero-docs.netlify.app/learn/fonts/
+
+/* petrona-regular - latin */
+@font-face {
+  font-family: 'Petrona';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/petrona-v16-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('fonts/petrona-v16-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/petrona-v16-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/petrona-v16-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('fonts/petrona-v16-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/petrona-v16-latin-regular.svg#Petrona') format('svg'); /* Legacy iOS */
+}
+
+/* petrona-500 - latin */
+@font-face {
+  font-family: 'Petrona';
+  font-style: normal;
+  font-weight: 500;
+  src: url('fonts/petrona-v16-latin-500.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('fonts/petrona-v16-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/petrona-v16-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/petrona-v16-latin-500.woff') format('woff'), /* Modern Browsers */
+       url('fonts/petrona-v16-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/petrona-v16-latin-500.svg#Petrona') format('svg'); /* Legacy iOS */
+}
+
+/* red-hat-text-regular - latin */
+@font-face {
+  font-family: 'Red Hat Text';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/red-hat-text-v3-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/red-hat-text-v3-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/red-hat-text-v3-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/red-hat-text-v3-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/red-hat-text-v3-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/red-hat-text-v3-latin-regular.svg#RedHatText') format('svg'); /* Legacy iOS */
+}
+
+/* red-hat-text-italic - latin */
+@font-face {
+  font-family: 'Red Hat Text';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/red-hat-text-v3-latin-italic.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/red-hat-text-v3-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/red-hat-text-v3-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/red-hat-text-v3-latin-italic.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/red-hat-text-v3-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/red-hat-text-v3-latin-italic.svg#RedHatText') format('svg'); /* Legacy iOS */
+}
+
+/* red-hat-text-500 - latin */
+@font-face {
+  font-family: 'Red Hat Text';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/red-hat-text-v3-latin-500.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/red-hat-text-v3-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/red-hat-text-v3-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/red-hat-text-v3-latin-500.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/red-hat-text-v3-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/red-hat-text-v3-latin-500.svg#RedHatText') format('svg'); /* Legacy iOS */
+}
+
+/* red-hat-text-500italic - latin */
+@font-face {
+  font-family: 'Red Hat Text';
+  font-style: italic;
+  font-weight: 500;
+  src: url('../fonts/red-hat-text-v3-latin-500italic.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/red-hat-text-v3-latin-500italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/red-hat-text-v3-latin-500italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/red-hat-text-v3-latin-500italic.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/red-hat-text-v3-latin-500italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/red-hat-text-v3-latin-500italic.svg#RedHatText') format('svg'); /* Legacy iOS */
+}
+
+
+// ----------------------------------------------------------------------------
+// ----custom styling----------------------------------------------------------
+
+// Experimental: ToC: navigating up or down the ToC is smooth not jumpy
+/*html {
+  scroll-behavior: smooth;
+}*/
+
+// headline: make smaller than default
+.f1-m {
+  font-size: 5.7rem;
+}
+
+// sidebar: make smaller after a11y mod to h3
+#profile h3 {
+  font-size: 1rem;
+}
+
+// ToC ------------------------------------------------------------------------
+// modified from: scaffold.scss, series + collections table of contents
+
+
+// styles h1 and h2
+nav#TableOfContents ul li {
+  @extend .f5, .lh-title-ns;
+  // all links
+  a {
+    @extend .no-underline;
+    // transition: all 50mx ease-in-out;
+  }
+  // active list items
+  &.active {
+    @extend .pl3, .bg-#{$siteBgColor}, .bl, .b--#{$borderColor}, .bw1;
+  }
+  // non-active list items
+  &:not(.active) {
+    @extend .pl3, .bl, .bw1, .b--transparent;
+  }
+  // hovering over active links
+  &:hover.active a {
+    @extend .underline;
+  }
+  // hovering over non-active links
+  &:hover:not(.active) a {
+   //@extend .underline;
+  }
+  &a:hover {
+    @extend .br;
+  }
+  // within nested list items
+  li {
+    // hovering over active links
+    &:hover.active a {
+      //@extend .dim;
+    }
+    // hovering over non-active links
+    &:hover:not(.active) a {
+      @extend .underline; //.dim;
+    }
+  }
+}
+
+// links ----------------------------------------------------------------------
+
+// WIP: a11y: add indicator for external links
+// source: https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_links#including_icons_on_links
+/*
+a[href*="http"] {
+  background: url('../static/img/external-link.png') no-repeat 100% 0;
+  background-size: 16px 16px;
+  padding-right: 19px;
+}
+*/
+
+a {
+  text-decoration-thickness: 1.5px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+// home page site header
+.grid-container.home h1 {
+  font-size: 4.25em;
+}
+
+// single post ----------------------------------------------------------------
+
+/*
+.single {
+  .page-main {
+    grid-column: 1 / 5;
+  }
+  .page-sidebar {
+    @extend .mt7;
+    grid-column: 5 / 7;
+    @extend .bg-transparent;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .single {
+    .page-main,
+    .page-sidebar {
+      grid-column: 1 / 7;
+    }
+  }
+}*/
+
+// inline code ----------------------------------------------------------------
+// apply tachyons classes to blog post and single page markdown
+
+// increase line spacing within panels
+.panelset * {
+  @extend .lh-copy;
+}
+
+.post-body,
+.page-body {
+  
+  // code inside links
+  a > code {
+    // tachyon styles
+    @extend .f6, .pa1, .ba, .bw1, .br0;
+    // standard css properties
+    color: #415200;     // 415200 434f54
+    background-color: none; // DCE3C0 EEF1E0
+    border: none;  // 728e00 b9c680 ebebeb
+  }
+  
+  // inline code (not code in chunks)
+  :not(pre) > code {
+    // tachyon styles
+    @extend .f6, .pa1, .ba, .bw1 , .br1;
+    // standard css properties
+    color: #434f54;     // 415200 434f54 627A00
+    background-color: #EEF1E0; // DCE3C0 EEF1E0 fefefe
+    border: 1px solid #b9c680;// 728e00 b9c680 ebebeb 
+  }
+  
+}
+
+// wrap code chunks
+// source: https://stackoverflow.com/a/56469907
+code {
+  white-space : pre-wrap !important;
+}
+
+// Style code chunks ----------------------------------------------------------
+pre, li > pre {
+  @extend .pre, .br1, .pa3, .bg-transparent, .f6;
+  border: 1px solid #ebebeb;
+  line-height: 1.5em;
+}
+
+pre code span {
+	font-weight: normal !important;
+}
+
+// a11y: scaling up to 18px font size -----------------------------------------
+p, summary {
+  font-size: 1.125em;
+}
+
+ul, ol {
+  font-size: 1.125em;
+  > li > p {
+    font-size: 1em;
+  }
+  ul, ol {
+    li {
+      font-size: 0.9em;
+    }
+  }
+  p, summary {
+    font-size: 1em;
+  }
+}
+
+// WIP: headings with background
+
+.post-body {
+  h1, h2, h3 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    /*background: 
+      linear-gradient(
+        //180deg, 
+        rgba(255,255,255,0) 60%, 
+        #FFECE0 60%  // FFE6D7
+        );
+    background-position: center bottom;
+    background-position-x: 0%;
+    background-position-y: 0%;*/
+  }
+}
