@@ -1,0 +1,714 @@
+---
+title: "Remediation No. 1"
+weight: 2
+subtitle: "Accessibility remediation following WAVE Audit No. 1"
+excerpt: "Accessibility remediation following [WAVE Audit No. 1.](/blog/2021-a11y-website/01-wave-audit-1/)"
+slug: remediation-1
+date: 2021-06-12
+lastmod: 2021-06-12
+draft: false
+---
+
+
+
+<style type="text/css">
+.page-main img {
+  box-shadow: 0px 0px 2px 2px rgba( 0, 0, 0, 0.2 );
+  #/* ease | ease-in | ease-out | linear */
+  transition: transform ease-in-out 0.6s;
+}
+
+.page-main img:hover {
+  transform: scale(1.3);
+}
+</style>
+
+
+This blog post documents the remediations that address accessibility failures discovered during my first experience auditing my website for accessibility.
+
+- The accessibility failures can be found documented in the [WAVE Audit No. 1 blog post](/blog/2021-a11y-website/01-wave-audit-1/)
+- All git commits can be found documented in GitHub [pull request #29](https://github.com/spcanelon/silvia/pull/29) and linked in each failure type described below
+- An approximate version of my site prior to remediations can be found at https://apero--silvia.netlify.app/
+
+## Failure types
+
+You can find a more detailed breakdown in the audit blog post, but in the table (and list) below you will find a summary of the errors and alerts provided by the [Web Accessibility Evaluation Tool (WAVE)](https://wave.webaim.org/). The
+
+| Failure | Type | Status |
+| --- | --- | --- | --- |
+| [Missing alternative text](#missing-alternative-text-image-alternative-text-is-not-present): Image alternative text is  not present | Perceivable | :white_check_mark: |
+| [Empty link](#empty-link-a-link-contains-no-text): A link contains no text.  | Operable | :white_check_mark: |
+| [Linked image missing alternative text](#linked-image-missing-alternative-text-an-image-without-alternative-text-results-in-an-empty-link): An image without alternative text results in an empty link.  | Perceivable, Operable | :white_check_mark: |
+| [Very low contrast](#very-low-contrast-very-low-contrast-between-text-and-background-colors): Very low contrast between text and background colors.  | Perceivable | :white_check_mark: |
+| [Suspicious link text](#suspicious-link-text-link-text-contains-extraneous-text-or-may-not-make-sense-out-of-context): Link text contains extraneous text or may not make sense out of context.  | Operable | :white_check_mark: |
+| [Redundant title text](#redundant-title-text-title-attribute-text-is-the-same-as-text-or-alternative-text): Title attribute text is the same as text or alternative text. | _Operable_ | :white_check_mark: |
+| [Skipped heading level](#skipped-heading-level-a-heading-level-is-skipped): A heading level is skipped.  | Perceivable, Operable | :white_check_mark: |
+| [Possible heading](#possible-heading-text-appears-to-be-a-heading-but-is-not-a-heading-element): Text appears to be a heading but is not a heading element.  | Perceivable, Operable | :white_check_mark: |
+| [Redundant link](#redundant-link-adjacent-links-go-to-the-same-url): Adjacent links go to the same URL.  | Operable | :white_check_mark: |
+| [Long alternative text](#long-alternative-text-an-image-has-very-long-alternative-text): An image has very long alternative text.  | Perceivable | :x: |
+| [Broken same-page link](#broken-same-page-link-a-link-to-another-location-within-the-page-is-present-but-does-not-have-a-corresponding-target): A link to another location within the page is present but does not have a corresponding target.  | Operable | :x: |
+| [YouTube video](#youtube-video-an-embedded-or-linked-youtube-video-is-present): An embedded or linked YouTube video is present.  | Perceivable | :x: |
+
+<details><summary>Failures in list form</summary>
+
+### Errors
+- [x] Missing alternative text: Image alternative text is not present.
+- [x] Empty link: A link contains no text.
+- [x] Linked image missing alternative text: An image without alternative text results in an empty link.
+- [x] Very low contrast: Very low contrast between text and background colors.
+
+### Alerts
+- [x] Suspicious link text: Link text contains extraneous text or may not make sense out of context.
+- [x] Redundant title text: Title attribute text is the same as text or alternative text.
+- [x] Skipped heading level: A heading level is skipped.
+- [x] Possible heading: Text appears to be a heading but is not a heading element.
+- [x] Redundant link: Adjacent links go to the same URL.
+- [ ] Long alternative text: An image has very long alternative text.
+- [ ] Broken same-page link: A link to another location within the page is present but does not have a corresponding target.
+- [ ] YouTube video: An embedded or linked YouTube video is present.
+</details>
+
+---
+
+## Missing alternative text 
+<h3>Image alternative text is not present</h3>
+
+<details><summary>
+WebAIM WAVE reference material
+</summary>
+
+- **What It Means:** Image alternative text is not present.
+
+- **Why It Matters:** Each image must have an alt attribute. 
+Without alternative text, the content of an image will not be available 
+to screen reader users or when the image is unavailable.
+
+- **How to Fix It:** Add an alt attribute to the image. The 
+attribute value should accurately and succinctly present the content and
+ function of the image. If the content of the image is conveyed in the 
+context or surroundings of the image, or if the image does not convey 
+content or have a function, it should be given empty/null alternative 
+text (alt="").
+
+- **The Algorithm... in English:** An image does not have an alt attribute.
+
+- **Standards and Guidelines:**
+
+  - [1.1.1 Non-text Content (Level A)](https://webaim.org/standards/wcag/checklist#sc1.1.1)
+  
+</details>
+
+#### Correction: Add alt-text to featured image on home page
+
+> <i class='fas fa-code-branch pr2'></i> Follow along with me at [commit dbb1c29](https://github.com/spcanelon/silvia/pull/29/commits/dbb1c294c4aecc8a842247788a9ce575d7a2d3b3)
+
+Add `image_alt_text` parameter to **silvia/content/_index.md**
+
+```md
+---- Before ----
+
+images:
+  - img/Lake_Pink_lowExp_wide.jpg
+image_left: false
+```
+
+```md
+---- After ----
+
+images:
+  - img/Lake_Pink_lowExp_wide.jpg
+image_alt_text: "Photo of a lake with water reflecting a bright blue sky and nestled among lush trees"
+image_left: false
+```
+  
+Copy the **index.html** layout file for the home page from the `silvia/themes/hugo-apero/layouts/` folder to `silvia/layouts/`
+
+Refer to the new`image_alt_text` parameter in **index.html**
+
+```html
+---- Before ----
+  
+<div class="tr w-50-l {{ if .Params.image_left }}ml4{{ else }}mr4{{ end }}">
+  {{ with .Params.images }}
+    {{ range first 1 . }}<img class="mv0 w-70-m" src="{{ . }}"/>{{ end }}
+  {{ end }}
+</div>
+```
+
+```html
+---- After ----
+
+<div class="tr w-50-l {{ if .Params.image_left }}ml4{{ else }}mr4{{ end }}">
+  {{ with .Params.images }}
+    {{ range first 1 . }}<img class="mv0 w-70-m" src="{{ . }}" alt="{{ $.Params.image_alt_text }}"/>{{ end }}
+  {{ end }}
+</div>
+```
+
+## Empty link
+<h3>A link contains no text</h3>
+
+<details><summary> WebAIM WAVE reference material </summary>
+
+- **What It Means:** A link contains no text.
+
+- **Why It Matters:** If a link contains no text, the function
+ or purpose of the link will not be presented to the user. This can 
+introduce confusion for keyboard and screen reader users.
+
+- **How to Fix It:** Remove the empty link or provide text within the link that describes the functionality and/or target of that link.
+
+- **The Algorithm... in English:** An anchor element has an href attribute, but contains no text (or only spaces) and no images with alternative text.
+
+- **Standards and Guidelines:** 
+  - [2.4.4 Link Purpose (In Context) (Level A)](https://webaim.org/standards/wcag/checklist#sc2.4.4)
+  
+</details>
+
+#### Correction: Add text to the heading anchor symbols
+
+> <i class='fas fa-code-branch pr2'></i> Follow along with me at [commit 5d738fe](https://github.com/spcanelon/silvia/commit/5d738fef7fe42695f58bc060f9ea1c6c4332152c)
+
+The little anchor symbols that are visible next to each section heading indicate that the heading has its own heading. This makes it possible to copy a link to a specific heading on the page. Prior to the correction, these anchor symbols did not have any text to accompany them making them invisible to screen readers.
+
+Copy the **render-heading.html** partial from the `silvia/themes/hugo-apero/layouts/_default/_markup/` folder to `silvia/layouts/_default/_markup/`
+
+Add a title to the link text. In my case, I added the title "Link to heading."
+
+```html
+---- Before ----
+
+<a href="#{{ .Anchor | safeURL }}">
+```
+
+```html
+---- After ----
+
+<a href="#{{ .Anchor | safeURL }}" title="Link to heading">
+```
+
+## Linked image missing alternative text
+<h3>An image without alternative text results in an empty link.</h3>
+
+<details><summary> WebAIM WAVE reference material </summary>
+
+- **What It Means:** An image without alternative text results in an empty link.
+
+- **Why It Matters:** Images that are the only thing within a
+link must have descriptive alternative text. If an image is within a 
+link that contains no text and that image does not provide alternative 
+text, a screen reader has no content to present to the user regarding 
+the function of the link.
+
+- **How to Fix It:** Add appropriate alternative text that presents the content of the image and/or the function of the link.
+
+- **The Algorithm... in English:** An image without alternative text 
+(missing alt attribute or an alt value that is null/empty or only space 
+characters) is within a link that does not contain text and an image 
+with alternative text.
+
+- **Standards and Guidelines:**
+  - [1.1.1 Non-text Content (Level A)](https://webaim.org/standards/wcag/checklist#sc1.1.1)
+  - [2.4.4 Link Purpose (In Context) (Level A)](https://webaim.org/standards/wcag/checklist#sc2.4.4)
+  
+</details>
+    
+#### Correction: Remove link from thumbnails in listing pages
+
+> <i class='fas fa-code-branch pr2'></i> Follow along with me at [commit 329c4b8](https://github.com/spcanelon/silvia/commit/329c4b8b896927234c12c7eef507751a6eff49c9)
+
+I first approached this error by coming up with a way to add alt-text for each individual thumbnail using metadata from the corresponding post, but that wasn't the correct approach! I'll spare you that journey.
+
+The problem was not that the thumbnails in my blog, talk, and publication lists did't have alt-text -- these thumbnails were intended to be decorative. The issue was that these thumbnail images were serving a purpose -- they linked to the corresponding blog post and weren't indicating to screen readers where the link was pointing.
+
+I found these WebAIM explanations particularly helpful:
+
+- [1.1.1 Non-text Content (Level A)](https://webaim.org/standards/wcag/checklist#sc1.1.1)
+
+  - Images that do not convey content, are decorative, or contain content that is already conveyed in text are given empty alternative text (alt="") or implemented as CSS backgrounds. All linked images have descriptive alternative text.
+
+- [2.4.4 Link Purpose (In Context) (Level A)](https://webaim.org/standards/wcag/checklist#sc2.4.4)
+  - The purpose of each link (or form image button or image map
+  hotspot) can be determined from the link text alone, or from the link
+  text and its context (e.g., surrounding text, list item, previous
+  heading, or table headers).
+  
+  - Links (or form image buttons) with the same text that go to different locations are readily distinguishable.
+
+Also, _because_ the thumbnail images were pointing to the same place as the post and located right next to the post title, I was getting separate warnings about [redundant links](#redundant-link).
+
+I decided to feed two birds with one scone and remove the links from these thumbnails so that they could be purely decorative (i.e. `<a>`)
+
+I also changed the styling of these images to remove the class `dim` which would make the image dim upon hovering. Without the link attached to the image, there was no reason to keep that visual cue that the image was clickable, and it's possible it would confuse users. If it were me I know I'd be wondering why an image was dimming upon hover if I couldn't do anything with it!
+
+Copy and edit the layout files for the listing pages. Copy **summary.html**, **summary-compact.html**, **summary-section.html**, and **summary-li.html** from the `silvia/themes/hugo-apero/layouts/shared/` folder to the `silvia/layouts/shared/` folder.
+
+```html
+---- Before ----
+
+<figure class="{{ if $root.Params.thumbnail_left }}mr4-ns{{ else }}ml4-ns{{ end }} ma0 mb2 mb0-l w-100 w-40-ns">
+  <a href="{{ .RelPermalink }}" class="db">
+    {{ with $thumbnail }}
+      <img src="{{ .RelPermalink | absURL }}" class="db ma0" alt="">
+    {{ end }}
+  </a>
+</figure>
+```
+
+```html
+---- After ----
+
+<figure class="{{ if $root.Params.thumbnail_left }}mr4-ns{{ else }}ml4-ns{{ end }} ma0 mb2 mb0-l w-100 w-40-ns">
+    {{ with $thumbnail }}
+      <img src="{{ .RelPermalink | absURL }}" class="db ma0" alt="">
+    {{ end }}
+</figure>
+```
+
+## Very low contrast
+<h3>Very low contrast between text and background colors</h3>
+
+<details><summary> WebAIM WAVE reference material </summary>
+
+- **What It Means:** Very low contrast between text and background colors.
+
+- **Why It Matters:** Adequate contrast of text is necessary for all users, especially users with low vision.
+
+- **How to Fix It:** Increase the contrast between the 
+foreground (text) color and the background color. Large text (larger 
+than 18 point or 14 point bold) does not require as much contrast as 
+smaller text.
+
+- **The Algorithm... in English:** Text is present that has a contrast 
+ratio less than 4.5:1, or large text (larger than 18 point or 14 point 
+bold) has a contrast ratio less than 3:1. WCAG requires that page 
+elements have both foreground AND background colors defined (or 
+inherited) that provide sufficient contrast. When text is presented over
+ a background image, the text must have a background color defined 
+(typically in CSS) that provides adequate text contrast when the 
+background image is disabled or unavailable. WAVE does not identify 
+contrast issues in text with CSS transparency, gradients, or filters.
+
+- **Standards and Guidelines:**
+
+  - [1.4.3 Contrast (Minimum) (Level AA)](https://webaim.org/standards/wcag/checklist#sc1.4.3)
+
+</details>
+
+#### Correction: Design a new syntax highlighting palette 🎨
+
+> <i class='fas fa-code-branch pr2'></i> Follow along with me at [commit ]()
+
+Resource: [https://gohugo.io/content-management/syntax-highlighting/](https://gohugo.io/content-management/syntax-highlighting/)
+
+[Syntax Highlighting](https://gohugo.io/content-management/syntax-highlighting/)
+
+But to run hugo commands:
+
+```bash
+hugo gen chromastyles --style=monokai > syntax.css
+
+or
+
+hugo gen chromastyles -h # for more options
+```
+
+Available styles: [https://xyproto.github.io/splash/docs/](https://xyproto.github.io/splash/docs/)
+
+Run hugo commands with `blogdown::hugo_cmd(c("arg1", "arg2"))`
+
+[Run Hugo commands - hugo_cmd](https://pkgs.rstudio.com/blogdown/reference/hugo_cmd.html)
+
+```r
+# for hugo gen chromastyles -h
+blogdown::hugo_cmd(c("gen", "chromastyles", "-h"))
+```
+
+pygments resource: [https://help.farbox.com/pygments.html](https://help.farbox.com/pygments.html)
+
+```r
+# hugo gen chromastyles --style=arduino > assets/scss/syntax.css
+blogdown::hugo_cmd(c("gen", "chromastyles", "--style=arduino > assets/scss/arduino.css"))
+```
+
+- arduino.css
+
+From Hugo docs: *If you run with `pygmentsUseClasses=true` in your site config, you need a style sheet*. But how to specify it in **config.toml?** I searched for "pygmentsUseClasses" in GitHub and went to some "wiki" results.
+
+---
+
+## Suspicious link text
+<h3>Link text contains extraneous text or may not make sense out of context</h3>
+
+<details><summary> WebAIM WAVE reference material </summary>
+
+- **What It Means:** Link text contains extraneous text or may not make sense out of context.
+
+- **Why It Matters:** Links, which are often read out of 
+context, should clearly describe the destination or function of the 
+link. Ambiguous text, text that does not make sense out of context, and 
+extraneous text (such as "click here") can cause confusion and should be
+ avoided.
+
+- **How to Fix It:** Where appropriate, reword the link text 
+so that it is more descriptive of its destination when read out of 
+context. Remove any extraneous text (such as "click here").
+
+- **The Algorithm... in English:**  A link (including alt text of linked 
+images) contains the phrase "click here" or "click", or the link text is
+ "click here", "here", "more", "more...", "details", "more details", 
+"link", "this page", "continue", "continue reading", "read more", or 
+"button".
+
+- **Standards and Guidelines:**
+
+  - [2.4.4 Link Purpose (In Context) (Level A)](https://webaim.org/standards/wcag/checklist#sc2.4.4)
+
+</details>
+
+#### Corrections
+
+> <i class='fas fa-code-branch pr2'></i> Follow along with me at [commit cc0e282](https://github.com/spcanelon/silvia/commit/cc0e2823703fb88716cefdbbbaf7af7934547723)
+
+1. Add more descriptive text to "Read more" link on home page. Now "Learn more about me"
+
+2. Add more descriptive text to "Read more" link on featured posts on about page, *but* they were also redundant with the title, so I removed them altogether
+
+## Redundant title text
+<h3>Title attribute text is the same as text or alternative text</h3>
+
+<details><summary> WebAIM WAVE reference material </summary>
+
+- **What It Means:** Title attribute text is the same as text or alternative text.
+
+- **Why It Matters:** The title attribute value is used to provide advisory
+ information. It typically appears when the users hovers the mouse over 
+an element. The advisory information presented should not be identical 
+to or very similar to the element text or alternative text.
+
+- **How to Fix It:** In most cases the title attribute can be
+ removed, otherwise modify it to provide advisory, but not redundant 
+information. Note that the title text may or may not be read by a screen
+ reader and is typically inaccessible to sighted keyboard users.
+
+- **The Algorithm... in English:** A title attribute value is identical to element text or image alternative text.
+
+- **Standards and Guidelines:** None.
+
+</details>
+
+#### Corrections
+
+> <i class='fas fa-code-branch pr2'></i> Follow along with me at [commit ]()
+
+This was weird. for some reason, one specific image embedded in a code chunk using `knitr::include_graphic()` was getting tagged with a title attribute that was the same as the alt text attribute 🤔
+
+![](img/wave-redundant-title-text.png)
+
+The only solution I could think of was to insert the image using html instead (copied from the 'code' reference in WAVE and then I removed the title attribute):
+
+```html
+<!--BEFORE-->
+<img src="img/netlify-hugo-version.png" title="The environment variables section after clicking the Edit settings button. This section shows the key HUGO_VERSION has a value of 0.82.1 corresponding to the version of Hugo being used by blogdown. Both the key and the value fields are free text boxes. There are two buttons at the bottom of this section, Save and Cancel." alt="The environment variables section after clicking the Edit settings button. This section shows the key HUGO_VERSION has a value of 0.82.1 corresponding to the version of Hugo being used by blogdown. Both the key and the value fields are free text boxes. There are two buttons at the bottom of this section, Save and Cancel." style="display: block; margin: auto;" width="641">
+
+<!--AFTER-->
+<img src="img/netlify-hugo-version.png" alt="The environment variables section after clicking the Edit settings button. This section shows the key HUGO_VERSION has a value of 0.82.1 corresponding to the version of Hugo being used by blogdown. Both the key and the value fields are free text boxes. There are two buttons at the bottom of this section, Save and Cancel." style="display: block; margin: auto;" width="641">
+```
+
+## Skipped heading level
+<h3>A heading level is skipped</h3>
+
+<details><summary> WebAIM WAVE reference material </summary>
+
+- **What It Means:** A heading level is skipped.
+
+- **Why It Matters:** Headings provide document structure and
+facilitate keyboard navigation by users of assistive technology. These 
+users may be confused or experience difficulty navigating when heading 
+levels are skipped.
+
+- **How to Fix It:** Restructure the document headings to ensure that heading levels are not skipped.
+
+- **The Algorithm... in English:** A heading level is skipped (e.g., an `<h1>` is followed by an `<h3>`, with no intermediate `<h2>`). Note that an `<h1>` is not required to be the first heading within the document.
+
+- **Standards and Guidelines:**
+
+  - [1.3.1 Info and Relationships (Level A)](https://webaim.org/standards/wcag/checklist#sc1.3.1)
+  - [2.4.1 Bypass Blocks (Level A)](https://webaim.org/standards/wcag/checklist#sc2.4.1)
+  - [2.4.6 Headings and Labels (Level AA)](https://webaim.org/standards/wcag/checklist#sc2.4.6)
+
+</details>
+
+#### Corrections: talk listing
+
+> <i class='fas fa-code-branch pr2'></i> Follow along with me at [commit ]()
+
+Check "code" reference in WAVE
+
+```html
+<h5 class="f4 fw7 tracked ttu lh-title mv3">
+2021
+</h5>
+```
+
+Find class `f4 fw7 tracked ttu lh-title mv3` within hugo-apero folder. Copy **list.html** and **list-sidebar.html** partials `~/Sync/Repos/Projects/Website/silvia/themes/hugo-apero/layouts/talk` folder into `~/Sync/Repos/Projects/Website/silvia/layouts/talk` folder
+
+Edit h5 to h2 because the font size is already determined by class f4.
+Also had to edit h2 to h1 because the alert was still present
+
+```html
+<!--AFTER list.html (h2 -> h1, h5 -> h2) -->
+<section class="blog-intro mw7 center mb5">
+    <h1 class="f2 f1-ns lh-solid tc center fw4">{{ .Title | markdownify }}</h1>
+    {{ with .Description }}<p class="f6 f5-ns measure lh-copy tc center">{{ . | markdownify }}</p>{{ end }}
+    {{ if .Params.show_author_byline }}<p class="f7 measure lh-copy tc center i">{{ if .Params.author }}Written by {{ .Params.author }}{{ end }}</p>{{ end }}
+  </section>
+  <section class="blog-content mw7 center">
+    {{ $caller := . }}
+    {{ $paginator := .Paginate ((where .RegularPages "Type" .Section).GroupByDate "2006") }}
+    {{ range $paginator.PageGroups}}
+    <!--each year starts a new section-->
+    <section class="group-content pb3 pb4-ns bt">
+      <h2 class="f4 fw7 tracked ttu lh-title mv3">{{ .Key | title }}</h3>
+      {{ range .Pages }}
+          {{ .Scratch.Set "$root" $caller }}
+          {{ partial "shared/summary-compact.html" . }}
+      {{ end }}
+    </section>
+```
+
+```html
+<!--AFTER list-sidebar.html (h5 -> h2)-->
+<section class="group-content pb3 pb4-ns bt">
+      <h2 class="f4 fw7 tracked ttu lh-title mv3">{{ .Key | title }}</h2>
+      {{ range .Pages }}
+          {{ .Scratch.Set "$root" $caller }}
+          {{ partial "shared/summary-compact.html" . }}
+      {{ end }}
+</section>
+```
+
+#### Corrections: publication listing
+
+> <i class='fas fa-code-branch pr2'></i> Follow along with me at [commit ]()
+
+- applied similar modifications to **collection/list.html** and **_default/list.html in `layouts/`**
+#### Corrections: About page
+- searched for `f4 fw7 tracked ttu lh-title mb0 bt pv3`
+- found in **partials/shared/summary-li.html**
+- not as straightforward here because the heading was a link and changing the heading also changed the font size. i had to also change the styling of the link.
+    - original heading size: 1rem, 16px
+    - added f5 tachyon to link class
+
+        ```html
+        <!--AFTER summary-li.html (h5 -> h3, dim -> f5 dim)-->
+        <h3 class="f4 fw7 tracked ttu lh-title mb0 bt pv3"><a href="{{ .RelPermalink }}" class="f5 dim no-underline">{{ .Title }}</a></h3>
+        ```
+
+- searched for `f-subheadline f4 fw2 ttu tracked` for the sidebar subtitle/position
+- found in **partials/about/list.html**
+- another font sizing issue. original heading size: 1rem, 16px. does not respond to tachyon mods to heading class 🤔 Will have to do in style sheet. Inspection revealed id="profile" for the sidebar area of interest
+
+    ```css
+    // sidebar: make smaller after a11y mod to h3
+    #profile h3 {
+      font-size: 1rem;
+    }
+    ```
+
+#### Corrections: Blog post sidebar layout
+
+> <i class='fas fa-code-branch pr2'></i> Follow along with me at [commit ]()
+
+#### Corrections: Talk single layout
+
+> <i class='fas fa-code-branch pr2'></i> Follow along with me at [commit ]()
+
+#### Corrections: Publication single
+
+> <i class='fas fa-code-branch pr2'></i> Follow along with me at [commit ]()
+
+## Possible heading
+<h3>Text appears to be a heading but is not a heading element</h3>
+
+<details><summary> WebAIM WAVE reference material </summary>
+
+- **What It Means:** Text appears to be a heading but is not a heading element.
+
+- **Why It Matters:** Heading elements (`<h1>-<h6>`)
+ provide important document structure, outlines, and navigation 
+functionality to assistive technology users. If heading text is not a 
+true heading, this information and functionality will not be available 
+for that text.
+
+- **How to Fix It:** If the paragraph is a section heading, use a heading element instead (`<h1>-<h6>`).
+
+- **The Algorithm... in English:** A `<p>` element contains less than 50 characters and is either:
+
+  - 20 pixels or bigger, or
+  - 16 pixels or bigger and bold and/or italicized.
+
+- **Standards and Guidelines:**
+
+  - [1.3.1 Info and Relationships (Level A)](https://webaim.org/standards/wcag/checklist#sc1.3.1)
+  - [2.4.1 Bypass Blocks (Level A)](https://webaim.org/standards/wcag/checklist#sc2.4.1)
+  - [2.4.6 Headings and Labels (Level   AA)](https://webaim.org/standards/wcag/checklist#sc2.4.6)
+
+</details>
+
+#### Corrections: about page
+
+> <i class='fas fa-code-branch pr2'></i> Follow along with me at [commit ]()
+
+This alert doesn't *really* matter too much. The algorithm is detecting a possible heading because my subheadline "Thanks for stopping by!" (**~/Sync/Repos/Projects/Website/silvia/content/about/header/index.md**) is short and a large font.
+
+In my case I know that this isn't a heading so I don't need to worry about it.
+
+*But* I did still want to reduce the size of all of that text anyway after I previously scaled the font sitewide (before audit). So I did that and tweaked the width of the div while i was there. this is in **layouts/about/list.html**
+
+```html
+<!--BEFORE <div class="pt2 f4 measure-wide lh-copy dib">{{ . | markdownify }}</div>-->
+<div class="pt2 f5 mw7 lh-copy dib">{{ . | markdownify }}</div>
+.
+.
+.
+<!--BEFORE <div class="pv3 f4 measure lh-copy dib">{{ .Params.intro | markdownify }}</div>-->
+            <div class="pv3 f4 measure lh-copy dib">{{ .Params.intro | markdownify }}</div>
+```
+
+## Redundant link
+<h3>Adjacent links go to the same URL</h3>
+
+<details><summary> WebAIM WAVE reference material </summary>
+
+- **What It Means:** Adjacent links go to the same URL.
+
+- **Why It Matters:** When adjacent links go to the same 
+location (such as a linked product image and an adjacent linked product 
+name that go to the same product page) this results in additional 
+navigation and repetition for keyboard and screen reader users.
+
+- **How to Fix It:** If possible, combine the redundant links
+into one link and remove any redundant text or alternative text (for 
+example, if a product image and product name are in the same link, the 
+image can usually be given alt="").
+
+- **The Algorithm... in English:** Two adjacent links go to the same URL.
+
+- **Standards and Guidelines:**
+
+  - [2.4.4 Link Purpose (In Context) (Level A)](https://webaim.org/standards/wcag/checklist#sc2.4.4)
+</details>
+
+#### Correction
+
+> <i class='fas fa-code-branch pr2'></i> Follow along with me at [commit 329c4b8](https://github.com/spcanelon/silvia/commit/329c4b8b896927234c12c7eef507751a6eff49c9)
+
+Already corrected as a by-product of eliminating the link for thumbnails in all listings except grid layout (projects).
+
+## Long alternative text
+<h3>An image has very long alternative text</h3>
+
+<details><summary> WebAIM WAVE reference material </summary>
+
+- **What It Means:** An image has very long alternative text.
+
+- **Why It Matters:** Alternative text should be succinct, yet descriptive of the content and function of an image. Lengthy 
+alternative text (more than around 100 characters) often indicates that 
+extraneous content or content that is not available to sighted users is 
+being presented.
+
+- **How to Fix It:** Ensure the alternative text is succinct,
+ yet descriptive. Ensure that no content is being presented in 
+alternative text that is not available to sighted users viewing the 
+image. When possible, either shorten the alternative text or provide the
+ text alternative via another method (e.g., in text near the image, 
+through a separate description page, etc.).
+
+- **The Algorithm... in English:** The image's alt attribute value is more 
+than 100 characters. Note that the 100 character limit is a rough and 
+somewhat arbitrary length. For images that present complex content or 
+lengthy text, alternative text longer than 100 characters may be 
+appropriate.
+
+- **Standards and Guidelines:** 
+  - [1.1.1 Non-text Content (Level A)](https://webaim.org/standards/wcag/checklist#sc1.1.1)
+
+</details>
+
+#### Correction
+
+None. 100 characters doesn't seem like enough! Liz offered some perspective:
+
+> 100 characters is nothing!
+So, it was interesting to read down your messages because I was also thinking of the news article model before I got to your mention of it 🙂
+It's all a little subjective-- which means the way you choose to describe how you represent yourself on your own web site can reflect your priorities.
+One time I went with a blind friend to have a "special" guided tour of the US Capitol. After it was over, we had completely different opinions about what we liked and disliked.
+We both had had some vision as kids, but the kind of vision we had was different. I wasn't really able to distinguish colors, so the extensive descriptions of the colors (and some other details) in the artwork was tedious for me to listen to. She loved it. I preferred the more architectural descriptions-- how big spaces were and how they functioned.
+Given the subjectivity of what people prefer or find useful, go for whatever you want people to know about your website. Unless it's illustrations of data visualization-- then we have our list of what to include **until someone adds to or improves it!)
+
+## Broken same-page link
+<h3>A link to another location within the page is present but does not have a corresponding target</h3>
+
+<details><summary> WebAIM WAVE reference material </summary>
+
+- **What It Means:** A link to another location within the page is present but does not have a corresponding target.
+
+- **Why It Matters:** A link to jump to another position 
+within the the page assists users in navigating the web page, but only 
+if the link target exists.
+
+- **How to Fix It:** Ensure that the target for the link exists or remove the the same-page link.
+
+- **The Algorithm... in English:** An in-page link has an href attribute 
+(starting with a #), but does not match either the id value of another 
+element or the name attribute value of an anchor element within the 
+page.
+
+- **Standards and Guidelines:**
+
+  - [2.1.1 Keyboard (Level A)](https://webaim.org/standards/wcag/checklist#sc2.1.1)
+
+</details>
+
+#### Correction
+
+> <i class='fas fa-code-branch pr2'></i> Follow along with me at [commit ]()
+
+This one is another mystery. Only one heading link from many in the HHA blog post was broken 🤔
+
+Mystery solved! 🔍
+
+The issue was because the heading contained an accent for Apéro and while the internal link is ok: **/blog/hello-hugo-apero/#5-copy-over-apéro-example-site-configtoml-file**
+
+It actually gets routed as **/blog/hello-hugo-apero/#5-copy-over-ap%c3%a9ro-example-site-configtoml-file** which doesn't literally correspond to any text in the blog post.
+
+I'm ok with this! Would rather have this alert on occasion then purposely ommit accents
+
+## YouTube video
+<h3>An embedded or linked YouTube video is present</h3>
+
+<details><summary> WebAIM WAVE reference material </summary>
+
+- **What It Means:** An embedded or linked YouTube video is present.
+
+- **Why It Matters:** For video content with audio, ensure 
+that synchronized captioning is available. While YouTube can 
+auto-generate captions using voice recognition, these are typically not 
+of sufficient quality to be considered equivalent.
+
+- **How to Fix It:** Ensure that YouTube video presents equivalent, synchronized captions.
+
+- **The Algorithm... in English:** An embedded (within an iframe) YouTube video is present, or a link to a YouTube video is present.
+
+- **Standards and Guidelines:**
+
+  - [1.2.1 Prerecorded Audio-only and Video-only (Level A)](https://webaim.org/standards/wcag/checklist#sc1.2.1)
+  - [1.2.2 Captions (Prerecorded) (Level A)](https://webaim.org/standards/wcag/checklist#sc1.2.2)
+  - [1.2.3 Audio Description or Media Alternative (Prerecorded) (Level A)](https://webaim.org/standards/wcag/checklist#sc1.2.3)
+
+</details>
+
+#### Corrections
+
+None. This is more of a reminder to make sure YouTube captions are equivalent and synchronized.
