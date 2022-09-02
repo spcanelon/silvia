@@ -6,6 +6,6 @@
 Thumbs.db
 /public/
 /resources/
+/assets/img/
+/assets/fonts/
 /assets/custom.scss
-/static/img/
-/static/fonts
