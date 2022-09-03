@@ -27,6 +27,12 @@ links:
 format: hugo
 ---
 
+<script src="{{< blogdown/postref >}}index_files/clipboard/clipboard.min.js"></script>
+<link href="{{< blogdown/postref >}}index_files/xaringanExtra-clipboard/xaringanExtra-clipboard.css" rel="stylesheet" />
+<script src="{{< blogdown/postref >}}index_files/xaringanExtra-clipboard/xaringanExtra-clipboard.js"></script>
+<script>window.xaringanExtraClipboard(null, {"button":"<i class=\"fa fa-copy\"><\/i> Copy Code","success":"<i class=\"fa fa-check\" style=\"color: #90BE6D\"><\/i> Copied!","error":"Press Ctrl+C to Copy"})</script>
+<link href="{{< blogdown/postref >}}index_files/font-awesome/css/all.css" rel="stylesheet" />
+<link href="{{< blogdown/postref >}}index_files/font-awesome/css/v4-shims.css" rel="stylesheet" />
 <script src="{{< blogdown/postref >}}index_files/htmlwidgets/htmlwidgets.js"></script>
 <script src="{{< blogdown/postref >}}index_files/jquery/jquery.min.js"></script>
 <link href="{{< blogdown/postref >}}index_files/leaflet/leaflet.css" rel="stylesheet" />
@@ -195,10 +201,10 @@ html1 <- read_html(url)
 
 # extract table info
 table1 <- 
-  html1 %>% 
-  html_node("table") %>% 
+  html1 |> 
+  html_node("table") |> 
   html_table()
-table1 %>% head(3) %>% kableExtra::kable()
+table1 |> head(3) |> kableExtra::kable()
 ```
 
 <table>
@@ -267,11 +273,11 @@ CCD SIPS Specials
 ``` r
 # extract hyperlinks to specific restaurant/bar specials
 links <- 
-  html1 %>% 
-  html_elements(".o-table__tag.ccd-text-link") %>% 
-  html_attr("href") %>% 
+  html1 |> 
+  html_elements(".o-table__tag.ccd-text-link") |> 
+  html_attr("href") |> 
   as_tibble()
-links %>% head(3) %>% kableExtra::kable()
+links |> head(3) |> kableExtra::kable()
 ```
 
 <table>
@@ -304,10 +310,10 @@ value
 ``` r
 # add full hyperlinks to the table info
 table1Mod <-
-  bind_cols(table1, links) %>% 
-  mutate(Specials = paste0(url, value)) %>% 
+  bind_cols(table1, links) |> 
+  mutate(Specials = paste0(url, value)) |> 
   select(-c(`CCD SIPS Specials`, value))
-table1Mod %>% head(3) %>% kableExtra::kable()
+table1Mod |> head(3) |> kableExtra::kable()
 ```
 
 <table>
@@ -386,19 +392,19 @@ getTables <- function(pageNumber) {
   html <- read_html(url)
   
   table <- 
-    html %>% 
-    html_node("table") %>%
+    html |> 
+    html_node("table") |>
     html_table()
   
   links <- 
-    html %>% 
-    html_elements(".o-table__tag.ccd-text-link") %>% 
-    html_attr("href") %>% 
+    html |> 
+    html_elements(".o-table__tag.ccd-text-link") |> 
+    html_attr("href") |> 
     as_tibble()
   
   tableSpecials <<-
-    bind_cols(table, links) %>% 
-    mutate(Specials = paste0(url, value)) %>% 
+    bind_cols(table, links) |> 
+    mutate(Specials = paste0(url, value)) |> 
     select(-c(`CCD SIPS Specials`, value))
 }
 ```
@@ -411,7 +417,7 @@ table2 <- map_df(2:3, getTables)
 
 # combine all tables
 table <- bind_rows(table1Mod, table2)
-table %>% head(3) %>% kableExtra::kable()
+table |> head(3) |> kableExtra::kable()
 ```
 
 <table>
@@ -497,15 +503,15 @@ The last time I geocoded addresses was for an [almost identical project in 2019]
 
 # geocode addresses
 specials_ggmap <- 
-  table %>% 
+  table |> 
   mutate_geocode(Address)
 
 # rename new variables
 specials <- 
-  specials_ggmap %>% 
+  specials_ggmap |> 
   rename(Longitude = lon,
          Latitude = lat) 
-specials %>% head(3) %>% kableExtra::kable()
+specials |> head(3) |> kableExtra::kable()
 ```
 
 <table>
@@ -641,7 +647,7 @@ leaflet(data = specials,
         height = "850px",
         # https://stackoverflow.com/a/42170340
         options = tileOptions(minZoom = 15,
-                              maxZoom = 19)) %>%
+                              maxZoom = 19)) |>
   # add map markers ----
   addCircles(
     lat = ~ specials$Latitude, 
@@ -670,7 +676,7 @@ leaflet(data = specials,
         height = "850px",
         # https://stackoverflow.com/a/42170340
         options = tileOptions(minZoom = 15,
-                              maxZoom = 19)) %>%
+                              maxZoom = 19)) |>
   # add map markers ----
   addCircles(
     lat = ~ specials$Latitude, 
@@ -685,7 +691,7 @@ leaflet(data = specials,
       style = list(
         "font-family" = "Red Hat Text, sans-serif",
         "font-size" = "1.2em")
-      )) %>%
+      )) |>
   # add map tiles in the background ----
   addProviderTiles(providers$CartoDB.Positron)
 ```
@@ -701,7 +707,7 @@ leaflet(data = specials,
         height = "850px",
         # https://stackoverflow.com/a/42170340
         options = tileOptions(minZoom = 15,
-                              maxZoom = 19)) %>%
+                              maxZoom = 19)) |>
   # add map markers ----
   addCircles(
     lat = ~ specials$Latitude, 
@@ -716,9 +722,9 @@ leaflet(data = specials,
       style = list(
         "font-family" = "Red Hat Text, sans-serif",
         "font-size" = "1.2em")
-      )) %>%
+      )) |>
   # add map tiles in the background ----
-  addProviderTiles(providers$CartoDB.Positron) %>%
+  addProviderTiles(providers$CartoDB.Positron) |>
   # set the map view
   setView(mean(specials$Longitude), 
           mean(specials$Latitude), 
@@ -736,7 +742,7 @@ leaflet(data = specials,
         height = "850px",
         # https://stackoverflow.com/a/42170340
         options = tileOptions(minZoom = 15,
-                              maxZoom = 19)) %>%
+                              maxZoom = 19)) |>
   # add map markers ----
   addCircles(
     lat = ~ specials$Latitude, 
@@ -751,13 +757,13 @@ leaflet(data = specials,
       style = list(
         "font-family" = "Red Hat Text, sans-serif",
         "font-size" = "1.2em")
-      )) %>%
+      )) |>
   # add map tiles in the background ----
-  addProviderTiles(providers$CartoDB.Positron) %>%
+  addProviderTiles(providers$CartoDB.Positron) |>
   # set the map view
   setView(mean(specials$Longitude), 
           mean(specials$Latitude), 
-          zoom = 16) %>%
+          zoom = 16) |>
   # add marker at the center ----
   addAwesomeMarkers(
     icon = awesome,
@@ -784,7 +790,7 @@ leaflet(data = specials,
         height = "850px",
         # https://stackoverflow.com/a/42170340
         options = tileOptions(minZoom = 15,
-                              maxZoom = 19)) %>%
+                              maxZoom = 19)) |>
   # add map markers ----
   addCircles(
     lat = ~ specials$Latitude, 
@@ -799,13 +805,13 @@ leaflet(data = specials,
       style = list(
         "font-family" = "Red Hat Text, sans-serif",
         "font-size" = "1.2em")
-      )) %>%
+      )) |>
   # add map tiles in the background ----
-  addProviderTiles(providers$CartoDB.Positron) %>%
+  addProviderTiles(providers$CartoDB.Positron) |>
   # set the map view
   setView(mean(specials$Longitude), 
           mean(specials$Latitude), 
-          zoom = 16) %>%
+          zoom = 16) |>
   # add marker at the center ----
   addAwesomeMarkers(
     icon = awesome,
@@ -818,7 +824,7 @@ leaflet(data = specials,
         "font-size" = "1.2em")
       ),
     popup = popInfoMarker,
-    popupOptions = popupOptions(maxWidth = 250)) %>% 
+    popupOptions = popupOptions(maxWidth = 250)) |> 
   # add fullscreen control button ----
   leaflet.extras::addFullscreenControl()
 ```
