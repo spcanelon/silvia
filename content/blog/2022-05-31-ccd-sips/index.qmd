@@ -515,7 +515,7 @@ Great, I had added all of the metadata I was interested in! Except that because 
 
 1. Write my metadata tags to an HTML file, using the `write_meta()` function:
 
-    ```{r meta-write, eval=FALSE}
+    ```r
     # write meta tags to file
     write_meta(path = "meta-map.html")
     ```
