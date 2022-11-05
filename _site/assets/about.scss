@@ -1,0 +1,85 @@
+/*-- scss:defaults --*/
+
+// import scss ---------------------------------------
+
+// learn about Tachyons http://tachyons.io
+@import "tachyons.scss";
+
+/*-- scss:rules --*/
+
+// About page ----------------------------------------
+
+#quarto-document-content {
+  margin-left: 12em;
+  margin-right: 2em;
+}
+
+.about-greeting h1 {
+  @extend .f1, .mv4, .lh-solid, .tracked-tight-ns, .db;
+  font-size: 4.25em;
+}
+
+.quarto-about-trestles {
+  // photo section
+  .about-entity {
+    @extend .order-1, .pt4, .pb4, .pl2;
+    background-color: $bg-dark;
+    flex: 0 0 30% !important;
+    // title & subtitle block
+    #title-block-header {
+      position: sticky;
+      top: 13.8em;
+    }
+    .about-links {
+      position: sticky;
+      top: 21.2em;
+    }
+  }
+  // image
+  img {
+    position: sticky;
+    top: 5em;
+  }
+  // title
+  .title {
+    font-size: 2.25rem;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+  }
+  // subtitle
+  .subtitle.lead {
+    @extend .f6, .fw2, .ttu, .tracked, .mv0;
+    padding: 0em 4em 0em 4em;
+  }
+  // text section
+  .about-contents {
+    @extend .order-1, .pt0;
+    border: none !important;
+    padding: 0 2em 0 0em !important;
+  }
+}
+
+
+// mobile query up for screens up to ~992px wide
+@media screen and (max-width: 991.98px) {
+  .quarto-about-trestles {
+    // move text up & center
+    .about-contents {
+      order: 2 !important;
+      text-align: left !important;
+    }
+    // move image up
+    .about-entity {
+      order: 1 !important;
+      .about-image {
+        position:static;
+      }
+      #title-block-header {
+        position: static;
+      }
+      .about-links {
+        position: static;
+      }
+    }
+  }
+}

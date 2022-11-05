@@ -1,0 +1,14 @@
+{
+  "hash": "23bdd8ba83787933902e04fd9f25264e",
+  "result": {
+    "markdown": "---\ntitle: 'Is Hydroxychloroquine Safe During Pregnancy? Observations from Penn Medicine'\ndate: '2020-05-06'\nslug: preprint-hydroxychloroquine-pregnancy\nalias:\n  - /publication/preprint-hydroxychloroquine-pregnancy/\ncategories:\n  - Research\ntags:\n  - EHR\n  - 'covid-19'\n  - medications\n  - pregnancy\n  - English\nauthor: \"Lena M. Davidson, Silvia P. Canelón, Mary Regina Boland\"\n# doi:\n# publishDate: '2020-05-08T20:26:47-04:00'\npublication_types:\n  - '3'\npublication: 'medRxiv'\npublication_short: 'medRxiv'\nsummary: 'Preprint as a contribution from a rapid response exploration of hydroxychloroquine effects on pregnancy-related outcomes.'\nsubtitle: 'Preprint as a contribution from a rapid response exploration of hydroxychloroquine effects on pregnancy-related outcomes.'\nfeatured: yes\nurl_pdf:\nurl_code: ~\nurl_dataset: ~\nurl_poster: ~\nurl_project: ~\nurl_slides: ~\nurl_source:\nurl_video: ~\n# image:\n#   caption: ''\n#   focal_point: ''\n#   preview_only: no\n# projects: []\n# slides: ''\nlinks:\n- icon: file-pdf\n  icon_pack: fas\n  name: PDF\n  url: https://www.medrxiv.org/content/10.1101/2020.04.29.20085621v1.full.pdf\n- icon: doi\n  icon_pack: ai\n  name: DOI\n  url: https://doi.org/10.1101/2020.04.29.20085621\n---\n\n\n## Abstract\n\nA novel strain of coronavirus appeared in December 2019. Over the next few months, this novel coronavirus spread throughout the world, being declared a pandemic by the World Health Organization on March 11, 2020. As of this writing (March 28, 2020) over one hundred thousand individuals in the United States of America were confirmed cases. One way of treating the associated disease, COVID-19, is to reuse existing FDA-approved medications. One medication that has shown promise is hydroxychloroquine (HCQ). However, the utility and safety of HCQ among pregnant COVID-19 patients remains a concern.\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

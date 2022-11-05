@@ -1,0 +1,18 @@
+{
+  "hash": "0c23fc82eac99de1dc4a5b486c7bb724",
+  "result": {
+    "markdown": "---\ntitle: \"The Impact of Sickle Cell Status on Adverse Delivery Outcomes Using Electronic Health Record Data\"\nauthor: \"Silvia P. Canelón, Samantha Butts, Mary Regina Boland\"\ndate: \"2021-03-22\"\n# date: 2021-03-22T11:30:00\nslug: amia-informatics-summit\nalias:\n  - /talk/2021-03-22-amia-informatics-summit/\ncategories:\n  - Research\ntags:\n  - EHR\n  - pregnancy\n  - sickle cell disease\n  - AMIA\n#event: AMIA 2021 Informatics Summit\n#event_url: https://www.amia.org/summit2021\n#location: Virtual\nimage: featured.png\nsubtitle: \"Applied Clinical Research Informatics: Solving Real World Problems. Oral Presentations S17: March 23, 2021 11:30am-1pm ET\"\nsummary: \"Applied Clinical Research Informatics: Solving Real World Problems. Oral Presentations S17: March 23, 2021 11:30am-1pm ET\"\nabstract: \"This study investigates the effect of sickle cell trait and sickle cell disease, on adverse pregnancy outcomes at Penn Medicine. The risk of a Cesarean section (C-section), preterm birth, stillbirth, pain crisis, blood transfusion, and hemorrhage during delivery were all found to be significantly correlated with race/ethnicity, sickle cell disease, the number of pain crises before delivery, and the number of blood transfusions before delivery. Multiple birth was also found to significantly increase the risk of these same outcomes.\"\n#date_end: 2021-03-25T13:00:00\n#all_day: yes\n# publishDate: '2021-03-07'\nfeatured: yes\n# image:\n#   caption: '[2021 AMIA Informatics Summit Podium Presentation](bit.ly/AMIA-sickle-cell)'\n#   focal_point: center\n#   preview_only: no\nslides: ''\nprojects: []\nlinks:\n- icon: images\n  icon_pack: fas\n  name: slides\n  url: https://slides.silviacanelon.com/2021-amia-informatics-summit\n- icon: youtube\n  icon_pack: fab\n  name: video\n  url: https://youtu.be/d1IpkCim5F4\n- icon: calendar-check\n  icon_pack: fas\n  name: Oral Presentation Schedule\n  url: https://www.amia.org/summit2021/oral-presentations\n---\n\n\n[**Oral Presentations S17: March 23, 2021 11:30am-1pm ET**](https://www.amia.org/summit2021/oral-presentations)\n\n## Abstract\n\nThis study investigates the effect of sickle cell trait and sickle cell disease, on adverse pregnancy outcomes at Penn Medicine. The risk of a Cesarean section (C-section), preterm birth, stillbirth, pain crisis, blood transfusion, and hemorrhage during delivery were all found to be significantly correlated with race/ethnicity, sickle cell disease, the number of pain crises before delivery, and the number of blood transfusions before delivery. Multiple birth was also found to significantly increase the risk of these same outcomes.\n\n## Slides\n\n\n::: {.cell}\n::: {.cell-output-display}\n```{=html}\n<div class=\"shareagain\" style=\"min-width:300px;margin:1em auto;\" data-exeternal=\"1\">\n<iframe src=\"https://spcanelon.github.io/2021-AMIA-sickle-cell\" width=\"1600\" height=\"900\" style=\"border:2px solid currentColor;\" loading=\"lazy\" allowfullscreen></iframe>\n<script>fitvids('.shareagain', {players: 'iframe'});</script>\n</div>\n```\n:::\n:::\n\n\n![Banner for the 2021 AMIA Informatics Summit (March 22-25)](2021-AMIA-IS-banner.jpg)\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<script src=\"../../site_libs/fitvids-2.1.1/fitvids.min.js\"></script>\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
