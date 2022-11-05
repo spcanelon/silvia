@@ -32,8 +32,8 @@ links:
   url: https://github.com/spcanelon/2022-ccd-sips
 - icon: play-circle
   icon_pack: fas
-  name: video (coming soon!)
-  url: 
+  name: video
+  url: https://youtube.com/watch?v=tcfHr0oeOMw&feature=share&utm_source=EKLEiJECCKjOmKnC5IiRIQ
 format: hugo
 ---
 
