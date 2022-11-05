@@ -1,0 +1,14 @@
+{
+  "hash": "0b9a17738ab5789edb7e849345eeaf86",
+  "result": {
+    "markdown": "---\ntitle: \"Professional, Polished, Presentable: Making Great Slides with xaringan\"\nauthor: \"Garrick Aden-Buie & Silvia Canelón\"\ndate: \"2021-07-07\"\n# date: 2021-07-07T16:00:00\nslug: presentable-user2021\nalias:\n  - /talk/2021-07-07-presentable-user2021/\ncategories:\n  - R\n  - Education\ntags:\n  - xaringan\n  - useR\n  - R\n#event: \"useR!2021 Conference\"\n#event_url: https://user2021.r-project.org/\n#location: Virtual\nimage: featured.png\nsubtitle: \"A useR!2021 tutorial about making great slides with xaringan\"\nsummary: \"A [useR!2021](https://user2021.r-project.org/) tutorial about making great slides with xaringan\"\nabstract: \"The xaringan package brings professional, impressive, and visually appealing slides to the powerful R Markdown ecosystem. Through our hands-on tutorial, you will learn how to design highly effective slides that support presentations for teaching and reporting alike. Over three hours, you will learn how to create an accessible baseline design that matches your institution or organization’s style guide. Together we’ll explore the basics of CSS—the design language of the internet—and how we can leverage CSS to produce elegant slides for effective communication.\"\n#date_end: 2021-07-07T19:00:00\n#all_day: yes\n# publishDate: '2021-07-07'\nfeatured: yes\n# image:\n#   caption: '[Social card for Professional, Polished, Presentable](https://presentable-user2021.netlify.app)'\n#   focal_point: center\n#   preview_only: no\nprojects:\n  - xaringan\nlinks:\n- icon: book-open\n  icon_pack: fas\n  name: course site\n  url: https://presentable-user2021.netlify.app/\n- icon: youtube\n  icon_pack: fab\n  name: video\n  url: https://youtu.be/RPFh3y9UAX4\n- icon: github\n  icon_pack: fab\n  name: presentable-user2021\n  url: https://github.com/presentable-user2021\n- icon: calendar-check\n  icon_pack: fas\n  name: program schedule\n  url: https://user2021.r-project.org/program/schedule/\n---\n\n\nCo-instructed with [Garrick Aden-Buie](https://www.garrickadenbuie.com/)\n\n## Abstract\n\nThe xaringan package brings professional, impressive, and visually appealing slides to the powerful R Markdown ecosystem. Through our hands-on tutorial, you will learn how to design highly effective slides that support presentations for teaching and reporting alike. Over three hours, you will learn how to create an accessible baseline design that matches your institution or organization’s style guide. Together we’ll explore the basics of CSS—the design language of the internet—and how we can leverage CSS to produce elegant slides for effective communication.\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

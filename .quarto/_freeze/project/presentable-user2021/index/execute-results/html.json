@@ -1,0 +1,14 @@
+{
+  "hash": "64041bca8205b44b1a289236b09e6275",
+  "result": {
+    "markdown": "---\ntitle: \"Professional, Polished, Presentable: Making Great Slides with xaringan\"\nsubtitle: \"A three hour intermediate xaringan tutorial created for [useR!2021](https://user2021.r-project.org/)\"\ndate: 2021-07-07\nauthor: \"Garrick Aden-Buie & Silvia Canelón\"\nimage: featured.png\nslug: presentable-user2021\nalias:\n  - /project/presentable-user2021/\nfeatured: true\n# draft: false\ntags:\n  - xaringan\n  - R\ncategories:\n  - R\n  - Education\n# layout options: single or single-sidebar\nlayout: single\nlinks:\n- icon: book-open\n  icon_pack: fas\n  name: website\n  url: https://presentable-user2021.netlify.app/\n- icon: github\n  icon_pack: fab\n  name: code\n  url: https://github.com/presentable-user2021\n- icon: comment\n  icon_pack: fas\n  name: talk post\n  url: /talk/2021-presentable-user2021/\n---\n\n\n<div style=\"text-align: center\"><img src=\"https://silvia.rbind.io/talk/2021-07-07-presentable-user2021/featured.png\" alt=\"\" width=\"75%\"/></div>\n\n## Workshop description\n\nA three hour intermediate xaringan tutorial created for [useR!2021](https://user2021.r-project.org/)\n\nThe xaringan package brings professional, impressive, and visually appealing slides to the powerful R Markdown ecosystem. Through our hands-on tutorial, you will learn how to design highly effective slides that support presentations for teaching and reporting alike. Over three hours, you will learn how to create an accessible baseline design that matches your institution or organization’s style guide. Together we’ll explore the basics of CSS—the design language of the internet—and how we can leverage CSS to produce elegant slides for effective communication.\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "hash": "6405baac40317b7d2d31e674c845ab34",
+  "result": {
+    "markdown": "---\ntitle: An Antarctic Tour of the Tidyverse\ndate: \"2020-08-31\"\n# date: 2020-08-31T17:40:00\nslug: tour-of-the-tidyverse\nalias:\n  - /talk/2020-08-31-tour-of-the-tidyverse/\ncategories:\n  - R\n  - Education\n  - Tutorial\ntags:\n  - R-Ladies\n  - tidyverse\n  - R\n#event: R-Ladies Chicago Meetup\n#event_url: https://www.meetup.com/rladies-chicago/events/272755101/\n#location: Chicago, IL, USA (virtual)\nimage: featured.jpg\nsubtitle: An introductory tidyverse tutorial created and presented for R-Ladies Chicago\nsummary: An introductory tidyverse tutorial created and presented for [R-Ladies Chicago](https://rladieschicago.org/)\n# abstract: Learn how to explore and manipulate data in R with packages from the Tidyverse. We'll introduce the [eight core packages that make up the Tidyverse](https://www.tidyverse.org/packages/#core-tidyverse) and use at least one function from each package while exploring a dataset on the migration of penguins.\n# #date_end: 2020-08-31T19:40:00\n#all_day: no\n# publishDate: '2020-09-01'\nfeatured: yes\n# image: \n#   caption: '[Antarctic Tour of the Tidyverse | R-Ladies Chicago](https://spcanelon.github.io/tour-of-the-tidyverse)'\n#   focal_point: center\n#   preview_only: no\nslides: ''\nprojects: []\nlinks:\n- icon: images\n  icon_pack: fas\n  name: slides\n  url: https://slides.silviacanelon.com/tour-of-the-tidyverse\n- icon: play-circle\n  icon_pack: fas\n  name: video\n  url: https://youtu.be/m_ZoMmAIx-o\n- icon: github\n  icon_pack: fab\n  name: materials\n  url: https://github.com/spcanelon/tour-of-the-tidyverse#an-antarctic-tour-of-the-tidyverse\n---\n\n\n## Description\nLearn how to explore and manipulate data in R with packages from the Tidyverse. We'll introduce the [eight core packages that make up the Tidyverse](https://www.tidyverse.org/packages/#core-tidyverse) and use at least one function from each package while exploring a dataset on the migration of penguins.\n<br><br>\n\n## Slides\n\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n```{=html}\n<div class=\"shareagain\" style=\"min-width:300px;margin:1em auto;\" data-exeternal=\"1\">\n<iframe src=\"https://spcanelon.github.io/tour-of-the-tidyverse\" width=\"1600\" height=\"900\" style=\"border:2px solid currentColor;\" loading=\"lazy\" allowfullscreen></iframe>\n<script>fitvids('.shareagain', {players: 'iframe'});</script>\n</div>\n```\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<script src=\"../../site_libs/fitvids-2.1.1/fitvids.min.js\"></script>\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
