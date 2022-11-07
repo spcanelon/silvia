@@ -115,6 +115,10 @@ relativeURLs = true
       icon_pack = "fas"
       url       = "/accessibility/"
   [[params.social]]
+      icon      = "mastodon" # icon name without the 'fa-'
+      icon_pack = "fab"
+      url       = "https://fosstodon.org/@spcanelon"
+  [[params.social]]
       icon      = "twitter" # icon name without the 'fa-'
       icon_pack = "fab"
       url       = "https://twitter.com/spcanelon"
