@@ -23,8 +23,8 @@ links:
   url: https://slides.silviacanelon.com/2022-thinking-big
 - icon: play-circle
   icon_pack: fas
-  name: video (coming soon!)
-  url: 
+  name: video
+  url: https://youtu.be/wiAnmkbgcO8
 format: hugo
 ---
 
