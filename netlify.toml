@@ -1,6 +1,7 @@
 [build]
 command = 'hugo'
 publish = 'public'
+base = "client"
 
 [build.environment]
 HUGO_VERSION = '0.111.2'
