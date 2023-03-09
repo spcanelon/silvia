@@ -18,6 +18,7 @@ featured: yes
 #   icon_pack: fas
 #   name: slides (coming soon!)
 #   url: https://slides.silviacanelon.com
+
 format: hugo
 ---
 
