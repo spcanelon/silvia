@@ -4,7 +4,6 @@ subtitle: "How to leverage data to foster successful community-academic partners
 author: "Silvia Canelón and Emily Seeburger"
 date: 2023-03-09T17:30:00
 date_end: 2023-03-09T18:30:00
-publishDate: 2023-03-09
 slug: penn-community-scholars
 categories:
   - Education
