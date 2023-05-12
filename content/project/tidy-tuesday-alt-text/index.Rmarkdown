@@ -68,4 +68,6 @@ I use the data available in the TidyTuesday repository to populate some searchab
 knitr::include_graphics("tt-db-notion.png")
 ```
 
-<span>{{< tweet 1349728938268962819 >}} align = "center" </span>
+```{r, echo=FALSE, fig.align="center", fig.cap="Screenshot of the tweet sharing the TidyTuesday database on Notion", fig.alt="Thanks to historical twitter data collected by @thomas_mock, the #TidyTuesday database now has tweets dating back to 2018! 6100+ searchable tweets w/ #dataviz creations from 1400+ participants 🤩Check it out! http://tiny.cc/notion-dataviz"}
+knitr::include_graphics("tweet-notion.png")
+```

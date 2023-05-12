@@ -70,4 +70,7 @@ I use the data available in the TidyTuesday repository to populate some searchab
 <p class="caption">Figure 2: Screenshot of the 2021 TidyTuesday database on Notion, taken on June 1, 2021</p>
 </div>
 
-<span>{{< tweet 1349728938268962819 >}} align = "center" </span>
+<div class="figure" style="text-align: center">
+<img src="tweet-notion.png" alt="Thanks to historical twitter data collected by @thomas_mock, the #TidyTuesday database now has tweets dating back to 2018! 6100+ searchable tweets w/ #dataviz creations from 1400+ participants 🤩Check it out! http://tiny.cc/notion-dataviz" width="598" />
+<p class="caption">Figure 3: Screenshot of the tweet sharing the TidyTuesday database on Notion</p>
+</div>
