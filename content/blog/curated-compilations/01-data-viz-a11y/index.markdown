@@ -64,8 +64,6 @@ tags:
 
 ----
 
-> [MiR Community](https://mircommunity.com/about/) (community for minority R users) recently learned that we received a grant to teach data viz accessibility practices to the R community! This educational event will take place as a TidyTuesday week in the spring of 2023. See the [news on Twitter](https://twitter.com/spcanelon/status/1438958412793065487?s=20) and stay tuned for updates! 🎉
-
 ## General resources
 
 - **Note:** There is an extensive list of data viz accessibility resources at https://github.com/dataviza11y/resources/blob/main/README.md
