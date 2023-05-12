@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  
+
+
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.88.1" />
+<title>WAVE Audit No. 1 | Silvia Canelón</title>
+
+
+<meta property="twitter:site" content="@spcanelon">
+<meta property="twitter:creator" content="@spcanelon">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="First audit using the WebAIM Web Accessibility Evaluation Tool (WAVE)">
+
+
+<meta name="google-site-verification" content="SXazFKEYdrkxQRjO6ofQA45n5g-Uxn_sq3vVTYYnZ9U"/>
+
+
+<meta property="og:site_name" content="Silvia Canelón">
+<meta property="og:title" content="WAVE Audit No. 1 | Silvia Canelón">
+<meta property="og:description" content="First audit using the WebAIM Web Accessibility Evaluation Tool (WAVE)" />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://silvia.rbind.io/blog/2021-audit-1/" />
+<meta property="og:locale" content="en">
+
+
+
+
+      
+          <meta property="og:image" content="https://silvia.rbind.io/blog/2021-audit-1/featured.jpg" >
+          <meta property="twitter:card" content="summary_large_image">
+          <meta name="twitter:image" content="https://silvia.rbind.io/blog/2021-audit-1/featured.jpg" >
+      
+      
+  <meta itemprop="name" content="WAVE Audit No. 1">
+<meta itemprop="description" content=".page-main img { box-shadow: 0px 0px 2px 2px rgba( 0, 0, 0, 0.2 ); #/* ease | ease-in | ease-out | linear */ transition: transform ease-in-out 0.6s; } .page-main img:hover { transform: scale(1.4); }   Did you know that 97.4% of home pages have web accessibility failures??? 😱
+ This finding is one of many from an accessibility analysis that non-profit WebAIM (Web Accessibility in Mind) conducts annually on home pages of the top one million websites."><meta itemprop="datePublished" content="2021-06-02T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-06-07T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1264"><meta itemprop="image" content="https://silvia.rbind.io/blog/2021-audit-1/featured.jpg">
+<meta itemprop="keywords" content="R,Hugo,blogdown,accessibility," />
+  
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/logo_rounded.ico" type="image/x-icon">
+  <link rel="icon" href="/img/logo_rounded.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.255cfee8c235082e59a0d17c2624f1c451fe666694d4993613a936b18a7f0245.css" integrity="sha256-JVz&#43;6MI1CC5ZoNF8JiTxxFH&#43;ZmaU1Jk2E6k2sYp/AkU=" media="screen">
+  
+  
+  <script src="/panelset.min.078a92db9bd3228df502db3d9e0453c3cf3d910abe3f8deca0ad196c7071ad41.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.638b220e4e861dede663b82aebf20fb2e1b592641d66b53fc98b50293efded8c.js" type="text/javascript"></script>
+  
+  
+  <script src="/toc.min.f73cb355a2cb0aa2ae5f3f9693cfcaa76280e8a97ccfd2290c3cd514ee82f177.js" type="text/javascript"></script>
+  
+  <script 
+  async 
+  defer 
+  data-domains="silviacanelon.com"
+  data-website-id="959d1d62-7a8b-41cd-92ca-be0884ebdf46"
+  data-do-not-track="true"
+  src="https://silvia.up.railway.app/umami.js"></script>
+  
+  <link rel="me" href="https://fosstodon.org/@spcanelon">
+</head>
+<body>
+      <div class="grid-container single-series">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://silvia.rbind.io/" title="Home">
+      <img src="/img/logo_noBg.svg" class="dib db-l h2 w-auto" alt="Silvia Canelón">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/about/" title="About Me">About</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/blog/" title="Meeting People Where They R">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/talk/" title="Invited Talks">Talks</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/publication/" title="Research Publications">Publications</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/project/" title="Project Portfolio">Projects</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+                       
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 pl3-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">WAVE Audit No. 1</h1>
+        <h4 class="f4 mt0 mb4 lh-title measure">First audit using the WebAIM Web Accessibility Evaluation Tool (WAVE)</h4>
+        <p class="f6 measure lh-copy mv1">By Silvia Canelón in <a href="https://silvia.rbind.io/categories/website">Website</a>  <a href="https://silvia.rbind.io/categories/education">Education</a> </p>
+        <p class="f7 db mv0 ttu">June 2, 2021</p>
+      </header>
+      <section class="post-body pt5 pb4">
+        <style type="text/css">
+.page-main img {
+  box-shadow: 0px 0px 2px 2px rgba( 0, 0, 0, 0.2 );
+  #/* ease | ease-in | ease-out | linear */
+  transition: transform ease-in-out 0.6s;
+}
+
+.page-main img:hover {
+  transform: scale(1.4);
+}
+</style>
+<blockquote>
+<p><strong>Did you know that 97.4% of home pages have web accessibility failures???</strong> 😱</p>
+</blockquote>
+<p>This finding is one of many from an accessibility analysis that non-profit WebAIM (Web Accessibility in Mind) conducts annually on home pages of the top one million websites. You can find a summary of these findings in a WebAIM 
+<a href="https://webaim.org/blog/webaim-million-2021/" target="_blank" rel="noopener">blog post</a> and detailed information in the 
+<a href="https://webaim.org/projects/million/#wcag" target="_blank" rel="noopener">full report</a>, both published on April 30, 2021.</p>
+<p>Learning about all of the ways that digital content is made inaccessible to people with disabilities has made me take inventory of the different ways that I have contributed to this problem (there was some shame to process here 🙈).</p>
+<p>The magic of 
+<a href="https://bookdown.org/yihui/rmarkdown/" target="_blank" rel="noopener">R Markdown</a> has given me the gift of turning R code into a variety of HTML outputs including R notebooks, 
+<a href="/project/xaringan-nhs-r/">xaringan presentation slides</a>, and websites like this one &ndash; all of which I&rsquo;ve been able to share freely online with others. This magic though (like all magic?) comes with limitations. R tools (and technology more broadly) can&rsquo;t automatically ensure that its various outputs are accessible to everyone. That&rsquo;s where we come in as software developers and content creators and take personal responsibility. At the risk of extending this metaphor too far, I&rsquo;ll finish by offering the framework that we all need to practice (accessibility) spells/skills in order to use these magical tools responsibly.</p>
+<p>All of this to say that gaining awareness about accessibility as a way to create the more inclusive world that I want to live in has motivated me to do better. I even found myself excited to conduct accessibility audits on my digital content, including my personal website (
+<a href="https://chartability.fizz.studio/" target="_blank" rel="noopener">data viz</a> too)!</p>
+
+
+
+
+<h3 id="my-audit-results">My audit results
+  <a href="#my-audit-results" title="Link to heading"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>I relied on WebAIM&rsquo;s 
+<a href="https://wave.webaim.org/" target="_blank" rel="noopener">Web Accessibility Evaluation Tool (WAVE)</a> to help me get started. I installed the 
+<a href="https://wave.webaim.org/extension/" target="_blank" rel="noopener">Firefox extension</a> to conduct my audit. Here&rsquo;s what I found at a high level, and each section of the post contains an itemized list of failures for the page along with a screenshot:</p>
+<ul>
+<li>
+<p>Most errors corresponded with missing alt-text for any images that are used to decorate page sidebars or populate thumbnails</p>
+</li>
+<li>
+<p>Some of my alt-text descriptions are too long! 😆 I&rsquo;ll use this example to highlight some of the super helpful features of the WAVE tool. Below is a screenshot of the tool when I select the alert next to the super long alt-text description for a hex logo 🤦‍♀️</p>
+  <details><summary>WAVE tool reference and code accompanying an alert</summary>
+  <img src="img/wave-ex-alt-text.png" title="Reference pane of the tool elaborates on what the alert means, why it matters, how to fix it, a note on the tool's algorithm, and a link to the WCAG standards and guidelines. Code section is expanded along the bottom and highlights exactly what part of the HTML code the alert is refering to." alt="Reference pane of the tool elaborates on what the alert means, why it matters, how to fix it, a note on the tool's algorithm, and a link to the WCAG standards and guidelines. Code section is expanded along the bottom and highlights exactly what part of the HTML code the alert is refering to." width="1898" style="display: block; margin: auto;" />
+  </details>
+</li>
+<li>
+<p>My blog and talk listings have redundant links because these layouts have thumbnails enabled and both the thumbnail and the title of the post are active links</p>
+</li>
+<li>
+<p>There are 5 alerts (combined) in the navigation bar and footer that appear on every page. These correspond to redundant title links. For example, the link for my Blog has the name &ldquo;Blog&rdquo; and also the title &ldquo;Blog.&rdquo; This is something I can fix easily in the <strong>config.toml</strong> configuration file. I was wondering how these two fields were different in that file and now I know!</p>
+</li>
+<li>
+<p>The 
+<a href="#blog-example">blog post example</a> I documented here contained 177 low contrast errors! These were all related to the 
+<a href="https://xyproto.github.io/splash/docs/arduino.html" target="_blank" rel="noopener">arduino syntax highlighting</a> in the various code chunks that I included. The code chunks currently feature primarily gray code against a white background.</p>
+</li>
+</ul>
+
+
+
+
+<h3 id="next-steps">Next steps
+  <a href="#next-steps" title="Link to heading"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>I&rsquo;m <em>definitely</em> not an accessibility expert by any stretch of the imagination. But the great thing is, I don&rsquo;t have to be an expert in order to correct some of these failures! 💪</p>
+<p>I&rsquo;m going to need some more Hugo knowledge to correct some of the other ones but I <em>think</em> I&rsquo;ve become familiar enough with the Hugo Apéro theme building this site that I <em>might</em> be able to poke around and make some changes. In either case, I&rsquo;ll be documenting my changes in this 
+<a href="/blog/2021-a11y-website/">a11y series of blog posts</a>, so stay tuned and follow along with me!</p>
+<blockquote>
+<p>Update (June 7, 2021): I&rsquo;ve opened 
+<a href="https://github.com/spcanelon/silvia/issues/28" target="_blank" rel="noopener">issue #28</a> and have the first changes in branch <code>wave-audit-1</code> 
+<a href="https://deploy-preview-29--silvia.netlify.app/" target="_blank" rel="noopener">available to preview</a> before merging.</p>
+</blockquote>
+<p>I&rsquo;ll be learning from the 
+<a href="https://tetralogical.com/articles/wcag-primer/" target="_blank" rel="noopener">WCAG primer from TetraLogical</a>, recommended by the 
+<a href="https://www.a11yproject.com/checklist/#further-reading" target="_blank" rel="noopener">a11y Project</a>, and the 
+<a href="https://www.w3.org/WAI/roles/designers/" target="_blank" rel="noopener">WCAG resources from WebAIM</a>.</p>
+<p>And last but not least:</p>
+<blockquote>
+<p><strong>Even if I manage to correct all of these errors and alerts, it doesn&rsquo;t mean my site is fully accessible.</strong></p>
+</blockquote>
+<p>It just means it&rsquo;s more accessible than when I began. There are numerous accessibility considerations that are very hard to test for failure (e.g. cognitive accessibility, flexibility, etc.) that I continue to learn about. Also, accessibility is changing all of the time, and we need to be ready to change with it. So just like with R, the learning doesn&rsquo;t stop! 🤓</p>
+
+
+
+
+<h2 id="home-page">Home page
+  <a href="#home-page" title="Link to heading"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Link: 
+<a href="/">https://silvia.rbind.io/</a></p>
+<p>Audit results:</p>
+<ul>
+<li>1 error
+<ul>
+<li>1 x Missing alternative text</li>
+</ul>
+</li>
+<li>6 alerts
+<ul>
+<li>1 x Suspicious link text</li>
+<li>5 x Redundant title text</li>
+</ul>
+</li>
+</ul>
+<div class="figure" style="text-align: center">
+<img src="img/wave-home.png" alt="There is an error symbol next to the decorative image on the home page. There are also alert symbols for links in the navigation bar and footer" width="950" />
+<p class="caption">Figure 1: Audit for my home page</p>
+</div>
+
+
+
+
+<h2 id="about-page">About page
+  <a href="#about-page" title="Link to heading"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Link: 
+<a href="/about/">https://silvia.rbind.io/about/</a></p>
+<p>Audit results:</p>
+<ul>
+<li>4 errors
+<ul>
+<li>3 x Linked image missing alternative text</li>
+<li>1 x Empty link</li>
+</ul>
+</li>
+<li>19 alerts
+<ul>
+<li>2 x Skipped heading level</li>
+<li>1 x Possible heading</li>
+<li>4 x Suspicious link text</li>
+<li>7 x Redundant link</li>
+<li>5 x Redundant title text</li>
+</ul>
+</li>
+</ul>
+<div class="figure" style="text-align: center">
+<img src="img/wave-about-header.png" alt="About page showing an alert in my blurb" width="1898" />
+<p class="caption">Figure 2: Audit for my About page header</p>
+</div>
+<div class="figure" style="text-align: center">
+<img src="img/wave-about-main-top.png" alt="An alert is shown next to some heading items, and a link. An error is shown next to a thumbnail image for the featured blog post" width="1898" />
+<p class="caption">Figure 3: Audit for the main section of my About page</p>
+</div>
+<details><summary>Full page screenshot</summary>
+<div class="figure" style="text-align: center">
+<img src="img/wave-about.png" alt="Alerts are shown for links in the navigation bar and footer, for some heading items, and for a few links throughout the page" width="950" />
+<p class="caption">Figure 4: Audit for my About page in full page view</p>
+</div>
+</details>
+
+
+
+
+<h2 id="blog-page">Blog page
+  <a href="#blog-page" title="Link to heading"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Link: 
+<a href="/blog/">https://silvia.rbind.io/blog/</a></p>
+<p>Audit results:</p>
+<ul>
+<li>6 errors
+<ul>
+<li>1 x Missing alternative text</li>
+<li>5 x Linked image missing alternative text</li>
+</ul>
+</li>
+<li>10 alerts
+<ul>
+<li>5 x Redundant link</li>
+<li>5 x Redundant title text</li>
+</ul>
+</li>
+</ul>
+<div class="figure" style="text-align: center">
+<img src="img/wave-blog.png" alt="Alerts are shown for the navigation bar and footer, and for blog post links. Errors shown for the decorative image for the page and for the blog post thumbnails" width="950" />
+<p class="caption">Figure 5: Audit for my Blog listing page in full page view</p>
+</div>
+
+
+
+
+<h3 id="blog-example">Blog example
+  <a href="#blog-example" title="Link to heading"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Link: 
+<a href="/blog/hello-hugo-apero/">https://silvia.rbind.io/blog/hello-hugo-apero/</a></p>
+<p>Audit results:</p>
+<ul>
+<li>25 errors
+<ul>
+<li>1 x Missing alternative text</li>
+<li>24 x Empty link</li>
+</ul>
+</li>
+<li>177 contrast errors
+<ul>
+<li>177 x Very low contrast</li>
+</ul>
+</li>
+<li>17 alerts
+<ul>
+<li>9 x Long alternative text</li>
+<li>1 x Skipped heading level</li>
+<li>1 x Broken same-page link</li>
+<li>6 x Redundant title text</li>
+</ul>
+</li>
+</ul>
+<div class="figure" style="text-align: center">
+<img src="img/wave-blog-hha-top.png" alt="Alerts shown for links in the navigation bar and for a heading item. Errors shown for the blog decorative image and for a link symbol next to a header." width="1898" />
+<p class="caption">Figure 6: Audit for my Hello Hugo Apéro blog post</p>
+</div>
+
+
+
+
+<h2 id="talk-page">Talk page
+  <a href="#talk-page" title="Link to heading"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Link: 
+<a href="/talk/">https://silvia.rbind.io/talk/</a></p>
+<p>Audit results:</p>
+<ul>
+<li>5 errors
+<ul>
+<li>5 x Linked image missing alternative text</li>
+</ul>
+</li>
+<li>13 alerts
+<ul>
+<li>5 x Linked image missing alternative text</li>
+<li>2 x Skipped heading level</li>
+<li>5 x Redundant link</li>
+<li>5 x Redundant title text</li>
+<li>1 x YouTube video</li>
+</ul>
+</li>
+</ul>
+<div class="figure" style="text-align: center">
+<img src="img/wave-talks-top.png" alt="Alerts displayed for a heading item and the primary link to a talk. An error is displayed for the talk thumbnail." width="1898" />
+<p class="caption">Figure 7: Audit for my Talk listing page</p>
+</div>
+<details><summary>Full page screenshot</summary>
+<div class="figure" style="text-align: center">
+<img src="img/wave-talks.png" alt="Alerts displayed in the navigation bar and footer, some heading items, all primary talk links, and a YouTube button link. Errors displayed for all talk thumbnail images." width="950" />
+<p class="caption">Figure 8: Audit for my About page header in full page view</p>
+</div>
+</details>
+
+
+
+
+<h3 id="talk-example">Talk example
+  <a href="#talk-example" title="Link to heading"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Link: 
+<a href="/talk/2021-05-04-data-viz-accessibility/">https://silvia.rbind.io/talk/2021-05-04-data-viz-accessibility/</a></p>
+<p>Audit results:</p>
+<ul>
+<li>1 error
+<ul>
+<li>1 x Empty link</li>
+</ul>
+</li>
+<li>6 alerts
+<ul>
+<li>1 x Skipped heading level</li>
+<li>5 x Redundant title text</li>
+</ul>
+</li>
+</ul>
+<div class="figure" style="text-align: center">
+<img src="img/wave-talks-csvconf.png" alt="Alerts displayed for the navigation bar and footer, as well as the talk summary. No errors are displayed." width="950" />
+<p class="caption">Figure 9: Audit for my CSV Conf talk post in full page view</p>
+</div>
+
+
+
+
+<h2 id="publication-page">Publication page
+  <a href="#publication-page" title="Link to heading"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Link: 
+<a href="/publication/">https://silvia.rbind.io/publication/</a></p>
+<p>Audit results:</p>
+<ul>
+<li>0 errors</li>
+<li>5 alerts
+<ul>
+<li>5 x Redundant title text</li>
+</ul>
+</li>
+</ul>
+<div class="figure" style="text-align: center">
+<img src="img/wave-pubs-top.png" alt="No errors or alerts displayed for this view" width="1898" />
+<p class="caption">Figure 10: Audit for my Publication listing page</p>
+</div>
+<details><summary>Full page screenshot</summary>
+<div class="figure" style="text-align: center">
+<img src="img/wave-pubs.png" alt="Alerts displayed for the navigation bar and footer" width="950" />
+<p class="caption">Figure 11: Audit for my Publication listing page in full page view</p>
+</div>
+</details>
+
+
+
+
+<h3 id="publication-example">Publication example
+  <a href="#publication-example" title="Link to heading"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Link: 
+<a href="/publication/geospatial-analysis-pregnancy-outcomes/">https://silvia.rbind.io/publication/geospatial-analysis-pregnancy-outcomes/</a></p>
+<p>Audit results:</p>
+<ul>
+<li>1 errors
+<ul>
+<li>1 x Empty link</li>
+</ul>
+</li>
+<li>6 alerts
+<ul>
+<li>1 x Skipped heading level</li>
+<li>5 x Redundant title text</li>
+</ul>
+</li>
+</ul>
+<div class="figure" style="text-align: center">
+<img src="img/wave-pubs-geo.png" alt="Alerts displayed for the header bar and footer and for the publication summary" width="950" />
+<p class="caption">Figure 12: Audit for my geospatial analysis publication in full page view</p>
+</div>
+
+
+
+
+<h2 id="project-page">Project page
+  <a href="#project-page" title="Link to heading"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Link: 
+<a href="/project/">https://silvia.rbind.io/project/</a></p>
+<p>Audit results:</p>
+<ul>
+<li>3 errors
+<ul>
+<li>3 x Empty link</li>
+</ul>
+</li>
+<li>5 alerts
+<ul>
+<li>5 x Redundant title text</li>
+</ul>
+</li>
+</ul>
+<div class="figure" style="text-align: center">
+<img src="img/wave-projects-top.png" alt="Errors displayed next to each project thumbnail image" width="1898" />
+<p class="caption">Figure 13: Audit for my Project listing page</p>
+</div>
+
+
+
+
+<h3 id="project-example">Project example
+  <a href="#project-example" title="Link to heading"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Link: 
+<a href="/project/tidy-tuesday-alt-text/">https://silvia.rbind.io/project/tidy-tuesday-alt-text/</a></p>
+<p>Audit results:</p>
+<ul>
+<li>2 errors
+<ul>
+<li>2 x Empty link</li>
+</ul>
+</li>
+<li>10 alerts
+<ul>
+<li>3 x Long alternative text</li>
+<li>1 x Skipped heading level</li>
+<li>6 x Redundant title text</li>
+</ul>
+</li>
+</ul>
+<div class="figure" style="text-align: center">
+<img src="img/wave-projects-ttat-top.png" alt="Alert displayed in the project summary and next to an image alt-text. Error dislayed next to a link symbol accompanying a heading." width="1898" />
+<p class="caption">Figure 14: Audit for my TidyTuesdayAltText project post</p>
+</div>
+<details><summary>Full page screenshot</summary>
+<div class="figure" style="text-align: center">
+<img src="img/wave-projects-ttat.png" alt="Alerts shown in the navigation bar and footer, project summary, and image alt-text. Errors shown next to link symbols accompanying headings." width="950" />
+<p class="caption">Figure 15: Audit for my TidyTuesdayAltText project post in full page view</p>
+</div>
+</details>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+</div>
+
+      </footer>
+    </article>
+    
+      
+<div class="post-comments pa0 pa4-l mt4">
+  
+  <script src="https://utteranc.es/client.js"
+          repo="spcanelon/silvia"
+          issue-term="title"
+          theme="boxy-light"
+          label="comments :crystal_ball:"
+          crossorigin="anonymous"
+          async
+          type="text/javascript">
+  </script>
+  
+</div>
+
+    
+  </section>
+</main>
+
+<aside class="page-sidebar" role="complementary">
+                         
+ 
+
+
+                       
+ 
+
+
+
+
+
+
+
+
+
+
+
+  <img src="/blog/a11y-website/sidebar-featured.png" class="db ma0" alt="">
+
+
+
+<div class="blog-info ph4 pt4 pb4 pb0-l">
+  
+
+  <h1 class="f3">Auditing for Web Accessibility</h1>
+  <p class="f6 lh-copy measure"><p>This series of <a href="https://www.a11yproject.com/">a11y</a> blog posts documents my journey in auditing
+my personal website for web accessibility and making improvements.</p>
+<p>This effort is part of my <a href="/accessibility">commitment</a> to
+creating more accessible digital content.</p>
+</p>
+  <p class="f7 measure lh-copy i mh0-l">Written by Silvia Canelón</p>
+
+
+  
+</div>
+
+
+                         
+ 
+
+
+
+<div class="flex items-start sticky ph4 pb4">
+  <div class="w-two-thirds w-50-l ph0">
+    
+    <h2 class="mt3 mb3 f5 fw7 ttu tracked"><a class="no-underline dim" href="/blog/a11y-website/">In this series</a></h2>
+    <nav id="SeriesTableOfContents">
+        <ul>
+        
+          
+          <li class="active" hugo-nav="/blog/2021-audit-1/"><a href="https://silvia.rbind.io/blog/2021-audit-1/">WAVE Audit No. 1</a></li>
+        
+        </ul>
+      </nav>
+  </div>
+  <details open id="PageTableOfContents">
+    <summary><h2 class="mv0 f5 fw7 ttu tracked dib">On this page</h2></summary>
+    <div class="pl2 pr0 mh0">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+        <li><a href="#home-page">Home page</a></li>
+        <li><a href="#about-page">About page</a></li>
+        <li><a href="#blog-page">Blog page</a></li>
+        <li><a href="#talk-page">Talk page</a></li>
+        <li><a href="#publication-page">Publication page</a></li>
+        <li><a href="#project-page">Project page</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </details>
+  
+</div>
+</aside>
+
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2023 Silvia Canelón
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="/accessibility/" title="universal-access" >
+      <i class="fas fa-universal-access fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://fosstodon.org/@spcanelon" title="mastodon" target="_blank" rel="noopener">
+      <i class="fab fa-mastodon fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/spcanelon" title="twitter" target="_blank" rel="noopener">
+      <i class="fab fa-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/spcanelon/silvia" title="github" target="_blank" rel="noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://orcid.org/0000-0003-1709-1394" title="orcid" target="_blank" rel="noopener">
+      <i class="ai ai-orcid fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://scholar.google.com/citations?user=GAzkvpcAAAAJ&amp;hl=en&amp;oi=ao" title="google-scholar" target="_blank" rel="noopener">
+      <i class="ai ai-google-scholar fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://linkedin.com/in/spcanelon" title="linkedin" target="_blank" rel="noopener">
+      <i class="fab fa-linkedin fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/accessibility/" title="Accessibility Commitment">Accessibility</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contact Form">Contact</a>
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License Details">License</a>
+      
+      <a class="dib pv1 ph2 link" href="/blog/index.xml/" title="Subscribe via RSS">RSS</a>
+      
+    </div>
+  </nav>
+  
+</footer>
+
+      </div>
+    </body>
+</html>

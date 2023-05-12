@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rvest on Silvia Canelón</title>
+    <link>https://silvia.rbind.io/tags/rvest/</link>
+    <description>Recent content in rvest on Silvia Canelón</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 29 Sep 2022 18:00:00 +0000</lastBuildDate><atom:link href="https://silvia.rbind.io/tags/rvest/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Philly Center City District Sips 2022: An Interactive Map</title>
+      <link>https://silvia.rbind.io/talk/2022-ccd-sips/</link>
+      <pubDate>Thu, 29 Sep 2022 18:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/talk/2022-ccd-sips/</guid>
+      <description>&lt;a href=&#34;https://www.rladiesphilly.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R-Ladies Philly&lt;/a&gt; workshop on webscraping, geocoding, and interactive map-making</description>
+    </item>
+    
+    <item>
+      <title>Philly Center City District Sips 2022: An Interactive Map</title>
+      <link>https://silvia.rbind.io/blog/2022-ccd-sips/</link>
+      <pubDate>Tue, 31 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/blog/2022-ccd-sips/</guid>
+      <description>An interactive map showing restaurants participating in CCD Sips 2022 &amp;amp; a companion R tutorial on webscraping, geocoding, and map-making</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BAPN on Silvia Canelón</title>
+    <link>https://silvia.rbind.io/tags/bapn/</link>
+    <description>Recent content in BAPN on Silvia Canelón</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 03 Sep 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://silvia.rbind.io/tags/bapn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Substrate Strain Mitigates Effects of β-Aminopropionitrile-Induced Reduction in Enzymatic Crosslinking</title>
+      <link>https://silvia.rbind.io/publication/2019-bapn-substrate-strain/</link>
+      <pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/publication/2019-bapn-substrate-strain/</guid>
+      <description>Research highlighting how the effects of BAPN on type I collagen, produced by osteoblasts, were mitigated by mechanical loading.</description>
+    </item>
+    
+    <item>
+      <title>Characterization of Type I Collagen and Osteoblast Response to Mechanical Loading</title>
+      <link>https://silvia.rbind.io/publication/2018-dissertation/</link>
+      <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/publication/2018-dissertation/</guid>
+      <description>Dissertation completed as part of the requirements for a doctorate degree in Biomedical Engineering.</description>
+    </item>
+    
+    <item>
+      <title>β-Aminopropionitrile-Induced Reduction in Enzymatic Crosslinking Causes In Vitro Changes in Collagen Morphology and Molecular Composition</title>
+      <link>https://silvia.rbind.io/publication/2016-bapn-morphology/</link>
+      <pubDate>Sun, 06 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/publication/2016-bapn-morphology/</guid>
+      <description>Publication highlighting how a reduction in enzymatic crosslinking alters type I collagen morphology through an increase in D-spacing.</description>
+    </item>
+    
+  </channel>
+</rss>

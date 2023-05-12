@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>geospatial on Silvia Canelón</title>
+    <link>https://silvia.rbind.io/tags/geospatial/</link>
+    <description>Recent content in geospatial on Silvia Canelón</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 10 Nov 2022 16:00:00 +0000</lastBuildDate><atom:link href="https://silvia.rbind.io/tags/geospatial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Thinking Big with Maps in R</title>
+      <link>https://silvia.rbind.io/talk/2022-thinking-big/</link>
+      <pubDate>Thu, 10 Nov 2022 16:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/talk/2022-thinking-big/</guid>
+      <description>&lt;a href=&#34;https://canssiontario.utoronto.ca/event/statistical-software-conference/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CANSSI Ontario Statistical Software Conference&lt;/a&gt; talk on interactive map-making with large vector data</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>accessibility on Silvia Canelón</title>
+    <link>https://silvia.rbind.io/tags/accessibility/</link>
+    <description>Recent content in accessibility on Silvia Canelón</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 02 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://silvia.rbind.io/tags/accessibility/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WAVE Audit No. 1</title>
+      <link>https://silvia.rbind.io/blog/2021-audit-1/</link>
+      <pubDate>Wed, 02 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/blog/2021-audit-1/</guid>
+      <description>.page-main img { box-shadow: 0px 0px 2px 2px rgba( 0, 0, 0, 0.2 ); #/* ease | ease-in | ease-out | linear */ transition: transform ease-in-out 0.6s; } .page-main img:hover { transform: scale(1.4); }   Did you know that 97.4% of home pages have web accessibility failures??? 😱
+ This finding is one of many from an accessibility analysis that non-profit WebAIM (Web Accessibility in Mind) conducts annually on home pages of the top one million websites.</description>
+    </item>
+    
+    <item>
+      <title>Auditing for Web Accessibility</title>
+      <link>https://silvia.rbind.io/blog/a11y-website/</link>
+      <pubDate>Wed, 02 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/blog/a11y-website/</guid>
+      <description>** No content below YAML for the series _index. This file is a leaf bundle, and provides settings for the listing page layout and sidebar content.**</description>
+    </item>
+    
+    <item>
+      <title>Revealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community</title>
+      <link>https://silvia.rbind.io/talk/2021-data-viz-accessibility/</link>
+      <pubDate>Tue, 04 May 2021 10:20:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/talk/2021-data-viz-accessibility/</guid>
+      <description>Data visualization accessibility talk to share what we found after scraping alternative (alt) text from data viz shared on Twitter as part of the #TidyTuesday social project.</description>
+    </item>
+    
+    <item>
+      <title>TidyTuesdayAltText</title>
+      <link>https://silvia.rbind.io/project/2021-tidy-tuesday-alt-text/</link>
+      <pubDate>Tue, 04 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/project/2021-tidy-tuesday-alt-text/</guid>
+      <description>About the data      The original data were collected and made available by Tom Mock ( @thomas_mock) using {rtweet}. These data are available in the TidyTuesday repository.
+These tweets were processed and scraped for alternative text by Silvia Canelón ( @spcanelon)
+ Data were filtered to remove tweets without attached media (e.g. images) Data were supplemented with reply tweets collected using {rtweet}. This was done to identify whether the original tweet or a reply tweet contained an external link (e.</description>
+    </item>
+    
+  </channel>
+</rss>

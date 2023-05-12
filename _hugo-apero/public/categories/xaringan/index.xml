@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>xaringan on Silvia Canelón</title>
+    <link>https://silvia.rbind.io/categories/xaringan/</link>
+    <description>Recent content in xaringan on Silvia Canelón</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 03 Nov 2020 15:00:00 +0000</lastBuildDate><atom:link href="https://silvia.rbind.io/categories/xaringan/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sharing Your Work with xaringan: The Basics and Beyond</title>
+      <link>https://silvia.rbind.io/talk/2020-xaringan-basics-and-beyond/</link>
+      <pubDate>Tue, 03 Nov 2020 15:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/talk/2020-xaringan-basics-and-beyond/</guid>
+      <description>An introduction to xaringan for presentations, created for the 
+&lt;a href=&#34;https://nhsrcommunity.com/about/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NHS-R Community&lt;/a&gt; 
+&lt;a href=&#34;https://nhsrcommunity.com/nhsr-conference-2020/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2020 Virtual Conference&lt;/a&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

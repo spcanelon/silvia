@@ -1,0 +1,60 @@
+---
+title: "Philly Center City District Sips 2022: An Interactive Map"
+author: "Silvia Canelón"
+date: 2022-09-29T18:00:00
+date_end: 2022-09-29T20:00:00
+publishDate: 2022-09-28
+slug: ccd-sips
+categories:
+  - R
+  - Workshop
+  - Education
+tags:
+  - R
+  - R-Ladies
+  - rvest
+  - tidygeocoder
+  - leaflet
+event: R-Ladies Philly Meetup
+event_url: https://www.meetup.com/rladies-philly/events/287894111/
+location: Philadelphia, PA (virtual)
+subtitle: "R-Ladies Philly workshop on webscraping, geocoding, and interactive map-making"
+summary: "[R-Ladies Philly](https://www.rladiesphilly.org) workshop on webscraping, geocoding, and interactive map-making"
+featured: yes
+links:
+- icon: images
+  icon_pack: fas
+  name: slides
+  url: https://slides.silviacanelon.com/2022-ccd-sips
+- icon: github
+  icon_pack: fab
+  name: materials
+  url: https://github.com/spcanelon/2022-ccd-sips
+- icon: play-circle
+  icon_pack: fas
+  name: video
+  url: https://youtube.com/watch?v=tcfHr0oeOMw&feature=share&utm_source=EKLEiJECCKjOmKnC5IiRIQ
+format: hugo
+---
+
+A gentle introduction to web-scraping, geocoding and map-making in an end-to-end analysis. The workshop will cover how to scrape the bar and restaurant data from the Center City Sips website and convert the addresses to latitude and longitude, as well as how to plot the geographic data onto a map and customize the visualization with {leaflet}. 
+
+```{r setup, include=FALSE}
+library(xaringanExtra)
+```
+
+```{r echo=FALSE}
+#| echo: false
+xaringanExtra::embed_xaringan(
+  url = "https://slides.silviacanelon.com/2022-ccd-sips",
+  ratio = "16:9")
+```
+
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 40%"
+#| fig-alt: 'R-Ladies logo featuring the Liberty Bell'
+knitr::include_graphics("rladies-philly.jpg")
+```

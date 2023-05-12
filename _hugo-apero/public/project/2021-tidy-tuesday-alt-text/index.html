@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  
+
+
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.88.1" />
+<title>TidyTuesdayAltText | Silvia Canelón</title>
+
+
+<meta property="twitter:site" content="@spcanelon">
+<meta property="twitter:creator" content="@spcanelon">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="An R package with the goal of providing insight into the alternative (alt) text accompanying the data visualizations shared on Twitter as part of the TidyTuesday social project">
+
+
+<meta name="google-site-verification" content="SXazFKEYdrkxQRjO6ofQA45n5g-Uxn_sq3vVTYYnZ9U"/>
+
+
+<meta property="og:site_name" content="Silvia Canelón">
+<meta property="og:title" content="TidyTuesdayAltText | Silvia Canelón">
+<meta property="og:description" content="An R package with the goal of providing insight into the alternative (alt) text accompanying the data visualizations shared on Twitter as part of the TidyTuesday social project" />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://silvia.rbind.io/project/2021-tidy-tuesday-alt-text/" />
+<meta property="og:locale" content="en">
+
+
+
+
+      
+          <meta property="og:image" content="https://silvia.rbind.io/project/2021-tidy-tuesday-alt-text/featured-hex.png" >
+          <meta property="twitter:card" content="summary">
+          <meta name="twitter:image" content="https://silvia.rbind.io/project/2021-tidy-tuesday-alt-text/featured-hex.png" >
+      
+      
+  <meta itemprop="name" content="TidyTuesdayAltText">
+<meta itemprop="description" content="About the data      The original data were collected and made available by Tom Mock ( @thomas_mock) using {rtweet}. These data are available in the TidyTuesday repository.
+These tweets were processed and scraped for alternative text by Silvia Canelón ( @spcanelon)
+ Data were filtered to remove tweets without attached media (e.g. images) Data were supplemented with reply tweets collected using {rtweet}. This was done to identify whether the original tweet or a reply tweet contained an external link (e."><meta itemprop="datePublished" content="2021-05-04T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-05-04T00:00:00+00:00" />
+<meta itemprop="wordCount" content="300"><meta itemprop="image" content="https://silvia.rbind.io/project/2021-tidy-tuesday-alt-text/featured-hex.png">
+<meta itemprop="keywords" content="TidyTuesday,TidyTuesdayAltText,accessibility,R," />
+  
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/logo_rounded.ico" type="image/x-icon">
+  <link rel="icon" href="/img/logo_rounded.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.255cfee8c235082e59a0d17c2624f1c451fe666694d4993613a936b18a7f0245.css" integrity="sha256-JVz&#43;6MI1CC5ZoNF8JiTxxFH&#43;ZmaU1Jk2E6k2sYp/AkU=" media="screen">
+  
+  
+  <script src="/panelset.min.078a92db9bd3228df502db3d9e0453c3cf3d910abe3f8deca0ad196c7071ad41.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.638b220e4e861dede663b82aebf20fb2e1b592641d66b53fc98b50293efded8c.js" type="text/javascript"></script>
+  
+  
+  <script src="/toc.min.f73cb355a2cb0aa2ae5f3f9693cfcaa76280e8a97ccfd2290c3cd514ee82f177.js" type="text/javascript"></script>
+  
+  <script 
+  async 
+  defer 
+  data-domains="silviacanelon.com"
+  data-website-id="959d1d62-7a8b-41cd-92ca-be0884ebdf46"
+  data-do-not-track="true"
+  src="https://silvia.up.railway.app/umami.js"></script>
+  
+  <link rel="me" href="https://fosstodon.org/@spcanelon">
+</head>
+<body>
+      <div class="grid-container single">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://silvia.rbind.io/" title="Home">
+      <img src="/img/logo_noBg.svg" class="dib db-l h2 w-auto" alt="Silvia Canelón">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/about/" title="About Me">About</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/blog/" title="Meeting People Where They R">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/talk/" title="Invited Talks">Talks</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/publication/" title="Research Publications">Publications</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/project/" title="Project Portfolio">Projects</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">TidyTuesdayAltText</h1>
+        <h2 class="f4 mt0 mb4 lh-title measure">An R package with the goal of providing insight into the alternative (alt) text accompanying the data visualizations shared on Twitter as part of the TidyTuesday social project</h2>
+        
+        <p class="f6 measure lh-copy mv1">By Silvia Canelón in <a href="https://silvia.rbind.io/categories/r">R</a>  <a href="https://silvia.rbind.io/categories/package">Package</a> </p>
+        <p class="f7 db mv0 ttu">May 4, 2021</p>
+      
+      <div class="ph0 pt5">
+        
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+      
+  <a class="btn-links mr2 ba dib" href="https://github.com/spcanelon/TidyTuesdayAltText" target="_blank" rel="noopener"><i class="fas fa-box fa-lg fa-fw mr2"></i>package</a>
+
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+      
+  <a class="btn-links mr2 ba dib" href="/talk/2021-05-04-data-viz-accessibility/" ><i class="fas fa-comment fa-lg fa-fw mr2"></i>related talk</a>
+
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+      
+  <a class="btn-links mr2 ba dib" href="/tiny.cc/notion-dataviz" ><i class="fas fa-chart-bar fa-lg fa-fw mr2"></i>tidytuesday databases on notion</a>
+
+
+      </div>
+      
+      </header>
+      <section class="post-body pt5 pb4">
+        
+
+
+
+<h2 id="about-the-data--a-hrefhttpsgithubcomspcanelontidytuesdayalttextimg-srcfeatured-hexpng-alignright-height200-althex-logo-for-the-package-white-with-a-thick-black-border-inside-the-tidytuesday-logo-on-the-top-half-which-are-the-words-tidytuesday-in-white-against-a-broad-brush-stroke-of-black-paint-on-the-bottom-half-the-words-alt--text-in-black-against-a-white-background-and-within-angle-brackets-to-simulate-html-codea">About the data  <a href='https://github.com/spcanelon/TidyTuesdayAltText'><img src='featured-hex.png' align="right" height="200" alt='Hex logo for the package. White with a thick black border. Inside, the TidyTuesday logo on the top half which are the words TidyTuesday in white against a broad brush stroke of black paint. On the bottom half, the words alt = "text" in black against a white background and within angle brackets to simulate html code.'/></a>
+  <a href="#about-the-data--a-hrefhttpsgithubcomspcanelontidytuesdayalttextimg-srcfeatured-hexpng-alignright-height200-althex-logo-for-the-package-white-with-a-thick-black-border-inside-the-tidytuesday-logo-on-the-top-half-which-are-the-words-tidytuesday-in-white-against-a-broad-brush-stroke-of-black-paint-on-the-bottom-half-the-words-alt--text-in-black-against-a-white-background-and-within-angle-brackets-to-simulate-html-codea" title="Link to heading"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>The original data were collected and made available by Tom Mock (
+<a href="https://twitter.com/thomas_mock" target="_blank" rel="noopener">@thomas_mock</a>) using 
+<a href="https://github.com/ropensci/rtweet" target="_blank" rel="noopener">{rtweet}</a>. These data are available in the 
+<a href="https://github.com/rfordatascience/tidytuesday#a-weekly-social-data-project-in-r" target="_blank" rel="noopener">TidyTuesday repository</a>.</p>
+<p>These tweets were processed and scraped for alternative text by Silvia Canelón (
+<a href="https://twitter.com/spcanelon" target="_blank" rel="noopener">@spcanelon</a>)</p>
+<ol>
+<li>Data were filtered to remove tweets without attached media (e.g. images)</li>
+<li>Data were supplemented with reply tweets collected using {rtweet}. This was done to identify whether the original tweet or a reply tweet contained an external link (e.g. data source, repository with source code)</li>
+<li>Alternative (alt) text was scraped from tweet images using 
+<a href="https://docs.ropensci.org/RSelenium/" target="_blank" rel="noopener">{RSelenium}</a>. The first image attached to each tweet was considered the primary image and only the primary image from each tweet was scraped for alternative text. The following attributes were used to build the scraper:</li>
+</ol>
+<ul>
+<li>CSS selector: <code>.css-1dbjc4n.r-1p0dtai.r-1mlwlqe.r-1d2f490.r-11wrixw</code></li>
+<li>Element attribute: <code>aria-label</code></li>
+</ul>
+<div class="figure" style="text-align: center">
+<img src="https://raw.githubusercontent.com/spcanelon/csvConf2021/master/slides/img/webInspection.png" alt="Web inspection tool being used to identify the CSS selector corresponding to the primary image of one of Hao Ye's (@Hao_and_Y) tweets with alt text" width="90%" />
+<p class="caption">Figure 1: Example of web inspection being used to identify the CSS selector utilized for alt-text web scraping</p>
+</div>
+<p>This data package does not include data that could directly identify the tweet author in order to respect any author’s decision to delete a tweet or make their account private after the data was originally collected.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>To obtain the tweet text, author screen name, and many other tweet attributes, you can “rehydrate” the TweetIds (or “status” ids)<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>) using the {rtweet} package.<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<hr>
+
+
+
+
+<h2 id="tidytuesday-databases-on-notion">TidyTuesday databases on Notion
+  <a href="#tidytuesday-databases-on-notion" title="Link to heading"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>I use the data available in the TidyTuesday repository to populate some searchable TidyTuesday databases at 
+<a href="https://tiny.cc/notion-dataviz" target="_blank" rel="noopener">tiny.cc/notion-dataviz</a> with data visualizations tagged by the dataset of the week, hashtags, mentions, etc.</p>
+<div class="figure" style="text-align: center">
+<img src="tt-db-notion.png" alt="The Notion 2021 TidyTuesday database showing a gallery of the most recent data visualizations in the collection, organized in a grid" width="2034" />
+<p class="caption">Figure 2: Screenshot of the 2021 TidyTuesday database on Notion, taken on June 1, 2021</p>
+</div>
+<div class="figure" style="text-align: center">
+<img src="tweet-notion.png" alt="Thanks to historical twitter data collected by @thomas_mock, the #TidyTuesday database now has tweets dating back to 2018! 6100+ searchable tweets w/ #dataviz creations from 1400+ participants 🤩Check it out! http://tiny.cc/notion-dataviz" width="598" />
+<p class="caption">Figure 3: Screenshot of the tweet sharing the TidyTuesday database on Notion</p>
+</div>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>
+<a href="https://developer.twitter.com/en/developer-terms/policy" target="_blank" rel="noopener">Developer Policy – Twitter Developers | Twitter Developer</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>
+<a href="https://developer.twitter.com/en/docs/twitter-api/data-dictionary/object-model/tweet" target="_blank" rel="noopener">Tweet object | Twitter Developer</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>
+<a href="https://docs.ropensci.org/rtweet/reference/lookup_tweets.html" target="_blank" rel="noopener">Get tweets data for given statuses (status IDs). — lookup_tweets • rOpenSci: rtweet</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+        
+        
+<details closed class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">May 4, 2021</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">2 minute read, 300 words</dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Categories:</dt>
+    <dd class="fw5 ml0"> <a href="https://silvia.rbind.io/categories/r">R</a>  <a href="https://silvia.rbind.io/categories/package">Package</a> </dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Tags:</dt>
+    <dd class="fw5 ml0"> <a href="https://silvia.rbind.io/tags/tidytuesday">TidyTuesday</a>  <a href="https://silvia.rbind.io/tags/tidytuesdayalttext">TidyTuesdayAltText</a>  <a href="https://silvia.rbind.io/tags/accessibility">accessibility</a>  <a href="https://silvia.rbind.io/tags/r">R</a> </dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+    <dd class="fw5 ml0"><a href="/talk/2022-thinking-big/">Thinking Big with Maps in R</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/talk/2022-ccd-sips/">Philly Center City District Sips 2022: An Interactive Map</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/blog/2022-ccd-sips/">Philly Center City District Sips 2022: An Interactive Map</a></dd>
+    
+  </dl>
+</details>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+    <a class="prev dtc pr2 tl v-top fw6"
+    href="https://silvia.rbind.io/project/2021-presentable-user2021/">&larr; Professional, Polished, Presentable</a>
+  
+  
+    <a class="next dtc pl2 tr v-top fw6"
+    href="https://silvia.rbind.io/project/2021-user2021-cost-conversion-tool/">useR!2021 Cost Conversion Tool &rarr;</a>
+  
+</div>
+
+      </footer>
+    </article>
+    
+  </section>
+</main>
+
+
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2023 Silvia Canelón
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="/accessibility/" title="universal-access" >
+      <i class="fas fa-universal-access fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://fosstodon.org/@spcanelon" title="mastodon" target="_blank" rel="noopener">
+      <i class="fab fa-mastodon fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/spcanelon" title="twitter" target="_blank" rel="noopener">
+      <i class="fab fa-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/spcanelon/silvia" title="github" target="_blank" rel="noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://orcid.org/0000-0003-1709-1394" title="orcid" target="_blank" rel="noopener">
+      <i class="ai ai-orcid fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://scholar.google.com/citations?user=GAzkvpcAAAAJ&amp;hl=en&amp;oi=ao" title="google-scholar" target="_blank" rel="noopener">
+      <i class="ai ai-google-scholar fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://linkedin.com/in/spcanelon" title="linkedin" target="_blank" rel="noopener">
+      <i class="fab fa-linkedin fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/accessibility/" title="Accessibility Commitment">Accessibility</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contact Form">Contact</a>
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License Details">License</a>
+      
+      <a class="dib pv1 ph2 link" href="/blog/index.xml/" title="Subscribe via RSS">RSS</a>
+      
+    </div>
+  </nav>
+  
+</footer>
+
+      </div>
+    </body>
+</html>

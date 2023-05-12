@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>data viz on Silvia Canelón</title>
+    <link>https://silvia.rbind.io/tags/data-viz/</link>
+    <description>Recent content in data viz on Silvia Canelón</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 23 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://silvia.rbind.io/tags/data-viz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Resources for Data Viz Accessibility</title>
+      <link>https://silvia.rbind.io/blog/2021-data-viz-a11y/</link>
+      <pubDate>Thu, 23 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/blog/2021-data-viz-a11y/</guid>
+      <description>window.xaringanExtraClipboard(null, {&#34;button&#34;:&#34; Copy Code&#34;,&#34;success&#34;:&#34; Copied!&#34;,&#34;error&#34;:&#34;Press Ctrl+C to Copy&#34;}) /*.main { display: grid | inline-grid; } .grid-container { display: grid; grid-template-columns: 1fr 4fr; grid-auto-flow: row; grid-gap: 10px 10px; } .grid-item { /*background-color: rgba(255, 255, 255, 0.8);*/ border: 1px solid rgba(0, 0, 0, 0.8); /*padding: 20px; font-size: 18px; line-height: 1.5em;*/ text-align: left; height: auto; } */ /* -- css for images --*/ .page-main img { box-shadow: 0px 0px 2px 2px rgba( 0, 0, 0, 0.</description>
+    </item>
+    
+  </channel>
+</rss>

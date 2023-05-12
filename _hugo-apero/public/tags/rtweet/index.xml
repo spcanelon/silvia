@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rtweet on Silvia Canelón</title>
+    <link>https://silvia.rbind.io/tags/rtweet/</link>
+    <description>Recent content in rtweet on Silvia Canelón</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 04 May 2021 10:20:00 +0000</lastBuildDate><atom:link href="https://silvia.rbind.io/tags/rtweet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Revealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community</title>
+      <link>https://silvia.rbind.io/talk/2021-data-viz-accessibility/</link>
+      <pubDate>Tue, 04 May 2021 10:20:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/talk/2021-data-viz-accessibility/</guid>
+      <description>Data visualization accessibility talk to share what we found after scraping alternative (alt) text from data viz shared on Twitter as part of the #TidyTuesday social project.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sickle cell disease on Silvia Canelón</title>
+    <link>https://silvia.rbind.io/tags/sickle-cell-disease/</link>
+    <description>Recent content in sickle cell disease on Silvia Canelón</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 24 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://silvia.rbind.io/tags/sickle-cell-disease/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Evaluation of Stillbirth Among Pregnant People With Sickle Cell Trait</title>
+      <link>https://silvia.rbind.io/publication/2021-sct-stillbirth/</link>
+      <pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/publication/2021-sct-stillbirth/</guid>
+      <description>Retrospective cohort study finding both sickle cell trait and disease to be associated with an increased risk of stillbirth, suggesting that sickle cell carriers would benefit from additional risk assessment during pregnancy.</description>
+    </item>
+    
+    <item>
+      <title>The Impact of Sickle Cell Status on Adverse Delivery Outcomes Using Electronic Health Record Data</title>
+      <link>https://silvia.rbind.io/talk/2021-amia-informatics-summit/</link>
+      <pubDate>Mon, 22 Mar 2021 11:30:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/talk/2021-amia-informatics-summit/</guid>
+      <description>Applied Clinical Research Informatics: Solving Real World Problems. Oral Presentations S17: March 23, 2021 11:30am-1pm ET</description>
+    </item>
+    
+    <item>
+      <title>Investigating Pregnancy-Related Health Outcomes Among Patients with Sickle Cell Disease and Linking with Health Disparities</title>
+      <link>https://silvia.rbind.io/publication/2019-amia-annual-symposium/</link>
+      <pubDate>Wed, 20 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/publication/2019-amia-annual-symposium/</guid>
+      <description>Poster presented at the 2019 American Medical Informatics Association Annual Symposium held November 16th-20th in Washington D.C.</description>
+    </item>
+    
+  </channel>
+</rss>

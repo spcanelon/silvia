@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on Silvia Canelón</title>
+    <link>https://silvia.rbind.io/categories/r/</link>
+    <description>Recent content in R on Silvia Canelón</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 10 Nov 2022 16:00:00 +0000</lastBuildDate><atom:link href="https://silvia.rbind.io/categories/r/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Thinking Big with Maps in R</title>
+      <link>https://silvia.rbind.io/talk/2022-thinking-big/</link>
+      <pubDate>Thu, 10 Nov 2022 16:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/talk/2022-thinking-big/</guid>
+      <description>&lt;a href=&#34;https://canssiontario.utoronto.ca/event/statistical-software-conference/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CANSSI Ontario Statistical Software Conference&lt;/a&gt; talk on interactive map-making with large vector data</description>
+    </item>
+    
+    <item>
+      <title>Philly Center City District Sips 2022: An Interactive Map</title>
+      <link>https://silvia.rbind.io/talk/2022-ccd-sips/</link>
+      <pubDate>Thu, 29 Sep 2022 18:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/talk/2022-ccd-sips/</guid>
+      <description>&lt;a href=&#34;https://www.rladiesphilly.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R-Ladies Philly&lt;/a&gt; workshop on webscraping, geocoding, and interactive map-making</description>
+    </item>
+    
+    <item>
+      <title>Philly Center City District Sips 2022: An Interactive Map</title>
+      <link>https://silvia.rbind.io/blog/2022-ccd-sips/</link>
+      <pubDate>Tue, 31 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/blog/2022-ccd-sips/</guid>
+      <description>An interactive map showing restaurants participating in CCD Sips 2022 &amp;amp; a companion R tutorial on webscraping, geocoding, and map-making</description>
+    </item>
+    
+    <item>
+      <title>Hello Umami: Deploying a Privacy-Friendly Open Source Tool for Web Analytics</title>
+      <link>https://silvia.rbind.io/blog/2022-hello-umami/</link>
+      <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/blog/2022-hello-umami/</guid>
+      <description>A use case for adding Umami web analytics to a blogdown site and deploying using Railway.</description>
+    </item>
+    
+    <item>
+      <title>Professional, Polished, Presentable: Making Great Slides with xaringan</title>
+      <link>https://silvia.rbind.io/talk/2021-presentable-user2021/</link>
+      <pubDate>Wed, 07 Jul 2021 16:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/talk/2021-presentable-user2021/</guid>
+      <description>A 
+&lt;a href=&#34;https://user2021.r-project.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;useR!2021&lt;/a&gt; tutorial about making great slides with xaringan</description>
+    </item>
+    
+    <item>
+      <title>Professional, Polished, Presentable</title>
+      <link>https://silvia.rbind.io/project/2021-presentable-user2021/</link>
+      <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/project/2021-presentable-user2021/</guid>
+      <description>Workshop description     A three hour intermediate xaringan tutorial created for useR!2021
+The xaringan package brings professional, impressive, and visually appealing slides to the powerful R Markdown ecosystem. Through our hands-on tutorial, you will learn how to design highly effective slides that support presentations for teaching and reporting alike. Over three hours, you will learn how to create an accessible baseline design that matches your institution or organization’s style guide.</description>
+    </item>
+    
+    <item>
+      <title>Hello Hugo Apéro: Converting a Blogdown Site from Hugo Academic</title>
+      <link>https://silvia.rbind.io/blog/2021-hello-hugo-apero/</link>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/blog/2021-hello-hugo-apero/</guid>
+      <description>A tutorial on how to take your personal Hugo Academic/Wowchemy website and convert it to the Hugo Apéro theme</description>
+    </item>
+    
+    <item>
+      <title>Revealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community</title>
+      <link>https://silvia.rbind.io/talk/2021-data-viz-accessibility/</link>
+      <pubDate>Tue, 04 May 2021 10:20:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/talk/2021-data-viz-accessibility/</guid>
+      <description>Data visualization accessibility talk to share what we found after scraping alternative (alt) text from data viz shared on Twitter as part of the #TidyTuesday social project.</description>
+    </item>
+    
+    <item>
+      <title>TidyTuesdayAltText</title>
+      <link>https://silvia.rbind.io/project/2021-tidy-tuesday-alt-text/</link>
+      <pubDate>Tue, 04 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/project/2021-tidy-tuesday-alt-text/</guid>
+      <description>About the data      The original data were collected and made available by Tom Mock ( @thomas_mock) using {rtweet}. These data are available in the TidyTuesday repository.
+These tweets were processed and scraped for alternative text by Silvia Canelón ( @spcanelon)
+ Data were filtered to remove tweets without attached media (e.g. images) Data were supplemented with reply tweets collected using {rtweet}. This was done to identify whether the original tweet or a reply tweet contained an external link (e.</description>
+    </item>
+    
+    <item>
+      <title>Writing Presentations in R</title>
+      <link>https://silvia.rbind.io/talk/2021-xaringan-deploy-demo/</link>
+      <pubDate>Tue, 16 Mar 2021 17:30:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/talk/2021-xaringan-deploy-demo/</guid>
+      <description>R-Ladies Seattle package demonstrations showing how to make beautiful slides with xaringan and how to deploy them.</description>
+    </item>
+    
+    <item>
+      <title>Deploying xaringan Slides with GitHub Pages</title>
+      <link>https://silvia.rbind.io/blog/2021-deploying-xaringan-slides/</link>
+      <pubDate>Tue, 16 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/blog/2021-deploying-xaringan-slides/</guid>
+      <description>A ten-step workflow for creating an HTML xaringan slide deck and deploying it to the web using GitHub Pages</description>
+    </item>
+    
+    <item>
+      <title>From Learn-R to Teach-R: An Expert Panel on Effective R Instruction</title>
+      <link>https://silvia.rbind.io/talk/2021-r-teaching-panel/</link>
+      <pubDate>Thu, 18 Feb 2021 18:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/talk/2021-r-teaching-panel/</guid>
+      <description>An R-Ladies Philly panel and discussion event on R instruction and education.</description>
+    </item>
+    
+    <item>
+      <title>useR!2021 Cost Conversion Tool</title>
+      <link>https://silvia.rbind.io/project/2021-user2021-cost-conversion-tool/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/project/2021-user2021-cost-conversion-tool/</guid>
+      <description>I created a cost conversion tool used for the useR!2021 Conference to adapt conference and sponsorship fees according to the country of residence. The cost conversion was done according to Gross Domestic Product (GDP) adjusted by Purchasing Power Parity (PPP) provided by the World Bank. We wanted conference attendees and sponsors from different parts of the world to be able to participate in useR! and believed that this is a fair approach.</description>
+    </item>
+    
+    <item>
+      <title>Introducción al Paquete xaringan</title>
+      <link>https://silvia.rbind.io/talk/2020-introduccion-xaringan/</link>
+      <pubDate>Thu, 17 Dec 2020 18:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/talk/2020-introduccion-xaringan/</guid>
+      <description>Taller del paquete xaringan para presentaciones,&lt;br&gt;creado para R-Ladies Xalapa</description>
+    </item>
+    
+    <item>
+      <title>nhsr CSS Theme for xaringan</title>
+      <link>https://silvia.rbind.io/project/2020-xaringan/</link>
+      <pubDate>Wed, 09 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/project/2020-xaringan/</guid>
+      <description>Theme      In preparation for a xaringan workshop I created for the NHS-R 2020 Conference, I designed a custom CSS theme with input from the NHS-R Community that followed the NHS identity guidelines. This theme was also contributed to the nhsrtheme package developed by Tom Jemmett.</description>
+    </item>
+    
+    <item>
+      <title>Sharing Your Work with xaringan: The Basics and Beyond</title>
+      <link>https://silvia.rbind.io/talk/2020-xaringan-basics-and-beyond/</link>
+      <pubDate>Tue, 03 Nov 2020 15:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/talk/2020-xaringan-basics-and-beyond/</guid>
+      <description>An introduction to xaringan for presentations, created for the 
+&lt;a href=&#34;https://nhsrcommunity.com/about/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NHS-R Community&lt;/a&gt; 
+&lt;a href=&#34;https://nhsrcommunity.com/nhsr-conference-2020/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2020 Virtual Conference&lt;/a&gt;</description>
+    </item>
+    
+    <item>
+      <title>Sharing Your Work with xaringan</title>
+      <link>https://silvia.rbind.io/project/2020-xaringan-nhs-r/</link>
+      <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/project/2020-xaringan-nhs-r/</guid>
+      <description>Workshop description     This four-hour hands-on workshop is a gentle introduction to the xaringan package as a tool to create impressive presentation slides that can be deployed to the web for easy sharing.
+Day 1 covers the nuts and bolts of creating presentation slides using xaringan and deploying them in HTML format for easy sharing with others.
+Day 2 covers how to take your slides to the next level with the xaringanExtra package and how to customize slides with CSS.</description>
+    </item>
+    
+    <item>
+      <title>xaringan CSS Theme for nhsrtheme</title>
+      <link>https://silvia.rbind.io/project/2020-nhsrtheme/</link>
+      <pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/project/2020-nhsrtheme/</guid>
+      <description>Theme      In preparation for a xaringan workshop I created for the NHS-R 2020 Conference, I designed a custom CSS theme with input from the NHS-R Community that followed the NHS identity guidelines. This theme was also contributed to the xaringan package developed by Yihui Xie.</description>
+    </item>
+    
+    <item>
+      <title>Becoming certified as an RStudio Tidyverse Instructor</title>
+      <link>https://silvia.rbind.io/blog/2020-rstudio-instructor-certification-tidyverse/</link>
+      <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/blog/2020-rstudio-instructor-certification-tidyverse/</guid>
+      <description>An overview of the RStudio Instructor certification process and collection of resources to support anyone on their certification journey.</description>
+    </item>
+    
+    <item>
+      <title>An Antarctic Tour of the Tidyverse</title>
+      <link>https://silvia.rbind.io/talk/2020-tour-of-the-tidyverse/</link>
+      <pubDate>Mon, 31 Aug 2020 17:40:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/talk/2020-tour-of-the-tidyverse/</guid>
+      <description>An introductory tidyverse tutorial created and presented for 
+&lt;a href=&#34;https://rladieschicago.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R-Ladies Chicago&lt;/a&gt;</description>
+    </item>
+    
+    <item>
+      <title>Migrating from Trello to Airtable: Working with JSON Data in R</title>
+      <link>https://silvia.rbind.io/blog/2020-trello-to-airtable/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/blog/2020-trello-to-airtable/</guid>
+      <description>Tutorial on how to migrate your current Trello board to an Airtable base from start to finish.</description>
+    </item>
+    
+    <item>
+      <title>Philly Center City Sips 2019: An Interactive Map</title>
+      <link>https://silvia.rbind.io/blog/2019-ccd-sips/</link>
+      <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/blog/2019-ccd-sips/</guid>
+      <description>An interactive map showing restaurants participating in Philly’s Center City District Sips 2019.</description>
+    </item>
+    
+  </channel>
+</rss>
