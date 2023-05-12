@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Workshop on Silvia Canelón</title>
+    <link>https://silvia.rbind.io/categories/workshop/</link>
+    <description>Recent content in Workshop on Silvia Canelón</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 29 Sep 2022 18:00:00 +0000</lastBuildDate><atom:link href="https://silvia.rbind.io/categories/workshop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Philly Center City District Sips 2022: An Interactive Map</title>
+      <link>https://silvia.rbind.io/talk/2022-ccd-sips/</link>
+      <pubDate>Thu, 29 Sep 2022 18:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/talk/2022-ccd-sips/</guid>
+      <description>&lt;a href=&#34;https://www.rladiesphilly.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R-Ladies Philly&lt;/a&gt; workshop on webscraping, geocoding, and interactive map-making</description>
+    </item>
+    
+    <item>
+      <title>Introducción al Paquete xaringan</title>
+      <link>https://silvia.rbind.io/talk/2020-introduccion-xaringan/</link>
+      <pubDate>Thu, 17 Dec 2020 18:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/talk/2020-introduccion-xaringan/</guid>
+      <description>Taller del paquete xaringan para presentaciones,&lt;br&gt;creado para R-Ladies Xalapa</description>
+    </item>
+    
+    <item>
+      <title>Sharing Your Work with xaringan: The Basics and Beyond</title>
+      <link>https://silvia.rbind.io/talk/2020-xaringan-basics-and-beyond/</link>
+      <pubDate>Tue, 03 Nov 2020 15:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/talk/2020-xaringan-basics-and-beyond/</guid>
+      <description>An introduction to xaringan for presentations, created for the 
+&lt;a href=&#34;https://nhsrcommunity.com/about/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NHS-R Community&lt;/a&gt; 
+&lt;a href=&#34;https://nhsrcommunity.com/nhsr-conference-2020/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2020 Virtual Conference&lt;/a&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

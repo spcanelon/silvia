@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Silvia Canelón</title>
+    <link>https://silvia.rbind.io/project/</link>
+    <description>Recent content in Projects on Silvia Canelón</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 07 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://silvia.rbind.io/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Professional, Polished, Presentable</title>
+      <link>https://silvia.rbind.io/project/2021-presentable-user2021/</link>
+      <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/project/2021-presentable-user2021/</guid>
+      <description>Workshop description     A three hour intermediate xaringan tutorial created for useR!2021
+The xaringan package brings professional, impressive, and visually appealing slides to the powerful R Markdown ecosystem. Through our hands-on tutorial, you will learn how to design highly effective slides that support presentations for teaching and reporting alike. Over three hours, you will learn how to create an accessible baseline design that matches your institution or organization’s style guide.</description>
+    </item>
+    
+    <item>
+      <title>TidyTuesdayAltText</title>
+      <link>https://silvia.rbind.io/project/2021-tidy-tuesday-alt-text/</link>
+      <pubDate>Tue, 04 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/project/2021-tidy-tuesday-alt-text/</guid>
+      <description>About the data      The original data were collected and made available by Tom Mock ( @thomas_mock) using {rtweet}. These data are available in the TidyTuesday repository.
+These tweets were processed and scraped for alternative text by Silvia Canelón ( @spcanelon)
+ Data were filtered to remove tweets without attached media (e.g. images) Data were supplemented with reply tweets collected using {rtweet}. This was done to identify whether the original tweet or a reply tweet contained an external link (e.</description>
+    </item>
+    
+    <item>
+      <title>useR!2021 Cost Conversion Tool</title>
+      <link>https://silvia.rbind.io/project/2021-user2021-cost-conversion-tool/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/project/2021-user2021-cost-conversion-tool/</guid>
+      <description>I created a cost conversion tool used for the useR!2021 Conference to adapt conference and sponsorship fees according to the country of residence. The cost conversion was done according to Gross Domestic Product (GDP) adjusted by Purchasing Power Parity (PPP) provided by the World Bank. We wanted conference attendees and sponsors from different parts of the world to be able to participate in useR! and believed that this is a fair approach.</description>
+    </item>
+    
+    <item>
+      <title>Enseñar Tecnología en Comunidad</title>
+      <link>https://silvia.rbind.io/project/2020-teaching-tech-together-es/</link>
+      <pubDate>Mon, 28 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/project/2020-teaching-tech-together-es/</guid>
+      <description>Enseñar Tecnología en Comunidad. Cómo crear lecciones que funcionen y construir una comunidad docente alrededor      Este proyecto llevó acabo la traducción al castellano del libro Teaching Tech Together escrito por Greg Wilson. El proyecto fue coordinado por mi amiga y colega Yanina Bellini Saibene.
+Yo participé como traductora del capítulo &amp;ldquo;Motivation and Demotivation&amp;rdquo; y revisora del capítulo &amp;ldquo;Expertise and Memory.&amp;rdquo;
+ Septiembre de 2020 – Diciembre de 2020.</description>
+    </item>
+    
+    <item>
+      <title>nhsr CSS Theme for xaringan</title>
+      <link>https://silvia.rbind.io/project/2020-xaringan/</link>
+      <pubDate>Wed, 09 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/project/2020-xaringan/</guid>
+      <description>Theme      In preparation for a xaringan workshop I created for the NHS-R 2020 Conference, I designed a custom CSS theme with input from the NHS-R Community that followed the NHS identity guidelines. This theme was also contributed to the nhsrtheme package developed by Tom Jemmett.</description>
+    </item>
+    
+    <item>
+      <title>Sharing Your Work with xaringan</title>
+      <link>https://silvia.rbind.io/project/2020-xaringan-nhs-r/</link>
+      <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/project/2020-xaringan-nhs-r/</guid>
+      <description>Workshop description     This four-hour hands-on workshop is a gentle introduction to the xaringan package as a tool to create impressive presentation slides that can be deployed to the web for easy sharing.
+Day 1 covers the nuts and bolts of creating presentation slides using xaringan and deploying them in HTML format for easy sharing with others.
+Day 2 covers how to take your slides to the next level with the xaringanExtra package and how to customize slides with CSS.</description>
+    </item>
+    
+    <item>
+      <title>xaringan CSS Theme for nhsrtheme</title>
+      <link>https://silvia.rbind.io/project/2020-nhsrtheme/</link>
+      <pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/project/2020-nhsrtheme/</guid>
+      <description>Theme      In preparation for a xaringan workshop I created for the NHS-R 2020 Conference, I designed a custom CSS theme with input from the NHS-R Community that followed the NHS identity guidelines. This theme was also contributed to the xaringan package developed by Yihui Xie.</description>
+    </item>
+    
+    <item>
+      <title>Visualizing the Inside Journey of Recovery from Opioid Use Disorder</title>
+      <link>https://silvia.rbind.io/project/2020-data-hack-opioid/</link>
+      <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/project/2020-data-hack-opioid/</guid>
+      <description>Code for Philly 2020 Opioid Data Hackathon project to better understand recovery from opioid use disorder.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Español on Silvia Canelón</title>
+    <link>https://silvia.rbind.io/tags/espa%C3%B1ol/</link>
+    <description>Recent content in Español on Silvia Canelón</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 17 Dec 2020 18:00:00 +0000</lastBuildDate><atom:link href="https://silvia.rbind.io/tags/espa%C3%B1ol/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introducción al Paquete xaringan</title>
+      <link>https://silvia.rbind.io/talk/2020-introduccion-xaringan/</link>
+      <pubDate>Thu, 17 Dec 2020 18:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/talk/2020-introduccion-xaringan/</guid>
+      <description>Taller del paquete xaringan para presentaciones,&lt;br&gt;creado para R-Ladies Xalapa</description>
+    </item>
+    
+  </channel>
+</rss>

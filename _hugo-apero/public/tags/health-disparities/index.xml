@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>health disparities on Silvia Canelón</title>
+    <link>https://silvia.rbind.io/tags/health-disparities/</link>
+    <description>Recent content in health disparities on Silvia Canelón</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 11 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://silvia.rbind.io/tags/health-disparities/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Bayesian Hierarchical Modeling Framework for Geospatial Analysis of Adverse Pregnancy Outcomes</title>
+      <link>https://silvia.rbind.io/publication/2021-geospatial-analysis-pregnancy-outcomes/</link>
+      <pubDate>Tue, 11 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/publication/2021-geospatial-analysis-pregnancy-outcomes/</guid>
+      <description>Study describing a Bayesian hierarchichal modeling framework used to explore which neighborhood-level factors and patient-level features were most informative for preterm birth and stillbirth pregnancy outcomes.</description>
+    </item>
+    
+    <item>
+      <title>Individual-Level and Neighborhood-Level Risk Factors for Severe Maternal Morbidity</title>
+      <link>https://silvia.rbind.io/publication/2021-smm-individual-neighborhood/</link>
+      <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/publication/2021-smm-individual-neighborhood/</guid>
+      <description>Study showing that neighborhood-level risk factors are independent predictors of Severe Maternal Morbidity, providing further evidence that racial disparities in maternal outcomes are symptoms of historical and structural racism.</description>
+    </item>
+    
+  </channel>
+</rss>

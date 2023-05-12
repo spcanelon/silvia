@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pregnancy on Silvia Canelón</title>
+    <link>https://silvia.rbind.io/tags/pregnancy/</link>
+    <description>Recent content in pregnancy on Silvia Canelón</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 07 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://silvia.rbind.io/tags/pregnancy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Medication-Wide Association Study Using Electronic Health Record Data of Prescription Medication Exposure and Multifetal Pregnancies: Retrospective Study</title>
+      <link>https://silvia.rbind.io/publication/2022-mwas-multiple-birth/</link>
+      <pubDate>Tue, 07 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/publication/2022-mwas-multiple-birth/</guid>
+      <description>EHR study describing an MWAS approach to explore connections between prescription medication exposure and the risk of multiple gestation pregnancies</description>
+    </item>
+    
+    <item>
+      <title>Design and Evaluation of a Postpartum Depression Ontology</title>
+      <link>https://silvia.rbind.io/publication/2022-ppd-ontology/</link>
+      <pubDate>Wed, 09 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/publication/2022-ppd-ontology/</guid>
+      <description>Study describing an ontology created for the identification of patients with postpartum depression.</description>
+    </item>
+    
+    <item>
+      <title>Evaluation of Stillbirth Among Pregnant People With Sickle Cell Trait</title>
+      <link>https://silvia.rbind.io/publication/2021-sct-stillbirth/</link>
+      <pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/publication/2021-sct-stillbirth/</guid>
+      <description>Retrospective cohort study finding both sickle cell trait and disease to be associated with an increased risk of stillbirth, suggesting that sickle cell carriers would benefit from additional risk assessment during pregnancy.</description>
+    </item>
+    
+    <item>
+      <title>A Bayesian Hierarchical Modeling Framework for Geospatial Analysis of Adverse Pregnancy Outcomes</title>
+      <link>https://silvia.rbind.io/publication/2021-geospatial-analysis-pregnancy-outcomes/</link>
+      <pubDate>Tue, 11 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/publication/2021-geospatial-analysis-pregnancy-outcomes/</guid>
+      <description>Study describing a Bayesian hierarchichal modeling framework used to explore which neighborhood-level factors and patient-level features were most informative for preterm birth and stillbirth pregnancy outcomes.</description>
+    </item>
+    
+    <item>
+      <title>Individual-Level and Neighborhood-Level Risk Factors for Severe Maternal Morbidity</title>
+      <link>https://silvia.rbind.io/publication/2021-smm-individual-neighborhood/</link>
+      <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/publication/2021-smm-individual-neighborhood/</guid>
+      <description>Study showing that neighborhood-level risk factors are independent predictors of Severe Maternal Morbidity, providing further evidence that racial disparities in maternal outcomes are symptoms of historical and structural racism.</description>
+    </item>
+    
+    <item>
+      <title>The Impact of Sickle Cell Status on Adverse Delivery Outcomes Using Electronic Health Record Data</title>
+      <link>https://silvia.rbind.io/talk/2021-amia-informatics-summit/</link>
+      <pubDate>Mon, 22 Mar 2021 11:30:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/talk/2021-amia-informatics-summit/</guid>
+      <description>Applied Clinical Research Informatics: Solving Real World Problems. Oral Presentations S17: March 23, 2021 11:30am-1pm ET</description>
+    </item>
+    
+    <item>
+      <title>Not All C-sections Are the Same: Investigating Emergency vs. Elective C-section Deliveries as an Adverse Pregnancy Outcome</title>
+      <link>https://silvia.rbind.io/publication/2020-csections-emergency-admissions/</link>
+      <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/publication/2020-csections-emergency-admissions/</guid>
+      <description>Publication and poster accepted for the 2021 Pacific Biocomputing Symposium. This study utilizes Electronic Health Record (EHR) data to assess the impact of pregnancy-specific maternal morbidity and patient-specific characteristics on experiencing an emergency admission at the time of delivery and its relationship to Cesarean section (C-section) deliveries</description>
+    </item>
+    
+    <item>
+      <title>Development and Evaluation of MADDIE: Method to Acquire Delivery Date Information from Electronic Health Records</title>
+      <link>https://silvia.rbind.io/publication/2020-maddie-ehr-delivery-episode-algorithm/</link>
+      <pubDate>Tue, 17 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/publication/2020-maddie-ehr-delivery-episode-algorithm/</guid>
+      <description>An R algorithm designed to extract delivery episode details from structured Electronic Health Record data.</description>
+    </item>
+    
+    <item>
+      <title>Is Hydroxychloroquine Safe During Pregnancy? Observations from Penn Medicine</title>
+      <link>https://silvia.rbind.io/publication/2020-preprint-hydroxychloroquine-pregnancy/</link>
+      <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/publication/2020-preprint-hydroxychloroquine-pregnancy/</guid>
+      <description>Preprint as a contribution from a rapid response exploration of hydroxychloroquine effects on pregnancy-related outcomes.</description>
+    </item>
+    
+    <item>
+      <title>Investigating Pregnancy-Related Health Outcomes Among Patients with Sickle Cell Disease and Linking with Health Disparities</title>
+      <link>https://silvia.rbind.io/publication/2019-amia-annual-symposium/</link>
+      <pubDate>Wed, 20 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/publication/2019-amia-annual-symposium/</guid>
+      <description>Poster presented at the 2019 American Medical Informatics Association Annual Symposium held November 16th-20th in Washington D.C.</description>
+    </item>
+    
+  </channel>
+</rss>

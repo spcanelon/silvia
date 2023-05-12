@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Education on Silvia Canelón</title>
+    <link>https://silvia.rbind.io/categories/education/</link>
+    <description>Recent content in Education on Silvia Canelón</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 09 Mar 2023 17:30:00 +0000</lastBuildDate><atom:link href="https://silvia.rbind.io/categories/education/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Resources for Data Viz Accessibility</title>
+      <link>https://silvia.rbind.io/blog/2021-data-viz-a11y/</link>
+      <pubDate>Thu, 23 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/blog/2021-data-viz-a11y/</guid>
+      <description>window.xaringanExtraClipboard(null, {&#34;button&#34;:&#34; Copy Code&#34;,&#34;success&#34;:&#34; Copied!&#34;,&#34;error&#34;:&#34;Press Ctrl+C to Copy&#34;}) /*.main { display: grid | inline-grid; } .grid-container { display: grid; grid-template-columns: 1fr 4fr; grid-auto-flow: row; grid-gap: 10px 10px; } .grid-item { /*background-color: rgba(255, 255, 255, 0.8);*/ border: 1px solid rgba(0, 0, 0, 0.8); /*padding: 20px; font-size: 18px; line-height: 1.5em;*/ text-align: left; height: auto; } */ /* -- css for images --*/ .page-main img { box-shadow: 0px 0px 2px 2px rgba( 0, 0, 0, 0.</description>
+    </item>
+    
+    <item>
+      <title>WAVE Audit No. 1</title>
+      <link>https://silvia.rbind.io/blog/2021-audit-1/</link>
+      <pubDate>Wed, 02 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/blog/2021-audit-1/</guid>
+      <description>.page-main img { box-shadow: 0px 0px 2px 2px rgba( 0, 0, 0, 0.2 ); #/* ease | ease-in | ease-out | linear */ transition: transform ease-in-out 0.6s; } .page-main img:hover { transform: scale(1.4); }   Did you know that 97.4% of home pages have web accessibility failures??? 😱
+ This finding is one of many from an accessibility analysis that non-profit WebAIM (Web Accessibility in Mind) conducts annually on home pages of the top one million websites.</description>
+    </item>
+    
+    <item>
+      <title>Data Analytics 101</title>
+      <link>https://silvia.rbind.io/talk/2023-penn-community-scholars/</link>
+      <pubDate>Thu, 09 Mar 2023 17:30:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/talk/2023-penn-community-scholars/</guid>
+      <description>Practical talk highlighting how data can be leveraged to support community-academic partnerships</description>
+    </item>
+    
+    <item>
+      <title>Philly Center City District Sips 2022: An Interactive Map</title>
+      <link>https://silvia.rbind.io/talk/2022-ccd-sips/</link>
+      <pubDate>Thu, 29 Sep 2022 18:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/talk/2022-ccd-sips/</guid>
+      <description>&lt;a href=&#34;https://www.rladiesphilly.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R-Ladies Philly&lt;/a&gt; workshop on webscraping, geocoding, and interactive map-making</description>
+    </item>
+    
+    <item>
+      <title>Ten simple rules to host an inclusive conference</title>
+      <link>https://silvia.rbind.io/publication/2022-ten-simple-rules-inclusive-conference/</link>
+      <pubDate>Thu, 21 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/publication/2022-ten-simple-rules-inclusive-conference/</guid>
+      <description>Community-led publication describing ten guidelines for hosting an inclusive conference</description>
+    </item>
+    
+    <item>
+      <title>Curated Compilations</title>
+      <link>https://silvia.rbind.io/blog/curated-compilations/</link>
+      <pubDate>Thu, 23 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/blog/curated-compilations/</guid>
+      <description>** No content below YAML for the series _index. This file is a leaf bundle, and provides settings for the listing page layout and sidebar content.**</description>
+    </item>
+    
+    <item>
+      <title>Professional, Polished, Presentable: Making Great Slides with xaringan</title>
+      <link>https://silvia.rbind.io/talk/2021-presentable-user2021/</link>
+      <pubDate>Wed, 07 Jul 2021 16:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/talk/2021-presentable-user2021/</guid>
+      <description>A 
+&lt;a href=&#34;https://user2021.r-project.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;useR!2021&lt;/a&gt; tutorial about making great slides with xaringan</description>
+    </item>
+    
+    <item>
+      <title>Professional, Polished, Presentable</title>
+      <link>https://silvia.rbind.io/project/2021-presentable-user2021/</link>
+      <pubDate>Wed, 07 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/project/2021-presentable-user2021/</guid>
+      <description>Workshop description     A three hour intermediate xaringan tutorial created for useR!2021
+The xaringan package brings professional, impressive, and visually appealing slides to the powerful R Markdown ecosystem. Through our hands-on tutorial, you will learn how to design highly effective slides that support presentations for teaching and reporting alike. Over three hours, you will learn how to create an accessible baseline design that matches your institution or organization’s style guide.</description>
+    </item>
+    
+    <item>
+      <title>Auditing for Web Accessibility</title>
+      <link>https://silvia.rbind.io/blog/a11y-website/</link>
+      <pubDate>Wed, 02 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/blog/a11y-website/</guid>
+      <description>** No content below YAML for the series _index. This file is a leaf bundle, and provides settings for the listing page layout and sidebar content.**</description>
+    </item>
+    
+    <item>
+      <title>Revealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community</title>
+      <link>https://silvia.rbind.io/talk/2021-data-viz-accessibility/</link>
+      <pubDate>Tue, 04 May 2021 10:20:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/talk/2021-data-viz-accessibility/</guid>
+      <description>Data visualization accessibility talk to share what we found after scraping alternative (alt) text from data viz shared on Twitter as part of the #TidyTuesday social project.</description>
+    </item>
+    
+    <item>
+      <title>Writing Presentations in R</title>
+      <link>https://silvia.rbind.io/talk/2021-xaringan-deploy-demo/</link>
+      <pubDate>Tue, 16 Mar 2021 17:30:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/talk/2021-xaringan-deploy-demo/</guid>
+      <description>R-Ladies Seattle package demonstrations showing how to make beautiful slides with xaringan and how to deploy them.</description>
+    </item>
+    
+    <item>
+      <title>From Learn-R to Teach-R: An Expert Panel on Effective R Instruction</title>
+      <link>https://silvia.rbind.io/talk/2021-r-teaching-panel/</link>
+      <pubDate>Thu, 18 Feb 2021 18:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/talk/2021-r-teaching-panel/</guid>
+      <description>An R-Ladies Philly panel and discussion event on R instruction and education.</description>
+    </item>
+    
+    <item>
+      <title>Enseñar Tecnología en Comunidad</title>
+      <link>https://silvia.rbind.io/project/2020-teaching-tech-together-es/</link>
+      <pubDate>Mon, 28 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/project/2020-teaching-tech-together-es/</guid>
+      <description>Enseñar Tecnología en Comunidad. Cómo crear lecciones que funcionen y construir una comunidad docente alrededor      Este proyecto llevó acabo la traducción al castellano del libro Teaching Tech Together escrito por Greg Wilson. El proyecto fue coordinado por mi amiga y colega Yanina Bellini Saibene.
+Yo participé como traductora del capítulo &amp;ldquo;Motivation and Demotivation&amp;rdquo; y revisora del capítulo &amp;ldquo;Expertise and Memory.&amp;rdquo;
+ Septiembre de 2020 – Diciembre de 2020.</description>
+    </item>
+    
+    <item>
+      <title>Introducción al Paquete xaringan</title>
+      <link>https://silvia.rbind.io/talk/2020-introduccion-xaringan/</link>
+      <pubDate>Thu, 17 Dec 2020 18:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/talk/2020-introduccion-xaringan/</guid>
+      <description>Taller del paquete xaringan para presentaciones,&lt;br&gt;creado para R-Ladies Xalapa</description>
+    </item>
+    
+    <item>
+      <title>Sharing Your Work with xaringan</title>
+      <link>https://silvia.rbind.io/project/2020-xaringan-nhs-r/</link>
+      <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/project/2020-xaringan-nhs-r/</guid>
+      <description>Workshop description     This four-hour hands-on workshop is a gentle introduction to the xaringan package as a tool to create impressive presentation slides that can be deployed to the web for easy sharing.
+Day 1 covers the nuts and bolts of creating presentation slides using xaringan and deploying them in HTML format for easy sharing with others.
+Day 2 covers how to take your slides to the next level with the xaringanExtra package and how to customize slides with CSS.</description>
+    </item>
+    
+    <item>
+      <title>Becoming certified as an RStudio Tidyverse Instructor</title>
+      <link>https://silvia.rbind.io/blog/2020-rstudio-instructor-certification-tidyverse/</link>
+      <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/blog/2020-rstudio-instructor-certification-tidyverse/</guid>
+      <description>An overview of the RStudio Instructor certification process and collection of resources to support anyone on their certification journey.</description>
+    </item>
+    
+    <item>
+      <title>An Antarctic Tour of the Tidyverse</title>
+      <link>https://silvia.rbind.io/talk/2020-tour-of-the-tidyverse/</link>
+      <pubDate>Mon, 31 Aug 2020 17:40:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/talk/2020-tour-of-the-tidyverse/</guid>
+      <description>An introductory tidyverse tutorial created and presented for 
+&lt;a href=&#34;https://rladieschicago.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R-Ladies Chicago&lt;/a&gt;</description>
+    </item>
+    
+    <item>
+      <title>Visualizing the Inside Journey of Recovery from Opioid Use Disorder</title>
+      <link>https://silvia.rbind.io/project/2020-data-hack-opioid/</link>
+      <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/project/2020-data-hack-opioid/</guid>
+      <description>Code for Philly 2020 Opioid Data Hackathon project to better understand recovery from opioid use disorder.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on Silvia Canelón</title>
+    <link>https://silvia.rbind.io/tags/git/</link>
+    <description>Recent content in git on Silvia Canelón</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 01 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://silvia.rbind.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello Hugo Apéro: Converting a Blogdown Site from Hugo Academic</title>
+      <link>https://silvia.rbind.io/blog/2021-hello-hugo-apero/</link>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/blog/2021-hello-hugo-apero/</guid>
+      <description>A tutorial on how to take your personal Hugo Academic/Wowchemy website and convert it to the Hugo Apéro theme</description>
+    </item>
+    
+    <item>
+      <title>Deploying xaringan Slides with GitHub Pages</title>
+      <link>https://silvia.rbind.io/blog/2021-deploying-xaringan-slides/</link>
+      <pubDate>Tue, 16 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://silvia.rbind.io/blog/2021-deploying-xaringan-slides/</guid>
+      <description>A ten-step workflow for creating an HTML xaringan slide deck and deploying it to the web using GitHub Pages</description>
+    </item>
+    
+  </channel>
+</rss>
