@@ -1,0 +1,14 @@
+{
+  "hash": "4f29a0ee33aff5846a80e3922a7682c3",
+  "result": {
+    "markdown": "---\ntitle: \"Writing Presentations in R\"\ndate: \"2021-03-16\"\n# date: 2021-03-16T17:30:00\nslug: xaringan-deploy-demo\nalias:\n  - /talk/2021-03-16-xaringan-deploy-demo/\ncategories:\n  - R\n  - Education\n  - Demo\ntags:\n  - R\n  - R-Ladies\n  - xaringan\n#event: R-Ladies Seattle Meetup\n#event_url: https://www.meetup.com/rladies-seattle/events/276570832/\n#location: Seattle, Washington, US (virtual)\nimage: featured.png\nsubtitle: R-Ladies Seattle package demonstrations showing how to make beautiful slides with xaringan and how to deploy them.\nsummary: R-Ladies Seattle package demonstrations showing how to make beautiful slides with xaringan and how to deploy them.\nabstract: \"\"\n#date_end: 2021-03-16T18:30:00\n#all_day: no\n# publishDate: '2021-03-01'\nfeatured: yes\n# image:\n#   caption: '[Writing Presentations in R]()'\n#   focal_point: center\n#   preview_only: no\nslides: ''\nprojects: []\nlinks:\n# - icon: images\n#   icon_pack: fas\n#   name: slides\n#   url: http://tiny.cc/rladies-phl-teaching-spc\n# - icon: play-circle\n#   icon_pack: fas\n#   name: video\n#   url: https://www.youtube.com/watch?v=d1vLx2vDbU8\n- icon: pencil-alt\n  icon_pack: fas\n  name: \"Blog post: Deploying xaringan Slides\"\n  url: /blog/2021-deploying-xaringan-slides/\n---\n\n\n![Hex logo for R-Ladies Seattle featuring some ggplot2-created mountain ranges](rladies-seattle.png)\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

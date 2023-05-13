@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Silvia Canelón">
+<meta name="dcterms.date" content="2022-01-18">
+
+<title>Silvia Canelón - Hello Umami: Deploying a Privacy-Friendly Open Source Tool for Web Analytics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Silvia Canelón</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about/index.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog/index.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="dropdown-header">
+ <span class="menu-text">Talks</span></li>
+  <li class="dropdown-header">
+ <span class="menu-text">Publications</span></li>
+  <li class="dropdown-header">
+ <span class="menu-text">Projects</span></li>
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#what-to-expect" id="toc-what-to-expect" class="nav-link active" data-scroll-target="#what-to-expect">What to expect</a></li>
+  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a></li>
+  <li><a href="#railway" id="toc-railway" class="nav-link" data-scroll-target="#railway">Railway</a></li>
+  <li><a href="#tracker-configuration" id="toc-tracker-configuration" class="nav-link" data-scroll-target="#tracker-configuration">Tracker Configuration</a></li>
+  <li><a href="#pricing" id="toc-pricing" class="nav-link" data-scroll-target="#pricing">Pricing</a></li>
+  <li><a href="#goatcounter" id="toc-goatcounter" class="nav-link" data-scroll-target="#goatcounter">GoatCounter</a></li>
+  <li><a href="#updating-umami" id="toc-updating-umami" class="nav-link" data-scroll-target="#updating-umami">Updating Umami</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Hello Umami: Deploying a Privacy-Friendly Open Source Tool for Web Analytics</h1>
+<p class="subtitle lead">A use case for adding Umami web analytics to a blogdown site and deploying using Railway.</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">Website</div>
+    <div class="quarto-category">blogdown</div>
+    <div class="quarto-category">test</div>
+    <div class="quarto-category">Hugo</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Silvia Canelón </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 18, 2022</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<style type="text/css">
+.page-main img {
+  box-shadow: 0px 0px 2px 2px rgba( 0, 0, 0, 0.2 );
+}
+
+.tweet-timestamp {
+  display: block;
+  position: relative;
+  font-size: 1em;
+}
+.tweet-timestamp a .tweet-timestamp__text {
+  color: var(--text-light);
+}
+.tweet-timestamp a:hover .tweet-timestamp__text {
+  color: var(--text-mild);
+}
+.tweet-timestamp .tweet-link > i {
+    display: inline-block;
+    position: absolute;
+  left: -1.5em;
+  top: 3px;
+}
+</style>
+<section id="what-to-expect" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-expect">What to expect</h2>
+<p>A brief walkthrough of the steps I took to deploy Umami web analytics for my personal website, as documented in a short Twitter thread.</p>
+<!-- Code modified from https://github.com/gadenbuie/garrickadenbuie-com/blob/main/content/blog/2020/setting-up-a-new-macbook-pro/index.Rmarkdown -->
+<p><span class="tweet-timestamp"><a class="tweet-link" href="https://twitter.com/spcanelon/status/1480703744220319750" title="2022-01-11 00:50:57" target="_blank" rel="noopener noreferrer"><span class="tweet-timestamp__text">07:50pm<i class="pl2 fab fa-twitter fa-fw"></i></span></a></span>Months ago I removed GA from my <a href="https://twitter.com/hashtag/RStats">#RStats</a> <a href="https://twitter.com/hashtag/blogdown">#blogdown</a> site &amp; this weekend I added <a href="http://umami.is" class="uri">http://umami.is</a> 🍚 (<a href="https://twitter.com/caozilla">@caozilla</a>) as an open source, privacy-friendly, web analytics alternative</p>
+<p>I was intimidated by the self-hosting aspect, but the docs + <a href="https://twitter.com/Railway">@Railway</a> made it possible! Steps in 🧵</p>
+<p><img src="img/FIx3DDLXMAUdyi1.jpg" class="img-fluid"></p>
+</section>
+<section id="installation" class="level2">
+<h2 class="anchored" data-anchor-id="installation">Installation</h2>
+<p><span class="tweet-timestamp"><a class="tweet-link" href="https://twitter.com/spcanelon/status/1480703746728505346" title="2022-01-11 00:50:58" target="_blank" rel="noopener noreferrer"><span class="tweet-timestamp__text">07:50pm<i class="pl2 fab fa-twitter fa-fw"></i></span></a></span>Steps I followed:</p>
+<ol type="1">
+<li><p>Install Railway CLI with Homebrew <a href="https://docs.railway.app/develop/cli" class="uri">https://docs.railway.app/develop/cli</a></p></li>
+<li><p>Install PostgreSQL with Homebrew <a href="https://wiki.postgresql.org/wiki/Homebrew" class="uri">https://wiki.postgresql.org/wiki/Homebrew</a></p></li>
+<li><p>Fork Umami repo &amp; follow steps in “Running on Railway from a forked repository” at <a href="https://umami.is/docs/running-on-railway" class="uri">https://umami.is/docs/running-on-railway</a></p></li>
+<li><p>Clone repo locally w git</p></li>
+</ol>
+</section>
+<section id="railway" class="level2">
+<h2 class="anchored" data-anchor-id="railway">Railway</h2>
+<p><span class="tweet-timestamp"><a class="tweet-link" href="https://twitter.com/spcanelon/status/1480703748586590214" title="2022-01-11 00:50:58" target="_blank" rel="noopener noreferrer"><span class="tweet-timestamp__text">07:50pm<i class="pl2 fab fa-twitter fa-fw"></i></span></a></span>5. Link local setup to Railway project in the terminal w/ <code>railway link &lt;projectid&gt;</code>. Project ID is in the Railway dashboard under Setup</p>
+<ol start="6" type="1">
+<li>Create PostgreSQL tables using <code>railway run</code> in local umami directory + steps in “Create database tables” at <a href="https://umami.is/docs/running-on-railway" class="uri">https://umami.is/docs/running-on-railway</a></li>
+</ol>
+<p><span class="tweet-timestamp"><a class="tweet-link" href="https://twitter.com/spcanelon/status/1480703750247440385" title="2022-01-11 00:50:58" target="_blank" rel="noopener noreferrer"><span class="tweet-timestamp__text">07:50pm<i class="pl2 fab fa-twitter fa-fw"></i></span></a></span>7. Deploy with <code>railway up</code>! 🚄</p>
+<ol start="8" type="1">
+<li><p>Follow steps in Umami Getting Started docs <a href="https://umami.is/docs/login" class="uri">https://umami.is/docs/login</a> to login &amp; add website</p></li>
+<li><p>Add tracking code to website. In my <a href="https://twitter.com/hashtag/HugoApero">#HugoApero</a> <a href="https://twitter.com/hashtag/blogdown">#blogdown</a> site I added it to layouts/partials/head.html. My example at <a href="https://github.com/spcanelon/silvia/blob/main/layouts/partials/head.html#L21-L29" class="uri">https://github.com/spcanelon/silvia/blob/main/layouts/partials/head.html#L21-L29</a></p></li>
+</ol>
+</section>
+<section id="tracker-configuration" class="level2">
+<h2 class="anchored" data-anchor-id="tracker-configuration">Tracker Configuration</h2>
+<p><span class="tweet-timestamp"><a class="tweet-link" href="https://twitter.com/spcanelon/status/1480703752017436677" title="2022-01-11 00:50:59" target="_blank" rel="noopener noreferrer"><span class="tweet-timestamp__text">07:50pm<i class="pl2 fab fa-twitter fa-fw"></i></span></a></span>10. In order to not track my own visits to my site, I followed the tip in <a href="https://twitter.com/DeepankarBhade">@DeepankarBhade</a>’s post <a href="https://dpnkr.in/blog/self-host-umami" class="uri">https://dpnkr.in/blog/self-host-umami</a> and disabled Umami from my browser’s local storage. He kindly explained the steps to me in this thread 😅 <a href="https://twitter.com/DeepankarBhade/status/1480214508987551750?s=20" class="uri">https://twitter.com/DeepankarBhade/status/1480214508987551750?s=20</a></p>
+</section>
+<section id="pricing" class="level2">
+<h2 class="anchored" data-anchor-id="pricing">Pricing</h2>
+<p><span class="tweet-timestamp"><a class="tweet-link" href="https://twitter.com/spcanelon/status/1480703754018050048" title="2022-01-11 00:50:59" target="_blank" rel="noopener noreferrer"><span class="tweet-timestamp__text">07:50pm<i class="pl2 fab fa-twitter fa-fw"></i></span></a></span>A note about Railway pricing <a href="https://docs.railway.app/reference/limits" class="uri">https://docs.railway.app/reference/limits</a>:</p>
+<p>I’m using the free tier, the Starter Plan, which has $5 of credits. In the past 2 days I’ve used $0.7258 of my credits &amp; it’s estimated I’ll use $3.04 by the end of the month. My site receives relatively low traffic, so YMMV</p>
+<p><span class="tweet-timestamp"><a class="tweet-link" href="https://twitter.com/spcanelon/status/1480703755733635072" title="2022-01-11 00:51:00" target="_blank" rel="noopener noreferrer"><span class="tweet-timestamp__text">07:51pm<i class="pl2 fab fa-twitter fa-fw"></i></span></a></span>There is a free-ish $10 credit Railway plan available also, where you would only get billed for any usage above $10</p>
+<p>For a fully free &amp; more adventurous experience you could give up the convenience of Railway &amp; self-host! See the Umami docs for options <a href="https://umami.is/docs/hosting" class="uri">https://umami.is/docs/hosting</a></p>
+</section>
+<section id="goatcounter" class="level2">
+<h2 class="anchored" data-anchor-id="goatcounter">GoatCounter</h2>
+<p><span class="tweet-timestamp"><a class="tweet-link" href="https://twitter.com/spcanelon/status/1480703757344284672" title="2022-01-11 00:51:00" target="_blank" rel="noopener noreferrer"><span class="tweet-timestamp__text">07:51pm<i class="pl2 fab fa-twitter fa-fw"></i></span></a></span>I’ll leave you with another great free, open source, privacy-friendly option, which is GoatCounter 🐐 <a href="https://www.goatcounter.com/" class="uri">https://www.goatcounter.com/</a>. And <a href="https://twitter.com/mattdray">@mattdray</a> wrote a blogdown post about it! <a href="https://twitter.com/mattdray/status/1306353556706992128?s=20" class="uri">https://twitter.com/mattdray/status/1306353556706992128?s=20</a></p>
+<p>For more convos about GA web analytics alternatives, see <a href="https://twitter.com/ma_salmon/status/1379363183526285312?s=20" class="uri">https://twitter.com/ma_salmon/status/1379363183526285312?s=20</a></p>
+</section>
+<section id="updating-umami" class="level2">
+<h2 class="anchored" data-anchor-id="updating-umami">Updating Umami</h2>
+<p><span class="tweet-timestamp"><a class="tweet-link" href="https://twitter.com/spcanelon/status/1483512641159147531" title="2022-01-18 18:52:30" target="_blank" rel="noopener noreferrer"><span class="tweet-timestamp__text">01:52pm<i class="pl2 fab fa-twitter fa-fw"></i></span></a></span>Note to self – how to update <a href="http://umami.is" class="uri">http://umami.is</a> with new releases:</p>
+<p>Recent update to v1.25.0 <a href="https://github.com/mikecao/umami/releases/tag/v1.25.0" class="uri">https://github.com/mikecao/umami/releases/tag/v1.25.0</a></p>
+<ol type="1">
+<li>Fetch upstream from my umami fork</li>
+<li>Locally in terminal, change to my umami directory</li>
+<li>git pull, npm install, railway up 🚄</li>
+</ol>
+<p>🚀 <a href="https://twitter.com/hashtag/WebAnalytics">#WebAnalytics</a></p>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">© 2023 Silvia Canelón ∙ Made with <a href="https://quarto.org">Quarto</a></div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://fosstodon.org/@spcanelon">
+      <i class="bi bi-mastodon" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.github.com/spcanelon">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/spcanelon">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://silviacanelon.com/blog/index.xml">
+      <i class="bi bi-rss" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../accessibility.html">Accessibility</a>
+  </li>  
+    <li class="nav-item">
+ Contact
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../license.html">License</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

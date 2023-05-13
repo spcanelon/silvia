@@ -1,0 +1,22 @@
+# Freeze computed outputs
+execute: 
+  freeze: true
+
+# Enable banner style title blocks
+title-block-banner: false
+
+# Enable CC licence appendix
+license: "CC BY-SA"
+
+# Default for table of contents
+toc: true
+toc-title: Table of contents
+toc-location: right
+
+# Default fields for citation
+citation: false
+
+# Wrap overflow code
+format: 
+  html: 
+    code-overflow: wrap

@@ -1,0 +1,14 @@
+{
+  "hash": "93d95550fa05f89fb5e23f2daab3c130",
+  "result": {
+    "markdown": "---\nsite: blogdown:::blogdown_site\n---\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

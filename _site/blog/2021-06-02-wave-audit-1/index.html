@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Silvia Canelón">
+<meta name="dcterms.date" content="2021-06-02">
+
+<title>Silvia Canelón - WAVE Audit No.&nbsp;1</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Silvia Canelón</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about/index.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog/index.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="dropdown-header">
+ <span class="menu-text">Talks</span></li>
+  <li class="dropdown-header">
+ <span class="menu-text">Publications</span></li>
+  <li class="dropdown-header">
+ <span class="menu-text">Projects</span></li>
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#my-audit-results" id="toc-my-audit-results" class="nav-link active" data-scroll-target="#my-audit-results">My audit results</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next steps</a></li>
+  <li><a href="#home-page" id="toc-home-page" class="nav-link" data-scroll-target="#home-page">Home page</a></li>
+  <li><a href="#about-page" id="toc-about-page" class="nav-link" data-scroll-target="#about-page">About page</a></li>
+  <li><a href="#blog-page" id="toc-blog-page" class="nav-link" data-scroll-target="#blog-page">Blog page</a>
+  <ul class="collapse">
+  <li><a href="#blog-example" id="toc-blog-example" class="nav-link" data-scroll-target="#blog-example">Blog example</a></li>
+  </ul></li>
+  <li><a href="#talk-page" id="toc-talk-page" class="nav-link" data-scroll-target="#talk-page">Talk page</a>
+  <ul class="collapse">
+  <li><a href="#talk-example" id="toc-talk-example" class="nav-link" data-scroll-target="#talk-example">Talk example</a></li>
+  </ul></li>
+  <li><a href="#publication-page" id="toc-publication-page" class="nav-link" data-scroll-target="#publication-page">Publication page</a>
+  <ul class="collapse">
+  <li><a href="#publication-example" id="toc-publication-example" class="nav-link" data-scroll-target="#publication-example">Publication example</a></li>
+  </ul></li>
+  <li><a href="#project-page" id="toc-project-page" class="nav-link" data-scroll-target="#project-page">Project page</a>
+  <ul class="collapse">
+  <li><a href="#project-example" id="toc-project-example" class="nav-link" data-scroll-target="#project-example">Project example</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">WAVE Audit No.&nbsp;1</h1>
+<p class="subtitle lead">First audit using the WebAIM Web Accessibility Evaluation Tool (WAVE)</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Website</div>
+    <div class="quarto-category">Education</div>
+    <div class="quarto-category">a11y</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Silvia Canelón </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 2, 2021</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">June 7, 2021</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<blockquote class="blockquote">
+<p><strong>Did you know that 97.4% of home pages have web accessibility failures???</strong> 😱</p>
+</blockquote>
+<p>This finding is one of many from an accessibility analysis that non-profit WebAIM (Web Accessibility in Mind) conducts annually on home pages of the top one million websites. You can find a summary of these findings in a WebAIM <a href="https://webaim.org/blog/webaim-million-2021/">blog post</a> and detailed information in the <a href="https://webaim.org/projects/million/#wcag">full report</a>, both published on April 30, 2021.</p>
+<p>Learning about all of the ways that digital content is made inaccessible to people with disabilities has made me take inventory of the different ways that I have contributed to this problem (there was some shame to process here 🙈).</p>
+<p>The magic of <a href="https://bookdown.org/yihui/rmarkdown/">R Markdown</a> has given me the gift of turning R code into a variety of HTML outputs including R notebooks, <a href="../../project/xaringan-nhs-r/">xaringan presentation slides</a>, and websites like this one – all of which I’ve been able to share freely online with others. This magic though (like all magic?) comes with limitations. R tools (and technology more broadly) can’t automatically ensure that its various outputs are accessible to everyone. That’s where we come in as software developers and content creators and take personal responsibility. At the risk of extending this metaphor too far, I’ll finish by offering the framework that we all need to practice (accessibility) spells/skills in order to use these magical tools responsibly.</p>
+<p>All of this to say that gaining awareness about accessibility as a way to create the more inclusive world that I want to live in has motivated me to do better. I even found myself excited to conduct accessibility audits on my digital content, including my personal website (<a href="https://chartability.fizz.studio/">data viz</a> too)!</p>
+<section id="my-audit-results" class="level3">
+<h3 class="anchored" data-anchor-id="my-audit-results">My audit results</h3>
+<p>I relied on WebAIM’s <a href="https://wave.webaim.org/">Web Accessibility Evaluation Tool (WAVE)</a> to help me get started. I installed the <a href="https://wave.webaim.org/extension/">Firefox extension</a> to conduct my audit. Here’s what I found at a high level, and each section of the post contains an itemized list of failures for the page along with a screenshot:</p>
+<ul>
+<li><p>Most errors corresponded with missing alt-text for any images that are used to decorate page sidebars or populate thumbnails</p></li>
+<li><p>Some of my alt-text descriptions are too long! 😆 I’ll use this example to highlight some of the super helpful features of the WAVE tool. Below is a screenshot of the tool when I select the alert next to the super long alt-text description for a hex logo 🤦‍♀️</p>
+<details>
+<summary>
+<p>WAVE tool reference and code accompanying an alert</p>
+</summary>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/wave-ex-alt-text.png" class="lightbox" title="Reference pane of the tool elaborates on what the alert means, why it matters, how to fix it, a note on the tool’s algorithm, and a link to the WCAG standards and guidelines. Code section is expanded along the bottom and highlights exactly what part of the HTML code the alert is refering to." data-gallery="quarto-lightbox-gallery-1"><img src="img/wave-ex-alt-text.png" class="img-fluid figure-img" alt="Reference pane of the tool elaborates on what the alert means, why it matters, how to fix it, a note on the tool's algorithm, and a link to the WCAG standards and guidelines. Code section is expanded along the bottom and highlights exactly what part of the HTML code the alert is refering to."></a></p>
+<figcaption class="figure-caption">Reference pane of the tool elaborates on what the alert means, why it matters, how to fix it, a note on the tool’s algorithm, and a link to the WCAG standards and guidelines. Code section is expanded along the bottom and highlights exactly what part of the HTML code the alert is refering to.</figcaption>
+</figure>
+</div>
+</details></li>
+<li><p>My blog and talk listings have redundant links because these layouts have thumbnails enabled and both the thumbnail and the title of the post are active links</p></li>
+<li><p>There are 5 alerts (combined) in the navigation bar and footer that appear on every page. These correspond to redundant title links. For example, the link for my Blog has the name “Blog” and also the title “Blog.” This is something I can fix easily in the <strong>config.toml</strong> configuration file. I was wondering how these two fields were different in that file and now I know!</p></li>
+<li><p>The <a href="#blog-example">blog post example</a> I documented here contained 177 low contrast errors! These were all related to the <a href="https://xyproto.github.io/splash/docs/arduino.html">arduino syntax highlighting</a> in the various code chunks that I included. The code chunks currently feature primarily gray code against a white background.</p></li>
+</ul>
+</section>
+<section id="next-steps" class="level3">
+<h3 class="anchored" data-anchor-id="next-steps">Next steps</h3>
+<p>I’m <em>definitely</em> not an accessibility expert by any stretch of the imagination. But the great thing is, I don’t have to be an expert in order to correct some of these failures! :muscle:</p>
+<p>I’m going to need some more Hugo knowledge to correct some of the other ones but I <em>think</em> I’ve become familiar enough with the Hugo Apéro theme building this site that I <em>might</em> be able to poke around and make some changes. In either case, I’ll be documenting my changes in this <a href="../../blog/2021-a11y-website/">a11y series of blog posts</a>, so stay tuned and follow along with me!</p>
+<blockquote class="blockquote">
+<p>Update (June 7, 2021): I’ve opened <a href="https://github.com/spcanelon/silvia/issues/28">issue #28</a> and have the first changes in branch <code>wave-audit-1</code> <a href="https://deploy-preview-29--silvia.netlify.app/">available to preview</a> before merging.</p>
+</blockquote>
+<p>I’ll be learning from the <a href="https://tetralogical.com/articles/wcag-primer/">WCAG primer from TetraLogical</a>, recommended by the <a href="https://www.a11yproject.com/checklist/#further-reading">a11y Project</a>, and the <a href="https://www.w3.org/WAI/roles/designers/">WCAG resources from WebAIM</a>.</p>
+<p>And last but not least:</p>
+<blockquote class="blockquote">
+<p><strong>Even if I manage to correct all of these errors and alerts, it doesn’t mean my site is fully accessible.</strong></p>
+</blockquote>
+<p>It just means it’s more accessible than when I began. There are numerous accessibility considerations that are very hard to test for failure (e.g.&nbsp;cognitive accessibility, flexibility, etc.) that I continue to learn about. Also, accessibility is changing all of the time, and we need to be ready to change with it. So just like with R, the learning doesn’t stop! 🤓</p>
+</section>
+<section id="home-page" class="level2">
+<h2 class="anchored" data-anchor-id="home-page">Home page</h2>
+<p>Link: <a href="../../">https://silvia.rbind.io/</a></p>
+<p>Audit results:</p>
+<ul>
+<li>1 error
+<ul>
+<li>1 x Missing alternative text</li>
+</ul></li>
+<li>6 alerts
+<ul>
+<li>1 x Suspicious link text</li>
+<li>5 x Redundant title text</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/wave-home.png" class="lightbox" title="Figure 1: Audit for my home page" data-gallery="quarto-lightbox-gallery-2"><img src="img/wave-home.png" class="img-fluid figure-img" alt="There is an error symbol next to the decorative image on the home page. There are also alert symbols for links in the navigation bar and footer."></a></p>
+<figcaption class="figure-caption">Figure 1: Audit for my home page</figcaption>
+</figure>
+</div>
+</section>
+<section id="about-page" class="level2">
+<h2 class="anchored" data-anchor-id="about-page">About page</h2>
+<p>Link: <a href="../../about/">https://silvia.rbind.io/about/</a></p>
+<p>Audit results:</p>
+<ul>
+<li>4 errors
+<ul>
+<li>3 x Linked image missing alternative text</li>
+<li>1 x Empty link</li>
+</ul></li>
+<li>19 alerts
+<ul>
+<li>2 x Skipped heading level</li>
+<li>1 x Possible heading</li>
+<li>4 x Suspicious link text</li>
+<li>7 x Redundant link</li>
+<li>5 x Redundant title text</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/wave-about-header.png" class="lightbox" title="Figure 2: Audit for my About page header" data-gallery="quarto-lightbox-gallery-3"><img src="img/wave-about-header.png" class="img-fluid figure-img" alt="About page showing an alert in my blurb"></a></p>
+<figcaption class="figure-caption">Figure 2: Audit for my About page header</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/wave-about-main-top.png" class="lightbox" title="Figure 3: Audit for the main section of my About page" data-gallery="quarto-lightbox-gallery-4"><img src="img/wave-about-main-top.png" class="img-fluid figure-img" alt="An alert is shown next to some heading items, and a link. An error is shown next to a thumbnail image for the featured blog post"></a></p>
+<figcaption class="figure-caption">Figure 3: Audit for the main section of my About page</figcaption>
+</figure>
+</div>
+<details>
+<summary>
+Full page screenshot
+</summary>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/wave-about.png" class="lightbox" title="Figure 4: Audit for my About page in full page view" data-gallery="quarto-lightbox-gallery-5"><img src="img/wave-about.png" class="img-fluid figure-img" alt="Alerts are shown for links in the navigation bar and footer, for some heading items, and for a few links throughout the page"></a></p>
+<figcaption class="figure-caption">Figure 4: Audit for my About page in full page view</figcaption>
+</figure>
+</div>
+</details>
+</section>
+<section id="blog-page" class="level2">
+<h2 class="anchored" data-anchor-id="blog-page">Blog page</h2>
+<p>Link: <a href="../../blog/">https://silvia.rbind.io/blog/</a></p>
+<p>Audit results:</p>
+<ul>
+<li>6 errors
+<ul>
+<li>1 x Missing alternative text</li>
+<li>5 x Linked image missing alternative text</li>
+</ul></li>
+<li>10 alerts
+<ul>
+<li>5 x Redundant link</li>
+<li>5 x Redundant title text</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/wave-blog.png" class="lightbox" title="Figure 5: Audit for my Blog listing page in full page view" data-gallery="quarto-lightbox-gallery-6"><img src="img/wave-blog.png" class="img-fluid figure-img" alt="Alerts are shown for the navigation bar and footer, and for blog post links. Errors shown for the decorative image for the page and for the blog post thumbnails."></a></p>
+<figcaption class="figure-caption">Figure 5: Audit for my Blog listing page in full page view</figcaption>
+</figure>
+</div>
+<section id="blog-example" class="level3">
+<h3 class="anchored" data-anchor-id="blog-example">Blog example</h3>
+<p>Link: <a href="../../blog/2021-hello-hugo-apero/">https://silvia.rbind.io/blog/hello-hugo-apero/</a></p>
+<p>Audit results:</p>
+<ul>
+<li>25 errors
+<ul>
+<li>1 x Missing alternative text</li>
+<li>24 x Empty link</li>
+</ul></li>
+<li>177 contrast errors
+<ul>
+<li>177 x Very low contrast</li>
+</ul></li>
+<li>17 alerts
+<ul>
+<li>9 x Long alternative text</li>
+<li>1 x Skipped heading level</li>
+<li>1 x Broken same-page link</li>
+<li>6 x Redundant title text</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/wave-blog-hha-top.png" class="lightbox" title="Alerts shown for links in the navigation bar and for a heading item. Errors shown for the blog decorative image and for a link symbol next to a header." data-gallery="quarto-lightbox-gallery-7"><img src="img/wave-blog-hha-top.png" class="img-fluid figure-img" alt="Figure 6: Audit for my Hello Hugo Apéro blog post"></a></p>
+<figcaption class="figure-caption">Alerts shown for links in the navigation bar and for a heading item. Errors shown for the blog decorative image and for a link symbol next to a header.</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="talk-page" class="level2">
+<h2 class="anchored" data-anchor-id="talk-page">Talk page</h2>
+<p>Link: <a href="../../talk/">https://silvia.rbind.io/talk/</a></p>
+<p>Audit results:</p>
+<ul>
+<li>5 errors
+<ul>
+<li>5 x Linked image missing alternative text</li>
+</ul></li>
+<li>13 alerts
+<ul>
+<li>5 x Linked image missing alternative text</li>
+<li>2 x Skipped heading level</li>
+<li>5 x Redundant link</li>
+<li>5 x Redundant title text</li>
+<li>1 x YouTube video</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/wave-talks-top.png" class="lightbox" title="Figure 7: Audit for my Talk listing page" data-gallery="quarto-lightbox-gallery-8"><img src="img/wave-talks-top.png" class="img-fluid figure-img" alt="Alerts displayed for a heading item and the primary link to a talk. An error is displayed for the talk thumbnail."></a></p>
+<figcaption class="figure-caption">Figure 7: Audit for my Talk listing page</figcaption>
+</figure>
+</div>
+<details>
+<summary>
+Full page screenshot
+</summary>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/wave-talks.png" class="lightbox" title="Figure 8: Audit for my About page header in full page view" data-gallery="quarto-lightbox-gallery-9"><img src="img/wave-talks.png" class="img-fluid figure-img" alt="Alerts displayed in the navigation bar and footer, some heading items, all primary talk links, and a YouTube button link. Errors displayed for all talk thumbnail images."></a></p>
+<figcaption class="figure-caption">Figure 8: Audit for my About page header in full page view</figcaption>
+</figure>
+</div>
+</details>
+<section id="talk-example" class="level3">
+<h3 class="anchored" data-anchor-id="talk-example">Talk example</h3>
+<p>Link: <a href="../../talk/2021-data-viz-accessibility/">https://silvia.rbind.io/talk/2021-data-viz-accessibility/</a></p>
+<p>Audit results:</p>
+<ul>
+<li>1 error
+<ul>
+<li>1 x Empty link</li>
+</ul></li>
+<li>6 alerts
+<ul>
+<li>1 x Skipped heading level</li>
+<li>5 x Redundant title text</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/wave-talks-csvconf.png" class="lightbox" title="Figure 9: Audit for my CSV Conf talk post in full page view" data-gallery="quarto-lightbox-gallery-10"><img src="img/wave-talks-csvconf.png" class="img-fluid figure-img" alt="Alerts displayed for the navigation bar and footer, as well as the talk summary. No errors are displayed."></a></p>
+<figcaption class="figure-caption">Figure 9: Audit for my CSV Conf talk post in full page view</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="publication-page" class="level2">
+<h2 class="anchored" data-anchor-id="publication-page">Publication page</h2>
+<p>Link: <a href="../../publication/">https://silvia.rbind.io/publication/</a></p>
+<p>Audit results:</p>
+<ul>
+<li>0 errors</li>
+<li>5 alerts
+<ul>
+<li>5 x Redundant title text</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/wave-pubs-top.png" class="lightbox" title="Figure 10: Audit for my Publication listing page" data-gallery="quarto-lightbox-gallery-11"><img src="img/wave-pubs-top.png" class="img-fluid figure-img" alt="No errors or alerts displayed for this view"></a></p>
+<figcaption class="figure-caption">Figure 10: Audit for my Publication listing page</figcaption>
+</figure>
+</div>
+<details>
+<summary>
+Full page screenshot
+</summary>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/wave-pubs.png" class="lightbox" title="Alerts displayed for the navigation bar and footer" data-gallery="quarto-lightbox-gallery-12"><img src="img/wave-pubs.png" class="img-fluid figure-img" alt="Figure 11: Audit for my Publication listing page in full page view"></a></p>
+<figcaption class="figure-caption">Alerts displayed for the navigation bar and footer</figcaption>
+</figure>
+</div>
+</details>
+<section id="publication-example" class="level3">
+<h3 class="anchored" data-anchor-id="publication-example">Publication example</h3>
+<p>Link: <a href="../../publication/2021-geospatial-analysis-pregnancy-outcomes/">https://silvia.rbind.io/publication/2021-geospatial-analysis-pregnancy-outcomes/</a></p>
+<p>Audit results:</p>
+<ul>
+<li>1 errors
+<ul>
+<li>1 x Empty link</li>
+</ul></li>
+<li>6 alerts
+<ul>
+<li>1 x Skipped heading level</li>
+<li>5 x Redundant title text</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/wave-pubs-geo.png" class="lightbox" title="Figure 12: Audit for my geospatial analysis publication in full page view" data-gallery="quarto-lightbox-gallery-13"><img src="img/wave-pubs-geo.png" class="img-fluid figure-img" alt="Alerts displayed for the header bar and footer and for the publication summary"></a></p>
+<figcaption class="figure-caption">Figure 12: Audit for my geospatial analysis publication in full page view</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="project-page" class="level2">
+<h2 class="anchored" data-anchor-id="project-page">Project page</h2>
+<p>Link: <a href="../../project/">https://silvia.rbind.io/project/</a></p>
+<p>Audit results:</p>
+<ul>
+<li>3 errors
+<ul>
+<li>3 x Empty link</li>
+</ul></li>
+<li>5 alerts
+<ul>
+<li>5 x Redundant title text</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/wave-projects-top.png" class="lightbox" title="Figure 13: Audit for my Project listing page" data-gallery="quarto-lightbox-gallery-14"><img src="img/wave-projects-top.png" class="img-fluid figure-img" alt="Errors displayed next to each project thumbnail image"></a></p>
+<figcaption class="figure-caption">Figure 13: Audit for my Project listing page</figcaption>
+</figure>
+</div>
+<section id="project-example" class="level3">
+<h3 class="anchored" data-anchor-id="project-example">Project example</h3>
+<p>Link: <a href="../../project/2021-tidy-tuesday-alt-text/">https://silvia.rbind.io/project/2021-tidy-tuesday-alt-text/</a></p>
+<p>Audit results:</p>
+<ul>
+<li>2 errors
+<ul>
+<li>2 x Empty link</li>
+</ul></li>
+<li>10 alerts
+<ul>
+<li>3 x Long alternative text</li>
+<li>1 x Skipped heading level</li>
+<li>6 x Redundant title text</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/wave-projects-ttat-top.png" class="lightbox" title="Figure 14: Audit for my TidyTuesdayAltText project post" data-gallery="quarto-lightbox-gallery-15"><img src="img/wave-projects-ttat-top.png" class="img-fluid figure-img" alt="Alert displayed in the project summary and next to an image alt-text. Error dislayed next to a link symbol accompanying a heading."></a></p>
+<figcaption class="figure-caption">Figure 14: Audit for my TidyTuesdayAltText project post</figcaption>
+</figure>
+</div>
+<details>
+<summary>
+Full page screenshot
+</summary>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/wave-projects-ttat.png" class="lightbox" title="Figure 15: Audit for my TidyTuesdayAltText project post in full page view" data-gallery="quarto-lightbox-gallery-16"><img src="img/wave-projects-ttat.png" class="img-fluid figure-img" alt="Alerts shown in the navigation bar and footer, project summary, and image alt-text. Errors shown next to link symbols accompanying headings."></a></p>
+<figcaption class="figure-caption">Figure 15: Audit for my TidyTuesdayAltText project post in full page view</figcaption>
+</figure>
+</div>
+</details>
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">© 2023 Silvia Canelón ∙ Made with <a href="https://quarto.org">Quarto</a></div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://fosstodon.org/@spcanelon">
+      <i class="bi bi-mastodon" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.github.com/spcanelon">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/spcanelon">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://silviacanelon.com/blog/index.xml">
+      <i class="bi bi-rss" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../accessibility.html">Accessibility</a>
+  </li>  
+    <li class="nav-item">
+ Contact
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../license.html">License</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":true,"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox"});</script>
+
+
+
+</body></html>

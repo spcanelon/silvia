@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Silvia Canelón">
+<meta name="dcterms.date" content="2020-10-07">
+
+<title>Silvia Canelón - Becoming certified as an RStudio Tidyverse Instructor</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Silvia Canelón</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about/index.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog/index.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="dropdown-header">
+ <span class="menu-text">Talks</span></li>
+  <li class="dropdown-header">
+ <span class="menu-text">Publications</span></li>
+  <li class="dropdown-header">
+ <span class="menu-text">Projects</span></li>
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#why-did-i-get-trained" id="toc-why-did-i-get-trained" class="nav-link active" data-scroll-target="#why-did-i-get-trained">Why did I get trained?</a></li>
+  <li><a href="#choose-your-own-adventure" id="toc-choose-your-own-adventure" class="nav-link" data-scroll-target="#choose-your-own-adventure">Choose your own adventure</a></li>
+  <li><a href="#deciding-to-become-certified" id="toc-deciding-to-become-certified" class="nav-link" data-scroll-target="#deciding-to-become-certified">Deciding to become certified</a>
+  <ul class="collapse">
+  <li><a href="#asking-around" id="toc-asking-around" class="nav-link" data-scroll-target="#asking-around">Asking around</a>
+  <ul class="collapse">
+  <li><a href="#heres-what-folks-had-to-say" id="toc-heres-what-folks-had-to-say" class="nav-link" data-scroll-target="#heres-what-folks-had-to-say">Here’s what folks had to say!</a></li>
+  </ul></li>
+  <li><a href="#attending-the-mir-panel" id="toc-attending-the-mir-panel" class="nav-link" data-scroll-target="#attending-the-mir-panel">Attending the MiR panel</a></li>
+  </ul></li>
+  <li><a href="#certification-components" id="toc-certification-components" class="nav-link" data-scroll-target="#certification-components">Certification components</a></li>
+  <li><a href="#learning-the-pedagogy" id="toc-learning-the-pedagogy" class="nav-link" data-scroll-target="#learning-the-pedagogy">Learning the pedagogy</a></li>
+  <li><a href="#preparing-for-the-exams" id="toc-preparing-for-the-exams" class="nav-link" data-scroll-target="#preparing-for-the-exams">Preparing for the exams</a>
+  <ul class="collapse">
+  <li><a href="#teaching-exam" id="toc-teaching-exam" class="nav-link" data-scroll-target="#teaching-exam">Teaching exam</a></li>
+  <li><a href="#tidyverse-exam" id="toc-tidyverse-exam" class="nav-link" data-scroll-target="#tidyverse-exam">Tidyverse exam</a></li>
+  </ul></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional resources</a>
+  <ul class="collapse">
+  <li><a href="#teaching-resources" id="toc-teaching-resources" class="nav-link" data-scroll-target="#teaching-resources">Teaching resources</a></li>
+  <li><a href="#experiences-with-the-certification-process" id="toc-experiences-with-the-certification-process" class="nav-link" data-scroll-target="#experiences-with-the-certification-process">Experiences with the certification process</a></li>
+  <li><a href="#teaching-exam-examples" id="toc-teaching-exam-examples" class="nav-link" data-scroll-target="#teaching-exam-examples">Teaching exam examples</a></li>
+  <li><a href="#tidyverse-sample-exam-solutions" id="toc-tidyverse-sample-exam-solutions" class="nav-link" data-scroll-target="#tidyverse-sample-exam-solutions">Tidyverse sample exam solutions</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Becoming certified as an RStudio Tidyverse Instructor</h1>
+<p class="subtitle lead">An overview of the RStudio Instructor certification process and collection of resources to support anyone on their certification journey.</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">RStudio</div>
+    <div class="quarto-category">Education</div>
+    <div class="quarto-category">tidyverse</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Silvia Canelón </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 7, 2020</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<script src="{{< blogdown/postref >}}index_files/fitvids/fitvids.min.js"></script>
+<p>February 12th, 2021 was <a href="https://twitter.com/gvwilson/status/1360304482496614402?s=20">Greg Wilson’s last day at RStudio</a>. This means he is no longer running the <a href="https://education.rstudio.com/trainers/#info">instructor training program</a>, so the future of the program is unclear. You may want to contact <a href="mailto:traininginstructor@rstudio.com" class="email">traininginstructor@rstudio.com</a> with any specific questions.</p>
+<p>You can also jump down in this blog post to <a href="#teaching-resources">Teaching resources</a> to find a consolidated list of materials previously taught as part of the RStudio certification program, in addition to some related resources (thanks to Yanina for adding to this list!).</p>
+<p>Lastly, you may want to consider becoming certified through <a href="https://carpentries.org/blog/2018/07/apply-to-train/">The Carpentries</a>. Yanina Bellini Saibene (<a href="https://twitter.com/yabellini"><span class="citation" data-cites="yabellini">@yabellini</span></a>) and Dorris Scott (<a href="https://twitter.com/Dorris_Scott"><span class="citation" data-cites="Dorris_Scott">@Dorris_Scott</span></a>) are a couple of RStudio instructors that have also been certified through The Carpentries.</p>
+<section id="why-did-i-get-trained" class="level1">
+<h1>Why did I get trained?</h1>
+<p>Teaching R was not something I thought I’d ever get into but a couple of reasons were nudging me towards getting some formal training.</p>
+<p>I wanted to be able to…</p>
+<ol type="1">
+<li>…support my coworkers in their own data analysis projects and be better prepared to introduce R to undergraduate students coming through and hoping to apply learned skills elsewhere</li>
+<li>…incorporate data analysis into the research efforts of my local organizing collective, and was feeling ill-equipped to lead our group. Most collective members have very little experience with data analysis, if any, and none have programming experience</li>
+</ol>
+<p>After the RStudio Instructor training I can confidently say I feel prepared for both of these challenges!</p>
+</section>
+<section id="choose-your-own-adventure" class="level1">
+<h1>Choose your own adventure</h1>
+<ol type="1">
+<li>Jump down to a <a href="#attending-the-mir-panel">panel on the RStudio Certification</a> hosted by the <a href="https://twitter.com/miR_community">MiR Community</a></li>
+<li>Jump down to a list of <a href="#teaching-exam-examples">teaching exam examples</a> and <a href="#tidyverse-sample-exam-solutions">Tidyverse sample exam solutions</a> shared openly by other instructors</li>
+<li><strong>Keep reading</strong> to find out what I learned before I decided to pursue the certification and what the certification experience was like for me.</li>
+</ol>
+</section>
+<section id="deciding-to-become-certified" class="level1">
+<h1>Deciding to become certified</h1>
+<section id="asking-around" class="level2">
+<h2 class="anchored" data-anchor-id="asking-around">Asking around</h2>
+<p>In the interest of making an informed decision, I asked a few instructors to share a bit about their experience with the certification process before I made the commitment.</p>
+<ul>
+<li>🇺🇸 <a href="https://education.rstudio.com/trainers/people/kadauke+stephan/">Stephan Kadauke</a> is a colleague I met through the Children’s Hospital of Philadelphia R User group. Specifically at an <a href="https://alison.rbind.io/post/2020-06-02-tidymodels-virtually/">Intro to Machine Learning with the Tidyverse</a> workshop led by Alison Hill.</li>
+</ul>
+<p>I met these wonderful people through the <a href="https://twitter.com/RLadiesGlobal">R-Ladies Global</a> Slack workspace:</p>
+<ul>
+<li>🇦🇷 <a href="https://education.rstudio.com/trainers/people/bellini_saibene+yanina/">Yanina Bellini Saibene</a> shared her experience with this process in her blog post <a href="https://yabellini.netlify.app/post/rstudiocertification/">Obtaining RStudio certification. A shared path</a>.</li>
+<li>🇧🇴 🇳🇱 <a href="https://education.rstudio.com/trainers/people/rojas-saunero+paloma/">Paloma Rojas-Saunero</a> shared her view as a Ph.D.&nbsp;candidate with experience teaching R in R-Ladies workshops and as a teaching assistant in biostatistics courses.</li>
+<li>🇰🇪 <a href="https://education.rstudio.com/trainers/people/kariuki+shelmith/">Shelmith Kariuki</a> speaks to her experience in her blog post <a href="https://shelkariuki.netlify.app/post/certification/">The RStudio Certification Process</a>.</li>
+</ul>
+<section id="heres-what-folks-had-to-say" class="level3">
+<h3 class="anchored" data-anchor-id="heres-what-folks-had-to-say">Here’s what folks had to say!</h3>
+<p><em>Highlights are shared with the authors’ permission and my gratitude to them.</em></p>
+<section id="what-made-you-want-to-pursue-the-certification" class="level4">
+<h4 class="anchored" data-anchor-id="what-made-you-want-to-pursue-the-certification">What made you want to pursue the certification?</h4>
+<blockquote class="blockquote">
+<p>One, it gave me incentive to read <a href="https://r4ds.had.co.nz/">R for Data Science</a> cover to cover which I had been meaning to do for a while. Two, I’m teaching R and the certification gives me some gravitas to do that. Three, it forced me to critically think about cognitive load theory, concept mapping, and lesson development, all of which are super useful when you actually have to develop lessons. <strong>–Stephan</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>I pursued the certification for a few reasons. First because I am really enthusiastic about teaching and I love the tidyverse, so I wanted to find opportunities of teaching it outside my university. Second because I feel that RStudio is growing so fast on teaching materials that sharing with other instructors would be a great way to always keep updated. And last but not least, I was also encouraged by the idea of going through the process with Yanina Bellini Saibene and other amazing women as she discusses in her blog post. <strong>–Paloma</strong></p>
+</blockquote>
+</section>
+<section id="what-did-you-think-of-the-training-itself-particularly-the-pedagogical-aspects" class="level4">
+<h4 class="anchored" data-anchor-id="what-did-you-think-of-the-training-itself-particularly-the-pedagogical-aspects">What did you think of the training itself, particularly the pedagogical aspects?</h4>
+<blockquote class="blockquote">
+<p>The training is top notch. In my mind, Greg Wilson is the #1 authority when it comes to teaching programming and R in particular. <strong>–Stephan</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>I think the best part is to take and learn the pedagogical aspect. Greg Wilson is an awesome trainer and you will love as a student all the tools and techniques that he teaches you. For learning this, the course is already worth it. All the content is more developed in the book <a href="https://teachtogether.tech/">Teaching Tech Together</a> by Greg Wilson if you want to look it over. <strong>–Yanina</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>About the training, it was mind blowing, it changed my view of teaching not only programming but everything. Greg’s book is amazing and the way he teaches is outstanding. I learned so much. <strong>–Paloma</strong></p>
+</blockquote>
+</section>
+<section id="have-you-been-able-to-implement-what-you-learned-in-some-way-either-at-work-or-elsewhere" class="level4">
+<h4 class="anchored" data-anchor-id="have-you-been-able-to-implement-what-you-learned-in-some-way-either-at-work-or-elsewhere">Have you been able to implement what you learned in some way either at work or elsewhere?</h4>
+<blockquote class="blockquote">
+<p>Yes! As you probably saw, I’m teaching the intro to R course for <a href="https://www.youtube.com/playlist?list=PL4IzsxWztPdljYo7uE5G_R2PtYw3fUReo">R/Medicine</a>. And I’ve been teaching a similar course to doctors, in addition to some other teaching sessions that I’ve done for the CHOP R User group and/or medical resident teaching. <strong>–Stephan</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Yes! Immediately. I delivered 3 in-person courses after training and more than 15 courses on-line using all the pedagogical tools. I also co-founded <a href="https://metadocencia.netlify.app/en/">Metadocencia</a> where we share practical tools to help teachers teach online (volunteer-run and free) using these principles learned in the training. I also use some of the tools for my work as the chief of a research group for some meetings and identifying the target of some of our development (especially concept maps and learner personas). <strong>–Yanina</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>I think I use what I learned so far even when I am preparing my work presentations, when developing any type of class, event, book club, etc. Overall it was an experience that made me reflect a lot on how teaching is usually done, how is my teaching so far and an inspiration about the teacher I want to be. <strong>–Paloma</strong></p>
+</blockquote>
+</section>
+</section>
+</section>
+<section id="attending-the-mir-panel" class="level2">
+<h2 class="anchored" data-anchor-id="attending-the-mir-panel">Attending the MiR panel</h2>
+<p>If you read the questions and responses above you might have noticed one character in this story that I haven’t introduced yet. His name is <strong><a href="https://twitter.com/gvwilson">Greg Wilson</a></strong>. I tend to take such strong endorsements with a spoonful of skepticism and (spoiler alert) I’m happy to say I <strong>fully</strong> agree with everything that was said by those above. In that spirit, I’ll add my own glowing recommendation:</p>
+<blockquote class="blockquote">
+<p>Greg Wilson is truly a programming pedagogy expert, and an incredibly kind human being. I’m grateful to have learned from him within the context of the certification, and appreciate being able to continue learning from his example in a variety of other contexts.</p>
+</blockquote>
+<p>Nevertheless, I’m glad I got to do a gut-check beforehand when I attended the <a href="https://www.youtube.com/watch?v=582tMkPvloU">RStudio Instructor Certification Panel</a> hosted by the MiR Community and facilitated by <a href="https://twitter.com/Dorris_Scott">Dorris Scott</a> and <a href="https://twitter.com/smallperks">Danielle Smalls-Perkins</a>. You’ll notice Yanina and Shelmith were two of the panelists! Hearing from this panel was the last piece of the puzzle I needed to feel like pursuing the certification was an <strong>enthusiastic yes</strong>.</p>
+<iframe style="display: block; margin: auto;" width="560" height="315" src="https://www.youtube.com/embed/582tMkPvloU" frameborder="0" allowfullscreen="">
+</iframe>
+</section>
+</section>
+<section id="certification-components" class="level1">
+<h1>Certification components</h1>
+<p>The certification itself has three components:</p>
+<ol type="1">
+<li><p><strong>Instructor training covering modern teaching methods</strong>. Materials for this training are <a href="https://drive.google.com/drive/folders/13ohFt3D0EJ5PDbMaWTxnHH-hwA7G0IvY">available here</a> and are based on the book <a href="https://teachtogether.tech/">Teaching Tech Together</a> written by Greg (and currently undergoing translation into Spanish by a team of volunteers!).</p></li>
+<li><p>A 90-minute <strong>teaching exam</strong> based on content from the instructor training. This includes a 15-minute demonstration lesson and a written component.</p></li>
+<li><p>A 90-minute <strong>Tidyverse exam</strong> to test your knowledge of the subject matter in <a href="https://r4ds.had.co.nz/">R for Data Science</a> (make sure to check the <a href="https://education.rstudio.com/trainers/#faq">program FAQs</a> for information about the Shiny exam)</p></li>
+</ol>
+</section>
+<section id="learning-the-pedagogy" class="level1">
+<h1>Learning the pedagogy</h1>
+<p>When I completed the instructor training on pedagogy it took place completely online over three days. The first two days were dedicated to the materials linked in the earlier section and were taught by Greg. Despite the training starting at 7am for me, I <em>really</em> enjoyed it! There were 12 of us in the cohort and there were a handful of opportunities for us to do activities in small groups and multiple opportunities to practice the teaching tools that will help us better support R learners in our own teaching.</p>
+<p>Some of my favorite topics were mental models, cognitive capacity, and formative assessments. At the heart of all three is the concept map, which serves as a guide for reverse-designing a lesson and delivering it effectively. You can find examples of concept maps <a href="https://docs.google.com/presentation/d/1ForBjP0pVhljBLuqOyYfyHw_1rrwJzpWW1ZHzCqAJpU/edit?ts=5f10c02e#slide=id.p">here as slides</a> and <a href="https://github.com/rstudio/concept-maps/">here on GitHub</a>. I’ve found concept maps to come in handy in so many other places in my life and I even made one to help me plan out this blog post. Check it out:</p>
+<p><img src="RIT-post-concept-map.jpg" alt="Concept map showing &quot;RStudio Instructor Certification&quot; at the center and various concepts and connections pointing to it. Including MiR webinar, teaching exam, R4DS, and others. These form the different components of the blog post and was helpful in planning out what to write about." width="75%" style="display: block; margin: auto;"></p>
+<p>The third day of training, our cohort had the pleasure of learning all about using the <a href="https://rstudio.github.io/learnr/"><code>learnr</code> 📦</a> to build interactive R tutorials, from <a href="https://education.rstudio.com/trainers/people/cetinkaya-rundel+mine/">Mine Çetinkaya-Rundel</a>:</p>
+<ul>
+<li><i class="fas fa-link"></i> Course website: <a href="https://rstudio-education.github.io/instructor-training/">rstd.io/rit</a></li>
+<li><i class="fas fa-images"></i> Slides: <a href="https://rstudio-education.github.io/instructor-training/slides/tutorial.html">building interactive tutorials in R</a></li>
+<li><i class="fas fa-folder"></i> RStudio Cloud project: <a href="https://rstd.io/rit-cloud">rstd.io/rit-cloud</a></li>
+<li><i class="fab fa-github"></i> Source materials: <a href="https://github.com/rstudio-education/instructor-training">rstudio-education/instructor-training</a></li>
+</ul>
+</section>
+<section id="preparing-for-the-exams" class="level1">
+<h1>Preparing for the exams</h1>
+<section id="teaching-exam" class="level2">
+<h2 class="anchored" data-anchor-id="teaching-exam">Teaching exam</h2>
+<p>I relied on the <a href="https://drive.google.com/drive/folders/13ohFt3D0EJ5PDbMaWTxnHH-hwA7G0IvY">instructor training materials</a> and my in-class notes to prepare my demonstration lesson and study for the written component of the teaching exam. For anything that didn’t fully sink in, I consulted <a href="https://teachtogether.tech/">Teaching Tech Together</a>.</p>
+<p>You can find <a href="https://github.com/spcanelon/rit-teaching-exam">all materials for my teaching demonstration</a> on GitHub. They include the slides below and <a href="https://github.com/spcanelon/rit-teaching-exam/blob/master/lubridate_livecode.Rmd">this R Markdown file</a> that I used to incorporate live coding into the lesson.</p>
+<p>I found an excellent reference for a demonstration lesson in <a href="https://education.rstudio.com/trainers/people/dandrea+florencia/">Florencia D’Andrea</a>’s post <a href="https://florencia.netlify.app/2020/06/two-examples-of-iteration-with-purrr.en-us/">Two examples of iteration with purrr - Class for the RStudio certification</a>.</p>
+<p>It comes highly recommended that someone take a look at each one of our lessons before it ships out because it seems it’s common not to realize we’ve packed too much in! Yanina was kind enough to sit through my lesson as a learner and provided fantastic feedback. Some of the things I was able to work on before my teaching exam included providing context for the lesson at the beginning (asking the learner to download the file, introducing the lesson in the context of a workshop, etc.) and talking through all my key strokes during the live coding portions. Thanks again Yani!</p>
+<div class="shareagain" style="min-width:300px;margin:1em auto;text-align:center;" data-external="1">
+<iframe src="https://spcanelon.github.io/rit-teaching-exam" width="600" height="337.5" style="border:2px solid currentColor;" loading="lazy" allowfullscreen="">
+</iframe>
+<script>fitvids('.shareagain', {players: 'iframe'});</script>
+</div>
+</section>
+<section id="tidyverse-exam" class="level2">
+<h2 class="anchored" data-anchor-id="tidyverse-exam">Tidyverse exam</h2>
+<p>Lucky for me the MiR Community organized some study sessions specifically for preparing for the Tidyverse exam! Dorris and I met regularly to discuss our approach to the sample exam (v2.0) and present chapters of <em>R for Data Science</em> that we weren’t as comfortable with. Yanina joined us for some of the sessions to lend us her expertise and provide tips and tricks!</p>
+<p>One of the recommendations Yanina made was to explore the <a href="https://rstudio.cloud/learn/primers">RStudio Primers</a> for any topic we wanted to practice. For me that meant <strong>iteration</strong> using <code>purrr</code>’s <code>map</code> functions. After the iteration primer and the companion <em>R for Data Science</em> chapter, I felt like I could iterate all day every day.</p>
+<p>In real life, both the written portion of the teaching exam and the Tidyverse exam are very much like the sample exams provided on the RStudio Education blog. You can find those here:</p>
+<ul>
+<li>Sample exam v1.0 (February 2020): <a href="https://education.rstudio.com/blog/2020/02/instructor-certification-exams/">Instructor Certification Exams</a></li>
+<li>Sample exam v2.0 (August 2020): <a href="https://education.rstudio.com/blog/2020/08/more-example-exams/">More sample exams</a></li>
+</ul>
+<p>If you’re a member of the MiR Community and like the idea of studying with some structure and friendly accountability, join us for the study group! And if you’re not, you can <a href="https://docs.google.com/forms/d/1x3eFj0syKeFkEQVg1XNSDOFlbOCkIDseKxKeC8or1-U/viewform?edit_requested=true">learn more about joining MiR as a member or ally here</a>.</p>
+</section>
+</section>
+<section id="additional-resources" class="level1">
+<h1>Additional resources</h1>
+<section id="teaching-resources" class="level2">
+<h2 class="anchored" data-anchor-id="teaching-resources">Teaching resources</h2>
+<ul>
+<li><i class="fas fa-images"></i> <a href="https://drive.google.com/drive/folders/13ohFt3D0EJ5PDbMaWTxnHH-hwA7G0IvY">Slides for the instructor training course • Greg Wilson</a></li>
+<li><i class="fas fa-book"></i> <a href="https://teachtogether.tech/">Teaching Tech Together • Greg Wilson</a></li>
+<li><i class="fas fa-link"></i> <a href="rstd.io/rit">Teaching R and Data Science with RStudio • Mine Çetinkaya-Rundel</a></li>
+<li><i class="fas fa-link"></i> <a href="rstd.io/tip">Teaching in Production • Alison Hill</a></li>
+<li><i class="fab fa-youtube"></i> <a href="https://www.youtube.com/watch?v=-2enQV3Dfng">Teaching Online at Short Notice - RStudio 2020 • Greg Wilson</a></li>
+<li><i class="fab fa-youtube"></i> <a href="https://www.youtube.com/watch?v=QcE4RBH2auQ">Sharing on Short Notice - RStudio 2020 • Alison Hill &amp; Desirée De Leon</a></li>
+<li><i class="fab fa-youtube"></i> <a href="https://www.youtube.com/watch?v=kmVKGxPlTvc">Evidence Based Teaching: What We Know and How to Use It - EuroSciPy 2015 • Greg Wilson</a></li>
+<li><i class="fab fa-github"></i> <a href="https://github.com/rstudio-education/r4ds-instructors">rstudio-education/r4ds-instructors: Instructors’ Guide to accompany “R for Data Science” • RStudio Education</a></li>
+<li><i class="fas fa-link"></i> <a href="https://www.metadocencia.org/">Cursos cortos para enseñar online • MetaDocencia</a></li>
+<li><i class="fas fa-link"></i> <a href="https://bcullen.rbind.io/post/2020-10-19-teaching-an-r-bootcamp-remotely/">Flattening the leaRning curve: Teaching R online during COVID-19 • Brendan Cullen</a></li>
+</ul>
+</section>
+<section id="experiences-with-the-certification-process" class="level2">
+<h2 class="anchored" data-anchor-id="experiences-with-the-certification-process">Experiences with the certification process</h2>
+<ul>
+<li>Yanina Bellini Saibene – <a href="https://yabellini.netlify.app/post/rstudiocertification/">Obtaining RStudio certification. A shared path</a></li>
+<li>Shelmith Kariuki – <a href="https://shelkariuki.netlify.app/post/certification/">The RStudio Certification Process</a></li>
+<li>Ted Laderas – <a href="https://education.rstudio.com/blog/2019/11/my-experience-with-rstudio-instructor-training/#tidyverse-certification-exam">My Experience with RStudio Instructor Training</a></li>
+<li>Rayna Harris – <a href="https://www.raynamharris.com/blog/rstudioTTT/">A Review: RStudio Teaching Certification Course</a></li>
+<li>Brendan Cullen – <a href="https://bcullen.rbind.io/post/2020-09-03-reflections-on-rstudio-instructor-training/">Reflections on RStudio Instructor Training</a></li>
+<li>Yuqi Liao – <a href="https://www.yuqiliao.com/blog/rstudiocertification/">Getting Certified as an RStudio Instructor</a></li>
+<li>Beatriz Milz – <a href="https://beatrizmilz.com/posts/2021-03-02-certificacao-rstudio/">Certificação da RStudio</a></li>
+<li>Rohan Alexander – <a href="https://rohanalexander.com/posts/2021-03-14-greg-wilson/">In Appreciation of Greg Wilson</a></li>
+</ul>
+</section>
+<section id="teaching-exam-examples" class="level2">
+<h2 class="anchored" data-anchor-id="teaching-exam-examples">Teaching exam examples</h2>
+<ul>
+<li>Silvia Canelón
+<ul>
+<li><a href="https://spcanelon.github.io/rit-teaching-exam">Lesson slides: Using lubridate to work with time intervals</a></li>
+<li><a href="https://github.com/spcanelon/rit-teaching-exam">GitHub repo</a></li>
+</ul></li>
+<li>Yanina Bellini Saibene
+<ul>
+<li><a href="https://docs.google.com/document/d/1Z8zhRjK7tQ-VcOUMnOmxKNb2Ra_3DKsvMzo1iGeIt0I/edit">Lesson materials: Concept map and formative assessments</a></li>
+<li><a href="https://docs.google.com/presentation/d/1Uzb5sHM54_t6NWLSDely6fCi8Nu4qhCT-qxMKY-vh78/edit#slide=id.p">Lesson slides: Código en R Markdown</a></li>
+<li><a href="https://github.com/yabellini/RStudioCT">GitHub repo</a></li>
+</ul></li>
+<li>Paloma Rojas-Saunero
+<ul>
+<li><a href="https://palolili23.github.io/texam/teaching_exam.html">Lesson overview</a></li>
+<li><a href="https://palolili23.github.io/texam/slides.html">Lesson slides: Tidy data</a></li>
+<li><a href="https://palolili23.github.io/texam/tidyr.html">Lesson script: Tidyr: Reshape</a></li>
+</ul></li>
+<li>Florencia D’Andrea
+<ul>
+<li><a href="https://flor14.github.io/purrr_slides/purrr_class_15min#1">Lesson slides: Iteration with purrr package for automatized file management</a></li>
+<li><a href="https://florencia.netlify.app/2020/06/two-examples-of-iteration-with-purrr.en-us/">Blog post: Two examples of iteration with purrr - Class for the RStudio certification</a></li>
+<li><a href="https://github.com/flor14?tab=repositories&amp;q=purrr_&amp;type=&amp;language=">GitHub repo</a></li>
+</ul></li>
+<li>Beatriz Milz
+<ul>
+<li><a href="https://beatrizmilz.github.io/RStudio_Certification">Lesson slides: Adding figures in R Markdown</a></li>
+<li><a href="https://github.com/beatrizmilz/RStudio_Certification">GitHub repo</a></li>
+</ul></li>
+<li>Laurie Baker
+<ul>
+<li><a href="https://laurielbaker.github.io/r-studio-instructor-training/slides/lubridate_slides.html#1">Lesson slides</a></li>
+<li><a href="https://github.com/LaurieLBaker/r-studio-instructor-training#rstudio-instructor-certification-teaching-exam">GitHub repo</a></li>
+</ul></li>
+<li>Corrado Lanera
+<ul>
+<li><a href="https://corradolanera.github.io/rs-teaching-exam/">Lesson slides: (Meta)data texting in {ggplot2}</a></li>
+<li><a href="https://github.com/CorradoLanera/rs-teaching-exam">GitHub repo</a></li>
+</ul></li>
+<li>Brendan Cullen
+<ul>
+<li><a href="https://columnwise-operations-dplyr.netlify.app/">Lesson slides: Column-wise operations with dplyr: Old and New</a></li>
+<li><a href="https://github.com/brendanhcullen/rstudio-instructor-certification">GitHub repo</a></li>
+</ul></li>
+<li>Adi Sarid
+<ul>
+<li><a href="https://github.com/adisarid/rstudio_certification_exam">GitHub repo: Exercise on purrr</a></li>
+</ul></li>
+<li>David John Baker
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1MFstJ3qFF1kK5dHJubn7KsPb2kcPSmuLnvHSP3QiFEA/edit?usp=sharing">Lesson slides: Learn to Pivot!</a></li>
+<li><a href="https://github.com/davidjohnbaker1/rstudio_certification_training">GitHub repo</a></li>
+</ul></li>
+<li>Yuqi Liao
+<ul>
+<li><a href="https://animationr.netlify.app/#1">Lesson slides: Creating animated visualizations in R</a></li>
+<li><a href="https://github.com/yuqiliao/RStudio_TeachingSample">GitHub repo</a></li>
+</ul></li>
+<li>Luis Verde
+<ul>
+<li><a href="https://github.com/luisDVA/example-lesson">GitHub repo</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="tidyverse-sample-exam-solutions" class="level2">
+<h2 class="anchored" data-anchor-id="tidyverse-sample-exam-solutions">Tidyverse sample exam solutions</h2>
+<ul>
+<li>Silvia Canelón – <a href="tidyverse-sample-exam-solutions.html">August 2020 sample exam (v2.0)</a></li>
+<li>Brendan Cullen – <a href="https://tidyverse-exam-v2-solutions.netlify.app/">August 2020 sample exam (v2.0)</a></li>
+<li>Marly Gotti – <a href="https://marlycormar.github.io/tidyverse_sample_exam/sample_exam_sols/sols.html">February 2020 sample exam (v1.0)</a></li>
+<li>Ezekiel Adebayo Ogundepo – <a href="https://rpubs.com/gbganalyst/tidyverse-sample-exam">August 2020 sample exam (v2.0)</a></li>
+</ul>
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">© 2023 Silvia Canelón ∙ Made with <a href="https://quarto.org">Quarto</a></div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://fosstodon.org/@spcanelon">
+      <i class="bi bi-mastodon" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.github.com/spcanelon">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/spcanelon">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://silviacanelon.com/blog/index.xml">
+      <i class="bi bi-rss" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../accessibility.html">Accessibility</a>
+  </li>  
+    <li class="nav-item">
+ Contact
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../license.html">License</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

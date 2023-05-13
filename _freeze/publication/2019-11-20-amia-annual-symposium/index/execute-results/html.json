@@ -1,0 +1,14 @@
+{
+  "hash": "2a5bdfe750e9312eda0d76f79a3dea8d",
+  "result": {
+    "markdown": "---\ntitle: 'Investigating Pregnancy-Related Health Outcomes Among Patients with Sickle Cell Disease and Linking with Health Disparities'\ndate: '2019-11-20'\nslug: amia-annual-symposium\ncategories:\n  - Research\ntags:\n  - pregnancy\n  - AMIA\n  - EHR\n  - sickle cell disease\nauthors: \"Silvia P. Canelón & Mary Regina Boland\"\n# doi: ''\n# publishDate: ''\npublication_types:\n  - '0'\npublication: ''\npublication_short: ''\n# abstract:\nsummary: 'Poster presented at the 2019 American Medical Informatics Association Annual Symposium held November 16th-20th in Washington D.C.'\nfeatured: no\n# image:\n#   caption: 'Image credit: [AMIA 2019 Annual Symposium](https://amia.org/amia2019)'\n#   focal_point: 'Left'\n#   placement: 2\n#   preview_only: no\n# projects: []\n# slides: ''\nlinks:\n  - icon: file-pdf\n    icon_pack: fas\n    name: Poster\n    url: 2019_AMIA_annual_symposium.pdf\n---\n\n\nPoster presented at the 2019 American Medical Informatics Association Annual Symposium held November 16th-20th in Washington D.C.\n<br><br>\n![Poster presented at the AMIA 2019 Annual Symposium](featured.png)\n\n<!--\n<iframe\n    src=\"./2019_AMIA_annual_symposium.pdf\"\n    width=\"100%\"\n    height=\"950px\"\n    style=\"border:none;\">\n</iframe>\n-->\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
