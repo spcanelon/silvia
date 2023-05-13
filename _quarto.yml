@@ -2,18 +2,47 @@ project:
   type: website
 
 website:
-  title: "sandbox"
+  title: "Silvia Canelón"
+ 
   navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
-
-format:
-  html:
-    theme: cosmo
-    css: styles.css
-    toc: true
-
+    right:
+      - text: About
+        aria-label: "About Me"
+        href: about/index.qmd
+      - text: Blog
+        aria-label: "Meeting People Where They R"
+        href: blog/index.qmd
+      - text: Talks
+        aria-label: "Invited Talks"
+        href: talk/index.qmd  
+      - text: Publications
+        aria-label: "Publications"
+        href: publication/index.qmd
+      - text: Projects
+        aria-label: "Project Portfolio"
+        href: project/index.qmd
+  
+  page-footer:  
+    left: >-
+     &#169; 2023 Silvia Canelón &#8729; Made with [Quarto](https://quarto.org)
+    center:
+      - icon: mastodon
+        href: https://fosstodon.org/@spcanelon
+      - icon: github
+        href: https://www.github.com/spcanelon
+      - icon: linkedin
+        href: https://www.linkedin.com/in/spcanelon
+      - icon: rss
+        href: https://silviacanelon.com/blog/index.xml
+    right: 
+      - text: "Accessibility"
+        aria-label: "Accessibility Commitment"
+        href: accessibility.md
+      - text: "Contact"
+        aria-label: "Contact Form"
+        href: "form/contact.md"
+      - text: "License"
+        aria-label: "License Details"
+        href: license.md
 
 
