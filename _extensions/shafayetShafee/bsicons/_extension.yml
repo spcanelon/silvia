@@ -1,0 +1,8 @@
+title: Support for Bootstrap Icons
+author: Shafayet Khan Shafee
+version: 1.0.0
+quarto-required: ">=1.2.0"
+contributes:
+  shortcodes:
+    - bsicons.lua
+
