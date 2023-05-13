@@ -600,5 +600,159 @@
     "title": "Accessibility commitment",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nFor more on font accessibility, I recommend the talk Don’t Believe the Type! by The Readability Group.↩︎"
+  },
+  {
+    "objectID": "talk/2022-09-29-ccd-sips/index.html",
+    "href": "talk/2022-09-29-ccd-sips/index.html",
+    "title": "Philly Center City District Sips 2022: An Interactive Map",
+    "section": "",
+    "text": "A gentle introduction to web-scraping, geocoding and map-making in an end-to-end analysis. The workshop will cover how to scrape the bar and restaurant data from the Center City Sips website and convert the addresses to latitude and longitude, as well as how to plot the geographic data onto a map and customize the visualization with {leaflet}."
+  },
+  {
+    "objectID": "talk/2022-11-10-thinking-big/index.html",
+    "href": "talk/2022-11-10-thinking-big/index.html",
+    "title": "Thinking Big with Maps in R",
+    "section": "",
+    "text": "The road to map-making can take some unexpected twists and turns when you scale up an interactive map from hundreds of features to hundreds of thousands. This talk is a story about creative spatial data wrangling, powerful R packages, and a heroic #RStats community."
+  },
+  {
+    "objectID": "talk/2020-11-03-xaringan-basics-and-beyond/index.html",
+    "href": "talk/2020-11-03-xaringan-basics-and-beyond/index.html",
+    "title": "Sharing Your Work with xaringan: The Basics and Beyond",
+    "section": "",
+    "text": "This four-hour hands-on workshop will be a gentle introduction to the xaringan package as a tool to create impressive presentation slides that can be deployed to the web for easy sharing. Day 1 (Nov. 3, 3-5pm BST) will cover the nuts and bolts of creating presentation slides using xaringan and deploying them in HTML format for easy sharing with others. Day 2 (Nov. 5, 3-5pm BST) will cover how to take your slides to the next level with the xaringanExtra package and how to customize slides with CSS.This workshop is designed for R users already familiar with R Markdown and GitHub."
+  },
+  {
+    "objectID": "talk/2020-11-03-xaringan-basics-and-beyond/index.html#description",
+    "href": "talk/2020-11-03-xaringan-basics-and-beyond/index.html#description",
+    "title": "Sharing Your Work with xaringan: The Basics and Beyond",
+    "section": "",
+    "text": "This four-hour hands-on workshop will be a gentle introduction to the xaringan package as a tool to create impressive presentation slides that can be deployed to the web for easy sharing. Day 1 (Nov. 3, 3-5pm BST) will cover the nuts and bolts of creating presentation slides using xaringan and deploying them in HTML format for easy sharing with others. Day 2 (Nov. 5, 3-5pm BST) will cover how to take your slides to the next level with the xaringanExtra package and how to customize slides with CSS.This workshop is designed for R users already familiar with R Markdown and GitHub."
+  },
+  {
+    "objectID": "talk/2022-04-27-dbei-research-day/index.html",
+    "href": "talk/2022-04-27-dbei-research-day/index.html",
+    "title": "Exploring Traumatic Brain Injury Mechanisms and Severity Using Electronic Health Records",
+    "section": "",
+    "text": "This abstract was one of 10 selected for a flashtalk presentation. And the flashtalk received an award! 🎉\nThe talk recording will be available to the public on April 28, 2022. The accompanying (PowerPoint) slides are available to download using the “Slides” link above.\n2022 CCEB & DBEI Research Day Poster (letter)"
+  },
+  {
+    "objectID": "talk/2022-04-27-dbei-research-day/index.html#abstract",
+    "href": "talk/2022-04-27-dbei-research-day/index.html#abstract",
+    "title": "Exploring Traumatic Brain Injury Mechanisms and Severity Using Electronic Health Records",
+    "section": "Abstract",
+    "text": "Abstract\n\nObjective\nOften referred to as the “silent epidemic,” Traumatic Brain Injury (TBI) is a public health concern contributing to disability and death worldwide. Our study describes a cohort of TBI patients within the Penn Medicine health system and the distribution of TBI injury mechanisms and severity.\n\n\nMethods\nWe obtained Electronic Health Record data for 1,060,100 female patients treated at Penn Medicine inpatient or outpatient clinics from 2010-2017. We identified patients with TBI diagnoses using ICD-9/10 codes and the Disease Control and Prevention (CDC) and Department of Defense (DOD) definitions for TBI and TBI severity. The CDC/DOD codes for TBI were then manually annotated with mechanisms of TBI injury (e.g. Sport Mechanism of Injury, Collision or Crash, Foreign Body Object). The highest TBI severity category was noted for each patient and defined, in increasing severity, as “Mild,” “Moderate,” “Severe,” or “Penetrating.” We report the distribution of TBI mechanisms and severity among this patient population.\n\n\nResults\nThere were 4,392 patients with a total of 9,800 TBI diagnoses. The majority of diagnoses in the cohort were Mild (5,704; 58%), followed by Moderate (3,840; 39%), Severe (173; 1.8%), and Penetrating (83; 0.8%). The following are the six most common mechanisms observed to contribute to TBI diagnoses: “Injury,” “Mechanism of Injury,” “Accidents,” “Physical Accidents,” “Fall Mechanism of Injury,” and “Traffic Vehicle Accident.”"
+  },
+  {
+    "objectID": "talk/2020-12-17-introduccion-xaringan/index.html",
+    "href": "talk/2020-12-17-introduccion-xaringan/index.html",
+    "title": "Introducción al Paquete xaringan",
+    "section": "",
+    "text": "El taller tiene por objetivo introducir a las participantes al paquete xaringan de R como una herramienta para crear diapositivas de presentación impresionantes que se pueden implementar en la web para compartir fácilmente."
+  },
+  {
+    "objectID": "talk/2020-12-17-introduccion-xaringan/index.html#description",
+    "href": "talk/2020-12-17-introduccion-xaringan/index.html#description",
+    "title": "Introducción al Paquete xaringan",
+    "section": "",
+    "text": "El taller tiene por objetivo introducir a las participantes al paquete xaringan de R como una herramienta para crear diapositivas de presentación impresionantes que se pueden implementar en la web para compartir fácilmente."
+  },
+  {
+    "objectID": "talk/2021-02-18-r-teaching-panel/index.html",
+    "href": "talk/2021-02-18-r-teaching-panel/index.html",
+    "title": "From Learn-R to Teach-R: An Expert Panel on Effective R Instruction",
+    "section": "",
+    "text": "This panel and discussion event will be focused on R instruction and education. As a learner, what are some recommended resources for developing my R skills? As an instructor, how can I make my materials and presentations more effective? What does data science education look like in 2021? What types of careers are out there in R education? How can I gain experience teaching R?Panelists:Ama Nyame-Mensah is a Postdoctoral Fellow and Research Associate in the School of Social Policy & Practice and the Graduate School of Education at the University of Pennsylvania. Her current work rethinks whether and how quantitative and computational methods can contribute to a more equitable understanding of marginalized children’s and families’ learning and development. Ama is passionate about empowering people to use data for social analysis and critique data and data technologies. When not working, Ama can be found tinkering with data and designing visualizations.Website: www.anyamemensah.com. Cass Wilkinson Saldaña helps learners, researchers, and communities to engage meaningfully (and critically) with data. They currently work as a Data Instructional Specialist at the Children’s Hospital of Philadelphia’s Research Institute, and teach introduction to R courses at Yeshiva University. Previously, Cass worked as the Social Science and Geospatial Data Librarian at Cornell University.As a data educator and data librarian, Cass participates and collaborates in open source ecosystems, especially in the domains of open science, digital scholarship, and civic data. They also strive to advocate for justice in worker and learner communities.Website: https://cassws.net/Silvia Canelón is a postdoctoral research scientist in biomedical informatics at the University of Pennsylvania in Philadelphia. She uses data science in the public and population health fields and is particularly interested in leveraging electronic health record data to study reproductive health outcomes. Silvia is formally trained as a biomedical engineer and an RStudio Certified Tidyverse Instructor. She loves community organizing and is passionate about R education as a way to help build power in her communities."
+  },
+  {
+    "objectID": "talk/2021-02-18-r-teaching-panel/index.html#description",
+    "href": "talk/2021-02-18-r-teaching-panel/index.html#description",
+    "title": "From Learn-R to Teach-R: An Expert Panel on Effective R Instruction",
+    "section": "",
+    "text": "This panel and discussion event will be focused on R instruction and education. As a learner, what are some recommended resources for developing my R skills? As an instructor, how can I make my materials and presentations more effective? What does data science education look like in 2021? What types of careers are out there in R education? How can I gain experience teaching R?Panelists:Ama Nyame-Mensah is a Postdoctoral Fellow and Research Associate in the School of Social Policy & Practice and the Graduate School of Education at the University of Pennsylvania. Her current work rethinks whether and how quantitative and computational methods can contribute to a more equitable understanding of marginalized children’s and families’ learning and development. Ama is passionate about empowering people to use data for social analysis and critique data and data technologies. When not working, Ama can be found tinkering with data and designing visualizations.Website: www.anyamemensah.com. Cass Wilkinson Saldaña helps learners, researchers, and communities to engage meaningfully (and critically) with data. They currently work as a Data Instructional Specialist at the Children’s Hospital of Philadelphia’s Research Institute, and teach introduction to R courses at Yeshiva University. Previously, Cass worked as the Social Science and Geospatial Data Librarian at Cornell University.As a data educator and data librarian, Cass participates and collaborates in open source ecosystems, especially in the domains of open science, digital scholarship, and civic data. They also strive to advocate for justice in worker and learner communities.Website: https://cassws.net/Silvia Canelón is a postdoctoral research scientist in biomedical informatics at the University of Pennsylvania in Philadelphia. She uses data science in the public and population health fields and is particularly interested in leveraging electronic health record data to study reproductive health outcomes. Silvia is formally trained as a biomedical engineer and an RStudio Certified Tidyverse Instructor. She loves community organizing and is passionate about R education as a way to help build power in her communities."
+  },
+  {
+    "objectID": "talk/2021-03-16-xaringan-deploy-demo/index.html",
+    "href": "talk/2021-03-16-xaringan-deploy-demo/index.html",
+    "title": "Writing Presentations in R",
+    "section": "",
+    "text": "Hex logo for R-Ladies Seattle featuring some ggplot2-created mountain ranges"
+  },
+  {
+    "objectID": "talk/index.html",
+    "href": "talk/index.html",
+    "title": "Talks",
+    "section": "",
+    "text": "Data Analytics 101\n\n\nPractical talk highlighting how data can be leveraged to support community-academic partnerships\n\n\n\n\nEducation\n\n\n \n\n\n\n\nMar 9, 2023\n\n\nSilvia Canelón and Emily Seeburger\n\n\n\n\n\n\n  \n\n\n\n\nThinking Big with Maps in R\n\n\nTips on Wrangling Large Vector Data into Interactive Maps\n\n\n\n\nR\n\n\ngeospatial\n\n\n \n\n\n\n\nNov 10, 2022\n\n\nSilvia Canelón\n\n\n\n\n\n\n  \n\n\n\n\nPhilly Center City District Sips 2022: An Interactive Map\n\n\nR-Ladies Philly workshop on webscraping, geocoding, and interactive map-making\n\n\n\n\nR\n\n\nWorkshop\n\n\nEducation\n\n\nR-Ladies\n\n\nrvest\n\n\ntidygeocoder\n\n\nleaflet\n\n\n \n\n\n\n\nSep 29, 2022\n\n\nSilvia Canelón\n\n\n\n\n\n\n  \n\n\n\n\nExploring Traumatic Brain Injury Mechanisms and Severity Using Electronic Health Records\n\n\nFlashtalk and poster presenting preliminary results for a study on TBI among female patients at Penn Medicine\n\n\n\n\nResearch\n\n\nEHR\n\n\nTBI\n\n\n \n\n\n\n\nApr 27, 2022\n\n\nSilvia Canelón, Rebecca Morse, Mary Regina Boland\n\n\n\n\n\n\n  \n\n\n\n\nLessons Learned from the EHR\n\n\nToronto Data Workshop talk about working with Electronic Health Record data\n\n\n\n\nResearch\n\n\nEHR\n\n\n \n\n\n\n\nFeb 11, 2022\n\n\nSilvia Canelón\n\n\n\n\n\n\n  \n\n\n\n\nProfessional, Polished, Presentable: Making Great Slides with xaringan\n\n\nA useR!2021 tutorial about making great slides with xaringan\n\n\n\n\nR\n\n\nEducation\n\n\nxaringan\n\n\nuseR\n\n\n \n\n\n\n\nJul 7, 2021\n\n\nGarrick Aden-Buie & Silvia Canelón\n\n\n\n\n\n\n  \n\n\n\n\nRevealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community\n\n\nData visualization accessibility talk to share what we found after scraping alternative (alt) text from data viz shared on Twitter as part of the #TidyTuesday social project.\n\n\n\n\nR\n\n\nEducation\n\n\nTidyTuesday\n\n\nTidyTuesdayAltText\n\n\nrtweet\n\n\nRSelenium\n\n\naccessibility\n\n\n \n\n\n\n\nMay 4, 2021\n\n\nSilvia Canelón & Liz Hare\n\n\n\n\n\n\n  \n\n\n\n\nThe Impact of Sickle Cell Status on Adverse Delivery Outcomes Using Electronic Health Record Data\n\n\nApplied Clinical Research Informatics: Solving Real World Problems. Oral Presentations S17: March 23, 2021 11:30am-1pm ET\n\n\n\n\nResearch\n\n\n \n\n\n\n\nMar 22, 2021\n\n\nSilvia P. Canelón, Samantha Butts, Mary Regina Boland\n\n\n\n\n\n\n  \n\n\n\n\nWriting Presentations in R\n\n\nR-Ladies Seattle package demonstrations showing how to make beautiful slides with xaringan and how to deploy them.\n\n\n\n\nR\n\n\nEducation\n\n\nDemo\n\n\nR-Ladies\n\n\nxaringan\n\n\n \n\n\n\n\nMar 16, 2021\n\n\nSilvia Canelón\n\n\n\n\n\n\n  \n\n\n\n\nFrom Learn-R to Teach-R: An Expert Panel on Effective R Instruction\n\n\nAn R-Ladies Philly panel and discussion event on R instruction and education.\n\n\n\n\nR\n\n\nEducation\n\n\nR-Ladies\n\n\n \n\n\n\n\nFeb 18, 2021\n\n\nSilvia Canelón, Ama Nyame-Mensah, Cass Wilkinson Saldaña\n\n\n\n\n\n\n  \n\n\n\n\nIntroducción al Paquete xaringan\n\n\nTaller del paquete xaringan para presentaciones, creado para R-Ladies Xalapa\n\n\n\n\nR\n\n\nWorkshop\n\n\nEducation\n\n\nR-Ladies\n\n\nEspañol\n\n\nxaringan\n\n\n \n\n\n\n\nDec 17, 2020\n\n\nSilvia Canelón\n\n\n\n\n\n\n  \n\n\n\n\nSharing Your Work with xaringan: The Basics and Beyond\n\n\nAn introduction to xaringan for presentations, created for the NHS-R Community 2020 Virtual Conference\n\n\n\n\nR\n\n\nxaringan\n\n\nWorkshop\n\n\nxaringan\n\n\n \n\n\n\n\nNov 3, 2020\n\n\nSilvia Canelón\n\n\n\n\n\n\n  \n\n\n\n\nAn Antarctic Tour of the Tidyverse\n\n\nAn introductory tidyverse tutorial created and presented for R-Ladies Chicago\n\n\n\n\nR\n\n\nEducation\n\n\nTutorial\n\n\nR-Ladies\n\n\ntidyverse\n\n\n \n\n\n\n\nAug 31, 2020\n\n\nSilvia Canelón\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "talk/2021-07-07-presentable-user2021/index.html",
+    "href": "talk/2021-07-07-presentable-user2021/index.html",
+    "title": "Professional, Polished, Presentable: Making Great Slides with xaringan",
+    "section": "",
+    "text": "Co-instructed with Garrick Aden-Buie"
+  },
+  {
+    "objectID": "talk/2021-07-07-presentable-user2021/index.html#abstract",
+    "href": "talk/2021-07-07-presentable-user2021/index.html#abstract",
+    "title": "Professional, Polished, Presentable: Making Great Slides with xaringan",
+    "section": "Abstract",
+    "text": "Abstract\nThe xaringan package brings professional, impressive, and visually appealing slides to the powerful R Markdown ecosystem. Through our hands-on tutorial, you will learn how to design highly effective slides that support presentations for teaching and reporting alike. Over three hours, you will learn how to create an accessible baseline design that matches your institution or organization’s style guide. Together we’ll explore the basics of CSS—the design language of the internet—and how we can leverage CSS to produce elegant slides for effective communication."
+  },
+  {
+    "objectID": "talk/2020-08-31-tour-of-the-tidyverse/index.html",
+    "href": "talk/2020-08-31-tour-of-the-tidyverse/index.html",
+    "title": "An Antarctic Tour of the Tidyverse",
+    "section": "",
+    "text": "Learn how to explore and manipulate data in R with packages from the Tidyverse. We’ll introduce the eight core packages that make up the Tidyverse and use at least one function from each package while exploring a dataset on the migration of penguins."
+  },
+  {
+    "objectID": "talk/2020-08-31-tour-of-the-tidyverse/index.html#description",
+    "href": "talk/2020-08-31-tour-of-the-tidyverse/index.html#description",
+    "title": "An Antarctic Tour of the Tidyverse",
+    "section": "",
+    "text": "Learn how to explore and manipulate data in R with packages from the Tidyverse. We’ll introduce the eight core packages that make up the Tidyverse and use at least one function from each package while exploring a dataset on the migration of penguins."
+  },
+  {
+    "objectID": "talk/2020-08-31-tour-of-the-tidyverse/index.html#slides",
+    "href": "talk/2020-08-31-tour-of-the-tidyverse/index.html#slides",
+    "title": "An Antarctic Tour of the Tidyverse",
+    "section": "Slides",
+    "text": "Slides"
+  },
+  {
+    "objectID": "talk/2021-03-23-amia-informatics-summit/index.html",
+    "href": "talk/2021-03-23-amia-informatics-summit/index.html",
+    "title": "The Impact of Sickle Cell Status on Adverse Delivery Outcomes Using Electronic Health Record Data",
+    "section": "",
+    "text": "Oral Presentations S17: March 23, 2021 11:30am-1pm ET"
+  },
+  {
+    "objectID": "talk/2021-03-23-amia-informatics-summit/index.html#abstract",
+    "href": "talk/2021-03-23-amia-informatics-summit/index.html#abstract",
+    "title": "The Impact of Sickle Cell Status on Adverse Delivery Outcomes Using Electronic Health Record Data",
+    "section": "Abstract",
+    "text": "Abstract\nThis study investigates the effect of sickle cell trait and sickle cell disease, on adverse pregnancy outcomes at Penn Medicine. The risk of a Cesarean section (C-section), preterm birth, stillbirth, pain crisis, blood transfusion, and hemorrhage during delivery were all found to be significantly correlated with race/ethnicity, sickle cell disease, the number of pain crises before delivery, and the number of blood transfusions before delivery. Multiple birth was also found to significantly increase the risk of these same outcomes."
+  },
+  {
+    "objectID": "talk/2021-03-23-amia-informatics-summit/index.html#slides",
+    "href": "talk/2021-03-23-amia-informatics-summit/index.html#slides",
+    "title": "The Impact of Sickle Cell Status on Adverse Delivery Outcomes Using Electronic Health Record Data",
+    "section": "Slides",
+    "text": "Slides\n\n\n\n\n\n\n\n\nBanner for the 2021 AMIA Informatics Summit (March 22-25)"
+  },
+  {
+    "objectID": "talk/2021-05-04-data-viz-accessibility/index.html",
+    "href": "talk/2021-05-04-data-viz-accessibility/index.html",
+    "title": "Revealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community",
+    "section": "",
+    "text": "Presented with Liz Hare, PhD from Dog Genetics, LLC"
+  },
+  {
+    "objectID": "talk/2021-05-04-data-viz-accessibility/index.html#abstract",
+    "href": "talk/2021-05-04-data-viz-accessibility/index.html#abstract",
+    "title": "Revealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community",
+    "section": "Abstract",
+    "text": "Abstract\nWe all aim to use data to tell a compelling story, and many of us enjoy sharing how we got there by open-sourcing our code, but we don’t always share our story with everyone. Even kind, supportive, and open communities like the #TidyTuesday R learning community on Twitter has a ways to go before the content shared can be accessible to everyone.Lived experiences of blind R users tell us that most data visualizations shared for TidyTuesday are inaccessible to screen reading technology because they lack alternative text (i.e. alt text) descriptions. Our goal was to bring this hidden lack of accessibility to the surface by examining the alternative text accompanying data visualizations shared as part of the TidyTuesday social project.We scraped the alternative text from 6,443 TidyTuesday images posted on Twitter between April 2, 2018 and January 31, 2021. The first image attached to each tweet was considered the primary image and was scraped for alternative text. Manual web inspection revealed the CSS class and HTML element corresponding to the primary image, as well as the attribute containing the alternative text. We used this information and the ROpenSci {RSelenium} package to scrape the alternative text. Our preliminary analysis found that only 2.4% of the images contained a text description entered by the tweet author compared to 84% which were described by default as ‘Image.’This small group of intentional alternative text descriptions had a median word count of 18 (range: 1-170), and a median character count of 83 (range: 8-788). As a reference point, Twitter allows 240 characters in a single tweet and 1,000 characters for image descriptions. This analysis was made possible thanks to a dataset of historical TidyTuesday tweet data collected using the ROpenSci {rtweet} package, and openly available in the TidyTuesday GitHub repository.The conference takes place May 4-5, 2021."
   }
 ]
