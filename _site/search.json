@@ -1,5 +1,19 @@
 [
   {
+    "objectID": "about/index.html",
+    "href": "about/index.html",
+    "title": "Silvia Canelón",
+    "section": "",
+    "text": "Hey, I’m happy you’re here\n\nThanks for stopping by!\nI’m a data analyst in the Urban Health Lab at the University of Pennsylvania. My research interests include applications of biomedical and spatial data science in the public and population health fields.\nI work on projects that use electronic health record (EHR) and geospatial data to explore how the neighborhood environment and access to urban nature can impact the health of individuals in Philadelphia. Learn more about my research interests in publications.\nGet in touch by sending me a note!"
+  },
+  {
+    "objectID": "about/index.html#about-me",
+    "href": "about/index.html#about-me",
+    "title": "Silvia Canelón",
+    "section": "About me",
+    "text": "About me\nBiomedical engineer turned informaticist, curious about all intersections of data and society.\nPrior to joining the Urban Health Lab, I developed novel data mining methods to extract meaningful information from the EHR and study health outcomes and disparities in pregnant populations. I’m particularly interested in research that combines biomedical data science with open data sources in ways that prioritize health equity in communities.\n\n\nCertificate in Biomedical Informatics ∙ University of Pennsylvania ∙ 2019\n\n\nPh.D. in Biomedical Engineering ∙ Purdue University ∙ 2018\n\n\nB.S. in Biomedical Engineering ∙ University of Minnesota ∙ 2012\n\n\nI enjoy using R to optimize my data science workflow and have noticed it making guest appearances elsewhere in my life. I’m certified as an RStudio Tidyverse Instructor and am passionate about R education and data literacy as ways to build power in communities. Keep up with my R tinkering in my blog and presentations in talks.\n\n\nTidyverse Instructor Certification ∙ RStudio, PBC ∙ 2020"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Silvia Canelón, PhD",
@@ -7,11 +21,550 @@
     "text": "I am a researcher, community organizer, and R educator. My research leverages electronic health record and spatial data to study the intersection of health equity and urban nature. My community projects value the partnership between open source tools and data literacy as a way to build power and effect change.\nLearn more about me →"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "blog/2021-06-01-hello-hugo-apero/index.html#what-to-expect",
+    "href": "blog/2021-06-01-hello-hugo-apero/index.html#what-to-expect",
+    "title": "Hello Hugo Apéro: Converting a Blogdown Site from Hugo Academic",
+    "section": "What to expect",
+    "text": "What to expect\nBy the end of the tutorial you will have switched your website from using the Hugo Academic theme to using the new Hugo Apéro theme designed by Alison Hill \nSpecifically you will be able to migrate your blog, publications, and talks. If you need to migrate courses, I recommend taking a look at how Alison and Kelly Bodwin organized their courses and workshops into projects using this theme. I didn’t have projects prior to converting my site, but after creating a few projects post-Apéro I’m confident any projects you’ve created pre-Apéro will carry over easily.\n\n\nProjects on my site: https://silvia.rbind.io/project\n\n\n\n\n\n\nMy Project listing: https://silvia.rbind.io/project\n\n\n\n\n\nIf you like videos, Alison recorded a walkthrough of this conversion process using Julia Silge’s site as an example.\nWhat not to expect\nA tutorial on how to create a Hugo Apéro site from scratch – but don’t worry! Alison covers this in a workshop she gave for R-Ladies Tunis and in the Get started series of blog posts included in the documentation site."
+  },
+  {
+    "objectID": "blog/2021-06-01-hello-hugo-apero/index.html#the-plan",
+    "href": "blog/2021-06-01-hello-hugo-apero/index.html#the-plan",
+    "title": "Hello Hugo Apéro: Converting a Blogdown Site from Hugo Academic",
+    "section": "The Plan",
+    "text": "The Plan\nI was lucky that Alison had already started converting her own personal site because she gave me a template and example to follow! \nWe’ll follow the steps below throughout the tutorial and each of the six steps comes with its own commit in my git history, so you can see exactly what I changed and when. \n\nThen we’ll reuse and migrate your existing content, set up a contact form, tidy up your directory, explore some resources for customizing your new site, and end with the grand finale: deploying your new site!"
+  },
+  {
+    "objectID": "blog/2021-06-01-hello-hugo-apero/index.html#prework",
+    "href": "blog/2021-06-01-hello-hugo-apero/index.html#prework",
+    "title": "Hello Hugo Apéro: Converting a Blogdown Site from Hugo Academic",
+    "section": "Prework",
+    "text": "Prework\n\nBranch deploy\nCreate a new apero branch from the primary branch of your website repository\n\ngit checkout -b apero to create new local branch\ngit push --set-upstream origin apero to push new branch to GitHub\n\nCreate a new Netlify deploy from your apero branch by enabling branch deploys on Netlify.com. Garrick Aden-Buie kindly provided some great resources on how to do this on Twitter. Netlify will automatically deploy a live preview of your site from your new branch to a link like &lt;branch-name&gt;--silvia.netlify.app. In my case it was https://apero–silvia.netlify.app\n Site settings: Build & deploy &gt; Continuous Deployment &gt; Deploy contexts\n\n\n\n\n\nNetlify site settings for deploy contexts\n\n\n\n\nYour new apero branch deploy at this point is an independent copy of your current website so from here on out you can make changes freely without affecting anything in your main branch :tada:\n\n\nHugo version\nThe last piece of prework before we dive in is to update your local version of Hugo and update the Hugo version accordingly in a few different places.\n\nUpdate Hugo locally using blogdown::install_hugo() (for me the latest version was v0.82.1)\nblogdown::install_hugo()\nUpdate .Rprofile and then restart R per the instructions that appear in the console.\n# fix Hugo version\noptions(blogdown.hugo.version = \"0.82.1\")\nUpdate netlify.toml\n[context.production.environment]\n  HUGO_VERSION = \"0.82.1\"\n  HUGO_ENV = \"production\"\n  HUGO_ENABLEGITINFO = \"true\"\n\n[context.branch-deploy.environment]\n  HUGO_VERSION = \"0.82.1\"\n\n[context.deploy-preview.environment]\n  HUGO_VERSION = \"0.82.1\"\nRun blogdown::check_site() to find any issues. In my case these checking functions found a Hugo version mismatch and I ended up having to specifically run blogdown::install_hugo(\"0.82.1\") to resolve it.\n\n\nConsole output\n\n― Checking netlify.toml...\n○ Found HUGO_VERSION = 0.82.1 in [build] context of netlify.toml.\n| Checking that Netlify & local Hugo versions match...\n| Mismatch found:  blogdown is using Hugo version (0.69.2) to build site locally.  Netlify is using Hugo version (0.82.1) to build site.\n● [TODO] Option 1: Change HUGO_VERSION = \"0.69.2\" in netlify.toml to match local version.\n● [TODO] Option 2: Use blogdown::install_hugo(\"0.82.1\") to match Netlify version, and set options(blogdown.hugo.version = \"0.82.1\") in .Rprofile to pin this Hugo version (also remember to restart R).\n| Checking that Netlify & local Hugo publish directories match...\n○ Good to go - blogdown and Netlify are using the same publish directory: public\n― Check complete: netlify.toml\n\n\nIf you end up needing to make your own changes, I recommend running blogdown::check_site() again when you’re done to make sure you’ve resolved all of the issues.\nAnd then run blogdown::serve_site() to render a live preview of your site :rocket:"
+  },
+  {
+    "objectID": "blog/2021-06-01-hello-hugo-apero/index.html#install-theme-alongside-academic-change-in-config.toml",
+    "href": "blog/2021-06-01-hello-hugo-apero/index.html#install-theme-alongside-academic-change-in-config.toml",
+    "title": "Hello Hugo Apéro: Converting a Blogdown Site from Hugo Academic",
+    "section": "1. Install theme alongside Academic, change in config.toml",
+    "text": "1. Install theme alongside Academic, change in config.toml\n\n Follow along with me at commit cc5d24\n\nThe first step is to install all of the Hugo Apéro theme files to the theme/ folder in your site directory:\n\nblogdown::install_theme(theme = \"hugo-apero/hugo-apero\",\n                        update_config = FALSE, \n                        force = TRUE)\n\n\n\nConsole output\n\n\ntrying URL 'https://github.com/hugo-apero/hugo-apero/archive/main.tar.gz'\ndownloaded 21.4 MB\n\nDo not forget to change the 'theme' option in 'config.toml' to \"hugo-apero\"\nWarning message:\nThe theme has provided an example site. You should read the theme's documentation and at least take a look at the config file config.toml (or .yaml) of the example site, because not all Hugo themes work with any config files. \n\n\nAs indicated in console output, modify the config.toml file so it points to your new theme folder instead of hugo-academic:\n#theme = \"hugo-academic\"\ntheme = \"hugo-apero\"\n At this point you will probably start to get some error messages like the one below. Don’t panic! Let’s get through the rest of the steps first. I’m including my errors in this post in case they are helpful/validating for you!\nCould not build site because certain shortcodes weren't found\n\nError: Error building site: \"/Users/silvia/Documents/Website/silvia/content/home/demo.md:58:1\": failed to extract shortcode: template for shortcode \"alert\" not found"
+  },
+  {
+    "objectID": "blog/2021-06-01-hello-hugo-apero/index.html#copy-all-academic-shortcodes-to-layouts-root-remove-later",
+    "href": "blog/2021-06-01-hello-hugo-apero/index.html#copy-all-academic-shortcodes-to-layouts-root-remove-later",
+    "title": "Hello Hugo Apéro: Converting a Blogdown Site from Hugo Academic",
+    "section": "2. Copy all Academic shortcodes to layouts/ root (remove later)",
+    "text": "2. Copy all Academic shortcodes to layouts/ root (remove later)\n\n Follow along with me at commit f3c7d53\n\nCopy the shortcodes\n\nFrom themes/hugo-academic/layouts/shortcodes/\nTo layouts/shortcodes/\n\n My error message:\nError: Error building site: TOCSS: failed to transform \"style.main.scss\" (text/x-scss): SCSS processing failed: file \"stdin\", line 7, col 24: Invalid CSS after \"...textFontFamily:\": expected expression (e.g. 1px, bold), was \"&lt;no value&gt;;\""
+  },
+  {
+    "objectID": "blog/2021-06-01-hello-hugo-apero/index.html#remove-all-assets",
+    "href": "blog/2021-06-01-hello-hugo-apero/index.html#remove-all-assets",
+    "title": "Hello Hugo Apéro: Converting a Blogdown Site from Hugo Academic",
+    "section": "3. Remove all assets",
+    "text": "3. Remove all assets\n\n Follow along with me at commit 3843c76\n\nBefore deleting anything, I recommend making a backup of your entire website folder, just in case.\nIn the assets/ root folder, delete:\n\nthe images/ folder which might contain your site icon\nthe scss/ folder which might contain your custom.scss file\n\n My error message:\nError: Error building site: TOCSS: failed to transform \"style.main.scss\" (text/x-scss): SCSS processing failed: file \"stdin\", line 7, col 24: Invalid CSS after \"...textFontFamily:\": expected expression (e.g. 1px, bold), was \"&lt;no value&gt;;\""
+  },
+  {
+    "objectID": "blog/2021-06-01-hello-hugo-apero/index.html#remove-all-custom-layouts",
+    "href": "blog/2021-06-01-hello-hugo-apero/index.html#remove-all-custom-layouts",
+    "title": "Hello Hugo Apéro: Converting a Blogdown Site from Hugo Academic",
+    "section": "4. Remove all custom layouts",
+    "text": "4. Remove all custom layouts\n\n Follow along with me at commit 1ad7e3d\n\nI had a couple of partials that I deleted from the layouts/ folder:\n\npartials/site_footer.html which provided a custom footer for my website\npartials/widgets/about.html which included the custom formatting for certificates in the Education section of the About page of my Academic site\n\n My error message:\nError: Error building site: TOCSS: failed to transform \"style.main.scss\" (text/x-scss): SCSS processing failed: file \"stdin\", line 7, col 24: Invalid CSS after \"...textFontFamily:\": expected expression (e.g. 1px, bold), was \"&lt;no value&gt;;\""
+  },
+  {
+    "objectID": "blog/2021-06-01-hello-hugo-apero/index.html#copy-over-apéro-example-site-config.toml-file",
+    "href": "blog/2021-06-01-hello-hugo-apero/index.html#copy-over-apéro-example-site-config.toml-file",
+    "title": "Hello Hugo Apéro: Converting a Blogdown Site from Hugo Academic",
+    "section": "5. Copy over Apéro example site config.toml file",
+    "text": "5. Copy over Apéro example site config.toml file\n\n Follow along with me at commit db37289\n\nRename config.toml in the root folder to config_old.toml\nCopy config.toml\n\nFrom themes/hugo-apero/exampleSite/\nTo your root directory (in my case it was silvia/)\n\n My error message:\nError: Error building site: failed to render pages: render of \"page\" failed: execute of template failed: template: _default/single.html:3:8: executing \"_default/single.html\" at &lt;partial \"head.html\" .&gt;: error calling partial: \"/Users/silvia/Documents/Website/silvia/themes/hugo-apero/layouts/partials/head.html:14:53\": execute of template failed: template: partials/head.html:14:53: executing \"partials/head.html\" at &lt;js&gt;: can't evaluate field Build in type string"
+  },
+  {
+    "objectID": "blog/2021-06-01-hello-hugo-apero/index.html#remove-academic-config-directory",
+    "href": "blog/2021-06-01-hello-hugo-apero/index.html#remove-academic-config-directory",
+    "title": "Hello Hugo Apéro: Converting a Blogdown Site from Hugo Academic",
+    "section": "6. Remove Academic config/ directory",
+    "text": "6. Remove Academic config/ directory\n\n Follow along with me at commit 5541f38\n\nDelete the config/ folder from your root directory (in my case silvia/)\nI learned the hard way that the error below was due to not using an updated version of Hugo, which is why I included that step in the Prework. All this to say, I’m hoping you don’t see the error below!\n My error message:\nError: Error building site: failed to render pages: render of \"page\" failed: execute of template failed: template: _default/single.html:3:8: executing \"_default/single.html\" at &lt;partial \"head.html\" .&gt;: error calling partial: \"/Users/silvia/Documents/Website/silvia/themes/hugo-apero/layouts/partials/head.html:14:53\": execute of template failed: template: partials/head.html:14:53: executing \"partials/head.html\" at &lt;js&gt;: can't evaluate field Build in type string"
+  },
+  {
+    "objectID": "blog/2021-06-01-hello-hugo-apero/index.html#migrating-the-content",
+    "href": "blog/2021-06-01-hello-hugo-apero/index.html#migrating-the-content",
+    "title": "Hello Hugo Apéro: Converting a Blogdown Site from Hugo Academic",
+    "section": "Migrating the content",
+    "text": "Migrating the content\nAssuming you have made it this far and are able to at least serve a live site that uses the new Hugo Apéro theme, you are ready to start migrating your content! :tada:\nFile are organized differently in Hugo Apéro and the next steps detail the high-level changes I made to get my content to fit the new structure. The goal was to have my site parallel the Hugo Apéro example site and Alison’s personal site.\n\nFile organization\nTo get an overview of how the file structure is different between the Academic and Apéro themes we’ll look at the content/ folder of the Apéro example site, my old Academic site, and my current Apéro site. These are organized into the panelsets below.\n\nExample siteMy Academic siteMy Apéro site\n\n\n\n Location: silvia/themes/hugo-apero/exampleSite\n├── config.toml\n├── content\n    ├── _index.md\n    ├── about\n    ├── blog\n    ├── collection\n    ├── contributors.md\n    ├── elements\n    ├── form\n    ├── license.md\n    ├── project\n    └── talk\n\n\n\n Location: silvia/\n.\n├── config.toml\n├── content\n    ├── authors\n    ├── courses\n    ├── home\n    ├── license.md\n    ├── post\n    ├── project\n    ├── publication\n    ├── slides\n    └── talk\n\n\n\n Location: silvia/\n.\n├── config.toml\n├── content\n    ├── _index.md       # &lt;-- new!\n    ├── about           # &lt;-- new!\n    ├── blog            # &lt;-- renamed (formerly post)\n    ├── collection      # &lt;-- new!\n    ├── form            # &lt;-- new!\n    ├── license.md\n    ├── project\n    ├── publication\n    └── talk\n\n\n\n\n\n\nAbout page\nResource: Customize your about page | Hugo Apéro\nMy About page:\n\ncontent/about/header/index.md\ncontent/about/main/index.md\ncontent/about/sidebar/index.md\n\n\n\n\n\n\nThe header of my About page: https://silvia.rbind.io/about/\n\n\n\n\n\n\n\n\n\nThe main section of my About page: https://silvia.rbind.io/about/\n\n\n\n\nI wanted to reuse my content from the About section of my Academic site, so I did a lot of copy-and-pasting into the right spots before editing. These steps are outlined in the table below.\n\n\n\n\n\n\n\n\n\nStep\nContent to copy\nFrom\nTo\n\n\n\n\n1\nFolder\nthemes/hugo-apero/exampleSite/content/about/\ncontent/\n\n\n2\nBody part 1\ncontent/authors/silvia/_index.md\ncontent/about/header/index.md\n\n\n3\nBody part 2\ncontent/authors/silvia/_index.md\ncontent/about/main/index.md\n\n\n4\nBiography → outro\ncontent/authors/silvia/_index.md\ncontent/about/main/index.md\n\n\n5\nInterests → link_list\ncontent/authors/silvia/_index.md\ncontent/about/sidebar/index.md\n\n\n6\nPhoto\ncontent/authors/silvia/avatar.png\ncontent/about/sidebar/avatar.png\n\n\n\n\n\nHomepage\nResource: Customize your homepage | Hugo Apéro\nMy homepage: content/_index.md\n\n\n\n\n\nMy Homepage: https://silvia.rbind.io\n\n\n\n\n\nCopy _ index.md from themes/hugo-apero/content/ to content/\nSave an image for your homepage in the static/img/ folder\nSpecify your homepage image in _ index.md\n\n\n\nBlog\nMy blog listing: content/blog/_index.md\n\n\n\n\n\nMy Blog listing: https://silvia.rbind.io/blog\n\n\n\n\nUpdate [menu] options in config.toml to activate Blog by changing url = \"/blog/\" and renaming content/post/ to content/blog/ to activate the new Apéro layout with the sidebar on the blog post listing and to enable thumbnails\n[[menu.header]]\n  name = \"Blog\"\n  title = \"Blog\"\n  url = \"/blog/\"\n  weight = 2            # &lt;-- item 2 in the navigation bar\nEdit content/blog/_ index.md with heading for the Blog listing page\n\nMake sure text_link_url: /blog/\nThe author: field will populate the by-line in each blog post unless another author is indicated in the YAML of the blog post.\n\n\n\nPublications\nMy publication listing: content/publication/_index.md\n\n\n\n\n\nMy Publication listing: https://silvia.rbind.io/publication\n\n\n\n\nUpdate [menu] options in config.toml to activate Publications\n[[menu.header]]\n  name = \"Publications\"\n  title = \"Publications\"\n  url = \"/publication/\"\n  weight = 4            # &lt;-- item 4 in the navigation bar\nRename content/publication/_ index.md to _ index-old.md and copy over _ index.md from themes/hugo-apero/exampleSite/content/blog/\nEdit content/publication/_ index.md to suit your preferences\nModify individual publications:\n\nThe Apéro theme doesn’t have a built-in “abstract” field so I copied and pasted the content in this field from the YAML of each publication page into the area below the YAML.\nIf your publications have multiple authors, they can be included as a string list in the author: field of the YAML\n\n\n\nTalks\nMy talk listing: content/talk/_index.md\n\n\n\n\n\nMy Talk listing: https://silvia.rbind.io/talk\n\n\n\n\nRename content/talk/_ index.md to _ index-old.md and copy over _ index.md from themes/hugo-apero/exampleSite/content/talk/\nEdit content/talk/_ index.md to suit your preferences\n\n\n.Rmd → .Rmarkdown\nYou can create content for your blogdown site from .md, .Rmd, and .Rmarkdown files, anytime and anywhere. However, there are some limitations:\n\n.md is great if your file doesn’t contain any R code\n.Rmd files generate .html files while .Rmarkdown files generate .markdown files. Both can run R code, but only .markdown files generated from .Rmarkdown benefit from some of the features available from Hugo, like the syntax highlighting built into Apéro.\n\nIf you were writing R tutorials/posts/etc. in .Rmd (like me), you will notice any code chunks you were displaying will not be formatted with proper syntax highlighting :cry: To remedy this, you will have to:\n\nChange these index.Rmd files to index.Rmarkdown (I recommend using your computer’s file explorer for this)\nRebuild your index.Rmarkdown files to index.markdown (using blogdown::build_site(build_rmd = TRUE), see the helper functions for more granular control)\nDelete the index.html output files that had previously been generated\n\n Rebuilding your R Markdown pages may not be a good idea if they contain code that might break, so please proceed with caution!\nIf you made it this far, congratulations! You have a brand new site! :partying_face:"
+  },
+  {
+    "objectID": "blog/2021-06-01-hello-hugo-apero/index.html#final-touches",
+    "href": "blog/2021-06-01-hello-hugo-apero/index.html#final-touches",
+    "title": "Hello Hugo Apéro: Converting a Blogdown Site from Hugo Academic",
+    "section": "Final touches",
+    "text": "Final touches\n\nContact form\nResource: Built-in Contact Form | Hugo Apéro\nIf you’d like to use Apéro’s built-in contact form powered by Formspree, copy the themes/hugo-apero/exampleSite/content/form/ folder into content/ and edit contact.md.\n\n\nTidying up your directory\nNow you can delete all of the files and folders you don’t need anymore!\nI’m including the files and folders I deleted as a list and as a directory tree. These are organized in the panelset below.\n\nList of itemsDirectory tree\n\n\n\n\nThe content folders carried over from Hugo Academic: authors, home, post, courses, and slides\nThe config folder\nThe resources folder\nThe data folder containing fonts and themes folders\nThe assets/images folder\nThe static/img/headers, static/publications, and static/rmarkdown-libs folders\nAll of the index.html files in the blog, publication, and talks folders\nThe old config file, that I had renamed config_old.toml\nThe old index files that I had renamed _ index-old.md\nThe partials in layouts/shortcodes\nAnd finally the themes/hugo-academic folder! 🔥\n\n\n\n\nI deleted the following files:\n\nAll of the index.html files in the blog, publication, and talks folders\nThe old config file, that I had renamed config_old.toml\nThe old index files that I had renamed _ index-old.md\n\nAnd I deleted the folders indicated in this directory tree:\n Location: silvia/\n.\n├── config                # &lt;-- this folder\n├── resources             # &lt;-- this folder\n├── data                  # &lt;-- this folder\n├── assets\n│   └── images            # &lt;-- this folder\n├── static\n│   ├── img\n│   │   └── headers       # &lt;-- this folder\n│   ├── publications      # &lt;-- this folder\n│   └── rmarkdown-libs    # &lt;-- this folder\n├── layouts\n│   └── shortcodes        # &lt;-- custom partials in this folder\n└── themes\n    └── hugo-academic     # &lt;-- this folder"
+  },
+  {
+    "objectID": "blog/2021-06-01-hello-hugo-apero/index.html#customizing-your-site",
+    "href": "blog/2021-06-01-hello-hugo-apero/index.html#customizing-your-site",
+    "title": "Hello Hugo Apéro: Converting a Blogdown Site from Hugo Academic",
+    "section": "Customizing your site",
+    "text": "Customizing your site\nHopefully all of that wasn’t terrible, and if it was, please know I’m rooting for you. You’re doing great! :raised_hands:\nNow you get to enjoy the fun part which is customizing your site! The theme documentation goes through this in detail:\n\nSet up your social | Hugo Apéro\nStyle your site typography | Hugo Apéro\nStyle your site colors | Hugo Apéro"
+  },
+  {
+    "objectID": "blog/2021-06-01-hello-hugo-apero/index.html#deploying-your-new-site",
+    "href": "blog/2021-06-01-hello-hugo-apero/index.html#deploying-your-new-site",
+    "title": "Hello Hugo Apéro: Converting a Blogdown Site from Hugo Academic",
+    "section": "Deploying your new site",
+    "text": "Deploying your new site\nOnce you’re happy with your new Apéro site, the last step is to merge your apero branch with the primary branch of your website repository. But first, a few steps:\n\nOptional: Create a branch of your primary branch and call it hugo-academic so that you have a snapshot of your Academic files right before the merge. Since we set up Netlify to deploy all of our branches, there will now be a live link for this new branch that you can visit whenever you feel like time traveling back to your old site. For me this link is https://hugo-academic–silvia.netlify.app/\nSwitch back to your apero branch and update the baseURL field in config.toml to your regular website path. In my case:\nbaseURL = \"https://silvia.rbind.io/\"\nThen commit and push this change to your apero branch.\nMerge your apero branch with your primary branch. I usually use git commands in a combination of the RStudio terminal and the Git pane, but for this big merge I felt more comfortable doing it on github.com! :sweat_smile: Do what feels most comfortable for you.\nResolve any merge conflicts (I had a few!) in the git tool of your choosing. These are the git commands GitHub recommended:\ngit fetch origin       # makes sure local files were recent\ngit checkout apero     # moves you to your `apero` branch\ngit merge main         # attempts a merge with your `main` branch\nWhen you’re finished, commit your changes and push. Then follow these next steps, also recommended by GitHub:\ngit checkout main       # moves you to your `main` branch\ngit merge --no-ff apero # creates a new commit for the merge\nThis step will sort of replace all of the files that both themes had in common with the apero version (e.g. config.toml, netlify.toml, content/publication), and leave the old Academic files alone. So you will have to delete these extra Academic files (again!). I’m not sure how to avoid this – maybe it’s not an issue when you don’t have merge conflicts? I don’t know :thinking:\nTidy up your directory (again?)\nGo through the steps above to clean out any residual Academic files from your directory. Make sure to check your content/ folders for any example files from Academic that might still be hanging around and delete them.\nThen run blogdown::serve_site() to build your new Apéro site locally. Go through the site and make sure everything looks the way it should and that links are generally pointing to the right places.\nWhen you’re satisfied, commit the changes to your primary branch!There may be a lot of files that were deleted and added during the switch to Apéro and, while not generally recommended, I used the git add . command to stage all of the changes at once, commited the changes, and then pushed. I did this after thoroughly looking through the list of changed files so I knew what was happening.\nWait a couple of minutes for the changes to get pushed to your primary branch (e.g. main) and then wait patiently for Netlify to build your site after the merge.\n Celebrate and share your brand new site! 🎉 🥳 🍾If you share on Twitter, use the #HugoApero hashtag so the Hugo Apéro squad can clap for you!"
+  },
+  {
+    "objectID": "blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html",
+    "href": "blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html",
+    "title": "Becoming certified as an RStudio Tidyverse Instructor",
     "section": "",
-    "text": "About this site"
+    "text": "February 12th, 2021 was Greg Wilson’s last day at RStudio. This means he is no longer running the instructor training program, so the future of the program is unclear. You may want to contact traininginstructor@rstudio.com with any specific questions.\nYou can also jump down in this blog post to Teaching resources to find a consolidated list of materials previously taught as part of the RStudio certification program, in addition to some related resources (thanks to Yanina for adding to this list!).\nLastly, you may want to consider becoming certified through The Carpentries. Yanina Bellini Saibene (@yabellini) and Dorris Scott (@Dorris_Scott) are a couple of RStudio instructors that have also been certified through The Carpentries."
+  },
+  {
+    "objectID": "blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html#asking-around",
+    "href": "blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html#asking-around",
+    "title": "Becoming certified as an RStudio Tidyverse Instructor",
+    "section": "Asking around",
+    "text": "Asking around\nIn the interest of making an informed decision, I asked a few instructors to share a bit about their experience with the certification process before I made the commitment.\n\n🇺🇸 Stephan Kadauke is a colleague I met through the Children’s Hospital of Philadelphia R User group. Specifically at an Intro to Machine Learning with the Tidyverse workshop led by Alison Hill.\n\nI met these wonderful people through the R-Ladies Global Slack workspace:\n\n🇦🇷 Yanina Bellini Saibene shared her experience with this process in her blog post Obtaining RStudio certification. A shared path.\n🇧🇴 🇳🇱 Paloma Rojas-Saunero shared her view as a Ph.D. candidate with experience teaching R in R-Ladies workshops and as a teaching assistant in biostatistics courses.\n🇰🇪 Shelmith Kariuki speaks to her experience in her blog post The RStudio Certification Process.\n\n\nHere’s what folks had to say!\nHighlights are shared with the authors’ permission and my gratitude to them.\n\nWhat made you want to pursue the certification?\n\nOne, it gave me incentive to read R for Data Science cover to cover which I had been meaning to do for a while. Two, I’m teaching R and the certification gives me some gravitas to do that. Three, it forced me to critically think about cognitive load theory, concept mapping, and lesson development, all of which are super useful when you actually have to develop lessons. –Stephan\n\n\nI pursued the certification for a few reasons. First because I am really enthusiastic about teaching and I love the tidyverse, so I wanted to find opportunities of teaching it outside my university. Second because I feel that RStudio is growing so fast on teaching materials that sharing with other instructors would be a great way to always keep updated. And last but not least, I was also encouraged by the idea of going through the process with Yanina Bellini Saibene and other amazing women as she discusses in her blog post. –Paloma\n\n\n\nWhat did you think of the training itself, particularly the pedagogical aspects?\n\nThe training is top notch. In my mind, Greg Wilson is the #1 authority when it comes to teaching programming and R in particular. –Stephan\n\n\nI think the best part is to take and learn the pedagogical aspect. Greg Wilson is an awesome trainer and you will love as a student all the tools and techniques that he teaches you. For learning this, the course is already worth it. All the content is more developed in the book Teaching Tech Together by Greg Wilson if you want to look it over. –Yanina\n\n\nAbout the training, it was mind blowing, it changed my view of teaching not only programming but everything. Greg’s book is amazing and the way he teaches is outstanding. I learned so much. –Paloma\n\n\n\nHave you been able to implement what you learned in some way either at work or elsewhere?\n\nYes! As you probably saw, I’m teaching the intro to R course for R/Medicine. And I’ve been teaching a similar course to doctors, in addition to some other teaching sessions that I’ve done for the CHOP R User group and/or medical resident teaching. –Stephan\n\n\nYes! Immediately. I delivered 3 in-person courses after training and more than 15 courses on-line using all the pedagogical tools. I also co-founded Metadocencia where we share practical tools to help teachers teach online (volunteer-run and free) using these principles learned in the training. I also use some of the tools for my work as the chief of a research group for some meetings and identifying the target of some of our development (especially concept maps and learner personas). –Yanina\n\n\nI think I use what I learned so far even when I am preparing my work presentations, when developing any type of class, event, book club, etc. Overall it was an experience that made me reflect a lot on how teaching is usually done, how is my teaching so far and an inspiration about the teacher I want to be. –Paloma"
+  },
+  {
+    "objectID": "blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html#attending-the-mir-panel",
+    "href": "blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html#attending-the-mir-panel",
+    "title": "Becoming certified as an RStudio Tidyverse Instructor",
+    "section": "Attending the MiR panel",
+    "text": "Attending the MiR panel\nIf you read the questions and responses above you might have noticed one character in this story that I haven’t introduced yet. His name is Greg Wilson. I tend to take such strong endorsements with a spoonful of skepticism and (spoiler alert) I’m happy to say I fully agree with everything that was said by those above. In that spirit, I’ll add my own glowing recommendation:\n\nGreg Wilson is truly a programming pedagogy expert, and an incredibly kind human being. I’m grateful to have learned from him within the context of the certification, and appreciate being able to continue learning from his example in a variety of other contexts.\n\nNevertheless, I’m glad I got to do a gut-check beforehand when I attended the RStudio Instructor Certification Panel hosted by the MiR Community and facilitated by Dorris Scott and Danielle Smalls-Perkins. You’ll notice Yanina and Shelmith were two of the panelists! Hearing from this panel was the last piece of the puzzle I needed to feel like pursuing the certification was an enthusiastic yes."
+  },
+  {
+    "objectID": "blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html#teaching-exam",
+    "href": "blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html#teaching-exam",
+    "title": "Becoming certified as an RStudio Tidyverse Instructor",
+    "section": "Teaching exam",
+    "text": "Teaching exam\nI relied on the instructor training materials and my in-class notes to prepare my demonstration lesson and study for the written component of the teaching exam. For anything that didn’t fully sink in, I consulted Teaching Tech Together.\nYou can find all materials for my teaching demonstration on GitHub. They include the slides below and this R Markdown file that I used to incorporate live coding into the lesson.\nI found an excellent reference for a demonstration lesson in Florencia D’Andrea’s post Two examples of iteration with purrr - Class for the RStudio certification.\nIt comes highly recommended that someone take a look at each one of our lessons before it ships out because it seems it’s common not to realize we’ve packed too much in! Yanina was kind enough to sit through my lesson as a learner and provided fantastic feedback. Some of the things I was able to work on before my teaching exam included providing context for the lesson at the beginning (asking the learner to download the file, introducing the lesson in the context of a workshop, etc.) and talking through all my key strokes during the live coding portions. Thanks again Yani!"
+  },
+  {
+    "objectID": "blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html#tidyverse-exam",
+    "href": "blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html#tidyverse-exam",
+    "title": "Becoming certified as an RStudio Tidyverse Instructor",
+    "section": "Tidyverse exam",
+    "text": "Tidyverse exam\nLucky for me the MiR Community organized some study sessions specifically for preparing for the Tidyverse exam! Dorris and I met regularly to discuss our approach to the sample exam (v2.0) and present chapters of R for Data Science that we weren’t as comfortable with. Yanina joined us for some of the sessions to lend us her expertise and provide tips and tricks!\nOne of the recommendations Yanina made was to explore the RStudio Primers for any topic we wanted to practice. For me that meant iteration using purrr’s map functions. After the iteration primer and the companion R for Data Science chapter, I felt like I could iterate all day every day.\nIn real life, both the written portion of the teaching exam and the Tidyverse exam are very much like the sample exams provided on the RStudio Education blog. You can find those here:\n\nSample exam v1.0 (February 2020): Instructor Certification Exams\nSample exam v2.0 (August 2020): More sample exams\n\nIf you’re a member of the MiR Community and like the idea of studying with some structure and friendly accountability, join us for the study group! And if you’re not, you can learn more about joining MiR as a member or ally here."
+  },
+  {
+    "objectID": "blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html#teaching-resources",
+    "href": "blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html#teaching-resources",
+    "title": "Becoming certified as an RStudio Tidyverse Instructor",
+    "section": "Teaching resources",
+    "text": "Teaching resources\n\n Slides for the instructor training course • Greg Wilson\n Teaching Tech Together • Greg Wilson\n Teaching R and Data Science with RStudio • Mine Çetinkaya-Rundel\n Teaching in Production • Alison Hill\n Teaching Online at Short Notice - RStudio 2020 • Greg Wilson\n Sharing on Short Notice - RStudio 2020 • Alison Hill & Desirée De Leon\n Evidence Based Teaching: What We Know and How to Use It - EuroSciPy 2015 • Greg Wilson\n rstudio-education/r4ds-instructors: Instructors’ Guide to accompany “R for Data Science” • RStudio Education\n Cursos cortos para enseñar online • MetaDocencia\n Flattening the leaRning curve: Teaching R online during COVID-19 • Brendan Cullen"
+  },
+  {
+    "objectID": "blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html#experiences-with-the-certification-process",
+    "href": "blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html#experiences-with-the-certification-process",
+    "title": "Becoming certified as an RStudio Tidyverse Instructor",
+    "section": "Experiences with the certification process",
+    "text": "Experiences with the certification process\n\nYanina Bellini Saibene – Obtaining RStudio certification. A shared path\nShelmith Kariuki – The RStudio Certification Process\nTed Laderas – My Experience with RStudio Instructor Training\nRayna Harris – A Review: RStudio Teaching Certification Course\nBrendan Cullen – Reflections on RStudio Instructor Training\nYuqi Liao – Getting Certified as an RStudio Instructor\nBeatriz Milz – Certificação da RStudio\nRohan Alexander – In Appreciation of Greg Wilson"
+  },
+  {
+    "objectID": "blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html#teaching-exam-examples",
+    "href": "blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html#teaching-exam-examples",
+    "title": "Becoming certified as an RStudio Tidyverse Instructor",
+    "section": "Teaching exam examples",
+    "text": "Teaching exam examples\n\nSilvia Canelón\n\nLesson slides: Using lubridate to work with time intervals\nGitHub repo\n\nYanina Bellini Saibene\n\nLesson materials: Concept map and formative assessments\nLesson slides: Código en R Markdown\nGitHub repo\n\nPaloma Rojas-Saunero\n\nLesson overview\nLesson slides: Tidy data\nLesson script: Tidyr: Reshape\n\nFlorencia D’Andrea\n\nLesson slides: Iteration with purrr package for automatized file management\nBlog post: Two examples of iteration with purrr - Class for the RStudio certification\nGitHub repo\n\nBeatriz Milz\n\nLesson slides: Adding figures in R Markdown\nGitHub repo\n\nLaurie Baker\n\nLesson slides\nGitHub repo\n\nCorrado Lanera\n\nLesson slides: (Meta)data texting in {ggplot2}\nGitHub repo\n\nBrendan Cullen\n\nLesson slides: Column-wise operations with dplyr: Old and New\nGitHub repo\n\nAdi Sarid\n\nGitHub repo: Exercise on purrr\n\nDavid John Baker\n\nLesson slides: Learn to Pivot!\nGitHub repo\n\nYuqi Liao\n\nLesson slides: Creating animated visualizations in R\nGitHub repo\n\nLuis Verde\n\nGitHub repo"
+  },
+  {
+    "objectID": "blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html#tidyverse-sample-exam-solutions",
+    "href": "blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html#tidyverse-sample-exam-solutions",
+    "title": "Becoming certified as an RStudio Tidyverse Instructor",
+    "section": "Tidyverse sample exam solutions",
+    "text": "Tidyverse sample exam solutions\n\nSilvia Canelón – August 2020 sample exam (v2.0)\nBrendan Cullen – August 2020 sample exam (v2.0)\nMarly Gotti – February 2020 sample exam (v1.0)\nEzekiel Adebayo Ogundepo – August 2020 sample exam (v2.0)"
+  },
+  {
+    "objectID": "blog/2021-06-02-wave-audit-1/index.html",
+    "href": "blog/2021-06-02-wave-audit-1/index.html",
+    "title": "WAVE Audit No. 1",
+    "section": "",
+    "text": "Did you know that 97.4% of home pages have web accessibility failures??? 😱\nThis finding is one of many from an accessibility analysis that non-profit WebAIM (Web Accessibility in Mind) conducts annually on home pages of the top one million websites. You can find a summary of these findings in a WebAIM blog post and detailed information in the full report, both published on April 30, 2021.\nLearning about all of the ways that digital content is made inaccessible to people with disabilities has made me take inventory of the different ways that I have contributed to this problem (there was some shame to process here 🙈).\nThe magic of R Markdown has given me the gift of turning R code into a variety of HTML outputs including R notebooks, xaringan presentation slides, and websites like this one – all of which I’ve been able to share freely online with others. This magic though (like all magic?) comes with limitations. R tools (and technology more broadly) can’t automatically ensure that its various outputs are accessible to everyone. That’s where we come in as software developers and content creators and take personal responsibility. At the risk of extending this metaphor too far, I’ll finish by offering the framework that we all need to practice (accessibility) spells/skills in order to use these magical tools responsibly.\nAll of this to say that gaining awareness about accessibility as a way to create the more inclusive world that I want to live in has motivated me to do better. I even found myself excited to conduct accessibility audits on my digital content, including my personal website (data viz too)!"
+  },
+  {
+    "objectID": "blog/2021-06-02-wave-audit-1/index.html#home-page",
+    "href": "blog/2021-06-02-wave-audit-1/index.html#home-page",
+    "title": "WAVE Audit No. 1",
+    "section": "Home page",
+    "text": "Home page\nLink: https://silvia.rbind.io/\nAudit results:\n\n1 error\n\n1 x Missing alternative text\n\n6 alerts\n\n1 x Suspicious link text\n5 x Redundant title text\n\n\n\n\n\nFigure 1: Audit for my home page"
+  },
+  {
+    "objectID": "blog/2021-06-02-wave-audit-1/index.html#about-page",
+    "href": "blog/2021-06-02-wave-audit-1/index.html#about-page",
+    "title": "WAVE Audit No. 1",
+    "section": "About page",
+    "text": "About page\nLink: https://silvia.rbind.io/about/\nAudit results:\n\n4 errors\n\n3 x Linked image missing alternative text\n1 x Empty link\n\n19 alerts\n\n2 x Skipped heading level\n1 x Possible heading\n4 x Suspicious link text\n7 x Redundant link\n5 x Redundant title text\n\n\n\n\n\nFigure 2: Audit for my About page header\n\n\n\n\n\nFigure 3: Audit for the main section of my About page\n\n\n\n\nFull page screenshot\n\n\n\n\nFigure 4: Audit for my About page in full page view"
+  },
+  {
+    "objectID": "blog/2021-06-02-wave-audit-1/index.html#blog-page",
+    "href": "blog/2021-06-02-wave-audit-1/index.html#blog-page",
+    "title": "WAVE Audit No. 1",
+    "section": "Blog page",
+    "text": "Blog page\nLink: https://silvia.rbind.io/blog/\nAudit results:\n\n6 errors\n\n1 x Missing alternative text\n5 x Linked image missing alternative text\n\n10 alerts\n\n5 x Redundant link\n5 x Redundant title text\n\n\n\n\n\nFigure 5: Audit for my Blog listing page in full page view\n\n\n\nBlog example\nLink: https://silvia.rbind.io/blog/hello-hugo-apero/\nAudit results:\n\n25 errors\n\n1 x Missing alternative text\n24 x Empty link\n\n177 contrast errors\n\n177 x Very low contrast\n\n17 alerts\n\n9 x Long alternative text\n1 x Skipped heading level\n1 x Broken same-page link\n6 x Redundant title text\n\n\n\n\n\nAlerts shown for links in the navigation bar and for a heading item. Errors shown for the blog decorative image and for a link symbol next to a header."
+  },
+  {
+    "objectID": "blog/2021-06-02-wave-audit-1/index.html#talk-page",
+    "href": "blog/2021-06-02-wave-audit-1/index.html#talk-page",
+    "title": "WAVE Audit No. 1",
+    "section": "Talk page",
+    "text": "Talk page\nLink: https://silvia.rbind.io/talk/\nAudit results:\n\n5 errors\n\n5 x Linked image missing alternative text\n\n13 alerts\n\n5 x Linked image missing alternative text\n2 x Skipped heading level\n5 x Redundant link\n5 x Redundant title text\n1 x YouTube video\n\n\n\n\n\nFigure 7: Audit for my Talk listing page\n\n\n\n\nFull page screenshot\n\n\n\n\nFigure 8: Audit for my About page header in full page view\n\n\n\n\nTalk example\nLink: https://silvia.rbind.io/talk/2021-data-viz-accessibility/\nAudit results:\n\n1 error\n\n1 x Empty link\n\n6 alerts\n\n1 x Skipped heading level\n5 x Redundant title text\n\n\n\n\n\nFigure 9: Audit for my CSV Conf talk post in full page view"
+  },
+  {
+    "objectID": "blog/2021-06-02-wave-audit-1/index.html#publication-page",
+    "href": "blog/2021-06-02-wave-audit-1/index.html#publication-page",
+    "title": "WAVE Audit No. 1",
+    "section": "Publication page",
+    "text": "Publication page\nLink: https://silvia.rbind.io/publication/\nAudit results:\n\n0 errors\n5 alerts\n\n5 x Redundant title text\n\n\n\n\n\nFigure 10: Audit for my Publication listing page\n\n\n\n\nFull page screenshot\n\n\n\n\nAlerts displayed for the navigation bar and footer\n\n\n\n\nPublication example\nLink: https://silvia.rbind.io/publication/2021-geospatial-analysis-pregnancy-outcomes/\nAudit results:\n\n1 errors\n\n1 x Empty link\n\n6 alerts\n\n1 x Skipped heading level\n5 x Redundant title text\n\n\n\n\n\nFigure 12: Audit for my geospatial analysis publication in full page view"
+  },
+  {
+    "objectID": "blog/2021-06-02-wave-audit-1/index.html#project-page",
+    "href": "blog/2021-06-02-wave-audit-1/index.html#project-page",
+    "title": "WAVE Audit No. 1",
+    "section": "Project page",
+    "text": "Project page\nLink: https://silvia.rbind.io/project/\nAudit results:\n\n3 errors\n\n3 x Empty link\n\n5 alerts\n\n5 x Redundant title text\n\n\n\n\n\nFigure 13: Audit for my Project listing page\n\n\n\nProject example\nLink: https://silvia.rbind.io/project/2021-tidy-tuesday-alt-text/\nAudit results:\n\n2 errors\n\n2 x Empty link\n\n10 alerts\n\n3 x Long alternative text\n1 x Skipped heading level\n6 x Redundant title text\n\n\n\n\n\nFigure 14: Audit for my TidyTuesdayAltText project post\n\n\n\n\nFull page screenshot\n\n\n\n\nFigure 15: Audit for my TidyTuesdayAltText project post in full page view"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Meeting People Where They R",
+    "section": "",
+    "text": "Philly Center City District Sips 2022: An Interactive Map\n\n\nAn interactive map showing restaurants participating in CCD Sips 2022 & a companion R tutorial on webscraping, geocoding, and map-making’\n\n\n\n\nR\n\n\ntutorial\n\n\nmaps\n\n\nwebscraping\n\n\nrobotstxt\n\n\nrvest\n\n\nleaflet\n\n\nggmap\n\n\n \n\n\n\n\nMay 31, 2022\n\n\nSilvia Canelón\n\n\n\n\n\n\n  \n\n\n\n\nHello Umami: Deploying a Privacy-Friendly Open Source Tool for Web Analytics\n\n\nA use case for adding Umami web analytics to a blogdown site and deploying using Railway.\n\n\n\n\nR\n\n\nWebsite\n\n\nblogdown\n\n\ntest\n\n\nHugo\n\n\n \n\n\n\n\nJan 18, 2022\n\n\nSilvia Canelón\n\n\n\n\n\n\n  \n\n\n\n\nResources for Data Viz Accessibility\n\n\nA selection of general and R-specific resources on how and why to make accessible data visualizations.\n\n\n\n\nR\n\n\ndata viz\n\n\na11y\n\n\nggpattern\n\n\nhighcharter\n\n\n \n\n\n\n\nSep 23, 2021\n\n\nSilvia Canelón\n\n\n\n\n\n\n  \n\n\n\n\nWAVE Audit No. 1\n\n\nFirst audit using the WebAIM Web Accessibility Evaluation Tool (WAVE)\n\n\n\n\nWebsite\n\n\nEducation\n\n\na11y\n\n\n \n\n\n\n\nJun 2, 2021\n\n\nSilvia Canelón\n\n\n\n\n\n\n  \n\n\n\n\nHello Hugo Apéro: Converting a Blogdown Site from Hugo Academic\n\n\nA tutorial on how to take your personal Hugo Academic/Wowchemy website and convert it to the Hugo Apéro theme\n\n\n\n\nR\n\n\nWebsite\n\n\nTutorial\n\n\ngit\n\n\nblogdown\n\n\nHugo\n\n\n \n\n\n\n\nJun 1, 2021\n\n\nSilvia Canelón\n\n\n\n\n\n\n  \n\n\n\n\nDeploying xaringan Slides with GitHub Pages\n\n\nA ten-step workflow for creating an HTML xaringan slide deck and deploying it to the web using GitHub Pages\n\n\n\n\nR\n\n\nTutorial\n\n\nxaringan\n\n\ngit\n\n\n \n\n\n\n\nMar 16, 2021\n\n\nSilvia Canelón\n\n\n\n\n\n\n  \n\n\n\n\nBecoming certified as an RStudio Tidyverse Instructor\n\n\nAn overview of the RStudio Instructor certification process and collection of resources to support anyone on their certification journey.\n\n\n\n\nR\n\n\nRStudio\n\n\nEducation\n\n\ntidyverse\n\n\n \n\n\n\n\nOct 7, 2020\n\n\nSilvia Canelón\n\n\n\n\n\n\n  \n\n\n\n\nCustomizing Hugo Academic’s Dark Mode with Help from Atom\n\n\nTutorial on how to customize the dark mode in Hugo’s Academic theme with help from the Atom text editor package Pigments.\n\n\n\n\nWebsite\n\n\nTutorial\n\n\nAtom\n\n\nblogdown\n\n\nHugo\n\n\nCSS\n\n\n \n\n\n\n\nJun 16, 2020\n\n\nSilvia Canelón\n\n\n\n\n\n\n  \n\n\n\n\nMigrating from Trello to Airtable: Working with JSON Data in R\n\n\nTutorial on how to migrate your current Trello board to an Airtable base from start to finish.\n\n\n\n\nR\n\n\nTutorial\n\n\njson\n\n\njsonlite\n\n\ntidyverse\n\n\n \n\n\n\n\nMay 12, 2020\n\n\nSilvia Canelón\n\n\n\n\n\n\n  \n\n\n\n\nPhilly Center City Sips 2019: An Interactive Map\n\n\nAn interactive map showing restaurants participating in Philly’s Center City District Sips 2019.\n\n\n\n\nR\n\n\nmaps\n\n\nleaflet\n\n\nRSelenium\n\n\n \n\n\n\n\nAug 4, 2019\n\n\nSilvia Canelón\n\n\n\n\n\n\nNo matching items\n\n\n  \n\nReusehttps://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  {
+    "objectID": "blog/2020-05-26-dark-mode-custom-with-atom/index.html",
+    "href": "blog/2020-05-26-dark-mode-custom-with-atom/index.html",
+    "title": "Customizing Hugo Academic’s Dark Mode with Help from Atom",
+    "section": "",
+    "text": "With Alison Hill’s Up and Running with Blogdown post! Super helpful, though because I came to it 2.5 years late, it was more like ‘up and running with lots of water breaks’ because I had to stop and account for changes made to the Hugo Academic theme in the meantime.\n\nFor example, prior to Academic version 4.6, custom CSS was added using the plugins_css option in params.toml, but in current version 4.8, the theme supports SCSS (a superset of CSS) and a custom.scss file is added in the assets/scss/ folder.\n\nThe going futher section in Alison’s post specifically talks about customizing the out-of-the-box theme and Alison directly links to her custom CSS file, which I closely referred to when changing colors in my custom SCSS file.\nAlison’s CSS helped me customize everything from text colors and fonts to alert colors and borders for Academic’s light mode. At this point I had the light mode looking the way I wanted but the dark mode still used out-of-the-box colors for the most part and they just didn’t go.\n\nSo I decided not to enable the dark-mode option in params.toml until I could figure out how to customize my stylesheet accordingly. That time has come because it turns out it’s pretty straightforward!\nThe Blogdown book does an excellent job summarizing what you need to know about CSS. This post builds on that a little by incorporating features made possible by SCSS including variables."
+  },
+  {
+    "objectID": "blog/2020-05-26-dark-mode-custom-with-atom/index.html#basics-of-dark-theme-design",
+    "href": "blog/2020-05-26-dark-mode-custom-with-atom/index.html#basics-of-dark-theme-design",
+    "title": "Customizing Hugo Academic’s Dark Mode with Help from Atom",
+    "section": "Basics of dark theme design",
+    "text": "Basics of dark theme design\n\nThe primary surface color for dark themes should be dark gray, rather than black. The recommended color is #121212\nAs you layer components, surfaces with a higher elevation (closer to the hypothetical ‘light source’) should be lighter than those below it to create a visual hierarchy. This can be achieved by applying a semi-transparent white overlay to the primary dark gray surface.\n\n\n\nThe primary text color for dark themes should not be 100% opaque white (i.e. #FFFFFF) because it can appear to bleed or blur against dark backgrounds and be difficult to read.\nText hierarchy is established by controlling the opacity, for example:\n\nHigh emphasis text is white with 87% opacity:rgba(255, 255, 255, 0.87)\nMedium emphasis is white with 60% opacity:rgba(255, 255, 255, 0.60)\nDisabled text is white with 38% opacity:rgba(255, 255, 255, 0.38)\n\nTo meet WCAG AA standard, there must be a 4.5:1 contrast level between the body text and the dark theme surface at the highest/lightest elevation. The contrast level is 7:1 for the WCAG AAA standard."
+  },
+  {
+    "objectID": "blog/2020-05-26-dark-mode-custom-with-atom/index.html#tools-to-explore-palettes",
+    "href": "blog/2020-05-26-dark-mode-custom-with-atom/index.html#tools-to-explore-palettes",
+    "title": "Customizing Hugo Academic’s Dark Mode with Help from Atom",
+    "section": "Tools to explore palettes",
+    "text": "Tools to explore palettes\nMaterial Design has a color palette generator and a color tool that can be used to dark and light variants of a color. I used the color tool to find a dark and light variant of my primary and secondary colors. The accessibility feature of the color tool is helpful to determine the minimum opacity for white text to ensure enough contrast. The Coolors color contrast checker is another great tool."
+  },
+  {
+    "objectID": "blog/2021-03-16-deploying-xaringan-slides/index.html",
+    "href": "blog/2021-03-16-deploying-xaringan-slides/index.html",
+    "title": "Deploying xaringan Slides with GitHub Pages",
+    "section": "",
+    "text": "This post was featured in the RStudio Blog R Views under a revised title: Deploying xaringan Slides with GitHub Pages. The original title was “Deploying xaringan Slides: A Ten-Step GitHub Pages Workflow.” Other changes include an introductory paragraph and greater clarity in the “Choose your own adventure” section. Many thanks to Chief Editor Joe Rickert for a very encouraging and helpful editorial process! I am humbled by his note on R Views:\nSilvia’s post is a mini masterpiece of clear, concise writing that elucidates complex technology within the narrow context of explaining a single well-defined task. Silvia does not attempt to say everything she knows about the subject, and she resists digressions that might obscure the path she is laying out. It is an example of achieving clarity through saying less.\nThis post will guide you step-by-step through the process of creating an HTML xaringan slide deck and deploying it to the web for easy sharing with others. We will be using the xaringan package to build the slide deck, GitHub to help us host our slides for free with GitHub Pages, and the usethis package to help us out along the way. You will get the most out of this workflow if you are already familiar with R Markdown and GitHub, and if you have already connected RStudio (or your preferred IDE) to Git and GitHub.1 The post will not cover the nuts and bolts of xaringan or talk about slide design & customization, but you can find lots of learning resources listed at the end."
+  },
+  {
+    "objectID": "blog/2021-03-16-deploying-xaringan-slides/index.html#packages",
+    "href": "blog/2021-03-16-deploying-xaringan-slides/index.html#packages",
+    "title": "Deploying xaringan Slides with GitHub Pages",
+    "section": "Packages",
+    "text": "Packages\nThis workflow was developed using:\n\n\n\nSoftware / package\nVersion\n\n\n\n\nR\n4.0.3\n\n\nRStudio\n1.4.1103\n\n\nxaringan\n0.19\n\n\nusethis\n2.0.0\n\n\n\ninstall.packages(\"xaringan\")\ninstall.packages(\"usethis\")"
+  },
+  {
+    "objectID": "blog/2021-03-16-deploying-xaringan-slides/index.html#creating-your-xaringan-slide-deck",
+    "href": "blog/2021-03-16-deploying-xaringan-slides/index.html#creating-your-xaringan-slide-deck",
+    "title": "Deploying xaringan Slides with GitHub Pages",
+    "section": "Creating your xaringan slide deck",
+    "text": "Creating your xaringan slide deck\n1. Create a new RStudio project for your presentation:\nusethis::create_project(\"filepath/for/your/presentation/repo-name\")\n\n📍 If you’re not sure where you are on your computer, check your working directory with getwd() and use it as a filepath reference point\n\n\n2. Create a xaringan deck using a xaringan template: File &gt; New File &gt; R Markdown &gt; From Template &gt; Ninja Presentation &gt; OK\n3. Delete what you don’t need and save your R Markdown file with whatever name you like. If you pick index.Rmd the live link you share at the end will be relatively short.\n4. Render HTML slides from the open Rmd file using xaringan’s infinite moon reader:\nxaringan::infinite_moon_reader()"
+  },
+  {
+    "objectID": "blog/2021-03-16-deploying-xaringan-slides/index.html#initialize-version-control-with-git",
+    "href": "blog/2021-03-16-deploying-xaringan-slides/index.html#initialize-version-control-with-git",
+    "title": "Deploying xaringan Slides with GitHub Pages",
+    "section": "Initialize version control with git",
+    "text": "Initialize version control with git\n5. Initialize version control of your slides with git:\nusethis::use_git()\nYou’ll be asked if you want to commit the files in your project (with the message “Initial commit”) and then if you want to restart to activate the Git pane. Say yes to both ✅\n\nNote: At the moment usethis names the primary branch “master” by default. Issue #1341 suggests the option to instead name it “main” is in the works.\n\n\n6. Connect your local project with a GitHub repo:\nusethis::use_github()\n\nYou could use the function argument private = TRUE to create a private GitHub repository. But you may have to remember to change the visibility before deploying to GitHub Pages.\n\n\n7. Your new GitHub repo with all of your xaringan project files will automatically open up in your browser\n\nRepo for the R-Ladies xaringan template: https://github.com/spcanelon/RLadies-xaringan-template"
+  },
+  {
+    "objectID": "blog/2021-03-16-deploying-xaringan-slides/index.html#making-and-committing-changes-to-your-slides",
+    "href": "blog/2021-03-16-deploying-xaringan-slides/index.html#making-and-committing-changes-to-your-slides",
+    "title": "Deploying xaringan Slides with GitHub Pages",
+    "section": "Making and committing changes to your slides",
+    "text": "Making and committing changes to your slides\n8. Edit your slides as you wish. Commit often! And then push to GitHub. Use the tools provided by the Git pane in RStudio, or use the following commands in the Terminal:\n# Step 1: Stage all modified files\ngit add .\n# Step 2: Describe the changes you made to your files\ngit commit -m \"&lt;A brief but descriptive commit message&gt;\"\n\nConsider writing a commit message that finishes the following sentence:2 “If applied, this commit will…” (e.g. “Change the slide theme,” “Add hello slide”)\n\n# Step 3: Push the changes to your GitHub repository\ngit push"
+  },
+  {
+    "objectID": "blog/2021-03-16-deploying-xaringan-slides/index.html#deploying-your-slides",
+    "href": "blog/2021-03-16-deploying-xaringan-slides/index.html#deploying-your-slides",
+    "title": "Deploying xaringan Slides with GitHub Pages",
+    "section": "Deploying your slides",
+    "text": "Deploying your slides\n9. When you’re ready to deploy your slides, you can use the usethis::use_github_pages() function which makes the process of deploying via GitHub Pages super easy. I recommend pointing branch to the name of your primary branch.\nusethis::use_github_pages(branch = \"master\")\n\nNote: Your repository must be public for your deployed slides to be available publicly, unless you have a paid GitHub account.\n\n\nAlso, you only need to follow this step once to deploy your slides to the web. As long as you remember to push to your repo any changes that you make to your slides (Rmd and HTML), GitHub Pages will know how to render them.\n\n\n10. Visit the link provided to see your newly deployed slides! 🚀Don’t panic if you don’t see them right away, sometimes it takes a little time. This is the link you will share with the world when you present. Notice it looks very similar to your GitHub repo link.\n\nLink to the R-Ladies xaringan template rendered slides: https://spcanelon.github.io/RLadies-xaringan-template"
+  },
+  {
+    "objectID": "blog/2021-03-16-deploying-xaringan-slides/index.html#foundation",
+    "href": "blog/2021-03-16-deploying-xaringan-slides/index.html#foundation",
+    "title": "Deploying xaringan Slides with GitHub Pages",
+    "section": "Foundation",
+    "text": "Foundation\n\nSharing Your Work with xaringan • Silvia Canelón – workshop site\nIntroducción al Paquete xaringan • Silvia Canelón – R-Ladies Meetup\nMaking Slides with R Markdown • Alison Hill – workshop slides\nPresentation Ninja • xaringan Official Document – package documentation\nChapter 7 xaringan Presentations • R Markdown: The Definitive Guide – book chapter"
+  },
+  {
+    "objectID": "blog/2021-03-16-deploying-xaringan-slides/index.html#sharing-your-slides",
+    "href": "blog/2021-03-16-deploying-xaringan-slides/index.html#sharing-your-slides",
+    "title": "Deploying xaringan Slides with GitHub Pages",
+    "section": "Sharing your slides",
+    "text": "Sharing your slides\n\nSharing Your xaringan Slides • Garrick Aden‑Buie – blog post\nFunctions For Building Xaringan Slides To Different Outputs • xaringanBuilder – package site\nSharing on Short Notice • Alison Hill & Desirée De Leon – video resource for deploying via Netlify"
+  },
+  {
+    "objectID": "blog/2021-03-16-deploying-xaringan-slides/index.html#making-your-slides-extra-special",
+    "href": "blog/2021-03-16-deploying-xaringan-slides/index.html#making-your-slides-extra-special",
+    "title": "Deploying xaringan Slides with GitHub Pages",
+    "section": "Making your slides extra special",
+    "text": "Making your slides extra special\n\nProfessional, Polished, Presentable • Garrick Aden‑Buie & Silvia Canelón • useR!2021 – site for an intermediate xaringan workshop\nHome • yihui/xaringan Wiki • GitHub – wiki of customizations for xaringan\nMaking Extra Great Slides • Garrick Aden‑Buie – talk & slides with xaringan overview and featuring CSS styling and xaringanthemer\nApplying design guidelines to slides with {xaringanthemer} • katie jolly – blog post\nA playground of extensions for xaringan • xaringanExtra – package site\nCustom xaringan CSS Themes • xaringanthemer – package site"
+  },
+  {
+    "objectID": "blog/2021-03-16-deploying-xaringan-slides/index.html#footnotes",
+    "href": "blog/2021-03-16-deploying-xaringan-slides/index.html#footnotes",
+    "title": "Deploying xaringan Slides with GitHub Pages",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nChapter 12 Connect RStudio to Git and GitHub | Happy Git and GitHub for the useR↩︎\nHow to Write a Git Commit Message | Chris Beams↩︎"
+  },
+  {
+    "objectID": "blog/2020-05-12-trello-to-airtable/index.html",
+    "href": "blog/2020-05-12-trello-to-airtable/index.html",
+    "title": "Migrating from Trello to Airtable: Working with JSON Data in R",
+    "section": "",
+    "text": "Airtable is a user-friendly and powerful tool that until recently I’d been using for personal projects (i.e. document organizing, apartment hunting, etc.). A couple of weeks ago I leaned on Airtable to create a base designed for the Philadelphia Reproductive Freedom Collective to support our COVID-19 mutual aid efforts.\nHaving fallen in some Airtable deep-work I figured maybe it was time to retire my Trello boards in favor of some task bases. Airtable accepts CSV files from Trello but, alas, my free Trello account only gave me the option to print as a PDF or export as JSON. I decided this would be a good opportunity to learn how to parse JSON data and export it as a CSV ready for import to Airtable."
+  },
+  {
+    "objectID": "blog/2020-05-12-trello-to-airtable/index.html#cards",
+    "href": "blog/2020-05-12-trello-to-airtable/index.html#cards",
+    "title": "Migrating from Trello to Airtable: Working with JSON Data in R",
+    "section": "Cards",
+    "text": "Cards\nThe first step is to extract information about the Trello cards themselves. This information is contained within a list of data frames and requires flattening which makes the nested hierarchical data structure into a flatter structure by assigning each of the nested variables its own column as much as possible. Then, the most important variables are selected as cards_trim before moving on to extracting label information.\n# selecting cards information\ncards &lt;- trello$cards # list of 1\n\n# flattening\ncards_flat &lt;- flatten(cards) #list of 37\n\n# tibble time\ncards_flat_tbl &lt;- as_tibble(cards_flat) # 32 obs of 37 variables\nglimpse(cards_flat_tbl)\n\n# selecting wanted variables\ncards_trim &lt;- cards_flat_tbl %&gt;%\n  select(id, idShort, idList, dateLastActivity, name, desc, dueComplete, due,\n         labels, attachments, shortUrl, closed) %&gt;%\n  arrange(desc(dateLastActivity))\n\nLabels\nRelevant information about the labels is selected and the unnest function is used to flatten because labels is a list of data frames. Again, I found Kan’s post helpful here! Particularly for saving the label details as a character list, which is helpful later on. Once we get to Airtable it’ll be important that label information for each card be structured as a simple list of words (i.e. label1, label2, label3). We get close once the labels are contained within a character list labelList, but there are still “c”s and parentheses that need to be removed. String manipulation is something I’m still learning about so the code below is far from elegant!\n# extracting labels details\nlabels_info &lt;- cards_trim %&gt;%\n  select(id, idShort, labels) %&gt;%\n  unnest() %&gt;% # no arguments because the nested items don't have names\n  rename(labelName = name) %&gt;%\n  select(id, idShort, labelName) %&gt;%\n  group_by(id, idShort) %&gt;%\n  summarize(labelList = list(labelName)) %&gt;%\n  mutate(labelList = as.character(labelList)) %&gt;%\n  mutate(labelList_tidy = str_remove_all(labelList, pattern = \"\\\"\")) %&gt;%\n  mutate(labelList_tidy = str_remove_all(labelList_tidy, pattern =\"c\\\\(\")) %&gt;%\n  mutate(labelList_tidy = str_remove_all(labelList_tidy, pattern =\"\\\\)\")) %&gt;%\n  unique()\n\nknitr::kable(labels_info %&gt;% head(n = 3L))\n\n# joining back with main cards data frame\nct_labels &lt;- left_join(cards_trim %&gt;% select(-labels), labels_info %&gt;% select(-labelList))\n\n\nAttachments\nThe next step is to download all of the items attached to the cards onto a local folder. I found this StackOverflow post really helpful. When I tried this out on my own Trello board I also found that I couldn’t download the few attachments I had made from my local drive. This StackOverflow post helped me figure out how to flag and catch these download errors so that I could create a list of the urls with “attachment errors” that I could follow up with manually.\n# expanding the attachment lists into separate url records\natt_urls &lt;- ct_labels %&gt;%\n  select(idShort, attachments) %&gt;%\n  unnest() %&gt;%\n  select(idShort, url) %&gt;%\n  mutate(url = as.character(url),\n         attachmentError = 'FALSE')\nknitr::kable(att_urls %&gt;% head(n = 3L))\n\n# creating directory for attachments\ndirAttachments &lt;- \"attachments/\"\ndir.create(dirAttachments)\n\n# downloading urls and checking for errors using try()\nfor (i in 1:length(att_urls$url)){\n  locAttachments &lt;-\n        paste(dirAttachments, \"/\", att_urls$idShort[i], \"_\", basename(att_urls$url[i]), sep = \"\")\n  step_to_try &lt;- try(attachment_check &lt;- download.file(att_urls$url[i], destfile = locAttachments))\n  if(\"try-error\" %in% class(step_to_try)) {\n    cat(\"Error row: \", i, \"\\n\", \"Error message: \", step_to_try[1], sep = \"\")\n    att_urls$attachmentError[i] = 'TRUE'\n  }\n}\nThe following selects the attachment records with errors, renames somes variables, and exports the data frame as a CSV.\n# preparing data frame for export to CSV\nattachment_errors &lt;- att_urls %&gt;%\n  filter(attachmentError == TRUE) %&gt;%\n  rename(Task_Id = idShort, Attachment_URL = url, Attachment_Error = attachmentError)\n\n# exporting to CSV\nwrite.csv(attachment_errors, file = \"attachment_errors.csv\")\n\nAside: If you have a lot of attachments per card, you may want to create a directory folder for each card. This for loop will get you there – use it instead of the one above:\n\n# creates individual directory folders for each card id\nfor (i in 1:length(att_urls$url)){\n  dirAttachments &lt;- paste(dirFiles, \"attachments\", att_urls$idShort[i], sep = \"/\")\n  dir.create(dirAttachments) # creates directory for each unique card id\n  locAttachments &lt;- paste(dirAttachments, basename(url[i]), sep = \"/\")\n  download.file(url[i], destfile = locAttachments)\n}\nRecords in the main cards data frame are labeled “TRUE” within the attachments column if they have attachments and “FALSE” if they don’t.\n# converts the attachment column to a categorical variable in the main cards+labels data frame\nct_labels &lt;- ct_labels %&gt;%\n  mutate(attachments = ifelse(idShort %in% att_urls$idShort, TRUE, FALSE))"
+  },
+  {
+    "objectID": "blog/2020-05-12-trello-to-airtable/index.html#lists",
+    "href": "blog/2020-05-12-trello-to-airtable/index.html#lists",
+    "title": "Migrating from Trello to Airtable: Working with JSON Data in R",
+    "section": "Lists",
+    "text": "Lists\nThe lists information is extracted similarly to the cards information, but flattening is a little more straightforward because it involves only one data frame. With more data frames, the unnest function is a better choice.\n# selecting lists information\nlists &lt;- trello$lists # list of 1 data frame\nglimpse(lists)\n\n# flattening\nlists_flat &lt;- lists[[1]] # 17 obs of 9 variables\n\n# selecting wanted variables\nlists_trim &lt;- lists_flat %&gt;%\n  select(id, name, closed) %&gt;%\n  rename(idList = id, nameList = name, closedList = closed)\nknitr::kable(lists_trim %&gt;% head(n = 3L))\n\n# joining back with main cards+labels data frame\nct_labels_list &lt;- left_join(ct_labels, lists_trim) %&gt;%\n  select(id:shortUrl, labelList_tidy:nameList, closed, closedList)"
+  },
+  {
+    "objectID": "blog/2020-05-12-trello-to-airtable/index.html#data-prepping",
+    "href": "blog/2020-05-12-trello-to-airtable/index.html#data-prepping",
+    "title": "Migrating from Trello to Airtable: Working with JSON Data in R",
+    "section": "Data prepping",
+    "text": "Data prepping\nColumns in the new ct_labels_list data frame are given new names, and the lubridate package is used next to convert the date fields. This resource was helpful in understanding date conversions and formatting.\n# changing variable names\ntidy_cards &lt;- ct_labels_list %&gt;%\n  select(-id, -idList, -closedList) %&gt;%\n  rename(Task = name, Task_ID = idShort, Notes = desc, Done = dueComplete, Date_Due = due,\n         Labels = labelList_tidy, Trello_List = nameList, Trello_Last_Modified = dateLastActivity,\n         Trello_Url = shortUrl, Trello_Attachments = attachments, Archived = closed) %&gt;%\n  select(Task, Task_ID, Notes, Done, Date_Due, Labels, Trello_List, Trello_Last_Modified,\n         Trello_Url, Trello_Attachments, Archived) %&gt;%\n  mutate(Trello_Last_Modified = as_datetime(Trello_Last_Modified, tz = \"\"),\n         Date_Due = as_datetime(Date_Due, tz = \"\"),\n         Done = ifelse(is.na(Date_Due) == TRUE, 'NA', Done)) # ensures only undone tasks assigned a due date get marked as \"FALSE\"\nThe last step before exporting the final data frame tidy_cards is to check the unique number of tasks to make sure it matches the number of records in the data frame (i.e. one task per observation).\n# determining the number of unique tasks\nlength(unique(tidy_cards$Task_ID))\n\n# final look at tidy_cards\nglimpse(tidy_cards)"
+  },
+  {
+    "objectID": "blog/2020-05-12-trello-to-airtable/index.html#data-exporting",
+    "href": "blog/2020-05-12-trello-to-airtable/index.html#data-exporting",
+    "title": "Migrating from Trello to Airtable: Working with JSON Data in R",
+    "section": "Data exporting",
+    "text": "Data exporting\nwrite.csv(tidy_cards, file = \"tidy_cards.csv\")"
+  },
+  {
+    "objectID": "blog/2020-05-12-trello-to-airtable/index.html#task",
+    "href": "blog/2020-05-12-trello-to-airtable/index.html#task",
+    "title": "Migrating from Trello to Airtable: Working with JSON Data in R",
+    "section": "Task",
+    "text": "Task\n\nBecause we know each observation in our table is unique, we can copy and paste Task into the first column and hide/delete the original column. Task is now the primary field."
+  },
+  {
+    "objectID": "blog/2020-05-12-trello-to-airtable/index.html#task_id",
+    "href": "blog/2020-05-12-trello-to-airtable/index.html#task_id",
+    "title": "Migrating from Trello to Airtable: Working with JSON Data in R",
+    "section": "Task_ID",
+    "text": "Task_ID\n\nConvert Task_ID field type to “number”."
+  },
+  {
+    "objectID": "blog/2020-05-12-trello-to-airtable/index.html#notes",
+    "href": "blog/2020-05-12-trello-to-airtable/index.html#notes",
+    "title": "Migrating from Trello to Airtable: Working with JSON Data in R",
+    "section": "Notes",
+    "text": "Notes\n\nConvert Notes field type to “long text” and enable rich text formatting. This gives us the option of using Markdown in the future, but sadly doesn’t automatically recognize fully formatted Markdown in the imported text."
+  },
+  {
+    "objectID": "blog/2020-05-12-trello-to-airtable/index.html#labels-1",
+    "href": "blog/2020-05-12-trello-to-airtable/index.html#labels-1",
+    "title": "Migrating from Trello to Airtable: Working with JSON Data in R",
+    "section": "Labels",
+    "text": "Labels\n\nChange Labels field type to “multiple select” so that it turns each item in each list into a label.\nOptional: Create a new Projects column next to Labels and use the labels to guide you in creating Project labels/categories: Group the records by Labels field and add to Projects field as appropriate.\n\nI recommend creating an NA project from the NA labels so that these tasks aren’t marked as “uncategorized” in the Projects column. Having records with an “empty” assignment gets in the way whenever you want to group by that category. To that end, it’s helpful to group by Project and make sure any “empty” records get assigned to the “NA” Project.\n\nDelete from Labels any labels that were converted to Projects and ungroup the records."
+  },
+  {
+    "objectID": "blog/2020-05-12-trello-to-airtable/index.html#trello_lists",
+    "href": "blog/2020-05-12-trello-to-airtable/index.html#trello_lists",
+    "title": "Migrating from Trello to Airtable: Working with JSON Data in R",
+    "section": "Trello_Lists",
+    "text": "Trello_Lists\n\nConvert Trello_Lists column field type into “single select”. This gives us the option of using the Kanban style we were used to in Trello.\n\nEvery record should already be associated with a Trello_List.\n\nIf you want to replicate the Trello kanban layout, change the order of the single select options in Trello_Lists to match the order from left-to-right of your Trello board"
+  },
+  {
+    "objectID": "blog/2020-05-12-trello-to-airtable/index.html#trello_url",
+    "href": "blog/2020-05-12-trello-to-airtable/index.html#trello_url",
+    "title": "Migrating from Trello to Airtable: Working with JSON Data in R",
+    "section": "Trello_URL",
+    "text": "Trello_URL\n\nConvert the Trello_URL field type to “URL” and then hide it if you don’t think you’ll reference it often."
+  },
+  {
+    "objectID": "blog/2020-05-12-trello-to-airtable/index.html#trello_attachments",
+    "href": "blog/2020-05-12-trello-to-airtable/index.html#trello_attachments",
+    "title": "Migrating from Trello to Airtable: Working with JSON Data in R",
+    "section": "Trello_Attachments",
+    "text": "Trello_Attachments\n\nConvert Trello_Attachments field type to “single select”\nCreate a new Attachments column with field type “attachment”. This is where you’ll upload your downloaded attachments.\nFilter your records by Trello_Attachments so only show “TRUE” results\nSort records by Task_ID and simplify your view by temporarily hiding all columns except for Task_Name (primary field), Task_ID, Trello_Attachments, and the new Attachments column.\nOpen your local attachments folder and drag and drop the files to their corresponding Attachments field according to their Task_ID in the filename.\n\nIncrease the height of the records for this step. It’ll make it easier to make sure you’re dragging and dropping to the correct record\n\nIf you encountered errors downloading some of your attachment URLs, now is the time to check your local attachment_errors.csv file for the URLs with errors during the download process. These are attachments you’ll have to find elsewhere and upload to the Attachments field as needed.\nRemove the filter to your view and unhide any columns you wish to remain visible."
+  },
+  {
+    "objectID": "blog/2020-05-12-trello-to-airtable/index.html#done-archived",
+    "href": "blog/2020-05-12-trello-to-airtable/index.html#done-archived",
+    "title": "Migrating from Trello to Airtable: Working with JSON Data in R",
+    "section": "Done & Archived",
+    "text": "Done & Archived\n\nConvert the Done and Archived field types to “Checkbox” and it will automatically assign a “check” to all records marked “TRUE” and leave the ones marked “FALSE” or “NA” unchecked. So easy!\nThere is no direct option to “archive” tasks that have been completed like you can do in Trello, but you can apply a filter to your table view to hide the tasks that are complete. To do this, set the filter so that the Done and Archived fields are unchecked.\n\nThis must be repeated for each saved View of your records."
+  },
+  {
+    "objectID": "blog/2020-05-12-trello-to-airtable/index.html#dates",
+    "href": "blog/2020-05-12-trello-to-airtable/index.html#dates",
+    "title": "Migrating from Trello to Airtable: Working with JSON Data in R",
+    "section": "Dates",
+    "text": "Dates\n\nModify Date_Due and Trello_Last_Modified field types to “Date” with time.\nYou can sort the records by Trello_Last_Modified if that’s helpful, but otherwise you can hide the column and keep it for historical reference.\nCreate a new column Last_Modified with field type “Last modified time” and select all columns you want to track changes to on a date/time basis moving forward."
+  },
+  {
+    "objectID": "blog/2020-05-12-trello-to-airtable/index.html#record-views",
+    "href": "blog/2020-05-12-trello-to-airtable/index.html#record-views",
+    "title": "Migrating from Trello to Airtable: Working with JSON Data in R",
+    "section": "Record Views",
+    "text": "Record Views\n\nSelect Kanban from the Views options and group by Trello_List to see your tasks similar to how you saw them in Trello, complete with attachment covers! A bonus is that if you have multiple images attached to a card, you can view them without expanding the card by just hovering over the attachment cover!\nMove, collapse, and delete stacks as you see fit. Customize cards with as little or as much information as you want."
+  },
+  {
+    "objectID": "blog/2020-05-12-trello-to-airtable/index.html#tasks-vs-subtasks",
+    "href": "blog/2020-05-12-trello-to-airtable/index.html#tasks-vs-subtasks",
+    "title": "Migrating from Trello to Airtable: Working with JSON Data in R",
+    "section": "Tasks vs Subtasks",
+    "text": "Tasks vs Subtasks\nThere are probably many ways to parallel the checklist option Trello gives you within a card.\n\nThe most straightforward is to use the basic checklist formatting within the Description field to create lists\nAnother is to think of your primary field Tasks instead as ‘subtasks’ and create a new column to serve as the umbrella ‘task’. This new ‘task’ column would be field type “single selection”, then you could group your records by ‘task’."
+  },
+  {
+    "objectID": "blog/2019-08-04-ccd-sips/index.html",
+    "href": "blog/2019-08-04-ccd-sips/index.html",
+    "title": "Philly Center City Sips 2019: An Interactive Map",
+    "section": "",
+    "text": "For a more recent map, check out Philly Center City District Sips 2022: An Interactive Map\n\nI used R to play around with webscraping and create an interactive map showing restaurants participating in Philly’s 2019 Center City District Sips. Center City Sips is a series of summer Wednesday evenings filled with happy hour specials.\nThis mini-project was motivated by two of my close friends’ frustration with the website shortcomings. The information was presented beautifully, but there was no map view! This made it difficult to figure out what happy hours you could check out nearby.\nThe map pop-ups could use information on the specials for each restaurant, but my newly acquired skills with the RSelenium and Leaflet packages weren’t quite up to the task!\n\n\n\n\n\n\n\n\n\n\nReusehttps://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  {
+    "objectID": "blog/2022-01-18-hello-umami/index.html",
+    "href": "blog/2022-01-18-hello-umami/index.html",
+    "title": "Hello Umami: Deploying a Privacy-Friendly Open Source Tool for Web Analytics",
+    "section": "",
+    "text": "A brief walkthrough of the steps I took to deploy Umami web analytics for my personal website, as documented in a short Twitter thread.\n\n07:50pmMonths ago I removed GA from my #RStats #blogdown site & this weekend I added http://umami.is 🍚 (@caozilla) as an open source, privacy-friendly, web analytics alternative\nI was intimidated by the self-hosting aspect, but the docs + @Railway made it possible! Steps in 🧵"
+  },
+  {
+    "objectID": "blog/2022-01-18-hello-umami/index.html#what-to-expect",
+    "href": "blog/2022-01-18-hello-umami/index.html#what-to-expect",
+    "title": "Hello Umami: Deploying a Privacy-Friendly Open Source Tool for Web Analytics",
+    "section": "",
+    "text": "A brief walkthrough of the steps I took to deploy Umami web analytics for my personal website, as documented in a short Twitter thread.\n\n07:50pmMonths ago I removed GA from my #RStats #blogdown site & this weekend I added http://umami.is 🍚 (@caozilla) as an open source, privacy-friendly, web analytics alternative\nI was intimidated by the self-hosting aspect, but the docs + @Railway made it possible! Steps in 🧵"
+  },
+  {
+    "objectID": "blog/2022-01-18-hello-umami/index.html#installation",
+    "href": "blog/2022-01-18-hello-umami/index.html#installation",
+    "title": "Hello Umami: Deploying a Privacy-Friendly Open Source Tool for Web Analytics",
+    "section": "Installation",
+    "text": "Installation\n07:50pmSteps I followed:\n\nInstall Railway CLI with Homebrew https://docs.railway.app/develop/cli\nInstall PostgreSQL with Homebrew https://wiki.postgresql.org/wiki/Homebrew\nFork Umami repo & follow steps in “Running on Railway from a forked repository” at https://umami.is/docs/running-on-railway\nClone repo locally w git"
+  },
+  {
+    "objectID": "blog/2022-01-18-hello-umami/index.html#railway",
+    "href": "blog/2022-01-18-hello-umami/index.html#railway",
+    "title": "Hello Umami: Deploying a Privacy-Friendly Open Source Tool for Web Analytics",
+    "section": "Railway",
+    "text": "Railway\n07:50pm5. Link local setup to Railway project in the terminal w/ railway link &lt;projectid&gt;. Project ID is in the Railway dashboard under Setup\n\nCreate PostgreSQL tables using railway run in local umami directory + steps in “Create database tables” at https://umami.is/docs/running-on-railway\n\n07:50pm7. Deploy with railway up! 🚄\n\nFollow steps in Umami Getting Started docs https://umami.is/docs/login to login & add website\nAdd tracking code to website. In my #HugoApero #blogdown site I added it to layouts/partials/head.html. My example at https://github.com/spcanelon/silvia/blob/main/layouts/partials/head.html#L21-L29"
+  },
+  {
+    "objectID": "blog/2022-01-18-hello-umami/index.html#tracker-configuration",
+    "href": "blog/2022-01-18-hello-umami/index.html#tracker-configuration",
+    "title": "Hello Umami: Deploying a Privacy-Friendly Open Source Tool for Web Analytics",
+    "section": "Tracker Configuration",
+    "text": "Tracker Configuration\n07:50pm10. In order to not track my own visits to my site, I followed the tip in @DeepankarBhade’s post https://dpnkr.in/blog/self-host-umami and disabled Umami from my browser’s local storage. He kindly explained the steps to me in this thread 😅 https://twitter.com/DeepankarBhade/status/1480214508987551750?s=20"
+  },
+  {
+    "objectID": "blog/2022-01-18-hello-umami/index.html#pricing",
+    "href": "blog/2022-01-18-hello-umami/index.html#pricing",
+    "title": "Hello Umami: Deploying a Privacy-Friendly Open Source Tool for Web Analytics",
+    "section": "Pricing",
+    "text": "Pricing\n07:50pmA note about Railway pricing https://docs.railway.app/reference/limits:\nI’m using the free tier, the Starter Plan, which has $5 of credits. In the past 2 days I’ve used $0.7258 of my credits & it’s estimated I’ll use $3.04 by the end of the month. My site receives relatively low traffic, so YMMV\n07:51pmThere is a free-ish $10 credit Railway plan available also, where you would only get billed for any usage above $10\nFor a fully free & more adventurous experience you could give up the convenience of Railway & self-host! See the Umami docs for options https://umami.is/docs/hosting"
+  },
+  {
+    "objectID": "blog/2022-01-18-hello-umami/index.html#goatcounter",
+    "href": "blog/2022-01-18-hello-umami/index.html#goatcounter",
+    "title": "Hello Umami: Deploying a Privacy-Friendly Open Source Tool for Web Analytics",
+    "section": "GoatCounter",
+    "text": "GoatCounter\n07:51pmI’ll leave you with another great free, open source, privacy-friendly option, which is GoatCounter 🐐 https://www.goatcounter.com/. And @mattdray wrote a blogdown post about it! https://twitter.com/mattdray/status/1306353556706992128?s=20\nFor more convos about GA web analytics alternatives, see https://twitter.com/ma_salmon/status/1379363183526285312?s=20"
+  },
+  {
+    "objectID": "blog/2022-01-18-hello-umami/index.html#updating-umami",
+    "href": "blog/2022-01-18-hello-umami/index.html#updating-umami",
+    "title": "Hello Umami: Deploying a Privacy-Friendly Open Source Tool for Web Analytics",
+    "section": "Updating Umami",
+    "text": "Updating Umami\n01:52pmNote to self – how to update http://umami.is with new releases:\nRecent update to v1.25.0 https://github.com/mikecao/umami/releases/tag/v1.25.0\n\nFetch upstream from my umami fork\nLocally in terminal, change to my umami directory\ngit pull, npm install, railway up 🚄\n\n🚀 #WebAnalytics"
+  },
+  {
+    "objectID": "blog/2021-09-23-data-viz-a11y/index.html",
+    "href": "blog/2021-09-23-data-viz-a11y/index.html",
+    "title": "Resources for Data Viz Accessibility",
+    "section": "",
+    "text": "Updated on 2021-11-19 to include a link to a series of educational blog posts written by Mara Averick that cover {highcharter} and the accessibility module in detail. Thank you Mara!"
+  },
+  {
+    "objectID": "blog/2021-09-23-data-viz-a11y/index.html#general-resources",
+    "href": "blog/2021-09-23-data-viz-a11y/index.html#general-resources",
+    "title": "Resources for Data Viz Accessibility",
+    "section": "General resources",
+    "text": "General resources\n\nNote: There is an extensive list of data viz accessibility resources at https://github.com/dataviza11y/resources/blob/main/README.md\nArticle by Doug Schepers that provides great background on data viz accessibility, explains how data visualization itself is assistive technology, and offers considerations for a variety of readers: Why Accessibility Is at the Heart of Data Visualization\nThe Chartability methodology helps data viz practitioners audit their data viz, and it’s language/tool-agnostic. Chartability was created by Frank Elavsky with input from the broader community and is the most thorough set of standards I’ve come across.\nØystein Moseng provides some basic practices to consider in the post 10 Guidelines for DataViz Accessibility. Among those included are these two which I don’t see covered as often:\n\nDo not rely on color alone to convey information. I’ve also heard this referred to as “color independence” and in some cases as “dual-encoding” of information\nPrefer simple, familiar visualizations over complex novelties.\n\n\n\nPie chart from Øystein’s post using color and (optional) patterns to encode information\n\n\n\nTalk at the Data Visualization Society’s Outlier conference earlier this year, by Frank Elavsky, Larene Le Gassick, and Sarah Fossheim: Are your visualizations excluding people?\nGuidelines by Amy Cesal on how to write alt text for data visualizations: Writing Alt Text for Data Visualization\n\n\n\nExample template from Amy’s post\n\n\nPost by Lisa Charlotte Muth on how to pick colors for your data viz that everyone can appreciate: How to pick more beautiful colors for your data visualizations - Datawrapper Blog\n\n\n\nExample from Charlotte’s post of two different approaches to improving a pie chart\n\n\nPost by Gareth Ford Williams from The Readability Group about how to make more informed font choices: A Guide to Understanding What Makes a Typeface Accessible\n\nRelated is a talk from The Readability Group sharing findings from a survey study about font preferences including 2000+ participants. Among these were participants with dyslexia characteristics and participants with poor near vision: Don’t Believe the Type!\n\n\n\nBar graph showing the frequency by which 20 different fonts were selected by study participants with strong poor near vision in comparison with users with no poor near vision.\n\n\n\nSarah Fossheim authored a post titled An intro to designing accessible data visualizations which uses real-word applications to demonstrate 10 different accessibility practices.\nSarah also provides a code-through showing how to make screenreader-friendly graphs using D3.js in their post How to create a screen reader accessible graph like Apple’s with D3.js\n\n\n\n\n\nAmber Thomas provides an example of how to make scrollytales more accessible in a piece created with Ofunne Amaka for The Pudding: The Naked Truth\n\n\nI'm excited to release this project for many reasons, but one among them is that I introduced lots of new (to me) #a11y features. My favorite: the ability to turn off scrollytelling 💖 Would love to hear what folks think! pic.twitter.com/eDSQr9RjFe\n\n— Amber Thomas (@ProQuesAsker) March 25, 2021\n\n\nChris DeMartini has a series of blog posts documenting his journey auditing one of his public Tableau visualizations for accessibility:\n\nA Tableau Accessibility Journey\nFocus Order\nColor Contrast and Font Size\nKeyboard Accessibility \n\n\n\n\nTitle of Chris’s Tableau visualization being checked for color contrast."
+  },
+  {
+    "objectID": "blog/2021-09-23-data-viz-a11y/index.html#r-resources",
+    "href": "blog/2021-09-23-data-viz-a11y/index.html#r-resources",
+    "title": "Resources for Data Viz Accessibility",
+    "section": "R resources",
+    "text": "R resources\n\nLiz Hare and I gave a talk earlier this year on alt text in data viz shared as a part of TidyTuesday on Twitter. After web-scraping alt text from TidyTuesday tweets we found that only 3% of data viz tweets had alt text to accompany them (over the first 3 years of the TidyTuesday project). Links to the video recording, slides, and resources at https://github.com/spcanelon/csvConf2021. The talk includes guidelines on what makes effective alt text for data viz (complementary to those Amy Cesal includes in her post).\n\n\n\nSlide from our presentation summarizing the most useful alt-text features found among 196 data viz tweets\n\n\nPost from RStudio on how to add alt text to visualizations produced in R Markdown using code chunk option fig.alt: New in knitr: Improved accessibility with image alt text. New in knitr v1.35: You can now add code chunk options inside the code chunk!\nExample updated thanks to a heads-up from Garrick:\n#| fig.cap: Bigger flippers, bigger bills \n#| fig.alt: Scatterplot of flipper length by bill length of 3 penguin species, where we show penguins with bigger flippers have bigger bills.\n\nggplot(data = penguins, aes(x = flipper_length_mm,\n                            y = bill_length_mm,\n                            color = species)) +\n  geom_point(aes(shape = species), alpha = 0.8) +\n  scale_color_manual(\n    values = c(\"darkorange\",\"purple\",\"cyan4\")) \n\nCode chunk adapted from the RStudio blog post\n\n\nThe previous example included fig.cap and fig.alt in the code chunk heading:\n\n\n\n\n\nBigger flippers, bigger bills\n\n\n\n\n\nThe ggpattern R package developed by Mike FC supports filling ggplot2 geometries with patterns. If used judiciously, patterns can help make visualizations more accessible by providing an additional way to encode information without relying on color. Below is one example using ggpattern v0.2.2:\n\nlibrary(ggpattern)\n\npenguinColors &lt;- c(\"darkorange\", \"purple\", \"cyan4\")\n\nggplot(penguins, aes(species)) +\ngeom_bar_pattern(aes(fill = species,\n                    pattern = species,\n                    pattern_color = species),\n  fill = penguinColors,\n  alpha = 0.1,\n  linewidth = 1,\n  color = penguinColors,\n  pattern_color = penguinColors,\n  pattern_fill = penguinColors,\n  pattern_spacing = 0.025\n) +\ntheme_minimal() +\ntheme(legend.position = 'none')\n\n\n\n\nDifferent patterns mapped onto penguin species along with different colors\n\n\n\n\nThe Highcharter R package developed by Joshua Kunst adds interactivity to data viz using Highcharts JavaScript components designed with web accessibility in mind. The package has a learning curve, but lucky for us Mara Averick wrote an excellent series of blog posts on using the Highcharts accessibility module with {highcharter}.\n\n\n\nInteractive scatterplot from Mara’s post using color and shape to encode information about penguin species"
+  },
+  {
+    "objectID": "blog/2022-05-31-ccd-sips/index.html",
+    "href": "blog/2022-05-31-ccd-sips/index.html",
+    "title": "Philly Center City District Sips 2022: An Interactive Map",
+    "section": "",
+    "text": "Philly’s Center City District posted a list of restaurants and bars participating in Philly’s 2022 CCD Sips. CCD Sips is a series of summer Wednesday evenings (4:30-7pm) filled with happy hour specials, between June 1st and August 31st.\nI prefer to take in this information as a map instead of a list, so I scraped some information from the website and made one! You can click or tap on the circle map markers to see information about each restaurant/bar along with a direct link to their posted happy hour specials.\nCheck out the link at the top of this post for a larger version of the interactive map below. And jump down to the tutorial if you’d like to learn how I used R to build the interactive map!"
+  },
+  {
+    "objectID": "blog/2022-05-31-ccd-sips/index.html#tutorial-start",
+    "href": "blog/2022-05-31-ccd-sips/index.html#tutorial-start",
+    "title": "Philly Center City District Sips 2022: An Interactive Map",
+    "section": "Tutorial start",
+    "text": "Tutorial start\nAside from the tidyverse and here packages, I used a handful of R packages to bring this map project together.\n\n\n\n\n\n\n\n\nPackage\nPurpose\nVersion\n\n\n\n\nrobotstxt\nCheck website for scraping permissions\n0.7.13\n\n\nrvest\nScrape the information off of the website\n1.0.1\n\n\nggmap\nGeocode the restaurant addresses\n3.0.0\n\n\nleaflet\nBuild the interactive map\n2.0.4.1\n\n\nleaflet.extras\nAdd extra functionality to map\n1.0.0"
+  },
+  {
+    "objectID": "blog/2022-05-31-ccd-sips/index.html#scraping-the-data",
+    "href": "blog/2022-05-31-ccd-sips/index.html#scraping-the-data",
+    "title": "Philly Center City District Sips 2022: An Interactive Map",
+    "section": "Scraping the data",
+    "text": "Scraping the data\n\nChecking site permissions\nCheck the site’s terms of service using the robotstxt package, which downloads and parses the site’s robots.txt file.\nWhat I wanted to look for was whether any pages are not allowed to be crawled by bots/scrapers. In my case there weren’t any, indicated by Allow: /.\nget_robotstxt(\"https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view\")\n\n\nOutput\n\n[robots.txt]\n--------------------------------------\n\n# robots.txt overwrite by: on_suspect_content\n\nUser-agent: *\nAllow: /\n\n\n\n[events]\n--------------------------------------\n\nrequested:   https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view/robots.txt \ndownloaded:  https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view/robots.txt \n\n$on_not_found\n$on_not_found$status_code\n[1] 404\n\n\n$on_file_type_mismatch\n$on_file_type_mismatch$content_type\n[1] \"text/html; charset=utf-8\"\n\n\n$on_suspect_content\n$on_suspect_content$parsable\n[1] FALSE\n\n$on_suspect_content$content_suspect\n[1] TRUE\n\n\n[attributes]\n--------------------------------------\n\nproblems, cached, request, class\n\n\n\nHarvesting data from the first page\nThen I used the rvest package to scrape the information from the tables of restaurants/bars participating in CCD Sips.\nI’ve learned that ideally you would only scrape each page once, so I checked my approach with the first page before I wrote a function to scrape the remaining pages.\n# define the page\nurl &lt;- \"https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1\"\n\n# read the page html\nhtml1 &lt;- read_html(url)\n\n# extract table info\ntable1 &lt;- \n  html1 |&gt; \n  html_node(\"table\") |&gt; \n  html_table()\ntable1 |&gt; head(3) |&gt; kableExtra::kable()\n\n\n\n\n\nName\n\n\nAddress\n\n\nPhone\n\n\nCCD SIPS Specials\n\n\n\n\n\n\n1225 Raw Sushi and Sake Lounge\n\n\n1225 Sansom St, Philadelphia, PA 19102\n\n\n215.238.1903\n\n\nCCD SIPS Specials\n\n\n\n\n1518 Bar and Grill\n\n\n1518 Sansom St, Philadelphia, PA 19102\n\n\n267.639.6851\n\n\nCCD SIPS Specials\n\n\n\n\nAir Grille Garden at Dilworth Park\n\n\n1 S 15th St, Philadelphia, PA 19102\n\n\n215.587.2761\n\n\nCCD SIPS Specials\n\n\n\n\n\n# extract hyperlinks to specific restaurant/bar specials\nlinks &lt;- \n  html1 |&gt; \n  html_elements(\".o-table__tag.ccd-text-link\") |&gt; \n  html_attr(\"href\") |&gt; \n  as_tibble()\nlinks |&gt; head(3) |&gt; kableExtra::kable()\n\n\n\n\n\nvalue\n\n\n\n\n\n\n#1225-raw-sushi-and-sake-lounge\n\n\n\n\n#1518-bar-and-grill\n\n\n\n\n#air-grill-garden-dilworth-park\n\n\n\n\n\n# add full hyperlinks to the table info\ntable1Mod &lt;-\n  bind_cols(table1, links) |&gt; \n  mutate(Specials = paste0(url, value)) |&gt; \n  select(-c(`CCD SIPS Specials`, value))\ntable1Mod |&gt; head(3) |&gt; kableExtra::kable()\n\n\n\n\n\nName\n\n\nAddress\n\n\nPhone\n\n\nSpecials\n\n\n\n\n\n\n1225 Raw Sushi and Sake Lounge\n\n\n1225 Sansom St, Philadelphia, PA 19102\n\n\n215.238.1903\n\n\nhttps://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#1225-raw-sushi-and-sake-lounge\n\n\n\n\n1518 Bar and Grill\n\n\n1518 Sansom St, Philadelphia, PA 19102\n\n\n267.639.6851\n\n\nhttps://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#1518-bar-and-grill\n\n\n\n\nAir Grille Garden at Dilworth Park\n\n\n1 S 15th St, Philadelphia, PA 19102\n\n\n215.587.2761\n\n\nhttps://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#air-grill-garden-dilworth-park\n\n\n\n\n\n\n\nHarvesting data from the remaining pages\nOnce I could confirm that the above approach harvested the information I needed, I adapted the code into a function that I could apply to pages 2-3 of the site.\ngetTables &lt;- function(pageNumber) {\n  Sys.sleep(2)\n  \n  url &lt;- paste0(\"https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=\", pageNumber)\n  \n  html &lt;- read_html(url)\n  \n  table &lt;- \n    html |&gt; \n    html_node(\"table\") |&gt;\n    html_table()\n  \n  links &lt;- \n    html |&gt; \n    html_elements(\".o-table__tag.ccd-text-link\") |&gt; \n    html_attr(\"href\") |&gt; \n    as_tibble()\n  \n  tableSpecials &lt;&lt;-\n    bind_cols(table, links) |&gt; \n    mutate(Specials = paste0(url, value)) |&gt; \n    select(-c(`CCD SIPS Specials`, value))\n}\nI used my getTable() function and the purrr::map_df() function to harvest the table of restaurants/bars from pages 2 and 3. Then I combined all the data frames together and saved the complete data frame as an .Rds object so that I wouldn’t have to scrape the data again.\n# get remaining tables\ntable2 &lt;- map_df(2:3, getTables) \n\n# combine all tables\ntable &lt;- bind_rows(table1Mod, table2)\ntable |&gt; head(3) |&gt; kableExtra::kable()\n\n\n\n\n\nName\n\n\nAddress\n\n\nPhone\n\n\nSpecials\n\n\n\n\n\n\n1028 Yamitsuki Sushi & Ramen\n\n\n1028 Arch Street, Philadelphia, PA 19107\n\n\n215.629.3888\n\n\nhttps://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#1028-yamitsuki-sushi-ramen\n\n\n\n\n1225 Raw Sushi and Sake Lounge\n\n\n1225 Sansom St, Philadelphia, PA 19102\n\n\n215.238.1903\n\n\nhttps://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#1225-raw-sushi-and-sake-lounge\n\n\n\n\n1518 Bar and Grill\n\n\n1518 Sansom St, Philadelphia, PA 19102\n\n\n267.639.6851\n\n\nhttps://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#1518-bar-and-grill\n\n\n\n\n\n# save full table to file\nwrite_rds(\n  table,\n  file = here(\"content/blog/2022-05-31-ccd-sips/specialsScraped.Rds\")\n  )"
+  },
+  {
+    "objectID": "blog/2022-05-31-ccd-sips/index.html#geocoding-addresses",
+    "href": "blog/2022-05-31-ccd-sips/index.html#geocoding-addresses",
+    "title": "Philly Center City District Sips 2022: An Interactive Map",
+    "section": "Geocoding addresses",
+    "text": "Geocoding addresses\nThe next step was to use geocoding to convert the restaurant/bar addresses to geographical coordinates (longitude and latitude) that I could map. I used the ggmap package and the Google Geocoding API service because this was a small project (59 addresses/requests) which wouldn’t make a dent in the free credit available on the platform.\nThe last time I geocoded addresses was for an almost identical project in 2019 and I had issues using the same API key from back then, so I made a new one. I restricted my new key to the Geocoding and Geolocation APIs.\n# register my API key\n# ggmap::register_google(key = \"[your key]\")\n\n# geocode addresses\nspecials_ggmap &lt;- \n  table |&gt; \n  mutate_geocode(Address)\n\n# rename new variables\nspecials &lt;- \n  specials_ggmap |&gt; \n  rename(Longitude = lon,\n         Latitude = lat) \nspecials |&gt; head(3) |&gt; kableExtra::kable()\n\n\n\n\n\nName\n\n\nAddress\n\n\nPhone\n\n\nSpecials\n\n\nLongitude\n\n\nLatitude\n\n\n\n\n\n\n1028 Yamitsuki Sushi & Ramen\n\n\n1028 Arch Street, Philadelphia, PA 19107\n\n\n215.629.3888\n\n\nhttps://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#1028-yamitsuki-sushi-ramen\n\n\n-75.15746\n\n\n39.95354\n\n\n\n\n1225 Raw Sushi and Sake Lounge\n\n\n1225 Sansom St, Philadelphia, PA 19102\n\n\n215.238.1903\n\n\nhttps://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#1225-raw-sushi-and-sake-lounge\n\n\n-75.16149\n\n\n39.95004\n\n\n\n\n1518 Bar and Grill\n\n\n1518 Sansom St, Philadelphia, PA 19102\n\n\n267.639.6851\n\n\nhttps://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#1518-bar-and-grill\n\n\n-75.16665\n\n\n39.95020\n\n\n\n\n\nI made sure to save the new data frame with geographical coordinates as an .Rds object so I wouldn’t have to geocode the data again! This would be particularly important if I was working on a large project.\n# save table with geocoded addresses to file\nwrite_rds(\n  specials,\n  file = here(\"content/blog/2022-05-31-ccd-sips/specialsGeocoded.Rds\"))"
+  },
+  {
+    "objectID": "blog/2022-05-31-ccd-sips/index.html#building-the-map",
+    "href": "blog/2022-05-31-ccd-sips/index.html#building-the-map",
+    "title": "Philly Center City District Sips 2022: An Interactive Map",
+    "section": "Building the map",
+    "text": "Building the map\nTo build the map, I used the leaflet package. Some of the resources I found helpful, in addition to the package documentation:\n\nScrape website data with the new R package rvest (+ a postscript on interacting with web pages with RSelenium) · Hollie at ZevRoss – how to style pop-ups\nLeaflet Map Markers in R · Jindra Lacko – how to customize marker icons\nA guide to basic Leaflet accessibility · Leaflet – accessibility considerations. Though it’s unclear to me how these features built into the Leaflet library translate over to the leaflet R package. For example, I couldn’t find an option for adding alt-text or a title to each marker, but maybe I wasn’t looking in the right place within the documentation.\n\n\nCustomizing map markers\n# style pop-ups for the map with inline css styling\n\n# marker for the restaurants/bars\npopInfoCircles &lt;- paste(\"&lt;h2 style='font-family: Red Hat Text, sans-serif; font-size: 1.6em; color:#43464C;'&gt;\", \"&lt;a style='color: #00857A;' href=\", specials$Specials, \"&gt;\", specials$Name, \"&lt;/a&gt;&lt;/h2&gt;\",\"&lt;p style='font-family: Red Hat Text, sans-serif; font-weight: normal; font-size: 1.5em; color:#9197A6;'&gt;\", specials$Address, \"&lt;/p&gt;\")\n\n# marker for the center of the map\npopInfoMarker&lt;-paste(\"&lt;h1 style='padding-top: 0.5em; margin-top: 1em; margin-bottom: 0.5em; font-family: Red Hat Text, sans-serif; font-size: 1.8em; color:#43464C;'&gt;\", \"&lt;a style='color: #00857A;' href='https://centercityphila.org/explore-center-city/ccdsips'&gt;\", \"Center City District Sips 2022\", \"&lt;/a&gt;&lt;/h1&gt;&lt;p style='color:#9197A6; font-family: Red Hat Text, sans-serif; font-size: 1.5em; padding-bottom: 1em;'&gt;\", \"Philadelphia, PA\", \"&lt;/p&gt;\")\n\n# custom icon for the center of the map\nawesome &lt;-\n  makeAwesomeIcon(\n    icon = \"map-pin\",\n    iconColor = \"#FFFFFF\",\n    markerColor = \"darkblue\",\n    library = \"fa\"\n  )\n\n\nPlotting the restaurants/bars\nleaflet(data = specials, \n        width = \"100%\", \n        height = \"850px\",\n        # https://stackoverflow.com/a/42170340\n        options = tileOptions(minZoom = 15,\n                              maxZoom = 19)) |&gt;\n  # add map markers ----\n  addCircles(\n    lat = ~ specials$Latitude, \n    lng = ~ specials$Longitude, \n    fillColor = \"#009E91\", #olivedrab goldenrod\n    fillOpacity = 0.6, \n    stroke = F,\n    radius = 12, \n    popup = popInfoCircles,\n    label = ~ Name,\n    labelOptions = labelOptions(\n      style = list(\n        \"font-family\" = \"Red Hat Text, sans-serif\",\n        \"font-size\" = \"1.2em\")\n      ))\n\n\n\n\n\n\n\nAdding the map background\nleaflet(data = specials, \n        width = \"100%\", \n        height = \"850px\",\n        # https://stackoverflow.com/a/42170340\n        options = tileOptions(minZoom = 15,\n                              maxZoom = 19)) |&gt;\n  # add map markers ----\n  addCircles(\n    lat = ~ specials$Latitude, \n    lng = ~ specials$Longitude, \n    fillColor = \"#009E91\", #olivedrab goldenrod\n    fillOpacity = 0.6, \n    stroke = F,\n    radius = 12, \n    popup = popInfoCircles,\n    label = ~ Name,\n    labelOptions = labelOptions(\n      style = list(\n        \"font-family\" = \"Red Hat Text, sans-serif\",\n        \"font-size\" = \"1.2em\")\n      )) |&gt;\n  # add map tiles in the background ----\n  addProviderTiles(providers$CartoDB.Positron)\n\n\n\n\n\n\n\nSetting the map view\nleaflet(data = specials, \n        width = \"100%\", \n        height = \"850px\",\n        # https://stackoverflow.com/a/42170340\n        options = tileOptions(minZoom = 15,\n                              maxZoom = 19)) |&gt;\n  # add map markers ----\n  addCircles(\n    lat = ~ specials$Latitude, \n    lng = ~ specials$Longitude, \n    fillColor = \"#009E91\", #olivedrab goldenrod\n    fillOpacity = 0.6, \n    stroke = F,\n    radius = 12, \n    popup = popInfoCircles,\n    label = ~ Name,\n    labelOptions = labelOptions(\n      style = list(\n        \"font-family\" = \"Red Hat Text, sans-serif\",\n        \"font-size\" = \"1.2em\")\n      )) |&gt;\n  # add map tiles in the background ----\n  addProviderTiles(providers$CartoDB.Positron) |&gt;\n  # set the map view\n  setView(mean(specials$Longitude), \n          mean(specials$Latitude), \n          zoom = 16)\n\n\n\n\n\n\n\nAdding a marker at the center\nleaflet(data = specials, \n        width = \"100%\", \n        height = \"850px\",\n        # https://stackoverflow.com/a/42170340\n        options = tileOptions(minZoom = 15,\n                              maxZoom = 19)) |&gt;\n  # add map markers ----\n  addCircles(\n    lat = ~ specials$Latitude, \n    lng = ~ specials$Longitude, \n    fillColor = \"#009E91\", #olivedrab goldenrod\n    fillOpacity = 0.6,\n    stroke = F,\n    radius = 12, \n    popup = popInfoCircles,\n    label = ~ Name,\n    labelOptions = labelOptions(\n      style = list(\n        \"font-family\" = \"Red Hat Text, sans-serif\",\n        \"font-size\" = \"1.2em\")\n      )) |&gt;\n  # add map tiles in the background ----\n  addProviderTiles(providers$CartoDB.Positron) |&gt;\n  # set the map view\n  setView(mean(specials$Longitude), \n          mean(specials$Latitude), \n          zoom = 16) |&gt;\n  # add marker at the center ----\n  addAwesomeMarkers(\n    icon = awesome,\n    lng = mean(specials$Longitude), \n    lat = mean(specials$Latitude), \n    label = \"Center City District Sips 2022\",\n    labelOptions = labelOptions(\n      style = list(\n        \"font-family\" = \"Red Hat Text, sans-serif\",\n        \"font-size\" = \"1.2em\")\n      ),\n    popup = popInfoMarker,\n    popupOptions = popupOptions(maxWidth = 250))\n\n\n\n\n\n\n\nAdding fullscreen control\nleaflet(data = specials, \n        width = \"100%\", \n        height = \"850px\",\n        # https://stackoverflow.com/a/42170340\n        options = tileOptions(minZoom = 15,\n                              maxZoom = 19)) |&gt;\n  # add map markers ----\n  addCircles(\n    lat = ~ specials$Latitude, \n    lng = ~ specials$Longitude, \n    fillColor = \"#009E91\", #olivedrab goldenrod\n    fillOpacity = 0.6, \n    stroke = F,\n    radius = 12, \n    popup = popInfoCircles,\n    label = ~ Name,\n    labelOptions = labelOptions(\n      style = list(\n        \"font-family\" = \"Red Hat Text, sans-serif\",\n        \"font-size\" = \"1.2em\")\n      )) |&gt;\n  # add map tiles in the background ----\n  addProviderTiles(providers$CartoDB.Positron) |&gt;\n  # set the map view\n  setView(mean(specials$Longitude), \n          mean(specials$Latitude), \n          zoom = 16) |&gt;\n  # add marker at the center ----\n  addAwesomeMarkers(\n    icon = awesome,\n    lng = mean(specials$Longitude), \n    lat = mean(specials$Latitude), \n    label = \"Center City District Sips 2022\",\n    labelOptions = labelOptions(\n      style = list(\n        \"font-family\" = \"Red Hat Text, sans-serif\",\n        \"font-size\" = \"1.2em\")\n      ),\n    popup = popInfoMarker,\n    popupOptions = popupOptions(maxWidth = 250)) |&gt; \n  # add fullscreen control button ----\n  leaflet.extras::addFullscreenControl()"
+  },
+  {
+    "objectID": "blog/2022-05-31-ccd-sips/index.html#creating-the-map-with-quarto",
+    "href": "blog/2022-05-31-ccd-sips/index.html#creating-the-map-with-quarto",
+    "title": "Philly Center City District Sips 2022: An Interactive Map",
+    "section": "Creating the map with Quarto",
+    "text": "Creating the map with Quarto\nThe first time around, I created a standalone map by first running an R script with the necessary code, and then exporting the HTML output as a webpage. This worked well enough, except that I realized:\n\nThe title of the map webpage (the name that is displayed on a browser tab) was just “map” because the name of the HTML file was map.html. I wanted something more descriptive.\nThe map wasn’t mobile-responsive. In other words, the map markers and text looked too small when viewed on a mobile device.\n\n\nChanging the webpage title\nThe webpage title was a quick one to fix thanks to a Stack Overflow response to a question about turning off the title in an R Markdown document. The pagetitle YAML option lets you set the HTML’s title tag independently of the document title:\npagetitle: \"Philly CCD Sips 2022 Map\"\n\n\nFixing the mobile-responsiveness\nThe mobile-responsiveness issue could be solved by adding metadata to the map HTML, but I would need to be able to blend HTML with R code. I have been practicing using Quarto and figured I could make a standalone map from a Quarto document (.qmd) rather than an R Markdown one (.Rmd or .Rmarkdown). You can find the map’s Quarto document alongside this blog post.\nAccording to the Leaflet library documentation and this Stack Overflow answer, fixing the map to be mobile-responsive required adding the following metadata to the HTML code:\n&lt;meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no\" /&gt;\nI used the metathis R package to add this metadata to an R code chunk in my Quarto document using the meta_viewport() function:\n# make mobile-responsive\nmeta_viewport(\n  width = \"device-width\",\n  initial_scale = \"1.0\",\n  maximum_scale = \"1.0\",\n  user_scalable = \"no\"\n  )\n\nUpdate: In the process of updating this post I’m noticing that specifying the viewport metadata tag doesn’t seem to be necessary anymore, and I don’t understand why 🤔 …so I’ll leave the step as is, just in case it’s helpful to anyone 🤷🏽‍♀️\n\n\n\nAdding social media tags\nThen I added more metadata. I was particularly interested in adding social media tags so that if I (or anyone else) shared this map webpage, an informative preview would display as a social card.\nI used the meta_social() function to add these tags:\n# tags for social media\nmeta_social(\n  title = \"Philly CCD Sips 2022 Interactive Map\",\n  url = \"https://www.silviacanelon.com/blog/2022-ccd-sips/map.html\",\n  image = \"https://github.com/spcanelon/silvia/blob/main/content/blog/2022-05-31-ccd-sips/featured.png?raw=true\",\n  image_alt = \"Map of Philly's Center City with a pop-up saying Center City District Sips 2022\",\n  og_type = \"website\",\n  og_author = \"Silvia Canelón\",\n  twitter_card_type = \"summary_large_image\",\n  twitter_creator = \"@spcanelon\"\n)\nGreat, I had added all of the metadata I was interested in! Except that because I was using Quarto, and not one of the more common outputs I had a couple of extra steps to take:\n\nWrite my metadata tags to an HTML file, using the write_meta() function:\n# write meta tags to file\nwrite_meta(path = \"meta-map.html\")\nManually include this HTML in my webpage via the Quarto file. The include-in-header Quarto YAML option helped me here:\ninclude-in-header: meta-map.html\n\n\n\nMaking the map fullscreen\nA side effect of creating the map from a Quarto (or R Markdown) document is that the output is styled by default to fit within the width of an article (in this case 900 pixels). I wanted the map to take up the whole width of the page, so I made use of the page-layout Quarto YAML option:\nformat: \n  html:\n    page-layout: custom\nAnother option that worked pretty well was to use the column: screen code chunk option built into Quarto. The Quarto documentation even shows an example to display a Leaflet map I but it left a thin margin at the top margin, and I wanted the map to be flush against the top edge of the webpage.\n\n\nRendering the standalone map\nLastly, I added one more option to the YAML that would render the Quarto document into a self-contained HTML with all of the content needed to create the map.\nformat:\n  html:\n    page-layout: custom\n    self-contained: true"
+  },
+  {
+    "objectID": "license.html",
+    "href": "license.html",
+    "title": "License",
+    "section": "",
+    "text": "My blog posts are released under a Creative Commons Attribution-ShareAlike 4.0 International License."
   },
   {
     "objectID": "accessibility.html",
@@ -42,45 +595,10 @@
     "text": "Work related to accessibility\n\nTalk: Revealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community\nBlog post: Resources for Data Viz Accessibility\nBlog post: Auditing for Web Accessibility"
   },
   {
-    "objectID": "license.html",
-    "href": "license.html",
-    "title": "License",
-    "section": "",
-    "text": "My blog posts are released under a Creative Commons Attribution-ShareAlike 4.0 International License."
-  },
-  {
-    "objectID": "about/index.html",
-    "href": "about/index.html",
-    "title": "Silvia Canelón",
-    "section": "",
-    "text": "Hey, I’m happy you’re here\n\nThanks for stopping by!\nI’m a data analyst in the Urban Health Lab at the University of Pennsylvania. My research interests include applications of biomedical and spatial data science in the public and population health fields.\nI work on projects that use electronic health record (EHR) and geospatial data to explore how the neighborhood environment and access to urban nature can impact the health of individuals in Philadelphia. Learn more about my research interests in publications.\nGet in touch by sending me a note!"
-  },
-  {
-    "objectID": "about/index.html#about-me",
-    "href": "about/index.html#about-me",
-    "title": "Silvia Canelón",
-    "section": "About me",
-    "text": "About me\nBiomedical engineer turned informaticist, curious about all intersections of data and society.\nPrior to joining the Urban Health Lab, I developed novel data mining methods to extract meaningful information from the EHR and study health outcomes and disparities in pregnant populations. I’m particularly interested in research that combines biomedical data science with open data sources in ways that prioritize health equity in communities.\n\n\nCertificate in Biomedical Informatics ∙ University of Pennsylvania ∙ 2019\n\n\nPh.D. in Biomedical Engineering ∙ Purdue University ∙ 2018\n\n\nB.S. in Biomedical Engineering ∙ University of Minnesota ∙ 2012\n\n\nI enjoy using R to optimize my data science workflow and have noticed it making guest appearances elsewhere in my life. I’m certified as an RStudio Tidyverse Instructor and am passionate about R education and data literacy as ways to build power in communities. Keep up with my R tinkering in my blog and presentations in talks.\n\n\nTidyverse Instructor Certification ∙ RStudio, PBC ∙ 2020"
-  },
-  {
-    "objectID": "about/index.html#lately",
-    "href": "about/index.html#lately",
-    "title": "Silvia Canelón, PhD",
-    "section": "Lately…",
-    "text": "Lately…\nI enjoy using R to optimize my data science workflow and have noticed it making guest appearances elsewhere in my life. I’m certified as an RStudio Tidyverse Instructor and am passionate about R education as a way to build power in communities. Keep up with my R tinkering in my blog and presentations in talks.\n\n\nTidyverse Instructor Certification ∙ RStudio, PBC ∙ 2020"
-  },
-  {
-    "objectID": "about/index.html#contact",
-    "href": "about/index.html#contact",
-    "title": "Silvia Canelón",
-    "section": "Contact",
-    "text": "Contact"
-  },
-  {
-    "objectID": "index.html#lately",
-    "href": "index.html#lately",
-    "title": "Silvia Canelón, PhD",
-    "section": "Lately…",
-    "text": "Lately…"
+    "objectID": "accessibility.html#footnotes",
+    "href": "accessibility.html#footnotes",
+    "title": "Accessibility commitment",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nFor more on font accessibility, I recommend the talk Don’t Believe the Type! by The Readability Group.↩︎"
   }
 ]

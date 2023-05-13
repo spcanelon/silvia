@@ -1,0 +1,14 @@
+{
+  "hash": "da77c8148e706ae9cdf55f3d7006740b",
+  "result": {
+    "markdown": "---\ntitle: \"Lessons Learned from the EHR\"\nauthor: \"Silvia Canelón\"\ndate: \"2022-02-11\"\n# date: 2022-02-11T12:00:00\nslug: tdw-ehr-lessons\ncategories:\n  - Research\ntags:\n  - EHR\n#event: \"Toronto Data Workshop\"\n#event_url: https://rohanalexander.com/toronto_data_workshop.html\n#location: Virtual\nimage: featured.png\nsubtitle: \"Toronto Data Workshop talk about working with Electronic Health Record data\"\nsummary: \"[Toronto Data Workshop](https://rohanalexander.com/toronto_data_workshop.html) talk about working with Electronic Health Record data\"\nabstract: \"Toronto Data Workshop talk about working with Electronic Health Record data\"\n#date_end: 2022-02-11T13:00:00\n#all_day: yes\n# publishDate: '2022-02-09'\nfeatured: yes\nlinks:\n- icon: calendar-check\n  icon_pack: fas\n  name: speaker schedule\n  url: https://rohanalexander.com/toronto_data_workshop.html#current-schedule\n- icon: images\n  icon_pack: fas\n  name: slides\n  url: https://slides.silviacanelon.com/2022-tdw-ehr-lessons\n- icon: youtube\n  icon_pack: fab\n  name: video\n  url: https://youtu.be/4M8Op1oCN5U\n---\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
