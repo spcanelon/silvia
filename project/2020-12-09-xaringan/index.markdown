@@ -16,11 +16,9 @@ subtitle: "A CSS theme contributed to the xaringan package to follow the [NHS id
 excerpt: "A CSS theme contributed to the xaringan package to follow the [NHS identity guidelines](https://www.england.nhs.uk/nhsidentity/identity-guidelines/)"
 links:
 - icon: images
-  icon_pack: fas
   name: Demo
   url: https://spcanelon.github.io/xaringan-basics-and-beyond/nhsr-theme/sample-16-9.html#1
 - icon: github
-  icon_pack: fab
   name: Code
   url: https://github.com/yihui/xaringan/pull/280
 ---

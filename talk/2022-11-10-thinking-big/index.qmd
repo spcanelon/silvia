@@ -16,11 +16,9 @@ subtitle: "Tips on Wrangling Large Vector Data into Interactive Maps"
 description:  "[CANSSI Ontario Statistical Software Conference](https://canssiontario.utoronto.ca/event/statistical-software-conference/) talk on interactive map-making with large vector data"
 links:
 - icon: images
-  icon_pack: fas
   name: slides
   url: https://slides.silviacanelon.com/2022-thinking-big
 - icon: play-circle
-  icon_pack: fas
   name: video
   url: https://youtu.be/wiAnmkbgcO8
 ---

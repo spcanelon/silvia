@@ -21,7 +21,6 @@ abstract: |
 
 links:
 - icon: doi
-  icon_pack: ai
   name: Publication
   url: https://doi.org/10.3390/ijerph17051703
 - icon: file-pdf
@@ -29,7 +28,6 @@ links:
   name: PDF
   url: https://www.mdpi.com/1660-4601/17/5/1703/pdf
 - icon: linkedin
-  icon_pack: fab
   name: Summary by Mary Regina Boland
   url: https://www.linkedin.com/pulse/climate-impacts-womens-health-mary-regina-boland/?trackingId=zbL7SUeKQRqQyDUg0KNVEA%3D%3D
 ---

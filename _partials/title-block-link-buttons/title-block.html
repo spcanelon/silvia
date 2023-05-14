@@ -1,0 +1,35 @@
+<header id="title-block-header">
+<!-- title -->
+$if(title)$<h1 class="title">$title$</h1>$endif$
+<!-- subtitle -->
+$if(subtitle)$
+<p class="subtitle">$subtitle$</p>
+$endif$
+<!-- authors -->
+$for(author)$
+<p class="author">$author$</p>
+$endfor$
+<!-- date -->
+$if(date)$
+<p class="date">$date$</p>
+$endif$
+
+<!-- link buttons -->
+<!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html#LL29C1-L35C8 -->
+$if(links)$
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-center justify-content-sm-start" role="group" aria-label="Links">
+$for(links)$
+<a href="$links.url$" class="btn btn-secondary text-uppercase"><i class="bi bi-$links.icon$ me-2"></i>$links.name$</a>
+$endfor$
+</div>
+$endif$
+
+<!-- abstract -->
+$if(abstract)$
+<div class="abstract">
+<div class="abstract-title">$abstract-title$</div>
+$abstract$
+</div>
+$endif$
+
+</header>

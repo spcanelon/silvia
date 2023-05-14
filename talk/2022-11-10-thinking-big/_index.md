@@ -18,11 +18,9 @@ description:  "[CANSSI Ontario Statistical Software Conference](https://canssion
 #
 links:
 - icon: images
-  icon_pack: fas
   name: slides
   url: https://slides.silviacanelon.com/2022-thinking-big
 - icon: play-circle
-  icon_pack: fas
   name: video
   url: https://youtu.be/wiAnmkbgcO8
 #

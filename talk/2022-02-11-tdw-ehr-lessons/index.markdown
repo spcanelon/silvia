@@ -16,15 +16,12 @@ description:  "[Toronto Data Workshop](https://rohanalexander.com/toronto_data_w
 # abstract: "Toronto Data Workshop talk about working with Electronic Health Record data"
 links:
 - icon: calendar-check
-  icon_pack: fas
   name: speaker schedule
   url: https://rohanalexander.com/toronto_data_workshop.html#current-schedule
 - icon: images
-  icon_pack: fas
   name: slides
   url: https://slides.silviacanelon.com/2022-tdw-ehr-lessons
 - icon: youtube
-  icon_pack: fab
   name: video
   url: https://youtu.be/4M8Op1oCN5U
 ---

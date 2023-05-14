@@ -31,15 +31,12 @@ abstract: |
   **Conclusions and Relevance.** The results of this large, retrospective cohort study indicate an increased risk of stillbirth among pregnant people with SCT. These findings underscore the need for additional risk assessment during pregnancy for sickle cell carriers.
 links:
 - icon: doi
-  icon_pack: ai
   name: Publication
   url: https://doi.org/10.1001/jamanetworkopen.2021.34274
 - icon: file-word
-  icon_pack: fas
   name: Supplemental Content (Accessible DocX)
   url: publication/2021-sct-stillbirth/SupplementaryMaterial.docx
 - icon: file-pdf
-  icon_pack: fas
   name: Supplemental Content (Accessible PDF)
   url: publication/2021-sct-stillbirth/SupplementaryMaterial.pdf
 filters:

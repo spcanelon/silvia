@@ -21,7 +21,6 @@ description:  R-Ladies Seattle package demonstrations showing how to make beauti
 abstract: ""
 links:
 - icon: pencil-alt
-  icon_pack: fas
   name: "Blog post: Deploying xaringan Slides"
   url: /blog/2021-deploying-xaringan-slides/
 ---

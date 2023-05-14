@@ -27,15 +27,12 @@ abstract: This four-hour hands-on workshop will be a gentle introduction to the 
   already familiar with R Markdown and GitHub.
 links:
 - icon: book-open
-  icon_pack: fas
   name: workshop site
   url: https://bit.ly/xaringan-nhsr
 - icon: calendar-check
-  icon_pack: fas
   name: conference program
   url: https://nhsrcommunity.com/events/nhs-r-virtual-conference-2020/
 - icon: github
-  icon_pack: fab
   name: conference repo
   url: https://github.com/nhs-r-community/Conference_2020#nhs-r-community-conference-workshops-2020-
 ---

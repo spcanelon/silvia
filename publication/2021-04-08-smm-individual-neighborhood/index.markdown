@@ -30,7 +30,6 @@ abstract: |
   **Conclusion:** Both individual-level and neighborhood-level risk factors were associated with severe maternal morbidity. These factors may contribute to rising severe maternal morbidity rates in the United States. Better characterization of risk factors for severe maternal morbidity is imperative for the design of clinical and public health interventions seeking to lower rates of severe maternal morbidity and maternal mortality.
 links:
 - icon: doi
-  icon_pack: ai
   name: Publication
   url: https://doi.org/10.1097/aog.0000000000004343
 - icon: newspaper
