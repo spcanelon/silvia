@@ -21,7 +21,6 @@ summary: 'An interactive map showing restaurants participating in CCD Sips 2022 
 featured: yes
 links:
 - icon: map-marked-alt
-  icon_pack: fas
   name: Interactive Map
   url: http://tiny.cc/ccdsips2022
 format: hugo

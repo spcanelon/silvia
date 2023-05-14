@@ -15,15 +15,12 @@ excerpt: "A four hour workshop introducing the [xaringan](https://github.com/yih
 description: This four-hour hands-on workshop is a gentle introduction to the xaringan package as a tool to create impressive presentation slides that can be deployed to the web for easy sharing.
 links:
 - icon: book-open
-  icon_pack: fas
   name: website
   url: https://spcanelon.github.io/xaringan-basics-and-beyond
 - icon: github
-  icon_pack: fab
   name: code
   url: https://github.com/spcanelon/xaringan-basics-and-beyond
 - icon: comment
-  icon_pack: fas
   name: Version en español
   url: "/talk/2020-12-17-introduccion-xaringan/"
 ---

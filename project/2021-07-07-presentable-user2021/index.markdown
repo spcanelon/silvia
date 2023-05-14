@@ -19,15 +19,12 @@ abstract: |
   The xaringan package brings professional, impressive, and visually appealing slides to the powerful R Markdown ecosystem. Through our hands-on tutorial, you will learn how to design highly effective slides that support presentations for teaching and reporting alike. Over three hours, you will learn how to create an accessible baseline design that matches your institution or organization’s style guide. Together we’ll explore the basics of CSS—the design language of the internet—and how we can leverage CSS to produce elegant slides for effective communication.
 links:
 - icon: book-open
-  icon_pack: fas
   name: website
   url: https://presentable-user2021.netlify.app/
 - icon: github
-  icon_pack: fab
   name: code
   url: https://github.com/presentable-user2021
 - icon: comment
-  icon_pack: fas
   name: talk post
   url: /talk/2021-presentable-user2021/
 ---

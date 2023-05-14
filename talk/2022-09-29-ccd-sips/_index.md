@@ -23,15 +23,12 @@ description:  "[R-Ladies Philly](https://www.rladiesphilly.org) workshop on webs
 #
 links:
 - icon: images
-  icon_pack: fas
   name: slides
   url: https://slides.silviacanelon.com/2022-ccd-sips
 - icon: github
-  icon_pack: fab
   name: materials
   url: https://github.com/spcanelon/2022-ccd-sips
 - icon: play-circle
-  icon_pack: fas
   name: video
   url: https://youtube.com/watch?v=tcfHr0oeOMw&feature=share&utm_source=EKLEiJECCKjOmKnC5IiRIQ
 #

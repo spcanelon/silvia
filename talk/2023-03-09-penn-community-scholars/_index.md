@@ -15,11 +15,9 @@ description:  "Practical talk highlighting how data can be leveraged to support 
 #
 links:
 - icon: file-download
-  icon_pack: fas
   name: slides
   url: /talk/2023-penn-community-scholars/Penn Community Scholars Program_final.pptx
 - icon: file-download
-  icon_pack: fas
   name: "demo notes"
   url: /talk/2023-penn-community-scholars/Data Analysis 101_Demo notes.docx
 #

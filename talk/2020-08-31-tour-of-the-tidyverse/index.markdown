@@ -21,15 +21,12 @@ description:  An introductory tidyverse tutorial created and presented for [R-La
 abstract: Learn how to explore and manipulate data in R with packages from the Tidyverse. We'll introduce the [eight core packages that make up the Tidyverse](https://www.tidyverse.org/packages/#core-tidyverse) and use at least one function from each package while exploring a dataset on the migration of penguins.
 links:
 - icon: images
-  icon_pack: fas
   name: slides
   url: https://slides.silviacanelon.com/tour-of-the-tidyverse
 - icon: play-circle
-  icon_pack: fas
   name: video
   url: https://youtu.be/m_ZoMmAIx-o
 - icon: github
-  icon_pack: fab
   name: materials
   url: https://github.com/spcanelon/tour-of-the-tidyverse#an-antarctic-tour-of-the-tidyverse
 ---

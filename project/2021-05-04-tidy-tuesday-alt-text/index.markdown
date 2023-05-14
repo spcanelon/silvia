@@ -16,15 +16,12 @@ subtitle: "An R package with the goal of providing insight into the alternative 
 excerpt: "An R package with the goal of providing insight into the alternative (alt) text accompanying the data visualizations shared on Twitter as part of the [TidyTuesday social project](https://github.com/rfordatascience/tidytuesday#a-weekly-social-data-project-in-r)."
 links:
 - icon: box
-  icon_pack: fas
   name: package
   url: https://github.com/spcanelon/TidyTuesdayAltText
 - icon: comment
-  icon_pack: fas
   name: related talk
   url: "/talk/2021-05-04-data-viz-accessibility/"
 - icon: chart-bar
-  icon_pack: fas
   name: tidytuesday databases on notion
   url: tiny.cc/notion-dataviz
 filters:

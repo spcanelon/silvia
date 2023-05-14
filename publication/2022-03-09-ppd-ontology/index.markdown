@@ -29,7 +29,6 @@ abstract: |
 
 links:
 - icon: doi
-  icon_pack: ai
   name: Publication
   url: https://doi.org/10.1055/s-0042-1743240
 filters:

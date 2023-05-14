@@ -25,27 +25,21 @@ summary: 'Code for Philly [2020 Opioid Data Hackathon](https://github.com/CodeFo
 subtitle: 'Code for Philly [2020 Opioid Data Hackathon](https://github.com/CodeForPhilly/datahack2020#2020-opioid-data-hackathon) project to better understand recovery from opioid use disorder.'
 links:
 - icon: github
-  icon_pack: fab
   name: Repo
   url: https://github.com/CodeForPhilly/datahack2020/tree/master/analyses/team11
 - icon: file-pdf
-  icon_pack: fas
   name: Data Hackathon Final Report
   url: https://github.com/CodeForPhilly/datahack2020/raw/master/analyses/team11/Final%20Report/2020_DataHackathon_Team11_FinalReport.pdf
 - icon: youtube
-  icon_pack: fab
   name: Data Hackathon Presentation
   url: https://youtu.be/ZN7HjZ6Glv4?t=8440
 - icon: images
-  icon_pack: fas
   name: Data Hackathon Slides
   url: https://github.com/CodeForPhilly/datahack2020/raw/master/analyses/team11/Presentation/Team11_March17_Presentation.pptx
 - icon: images
-  icon_pack: fas
   name: Lab Meeting Slides
   url: https://slides.com/spcanelon/2020datahack
 - icon: hand-holding-heart
-  icon_pack: fas
   name: 'Empathy Tool Mockup'
   url: https://codeforphilly.github.io/datahack2020/analyses/team11/
 filters:

@@ -125,57 +125,34 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Design and Evaluation of a Postpartum Depression Ontology</h1>
+<header id="title-block-header">
+<!-- title -->
+<h1 class="title display-7">Design and Evaluation of a Postpartum Depression Ontology</h1>
+<!-- subtitle -->
 <p class="subtitle lead">Study describing an ontology created for the identification of patients with postpartum depression.</p>
-  <div class="quarto-categories">
-    <div class="quarto-category">Research</div>
-    <div class="quarto-category">EHR</div>
-    <div class="quarto-category">pregnancy</div>
-    <div class="quarto-category">ppd</div>
-  </div>
-  </div>
+<!-- authors -->
+<p class="author">Rebecca B. Morse</p>
+<p class="author">Abigail C. Bretzin</p>
+<p class="author">Silvia P. Canelón</p>
+<p class="author">Bernadette A. D’Alonzo</p>
+<p class="author">Andrea L. C. Schneider</p>
+<p class="author">Mary R. Boland</p>
+<!-- date -->
+<p class="date">March 9, 2022</p>
 
-<div>
-  <div class="description">
-    Applied Clinical Informatics
-  </div>
+<!-- link buttons -->
+<!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html#LL29C1-L35C8 -->
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-center justify-content-sm-start" role="group" aria-label="Links">
+<a href="https://doi.org/10.1055/s-0042-1743240" class="btn btn-secondary text-uppercase"><i class="bi bi-doi me-2"></i>Publication</a>
 </div>
 
-
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Authors</div>
-    <div class="quarto-title-meta-contents">
-             <p>Rebecca B. Morse </p>
-             <p>Abigail C. Bretzin </p>
-             <p>Silvia P. Canelón <a href="https://orcid.org/0000-0003-1709-1394" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
-             <p>Bernadette A. D’Alonzo </p>
-             <p>Andrea L. C. Schneider </p>
-             <p>Mary R. Boland </p>
-          </div>
-  </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">March 9, 2022</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-<div>
-  <div class="abstract">
-    <div class="abstract-title">Abstract</div>
-    <p><strong>Objective.</strong> Postpartum depression (PPD) remains an understudied research area despite its high prevalence. The goal of this study is to develop an ontology to aid in the identification of patients with PPD and to enable future analyses with electronic health record (EHR) data.</p>
-    <p><strong>Methods.</strong> We used Protégé-OWL to construct a postpartum depression ontology (PDO) of relevant comorbidities, symptoms, treatments, and other items pertinent to the study and treatment of PPD.</p>
-    <p><strong>Results.</strong> The PDO identifies and visualizes the risk factor status of variables for PPD, including comorbidities, confounders, symptoms, and treatments. The PDO includes 734 classes, 13 object properties, and 4,844 individuals. We also linked known and potential risk factors to their respective codes in the International Classification of Diseases versions 9 and 10 that would be useful in structured EHR data analyses. The representation and usefulness of the PDO was assessed using a task-based patient case study approach, involving 10 PPD case studies. Final evaluation of the ontology yielded 86.4% coverage of PPD symptoms, treatments, and risk factors. This demonstrates strong coverage of the PDO for the PPD domain.</p>
-    <p><strong>Conclusion.</strong> The PDO will enable future researchers to study PPD using EHR data as it contains important information with regard to structured (e.g., billing codes) and unstructured data (e.g., synonyms of symptoms not coded in EHRs). The PDO is publicly available through the National Center for Biomedical Ontology (NCBO) BioPortal (https://bioportal.bioontology.org/ontologies/PARTUMDO) which will enable other informaticists to utilize the PDO to study PPD in other populations.</p>
-  </div>
+<!-- abstract -->
+<div class="abstract">
+<div class="abstract-title">Abstract</div>
+<p><strong>Objective.</strong> Postpartum depression (PPD) remains an understudied research area despite its high prevalence. The goal of this study is to develop an ontology to aid in the identification of patients with PPD and to enable future analyses with electronic health record (EHR) data.</p>
+<p><strong>Methods.</strong> We used Protégé-OWL to construct a postpartum depression ontology (PDO) of relevant comorbidities, symptoms, treatments, and other items pertinent to the study and treatment of PPD.</p>
+<p><strong>Results.</strong> The PDO identifies and visualizes the risk factor status of variables for PPD, including comorbidities, confounders, symptoms, and treatments. The PDO includes 734 classes, 13 object properties, and 4,844 individuals. We also linked known and potential risk factors to their respective codes in the International Classification of Diseases versions 9 and 10 that would be useful in structured EHR data analyses. The representation and usefulness of the PDO was assessed using a task-based patient case study approach, involving 10 PPD case studies. Final evaluation of the ontology yielded 86.4% coverage of PPD symptoms, treatments, and risk factors. This demonstrates strong coverage of the PDO for the PPD domain.</p>
+<p><strong>Conclusion.</strong> The PDO will enable future researchers to study PPD using EHR data as it contains important information with regard to structured (e.g., billing codes) and unstructured data (e.g., synonyms of symptoms not coded in EHRs). The PDO is publicly available through the National Center for Biomedical Ontology (NCBO) BioPortal (https://bioportal.bioontology.org/ontologies/PARTUMDO) which will enable other informaticists to utilize the PDO to study PPD in other populations.</p>
 </div>
 
 </header>
@@ -470,7 +447,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"loop":true,"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom","selector":".lightbox"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","loop":true});</script>
 
 
 

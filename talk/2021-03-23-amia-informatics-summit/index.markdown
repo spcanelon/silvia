@@ -22,15 +22,12 @@ description:  "Applied Clinical Research Informatics: Solving Real World Problem
 abstract: "This study investigates the effect of sickle cell trait and sickle cell disease, on adverse pregnancy outcomes at Penn Medicine. The risk of a Cesarean section (C-section), preterm birth, stillbirth, pain crisis, blood transfusion, and hemorrhage during delivery were all found to be significantly correlated with race/ethnicity, sickle cell disease, the number of pain crises before delivery, and the number of blood transfusions before delivery. Multiple birth was also found to significantly increase the risk of these same outcomes."
 links:
 - icon: images
-  icon_pack: fas
   name: slides
   url: https://slides.silviacanelon.com/2021-amia-informatics-summit
 - icon: youtube
-  icon_pack: fab
   name: video
   url: https://youtu.be/d1IpkCim5F4
 - icon: calendar-check
-  icon_pack: fas
   name: Oral Presentation Schedule
   url: https://www.amia.org/summit2021/oral-presentations
 ---

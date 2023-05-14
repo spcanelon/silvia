@@ -20,3 +20,5 @@ citation: false
 format: 
   html: 
     code-overflow: wrap
+    template-partials: 
+      - ../_partials/title-block-link-buttons/title-block.html

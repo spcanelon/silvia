@@ -22,15 +22,12 @@ description:  Taller del paquete xaringan para presentaciones,<br>creado para R-
 abstract: El taller tiene por objetivo introducir a las participantes al paquete xaringan de R como una herramienta para crear diapositivas de presentación impresionantes que se pueden implementar en la web para compartir fácilmente.
 links:
 - icon: images
-  icon_pack: fas
   name: diapositivas
   url: https://slides.silviacanelon.com/introduccion-xaringan
 - icon: github
-  icon_pack: fab
   name: repositorio
   url: https://bit.ly/xaringan-xalapa
 - icon: file-code
-  icon_pack: fas
   name: plantilla Rmd para R-Ladies Xalapa
   url: https://github.com/spcanelon/xaringan-rladies-xalapa/blob/main/tutorial/ejemplo-de-diapositivas.Rmd
 ---
