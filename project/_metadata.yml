@@ -1,0 +1,14 @@
+# Freeze computed outputs
+execute: 
+  freeze: true
+
+# Enable banner style title blocks
+title-block-banner: false
+
+# Default fields for citation
+citation: false
+
+# Wrap overflow code
+format: 
+  html: 
+    code-overflow: wrap
