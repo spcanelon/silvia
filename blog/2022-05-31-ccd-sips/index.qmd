@@ -18,7 +18,7 @@ subtitle: >
   a companion R tutorial on webscraping, geocoding, and map-making'
 description: '' # Text that shows below the tags, not on listing page
 links:
-- icon: map-marked-alt
+- icon: pin-map-fill
   name: Interactive Map
   url: http://tiny.cc/ccdsips2022
 ---

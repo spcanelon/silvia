@@ -14,13 +14,13 @@ subtitle: "A four hour workshop introducing the [xaringan](https://github.com/yi
 excerpt: "A four hour workshop introducing the [xaringan](https://github.com/yihui/xaringan#xaringan) package for presentations, created for the [NHS-R Community](https://nhsrcommunity.com/about/) [2020 Virtual Conference](https://nhsrcommunity.com/nhsr-conference-2020/)"
 description: This four-hour hands-on workshop is a gentle introduction to the xaringan package as a tool to create impressive presentation slides that can be deployed to the web for easy sharing.
 links:
-- icon: book-open
+- icon: book
   name: website
   url: https://spcanelon.github.io/xaringan-basics-and-beyond
 - icon: github
   name: code
   url: https://github.com/spcanelon/xaringan-basics-and-beyond
-- icon: comment
+- icon: link
   name: Version en español
   url: "/talk/2020-12-17-introduccion-xaringan/"
 ---

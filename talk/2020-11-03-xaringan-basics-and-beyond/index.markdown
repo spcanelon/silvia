@@ -26,10 +26,10 @@ abstract: This four-hour hands-on workshop will be a gentle introduction to the 
   and how to customize slides with CSS.<br/><br/>This workshop is designed for R users
   already familiar with R Markdown and GitHub.
 links:
-- icon: book-open
+- icon: book
   name: workshop site
   url: https://bit.ly/xaringan-nhsr
-- icon: calendar-check
+- icon: calendar-check-fill
   name: conference program
   url: https://nhsrcommunity.com/events/nhs-r-virtual-conference-2020/
 - icon: github

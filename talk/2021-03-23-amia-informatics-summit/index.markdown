@@ -24,10 +24,10 @@ links:
 - icon: images
   name: slides
   url: https://slides.silviacanelon.com/2021-amia-informatics-summit
-- icon: youtube
+- icon: play-btn-fill
   name: video
   url: https://youtu.be/d1IpkCim5F4
-- icon: calendar-check
+- icon: calendar-check-fill
   name: Oral Presentation Schedule
   url: https://www.amia.org/summit2021/oral-presentations
 ---

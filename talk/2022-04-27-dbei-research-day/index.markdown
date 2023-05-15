@@ -17,16 +17,16 @@ description:  "Flashtalk and poster presenting preliminary results for a study o
 # publishDate: '2022-04-27'
 #
 links:
-- icon: th
+- icon: grid-3x3-gap-fill
   name: poster gallery
   url: https://www.dbei.med.upenn.edu/2022ResearchDay/presentations
-- icon: file-pdf
+- icon: file-earmark-pdf
   name: poster
   url: /talk/2022-dbei-research-day/Poster.pdf
-- icon: play-circle
+- icon: play-btn-fill
   name: flashtalk
   url: https://www.dbei.med.upenn.edu/2022ResearchDay/silvia-canel%C3%B3n
-- icon: file-download
+- icon: filetype-ppt
   name: slides
   url: /talk/2022-dbei-research-day/DBEICCEB-ResearchDay-slides.pptx
 ---

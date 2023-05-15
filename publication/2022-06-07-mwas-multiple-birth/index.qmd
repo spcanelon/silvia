@@ -26,7 +26,7 @@ abstract: |
 
   **Conclusions.** Our work demonstrates the opportunities in applying the MWAS approach with electronic health record data to explore associations between preconception and periconception medication exposure and the risk of MB while identifying novel candidate medications for further study. Overall, we found 3 novel medications linked with MB that could be explored in further work; this demonstrates the potential of our method to be used for hypothesis generation.
 links:
-- icon: doi
+- icon: file-richtext-fill
   name: Publication
   url: https://doi.org/10.2196/32229
 filters:

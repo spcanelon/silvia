@@ -29,15 +29,13 @@ abstract: |
   
   **Conclusion:** Both individual-level and neighborhood-level risk factors were associated with severe maternal morbidity. These factors may contribute to rising severe maternal morbidity rates in the United States. Better characterization of risk factors for severe maternal morbidity is imperative for the design of clinical and public health interventions seeking to lower rates of severe maternal morbidity and maternal mortality.
 links:
-- icon: doi
+- icon: file-richtext-fill
   name: Publication
   url: https://doi.org/10.1097/aog.0000000000004343
 - icon: newspaper
-  icon_pack: far
   name: Penn Medicine News
   url: https://www.pennmedicine.org/news/news-releases/2021/april/living-in-a-majority-black-neighborhood-linked-to-severe-maternal-morbidity
 - icon: newspaper
-  icon_pack: far
   name: WHYY (NPR)
   url: https://whyy.org/articles/living-in-majority-black-neighborhoods-in-philly-linked-to-increased-maternal-health-issues-penn-medicine-study-finds/
 ---

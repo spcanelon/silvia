@@ -23,7 +23,7 @@ links:
 - icon: images
   name: slides
   url: https://slides.silviacanelon.com/tour-of-the-tidyverse
-- icon: play-circle
+- icon: play-btn-fill
   name: video
   url: https://youtu.be/m_ZoMmAIx-o
 - icon: github

@@ -15,13 +15,13 @@ subtitle: "Toronto Data Workshop talk about working with Electronic Health Recor
 description:  "[Toronto Data Workshop](https://rohanalexander.com/toronto_data_workshop.html) talk about working with Electronic Health Record data"
 # abstract: "Toronto Data Workshop talk about working with Electronic Health Record data"
 links:
-- icon: calendar-check
+- icon: calendar-check-fill
   name: speaker schedule
   url: https://rohanalexander.com/toronto_data_workshop.html#current-schedule
 - icon: images
   name: slides
   url: https://slides.silviacanelon.com/2022-tdw-ehr-lessons
-- icon: youtube
+- icon: play-btn-fill
   name: video
   url: https://youtu.be/4M8Op1oCN5U
 ---

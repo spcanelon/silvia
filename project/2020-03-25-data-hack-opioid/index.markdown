@@ -27,10 +27,10 @@ links:
 - icon: github
   name: Repo
   url: https://github.com/CodeForPhilly/datahack2020/tree/master/analyses/team11
-- icon: file-pdf
+- icon: file-earmark-pdf
   name: Data Hackathon Final Report
   url: https://github.com/CodeForPhilly/datahack2020/raw/master/analyses/team11/Final%20Report/2020_DataHackathon_Team11_FinalReport.pdf
-- icon: youtube
+- icon: play-btn-fill
   name: Data Hackathon Presentation
   url: https://youtu.be/ZN7HjZ6Glv4?t=8440
 - icon: images
@@ -39,7 +39,7 @@ links:
 - icon: images
   name: Lab Meeting Slides
   url: https://slides.com/spcanelon/2020datahack
-- icon: hand-holding-heart
+- icon: person-heart
   name: 'Empathy Tool Mockup'
   url: https://codeforphilly.github.io/datahack2020/analyses/team11/
 filters:

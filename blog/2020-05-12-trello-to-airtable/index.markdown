@@ -17,15 +17,12 @@ summary: 'Tutorial on how to migrate your current Trello board to an Airtable ba
 lastmod: '2020-05-12'
 links:
   - icon: file-code
-    icon_pack: far
     name: R script
     url: "https://github.com/spcanelon/silvia/blob/main/content/blog/2020-05-12-trello-to-airtable/index.R"
   - icon: file-code
-    icon_pack: far
     name: R Markdown
     url: "https://github.com/spcanelon/silvia/blob/main/content/blog/2020-05-12-trello-to-airtable/index.Rmarkdown"
   - icon: table
-    icon_pack: fas
     name: JSON example file
     url: /blog/2020-trello-to-airtable/program-mgmt.json
 ---

@@ -28,7 +28,7 @@ abstract: |
   **Conclusion.** The PDO will enable future researchers to study PPD using EHR data as it contains important information with regard to structured (e.g., billing codes) and unstructured data (e.g., synonyms of symptoms not coded in EHRs). The PDO is publicly available through the National Center for Biomedical Ontology (NCBO) BioPortal (https://bioportal.bioontology.org/ontologies/PARTUMDO) which will enable other informaticists to utilize the PDO to study PPD in other populations.
 
 links:
-- icon: doi
+- icon: file-richtext-fill
   name: Publication
   url: https://doi.org/10.1055/s-0042-1743240
 filters:

@@ -13,7 +13,7 @@ categories:
 subtitle: 'A use case for adding Umami web analytics to a blogdown site and deploying using Railway.'
 summary: 'A use case for adding Umami web analytics to a blogdown site and deploying using Railway.'
 links:
-  - icon: chart-line
+  - icon: graph-up-arrow
     icon_pack: fas
     name: Umami Docs
     url: umami.is

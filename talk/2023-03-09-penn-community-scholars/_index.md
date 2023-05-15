@@ -14,10 +14,10 @@ categories:
 description:  "Practical talk highlighting how data can be leveraged to support community-academic partnerships"
 #
 links:
-- icon: file-download
+- icon: download
   name: slides
   url: /talk/2023-penn-community-scholars/Penn Community Scholars Program_final.pptx
-- icon: file-download
+- icon: download
   name: "demo notes"
   url: /talk/2023-penn-community-scholars/Data Analysis 101_Demo notes.docx
 #
