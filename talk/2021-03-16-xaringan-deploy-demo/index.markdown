@@ -20,7 +20,7 @@ subtitle: R-Ladies Seattle package demonstrations showing how to make beautiful 
 description:  R-Ladies Seattle package demonstrations showing how to make beautiful slides with xaringan and how to deploy them.
 abstract: ""
 links:
-- icon: pencil-alt
+- icon: pencil-fill
   name: "Blog post: Deploying xaringan Slides"
   url: /blog/2021-deploying-xaringan-slides/
 ---

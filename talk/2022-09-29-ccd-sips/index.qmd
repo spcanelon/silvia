@@ -26,7 +26,7 @@ links:
 - icon: github
   name: materials
   url: https://github.com/spcanelon/2022-ccd-sips
-- icon: play-circle
+- icon: play-btn-fill
   name: video
   url: https://youtube.com/watch?v=tcfHr0oeOMw&feature=share&utm_source=EKLEiJECCKjOmKnC5IiRIQ
 ---

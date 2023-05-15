@@ -12,10 +12,10 @@ categories:
 # # event_url: https://www.penninjuryscience.org/outreach/penn-community-scholars-program/
 # # location: Philadelphia, PA
 links:
-- icon: file-download
+- icon: filetype-ppt
   name: slides
   url: /talk/2023-penn-community-scholars/Penn Community Scholars Program_final.pptx
-- icon: file-download
-  name: "demo notes"
+- icon: filetype-docx
+  name: demo notes
   url: /talk/2023-penn-community-scholars/Data Analysis 101_Demo notes.docx
 ---

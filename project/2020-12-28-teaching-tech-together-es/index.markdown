@@ -14,7 +14,7 @@ excerpt: 'Traducción colaborativa al castellano del libro "[Teaching Tech Toget
 description: Enseñar Tecnología en Comunidad. Cómo crear lecciones que funcionen y construir una comunidad docente alrededor 
 links:
 - icon: book
-  name: Libro en castellano
+  name: Libro en español
   url: https://teachtogether.tech/es/index.html
 - icon: github
   name: código

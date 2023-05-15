@@ -31,13 +31,13 @@ abstract: |
   
   **Discussion.** MADDIE is the first algorithm to successfully infer PDD information using only structured delivery codes and identify multiple deliveries per patient. MADDIE is also the first to validate the accuracy of the PDD using an external gold standard of known delivery dates as opposed to manual chart review of a sample.<br><br>**Conclusion.** MADDIE augments the EHR with delivery-specific details extracted with high accuracy and relies only on structured EHR elements while harnessing temporal information and the frequency of code usage to identify accurate PDDs.
 links:
-- icon: doi
+- icon: file-richtext-fill
   name: Publication
   url: https://doi.org/10.1016/j.ijmedinf.2020.104339
-- icon: file-pdf
+- icon: file-earmark-pdf
   name: 2020 AMIA Poster
   url: /publication/2020-maddie-ehr-delivery-episode-algorithm/AMIA2020_poster.pdf
-- icon: external-link-alt
+- icon: file-richtext-fill
   name: medRxiv Preprint
   url: https://www.medrxiv.org/content/10.1101/2020.07.30.20165381v1
 ---

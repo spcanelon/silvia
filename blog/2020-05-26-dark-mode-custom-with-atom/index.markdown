@@ -17,7 +17,7 @@ subtitle: Tutorial on how to customize the dark mode in Hugo's Academic theme wi
 summary: Tutorial on how to customize the dark mode in Hugo's Academic theme with help from the Atom text editor package Pigments.
 lastmod: '2020-06-16T13:22:13-04:00'
 links:
-  - icon: file-code
+  - icon: filetype-css
     icon_pack: far
     name: CSS
     url: https://github.com/spcanelon/silvia/blob/hugo-academic/assets/scss/custom.scss

@@ -12,7 +12,7 @@ categories:
 subtitle: 'An interactive map showing restaurants participating in Philly’s Center City District Sips 2019.'
 summary: 'An interactive map showing restaurants participating in Philly’s Center City District Sips 2019.'
 links:
-- icon: map-marked-alt
+- icon: pin-map-fill
   name: Interactive Map
   url: https://tiny.cc/ccdsips2019
 ---

@@ -21,10 +21,10 @@ links:
 - icon: images
   name: slides
   url: http://tiny.cc/rladies-phl-teaching-spc
-- icon: play-circle
+- icon: play-btn-fill
   name: video
   url: https://www.youtube.com/watch?v=d1vLx2vDbU8
-- icon: pencil-alt
+- icon: pencil-fill
   name: R-Ladies blog post
   url: https://www.rladiesphilly.org/post/recap_teachr/
 ---

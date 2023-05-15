@@ -18,8 +18,7 @@ subtitle: 'A tutorial on how to take your personal Hugo Academic/Wowchemy websit
 summary: 'A tutorial on how to take your personal Hugo Academic/Wowchemy website and convert it to the Hugo Apéro theme'
 lastmod: '2021-05-29'
 links:
-  - icon: glass-cheers
-    icon_pack: fas
+  - icon: journal-text
     name: Hugo Apéro Docs
     url: https://hugo-apero-docs.netlify.app/
 filters:
