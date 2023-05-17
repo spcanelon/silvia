@@ -25,6 +25,60 @@ about:
     - icon: linkedin
       aria-label: "LinkedIn"
       href: https://linkedin.com/in/spcanelon
+listing: 
+- id: blog
+  contents: 
+    - "../blog/*/index.qmd"
+    - "../blog/*/index.markdown"
+  sort: date desc
+  type: grid
+  grid-columns: 1
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  fields: [title, subtitle, image]
+  max-items: 1
+  image-align: left
+- id: talk
+  contents: 
+    - "../talk/*/index.qmd"
+    - "../talk/*/index.markdown"
+  sort: date desc
+  type: grid
+  grid-columns: 1
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  fields: [title, subtitle, image]
+  max-items: 1
+  image-align: left
+- id: publication
+  contents: 
+    - "../publication/*/index.qmd"
+    - "../publication/*/index.markdown"
+  sort: date desc
+  type: grid
+  grid-columns: 1
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  fields: [title, subtitle, image]
+  max-items: 1
+  image-align: left
+  image-placeholder: ../publication/featured.jpg
+- id: project
+  contents: 
+    - "../project/*/index.qmd"
+    - "../project/*/index.markdown"
+  sort: date desc
+  type: grid
+  grid-columns: 1
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  fields: [title, subtitle, image]
+  max-items: 1
+  image-align: left
 ---
 
 ::: {#hero-heading}
@@ -57,3 +111,37 @@ I enjoy using [R](https://www.r-project.org/about.html) to optimize my data scie
 <ul class="fa-ul">
    <li><span class="fa-li"><i class="fa-solid fa-certificate"></i></span><a href="https://education.rstudio.com/trainers/people/canelon+silvia/">Tidyverse Instructor Certification</a> ∙ RStudio, PBC ∙ 2020</li>
 </ul>
+
+## Lately ...
+
+:::: {.grid}
+
+::: {.g-col-6}
+#### Meeting People Where They R
+::: {#blog}
+:::
+[See all &rarr;](../blog){.about-links .subtitle}
+:::
+
+::: {.g-col-6}
+#### Talks
+::: {#talk}
+:::
+[See all &rarr;](../talk){.about-links .subtitle}
+:::
+
+::: {.g-col-6}
+#### Publications
+::: {#publication}
+:::
+[See all &rarr;](../publication){.about-links .subtitle}
+:::
+
+::: {.g-col-6}
+#### Projects
+::: {#project}
+:::
+[See all &rarr;](../project){.about-links .subtitle}
+:::
+
+::::
