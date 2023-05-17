@@ -119,25 +119,47 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header">
-<!-- title -->
-<h1 class="title display-7">TidyTuesdayAltText</h1>
-<!-- subtitle -->
+<!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">TidyTuesdayAltText</h1>
 <p class="subtitle lead">An R package with the goal of providing insight into the alternative (alt) text accompanying the data visualizations shared on Twitter as part of the <a href="https://github.com/rfordatascience/tidytuesday#a-weekly-social-data-project-in-r">TidyTuesday social project</a>.</p>
-<!-- authors -->
-<p class="author">Silvia Canelón</p>
-<!-- date -->
-<p class="date">May 4, 2021</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">TidyTuesday</div>
+    <div class="quarto-category">TidyTuesdayAltText</div>
+    <div class="quarto-category">accessibility</div>
+    <div class="quarto-category">Package</div>
+  </div>
+  </div>
 
-<!-- link buttons -->
-<!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html#LL29C1-L35C8 -->
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Silvia Canelón </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 4, 2021</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
 <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-center justify-content-sm-start" role="group" aria-label="Links">
-<a href="https://github.com/spcanelon/TidyTuesdayAltText" class="btn btn-secondary text-uppercase"><i class="bi bi-box me-2"></i>package</a>
-<a href="../../talk/2021-05-04-data-viz-accessibility/" class="btn btn-secondary text-uppercase"><i class="bi bi-comment me-2"></i>related talk</a>
-<a href="tiny.cc/notion-dataviz" class="btn btn-secondary text-uppercase"><i class="bi bi-chart-bar me-2"></i>tidytuesday databases on notion</a>
+<a href="https://github.com/spcanelon/TidyTuesdayAltText" class="btn btn-secondary text-capitalize"><i class="bi bi-box-seam me-1"></i> package</a>
+<a href="../../talk/2021-05-04-data-viz-accessibility/" class="btn btn-secondary text-capitalize"><i class="bi bi-link me-1"></i> related talk</a>
+<a href="tiny.cc/notion-dataviz" class="btn btn-secondary text-capitalize"><i class="bi bi-bar-chart-line-fill me-1"></i> tidytuesday databases on notion</a>
 </div>
-
-<!-- abstract -->
 
 </header>
 
@@ -156,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://raw.githubusercontent.com/spcanelon/csvConf2021/master/slides/img/webInspection.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure 1: Example of web inspection being used to identify the CSS selector utilized for alt-text web scraping"><img src="https://raw.githubusercontent.com/spcanelon/csvConf2021/master/slides/img/webInspection.png" class="img-fluid figure-img" alt="Web inspection tool being used to identify the CSS selector corresponding to the primary image of one of Hao Ye's (@Hao_and_Y) tweets with alt text"></a></p>
+<p><a href="https://raw.githubusercontent.com/spcanelon/csvConf2021/master/slides/img/webInspection.png" class="lightbox" title="Figure 1: Example of web inspection being used to identify the CSS selector utilized for alt-text web scraping" data-gallery="quarto-lightbox-gallery-1"><img src="https://raw.githubusercontent.com/spcanelon/csvConf2021/master/slides/img/webInspection.png" class="img-fluid figure-img" alt="Web inspection tool being used to identify the CSS selector corresponding to the primary image of one of Hao Ye's (@Hao_and_Y) tweets with alt text"></a></p>
 <figcaption class="figure-caption">Figure 1: Example of web inspection being used to identify the CSS selector utilized for alt-text web scraping</figcaption>
 </figure>
 </div>
@@ -168,13 +190,13 @@ ul.task-list li input[type="checkbox"] {
 <p>I use the data available in the TidyTuesday repository to populate some searchable TidyTuesday databases at <a href="https://tiny.cc/notion-dataviz">tiny.cc/notion-dataviz</a> with data visualizations tagged by the dataset of the week, hashtags, mentions, etc.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="tt-db-notion.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure 2: Screenshot of the 2021 TidyTuesday database on Notion, taken on June 1, 2021"><img src="tt-db-notion.png" class="img-fluid figure-img" alt="The Notion 2021 TidyTuesday database showing a gallery of the most recent data visualizations in the collection, organized in a grid,"></a></p>
+<p><a href="tt-db-notion.png" class="lightbox" title="Figure 2: Screenshot of the 2021 TidyTuesday database on Notion, taken on June 1, 2021" data-gallery="quarto-lightbox-gallery-2"><img src="tt-db-notion.png" class="img-fluid figure-img" alt="The Notion 2021 TidyTuesday database showing a gallery of the most recent data visualizations in the collection, organized in a grid,"></a></p>
 <figcaption class="figure-caption">Figure 2: Screenshot of the 2021 TidyTuesday database on Notion, taken on June 1, 2021</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="tweet-notion.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure 3: Screenshot of the tweet sharing the TidyTuesday database on Notion"><img src="tweet-notion.png" class="img-fluid figure-img" alt="Thanks to historical twitter data collected by @thomas_mock, the #TidyTuesday database now has tweets dating back to 2018! 6100+ searchable tweets w/ #dataviz creations from 1400+ participants 🤩 Check it out! http://tiny.cc/notion-dataviz" width="500"></a></p>
+<p><a href="tweet-notion.png" class="lightbox" title="Figure 3: Screenshot of the tweet sharing the TidyTuesday database on Notion" data-gallery="quarto-lightbox-gallery-3"><img src="tweet-notion.png" class="img-fluid figure-img" alt="Thanks to historical twitter data collected by @thomas_mock, the #TidyTuesday database now has tweets dating back to 2018! 6100+ searchable tweets w/ #dataviz creations from 1400+ participants 🤩 Check it out! http://tiny.cc/notion-dataviz" width="500"></a></p>
 <figcaption class="figure-caption">Figure 3: Screenshot of the tweet sharing the TidyTuesday database on Notion</figcaption>
 </figure>
 </div>
@@ -471,7 +493,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":true,"closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","descPosition":"bottom","loop":true});</script>
 
 
 

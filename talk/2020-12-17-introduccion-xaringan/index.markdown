@@ -14,12 +14,11 @@ categories:
   - R-Ladies
   - Español
   - xaringan
+subtitle: Taller del paquete xaringan para presentaciones, creado para [R-Ladies Xalapa](https://www.meetup.com/rladies-xalapa/events/274906676/)
+description: ""
 # event: R-Ladies Xalapa Meetup
 # event_url: https://www.meetup.com/rladies-xalapa/events/274906676/
 # location: Xalapa, Veracruz, México (virtual)
-subtitle: Taller del paquete xaringan para presentaciones, creado para R-Ladies Xalapa
-description:  Taller del paquete xaringan para presentaciones,<br>creado para R-Ladies Xalapa
-abstract: El taller tiene por objetivo introducir a las participantes al paquete xaringan de R como una herramienta para crear diapositivas de presentación impresionantes que se pueden implementar en la web para compartir fácilmente.
 links:
 - icon: images
   name: diapositivas
@@ -32,15 +31,6 @@ links:
   url: https://github.com/spcanelon/xaringan-rladies-xalapa/blob/main/tutorial/ejemplo-de-diapositivas.Rmd
 ---
 
-<script src="{{< blogdown/postref >}}index_files/fitvids/fitvids.min.js"></script>
-
-## Description
-
 El taller tiene por objetivo introducir a las participantes al paquete xaringan de R como una herramienta para crear diapositivas de presentación impresionantes que se pueden implementar en la web para compartir fácilmente.
-
-<div class="shareagain" style="min-width:300px;margin:1em auto;">
-<iframe src="https://spcanelon.github.io/xaringan-rladies-xalapa/diapositivas/introduccion-xaringan.html" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
-<script>fitvids('.shareagain', {players: 'iframe'});</script>
-</div>
 
 <img src="rladies-xalapa.jpg" title="Hex logo for R-Ladies Xalapa featuring regional flowers, foods, animals, and tapestry" alt="Hex logo for R-Ladies Xalapa featuring regional flowers, foods, animals, and tapestry" width="40%" style="display: block; margin: auto;" />
