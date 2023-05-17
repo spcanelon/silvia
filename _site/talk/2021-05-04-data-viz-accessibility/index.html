@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Silvia Canelón &amp; Liz Hare">
+<meta name="author" content="Silvia Canelón">
+<meta name="author" content="Liz Hare">
 <meta name="dcterms.date" content="2021-05-04">
-<meta name="description" content="Data visualization accessibility talk to share what we found after scraping alternative (alt) text from data viz shared on Twitter as part of the #TidyTuesday social project.">
+<meta name="description" content="csv, conf, v6">
 
 <title>Silvia Canelón - Revealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community</title>
 <style>
@@ -117,44 +118,70 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header">
-<!-- title -->
-<h1 class="title display-7">Revealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community</h1>
-<!-- subtitle -->
+<!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Revealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community</h1>
 <p class="subtitle lead">Data visualization accessibility talk to share what we found after scraping alternative (alt) text from data viz shared on Twitter as part of the #TidyTuesday social project.</p>
-<!-- authors -->
-<p class="author">Silvia Canelón &amp; Liz Hare</p>
-<!-- date -->
-<p class="date">May 4, 2021</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">Education</div>
+    <div class="quarto-category">TidyTuesday</div>
+    <div class="quarto-category">TidyTuesdayAltText</div>
+    <div class="quarto-category">rtweet</div>
+    <div class="quarto-category">RSelenium</div>
+    <div class="quarto-category">accessibility</div>
+  </div>
+  </div>
 
-<!-- link buttons -->
-<!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html#LL29C1-L35C8 -->
-<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-center justify-content-sm-start" role="group" aria-label="Links">
-<a href="https://csvconf.com/speakers/" class="btn btn-secondary text-uppercase"><i class="bi bi-calendar-check me-2"></i>speaker schedule</a>
-<a href="https://bit.ly/TidyTuesday" class="btn btn-secondary text-uppercase"><i class="bi bi-images me-2"></i>slides</a>
-<a href="https://doi.org/10.5281/zenodo.4743271" class="btn btn-secondary text-uppercase"><i class="bi bi-doi me-2"></i>Zenodo</a>
-<a href="https://youtu.be/DxLkv2iRdf8" class="btn btn-secondary text-uppercase"><i class="bi bi-youtube me-2"></i>video</a>
-<a href="https://github.com/spcanelon/csvConf2021" class="btn btn-secondary text-uppercase"><i class="bi bi-github me-2"></i>alt text analysis</a>
-<a href="https://github.com/spcanelon/TidyTuesdayAltText" class="btn btn-secondary text-uppercase"><i class="bi bi-box me-2"></i>TidyTuesdayAltText</a>
+<div>
+  <div class="description">
+    csv, conf, v6
+  </div>
 </div>
 
-<!-- abstract -->
-<div class="abstract">
-<div class="abstract-title">Abstract</div>
-We all aim to use data to tell a compelling story, and many of us enjoy sharing how we got there by open-sourcing our code, but we don’t always share our story with everyone. Even kind, supportive, and open communities like the #TidyTuesday R learning community on Twitter has a ways to go before the content shared can be accessible to everyone.<br><br>Lived experiences of blind R users tell us that most data visualizations shared for TidyTuesday are inaccessible to screen reading technology because they lack alternative text (i.e.&nbsp;alt text) descriptions. Our goal was to bring this hidden lack of accessibility to the surface by examining the alternative text accompanying data visualizations shared as part of the TidyTuesday social project.<br><br>We scraped the alternative text from 6,443 TidyTuesday images posted on Twitter between April 2, 2018 and January 31, 2021. The first image attached to each tweet was considered the primary image and was scraped for alternative text. Manual web inspection revealed the CSS class and HTML element corresponding to the primary image, as well as the attribute containing the alternative text. We used this information and the ROpenSci {RSelenium} package to scrape the alternative text. Our preliminary analysis found that only 2.4% of the images contained a text description entered by the tweet author compared to 84% which were described by default as ‘Image.’<br><br>This small group of intentional alternative text descriptions had a median word count of 18 (range: 1-170), and a median character count of 83 (range: 8-788). As a reference point, Twitter allows 240 characters in a single tweet and 1,000 characters for image descriptions. This analysis was made possible thanks to a dataset of historical TidyTuesday tweet data collected using the ROpenSci {rtweet} package, and openly available in the <a href="https://github.com/rfordatascience/tidytuesday">TidyTuesday GitHub repository</a>.<br><br>We will present during Session 0 on May 4, 2021: <a href="crowdcast.io/e/csvconf6-0-session-0">Crowdcast Link</a>
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-contents">
+             <p>Silvia Canelón </p>
+             <p>Liz Hare </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 4, 2021</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-center justify-content-sm-start" role="group" aria-label="Links">
+<a href="https://csvconf.com/speakers/" class="btn btn-secondary text-capitalize"><i class="bi bi-calendar-check-fill me-1"></i> speaker schedule</a>
+<a href="https://bit.ly/TidyTuesday" class="btn btn-secondary text-capitalize"><i class="bi bi-images me-1"></i> slides</a>
+<a href="https://doi.org/10.5281/zenodo.4743271" class="btn btn-secondary text-capitalize"><i class="bi bi-file-richtext-fill me-1"></i> Zenodo</a>
+<a href="https://youtu.be/DxLkv2iRdf8" class="btn btn-secondary text-capitalize"><i class="bi bi-play-btn-fill me-1"></i> video</a>
+<a href="https://github.com/spcanelon/csvConf2021" class="btn btn-secondary text-capitalize"><i class="bi bi-github me-1"></i> alt text analysis</a>
+<a href="https://github.com/spcanelon/TidyTuesdayAltText" class="btn btn-secondary text-capitalize"><i class="bi bi-box-seam me-1"></i> TidyTuesdayAltText</a>
 </div>
 
 </header>
 
-<script src="{{< blogdown/postref >}}index_files/fitvids/fitvids.min.js"></script>
+<!-- <script src="{{< blogdown/postref >}}index_files/fitvids/fitvids.min.js"></script> -->
 <p>Presented with <a href="https://www.twitter.com/DogGeneticsLLC">Liz Hare, PhD</a> from Dog Genetics, LLC</p>
 <section id="abstract" class="level2">
 <h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
-<p>We all aim to use data to tell a compelling story, and many of us enjoy sharing how we got there by open-sourcing our code, but we don’t always share our story with everyone. Even kind, supportive, and open communities like the #TidyTuesday R learning community on Twitter has a ways to go before the content shared can be accessible to everyone.<br><br>Lived experiences of blind R users tell us that most data visualizations shared for TidyTuesday are inaccessible to screen reading technology because they lack alternative text (i.e.&nbsp;alt text) descriptions. Our goal was to bring this hidden lack of accessibility to the surface by examining the alternative text accompanying data visualizations shared as part of the TidyTuesday social project.<br><br>We scraped the alternative text from 6,443 TidyTuesday images posted on Twitter between April 2, 2018 and January 31, 2021. The first image attached to each tweet was considered the primary image and was scraped for alternative text. Manual web inspection revealed the CSS class and HTML element corresponding to the primary image, as well as the attribute containing the alternative text. We used this information and the ROpenSci {RSelenium} package to scrape the alternative text. Our preliminary analysis found that only 2.4% of the images contained a text description entered by the tweet author compared to 84% which were described by default as ‘Image.’<br><br>This small group of intentional alternative text descriptions had a median word count of 18 (range: 1-170), and a median character count of 83 (range: 8-788). As a reference point, Twitter allows 240 characters in a single tweet and 1,000 characters for image descriptions. This analysis was made possible thanks to a dataset of historical TidyTuesday tweet data collected using the ROpenSci {rtweet} package, and openly available in the <a href="https://github.com/rfordatascience/tidytuesday">TidyTuesday GitHub repository</a>.<br><br>The conference takes place May 4-5, 2021.</p>
+<p>We all aim to use data to tell a compelling story, and many of us enjoy sharing how we got there by open-sourcing our code, but we don’t always share our story with everyone. Even kind, supportive, and open communities like the #TidyTuesday R learning community on Twitter has a ways to go before the content shared can be accessible to everyone.<br><br>Lived experiences of blind R users tell us that most data visualizations shared for TidyTuesday are inaccessible to screen reading technology because they lack alternative text (i.e.&nbsp;alt text) descriptions. Our goal was to bring this hidden lack of accessibility to the surface by examining the alternative text accompanying data visualizations shared as part of the TidyTuesday social project.<br><br>We scraped the alternative text from 6,443 TidyTuesday images posted on Twitter between April 2, 2018 and January 31, 2021. The first image attached to each tweet was considered the primary image and was scraped for alternative text. Manual web inspection revealed the CSS class and HTML element corresponding to the primary image, as well as the attribute containing the alternative text. We used this information and the ROpenSci {RSelenium} package to scrape the alternative text. Our preliminary analysis found that only 2.4% of the images contained a text description entered by the tweet author compared to 84% which were described by default as ‘Image.’<br><br>This small group of intentional alternative text descriptions had a median word count of 18 (range: 1-170), and a median character count of 83 (range: 8-788). As a reference point, Twitter allows 240 characters in a single tweet and 1,000 characters for image descriptions. This analysis was made possible thanks to a dataset of historical TidyTuesday tweet data collected using the ROpenSci {rtweet} package, and openly available in the <a href="https://github.com/rfordatascience/tidytuesday">TidyTuesday GitHub repository</a>.<br><br>We will present during Session 0 on May 4, 2021: <a href="crowdcast.io/e/csvconf6-0-session-0">Crowdcast Link</a></p>
 <div class="shareagain" style="min-width:300px;margin:1em auto;">
-<iframe src="https://spcanelon.github.io/csvConf2021/slides" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen="">
+<iframe src="https://spcanelon.github.io/csvConf2021/slides" width="800" height="450" style="max-width:100%;border:2px solid currentColor;" loading="lazy" allowfullscreen="">
 </iframe>
-<script>fitvids('.shareagain', {players: 'iframe'});</script>
+<!-- <script>fitvids('.shareagain', {players: 'iframe'});</script> -->
 </div>
 
 

@@ -1,6 +1,9 @@
 ---
 title: "Exploring Traumatic Brain Injury Mechanisms and Severity Using Electronic Health Records"
-author: "Silvia Canelón, Rebecca Morse, Mary Regina Boland"
+author: 
+  - Silvia Canelón
+  - Rebecca Morse
+  - Mary Regina Boland
 date: 2022-04-27T10:00:00
 slug: dbei-research-day
 image: featured.png

@@ -16,9 +16,7 @@ categories:
 # event: R-Ladies Chicago Meetup
 # event_url: https://www.meetup.com/rladies-chicago/events/272755101/
 # location: Chicago, IL, USA (virtual)
-subtitle: An introductory tidyverse tutorial created and presented for R-Ladies Chicago
-description:  An introductory tidyverse tutorial created and presented for [R-Ladies Chicago](https://rladieschicago.org/)
-abstract: Learn how to explore and manipulate data in R with packages from the Tidyverse. We'll introduce the [eight core packages that make up the Tidyverse](https://www.tidyverse.org/packages/#core-tidyverse) and use at least one function from each package while exploring a dataset on the migration of penguins.
+subtitle: An introductory tidyverse tutorial created and presented for [R-Ladies Chicago](https://rladieschicago.org/)
 links:
 - icon: images
   name: slides
@@ -31,16 +29,4 @@ links:
   url: https://github.com/spcanelon/tour-of-the-tidyverse#an-antarctic-tour-of-the-tidyverse
 ---
 
-<script src="{{< blogdown/postref >}}index_files/fitvids/fitvids.min.js"></script>
-
-## Description
-
-Learn how to explore and manipulate data in R with packages from the Tidyverse. We’ll introduce the [eight core packages that make up the Tidyverse](https://www.tidyverse.org/packages/#core-tidyverse) and use at least one function from each package while exploring a dataset on the migration of penguins.
-<br><br>
-
-## Slides
-
-<div class="shareagain" style="min-width:300px;margin:1em auto;">
-<iframe src="https://spcanelon.github.io/tour-of-the-tidyverse" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
-<script>fitvids('.shareagain', {players: 'iframe'});</script>
-</div>
+Learn how to explore and manipulate data in R with packages from the Tidyverse. We'll introduce the [eight core packages that make up the Tidyverse](https://www.tidyverse.org/packages/#core-tidyverse) and use at least one function from each package while exploring a dataset on the migration of penguins.
