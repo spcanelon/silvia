@@ -38,7 +38,7 @@ listing:
   filter-ui: false
   fields: [title, subtitle, image]
   max-items: 1
-  image-align: left
+  image-height: "200"
 - id: talk
   contents: 
     - "../talk/*/index.qmd"
@@ -51,7 +51,7 @@ listing:
   filter-ui: false
   fields: [title, subtitle, image]
   max-items: 1
-  image-align: left
+  image-height: "200"
 - id: publication
   contents: 
     - "../publication/*/index.qmd"
@@ -62,9 +62,9 @@ listing:
   categories: false
   sort-ui: false
   filter-ui: false
-  fields: [title, subtitle, image]
+  fields: [title, image]
   max-items: 1
-  image-align: left
+  image-height: "200"
   image-placeholder: ../publication/featured.jpg
 - id: project
   contents: 
@@ -78,7 +78,8 @@ listing:
   filter-ui: false
   fields: [title, subtitle, image]
   max-items: 1
-  image-align: left
+  image-height: "200"
+page-layout: full
 ---
 
 ::: {#hero-heading}
@@ -96,7 +97,21 @@ Get in touch by [sending me a note](/contact.qmd)! {{< fa feather-pointed >}}
 
 ## About me
 
+::: {.grid}
+
+::: {.g-col-6}
+
 Biomedical engineer turned informaticist, curious about all intersections of data and society.
+
+I enjoy using [R](https://www.r-project.org/about.html) to optimize my data science workflow and have noticed it making guest appearances elsewhere in my life. I'm certified as an [RStudio Tidyverse Instructor](https://education.rstudio.com/trainers/people/canelon+silvia/) and am passionate about R education and data literacy as ways to build power in communities. Keep up with my R tinkering in my [blog](/blog) and presentations in [talks](/talk).
+
+<ul class="fa-ul">
+   <li><span class="fa-li"><i class="fa-solid fa-certificate"></i></span><a href="https://education.rstudio.com/trainers/people/canelon+silvia/">Tidyverse Instructor Certification</a> ∙ RStudio, PBC ∙ 2020</li>
+</ul>
+
+:::
+
+::: {.g-col-6}
 
 Prior to joining the Urban Health Lab, I developed novel data mining methods to extract meaningful information from the EHR and study health outcomes and disparities in pregnant populations. I'm particularly interested in research that combines biomedical data science with open data sources in ways that prioritize health equity in communities.
 
@@ -106,38 +121,37 @@ Prior to joining the Urban Health Lab, I developed novel data mining methods to 
    <li><span class="fa-li"><i class="fa-solid fa-graduation-cap"></i></span>B.S. in Biomedical Engineering ∙ University of Minnesota ∙ 2012</li>
 </ul>
 
-I enjoy using [R](https://www.r-project.org/about.html) to optimize my data science workflow and have noticed it making guest appearances elsewhere in my life. I'm certified as an [RStudio Tidyverse Instructor](https://education.rstudio.com/trainers/people/canelon+silvia/) and am passionate about R education and data literacy as ways to build power in communities. Keep up with my R tinkering in my [blog](/blog) and presentations in [talks](/talk).
+:::
 
-<ul class="fa-ul">
-   <li><span class="fa-li"><i class="fa-solid fa-certificate"></i></span><a href="https://education.rstudio.com/trainers/people/canelon+silvia/">Tidyverse Instructor Certification</a> ∙ RStudio, PBC ∙ 2020</li>
-</ul>
+:::
+<!-- end grid -->
 
 ## Lately ...
 
 :::: {.grid}
 
-::: {.g-col-6}
-#### Meeting People Where They R
+::: {.g-col-3}
+#### Blog
 ::: {#blog}
 :::
 [See all &rarr;](../blog){.about-links .subtitle}
 :::
 
-::: {.g-col-6}
+::: {.g-col-3}
 #### Talks
 ::: {#talk}
 :::
 [See all &rarr;](../talk){.about-links .subtitle}
 :::
 
-::: {.g-col-6}
+::: {.g-col-3}
 #### Publications
 ::: {#publication}
 :::
 [See all &rarr;](../publication){.about-links .subtitle}
 :::
 
-::: {.g-col-6}
+::: {.g-col-3}
 #### Projects
 ::: {#project}
 :::

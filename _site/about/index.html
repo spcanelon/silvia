@@ -129,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-subtitle','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
       searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
@@ -182,7 +182,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -227,16 +227,16 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 
 
-<div class="quarto-about-trestles">
+<div class="quarto-about-trestles column-page">
   <div class="about-entity">
     <img src="sidebar/avatar.png" alt="Smiling woman with a tan complexion, dark eyes, and dark long wavy hair styled to one side" class="about-image
   rounded " style="width: 14em;">
@@ -285,7 +285,17 @@ Hey, I’m happy you’re here
 
 <section id="about-me" class="level2">
 <h2 data-anchor-id="about-me">About me</h2>
+<div class="grid">
+<div class="g-col-6">
 <p>Biomedical engineer turned informaticist, curious about all intersections of data and society.</p>
+<p>I enjoy using <a href="https://www.r-project.org/about.html">R</a> to optimize my data science workflow and have noticed it making guest appearances elsewhere in my life. I’m certified as an <a href="https://education.rstudio.com/trainers/people/canelon+silvia/">RStudio Tidyverse Instructor</a> and am passionate about R education and data literacy as ways to build power in communities. Keep up with my R tinkering in my <a href="../blog">blog</a> and presentations in <a href="../talk">talks</a>.</p>
+<ul class="fa-ul">
+<li>
+<span class="fa-li"><i class="fa-solid fa-certificate"></i></span><a href="https://education.rstudio.com/trainers/people/canelon+silvia/">Tidyverse Instructor Certification</a> ∙ RStudio, PBC ∙ 2020
+</li>
+</ul>
+</div>
+<div class="g-col-6">
 <p>Prior to joining the Urban Health Lab, I developed novel data mining methods to extract meaningful information from the EHR and study health outcomes and disparities in pregnant populations. I’m particularly interested in research that combines biomedical data science with open data sources in ways that prioritize health equity in communities.</p>
 <ul class="fa-ul">
 <li>
@@ -298,25 +308,22 @@ Hey, I’m happy you’re here
 <span class="fa-li"><i class="fa-solid fa-graduation-cap"></i></span>B.S. in Biomedical Engineering ∙ University of Minnesota ∙ 2012
 </li>
 </ul>
-<p>I enjoy using <a href="https://www.r-project.org/about.html">R</a> to optimize my data science workflow and have noticed it making guest appearances elsewhere in my life. I’m certified as an <a href="https://education.rstudio.com/trainers/people/canelon+silvia/">RStudio Tidyverse Instructor</a> and am passionate about R education and data literacy as ways to build power in communities. Keep up with my R tinkering in my <a href="../blog">blog</a> and presentations in <a href="../talk">talks</a>.</p>
-<ul class="fa-ul">
-<li>
-<span class="fa-li"><i class="fa-solid fa-certificate"></i></span><a href="https://education.rstudio.com/trainers/people/canelon+silvia/">Tidyverse Instructor Certification</a> ∙ RStudio, PBC ∙ 2020
-</li>
-</ul>
+</div>
+</div>
+<!-- end grid -->
 </section>
 <section id="lately" class="level2">
 <h2 data-anchor-id="lately">Lately …</h2>
 <div class="grid">
-<section id="meeting-people-where-they-r" class="level4 g-col-6">
-<h4 data-anchor-id="meeting-people-where-they-r">Meeting People Where They R</h4>
+<section id="blog" class="level4 g-col-3">
+<h4 data-anchor-id="blog">Blog</h4>
 <div id="listing-blog" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-1">
 <div class="g-col-1" data-index="0" data-categories="R,tutorial,maps,webscraping,robotstxt,rvest,leaflet,ggmap" data-listing-date-sort="1653969600000" data-listing-file-modified-sort="1684114053992" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="77">
 <a href="../blog/2022-05-31-ccd-sips/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="../blog/2022-05-31-ccd-sips/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img src="../blog/2022-05-31-ccd-sips/featured.png" class="thumbnail-image card-img" style="height: 200;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -336,7 +343,7 @@ No matching items
 </div>
 <p><a href="../blog" class="about-links subtitle">See all →</a></p>
 </section>
-<section id="talks" class="level4 g-col-6">
+<section id="talks" class="level4 g-col-3">
 <h4 data-anchor-id="talks">Talks</h4>
 <div id="listing-talk" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-1">
@@ -344,7 +351,7 @@ No matching items
 <a href="../talk/2023-03-09-penn-community-scholars/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="../talk/2023-03-09-penn-community-scholars/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img src="../talk/2023-03-09-penn-community-scholars/featured.png" class="thumbnail-image card-img" style="height: 200;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -364,7 +371,7 @@ No matching items
 </div>
 <p><a href="../talk" class="about-links subtitle">See all →</a></p>
 </section>
-<section id="publications" class="level4 g-col-6">
+<section id="publications" class="level4 g-col-3">
 <h4 data-anchor-id="publications">Publications</h4>
 <div id="listing-publication" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-1">
@@ -372,15 +379,12 @@ No matching items
 <a href="../publication/2022-11-24-mwas-repurposed-covid19-meds/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="../publication/featured.jpg" class="thumbnail-image card-img" style="height: 150px;">
+<img src="../publication/featured.jpg" class="thumbnail-image card-img" style="height: 200;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 A medication-wide association study (MWAS) on repurposed drugs for COVID-19 with Pre-pandemic prescription medication exposure and pregnancy outcomes
 </h5>
-<div class="card-subtitle listing-subtitle">
-EHR study describing an MWAS approach to explore connections between exposure to repurposed COVID-19 prescription medications and the risk of cesarean section, preterm birth, and stillbirth
-</div>
 </div>
 </div>
 </a>
@@ -392,7 +396,7 @@ No matching items
 </div>
 <p><a href="../publication" class="about-links subtitle">See all →</a></p>
 </section>
-<section id="projects" class="level4 g-col-6">
+<section id="projects" class="level4 g-col-3">
 <h4 data-anchor-id="projects">Projects</h4>
 <div id="listing-project" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-1">
@@ -400,7 +404,7 @@ No matching items
 <a href="../project/2021-07-07-presentable-user2021/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="../project/2021-07-07-presentable-user2021/featured.png" class="thumbnail-image card-img" style="height: 150px;">
+<img src="../project/2021-07-07-presentable-user2021/featured.png" class="thumbnail-image card-img" style="height: 200;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
