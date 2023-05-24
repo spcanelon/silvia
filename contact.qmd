@@ -1,0 +1,50 @@
+---
+# title: Send me a note
+name: Contact Form
+page-layout: full
+---
+
+::: {.grid}
+
+::: {.g-col-4}
+
+# Send me a note {{< fa feather-pointed >}}
+
+You can use this form to contact me about speaking engagements, collaborations, or simply to say hello.
+
+I also love hearing if my educational materials have been helpful for you, and how they could be improved &#8212; particularly if they could be made more accessible &#9825;
+
+<a class="link-dark me-1" href="/accessibility.html" title="Accessibility commitment" target="_blank"rel="noopener">{{< fa universal-access >}}</a>
+<a class="link-dark me-1" href="https://fosstodon.org/@spcanelon" title="mastodon" target="_blank" rel="noopener">{{< fa brands mastodon >}}</a>
+<a class="link-dark me-1" href="https://github.com/spcanelon" title="github" target="_blank"rel="noopener">{{< fa brands github >}}</a>
+<a class="link-dark me-1" href="https://orcid.org/0000-0003-1709-1394" title="orcid" target="_blank"rel="noopener">{{< ai orcid >}}</a>
+<a class="link-dark me-1" href="https://scholar.google.com/citations?user=GAzkvpcAAAAJ&hl=en&oi=ao" title="Google Scholar" target="_blank"rel="noopener">{{< ai google-scholar >}}</a>
+<a class="link-dark me-1" href="https://linkedin.com/in/spcanelon" title="LinkedIn" target="_blank"rel="noopener">{{< fa brands linkedin >}}</a>
+
+:::
+<!-- source: https://github.com/mccarthy-m-g/tidytales/blob/main/about/index.qmd#L24-L46 -->
+
+::: {.g-col-1}
+:::
+
+::: {.g-col-7}
+<br>
+
+<form action="https://formspree.io/f/mwkapgzw" method="POST" accept-charset="utf-8">
+
+
+<label for="full-name">Full Name</label>
+<input type="text" name="name" id="full-name" class="form-control" placeholder="First and Last" required>
+
+<label for="email-address">Email Address</label>
+<input type="email" name="_replyto" id="email-address" class="form-control" placeholder="your@email.here" required>
+
+<label for="message">Message</label>
+  <textarea rows="6" name="message" id="message" class="form-control" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required></textarea>
+
+<button type="submit" class="btn btn-primary mt-4">Send message</button>
+</form>
+:::
+
+:::
+<!-- end grid -->
