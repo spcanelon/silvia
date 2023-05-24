@@ -22,3 +22,8 @@ format:
     code-overflow: wrap
     template-partials: 
       - ../_partials/title-block-link-buttons/title-block.html
+
+# Enable comments
+comments: 
+  utterances:
+    repo: spcanelon/silvia

@@ -3,6 +3,12 @@ project:
 
 website:
   title: "Silvia Canelón"
+  comments: 
+    utterances: 
+      repo: spcanelon/silvia 
+      label: utterances
+      theme: body-light
+      issue-term: title
  
   navbar:
     right:
