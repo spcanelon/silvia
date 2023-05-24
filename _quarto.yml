@@ -37,12 +37,14 @@ website:
     right: 
       - text: "Accessibility"
         aria-label: "Accessibility Commitment"
-        href: accessibility.md
+        href: accessibility.qmd
       - text: "Contact"
         aria-label: "Contact Form"
-        href: "form/contact.md"
+        href: "contact.qmd"
       - text: "License"
         aria-label: "License Details"
-        href: license.md
+        href: license.qmd
 
+execute: 
+  freeze: true
 
