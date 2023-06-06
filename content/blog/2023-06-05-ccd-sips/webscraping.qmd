@@ -1,0 +1,106 @@
+---
+title: "webscraping"
+format: html
+---
+
+```{r setup, eval=TRUE, include=FALSE}
+xfun::pkg_attach("tidyverse", "rvest", "robotstxt", "here", "tidygeocoder", "leaflet")
+```
+
+## Checking the page
+
+```{r webscrape, echo=FALSE}
+# check page's terms of service
+get_robotstxt("https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view")
+
+```
+
+## Extract information
+
+```{r eval=TRUE}
+# save page
+url <- "https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1"
+html1 <- read_html(url)
+
+# extract table info
+table1 <- 
+  html1 |> 
+  html_node("table") |> 
+  html_table()
+
+links <- 
+  html1 |> 
+  html_elements(".o-table__tag.ccd-text-link") |> 
+  html_attr("href") |> 
+  as_tibble()
+
+table1Mod <-
+  bind_cols(table1, links) |> 
+  mutate(Specials = paste0(url, value)) |> 
+  select(-c(`CCD SIPS Specials`, value))
+
+table1Mod |> 
+  head()
+```
+
+## Create scraping function
+
+```{r, eval=TRUE}
+getTables <- function(pageNumber) {
+  Sys.sleep(2)
+  
+  url <- paste0("https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=", pageNumber)
+  
+  html <- read_html(url)
+  
+  table <- 
+    html |> 
+    html_node("table") |>
+    html_table()
+  
+  links <- 
+    html |> 
+    html_elements(".o-table__tag.ccd-text-link") |> 
+    html_attr("href") |> 
+    as_tibble()
+  
+  tableSpecials <<-
+    bind_cols(table, links) |> 
+    mutate(Specials = paste0(url, value)) |> 
+    select(-c(`CCD SIPS Specials`, value))
+}
+```
+
+## Scrape all pages
+
+```{r, eval=TRUE}
+table2 <-
+  map_df(2:3, getTables) 
+
+table <- 
+  bind_rows(table1Mod, table2)
+
+table |> 
+  head()
+
+write_rds(table,
+          file = here("content/blog/2023-06-05-ccd-sips/specialsScraped.Rds"))
+```
+
+
+## Geocoding
+
+- [Geocoding Made Easy • tidygeocoder](https://jessecambon.github.io/tidygeocoder/)
+
+```{r eval=FALSE}
+specials <- read_rds(file = here::here("content/blog/2023-06-05-ccd-sips/specialsScraped.Rds"))
+
+specials_geocoded <- 
+  specials |> 
+  geocode(Address, method = "google", 
+          lat = "Latitude", long = "Longitude")
+
+specials_geocoded |> 
+  write_rds(file = here("content/blog/2023-06-05-ccd-sips/specialsGeocoded.Rds"))
+
+```
