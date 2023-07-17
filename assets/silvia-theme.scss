@@ -15,3 +15,10 @@ $headings-font-weight:      400 !default;
 $font-family-monospace:      "Dank Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
 $headings-font-family:        "Petrona" !default;
+
+// Links
+
+$link-color:                              $spc-secondary !default;
+$link-decoration:                         underline !default;
+$link-hover-color:                        $spc-secondary-light !default;
+$link-hover-decoration:                   none !default;
