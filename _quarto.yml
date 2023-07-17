@@ -32,12 +32,12 @@ website:
     left: >-
      &#169; 2023 Silvia Canelón &#8729; Made with [Quarto](https://quarto.org)
     center: |
-      <a class="link-dark me-1" href="/accessibility.html" title="Accessibility commitment" target="_blank"rel="noopener">{{< fa universal-access >}}</a>
+      <a class="link-dark me-1" href="/accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener">{{< fa universal-access >}}</a>
       <a class="link-dark me-1" href="https://fosstodon.org/@spcanelon" title="mastodon" target="_blank" rel="noopener">{{< fa brands mastodon >}}</a>
-      <a class="link-dark me-1" href="https://github.com/spcanelon" title="github" target="_blank"rel="noopener">{{< fa brands github >}}</a>
-      <a class="link-dark me-1" href="https://orcid.org/0000-0003-1709-1394" title="orcid" target="_blank"rel="noopener">{{< ai orcid >}}</a>
+      <a class="link-dark me-1" href="https://github.com/spcanelon" title="github" target="_blank" rel="noopener">{{< fa brands github >}}</a>
+      <a class="link-dark me-1" href="https://orcid.org/0000-0003-1709-1394" title="orcid" target="_blank" rel="noopener">{{< ai orcid >}}</a>
       <a class="link-dark me-1" href="https://scholar.google.com/citations?user=GAzkvpcAAAAJ&hl=en&oi=ao" title="Google Scholar" target="_blank"rel="noopener">{{< ai google-scholar >}}</a>
-      <a class="link-dark me-1" href="https://linkedin.com/in/spcanelon" title="LinkedIn" target="_blank"rel="noopener">{{< fa brands linkedin >}}</a>
+      <a class="link-dark me-1" href="https://linkedin.com/in/spcanelon" title="LinkedIn" target="_blank" rel="noopener">{{< fa brands linkedin >}}</a>
 
     right: 
       - text: "Accessibility"
@@ -49,6 +49,15 @@ website:
       - text: "License"
         aria-label: "License Details"
         href: license.qmd
+
+format: 
+  html:
+    theme:
+      light:
+        - cosmo
+        # - superhero
+        - assets/silvia-theme.scss
+        - assets/silvia/colors.scss
 
 execute: 
   freeze: true
