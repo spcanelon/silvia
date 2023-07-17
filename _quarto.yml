@@ -58,6 +58,8 @@ format:
         # - superhero
         - assets/silvia-theme.scss
         - assets/silvia/colors.scss
+        - assets/silvia/fonts.scss
+
 
 execute: 
   freeze: true
