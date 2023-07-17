@@ -4,3 +4,14 @@
 
 $body-color:                $spc-primary !default;
 $body-bg:                   $spc-bg !default;
+
+// Fonts
+
+// stylelint-disable-next-line value-keyword-case
+$font-family-sans-serif:    "Red Hat Text", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+// $font-family-serif: "Petrona", serif, !default;
+$headings-font-weight:      400 !default;
+
+$font-family-monospace:      "Dank Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+
+$headings-font-family:        "Petrona" !default;
