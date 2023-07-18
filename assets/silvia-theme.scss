@@ -1,7 +1,10 @@
 /*-- scss:defaults --*/
 
-// Body
+// Colors
+$primary:                   $spc-primary-light !default;
+$secondary:                 $spc-secondary !default;
 
+// Body
 $body-color:                $spc-primary !default;
 $body-bg:                   $spc-bg !default;
 
@@ -22,3 +25,4 @@ $link-color:                              $spc-secondary !default;
 $link-decoration:                         underline !default;
 $link-hover-color:                        $spc-secondary-light !default;
 $link-hover-decoration:                   none !default;
+
