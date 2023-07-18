@@ -40,3 +40,11 @@ $table-caption-color:         $primary !default;
   border-bottom-color: lighten($primary, 50);
 }
 
+// Code
+
+// inline code
+p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
+  color: $primary;
+  background-color: $spc-accent-light;
+  border: 1px solid $spc-accent;
+}
