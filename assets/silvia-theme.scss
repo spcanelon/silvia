@@ -61,12 +61,23 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
 // footer
 .nav-footer-center i {
   color: $spc-secondary !important;
+  
+  &:hover {
+    color: $spc-secondary-light !important;
+  }
 }
 
 // home + about pages
 .about-links .about-link i {
   color: $spc-secondary !important;
+
+  &:hover {
+    color: $spc-secondary-light !important;
+  }
 }
+
+// contact
+
 
 // Buttons
 
