@@ -67,3 +67,25 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
 .about-links .about-link i {
   color: $spc-secondary !important;
 }
+
+// Buttons
+
+// post links
+.btn-secondary {
+  color: $spc-secondary;
+  background: transparent;
+}
+
+// Categories
+
+// posts
+.quarto-category:hover {
+  background-color: #6c757d;
+  color: white;
+}
+
+// listings
+.listing-category:hover {
+  background-color: #6c757d;
+  color: white !important;
+}
