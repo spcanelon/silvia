@@ -100,3 +100,25 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
   background-color: #6c757d;
   color: white !important;
 }
+
+// Navbar
+
+// header
+.navbar {
+  background: transparent;
+}
+
+// links
+.navbar-nav .nav-link {
+    color: $spc-secondary !important;
+    text-transform: uppercase;
+    letter-spacing: .1em; 
+    border-bottom: 0px hidden $spc-secondary;    
+    margin: 0px 10px 0px 10px; 
+    padding: 2px 2px 4px 2px !important;
+
+    &:hover {
+      border-bottom: 1px solid $spc-secondary !important;
+      padding: 2px 2px 0px 2px !important;
+    }
+}
