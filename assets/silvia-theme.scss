@@ -123,6 +123,14 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
     }
 }
 
-.quarto-navbar-tools {
-
+// Listing cards
+.card {
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
 }
+
+.card-img {
+    border-radius: 4px 4px 0px 0px;
+  }
