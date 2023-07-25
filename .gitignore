@@ -10,3 +10,5 @@ Thumbs.db
 .hugo_build.lock
 
 /.luarc.json
+
+/assets/silvia/
