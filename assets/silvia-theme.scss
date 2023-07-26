@@ -123,6 +123,25 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
     }
 }
 
+// Footer
+
+// links on left side
+.nav-footer a {
+    color: $spc-secondary;
+    // link on hover
+    &:hover {
+      color: $spc-secondary-light;
+    }
+}
+
+// links on right side
+.nav-footer .nav-link {
+    &:hover {
+      text-decoration: underline;
+    }
+}
+
+
 // Listing cards
 .card {
   background: transparent;
