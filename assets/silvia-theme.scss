@@ -87,6 +87,22 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
   background: transparent;
 }
 
+// contact form
+.btn-primary:hover {
+  background-color: $spc-secondary;
+  border-color: $spc-secondary;
+}
+
+// pagination
+.page-link {
+  color: $primary;
+  &:hover {
+    color: white;
+    background-color: $primary;
+    border-color: $primary;
+  }
+}
+
 // Categories
 
 // posts
@@ -140,7 +156,6 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
       text-decoration: underline;
     }
 }
-
 
 // Listing cards
 .card {
