@@ -167,4 +167,28 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
 
 .card-img {
     border-radius: 4px 4px 0px 0px;
+}
+
+// Home
+
+// social links
+.about-entity {
+  // block of links
+  .about-links {
+    column-gap: 0em !important;
   }
+  // individual links
+  .about-link {
+    padding: 0.25em 0.25em !important;
+    border: none !important;
+  }
+}
+
+// Mobile
+
+@media screen and (max-width: 991.98px) {
+  .about-entity .about-links {
+    flex-direction: row !important;
+    justify-content: center !important;
+  }
+}
