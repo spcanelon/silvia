@@ -1,0 +1,10 @@
+/* title and subtitle */
+#title-block-header {
+  margin: 2em 0 4em 0;
+  text-align: center;
+}
+
+/* title */
+.quarto-title {
+  padding-bottom: 1em;
+}

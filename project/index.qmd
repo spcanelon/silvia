@@ -16,6 +16,15 @@ listing:
   image-align: left
   # image-height: 22em
   page-size: 9
-page-layout: full
+page-layout: article
+format: 
+  html: 
+    grid:
+      margin-width: 0px
 title-block-banner: false
+
+header-includes: >
+  <link rel="stylesheet" href="../assets/listing-default.css">
+resources:
+  - ../assets/listing-default.css
 ---
