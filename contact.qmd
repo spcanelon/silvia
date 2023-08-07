@@ -1,18 +1,29 @@
 ---
+pagetitle: Silvia Canelón - Contact
 # title: Send me a note
 name: Contact Form
-page-layout: full
+page-layout: article
+format: 
+  html: 
+    grid:
+      margin-width: 0px
+      sidebar-width: 0px
+
+header-includes: >
+  <link rel="stylesheet" href="assets/contact.css">
+resources:
+  - assets/contact.css
 ---
 
 ::: {.grid}
 
-::: {.g-col-4}
+::: {.g-col-5 #note}
 
 # Send me a note {{< fa feather-pointed >}}
 
 You can use this form to contact me about speaking engagements, collaborations, or simply to say hello.
 
-I also love hearing if my educational materials have been helpful for you, and how they could be improved &#8212; particularly if they could be made more accessible &#9825;
+I also love hearing if my educational materials have been helpful for you, and how they could be improved &#8212; particularly if they could be made more accessible {{< bi heart-fill >}}
 
 <a class="link-dark me-1" href="/accessibility.html" title="Accessibility commitment" target="_blank"rel="noopener">{{< fa universal-access >}}</a>
 <a class="link-dark me-1" href="https://fosstodon.org/@spcanelon" title="mastodon" target="_blank" rel="noopener">{{< fa brands mastodon >}}</a>
@@ -27,8 +38,7 @@ I also love hearing if my educational materials have been helpful for you, and h
 ::: {.g-col-1}
 :::
 
-::: {.g-col-7}
-<br>
+::: {.g-col-6 #form}
 
 <form action="https://formspree.io/f/mwkapgzw" method="POST" accept-charset="utf-8">
 
