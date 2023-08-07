@@ -60,7 +60,7 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
 
 // footer
 .nav-footer-center i {
-  color: $spc-secondary !important;
+  color: $secondary !important;
   
   &:hover {
     color: $spc-secondary-light !important;
@@ -69,7 +69,7 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
 
 // home + about pages
 .about-links .about-link i {
-  color: $spc-secondary !important;
+  color: $secondary !important;
 
   &:hover {
     color: $spc-secondary-light !important;
@@ -83,14 +83,14 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
 
 // post links
 .btn-secondary {
-  color: $spc-secondary;
+  color: $secondary;
   background: transparent;
 }
 
 // contact form
 .btn-primary:hover {
-  background-color: $spc-secondary;
-  border-color: $spc-secondary;
+  background-color: $secondary;
+  border-color: $secondary;
 }
 
 // pagination
@@ -124,17 +124,29 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
   background: transparent;
 }
 
+// title
+.navbar-title {
+  font-size: 0.85em;
+  color: $primary;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+
+  &:hover {
+    border-bottom: 1px solid $primary !important;
+  }
+}
+
 // links
 .navbar-nav .nav-link {
-    color: $spc-secondary !important;
+    color: $secondary !important;
     text-transform: uppercase;
     letter-spacing: .1em; 
-    border-bottom: 0px hidden $spc-secondary;    
+    border-bottom: 0px hidden $secondary;    
     margin: 0px 10px 0px 10px; 
     padding: 2px 2px 4px 2px !important;
 
     &:hover {
-      border-bottom: 1px solid $spc-secondary !important;
+      border-bottom: 1px solid $secondary !important;
       padding: 2px 2px 0px 2px !important;
     }
 }
@@ -143,7 +155,7 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
 
 // links on left side
 .nav-footer a {
-    color: $spc-secondary;
+    color: $secondary;
     // link on hover
     &:hover {
       color: $spc-secondary-light;
@@ -185,7 +197,6 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
   }
 }
 
-// TODO: style about page independently
 // title
 .title {
   font-size: 3rem;
@@ -195,7 +206,7 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
 // subtitle + Learn More About Me
 .subtitle {
   font-family: "Petrona";
-  font-size:1rem;
+  font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
