@@ -13,7 +13,7 @@ twitter-card:
 
 about:
   template: solana
-  image-width: 20em
+  image-width: 28em
   id: hero-heading
   links:
     - text: "{{< fa universal-access >}}"
@@ -32,10 +32,16 @@ about:
     - icon: linkedin
       aria-label: "LinkedIn"
       href: https://linkedin.com/in/spcanelon
-page-layout: article
+page-layout: full
+
+header-includes: >
+  <link rel="stylesheet" href="assets/index.css">
+resources:
+  - assets/index.css
 ---
 
 <br><br>
+
 
 ::: {#hero-heading}
 

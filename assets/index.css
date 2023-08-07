@@ -1,0 +1,60 @@
+/* heading, subtitle, and blurb */
+.entity-contents {
+  text-align: right !important;
+  padding: 0 2em 0 2em;
+}
+
+/* blurb */
+.about-contents {
+  padding: 0 0 0 2em !important;
+}
+
+/* social links */
+.about-links {
+  justify-content: flex-end !important;
+}
+
+/* Learn More About Me */
+.about-links.subtitle {
+  font-size: 1em !important;
+  font-family: "Red Hat Text";
+  justify-content: flex-end !important;
+}
+
+/* image */
+.about-image {
+  margin-top: -2em;
+  padding: 0 2em 0em 0;
+}
+
+/* mobile query up for screens up to ~992px wide */
+@media screen and (max-width: 991.98px) {
+    /* move text up & center */
+    .entity-contents {
+      order: 2 !important;
+      margin: -4em 0 0 0 !important;
+      padding: 0 0 0 0em !important;
+      text-align: center !important;
+    }
+
+    /* center subtitle */
+    .subtitle {
+      text-align: center !important;
+    }
+
+    /* blurb */
+    .about-contents {
+      padding: 0 0 0 0em !important;
+    }
+
+    /* center Learn More About Me */
+    .about-links.subtitle {
+      justify-content: center !important;
+    }
+
+    /* move image up, adjust padding */
+    .about-image {
+      order: 1 !important;
+      padding: 0 2em 0 2em !important;
+    }
+}
