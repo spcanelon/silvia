@@ -1,0 +1,44 @@
+/* title and subtitle */
+#title-block-header {
+  margin-bottom: 0px;
+}
+
+/* see all links */
+.about-links.subtitle {
+  font-family: "Red Hat Text"
+}
+
+/* mobile query up for screens up to ~992px wide */
+@media screen and (max-width: 991.98px) {
+  /* wrap lately section */
+  #lately .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  #blog, #talks, #publications, #projects {
+    flex-basis: 40% !important;
+    flex-grow: 1;
+  }
+}
+
+/* mobile query up for screens up to ~576px wide */
+@media screen and (max-width: 576px) {
+
+  /* wrap about me section */
+  #about-me .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* wrap lately section */
+  #lately .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* listings */
+  #blog, #talks, #publications, #projects {
+    flex-basis: 100% !important;
+  }
+}

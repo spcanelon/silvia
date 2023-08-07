@@ -80,6 +80,11 @@ listing:
   max-items: 1
   image-height: "200"
 page-layout: full
+
+header-includes: >
+  <link rel="stylesheet" href="../assets/about.css">
+resources:
+  - ../assets/about.css
 ---
 
 ::: {#hero-heading}
@@ -99,7 +104,7 @@ Get in touch by [sending me a note](/contact.qmd)! {{< fa feather-pointed >}}
 
 ::: {.grid}
 
-::: {.g-col-6}
+::: {.g-col-6 #about-me-1}
 
 Biomedical engineer turned informaticist, curious about all intersections of data and society.
 
@@ -111,7 +116,7 @@ I enjoy using [R](https://www.r-project.org/about.html) to optimize my data scie
 
 :::
 
-::: {.g-col-6}
+::: {.g-col-6 #about-me-2}
 
 Prior to joining the Urban Health Lab, I developed novel data mining methods to extract meaningful information from the EHR and study health outcomes and disparities in pregnant populations. I'm particularly interested in research that combines biomedical data science with open data sources in ways that prioritize health equity in communities.
 
