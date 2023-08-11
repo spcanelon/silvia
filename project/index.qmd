@@ -14,7 +14,7 @@ listing:
   filter-ui: false
   fields: [title, categories, date, image]
   image-align: left
-  # image-height: 22em
+  image-height: "200"
   page-size: 9
 page-layout: article
 format: 
