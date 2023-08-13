@@ -76,8 +76,12 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
   }
 }
 
-// contact
+// Contact
 
+// social links
+.link-dark.me-1 i {
+  color: $secondary !important;
+}
 
 // Buttons
 
@@ -126,7 +130,8 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
 
 // title
 .navbar-title {
-  font-size: 0.85em;
+  font-size: 0.75em;
+  font-weight: 500;
   color: $primary;
   text-transform: uppercase;
   letter-spacing: .1em;
