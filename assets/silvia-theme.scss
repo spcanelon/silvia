@@ -186,35 +186,38 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
     border-radius: 4px 4px 0px 0px;
 }
 
-// Home
+// Title block
 
-// social links
-.about-entity {
-  // block of links
-  .about-links {
-    column-gap: 0em !important;
-    font-size: 1.2em;
-  }
-  // individual links
-  .about-link {
-    padding: 0.25em 0.25em !important;
-    border: none !important;
-  }
+.featured-image {
+  // https://stackoverflow.com/a/24084708
+  // style = "background-image: url(featured.png), url(featured.jpg); background-size: cover; color: white; box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.65);"
+  background-size: cover; 
+  background-position: center;
+  color: white; 
+  box-shadow: inset 0 0 0 1000px rgba(0,38,66,0.75);
 }
+
+// make nav bar be centered in mobile
+.fixed-top {
+  position: absolute;
+}
+
+.aa-DetachedOverlay {
+  position: absolute;
+}
+
+// Throughout the site
 
 // title
 .title {
-  font-size: 3rem;
+  font-size: 2.5em;
   font-weight: 500;
+  line-height: 1.1em;
 }
 
 // subtitle + Learn More About Me
 .subtitle {
-  font-family: "Petrona";
-  font-size: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  font-size: 1.2em;
 }
 
 // Mobile
@@ -247,5 +250,9 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
     order: 3 !important;
     flex-basis: 100%;
     text-align: center;
+  }
+
+  .navbar .quarto-navbar-tools {
+    text-align: left;
   }
 }
