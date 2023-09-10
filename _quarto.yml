@@ -11,6 +11,10 @@ website:
       issue-term: title
  
   navbar:
+    logo: assets/silvia/img/logo_noBg.svg
+    tools:
+    - icon: github
+      href: https://www.github.com/spcanelon/silvia
     right:
       - text: About
         aria-label: "About Me"
@@ -59,8 +63,8 @@ format:
         - assets/silvia-theme.scss
         - assets/silvia/colors.scss
         - assets/silvia/fonts.scss
+    highlight-style: a11y
 
 
 execute: 
   freeze: true
-
