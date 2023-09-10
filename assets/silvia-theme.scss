@@ -220,6 +220,11 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
   font-size: 1.2em;
 }
 
+// Code: block
+div.sourceCode {
+  background-color: white;
+}
+
 // Mobile
 
 @media screen and (max-width: 991.98px) {
