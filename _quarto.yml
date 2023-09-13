@@ -3,6 +3,8 @@ project:
 
 website:
   title: "Silvia Canelón"
+  site-url: https://silvia.rbind.io
+  description: "Researcher and R educator working in biomedical and spatial data science."
   comments: 
     utterances: 
       repo: spcanelon/silvia 
@@ -53,6 +55,8 @@ website:
       - text: "License"
         aria-label: "License Details"
         href: license.qmd
+      - icon: rss
+        href: index.xml
 
 format: 
   html:
