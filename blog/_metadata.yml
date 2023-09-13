@@ -14,7 +14,8 @@ toc-title: Table of contents
 toc-location: right
 
 # Default fields for citation
-citation: false
+citation: true
+appendix-cite-as: display
 
 # Wrap overflow code
 format: 
