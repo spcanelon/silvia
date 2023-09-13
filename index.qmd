@@ -51,3 +51,56 @@ I am a researcher, community organizer, and R educator. My **research** leverage
 
 :::
 <!-- hero-heading -->
+
+```{r import-manual-redirects}
+manual_redirects <-
+  readr::read_table(here::here("_site", "_manualredirects.txt"),
+                    col_names = FALSE) |> 
+  dplyr::mutate(redirect = paste0(X1, " ", X2, " ", X3))
+
+manual_redirects <- manual_redirects$redirect
+```
+
+```{r write-redirects}
+#| echo: false
+
+# adapted from Tom Mock: https://github.com/jthomasmock/themockup-blog/blob/master/index.qmd#L27C1-L48C4
+# who adapted from Danielle Navarro: https://blog.djnavarro.net/porting-to-quarto/#netlify-redirects
+
+# function: obtain list of posts
+list_files <- function(folder) {
+  posts <-
+    list.dirs(
+    path = c(here::here(folder)),
+    full.names = FALSE,
+    recursive = FALSE
+    ) |> 
+    tibble::as_tibble_col(column_name = "file")  |>
+    dplyr::mutate(folder = folder)
+}
+
+# define post folders
+folders <- c("blog", "project", "publication", "talk")
+
+# list posts by folder
+posts <- purrr::map(folders, list_files) |> purrr::list_rbind()
+
+# extract slugs and create redirects
+posts <- 
+  posts |> 
+  dplyr::mutate(
+    # extract the year-slugs
+    slugs = stringr::str_remove(file, "(?!\\d{4}-)\\d{2}-\\d{2}-(?!\\d)"),
+    # lines to insert to a netlify _redirect file
+    redirects = paste0("/", slugs, " ", "/", folder, "/", file)
+    )
+
+# extract redirects
+redirects <- posts$redirects
+
+# combine with manual redirects
+redirects_combined <- c(manual_redirects, redirects)
+
+# write the _redirect file
+writeLines(redirects_combined, here::here("_site", "_redirects"))
+```
