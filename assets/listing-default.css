@@ -18,9 +18,10 @@
   /* max-width: 40em; */
   text-align: center; 
   justify-self: center;
-  margin: 0 140px 0 140px;
+  margin: 0 1em 0 1em;
 }
 
+/* remove extra margin on right side */
 .quarto-listing-container-default {
   margin-right: 0em;
 }
