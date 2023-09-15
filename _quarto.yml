@@ -1,10 +1,12 @@
 project:
   type: website
+  post-render: 
+    - "cp -rnv static/. _site" # source: https://github.com/quarto-dev/quarto-cli/discussions/4162#discussioncomment-4831352
 
 website:
   title: "Silvia Canelón"
   site-url: https://silviacanelon.com
-  description: "Researcher and R educator working in biomedical and spatial data science."
+  description: "Researcher and R educator applying biomedical and spatial data science in ways that prioritize health equity."
   comments: 
     utterances: 
       repo: spcanelon/silvia 
@@ -69,6 +71,5 @@ format:
         - assets/silvia/fonts.scss
     highlight-style: a11y
 
-
 execute: 
-  freeze: true
+  freeze: auto

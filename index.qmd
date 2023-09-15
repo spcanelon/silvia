@@ -34,6 +34,9 @@ about:
       href: https://linkedin.com/in/spcanelon
 page-layout: full
 
+execute: 
+  freeze: false
+
 header-includes: >
   <link rel="stylesheet" href="assets/index.css">
 resources:
@@ -53,8 +56,10 @@ I am a researcher, community organizer, and R educator. My **research** leverage
 <!-- hero-heading -->
 
 ```{r import-manual-redirects}
+#| echo: false
+
 manual_redirects <-
-  readr::read_table(here::here("_site", "_manualredirects.txt"),
+  readr::read_table(here::here("static", "_manualredirects.txt"),
                     col_names = FALSE) |> 
   dplyr::mutate(redirect = paste0(X1, " ", X2, " ", X3))
 
@@ -90,7 +95,8 @@ posts <-
   posts |> 
   dplyr::mutate(
     # extract the year-slugs
-    slugs = stringr::str_remove(file, "(?!\\d{4}-)\\d{2}-\\d{2}-(?!\\d)"),
+    # slugs = stringr::str_remove(file, "(?!\\d{4}-)\\d{2}-\\d{2}-(?!\\d)"),
+    slugs = stringr::str_remove(file, "\\d{4}-\\d{2}-\\d{2}-(?!\\d)"),
     # lines to insert to a netlify _redirect file
     redirects = paste0("/", slugs, " ", "/", folder, "/", file)
     )
