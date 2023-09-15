@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -61,7 +61,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -75,6 +76,9 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/silvia/img/logo_noBg.svg" alt="" class="navbar-logo">
+    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Silvia Canelón</span>
     </a>
@@ -107,36 +111,15 @@ ul.task-list li input[type="checkbox"] {
   </li>  
 </ul>
             <div class="quarto-navbar-tools">
+    <a href="https://www.github.com/spcanelon/silvia" rel="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
-<!-- sidebar -->
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#what-to-expect" id="toc-what-to-expect" class="nav-link active" data-scroll-target="#what-to-expect">What to expect</a></li>
-  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a></li>
-  <li><a href="#railway" id="toc-railway" class="nav-link" data-scroll-target="#railway">Railway</a></li>
-  <li><a href="#tracker-configuration" id="toc-tracker-configuration" class="nav-link" data-scroll-target="#tracker-configuration">Tracker Configuration</a></li>
-  <li><a href="#pricing" id="toc-pricing" class="nav-link" data-scroll-target="#pricing">Pricing</a></li>
-  <li><a href="#goatcounter" id="toc-goatcounter" class="nav-link" data-scroll-target="#goatcounter">GoatCounter</a></li>
-  <li><a href="#updating-umami" id="toc-updating-umami" class="nav-link" data-scroll-target="#updating-umami">Updating Umami</a></li>
-  </ul>
-</nav>
-    </div>
-<!-- main -->
-<main class="content" id="quarto-document-content">
-
-<!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+<div class="quarto-title column-body page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);">
 <h1 class="title">Hello Umami: Deploying a Privacy-Friendly Open Source Tool for Web Analytics</h1>
 <p class="subtitle lead">A use case for adding Umami web analytics to a blogdown site and deploying using Railway.</p>
   <div class="quarto-categories">
@@ -145,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
     <div class="quarto-category">blogdown</div>
     <div class="quarto-category">test</div>
     <div class="quarto-category">Hugo</div>
-  </div>
+    </div>
   </div>
 
 
@@ -170,11 +153,35 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
-<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-center justify-content-sm-start" role="group" aria-label="Links">
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
 <a href="umami.is" class="btn btn-secondary text-capitalize"><i class="bi bi-graph-up-arrow me-1"></i> Umami Docs</a>
 </div>
 
-</header>
+</header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#what-to-expect" id="toc-what-to-expect" class="nav-link active" data-scroll-target="#what-to-expect">What to expect</a></li>
+  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a></li>
+  <li><a href="#railway" id="toc-railway" class="nav-link" data-scroll-target="#railway">Railway</a></li>
+  <li><a href="#tracker-configuration" id="toc-tracker-configuration" class="nav-link" data-scroll-target="#tracker-configuration">Tracker Configuration</a></li>
+  <li><a href="#pricing" id="toc-pricing" class="nav-link" data-scroll-target="#pricing">Pricing</a></li>
+  <li><a href="#goatcounter" id="toc-goatcounter" class="nav-link" data-scroll-target="#goatcounter">GoatCounter</a></li>
+  <li><a href="#updating-umami" id="toc-updating-umami" class="nav-link" data-scroll-target="#updating-umami">Updating Umami</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+<!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
+<!-- <header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title"> -->
+
 
 <style type="text/css">
 .page-main img {
@@ -259,7 +266,10 @@ ul.task-list li input[type="checkbox"] {
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section></div></main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2022" class="csl-entry quarto-appendix-citeas" role="listitem">
+Canelón, Silvia. 2022. <span>“Hello Umami: Deploying a Privacy-Friendly
+Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https://silviacanelon.com/blog/2022-01-18-hello-umami">https://silviacanelon.com/blog/2022-01-18-hello-umami</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -510,6 +520,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </li>  
     <li class="nav-item">
     <a class="nav-link" href="../../license.html">License</a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml">
+      <i class="bi bi-rss" role="img">
+</i> 
+    </a>
   </li>  
 </ul>
     </div>

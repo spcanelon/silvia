@@ -1,0 +1,14 @@
+{
+  "hash": "4271a402263dc49e40aacc7ff9cd5131",
+  "result": {
+    "markdown": "---\ntitle: \"Meeting People Where They R\"\ndescription: |\n  This is my blog where I practice sharing my curiosity about R.<br>It includes notes and tutorials for my future self and hopefully also for you.\nlisting: \n  contents: \n    - \"**/index.qmd\"\n    - \"**/index.markdown\"\n    - \"**/index.md\"\n  sort: \"date desc\"\n  type: default\n  categories: false\n  sort-ui: false\n  filter-ui: false\n  fields: [title, author, categories, date, image]\n  image-placeholder: sidebar.jpg\n  image-align: right\n  page-size: 5\n  feed: true\npage-layout: article\nformat: \n  html: \n    grid:\n      sidebar-width: 0px\n      margin-width: 0px \ntitle-block-banner: false\n\nheader-includes: >\n  <link rel=\"stylesheet\" href=\"../assets/listing-default.css\">\nresources:\n  - ../assets/listing-default.css\n---\n\n::: {.cell}\n::: {.cell-output .cell-output-stderr}\n```\n\n── Column specification ────────────────────────────────────────────────────────\ncols(\n  X1 = col_character(),\n  X2 = col_character(),\n  X3 = col_character()\n)\n```\n:::\n:::\n\n::: {.cell}\n\n:::",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

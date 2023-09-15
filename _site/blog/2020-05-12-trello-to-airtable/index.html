@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -95,7 +95,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -109,6 +110,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/silvia/img/logo_noBg.svg" alt="" class="navbar-logo">
+    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Silvia Canelón</span>
     </a>
@@ -141,13 +145,55 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
             <div class="quarto-navbar-tools">
+    <a href="https://www.github.com/spcanelon/silvia" rel="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+<div class="quarto-title column-body page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);">
+<h1 class="title">Migrating from Trello to Airtable: Working with JSON Data in R</h1>
+<p class="subtitle lead">Tutorial on how to migrate your current Trello board to an Airtable base from start to finish.</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">Tutorial</div>
+    <div class="quarto-category">json</div>
+    <div class="quarto-category">jsonlite</div>
+    <div class="quarto-category">tidyverse</div>
+    </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Silvia Canelón </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 12, 2020</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+<a href="https://github.com/spcanelon/silvia/blob/main/content/blog/2020-05-12-trello-to-airtable/index.R" class="btn btn-secondary text-capitalize"><i class="bi bi-file-code me-1"></i> R script</a>
+<a href="https://github.com/spcanelon/silvia/blob/main/content/blog/2020-05-12-trello-to-airtable/index.Rmarkdown" class="btn btn-secondary text-capitalize"><i class="bi bi-file-code me-1"></i> R Markdown</a>
+<a href="../../blog/2020-trello-to-airtable/program-mgmt.json" class="btn btn-secondary text-capitalize"><i class="bi bi-table me-1"></i> JSON example file</a>
+</div>
+
+</header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -194,51 +240,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 <!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Migrating from Trello to Airtable: Working with JSON Data in R</h1>
-<p class="subtitle lead">Tutorial on how to migrate your current Trello board to an Airtable base from start to finish.</p>
-  <div class="quarto-categories">
-    <div class="quarto-category">R</div>
-    <div class="quarto-category">Tutorial</div>
-    <div class="quarto-category">json</div>
-    <div class="quarto-category">jsonlite</div>
-    <div class="quarto-category">tidyverse</div>
-  </div>
-  </div>
+<!-- <header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title"> -->
 
-
-
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Silvia Canelón </p>
-          </div>
-  </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">May 12, 2020</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
-<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-center justify-content-sm-start" role="group" aria-label="Links">
-<a href="https://github.com/spcanelon/silvia/blob/main/content/blog/2020-05-12-trello-to-airtable/index.R" class="btn btn-secondary text-capitalize"><i class="bi bi-file-code me-1"></i> R script</a>
-<a href="https://github.com/spcanelon/silvia/blob/main/content/blog/2020-05-12-trello-to-airtable/index.Rmarkdown" class="btn btn-secondary text-capitalize"><i class="bi bi-file-code me-1"></i> R Markdown</a>
-<a href="../../blog/2020-trello-to-airtable/program-mgmt.json" class="btn btn-secondary text-capitalize"><i class="bi bi-table me-1"></i> JSON example file</a>
-</div>
-
-</header>
 
 <p><strong><a href="https://airtable.com/">Airtable</a> is a user-friendly and <em>powerful</em> tool</strong> that until recently I’d been using for personal projects (i.e.&nbsp;document organizing, apartment hunting, etc.). A couple of weeks ago I leaned on Airtable to create a base designed for the <a href="https://www.womensmedicalfund.org/prfc">Philadelphia Reproductive Freedom Collective</a> to support our COVID-19 mutual aid efforts.</p>
 <blockquote class="blockquote">
@@ -527,7 +534,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section></div></main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2020" class="csl-entry quarto-appendix-citeas" role="listitem">
+Canelón, Silvia. 2020. <span>“Migrating from Trello to Airtable: Working
+with JSON Data in R.”</span> May 12, 2020. <a href="https://silviacanelon.com/blog/2020-05-12-trello-to-airtable">https://silviacanelon.com/blog/2020-05-12-trello-to-airtable</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -778,6 +788,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </li>  
     <li class="nav-item">
     <a class="nav-link" href="../../license.html">License</a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml">
+      <i class="bi bi-rss" role="img">
+</i> 
+    </a>
   </li>  
 </ul>
     </div>

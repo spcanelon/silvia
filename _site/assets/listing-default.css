@@ -1,0 +1,27 @@
+/* title and subtitle */
+#title-block-header {
+  margin: 2em 0 4em 0;
+}
+
+/* title */
+.quarto-title {
+  font-size: 1.2em;
+  padding-bottom: 1em;
+  color: inherit;
+  box-shadow: none !important;
+  background-image: none !important;
+  text-align: center;
+}
+
+/* text below page title */
+.description p {
+  /* max-width: 40em; */
+  text-align: center; 
+  justify-self: center;
+  margin: 0 1em 0 1em;
+}
+
+/* remove extra margin on right side */
+.quarto-listing-container-default {
+  margin-right: 0em;
+}

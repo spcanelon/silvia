@@ -1,0 +1,25 @@
+https://silvia.rbind.io/authors/silvia/avatar.png   https://silviacanelon.com/about/sidebar/avatar.png 301!
+
+https://silvia.rbind.io/post/*                      https://silviacanelon.com/blog/:splat 301!
+https://silvia.rbind.io/blog/*                      https://silviacanelon.com/blog/:splat 301!
+https://silvia.rbind.io/talk/*                      https://silviacanelon.com/talk/:splat 301!
+https://silvia.rbind.io/project/*                   https://silviacanelon.com/project/:splat 301!
+
+http://silvia.rbind.io/*                            https://silviacanelon.com/:splat 301!
+https://silvia.rbind.io/*                           https://silviacanelon.com/:splat 301!
+
+https://silvia.rbind.io/2020-05-12-trello-to-airtable/                  https://silvia.rbind.io/blog/2020-trello-to-airtable/ 301!
+
+https://silvia.rbind.io/blog/dark-theme-custom-with-atom/               https://silviacanelon.com/blog/2020-dark-theme-custom-with-atom/ 301!
+
+https://silvia.rbind.io/talk/2020-08-31-tour-of-the-tidyverse/          https://silviacanelon.com/talk/2020-tour-of-the-tidyverse/ 301!
+
+https://silvia.rbind.io/talk/2020-12-17-introduccion-xaringan/          https://silviacanelon.com/talk/2020-introduccion-xaringan/ 301!
+
+https://silvia.rbind.io/talk/2020-11-03-xaringan-basics-and-beyond/     https://silviacanelon.com/talk/2020-xaringan-basics-and-beyond/ 301!
+
+https://silvia.rbind.io/2021-03-16-deploying-xaringan-slides            https://silviacanelon.com/blog/2021-deploying-xaringan-slides/ 301!
+
+https://silvia.rbind.io/talk/2021-03-16-xaringan-deploy-demo/           https://silviacanelon.com/talk/2021-xaringan-deploy-demo/ 301!
+
+https://silvia.rbind.io/talk/2021-05-04-data-viz-accessibility/         https://silviacanelon.com/talk/2021-data-viz-accessibility/ 301!
