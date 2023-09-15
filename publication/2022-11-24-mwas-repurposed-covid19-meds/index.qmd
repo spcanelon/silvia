@@ -6,17 +6,19 @@ author:
   orcid: 0000-0003-1709-1394
 - Mary Regina Boland
 date: '2022-11-24'
-slug: mwas-repurposed-covid19-meds
+slug: mwas-repurposed-covid19-meds 
 categories:
-  - Research
+  - Research 
   - covid-19
   - EHR
   - pregnancy
   - medications
-description: 'Scientific Reports'
-summary: 'EHR study describing an MWAS approach to explore connections between exposure to repurposed COVID-19 prescription medications and the risk of cesarean section, preterm birth, and stillbirth'
-subtitle: 'EHR study describing an MWAS approach to explore connections between exposure to repurposed COVID-19 prescription medications and the risk of cesarean section, preterm birth, and stillbirth'
-abstract: ''
+abstract: 'Scientific Reports'
+# doi-title: Scientific Reports (DOI)
+# doi: "10.1038/s41598-022-24218-1"
+subtitle: EHR study describing an MWAS approach to explore connections between exposure to repurposed COVID-19 prescription medications and the risk of cesarean section, preterm birth, and stillbirth
+description: Description text example
+# abstract: ''
 links:
 - icon: file-richtext-fill
   name: Publication
