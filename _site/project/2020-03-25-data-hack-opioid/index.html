@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -74,7 +74,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -88,6 +89,9 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/silvia/img/logo_noBg.svg" alt="" class="navbar-logo">
+    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Silvia Canelón</span>
     </a>
@@ -120,29 +124,22 @@ ul.task-list li input[type="checkbox"] {
   </li>  
 </ul>
             <div class="quarto-navbar-tools">
+    <a href="https://www.github.com/spcanelon/silvia" rel="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
-<!-- sidebar -->
-<!-- margin-sidebar -->
-    
-<!-- main -->
-<main class="content" id="quarto-document-content">
-
-<!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+<div class="quarto-title column-body page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);">
 <h1 class="title">Visualizing the Inside Journey of Recovery from Opioid Use Disorder</h1>
 <p class="subtitle lead">Code for Philly <a href="https://github.com/CodeForPhilly/datahack2020#2020-opioid-data-hackathon">2020 Opioid Data Hackathon</a> project to better understand recovery from opioid use disorder.</p>
   <div class="quarto-categories">
     <div class="quarto-category">Education</div>
     <div class="quarto-category">data hack</div>
     <div class="quarto-category">opioid</div>
-  </div>
+    </div>
   </div>
 
 
@@ -177,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
-<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-center justify-content-sm-start" role="group" aria-label="Links">
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
 <a href="https://github.com/CodeForPhilly/datahack2020/tree/master/analyses/team11" class="btn btn-secondary text-capitalize"><i class="bi bi-github me-1"></i> Repo</a>
 <a href="https://github.com/CodeForPhilly/datahack2020/raw/master/analyses/team11/Final%20Report/2020_DataHackathon_Team11_FinalReport.pdf" class="btn btn-secondary text-capitalize"><i class="bi bi-file-earmark-pdf me-1"></i> Data Hackathon Final Report</a>
 <a href="https://youtu.be/ZN7HjZ6Glv4?t=8440" class="btn btn-secondary text-capitalize"><i class="bi bi-play-btn-fill me-1"></i> Data Hackathon Presentation</a>
@@ -186,12 +183,22 @@ ul.task-list li input[type="checkbox"] {
 <a href="https://codeforphilly.github.io/datahack2020/analyses/team11/" class="btn btn-secondary text-capitalize"><i class="bi bi-person-heart me-1"></i> Empathy Tool Mockup</a>
 </div>
 
-</header>
+</header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+<!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
+<!-- <header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title"> -->
+
 
 <p><a href="../../project/2020-data-hack-opioid/pipeline.pdf">Referral process pipeline (PDF)</a></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="pipeline.png" class="lightbox" title="Schematic representation of the Medication Assisted Treatment (MAT) referral process pipeline as part of the recovery for someone with Opioid Use Disorder (OUD)" data-gallery="quarto-lightbox-gallery-1"><img src="pipeline.png" class="img-fluid figure-img" alt="Medication Assistment Treatment pipeline starting with the person with Opioid Use Disorder. They then might interact with the Payer (e.g. health insurance), a harm reduction center like Prevention Point Philadelphia, and/or a clinical setting like an Assessment Center or other location offering Withdrawal Management care. From there the person with Opioid Use Disorder might enter a Treatment Setting. This schematic depicts many possibilities and a very complex referral process that is difficult to navigate."></a></p>
+<p><a href="pipeline.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Schematic representation of the Medication Assisted Treatment (MAT) referral process pipeline as part of the recovery for someone with Opioid Use Disorder (OUD)"><img src="pipeline.png" class="img-fluid figure-img" alt="Medication Assistment Treatment pipeline starting with the person with Opioid Use Disorder. They then might interact with the Payer (e.g. health insurance), a harm reduction center like Prevention Point Philadelphia, and/or a clinical setting like an Assessment Center or other location offering Withdrawal Management care. From there the person with Opioid Use Disorder might enter a Treatment Setting. This schematic depicts many possibilities and a very complex referral process that is difficult to navigate."></a></p>
 <figcaption class="figure-caption">Schematic representation of the Medication Assisted Treatment (MAT) referral process pipeline as part of the recovery for someone with Opioid Use Disorder (OUD)</figcaption>
 </figure>
 </div>
@@ -497,11 +504,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <li class="nav-item">
     <a class="nav-link" href="../../license.html">License</a>
   </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml">
+      <i class="bi bi-rss" role="img">
+</i> 
+    </a>
+  </li>  
 </ul>
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":true,"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom"});</script>
 
 
 
