@@ -1,4 +1,4 @@
-<a href='https://silvia.rbind.io'><img src='https://github.com/spcanelon/silvia/blob/main/static/img/silvia-social.png?raw=true' align="right" height="190" alt=''/></a>
+<a href='https://silvia.rbind.io'><img src='https://github.com/spcanelon/silvia/blob/main/assets/silvia/img/silvia-social.png?raw=true' align="right" height="190" alt=''/></a>
 
 # Personal website for<br>Silvia Canelón
 
