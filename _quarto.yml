@@ -1,0 +1,75 @@
+project:
+  type: website
+  post-render: 
+    - "cp -rnv static/. _site" # source: https://github.com/quarto-dev/quarto-cli/discussions/4162#discussioncomment-4831352
+
+website:
+  title: "Silvia Canelón"
+  site-url: https://silviacanelon.com
+  description: "Researcher and R educator applying biomedical and spatial data science in ways that prioritize health equity."
+  comments: 
+    utterances: 
+      repo: spcanelon/silvia 
+      label: utterances
+      theme: body-light
+      issue-term: title
+ 
+  navbar:
+    logo: assets/silvia/img/logo_noBg.svg
+    tools:
+    - icon: github
+      href: https://www.github.com/spcanelon/silvia
+    right:
+      - text: About
+        aria-label: "About Me"
+        href: about/index.qmd
+      - text: Blog
+        aria-label: "Meeting People Where They R"
+        href: blog/index.qmd
+      - text: Talks
+        aria-label: "Invited Talks"
+        href: talk/index.qmd  
+      - text: Publications
+        aria-label: "Publications"
+        href: publication/index.qmd
+      - text: Projects
+        aria-label: "Project Portfolio"
+        href: project/index.qmd
+  
+  page-footer:  
+    left: >-
+     &#169; 2023 Silvia Canelón &#8729; Made with [Quarto](https://quarto.org)
+    center: |
+      <a class="link-dark me-1" href="/accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener">{{< fa universal-access >}}</a>
+      <a class="link-dark me-1" href="https://fosstodon.org/@spcanelon" title="mastodon" target="_blank" rel="noopener">{{< fa brands mastodon >}}</a>
+      <a class="link-dark me-1" href="https://github.com/spcanelon" title="github" target="_blank" rel="noopener">{{< fa brands github >}}</a>
+      <a class="link-dark me-1" href="https://orcid.org/0000-0003-1709-1394" title="orcid" target="_blank" rel="noopener">{{< ai orcid >}}</a>
+      <a class="link-dark me-1" href="https://scholar.google.com/citations?user=GAzkvpcAAAAJ&hl=en&oi=ao" title="Google Scholar" target="_blank"rel="noopener">{{< ai google-scholar >}}</a>
+      <a class="link-dark me-1" href="https://linkedin.com/in/spcanelon" title="LinkedIn" target="_blank" rel="noopener">{{< fa brands linkedin >}}</a>
+
+    right: 
+      - text: "Accessibility"
+        aria-label: "Accessibility Commitment"
+        href: accessibility.qmd
+      - text: "Contact"
+        aria-label: "Contact Form"
+        href: "contact.qmd"
+      - text: "License"
+        aria-label: "License Details"
+        href: license.qmd
+      - icon: rss
+        href: index.xml
+
+format: 
+  html:
+    theme:
+      light:
+        - cosmo
+        # - superhero
+        - assets/silvia-theme.scss
+        - assets/silvia/colors.scss
+        - assets/silvia/fonts.scss
+    highlight-style: a11y
+
+execute: 
+  freeze: auto

@@ -1,0 +1,31 @@
+---
+title: "Projects"
+description: |
+  This porfolio includes openly available educational material I have created, along with software and tools I have contributed to or designed.
+listing: 
+  contents:
+    - "**/index.qmd"
+    - "**/index.markdown"
+    - "**/index.md"
+  sort: "date desc"
+  type: grid
+  categories: false 
+  sort-ui: false
+  filter-ui: false
+  fields: [title, categories, date, image]
+  image-align: left
+  image-height: "200"
+  page-size: 9
+page-layout: article
+format: 
+  html: 
+    grid:
+      sidebar-width: 0px
+      margin-width: 0px
+title-block-banner: false
+
+header-includes: >
+  <link rel="stylesheet" href="../assets/listing-default.css">
+resources:
+  - ../assets/listing-default.css
+---

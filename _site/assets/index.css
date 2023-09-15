@@ -1,0 +1,106 @@
+/* title */
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1em !important;
+}
+
+/* subtitle + Learn More About Me */
+.subtitle {
+  font-family: "Petrona";
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* heading, subtitle, and blurb */
+.entity-contents {
+  text-align: right !important;
+  padding: 0 2em 0 2em;
+}
+
+/* blurb */
+.about-contents {
+  padding: 0 0 0 2em !important;
+}
+
+/* social links: block of links */
+.about-entity .about-links {
+  justify-content: flex-end !important;
+  column-gap: 0em !important;
+  font-size: 1.2em !important;
+}
+
+/* social links: individual links */
+.about-entity .about-link {
+  padding: 0.25em 0.25em !important;
+  border: none !important;  
+}
+
+/* Learn More About Me */
+.about-links.subtitle {
+  font-size: 1em !important;
+  font-family: "Red Hat Text";
+  justify-content: flex-end !important;
+}
+
+/* image */
+.about-image {
+  margin-top: -2em;
+  padding: 0 2em 0em 0;
+}
+
+/* // Home
+
+// social links
+.about-entity {
+  // block of links
+  .about-links {
+    column-gap: 0em !important;
+    font-size: 1.2em;
+  }
+  // individual links
+  .about-link {
+    padding: 0.25em 0.25em !important;
+    border: none !important;
+  }
+} */
+
+/* mobile query up for screens up to ~992px wide */
+@media screen and (max-width: 991.98px) {
+    /* move text up & center */
+    .entity-contents {
+      order: 2 !important;
+      margin: -4em 0 0 0 !important;
+      padding: 0 0 0 0em !important;
+      text-align: center !important;
+    }
+
+    /* center subtitle */
+    .subtitle {
+      text-align: center !important;
+    }
+
+    /* social links: block of links */
+    .about-entity .about-links {
+      justify-content: center !important;
+      font-size: 1em !important;
+    }
+
+    /* blurb */
+    .about-contents {
+      padding: 0 0 0 0em !important;
+    }
+
+    /* center Learn More About Me */
+    .about-links.subtitle {
+      justify-content: center !important;
+    }
+
+    /* move image up, adjust padding */
+    .about-image {
+      order: 1 !important;
+      padding: 0 2em 0 2em !important;
+    }
+}

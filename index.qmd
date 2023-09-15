@@ -1,0 +1,112 @@
+---
+title: "Silvia Canelón, PhD"
+pagetitle: "Silvia Canelón, PhD"
+subtitle: "Data Analyst at the Penn Urban Health Lab"
+image: assets/silvia/img/skyline-philly.png
+image-alt: "Abstract data visualization depicting tall buildings in Philadelphia as a circle. The text inside the circle reads Philadelphia Skyline"
+
+twitter-card:
+    title: Silvia Canelón, PhD
+    description: |
+      I'm a Data Analyst for the Penn Urban Health Lab
+    image: assets/silvia/img/silvia-social.png
+
+about:
+  template: solana
+  image-width: 28em
+  id: hero-heading
+  links:
+    - text: "{{< fa universal-access >}}"
+      aria-label: "Accessibility statement"
+      href: accessibility.md
+    - icon: mastodon
+      href: https://fosstodon.org/@spcanelon
+    - icon: github
+      aria-label: GitHub
+      href: https://github.com/spcanelon
+    - text: "{{< ai orcid >}}"
+      href: https://orcid.org/0000-0003-1709-1394
+    - text: "{{< ai google-scholar >}}"
+      aria-label: "Google Scholar"
+      href: https://scholar.google.com/citations?user=GAzkvpcAAAAJ&hl=en&oi=ao
+    - icon: linkedin
+      aria-label: "LinkedIn"
+      href: https://linkedin.com/in/spcanelon
+page-layout: full
+
+execute: 
+  freeze: false
+  echo: false
+  warning: false
+
+header-includes: >
+  <link rel="stylesheet" href="assets/index.css">
+resources:
+  - assets/index.css
+---
+
+<br><br>
+
+
+::: {#hero-heading}
+
+I am a researcher, community organizer, and R educator. My **research** leverages electronic health record and spatial data to study the intersection of health equity and urban nature. My **community** projects value the partnership between open source tools and data literacy as a way to build power and effect change.
+
+[Learn more about me &rarr;](/about){.about-links .subtitle}
+
+:::
+<!-- hero-heading -->
+
+```{r import-manual-redirects}
+
+manual_redirects <-
+  readr::read_table(here::here("static", "_manualredirects.txt"),
+                    col_names = FALSE) |> 
+  dplyr::mutate(redirect = paste0(X1, " ", X2, " ", X3))
+
+manual_redirects <- manual_redirects$redirect
+```
+
+```{r write-redirects}
+
+# adapted from Tom Mock: https://github.com/jthomasmock/themockup-blog/blob/master/index.qmd#L27C1-L48C4
+# who adapted from Danielle Navarro: https://blog.djnavarro.net/porting-to-quarto/#netlify-redirects
+
+# function: obtain list of posts
+list_files <- function(folder) {
+  posts <-
+    list.dirs(
+    path = c(here::here(folder)),
+    full.names = FALSE,
+    recursive = FALSE
+    ) |> 
+    tibble::as_tibble_col(column_name = "file")  |>
+    dplyr::mutate(folder = folder)
+}
+
+# define post folders
+folders <- c("blog", "project", "publication", "talk")
+
+# list posts by folder
+posts <- purrr::map(folders, list_files) |> purrr::list_rbind()
+
+# extract slugs and create redirects
+posts <- 
+  posts |> 
+  dplyr::mutate(
+    # extract the year-slugs
+    # slugs = stringr::str_remove(file, "(?!\\d{4}-)\\d{2}-\\d{2}-(?!\\d)"),
+    slugs = stringr::str_remove(file, "\\d{4}-\\d{2}-\\d{2}-(?!\\d)"),
+    # lines to insert to a netlify _redirect file
+    redirects = paste0("/", slugs, " ", "/", folder, "/", file)
+    )
+
+# extract redirects
+redirects <- posts$redirects
+
+# combine with manual redirects
+redirects_combined <- c(manual_redirects, redirects)
+
+# write the _redirect file
+writeLines(redirects_combined, here::here("_site", "_redirects"))
+```
