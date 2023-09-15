@@ -15,7 +15,7 @@ categories:
   - ggmap
 subtitle: >
   An interactive map showing restaurants participating in CCD Sips 2022 & 
-  a companion R tutorial on webscraping, geocoding, and map-making'
+  a companion R tutorial on webscraping, geocoding, and map-making
 description: '' # Text that shows below the tags, not on listing page 
 links:
 - icon: pin-map-fill
