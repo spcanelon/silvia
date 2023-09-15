@@ -1,5 +1,5 @@
 ---
-title: "Publications"
+title: "Publications" 
 description: |
   This is home for my research publications, each linked with accompanying preprints, posters, and/or news pieces.
 listing: 
@@ -20,6 +20,7 @@ page-layout: article
 format: 
   html: 
     grid:
+      sidebar-width: 0px
       margin-width: 0px
 title-block-banner: false
 

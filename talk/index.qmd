@@ -3,7 +3,7 @@ title: "Talks"
 description: |
   This is a home for invited talks and workshops, each linked with accompanying materials.
   
-  A collection of slide decks can be found at [slides.silviacanelon.com](https://slides.silviacanelon.com)
+  <br>A collection of slide decks can be found at [slides.silviacanelon.com](https://slides.silviacanelon.com)
 listing: 
   contents: 
     - "**/index.qmd"
@@ -22,6 +22,7 @@ page-layout: article
 format: 
   html: 
     grid:
+      sidebar-width: 0px
       margin-width: 0px
 title-block-banner: false
 
