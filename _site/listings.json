@@ -13,44 +13,9 @@
     ]
   },
   {
-    "listing": "/blog/index.html",
-    "items": [
-      "/blog/2022-05-31-ccd-sips/index.html",
-      "/blog/2022-01-18-hello-umami/index.html",
-      "/blog/2021-09-23-data-viz-a11y/index.html",
-      "/blog/2021-06-02-wave-audit-1/index.html",
-      "/blog/2021-06-01-hello-hugo-apero/index.html",
-      "/blog/2021-03-16-deploying-xaringan-slides/index.html",
-      "/blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html",
-      "/blog/2020-05-26-dark-mode-custom-with-atom/index.html",
-      "/blog/2020-05-12-trello-to-airtable/index.html",
-      "/blog/2019-08-04-ccd-sips/index.html"
-    ]
-  },
-  {
-    "listing": "/publication/index.html",
-    "items": [
-      "/publication/2022-11-24-mwas-repurposed-covid19-meds/index.html",
-      "/publication/2022-07-21-ten-simple-rules-inclusive-conference/index.html",
-      "/publication/2022-06-07-mwas-multiple-birth/index.html",
-      "/publication/2022-03-09-ppd-ontology/index.html",
-      "/publication/2021-11-24-sct-stillbirth/index.html",
-      "/publication/2021-08-11-ehr-environmental-exposure-pfas/index.html",
-      "/publication/2021-05-11-geospatial-analysis-pregnancy-outcomes/index.html",
-      "/publication/2021-04-08-smm-individual-neighborhood/index.html",
-      "/publication/2020-12-10-csections-emergency-admissions/index.html",
-      "/publication/2020-08-02-maddie-ehr-delivery-episode-algorithm/index.html",
-      "/publication/2020-05-06-preprint-hydroxychloroquine-pregnancy/index.html",
-      "/publication/2020-03-05-climate-change-menarche/index.html",
-      "/publication/2019-11-20-amia-annual-symposium/index.html",
-      "/publication/2019-12-01-bapn-substrate-strain/index.html",
-      "/publication/2018-05-01-dissertation/index.html",
-      "/publication/2016-11-06-bapn-morphology/index.html"
-    ]
-  },
-  {
     "listing": "/about/index.html",
     "items": [
+      "/blog/2023-06-05-ccd-sips/index.html",
       "/blog/2022-05-31-ccd-sips/index.html",
       "/blog/2022-01-18-hello-umami/index.html",
       "/blog/2021-09-23-data-viz-a11y/index.html",
@@ -98,6 +63,43 @@
       "/project/2020-11-03-xaringan-nhs-r/index.html",
       "/project/2020-10-29-nhsrtheme/index.html",
       "/project/2020-03-25-data-hack-opioid/index.html"
+    ]
+  },
+  {
+    "listing": "/publication/index.html",
+    "items": [
+      "/publication/2022-11-24-mwas-repurposed-covid19-meds/index.html",
+      "/publication/2022-07-21-ten-simple-rules-inclusive-conference/index.html",
+      "/publication/2022-06-07-mwas-multiple-birth/index.html",
+      "/publication/2022-03-09-ppd-ontology/index.html",
+      "/publication/2021-11-24-sct-stillbirth/index.html",
+      "/publication/2021-08-11-ehr-environmental-exposure-pfas/index.html",
+      "/publication/2021-05-11-geospatial-analysis-pregnancy-outcomes/index.html",
+      "/publication/2021-04-08-smm-individual-neighborhood/index.html",
+      "/publication/2020-12-10-csections-emergency-admissions/index.html",
+      "/publication/2020-08-02-maddie-ehr-delivery-episode-algorithm/index.html",
+      "/publication/2020-05-06-preprint-hydroxychloroquine-pregnancy/index.html",
+      "/publication/2020-03-05-climate-change-menarche/index.html",
+      "/publication/2019-11-20-amia-annual-symposium/index.html",
+      "/publication/2019-12-01-bapn-substrate-strain/index.html",
+      "/publication/2018-05-01-dissertation/index.html",
+      "/publication/2016-11-06-bapn-morphology/index.html"
+    ]
+  },
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/2023-06-05-ccd-sips/index.html",
+      "/blog/2022-05-31-ccd-sips/index.html",
+      "/blog/2022-01-18-hello-umami/index.html",
+      "/blog/2021-09-23-data-viz-a11y/index.html",
+      "/blog/2021-06-02-wave-audit-1/index.html",
+      "/blog/2021-06-01-hello-hugo-apero/index.html",
+      "/blog/2021-03-16-deploying-xaringan-slides/index.html",
+      "/blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html",
+      "/blog/2020-05-26-dark-mode-custom-with-atom/index.html",
+      "/blog/2020-05-12-trello-to-airtable/index.html",
+      "/blog/2019-08-04-ccd-sips/index.html"
     ]
   },
   {

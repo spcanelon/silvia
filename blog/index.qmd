@@ -1,7 +1,11 @@
 ---
 title: "Meeting People Where They R"
 description: |
-  This is my blog where I practice sharing my curiosity about R.<br>It includes notes and tutorials for my future self and hopefully also for you.
+  This is my blog where I practice sharing my curiosity about R.
+  
+  It includes notes and tutorials for my future self and hopefully also for you.
+
+  [Subscribe via RSS](/index.xml)
 listing: 
   contents: 
     - "**/index.qmd"
@@ -17,6 +21,7 @@ listing:
   image-align: right
   page-size: 5
   feed: true
+citation: false
 page-layout: article
 format: 
   html: 
