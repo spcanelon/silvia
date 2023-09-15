@@ -6,13 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Silvia P. Canelón">
-<meta name="author" content="Samantha Butts">
-<meta name="author" content="Mary Regina Boland">
-<meta name="dcterms.date" content="2021-11-24">
-<meta name="description" content="JAMA Network Open">
+<meta name="author" content="Silvia Canelón">
+<meta name="dcterms.date" content="2023-06-05">
 
-<title>Silvia Canelón - Evaluation of Stillbirth Among Pregnant People With Sickle Cell Trait</title>
+<title>Silvia Canelón - Philly Center City District Sips 2023: An Interactive Map</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -44,9 +41,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
@@ -75,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -124,50 +118,36 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
-<!-- sidebar -->
-<!-- margin-sidebar -->
-    
-<!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
-
-<!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
-<!-- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title"> -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
 <div class="quarto-title column-body page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);">
-<h1 class="title">Evaluation of Stillbirth Among Pregnant People With Sickle Cell Trait</h1>
-<p class="subtitle lead">Retrospective cohort study finding both sickle cell trait and disease to be associated with an increased risk of stillbirth, suggesting that sickle cell carriers would benefit from additional risk assessment during pregnancy.</p>
+<h1 class="title">Philly Center City District Sips 2023: An Interactive Map</h1>
+<p class="subtitle lead"></p><p>An interactive map showing restaurants participating in CCD Sips 2023</p><p></p>
   <div class="quarto-categories">
-    <div class="quarto-category">Research</div>
-    <div class="quarto-category">EHR</div>
-    <div class="quarto-category">pregnancy</div>
-    <div class="quarto-category">sickle cell disease</div>
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">maps</div>
+    <div class="quarto-category">webscraping</div>
+    <div class="quarto-category">robotstxt</div>
+    <div class="quarto-category">rvest</div>
+    <div class="quarto-category">leaflet</div>
+    <div class="quarto-category">tidygeocoder</div>
     </div>
   </div>
 
-<div>
-  <div class="description pt-4">
-    JAMA Network Open
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Silvia P. Canelón <a href="https://orcid.org/0000-0003-1709-1394" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
-             <p>Samantha Butts </p>
-             <p>Mary Regina Boland </p>
+             <p>Silvia Canelón </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 24, 2021</p>
+      <p class="date">June 5, 2023</p>
     </div>
   </div>
   
@@ -176,41 +156,62 @@ ul.task-list li input[type="checkbox"] {
   
 
 <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
-<a href="https://doi.org/10.1001/jamanetworkopen.2021.34274" class="btn btn-secondary text-capitalize"><i class="bi bi-file-richtext-fill me-1"></i> Publication</a>
-<a href="publication/2021-sct-stillbirth/SupplementaryMaterial.docx" class="btn btn-secondary text-capitalize"><i class="bi bi-file-word me-1"></i> Supplemental Content (Accessible DocX)</a>
-<a href="publication/2021-sct-stillbirth/SupplementaryMaterial.pdf" class="btn btn-secondary text-capitalize"><i class="bi bi-file-earmark-pdf me-1"></i> Supplemental Content (Accessible PDF)</a>
+<a href="http://tiny.cc/ccdsips2023" class="btn btn-secondary text-capitalize"><i class="bi bi-map-marked-alt me-1"></i> Interactive Map</a>
 </div>
 
-</header>
+</header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
-<p><strong>Importance.</strong> Relative to what is known about pregnancy complications and sickle cell disease (SCD), little is known about the risk of pregnancy complications among those with sickle cell trait (SCT). There is a lack of clinical research among sickle cell carriers largely due to low sample sizes and disparities in research funding.</p>
-<p><strong>Objective.</strong> To evaluate whether there is an association between SCT and a stillbirth outcome.</p>
-<p><strong>Design, Setting, and Participants.</strong> This retrospective cohort study included data on deliveries occurring between January 1, 2010, and August 15, 2017, at 4 quaternary academic medical centers within the Penn Medicine health system in Pennsylvania. The population included a total of 2482 deliveries from 1904 patients with SCT but not SCD, and 215 deliveries from 164 patients with SCD. Data were analyzed from May 3, 2019, to September 16, 2021.</p>
-<p><strong>Exposures.</strong> The primary exposure of interest was SCT, identified using clinical diagnosis codes recorded in the electronic health record.</p>
-<p><strong>Main Outcomes and Measures.</strong> A multivariate logistic regression model was constructed to assess the risk of stillbirth using the following risk factors: SCD, numbers of pain crises and blood transfusions before delivery, delivery episode (as a proxy for parity), prior cesarean delivery, multiple gestation, patient age, marital status, race and ethnicity, ABO blood type, Rhesus (Rh) factor, and year of delivery.</p>
-<p><strong>Results.</strong> This cohort study included 50 560 patients (63 334 deliveries), most of whom were aged 25 to 34 years (29 387 of 50 560 [58.1%]; mean [SD] age, 29.5 [6.1] years), were single at the time of delivery (28 186 [55.8%]), were Black or African American (23 777 [47.0%]), had ABO blood type O (22 879 [45.2%]), and were Rhesus factor positive (44 000 [87.0%]). From this general population, 2068 patients (4.1%) with a sickle cell gene variation were identified: 1904 patients (92.1%) with SCT (2482 deliveries) and 164 patients (7.9%) with SCD (215 deliveries). In the fully adjusted model, SCT was associated with an increased risk of stillbirth (adjusted odds ratio [aOR], 8.94; 95% CI, 1.05-75.79; P = .045) while adjusting for the risk factors of SCD (aOR, 26.40; 95% CI, 2.48-280.90; P = .007) and multiple gestation (aOR, 4.68; 95% CI, 3.48-6.29; P &lt; .001).</p>
-<p><strong>Conclusions and Relevance.</strong> The results of this large, retrospective cohort study indicate an increased risk of stillbirth among pregnant people with SCT. These findings underscore the need for additional risk assessment during pregnancy for sickle cell carriers.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="featured.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Directed Acyclic Graph With Stillbirth as the Outcome and Sickle Cell Trait (SCT) as the Primary Exposure of Interest."><img src="featured.png" class="img-fluid figure-img" alt="Confounders include race and ethnicity and year, and biasing paths connect each of these 2 variables with SCT and stillbirth. Causal paths connect SCT with stillbirth by way of various mediators. Mediators include sickle cell disease (SCD), the number of pain crises before delivery, the number of blood transfusions before delivery, ABO blood type, Rhesus factor, marital status, age, multiple gestation, and delivery episode."></a></p>
-<figcaption class="figure-caption">Directed Acyclic Graph With Stillbirth as the Outcome and Sickle Cell Trait (SCT) as the Primary Exposure of Interest.</figcaption>
-</figure>
+<!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
+<!-- <header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title"> -->
+
+
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<details>
-<summary>
-Alternative Figure 2
-</summary>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="Fig2_DAG.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Alternative Directed Acyclic Graph With Stillbirth as the Outcome and Sickle Cell Trait (SCT) as the Primary Exposure of Interest"><img src="Fig2_DAG.png" class="img-fluid figure-img" alt="Confounders include race and ethnicity and year, and biasing paths connect each of these 2 variables with SCT and stillbirth. Causal paths connect SCT with stillbirth by way of various mediators. Mediators include sickle cell disease (SCD), the number of pain crises before delivery, the number of blood transfusions before delivery, ABO blood type, Rhesus factor, marital status, age, multiple gestation, and delivery episode."></a></p>
-<figcaption class="figure-caption">Alternative Directed Acyclic Graph With Stillbirth as the Outcome and Sickle Cell Trait (SCT) as the Primary Exposure of Interest</figcaption>
-</figure>
+<div class="callout-title-container flex-fill">
+Expand to see web analytics
 </div>
-</details>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>1,760 unique visitors in the United States visited this post 2,330 times between June 7th and August 30th, 2023!</p>
+<p><img src="umami-dashboard.png" class="img-fluid" alt="2,330 views, 1,760 visitors, 87% bounce rate, average visit time of 3 minutes and 17 seconds. Column chart shows peaks on Wednesdays and valleys on the weekends"></p>
+</div>
+</div>
+</div>
+<p>Philly’s Center City District posted a list of restaurants and bars participating in Philly’s 2023 <a href="https://centercityphila.org/explore-center-city/ccdsips">CCD Sips</a>. CCD Sips is a series of summer Wednesday evenings (5-7pm) filled with <strong>happy hour specials</strong>, between June 7th and August 30th.</p>
+<p>I prefer to take in this information as a <strong>map</strong> instead of a list, so I scraped some information from the website and made one! You can click or tap on the circle map markers to see information about each restaurant/bar along with a direct link to their posted happy hour specials.</p>
+<p>Check out the link at the top of this post for a larger version of the interactive map below, or take a look at CCD Sips maps from <a href="../../blog/2022-05-31-ccd-sips">2022</a> and <a href="../../blog/2019-08-04-ccd-sips">2019</a>.</p>
+<!--https://dannyda.com/2021/06/09/how-to-make-html-iframe-responsive-iframe-height-equal-to-viewport-screen-height/-->
+<style>
+iframe {
+display: block;
+background: #FFFFFF;
+border: none; /* Reset default border */
+height: 70vh; /* Viewport-relative units */
+width: 100%;
+}
+</style>
+<iframe src="map.html" scrolling="no">
+</iframe>
 
 
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2023" class="csl-entry quarto-appendix-citeas" role="listitem">
+Canelón, Silvia. 2023. <span>“Philly Center City District Sips 2023: An
+Interactive Map.”</span> June 5, 2023. <a href="https://silviacanelon.com/blog/2023-06-05-ccd-sips">https://silviacanelon.com/blog/2023-06-05-ccd-sips</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -472,7 +473,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":true,"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom"});</script>
 
 
 
