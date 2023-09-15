@@ -28,3 +28,6 @@ format:
 comments: 
   utterances:
     repo: spcanelon/silvia
+    issue-term: title
+    theme: boxy-light
+    label: "comments :crystal_ball:"
