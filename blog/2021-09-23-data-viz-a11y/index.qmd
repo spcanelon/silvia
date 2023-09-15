@@ -13,8 +13,7 @@ categories:
   - a11y
   - ggpattern
   - highcharter
-subtitle: "A selection of general and R-specific resources on how and why to make accessible data visualizations."
-excerpt: "A selection of general and R-specific resources on how and why to make accessible data visualizations."
+subtitle: A selection of general and R-specific resources on how and why to make accessible data visualizations.
 execute: 
   eval: false
 filters: 
