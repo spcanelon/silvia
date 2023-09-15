@@ -43,6 +43,7 @@ header-includes: >
   <link rel="stylesheet" href="assets/index.css">
 resources:
   - assets/index.css
+include-in-header: assets/umami.html
 ---
 
 <br><br>
