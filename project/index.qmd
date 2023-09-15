@@ -20,6 +20,7 @@ page-layout: article
 format: 
   html: 
     grid:
+      sidebar-width: 0px
       margin-width: 0px
 title-block-banner: false
 
