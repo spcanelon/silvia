@@ -16,8 +16,7 @@ subtitle: >
   An interactive map showing restaurants participating in CCD Sips 2023
 description: ''
 links:
-- icon: map-marked-alt
-  icon_pack: fas
+- icon: pin-map-fill
   name: Interactive Map
   url: http://tiny.cc/ccdsips2023
 ---
