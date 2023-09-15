@@ -32,6 +32,10 @@ $table-border-color:          $primary !default;
 $table-group-separator-color: lighten($primary, 40) !default;
 $table-caption-color:         $primary !default;
 
+// Code blocks
+$code-block-bg:              white;
+$code-block-border:          #ebebeb;
+
 /*-- scss:rules --*/
 
 // Tables
@@ -222,8 +226,10 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
 
 // Code: block
 div.sourceCode {
-  background-color: white;
+  background-color: $code-block-bg;
+  border: 1px solid $code-block-border;
 }
+
 
 // Mobile
 
