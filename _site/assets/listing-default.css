@@ -21,6 +21,14 @@
   margin: 0 1em 0 1em;
 }
 
+.description a {
+  text-decoration: underline !important;
+}
+
+.description a:hover {
+  text-decoration: none !important;
+}
+
 /* remove extra margin on right side */
 .quarto-listing-container-default {
   margin-right: 0em;
