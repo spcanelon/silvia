@@ -17,7 +17,7 @@ listing:
   sort-ui: false
   filter-ui: false
   fields: [title, author, categories, date, image]
-  image-placeholder: sidebar.jpg
+  # image-placeholder: sidebar.jpg
   image-align: right
   page-size: 5
   feed: true
@@ -27,7 +27,7 @@ format:
   html: 
     grid:
       sidebar-width: 0px
-      margin-width: 0px 
+      margin-width: 0px
 title-block-banner: false
 
 header-includes: >
