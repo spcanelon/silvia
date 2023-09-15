@@ -8,7 +8,7 @@ image-alt: "Abstract data visualization depicting tall buildings in Philadelphia
 twitter-card:
     title: Silvia Canelón, PhD
     description: |
-      I'm a Data Analyst for the Penn Urban Health Lab
+      Researcher and R educator applying biomedical and spatial data science in ways that prioritize health equity.
     image: assets/silvia/img/silvia-social.png
 
 about:
@@ -50,7 +50,7 @@ resources:
 
 ::: {#hero-heading}
 
-I am a researcher, community organizer, and R educator. My **research** leverages electronic health record and spatial data to study the intersection of health equity and urban nature. My **community** projects value the partnership between open source tools and data literacy as a way to build power and effect change.
+I am a researcher and R educator with a love for community. <br>My **research** leverages electronic health record and spatial data to study the intersection of health equity and urban nature. My **community** projects value the partnership between open source tools and data literacy as a way to build power and effect change.
 
 [Learn more about me &rarr;](/about){.about-links .subtitle}
 
