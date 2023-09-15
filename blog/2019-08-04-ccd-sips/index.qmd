@@ -1,0 +1,62 @@
+---
+title: 'Philly Center City Sips 2019: An Interactive Map'
+author: Silvia Canelón
+date: '2019-08-04'
+slug: ccd-sips
+image: featured.png
+categories:
+  - R
+  - maps
+  - leaflet
+  - RSelenium
+subtitle: 'An interactive map showing restaurants participating in Philly’s Center City District Sips 2019.'
+summary: 'An interactive map showing restaurants participating in Philly’s Center City District Sips 2019.'
+links:
+- icon: pin-map-fill
+  name: Interactive Map
+  url: https://tiny.cc/ccdsips2019
+---
+
+> For a more recent map, check out [Philly Center City District Sips 2022: An Interactive Map](/blog/2022-ccd-sips/)
+
+I used **R** to play around with **webscraping** and create an [interactive map](http://tiny.cc/ccdsips2019) showing restaurants participating in Philly’s 2019 [Center City District Sips](https://web.archive.org/web/20190625050339/https://centercityphila.org/explore-center-city/ccdsips). Center City Sips is a series of summer Wednesday evenings filled with **happy hour specials**.
+
+This mini-project was motivated by two of my close friends' frustration with the website shortcomings. **The information was presented beautifully, but there was no map view**! This made it difficult to figure out what happy hours you could check out nearby.
+
+The map pop-ups could use information on the specials for each restaurant, but my newly acquired skills with the `RSelenium` and `Leaflet` packages weren't quite up to the task!
+
+<!--<div style="align: center; margin-left: -150px;"> <iframe src="CCDSips2019.html" width="1000px" height="900px" frameborder="0"></iframe> </div>-->
+
+```{r setup, eval=TRUE, include=FALSE}
+library(tidyverse)
+library(leaflet)
+library(leaflet.extras)
+
+# importing data
+sips <- readRDS("sips.rds")
+```
+
+```{r create-map, eval=TRUE, echo=FALSE, out.width="100%"}
+# Create the pop-up information with inline css styling
+popInfoCircles<-paste("<h2 style='border-bottom: thin dotted #43464C;
+    padding-bottom:4px; margin-bottom:4px;
+    font-family: Tahoma, Geneva, sans-serif;
+    color:#43464C;'>", sips$Restaurant, "</h2>
+    <h3 style=font-family: Tahoma, Geneva, sans-serif;
+    color:#9197A6;'>", sips$Address, "</h3>")
+
+popInfoMarker<-paste("<h1 style='border-bottom: thin dotted #43464C;
+    padding-bottom:4px; margin-bottom:4px;
+    font-family: Tahoma, Geneva, sans-serif;
+    color:#43464C;'>", "Center City District Sips 2019", "</h1>
+    <span style='color:#9197A6;'>", "Philadelphia, PA", "<br>")
+
+# Creating the map
+leaflet(data = sips) %>%
+  addCircles(lat = ~ sips$Latitude, lng = ~ sips$Longitude, color = "olivedrab",
+             fillOpacity=0.6, radius=8, popup = popInfoCircles) %>%
+  addProviderTiles(providers$CartoDB.Positron) %>%
+  setView(mean(sips$Longitude), mean(sips$Latitude), zoom=17) %>%
+  addMarkers(lng = mean(sips$Longitude), lat = mean(sips$Latitude), popup = popInfoMarker) %>% 
+  leaflet.extras::addFullscreenControl()
+```

@@ -1,0 +1,30 @@
+# Freeze computed outputs
+execute: 
+  freeze: true
+
+# Enable banner style title blocks
+title-block-banner: true
+
+# Enable CC licence appendix
+license: "CC BY-SA"
+
+# Default for table of contents
+toc: true
+toc-title: Table of contents
+toc-location: right
+
+# Default fields for citation
+citation: true
+appendix-cite-as: display
+
+# Wrap overflow code
+format: 
+  html: 
+    code-overflow: wrap
+    template-partials: 
+      - ../_partials/title-block-link-buttons/title-block.html
+
+# Enable comments
+comments: 
+  utterances:
+    repo: spcanelon/silvia

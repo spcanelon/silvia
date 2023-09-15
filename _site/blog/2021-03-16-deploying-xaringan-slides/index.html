@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Silvia Canelón">
+<meta name="dcterms.date" content="2021-03-16">
+
+<title>Silvia Canelón - Deploying xaringan Slides with GitHub Pages</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/silvia/img/logo_noBg.svg" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Silvia Canelón</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about/index.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog/index.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../talk/index.html" rel="" target="">
+ <span class="menu-text">Talks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../publication/index.html" rel="" target="">
+ <span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../project/index.html" rel="" target="">
+ <span class="menu-text">Projects</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+    <a href="https://www.github.com/spcanelon/silvia" rel="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+<div class="quarto-title column-body page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);">
+<h1 class="title">Deploying xaringan Slides with GitHub Pages</h1>
+<p class="subtitle lead">A ten-step workflow for creating an HTML xaringan slide deck and deploying it to the web using GitHub Pages</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">Tutorial</div>
+    <div class="quarto-category">xaringan</div>
+    <div class="quarto-category">git</div>
+    </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Silvia Canelón </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 16, 2021</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+<a href="../../talk/2021-xaringan-deploy-demo/" class="btn btn-secondary text-capitalize"><i class="bi bi-calendar-check me-1"></i> R-Ladies Talk</a>
+<a href="https://github.com/spcanelon/RLadies-xaringan-template" class="btn btn-secondary text-capitalize"><i class="bi bi-github me-1"></i> R-Ladies template files</a>
+<a href="https://spcanelon.github.io/RLadies-xaringan-template" class="btn btn-secondary text-capitalize"><i class="bi bi-images me-1"></i> R-Ladies template slides</a>
+</div>
+
+</header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#choose-your-own-adventure" id="toc-choose-your-own-adventure" class="nav-link active" data-scroll-target="#choose-your-own-adventure">Choose your own adventure</a></li>
+  <li><a href="#the-ten-step-workflow" id="toc-the-ten-step-workflow" class="nav-link" data-scroll-target="#the-ten-step-workflow">The Ten-Step Workflow</a>
+  <ul class="collapse">
+  <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
+  <li><a href="#creating-your-xaringan-slide-deck" id="toc-creating-your-xaringan-slide-deck" class="nav-link" data-scroll-target="#creating-your-xaringan-slide-deck">Creating your xaringan slide deck</a></li>
+  <li><a href="#initialize-version-control-with-git" id="toc-initialize-version-control-with-git" class="nav-link" data-scroll-target="#initialize-version-control-with-git">Initialize version control with git</a></li>
+  <li><a href="#making-and-committing-changes-to-your-slides" id="toc-making-and-committing-changes-to-your-slides" class="nav-link" data-scroll-target="#making-and-committing-changes-to-your-slides">Making and committing changes to your slides</a></li>
+  <li><a href="#deploying-your-slides" id="toc-deploying-your-slides" class="nav-link" data-scroll-target="#deploying-your-slides">Deploying your slides</a></li>
+  </ul></li>
+  <li><a href="#bonus-steps" id="toc-bonus-steps" class="nav-link" data-scroll-target="#bonus-steps">Bonus steps</a></li>
+  <li><a href="#learn-more" id="toc-learn-more" class="nav-link" data-scroll-target="#learn-more">Learn more</a>
+  <ul class="collapse">
+  <li><a href="#foundation" id="toc-foundation" class="nav-link" data-scroll-target="#foundation">Foundation</a></li>
+  <li><a href="#sharing-your-slides" id="toc-sharing-your-slides" class="nav-link" data-scroll-target="#sharing-your-slides">Sharing your slides</a></li>
+  <li><a href="#making-your-slides-extra-special" id="toc-making-your-slides-extra-special" class="nav-link" data-scroll-target="#making-your-slides-extra-special">Making your slides extra special</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+<!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
+<!-- <header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title"> -->
+
+
+<blockquote class="blockquote">
+<p>This post was featured in the RStudio Blog <em>R Views</em> under a revised title: <a href="https://rviews.rstudio.com/2021/11/18/deploying-xaringan-slides-a-ten-step-github-pages-workflow/">Deploying xaringan Slides with GitHub Pages</a>. The original title was “Deploying xaringan Slides: A Ten-Step GitHub Pages Workflow.” Other changes include an introductory paragraph and greater clarity in the “Choose your own adventure” section. Many thanks to Chief Editor Joe Rickert for a very encouraging and helpful editorial process! I am humbled by his note on R Views:</p>
+<p><em>Silvia’s post is a mini masterpiece of clear, concise writing that elucidates complex technology within the narrow context of explaining a single well-defined task. Silvia does not attempt to say everything she knows about the subject, and she resists digressions that might obscure the path she is laying out. It is an example of achieving clarity through saying less.</em></p>
+</blockquote>
+<hr>
+<p>This post will guide you step-by-step through the process of creating an HTML xaringan slide deck and deploying it to the web for easy sharing with others. We will be using the <code>xaringan</code> package to build the slide deck, GitHub to help us host our slides for free with GitHub Pages, and the <code>usethis</code> package to help us out along the way. You will get the most out of this workflow if you are already familiar with R Markdown and GitHub, and if you have already connected RStudio (or your preferred IDE) to Git and GitHub.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> The post will not cover the nuts and bolts of xaringan or talk about slide design &amp; customization, but you can find lots of <a href="#learn-more">learning resources</a> listed at the end.</p>
+<section id="choose-your-own-adventure" class="level1">
+<h1>Choose your own adventure</h1>
+<ul>
+<li><p><strong>Option 1:</strong> Start at the <a href="#the-ten-step-workflow">beginning of the workflow</a> to make a slide deck using the R Markdown template built into the <code>xaringan</code> package. The built-in template doubles as documentation for the <code>xaringan</code> package, so it is a great way to familiarize yourself with the package features, but it also includes a lot of content that you will probably want to remove and modify when creating your presentation.</p></li>
+<li><p><strong>Option 2:</strong> Start with an <a href="https://spcanelon.github.io/RLadies-xaringan-template">R-Ladies themed xaringan template</a> (embedded below). This is an example slide deck originally created as a teaching tool to highlight some of the main features of the <code>xaringan</code> package, and to demo some customization that incorporates the R-Ladies CSS theme built into xaringan. Please feel welcome to use/modify it to suit your needs! When you are ready, you can follow the steps immediately below 👇 to download the files to your machine, and then skip down to <a href="#initialize-version-control-with-git">Initialize version control with git</a>.</p></li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_course</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">repo_spec =</span> <span class="st">"spcanelon/RLadies-xaringan-template"</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">destdir =</span> <span class="st">"filepath/for/your/presentation"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<blockquote class="blockquote">
+<p>Note: After copying the files to your machine you’ll probably want to rename the file folder to whatever makes sense for your presentation.</p>
+</blockquote>
+<div class="shareagain" style="min-width:300px;margin:1em auto;text-align:center;">
+<iframe src="https://spcanelon.github.io/RLadies-xaringan-template" width="400" height="300" align="center" style="border:2px solid currentColor;" loading="lazy" allowfullscreen="">
+</iframe>
+<script>fitvids('.shareagain', {players: 'iframe'});</script>
+</div>
+<blockquote class="blockquote">
+<p>Try navigating through the slides ☝️ with your left/right arrow keys and press the letter “P” on your keyboard to see some notes in Presenter View</p>
+</blockquote>
+</section>
+<section id="the-ten-step-workflow" class="level1">
+<h1>The Ten-Step Workflow</h1>
+<section id="packages" class="level2">
+<h2 class="anchored" data-anchor-id="packages">Packages</h2>
+<p>This workflow was developed using:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Software / package</th>
+<th>Version</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>R</td>
+<td>4.0.3</td>
+</tr>
+<tr class="even">
+<td>RStudio</td>
+<td>1.4.1103</td>
+</tr>
+<tr class="odd">
+<td><code>xaringan</code></td>
+<td>0.19</td>
+</tr>
+<tr class="even">
+<td><code>usethis</code></td>
+<td>2.0.0</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"xaringan"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"usethis"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="creating-your-xaringan-slide-deck" class="level2">
+<h2 class="anchored" data-anchor-id="creating-your-xaringan-slide-deck">Creating your xaringan slide deck</h2>
+<p><strong>1. Create a new RStudio project for your presentation:</strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_project</span>(<span class="st">"filepath/for/your/presentation/repo-name"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<blockquote class="blockquote">
+<p>📍 If you’re not sure where you are on your computer, check your working directory with <code>getwd()</code> and use it as a filepath reference point</p>
+</blockquote>
+<!--Output:    
+    
+    ```r
+    New project 'rladies-xaringan-template' is nested inside an existing project '/filepath/for/the/presentation/', which is rarely a good idea.
+    If this is unexpected, the here package has a function, `here::dr_here()` that reveals why '/filepath/for/the/presentation/' is regarded as a project.
+    Do you want to create anyway?
+    
+    1: Absolutely not
+    2: Yup
+    3: No
+    
+    Selection: 2
+    ```
+-->
+<p><strong>2. Create a xaringan deck using a xaringan template:</strong><br> <em>File</em> &gt; <em>New File</em> &gt; <em>R Markdown</em> &gt; <em>From Template</em> &gt; <em>Ninja Presentation</em> &gt; <em>OK</em></p>
+<p><strong>3. Delete what you don’t need and save your R Markdown file with whatever name you like.</strong> If you pick <code>index.Rmd</code> the live link you share at the end will be relatively short.</p>
+<p><strong>4. Render HTML slides from the open Rmd file using xaringan’s infinite moon reader:</strong></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>xaringan<span class="sc">::</span><span class="fu">infinite_moon_reader</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="initialize-version-control-with-git" class="level2">
+<h2 class="anchored" data-anchor-id="initialize-version-control-with-git">Initialize version control with git</h2>
+<p><strong>5. Initialize version control of your slides with git:</strong></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_git</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You’ll be asked if you want to commit the files in your project (with the message “Initial commit”) and then if you want to restart to activate the Git pane. Say yes to both ✅</p>
+<blockquote class="blockquote">
+<p>Note: At the moment <code>usethis</code> names the primary branch “master” by default. <a href="https://github.com/r-lib/usethis/issues/1341">Issue #1341</a> suggests the option to instead name it “main” is in the works.</p>
+</blockquote>
+<!--Output:
+> usethis::use_git()
+✓ Setting active project to '/filepath/for/the/presentation/rladies-xaringan-template'
+✓ Initialising Git repo
+✓ Adding '.Rhistory', '.Rdata', '.httr-oauth', '.DS_Store' to '.gitignore'
+There are 6 uncommitted files:
+* '.gitignore'
+* 'index_files/'
+* 'index.html'
+* 'index.Rmd'
+* 'libs/'
+* 'rladies-xaringan-template.Rproj'
+Is it ok to commit them?
+
+1: Yup
+2: Negative
+3: No way
+
+Selection: 1
+
+
+✓ Adding files
+✓ Making a commit with message 'Initial commit'
+● A restart of RStudio is required to activate the Git pane
+Restart now?
+
+1: Yes
+2: Nope
+3: Not now
+
+Selection: 
+
+-->
+<p><strong>6. Connect your local project with a GitHub repo:</strong></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_github</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<blockquote class="blockquote">
+<p>You could use the function argument <code>private = TRUE</code> to create a private GitHub repository. But you may have to remember to change the visibility before <a href="#deploying-your-slides">deploying to GitHub Pages</a>.</p>
+</blockquote>
+<!--Output:
+> usethis::use_github(private = TRUE)
+ℹ Defaulting to https Git protocol
+✓ Setting active project to '/filepath/for/the/presentation/rladies-xaringan-template'
+✓ Checking that current branch is default branch ('master')
+✓ Creating private GitHub repository 'spcanelon/rladies-xaringan-template'
+✓ Setting remote 'origin' to 'https://github.com/spcanelon/rladies-xaringan-template.git'
+✓ Pushing 'master' branch to GitHub and setting 'origin/master' as upstream branch
+✓ Opening URL 'https://github.com/spcanelon/rladies-xaringan-template'
+-->
+<p><strong>7. Your new GitHub repo with all of your xaringan project files will automatically open up in your browser</strong></p>
+<blockquote class="blockquote">
+<p>Repo for the R-Ladies xaringan template:<br> https://github.com/spcanelon/RLadies-xaringan-template</p>
+</blockquote>
+</section>
+<section id="making-and-committing-changes-to-your-slides" class="level2">
+<h2 class="anchored" data-anchor-id="making-and-committing-changes-to-your-slides">Making and committing changes to your slides</h2>
+<p><strong>8. Edit your slides as you wish.</strong> Commit often! And then push to GitHub. Use the tools provided by the Git pane in RStudio, or use the following commands in the Terminal:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 1: Stage all modified files</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 2: Describe the changes you made to your files</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"&lt;A brief but descriptive commit message&gt;"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<blockquote class="blockquote">
+<p>Consider writing a commit message that finishes the following sentence:<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> “If applied, this commit will…” (e.g.&nbsp;“Change the slide theme,” “Add hello slide”)</p>
+</blockquote>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Push the changes to your GitHub repository</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="deploying-your-slides" class="level2">
+<h2 class="anchored" data-anchor-id="deploying-your-slides">Deploying your slides</h2>
+<p><strong>9. When you’re ready to deploy your slides, you can use the <code>usethis::use_github_pages()</code> function</strong> which makes the process of deploying via GitHub Pages super easy. I recommend pointing <code>branch</code> to the name of your primary branch.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_github_pages</span>(<span class="at">branch =</span> <span class="st">"master"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<blockquote class="blockquote">
+<p>Note: Your repository must be <strong>public</strong> for your deployed slides to be available publicly, unless you have a paid GitHub account.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Also, you only need to follow this step <em>once</em> to deploy your slides to the web. As long as you remember to push to your repo any changes that you make to your slides (Rmd and HTML), GitHub Pages will know how to render them.</p>
+</blockquote>
+<!--Output:
+> usethis::use_github_pages(branch = "master")
+✓ Setting active project to '/Users/scanelon/Box/2-Teaching/R-Projects/R-Ladies/RLadies-xaringan-template'
+✓ Activating GitHub Pages for 'spcanelon/rladies-xaringan-template'
+✓ GitHub Pages is publishing from:
+● URL: 'https://spcanelon.github.io/RLadies-xaringan-template/'
+● Branch: 'master'
+● Path: '/'
+-->
+<p><strong>10. Visit the link provided to see your newly deployed slides!</strong> 🚀<br>Don’t panic if you don’t see them right away, sometimes it takes a little time. This is the link you will share with the world when you present. Notice it looks <em>very</em> similar to your GitHub repo link.</p>
+<blockquote class="blockquote">
+<p>Link to the R-Ladies xaringan template rendered slides:<br> https://spcanelon.github.io/RLadies-xaringan-template</p>
+</blockquote>
+</section>
+</section>
+<section id="bonus-steps" class="level1">
+<h1>Bonus steps</h1>
+<p>11. Go to the <a href="https://github.com/spcanelon/RLadies-xaringan-template">repository home page</a> and find the About section on the right hand side. Add a description of your presentation and the link to your slides, that way your presentation is easily available to anyone visiting your repo.</p>
+<p>12. Check out Garrick Aden-Buie’s blog post Sharing Your <code>xaringan</code> Slides to learn how to <a href="https://www.garrickadenbuie.com/blog/sharing-xaringan-slides/#create-a-social-media-card">create a social media card</a> for your slides and use your new link to share your slides in more places (e.g.&nbsp;<a href="https://www.garrickadenbuie.com/blog/sharing-xaringan-slides/#embed-your-slides">embedded on a website</a>, etc.)</p>
+<p>13. This GitHub Pages workflow is not exclusive to <code>xaringan</code> slides! Try it out with any other HTML file.</p>
+</section>
+<section id="learn-more" class="level1">
+<h1>Learn more</h1>
+<section id="foundation" class="level2">
+<h2 class="anchored" data-anchor-id="foundation">Foundation</h2>
+<ul>
+<li><a href="https://spcanelon.github.io/xaringan-basics-and-beyond/index.html">Sharing Your Work with xaringan • Silvia Canelón</a> – workshop site</li>
+<li><a href="https://silvia.rbind.io/talk/2020-12-17-introduccion-xaringan/">Introducción al Paquete xaringan • Silvia Canelón</a> – R-Ladies Meetup</li>
+<li><a href="https://arm.rbind.io/slides/xaringan.html">Making Slides with R Markdown • Alison Hill</a> – workshop slides</li>
+<li><a href="https://slides.yihui.org/xaringan/">Presentation Ninja • xaringan Official Document</a> – package documentation</li>
+<li><a href="https://bookdown.org/yihui/rmarkdown/xaringan.html">Chapter 7 xaringan Presentations • R Markdown: The Definitive Guide</a> – book chapter</li>
+</ul>
+</section>
+<section id="sharing-your-slides" class="level2">
+<h2 class="anchored" data-anchor-id="sharing-your-slides">Sharing your slides</h2>
+<ul>
+<li><a href="https://www.garrickadenbuie.com/blog/sharing-xaringan-slides/">Sharing Your xaringan Slides • Garrick Aden‑Buie</a> – blog post</li>
+<li><a href="https://jhelvy.github.io/xaringanBuilder/">Functions For Building Xaringan Slides To Different Outputs • xaringanBuilder</a> – package site</li>
+<li><a href="https://alison.rbind.io/talk/2020-sharing-short-notice/">Sharing on Short Notice • Alison Hill &amp; Desirée De Leon</a> – video resource for deploying via Netlify</li>
+</ul>
+</section>
+<section id="making-your-slides-extra-special" class="level2">
+<h2 class="anchored" data-anchor-id="making-your-slides-extra-special">Making your slides extra special</h2>
+<ul>
+<li><a href="https://presentable-user2021.netlify.app/">Professional, Polished, Presentable • Garrick Aden‑Buie &amp; Silvia Canelón • useR!2021</a> – site for an intermediate xaringan workshop</li>
+<li><a href="https://github.com/yihui/xaringan/wiki">Home • yihui/xaringan Wiki • GitHub</a> – wiki of customizations for xaringan</li>
+<li><a href="https://www.garrickadenbuie.com/talk/extra-great-slides-nyhackr/">Making Extra Great Slides • Garrick Aden‑Buie</a> – talk &amp; slides with xaringan overview and featuring CSS styling and xaringanthemer</li>
+<li><a href="https://www.katiejolly.io/blog/2021-03-16/designing-slides">Applying design guidelines to slides with {xaringanthemer} • katie jolly</a> – blog post</li>
+<li><a href="https://pkg.garrickadenbuie.com/xaringanExtra/#/?id=xaringanextra">A playground of extensions for xaringan • xaringanExtra</a> – package site</li>
+<li><a href="https://pkg.garrickadenbuie.com/xaringanthemer/">Custom xaringan CSS Themes • xaringanthemer</a> – package site</li>
+</ul>
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p><a href="https://happygitwithr.com/rstudio-git-github.html">Chapter 12 Connect RStudio to Git and GitHub | Happy Git and GitHub for the useR</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p><a href="https://chris.beams.io/posts/git-commit/#imperative">How to Write a Git Commit Message | Chris Beams</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2021" class="csl-entry quarto-appendix-citeas" role="listitem">
+Canelón, Silvia. 2021. <span>“Deploying Xaringan Slides with GitHub
+Pages.”</span> March 16, 2021. <a href="https://silviacanelon.com/blog/2021-03-16-deploying-xaringan-slides">https://silviacanelon.com/blog/2021-03-16-deploying-xaringan-slides</a>.
+</div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://utteranc.es/client.js" repo="spcanelon/silvia" issue-term="title" theme="body-light" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">© 2023 Silvia Canelón ∙ Made with <a href="https://quarto.org">Quarto</a></div>   
+    <div class="nav-footer-center"><a class="link-dark me-1" href="../../accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener"><i class="fa-solid fa-universal-access" aria-label="universal-access"></i></a> <a class="link-dark me-1" href="https://fosstodon.org/@spcanelon" title="mastodon" target="_blank" rel="noopener"><i class="fa-brands fa-mastodon" aria-label="mastodon"></i></a> <a class="link-dark me-1" href="https://github.com/spcanelon" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://orcid.org/0000-0003-1709-1394" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid" style="color:black"></i></a> <a class="link-dark me-1" href="https://scholar.google.com/citations?user=GAzkvpcAAAAJ&amp;hl=en&amp;oi=ao" title="Google Scholar" target="_blank" rel="noopener"><i class="ai  ai-google-scholar" style="color:black"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/spcanelon" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../accessibility.html">Accessibility</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../contact.html">Contact</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../license.html">License</a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml">
+      <i class="bi bi-rss" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>
