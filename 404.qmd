@@ -1,0 +1,9 @@
+---
+title: "404"
+---
+
+# Oh no! That page is nowhere to be found <i class="fas fa-search pr2"></i>
+
+It might have been removed, renamed, or has mysteriously disappeared. 
+
+Head back to the [homepage](/) to try finding it again, or try using the search feature.
