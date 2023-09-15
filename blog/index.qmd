@@ -22,6 +22,7 @@ listing:
   page-size: 5
   feed: true
 citation: false
+toc: false
 page-layout: article
 format: 
   html: 
