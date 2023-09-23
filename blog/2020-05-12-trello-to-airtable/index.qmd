@@ -24,7 +24,7 @@ links:
     url: "https://github.com/spcanelon/silvia/blob/main/content/blog/2020-05-12-trello-to-airtable/index.Rmarkdown"
   - icon: table
     name: JSON example file
-    url: /blog/2020-trello-to-airtable/program-mgmt.json
+    url: program-mgmt.json
 ---
 
 **[Airtable](https://airtable.com/) is a user-friendly and _powerful_ tool** that until recently I'd been using for personal projects (i.e. document organizing, apartment hunting, etc.). A couple of weeks ago I leaned on Airtable to create a base designed for the [Philadelphia Reproductive Freedom Collective](https://www.womensmedicalfund.org/prfc) to support our COVID-19 mutual aid efforts. 

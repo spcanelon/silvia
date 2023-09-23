@@ -22,7 +22,7 @@ abstract: ""
 links:
 - icon: pencil-fill
   name: "Blog post: Deploying xaringan Slides"
-  url: /blog/2021-deploying-xaringan-slides/
+  url: ../../blog/2021-03-16-deploying-xaringan-slides
 ---
 
-![Hex logo for R-Ladies Seattle featuring some ggplot2-created mountain ranges](rladies-seattle.png){fig-alt=""}
+![](rladies-seattle.png){fig-alt="Hex logo for R-Ladies Seattle featuring some ggplot2-created mountain ranges"}

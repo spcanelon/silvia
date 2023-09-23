@@ -23,7 +23,7 @@ links:
   url: https://doi.org/10.1142/9789811232701_0007
 - icon: file-earmark-pdf
   name: PSB 2021 Poster
-  url: /publication/2020-csections-emergency-admissions/PSB2021_poster.pdf
+  url: PSB2021_poster.pdf
 - icon: box-arrow-up-right
   name: PSB 2021 Website
   url: https://psb.stanford.edu/

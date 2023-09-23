@@ -25,13 +25,13 @@ links:
   url: https://www.dbei.med.upenn.edu/2022ResearchDay/presentations
 - icon: file-earmark-pdf
   name: poster
-  url: /talk/2022-dbei-research-day/Poster.pdf
+  url: Poster.pdf
 - icon: play-btn-fill
   name: flashtalk
   url: https://www.dbei.med.upenn.edu/2022ResearchDay/silvia-canel%C3%B3n
 - icon: filetype-ppt
   name: slides
-  url: /talk/2022-dbei-research-day/DBEICCEB-ResearchDay-slides.pptx
+  url: DBEICCEB-ResearchDay-slides.pptx
 ---
 
 This abstract was one of 10 selected for a flashtalk presentation. And the flashtalk received an award! 🎉 

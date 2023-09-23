@@ -22,7 +22,7 @@ links:
   - icon: file-code
     icon_pack: far
     name: Tidyverse exam v2.0 solution
-    url: /blog/2020-rstudio-instructor-certification-tidyverse/tidyverse-sample-exam-solutions.html
+    url: tidyverse-sample-exam-solutions.html
 ---
 
 <script src="{{< blogdown/postref >}}index_files/fitvids/fitvids.min.js"></script>

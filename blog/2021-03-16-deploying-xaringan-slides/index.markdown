@@ -18,7 +18,7 @@ links:
   - icon: calendar-check
     icon_pack: fas
     name: R-Ladies Talk
-    url: /talk/2021-xaringan-deploy-demo/
+    url: ../../talk/2021-03-16-xaringan-deploy-demo/
   - icon: github
     icon_pack: fab
     name: R-Ladies template files

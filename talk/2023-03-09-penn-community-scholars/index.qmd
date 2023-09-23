@@ -16,8 +16,8 @@ categories:
 links:
 - icon: filetype-ppt
   name: slides
-  url: /talk/2023-penn-community-scholars/Penn Community Scholars Program_final.pptx
+  url: Penn Community Scholars Program_final.pptx
 - icon: filetype-docx
   name: demo notes
-  url: /talk/2023-penn-community-scholars/Data Analysis 101_Demo notes.docx
+  url: Data Analysis 101_Demo notes.docx
 ---

@@ -28,7 +28,7 @@ links:
   url: https://doi.org/10.1016/j.ijmedinf.2020.104339
 - icon: file-earmark-pdf
   name: 2020 AMIA Poster
-  url: /publication/2020-maddie-ehr-delivery-episode-algorithm/AMIA2020_poster.pdf
+  url: AMIA2020_poster.pdf
 - icon: file-richtext-fill
   name: medRxiv Preprint
   url: https://www.medrxiv.org/content/10.1101/2020.07.30.20165381v1
