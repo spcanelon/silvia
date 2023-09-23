@@ -42,13 +42,6 @@
     "text": "Abstract\nThe xaringan package brings professional, impressive, and visually appealing slides to the powerful R Markdown ecosystem. Through our hands-on tutorial, you will learn how to design highly effective slides that support presentations for teaching and reporting alike. Over three hours, you will learn how to create an accessible baseline design that matches your institution or organization’s style guide. Together we’ll explore the basics of CSS—the design language of the internet—and how we can leverage CSS to produce elegant slides for effective communication."
   },
   {
-    "objectID": "talk/2021-03-16-xaringan-deploy-demo/index.html",
-    "href": "talk/2021-03-16-xaringan-deploy-demo/index.html",
-    "title": "Writing Presentations in R",
-    "section": "",
-    "text": "Hex logo for R-Ladies Seattle featuring some ggplot2-created mountain ranges"
-  },
-  {
     "objectID": "talk/2020-12-17-introduccion-xaringan/index.html",
     "href": "talk/2020-12-17-introduccion-xaringan/index.html",
     "title": "Introducción al Paquete xaringan",
