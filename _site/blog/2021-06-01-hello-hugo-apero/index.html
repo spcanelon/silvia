@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.450">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Silvia Canelón">
 <meta name="dcterms.date" content="2021-06-01">
-
 <title>Silvia Canelón - Hello Hugo Apéro: Converting a Blogdown Site from Hugo Academic</title>
 <style>
 code{white-space: pre-wrap;}
@@ -58,7 +55,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
-
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
@@ -66,6 +62,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../assets/silvia/img/logo_rounded.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,8 +78,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
-<script id="quarto-search-options" type="application/json">{
+<link href="../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -101,30 +97,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-<!-- umami cloud -->
-<script async="" src="https://analytics.umami.is/script.js" data-website-id="6ba73b87-31aa-44ac-8d5e-e0dad5760753" data-do-not-track="true">
-</script>
-<script src="../../site_libs/clipboard-2.0.6/clipboard.min.js"></script>
-<link href="../../site_libs/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.css" rel="stylesheet">
-<script src="../../site_libs/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.js"></script>
-<script>window.xaringanExtraClipboard(null, {"button":"<i class=\"fa fa-clipboard\"><\/i> Copy Code","success":"<i class=\"fa fa-check\" style=\"color: #90BE6D\"><\/i> Copied!","error":"Press Ctrl+C to Copy"})</script>
-<link href="../../site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet">
+}</script><!-- umami cloud --><script async="" src="https://analytics.umami.is/script.js" data-website-id="6ba73b87-31aa-44ac-8d5e-e0dad5760753" data-do-not-track="true">
+</script><script src="../../site_libs/clipboard-2.0.6/clipboard.min.js"></script><link href="../../site_libs/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.css" rel="stylesheet">
+<script src="../../site_libs/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.js"></script><script>window.xaringanExtraClipboard(null, {"button":"<i class=\"fa fa-clipboard\"><\/i> Copy Code","success":"<i class=\"fa fa-check\" style=\"color: #90BE6D\"><\/i> Copied!","error":"Press Ctrl+C to Copy"})</script><link href="../../site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet">
 <link href="../../site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet">
-
-
 </head>
-
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../assets/silvia/img/logo_noBg.svg" alt="" class="navbar-logo">
-    </a>
+    <img src="../../assets/silvia/img/logo_noBg.svg" alt="" class="navbar-logo"></a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Silvia Canelón</span>
     </a>
@@ -135,7 +119,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="../../about/index.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
@@ -156,26 +140,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Projects</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
+<div class="quarto-navbar-tools">
     <a href="https://www.github.com/spcanelon/silvia" rel="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-<div class="quarto-title column-body page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);">
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns"><div id="title-block-header-title" class="quarto-title page-columns page-full page-layout-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);">
 <h1 class="title">Hello Hugo Apéro: Converting a Blogdown Site from Hugo Academic</h1>
 <p class="subtitle lead">A tutorial on how to take your personal Hugo Academic/Wowchemy website and convert it to the Hugo Apéro theme</p>
-  <div class="quarto-categories">
-    <div class="quarto-category">R</div>
-    <div class="quarto-category">Website</div>
-    <div class="quarto-category">Tutorial</div>
-    <div class="quarto-category">git</div>
-    <div class="quarto-category">blogdown</div>
-    <div class="quarto-category">Hugo</div>
-    </div>
+    <div class="quarto-categories">
+        <div class="quarto-category">R</div>
+        <div class="quarto-category">Website</div>
+        <div class="quarto-category">Tutorial</div>
+        <div class="quarto-category">git</div>
+        <div class="quarto-category">blogdown</div>
+        <div class="quarto-category">Hugo</div>
+      </div>
   </div>
 
 
@@ -208,52 +188,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#what-to-expect" id="toc-what-to-expect" class="nav-link active" data-scroll-target="#what-to-expect">What to expect</a></li>
+<li><a href="#what-to-expect" id="toc-what-to-expect" class="nav-link active" data-scroll-target="#what-to-expect">What to expect</a></li>
   <li><a href="#the-plan" id="toc-the-plan" class="nav-link" data-scroll-target="#the-plan">The Plan</a></li>
-  <li><a href="#prework" id="toc-prework" class="nav-link" data-scroll-target="#prework">Prework</a>
+  <li>
+<a href="#prework" id="toc-prework" class="nav-link" data-scroll-target="#prework">Prework</a>
   <ul class="collapse">
-  <li><a href="#branch-deploy" id="toc-branch-deploy" class="nav-link" data-scroll-target="#branch-deploy">Branch deploy</a></li>
+<li><a href="#branch-deploy" id="toc-branch-deploy" class="nav-link" data-scroll-target="#branch-deploy">Branch deploy</a></li>
   <li><a href="#hugo-version" id="toc-hugo-version" class="nav-link" data-scroll-target="#hugo-version">Hugo version</a></li>
-  </ul></li>
+  </ul>
+</li>
   <li><a href="#install-theme-alongside-academic-change-in-config.toml" id="toc-install-theme-alongside-academic-change-in-config.toml" class="nav-link" data-scroll-target="#install-theme-alongside-academic-change-in-config.toml">1. Install theme alongside Academic, change in <strong>config.toml</strong></a></li>
   <li><a href="#copy-all-academic-shortcodes-to-layouts-root-remove-later" id="toc-copy-all-academic-shortcodes-to-layouts-root-remove-later" class="nav-link" data-scroll-target="#copy-all-academic-shortcodes-to-layouts-root-remove-later">2. Copy all Academic shortcodes to <strong>layouts/</strong> root (remove later)</a></li>
   <li><a href="#remove-all-assets" id="toc-remove-all-assets" class="nav-link" data-scroll-target="#remove-all-assets">3. Remove all assets</a></li>
   <li><a href="#remove-all-custom-layouts" id="toc-remove-all-custom-layouts" class="nav-link" data-scroll-target="#remove-all-custom-layouts">4. Remove all custom layouts</a></li>
-  <li><a href="#copy-over-apéro-example-site-config.toml-file" id="toc-copy-over-apéro-example-site-config.toml-file" class="nav-link" data-scroll-target="#copy-over-apéro-example-site-config.toml-file">5. Copy over Apéro example site <strong>config.toml</strong> file</a></li>
+  <li><a href="#copy-over-ap%C3%A9ro-example-site-config.toml-file" id="toc-copy-over-apéro-example-site-config.toml-file" class="nav-link" data-scroll-target="#copy-over-ap%C3%A9ro-example-site-config.toml-file">5. Copy over Apéro example site <strong>config.toml</strong> file</a></li>
   <li><a href="#remove-academic-config-directory" id="toc-remove-academic-config-directory" class="nav-link" data-scroll-target="#remove-academic-config-directory">6. Remove Academic <strong>config/</strong> directory</a></li>
-  <li><a href="#migrating-the-content" id="toc-migrating-the-content" class="nav-link" data-scroll-target="#migrating-the-content">Migrating the content</a>
+  <li>
+<a href="#migrating-the-content" id="toc-migrating-the-content" class="nav-link" data-scroll-target="#migrating-the-content">Migrating the content</a>
   <ul class="collapse">
-  <li><a href="#file-organization" id="toc-file-organization" class="nav-link" data-scroll-target="#file-organization">File organization</a></li>
+<li><a href="#file-organization" id="toc-file-organization" class="nav-link" data-scroll-target="#file-organization">File organization</a></li>
   <li><a href="#about-page" id="toc-about-page" class="nav-link" data-scroll-target="#about-page">About page</a></li>
   <li><a href="#homepage" id="toc-homepage" class="nav-link" data-scroll-target="#homepage">Homepage</a></li>
   <li><a href="#blog" id="toc-blog" class="nav-link" data-scroll-target="#blog">Blog</a></li>
   <li><a href="#publications" id="toc-publications" class="nav-link" data-scroll-target="#publications">Publications</a></li>
   <li><a href="#talks" id="toc-talks" class="nav-link" data-scroll-target="#talks">Talks</a></li>
   <li><a href="#rmd-.rmarkdown" id="toc-rmd-.rmarkdown" class="nav-link" data-scroll-target="#rmd-.rmarkdown">.Rmd → .Rmarkdown</a></li>
-  </ul></li>
-  <li><a href="#final-touches" id="toc-final-touches" class="nav-link" data-scroll-target="#final-touches">Final touches</a>
+  </ul>
+</li>
+  <li>
+<a href="#final-touches" id="toc-final-touches" class="nav-link" data-scroll-target="#final-touches">Final touches</a>
   <ul class="collapse">
-  <li><a href="#contact-form" id="toc-contact-form" class="nav-link" data-scroll-target="#contact-form">Contact form</a></li>
+<li><a href="#contact-form" id="toc-contact-form" class="nav-link" data-scroll-target="#contact-form">Contact form</a></li>
   <li><a href="#tidying-up-your-directory" id="toc-tidying-up-your-directory" class="nav-link" data-scroll-target="#tidying-up-your-directory">Tidying up your directory</a></li>
-  </ul></li>
+  </ul>
+</li>
   <li><a href="#customizing-your-site" id="toc-customizing-your-site" class="nav-link" data-scroll-target="#customizing-your-site">Customizing your site</a></li>
   <li><a href="#deploying-your-new-site" id="toc-deploying-your-new-site" class="nav-link" data-scroll-target="#deploying-your-new-site">Deploying your new site</a></li>
-  </ul>
-</nav>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
-
-<!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
-<!-- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title"> -->
-
-
-<div class="cell">
+<main class="content quarto-banner-title-block" id="quarto-document-content"><!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html --><!-- 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title"> 
+--><!-- <header id="title-block-header" class="quarto-title-block default page-columns"> --><!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> --><div class="cell">
 <div class="cell-output-display">
 
 </div>
@@ -265,40 +245,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 </div>
-<section id="what-to-expect" class="level2">
-<h2 class="anchored" data-anchor-id="what-to-expect">What to expect</h2>
+<section id="what-to-expect" class="level2"><h2 class="anchored" data-anchor-id="what-to-expect">What to expect</h2>
 <p>By the end of the tutorial you will have switched your website from using the Hugo Academic theme to using the new <a href="https://alison.rbind.io/project/hugo-apero/">Hugo Apéro theme designed by Alison Hill</a> <i class="fa-solid fa-glass-cheers" aria-label="glass-cheers"></i></p>
 <p>Specifically you will be able to migrate your blog, publications, and talks. If you need to migrate courses, I recommend taking a look at how <a href="https://alison.rbind.io/project/">Alison</a> and <a href="https://www.kelly-bodwin.com/courses/">Kelly Bodwin</a> organized their courses and workshops into projects using this theme. I didn’t have projects prior to converting my site, but after creating a few projects post-Apéro I’m confident any projects you’ve created pre-Apéro will carry over easily.</p>
-<details>
-<summary>
+<details><summary>
 Projects on my site: https://silvia.rbind.io/project
-</summary>
-<div class="cell" data-layout-align="center">
+</summary><div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/silvia-project-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="My Project listing: https://silvia.rbind.io/project"><img src="img/silvia-project-list.png" class="img-fluid figure-img" alt="The Project listing page for my site with a grid layout featuring thumbnail images. The top of the page says 'Projects' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There are three projects featured with a decorative thumbnail image, a title, and a summary. Items also include an author and category links but they are cut off in this screenshot." width="1265"></a></p>
-<figcaption class="figure-caption">My Project listing: https://silvia.rbind.io/project</figcaption>
-</figure>
+<figure class="figure"><p><a href="img/silvia-project-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="My Project listing: https://silvia.rbind.io/project"><img src="img/silvia-project-list.png" class="img-fluid figure-img" alt="The Project listing page for my site with a grid layout featuring thumbnail images. The top of the page says 'Projects' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There are three projects featured with a decorative thumbnail image, a title, and a summary. Items also include an author and category links but they are cut off in this screenshot." width="1265"></a></p>
+<figcaption class="figure-caption">My Project listing: https://silvia.rbind.io/project</figcaption></figure>
 </div>
 </div>
 </div>
-</details>
-<p>If you like videos, Alison recorded a <a href="https://youtu.be/oBtDgW9u7Nw">walkthrough of this conversion process</a> using Julia Silge’s site as an example.</p>
+</details><p>If you like videos, Alison recorded a <a href="https://youtu.be/oBtDgW9u7Nw">walkthrough of this conversion process</a> using Julia Silge’s site as an example.</p>
 <p><strong>What <em>not</em> to expect</strong></p>
 <p>A tutorial on how to create a Hugo Apéro site from scratch – but don’t worry! Alison covers this in a <a href="https://alison.rbind.io/talk/2021-iyo-tunis/">workshop she gave for R-Ladies Tunis</a> and in the <a href="https://hugo-apero-docs.netlify.app/start/">Get started series of blog posts</a> included in the documentation site.</p>
-</section>
-<section id="the-plan" class="level2">
-<h2 class="anchored" data-anchor-id="the-plan">The Plan</h2>
+</section><section id="the-plan" class="level2"><h2 class="anchored" data-anchor-id="the-plan">The Plan</h2>
 <p>I was lucky that Alison had already started converting her own personal site because she gave me a template and example to follow! <i class="fa-solid fa-hands-helping" aria-label="hands-helping"></i></p>
 <p>We’ll follow the steps below throughout the tutorial and each of the six steps comes with its own commit in my git history, so you can see exactly what I changed and when. <i class="fa-solid fa-code-branch" aria-label="code-branch"></i></p>
 <p></p>
 <p>Then we’ll <a href="#migrating-the-content">reuse and migrate</a> your existing content, set up a <a href="#contact-form">contact form</a>, <a href="#tidying-up-your-directory">tidy up your directory</a>, explore some resources for <a href="#customizing-your-site">customizing your new site</a>, and end with the grand finale: <a href="#deploying-your-new-site">deploying your new site</a>!</p>
-</section>
-<section id="prework" class="level2">
-<h2 class="anchored" data-anchor-id="prework">Prework</h2>
-<section id="branch-deploy" class="level3">
-<h3 class="anchored" data-anchor-id="branch-deploy">Branch deploy</h3>
+</section><section id="prework" class="level2"><h2 class="anchored" data-anchor-id="prework">Prework</h2>
+<section id="branch-deploy" class="level3"><h3 class="anchored" data-anchor-id="branch-deploy">Branch deploy</h3>
 <p>Create a new <code>apero</code> branch from the primary branch of your website repository</p>
 <ol type="1">
 <li><p><code>git checkout -b apero</code> to create new local branch</p></li>
@@ -309,25 +278,26 @@ Projects on my site: https://silvia.rbind.io/project
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/netlify-branch-deploy.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Netlify site settings for deploy contexts"><img src="img/netlify-branch-deploy.png" class="img-fluid figure-img" style="width:75.0%" alt="The deploy contexts section after clicking the Edit settings button. This section shows three settings that can be edited. The first is the production branch which is set to 'main' in a free text box. The second is deploy previews which is a radio button set to 'any pull request against your production branch/branch deploy branches (as opposed to 'none'). The third is branch deploys which is a radio button set to 'all' (as opposed to 'none' and 'let me add individual branches'). There are two buttons at the bottom of this section, Save and Cancel."></a></p>
-<figcaption class="figure-caption">Netlify site settings for deploy contexts</figcaption>
-</figure>
+<figure class="figure"><p><a href="img/netlify-branch-deploy.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Netlify site settings for deploy contexts"><img src="img/netlify-branch-deploy.png" class="img-fluid figure-img" style="width:75.0%" alt="The deploy contexts section after clicking the Edit settings button. This section shows three settings that can be edited. The first is the production branch which is set to 'main' in a free text box. The second is deploy previews which is a radio button set to 'any pull request against your production branch/branch deploy branches (as opposed to 'none'). The third is branch deploys which is a radio button set to 'all' (as opposed to 'none' and 'let me add individual branches'). There are two buttons at the bottom of this section, Save and Cancel."></a></p>
+<figcaption class="figure-caption">Netlify site settings for deploy contexts</figcaption></figure>
 </div>
 </div>
 </div>
 <p>Your new apero branch deploy at this point is an independent copy of your current website so from here on out you can make changes freely without affecting anything in your main branch :tada:</p>
-</section>
-<section id="hugo-version" class="level3">
-<h3 class="anchored" data-anchor-id="hugo-version">Hugo version</h3>
+</section><section id="hugo-version" class="level3"><h3 class="anchored" data-anchor-id="hugo-version">Hugo version</h3>
 <p>The last piece of prework before we dive in is to update your local version of Hugo and update the Hugo version accordingly in a few different places.</p>
 <ol type="1">
-<li><p>Update Hugo locally using <code>blogdown::install_hugo()</code> (for me the latest version was v0.82.1)</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>blogdown<span class="sc">::</span><span class="fu">install_hugo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>Update <strong>.Rprofile</strong> and then restart R per the instructions that appear in the console.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># fix Hugo version</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">blogdown.hugo.version =</span> <span class="st">"0.82.1"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>Update <strong>netlify.toml</strong></p>
+<li>
+<p>Update Hugo locally using <code><a href="https://pkgs.rstudio.com/blogdown/reference/install_hugo.html">blogdown::install_hugo()</a></code> (for me the latest version was v0.82.1)</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">blogdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/blogdown/reference/install_hugo.html">install_hugo</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</li>
+<li>
+<p>Update <strong>.Rprofile</strong> and then restart R per the instructions that appear in the console.</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># fix Hugo version</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/options.html">options</a></span><span class="op">(</span>blogdown.hugo.version <span class="op">=</span> <span class="st">"0.82.1"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</li>
+<li>
+<p>Update <strong>netlify.toml</strong></p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>[context.production.environment]</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  HUGO_VERSION <span class="ot">=</span> <span class="st">"0.82.1"</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  HUGO_ENV <span class="ot">=</span> <span class="st">"production"</span></span>
@@ -337,13 +307,12 @@ Projects on my site: https://silvia.rbind.io/project
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  HUGO_VERSION <span class="ot">=</span> <span class="st">"0.82.1"</span></span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>[context.deploy<span class="sc">-</span>preview.environment]</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  HUGO_VERSION <span class="ot">=</span> <span class="st">"0.82.1"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>Run <code>blogdown::check_site()</code> to find any issues. In my case these checking functions found a Hugo version mismatch and I ended up having to specifically run <code>blogdown::install_hugo("0.82.1")</code> to resolve it.</p>
-<details>
-<summary>
-<p>Console output</p>
-</summary>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>― Checking netlify.toml...</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  HUGO_VERSION <span class="ot">=</span> <span class="st">"0.82.1"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</li>
+<li>
+<p>Run <code><a href="https://pkgs.rstudio.com/blogdown/reference/check_site.html">blogdown::check_site()</a></code> to find any issues. In my case these checking functions found a Hugo version mismatch and I ended up having to specifically run <code>blogdown::install_hugo("0.82.1")</code> to resolve it.</p>
+<details><summary><p>Console output</p>
+</summary><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>― Checking netlify.toml...</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>○ Found HUGO_VERSION <span class="ot">=</span> <span class="dv">0</span>.<span class="fl">82.1</span> <span class="cf">in</span> [build] context of netlify.toml.</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="sc">|</span> Checking that Netlify <span class="sc">&amp;</span> local Hugo versions match...</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="sc">|</span> Mismatch found<span class="sc">:</span>  blogdown is using Hugo <span class="fu">version</span> (<span class="dv">0</span>.<span class="fl">69.2</span>) to build site locally.  Netlify is using Hugo <span class="fu">version</span> (<span class="dv">0</span>.<span class="fl">82.1</span>) to build site.</span>
@@ -352,29 +321,25 @@ Projects on my site: https://silvia.rbind.io/project
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="sc">|</span> Checking that Netlify <span class="sc">&amp;</span> local Hugo publish directories match...</span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>○ Good to go <span class="sc">-</span> blogdown and Netlify are using the same publish directory<span class="sc">:</span> public</span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>― Check complete<span class="sc">:</span> netlify.toml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details></li>
+</details>
+</li>
 </ol>
-<p>If you end up needing to make your own changes, I recommend running <code>blogdown::check_site()</code> again when you’re done to make sure you’ve resolved all of the issues.</p>
-<p>And then run <code>blogdown::serve_site()</code> to render a live preview of your site :rocket:</p>
-<hr>
-</section>
-</section>
-<section id="install-theme-alongside-academic-change-in-config.toml" class="level2">
-<h2 class="anchored" data-anchor-id="install-theme-alongside-academic-change-in-config.toml">1. Install theme alongside Academic, change in <strong>config.toml</strong></h2>
+<p>If you end up needing to make your own changes, I recommend running <code><a href="https://pkgs.rstudio.com/blogdown/reference/check_site.html">blogdown::check_site()</a></code> again when you’re done to make sure you’ve resolved all of the issues.</p>
+<p>And then run <code><a href="https://pkgs.rstudio.com/blogdown/reference/serve_site.html">blogdown::serve_site()</a></code> to render a live preview of your site :rocket:</p>
+<hr></section></section><section id="install-theme-alongside-academic-change-in-config.toml" class="level2"><h2 class="anchored" data-anchor-id="install-theme-alongside-academic-change-in-config.toml">1. Install theme alongside Academic, change in <strong>config.toml</strong>
+</h2>
 <blockquote class="blockquote">
 <p><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> Follow along with me at <a href="https://github.com/spcanelon/silvia/commit/cc5d24d93676990675abc52145fd7a369c7bffa6">commit cc5d24</a></p>
 </blockquote>
 <p>The first step is to install all of the Hugo Apéro theme files to the <code>theme/</code> folder in your site directory:</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>blogdown<span class="sc">::</span><span class="fu">install_theme</span>(<span class="at">theme =</span> <span class="st">"hugo-apero/hugo-apero"</span>,</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                        <span class="at">update_config =</span> <span class="cn">FALSE</span>, </span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                        <span class="at">force =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">blogdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/blogdown/reference/install_theme.html">install_theme</a></span><span class="op">(</span>theme <span class="op">=</span> <span class="st">"hugo-apero/hugo-apero"</span>,</span>
+<span>                        update_config <span class="op">=</span> <span class="cn">FALSE</span>, </span>
+<span>                        force <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<details>
-<summary>
+<details><summary>
 Console output
-</summary>
-<div class="cell" data-layout-align="center">
+</summary><div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>trying URL <span class="st">'https://github.com/hugo-apero/hugo-apero/archive/main.tar.gz'</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>downloaded <span class="fl">21.4</span> MB</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -382,17 +347,14 @@ Console output
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>Warning message<span class="sc">:</span></span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>The theme has provided an example site. You should read the theme<span class="st">'s documentation and at least take a look at the config file config.toml (or .yaml) of the example site, because not all Hugo themes work with any config files. </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</details>
-<p>As indicated in console output, modify the <strong>config.toml</strong> file so it points to your new theme folder instead of <code>hugo-academic</code>:</p>
+</details><p>As indicated in console output, modify the <strong>config.toml</strong> file so it points to your new theme folder instead of <code>hugo-academic</code>:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#theme = "hugo-academic"</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="dt">theme</span> <span class="op">=</span> <span class="st">"hugo-apero"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><i class="fa-solid fa-exclamation-circle" aria-label="exclamation-circle"></i> At this point you will probably start to get some error messages like the one below. Don’t panic! Let’s get through the rest of the steps first. I’m including my errors in this post in case they are helpful/validating for you!</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Could not build site because certain shortcodes weren't found</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>Error: Error building site: "/Users/silvia/Documents/Website/silvia/content/home/demo.md:58:1": failed to extract shortcode: template for shortcode "alert" not found</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="copy-all-academic-shortcodes-to-layouts-root-remove-later" class="level2">
-<h2 class="anchored" data-anchor-id="copy-all-academic-shortcodes-to-layouts-root-remove-later">2. Copy all Academic shortcodes to <strong>layouts/</strong> root (remove later)</h2>
+</section><section id="copy-all-academic-shortcodes-to-layouts-root-remove-later" class="level2"><h2 class="anchored" data-anchor-id="copy-all-academic-shortcodes-to-layouts-root-remove-later">2. Copy all Academic shortcodes to <strong>layouts/</strong> root (remove later)</h2>
 <blockquote class="blockquote">
 <p><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> Follow along with me at <a href="https://github.com/spcanelon/silvia/commit/f3c7d5334b4effbd850b204eb267425f6740b4af">commit f3c7d53</a></p>
 </blockquote>
@@ -403,9 +365,7 @@ Console output
 </ul>
 <p><i class="fa-solid fa-exclamation-circle" aria-label="exclamation-circle"></i> My error message:</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="an">Error:</span><span class="co"> Error building site: TOCSS: failed to transform "style.main.scss" (text/x-scss): SCSS processing failed: file "stdin", line 7, col 24: Invalid CSS after "...textFontFamily:": expected expression (e.g. 1px, bold), was "&lt;no value&gt;;"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="remove-all-assets" class="level2">
-<h2 class="anchored" data-anchor-id="remove-all-assets">3. Remove all assets</h2>
+</section><section id="remove-all-assets" class="level2"><h2 class="anchored" data-anchor-id="remove-all-assets">3. Remove all assets</h2>
 <blockquote class="blockquote">
 <p><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> Follow along with me at <a href="https://github.com/spcanelon/silvia/commit/3843c76a5da6184b2d9b547b18f96ec6810a695a">commit 3843c76</a></p>
 </blockquote>
@@ -417,22 +377,20 @@ Console output
 </ul>
 <p><i class="fa-solid fa-exclamation-circle" aria-label="exclamation-circle"></i> My error message:</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="an">Error:</span><span class="co"> Error building site: TOCSS: failed to transform "style.main.scss" (text/x-scss): SCSS processing failed: file "stdin", line 7, col 24: Invalid CSS after "...textFontFamily:": expected expression (e.g. 1px, bold), was "&lt;no value&gt;;"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="remove-all-custom-layouts" class="level2">
-<h2 class="anchored" data-anchor-id="remove-all-custom-layouts">4. Remove all custom layouts</h2>
+</section><section id="remove-all-custom-layouts" class="level2"><h2 class="anchored" data-anchor-id="remove-all-custom-layouts">4. Remove all custom layouts</h2>
 <blockquote class="blockquote">
 <p><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> Follow along with me at <a href="https://github.com/spcanelon/silvia/commit/1ad7e3d491d309e71e1b4fa0bbad1e3af6b9d322">commit 1ad7e3d</a></p>
 </blockquote>
 <p>I had a couple of partials that I deleted from the <code>layouts/</code> folder:</p>
 <ul>
-<li><strong>partials/site_footer.html</strong> which provided a custom footer for my website</li>
-<li><strong>partials/widgets/about.html</strong> which included the custom formatting for certificates in the Education section of the About page of my Academic site</li>
+<li>
+<strong>partials/site_footer.html</strong> which provided a custom footer for my website</li>
+<li>
+<strong>partials/widgets/about.html</strong> which included the custom formatting for certificates in the Education section of the About page of my Academic site</li>
 </ul>
 <p><i class="fa-solid fa-exclamation-circle" aria-label="exclamation-circle"></i> My error message:</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="an">Error:</span><span class="co"> Error building site: TOCSS: failed to transform "style.main.scss" (text/x-scss): SCSS processing failed: file "stdin", line 7, col 24: Invalid CSS after "...textFontFamily:": expected expression (e.g. 1px, bold), was "&lt;no value&gt;;"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="copy-over-apéro-example-site-config.toml-file" class="level2">
-<h2 class="anchored" data-anchor-id="copy-over-apéro-example-site-config.toml-file">5. Copy over Apéro example site <strong>config.toml</strong> file</h2>
+</section><section id="copy-over-apéro-example-site-config.toml-file" class="level2"><h2 class="anchored" data-anchor-id="copy-over-apéro-example-site-config.toml-file">5. Copy over Apéro example site <strong>config.toml</strong> file</h2>
 <blockquote class="blockquote">
 <p><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> Follow along with me at <a href="https://github.com/spcanelon/silvia/commit/db37289e768640522130f98353996de4a6e0abfc">commit db37289</a></p>
 </blockquote>
@@ -444,9 +402,7 @@ Console output
 </ul>
 <p><i class="fa-solid fa-exclamation-circle" aria-label="exclamation-circle"></i> My error message:</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="an">Error:</span><span class="co"> Error building site: failed to render pages: render of "page" failed: execute of template failed: template: _default/single.html:3:8: executing "_default/single.html" at &lt;partial "head.html" .&gt;: error calling partial: "/Users/silvia/Documents/Website/silvia/themes/hugo-apero/layouts/partials/head.html:14:53": execute of template failed: template: partials/head.html:14:53: executing "partials/head.html" at &lt;js&gt;: can't evaluate field Build in type string</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="remove-academic-config-directory" class="level2">
-<h2 class="anchored" data-anchor-id="remove-academic-config-directory">6. Remove Academic <strong>config/</strong> directory</h2>
+</section><section id="remove-academic-config-directory" class="level2"><h2 class="anchored" data-anchor-id="remove-academic-config-directory">6. Remove Academic <strong>config/</strong> directory</h2>
 <blockquote class="blockquote">
 <p><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> Follow along with me at <a href="https://github.com/spcanelon/silvia/commit/5541f38871911d5067c6c8856936d54d183b3ec9">commit 5541f38</a></p>
 </blockquote>
@@ -454,17 +410,17 @@ Console output
 <p>I learned <a href="https://github.com/hugo-apero/hugo-apero-docs/issues/78">the hard way</a> that the error below was due to not using an updated version of Hugo, which is why I included that step in the <a href="#hugo-version">Prework</a>. All this to say, I’m hoping you don’t see the error below!</p>
 <p><i class="fa-solid fa-exclamation-circle" aria-label="exclamation-circle"></i> My error message:</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="an">Error:</span><span class="co"> Error building site: failed to render pages: render of "page" failed: execute of template failed: template: _default/single.html:3:8: executing "_default/single.html" at &lt;partial "head.html" .&gt;: error calling partial: "/Users/silvia/Documents/Website/silvia/themes/hugo-apero/layouts/partials/head.html:14:53": execute of template failed: template: partials/head.html:14:53: executing "partials/head.html" at &lt;js&gt;: can't evaluate field Build in type string</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<hr>
-</section>
-<section id="migrating-the-content" class="level2">
-<h2 class="anchored" data-anchor-id="migrating-the-content">Migrating the content</h2>
+<hr></section><section id="migrating-the-content" class="level2"><h2 class="anchored" data-anchor-id="migrating-the-content">Migrating the content</h2>
 <p>Assuming you have made it this far and are able to at least serve a live site that uses the new Hugo Apéro theme, you are ready to start migrating your content! :tada:</p>
 <p>File are organized differently in Hugo Apéro and the next steps detail the high-level changes I made to get my content to fit the new structure. The goal was to have my site parallel the <a href="https://hugo-apero.netlify.app/">Hugo Apéro example site</a> and <a href="https://alison.rbind.io">Alison’s personal site</a>.</p>
-<section id="file-organization" class="level3">
-<h3 class="anchored" data-anchor-id="file-organization">File organization</h3>
+<section id="file-organization" class="level3"><h3 class="anchored" data-anchor-id="file-organization">File organization</h3>
 <p>To get an overview of how the file structure is different between the Academic and Apéro themes we’ll look at the <code>content/</code> folder of the Apéro example site, my old Academic site, and my current Apéro site. These are organized into the panelsets below.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Example site</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">My Academic site</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">My Apéro site</a></li></ul>
+<ul class="nav nav-tabs" role="tablist">
+<li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Example site</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">My Academic site</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">My Apéro site</a></li>
+</ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <!-- {{< panelset class="content directory" >}}
@@ -520,9 +476,7 @@ Console output
 </div>
 </div>
 <!-- end panel-tabset -->
-</section>
-<section id="about-page" class="level3">
-<h3 class="anchored" data-anchor-id="about-page">About page</h3>
+</section><section id="about-page" class="level3"><h3 class="anchored" data-anchor-id="about-page">About page</h3>
 <p>Resource: <a href="https://hugo-apero-docs.netlify.app/learn/about-page/">Customize your about page | Hugo Apéro</a></p>
 <p>My About page:</p>
 <ul>
@@ -533,20 +487,16 @@ Console output
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/silvia-about-page-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="The header of my About page: https://silvia.rbind.io/about/"><img src="img/silvia-about-page-1.png" class="img-fluid figure-img" alt="My About page featuring a large headline to greet visitors and a short blurb about me in the header of the site. Below this area on the left in the main area of the page is more information with a heading and some prose. To the right of the main area is the sidebar which includes a small image, a name in large font, a subheading for the name, social media icons, and a spot for an audio clip for a name pronunciation. On the top edge of the page is a navigation bar with 'About' highlighted" width="1265"></a></p>
-<figcaption class="figure-caption">The header of my About page: https://silvia.rbind.io/about/</figcaption>
-</figure>
+<figure class="figure"><p><a href="img/silvia-about-page-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="The header of my About page: https://silvia.rbind.io/about/"><img src="img/silvia-about-page-1.png" class="img-fluid figure-img" alt="My About page featuring a large headline to greet visitors and a short blurb about me in the header of the site. Below this area on the left in the main area of the page is more information with a heading and some prose. To the right of the main area is the sidebar which includes a small image, a name in large font, a subheading for the name, social media icons, and a spot for an audio clip for a name pronunciation. On the top edge of the page is a navigation bar with 'About' highlighted" width="1265"></a></p>
+<figcaption class="figure-caption">The header of my About page: https://silvia.rbind.io/about/</figcaption></figure>
 </div>
 </div>
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/silvia-about-page-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="The main section of my About page: https://silvia.rbind.io/about/"><img src="img/silvia-about-page-2.png" class="img-fluid figure-img" alt="Below the header is the main area of the page on the left with more information about me with a heading and some prose. To the right of the main area is the sidebar which includes a small image of me, my name in large font, my professional title underneath along with social media icons and a short list of my interests." width="1265"></a></p>
-<figcaption class="figure-caption">The main section of my About page: https://silvia.rbind.io/about/</figcaption>
-</figure>
+<figure class="figure"><p><a href="img/silvia-about-page-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="The main section of my About page: https://silvia.rbind.io/about/"><img src="img/silvia-about-page-2.png" class="img-fluid figure-img" alt="Below the header is the main area of the page on the left with more information about me with a heading and some prose. To the right of the main area is the sidebar which includes a small image of me, my name in large font, my professional title underneath along with social media icons and a short list of my interests." width="1265"></a></p>
+<figcaption class="figure-caption">The main section of my About page: https://silvia.rbind.io/about/</figcaption></figure>
 </div>
 </div>
 </div>
@@ -558,14 +508,12 @@ Console output
 <col style="width: 43%">
 <col style="width: 31%">
 </colgroup>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th>Step</th>
 <th>Content to copy</th>
 <th>From</th>
 <th>To</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td>1</td>
@@ -604,19 +552,14 @@ Console output
 <td>content/about/sidebar/avatar.png</td>
 </tr>
 </tbody>
-</table>
-</section>
-<section id="homepage" class="level3">
-<h3 class="anchored" data-anchor-id="homepage">Homepage</h3>
+</table></section><section id="homepage" class="level3"><h3 class="anchored" data-anchor-id="homepage">Homepage</h3>
 <p>Resource: <a href="https://hugo-apero-docs.netlify.app/blog/homepage/">Customize your homepage | Hugo Apéro</a></p>
 <p>My homepage: <a href="https://github.com/spcanelon/silvia/blob/bef8a7c9fd7b529e7cb58c3c92dafe59aa8d2259/content/_index.md">content/_index.md</a></p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/silvia-home-page.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="My Homepage: https://silvia.rbind.io"><img src="img/silvia-home-page.png" class="img-fluid figure-img" alt="The homepage of my site which shows my name in large font on the left, my title, social media icons, a short blurb about me, and a link that says 'Read More' that can be clicked to enter the site. On the right side is a photo of one of my favorite lakes." width="1280"></a></p>
-<figcaption class="figure-caption">My Homepage: https://silvia.rbind.io</figcaption>
-</figure>
+<figure class="figure"><p><a href="img/silvia-home-page.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="My Homepage: https://silvia.rbind.io"><img src="img/silvia-home-page.png" class="img-fluid figure-img" alt="The homepage of my site which shows my name in large font on the left, my title, social media icons, a short blurb about me, and a link that says 'Read More' that can be clicked to enter the site. On the right side is a photo of one of my favorite lakes." width="1280"></a></p>
+<figcaption class="figure-caption">My Homepage: https://silvia.rbind.io</figcaption></figure>
 </div>
 </div>
 </div>
@@ -624,18 +567,13 @@ Console output
 <li><p>Copy <strong>_ index.md</strong> from <code>themes/hugo-apero/content/</code> to <code>content/</code></p></li>
 <li><p>Save an image for your homepage in the <code>static/img/</code> folder</p></li>
 <li><p>Specify your homepage image in <strong>_ index.md</strong></p></li>
-</ol>
-</section>
-<section id="blog" class="level3">
-<h3 class="anchored" data-anchor-id="blog">Blog</h3>
+</ol></section><section id="blog" class="level3"><h3 class="anchored" data-anchor-id="blog">Blog</h3>
 <p>My blog listing: <a href="https://github.com/spcanelon/silvia/blob/bef8a7c9fd7b529e7cb58c3c92dafe59aa8d2259/content/blog/_index.md">content/blog/_index.md</a></p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/silvia-blog-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="My Blog listing: https://silvia.rbind.io/blog"><img src="img/silvia-blog-list.png" class="img-fluid figure-img" alt="The Blog listing page for my site with a sidebar layout and thumbnails enabled. There is a sidebar on the left side with some information about my blog including a blog name 'Meeting People Where They R'. It also includes my name as the blog author, a link to subscribe via RSS, and a decorative image of a small potted cactus plant sitting on top of a stack of books. On the right side in the main area of the page there are two blog posts featured, including this one. Each has a title, a summary, the date, and a decorative image as the thumbnail." width="1265"></a></p>
-<figcaption class="figure-caption">My Blog listing: https://silvia.rbind.io/blog</figcaption>
-</figure>
+<figure class="figure"><p><a href="img/silvia-blog-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="My Blog listing: https://silvia.rbind.io/blog"><img src="img/silvia-blog-list.png" class="img-fluid figure-img" alt="The Blog listing page for my site with a sidebar layout and thumbnails enabled. There is a sidebar on the left side with some information about my blog including a blog name 'Meeting People Where They R'. It also includes my name as the blog author, a link to subscribe via RSS, and a decorative image of a small potted cactus plant sitting on top of a stack of books. On the right side in the main area of the page there are two blog posts featured, including this one. Each has a title, a summary, the date, and a decorative image as the thumbnail." width="1265"></a></p>
+<figcaption class="figure-caption">My Blog listing: https://silvia.rbind.io/blog</figcaption></figure>
 </div>
 </div>
 </div>
@@ -649,18 +587,13 @@ Console output
 <ul>
 <li><p>Make sure <code>text_link_url: /blog/</code></p></li>
 <li><p>The <code>author:</code> field will populate the by-line in each blog post unless another author is indicated in the YAML of the blog post.</p></li>
-</ul>
-</section>
-<section id="publications" class="level3">
-<h3 class="anchored" data-anchor-id="publications">Publications</h3>
+</ul></section><section id="publications" class="level3"><h3 class="anchored" data-anchor-id="publications">Publications</h3>
 <p>My publication listing: <a href="https://github.com/spcanelon/silvia/blob/bef8a7c9fd7b529e7cb58c3c92dafe59aa8d2259/content/publication/_index.md">content/publication/_index.md</a></p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/silvia-publication-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="My Publication listing: https://silvia.rbind.io/publication"><img src="img/silvia-publication-list.png" class="img-fluid figure-img" alt="The Publication listing page for my site with a single layout which doesn't have a sidebar. The top of the page says 'Publications' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There is primarily one publication featured with a title, a summary, the authors, and the date. This listing visually separates publications in the list with a horizontal bar" width="1265"></a></p>
-<figcaption class="figure-caption">My Publication listing: https://silvia.rbind.io/publication</figcaption>
-</figure>
+<figure class="figure"><p><a href="img/silvia-publication-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="My Publication listing: https://silvia.rbind.io/publication"><img src="img/silvia-publication-list.png" class="img-fluid figure-img" alt="The Publication listing page for my site with a single layout which doesn't have a sidebar. The top of the page says 'Publications' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There is primarily one publication featured with a title, a summary, the authors, and the date. This listing visually separates publications in the list with a horizontal bar" width="1265"></a></p>
+<figcaption class="figure-caption">My Publication listing: https://silvia.rbind.io/publication</figcaption></figure>
 </div>
 </div>
 </div>
@@ -676,30 +609,25 @@ Console output
 <ul>
 <li>The Apéro theme doesn’t have a built-in “abstract” field so I copied and pasted the content in this field from the YAML of each publication page into the area below the YAML.</li>
 <li>If your publications have multiple authors, they can be included as a string list in the <code>author:</code> field of the YAML</li>
-</ul>
-</section>
-<section id="talks" class="level3">
-<h3 class="anchored" data-anchor-id="talks">Talks</h3>
+</ul></section><section id="talks" class="level3"><h3 class="anchored" data-anchor-id="talks">Talks</h3>
 <p>My talk listing: <a href="https://github.com/spcanelon/silvia/blob/bef8a7c9fd7b529e7cb58c3c92dafe59aa8d2259/content/talk/_index.md">content/talk/_index.md</a></p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/silvia-talk-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="My Talk listing: https://silvia.rbind.io/talk"><img src="img/silvia-talk-list.png" class="img-fluid figure-img" alt="The Talk listing page for my site with a single layout which doesn't have a sidebar and features decorative thumbnail images on the left. The top of the page says 'Talks' and below is a short description of what can be found on the page. This listing visually separates talks in the list by year with a horizontal bar." width="1265"></a></p>
-<figcaption class="figure-caption">My Talk listing: https://silvia.rbind.io/talk</figcaption>
-</figure>
+<figure class="figure"><p><a href="img/silvia-talk-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="My Talk listing: https://silvia.rbind.io/talk"><img src="img/silvia-talk-list.png" class="img-fluid figure-img" alt="The Talk listing page for my site with a single layout which doesn't have a sidebar and features decorative thumbnail images on the left. The top of the page says 'Talks' and below is a short description of what can be found on the page. This listing visually separates talks in the list by year with a horizontal bar." width="1265"></a></p>
+<figcaption class="figure-caption">My Talk listing: https://silvia.rbind.io/talk</figcaption></figure>
 </div>
 </div>
 </div>
 <p>Rename <strong>content/talk/_ index.md</strong> to <strong>_ index-old.md</strong> and copy over <strong>_ index.md</strong> from <code>themes/hugo-apero/exampleSite/content/talk/</code></p>
 <p>Edit <strong>content/talk/_ index.md</strong> to suit your preferences</p>
-</section>
-<section id="rmd-.rmarkdown" class="level3">
-<h3 class="anchored" data-anchor-id="rmd-.rmarkdown">.Rmd → .Rmarkdown</h3>
+</section><section id="rmd-.rmarkdown" class="level3"><h3 class="anchored" data-anchor-id="rmd-.rmarkdown">.Rmd → .Rmarkdown</h3>
 <p>You can create content for your blogdown site from <strong>.md</strong>, <strong>.Rmd</strong>, and <strong>.Rmarkdown</strong> files, anytime and anywhere. However, there are some limitations:</p>
 <ul>
-<li><strong>.md</strong> is great if your file doesn’t contain any R code</li>
-<li><strong>.Rmd</strong> files generate <strong>.html</strong> files while <strong>.Rmarkdown</strong> files generate <strong>.markdown</strong> files. Both can run R code, but only <strong>.markdown</strong> files generated from <strong>.Rmarkdown</strong> benefit from some of the features available from Hugo, like the syntax highlighting built into Apéro.</li>
+<li>
+<strong>.md</strong> is great if your file doesn’t contain any R code</li>
+<li>
+<strong>.Rmd</strong> files generate <strong>.html</strong> files while <strong>.Rmarkdown</strong> files generate <strong>.markdown</strong> files. Both can run R code, but only <strong>.markdown</strong> files generated from <strong>.Rmarkdown</strong> benefit from some of the features available from Hugo, like the syntax highlighting built into Apéro.</li>
 </ul>
 <p>If you were writing R tutorials/posts/etc. in <strong>.Rmd</strong> (like me), you will notice any code chunks you were displaying will not be formatted with proper syntax highlighting :cry: To remedy this, you will have to:</p>
 <ol type="1">
@@ -709,21 +637,18 @@ Console output
 </ol>
 <p><i class="fas fa-exclamation-triangle pr2"></i> Rebuilding your R Markdown pages may not be a good idea if they contain code that might break, so please proceed with caution!</p>
 <p>If you made it this far, <strong>congratulations</strong>! You have a brand new site! :partying_face:</p>
-</section>
-</section>
-<section id="final-touches" class="level2">
-<h2 class="anchored" data-anchor-id="final-touches">Final touches</h2>
-<section id="contact-form" class="level3">
-<h3 class="anchored" data-anchor-id="contact-form">Contact form</h3>
+</section></section><section id="final-touches" class="level2"><h2 class="anchored" data-anchor-id="final-touches">Final touches</h2>
+<section id="contact-form" class="level3"><h3 class="anchored" data-anchor-id="contact-form">Contact form</h3>
 <p>Resource: <a href="https://hugo-apero-docs.netlify.app/learn/built-in-contact-form/">Built-in Contact Form | Hugo Apéro</a></p>
 <p>If you’d like to use Apéro’s built-in contact form powered by Formspree, copy the <code>themes/hugo-apero/exampleSite/content/form/</code> folder into <code>content/</code> and edit <strong>contact.md</strong>.</p>
-</section>
-<section id="tidying-up-your-directory" class="level3">
-<h3 class="anchored" data-anchor-id="tidying-up-your-directory">Tidying up your directory</h3>
+</section><section id="tidying-up-your-directory" class="level3"><h3 class="anchored" data-anchor-id="tidying-up-your-directory">Tidying up your directory</h3>
 <p>Now you can delete all of the files and folders you don’t need anymore!</p>
 <p>I’m including the files and folders I deleted as a list and as a directory tree. These are organized in the panelset below.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">List of items</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Directory tree</a></li></ul>
+<ul class="nav nav-tabs" role="tablist">
+<li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">List of items</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Directory tree</a></li>
+</ul>
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
 <!-- {{< panelset class="files and folders to delete" >}}
@@ -736,8 +661,10 @@ Console output
 <li>The assets/images folder</li>
 <li>The static/img/headers, static/publications, and static/rmarkdown-libs folders</li>
 <li>All of the <strong>index.html</strong> files in the blog, publication, and talks folders</li>
-<li>The old config file, that I had renamed <strong>config_old.toml</strong></li>
-<li>The old index files that I had renamed <strong>_ index-old.md</strong></li>
+<li>The old config file, that I had renamed <strong>config_old.toml</strong>
+</li>
+<li>The old index files that I had renamed <strong>_ index-old.md</strong>
+</li>
 <li>The partials in layouts/shortcodes</li>
 <li>And finally the themes/hugo-academic folder! 🔥</li>
 </ul>
@@ -748,8 +675,10 @@ Console output
 <p>I deleted the following files:</p>
 <ul>
 <li>All of the <strong>index.html</strong> files in the blog, publication, and talks folders</li>
-<li>The old config file, that I had renamed <strong>config_old.toml</strong></li>
-<li>The old index files that I had renamed <strong>_ index-old.md</strong></li>
+<li>The old config file, that I had renamed <strong>config_old.toml</strong>
+</li>
+<li>The old index files that I had renamed <strong>_ index-old.md</strong>
+</li>
 </ul>
 <p>And I deleted the folders indicated in this directory tree:</p>
 <p><i class="fa-solid fa-route" aria-label="route"></i> Location: <code>silvia/</code></p>
@@ -774,51 +703,48 @@ Console output
 </div>
 </div>
 <!-- end tabset-panel -->
-</section>
-</section>
-<section id="customizing-your-site" class="level2">
-<h2 class="anchored" data-anchor-id="customizing-your-site">Customizing your site</h2>
+</section></section><section id="customizing-your-site" class="level2"><h2 class="anchored" data-anchor-id="customizing-your-site">Customizing your site</h2>
 <p>Hopefully all of that wasn’t terrible, and if it was, please know I’m rooting for you. You’re doing great! :raised_hands:</p>
 <p>Now you get to enjoy the fun part which is customizing your site! The theme documentation goes through this in detail:</p>
 <ul>
 <li><a href="https://hugo-apero-docs.netlify.app/learn/social/">Set up your social | Hugo Apéro</a></li>
 <li><a href="https://hugo-apero-docs.netlify.app/learn/fonts/">Style your site typography | Hugo Apéro</a></li>
 <li><a href="https://hugo-apero-docs.netlify.app/learn/color-themes/">Style your site colors | Hugo Apéro</a></li>
-</ul>
-</section>
-<section id="deploying-your-new-site" class="level2">
-<h2 class="anchored" data-anchor-id="deploying-your-new-site">Deploying your new site</h2>
+</ul></section><section id="deploying-your-new-site" class="level2"><h2 class="anchored" data-anchor-id="deploying-your-new-site">Deploying your new site</h2>
 <p>Once you’re happy with your new Apéro site, the last step is to merge your <code>apero</code> branch with the primary branch of your website repository. But first, a few steps:</p>
 <ol type="1">
 <li><p><strong>Optional:</strong> Create a branch of your primary branch and call it <code>hugo-academic</code> so that you have a snapshot of your Academic files right before the merge. Since we set up Netlify to deploy all of our branches, there will now be a live link for this new branch that you can visit whenever you feel like time traveling back to your old site. For me this link is https://hugo-academic–silvia.netlify.app/</p></li>
-<li><p>Switch back to your <code>apero</code> branch and update the <code>baseURL</code> field in <strong>config.toml</strong> to your regular website path. In my case:</p>
+<li>
+<p>Switch back to your <code>apero</code> branch and update the <code>baseURL</code> field in <strong>config.toml</strong> to your regular website path. In my case:</p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="dt">baseURL</span> <span class="op">=</span> <span class="st">"https://silvia.rbind.io/"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Then commit and push this change to your <code>apero</code> branch.</p></li>
+<p>Then commit and push this change to your <code>apero</code> branch.</p>
+</li>
 <li><p>Merge your <code>apero</code> branch with your primary branch. I usually use git commands in a combination of the RStudio terminal and the Git pane, but for this big merge I felt more comfortable doing it on github.com! :sweat_smile: Do what feels most comfortable for you.</p></li>
-<li><p>Resolve any merge conflicts (I had a few!) in the git tool of your choosing. These are the git commands GitHub recommended:</p>
+<li>
+<p>Resolve any merge conflicts (I had a few!) in the git tool of your choosing. These are the git commands GitHub recommended:</p>
 <div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> fetch origin       <span class="co"># makes sure local files were recent</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout apero     <span class="co"># moves you to your `apero` branch</span></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge main         <span class="co"># attempts a merge with your `main` branch</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>When you’re finished, commit your changes and push. Then follow these next steps, also recommended by GitHub:</p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout main       <span class="co"># moves you to your `main` branch</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge <span class="at">--no-ff</span> apero <span class="co"># creates a new commit for the merge</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This step will sort of replace all of the files that both themes had in common with the <code>apero</code> version (e.g.&nbsp;<strong>config.toml</strong>, <strong>netlify.toml</strong>, <strong>content/publication</strong>), and leave the old Academic files alone. So you will have to delete these extra Academic files (<a href="#tidying-up-your-directory">again</a>!). I’m not sure how to avoid this – maybe it’s not an issue when you don’t have merge conflicts? I don’t know :thinking:</p></li>
-<li><p>Tidy up your directory (again?)</p>
+<p>This step will sort of replace all of the files that both themes had in common with the <code>apero</code> version (e.g.&nbsp;<strong>config.toml</strong>, <strong>netlify.toml</strong>, <strong>content/publication</strong>), and leave the old Academic files alone. So you will have to delete these extra Academic files (<a href="#tidying-up-your-directory">again</a>!). I’m not sure how to avoid this – maybe it’s not an issue when you don’t have merge conflicts? I don’t know :thinking:</p>
+</li>
+<li>
+<p>Tidy up your directory (again?)</p>
 <p>Go through <a href="#tidying-up-your-directory">the steps above</a> to clean out any residual Academic files from your directory. Make sure to check your <code>content/</code> folders for any example files from Academic that might still be hanging around and delete them.</p>
-<p>Then run <code>blogdown::serve_site()</code> to build your new Apéro site locally. Go through the site and make sure everything looks the way it should and that links are generally pointing to the right places.</p>
-<p>When you’re satisfied, commit the changes to your primary branch!<br>There may be <em>a lot</em> of files that were deleted and added during the switch to Apéro and, while not generally recommended, I used the <code>git add .</code> command to stage all of the changes at once, commited the changes, and then pushed. I did this after thoroughly looking through the list of changed files so I knew what was happening.</p></li>
+<p>Then run <code><a href="https://pkgs.rstudio.com/blogdown/reference/serve_site.html">blogdown::serve_site()</a></code> to build your new Apéro site locally. Go through the site and make sure everything looks the way it should and that links are generally pointing to the right places.</p>
+<p>When you’re satisfied, commit the changes to your primary branch!<br>There may be <em>a lot</em> of files that were deleted and added during the switch to Apéro and, while not generally recommended, I used the <code>git add .</code> command to stage all of the changes at once, commited the changes, and then pushed. I did this after thoroughly looking through the list of changed files so I knew what was happening.</p>
+</li>
 <li><p>Wait a couple of minutes for the changes to get pushed to your primary branch (e.g.&nbsp;<code>main</code>) and then wait patiently for Netlify to build your site after the merge.</p></li>
 <li><p><i class="fa-solid fa-glass-cheers" aria-label="glass-cheers"></i> Celebrate and share your brand new site! 🎉 🥳 🍾<br>If you share on Twitter, use the #HugoApero hashtag so the <a href="https://twitter.com/apreshill/status/1397052533588185092">Hugo Apéro squad</a> can clap for you!</p></li>
 </ol>
 
 
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2021" class="csl-entry quarto-appendix-citeas" role="listitem">
+</section><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2021" class="csl-entry quarto-appendix-citeas" role="listitem">
 Canelón, Silvia. 2021. <span>“Hello Hugo Apéro: Converting a Blogdown
 Site from Hugo Academic.”</span> June 1, 2021. <a href="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero">https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero</a>.
-</div></div></section></div></main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</div></div></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1050,17 +976,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<script src="https://utteranc.es/client.js" repo="spcanelon/silvia" issue-term="title" theme="boxy-light" crossorigin="anonymous" async="">
+</script><script src="https://utteranc.es/client.js" repo="spcanelon/silvia" issue-term="title" theme="boxy-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">© 2023 Silvia Canelón ∙ Made with <a href="https://quarto.org">Quarto</a></div>   
     <div class="nav-footer-center"><a class="link-dark me-1" href="../../accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener"><i class="fa-solid fa-universal-access" aria-label="universal-access"></i></a> <a class="link-dark me-1" href="https://hachyderm.io/@spcanelon" title="mastodon" target="_blank" rel="noopener"><i class="fa-brands fa-mastodon" aria-label="mastodon"></i></a> <a class="link-dark me-1" href="https://github.com/spcanelon" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://orcid.org/0000-0003-1709-1394" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid" style="color:black"></i></a> <a class="link-dark me-1" href="https://scholar.google.com/citations?user=GAzkvpcAAAAJ&amp;hl=en&amp;oi=ao" title="Google Scholar" target="_blank" rel="noopener"><i class="ai  ai-google-scholar" style="color:black"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/spcanelon" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
-    <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="../../accessibility.html">Accessibility</a>
   </li>  
     <li class="nav-item">
@@ -1076,11 +1000,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
 </ul>
-    </div>
+</div>
   </div>
-</footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","loop":true,"descPosition":"bottom"});</script>
-
+</footer><script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","loop":true,"descPosition":"bottom"});</script>
 
 
 </body></html>

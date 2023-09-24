@@ -32,6 +32,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../assets/silvia/img/logo_rounded.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -121,15 +122,15 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-<div class="quarto-title column-body page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);">
+<header id="title-block-header" class="quarto-title-block default page-columns">
+<div id="title-block-header-title" class="quarto-title page-columns page-full page-layout-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);">
 <h1 class="title">useR!2021 Cost Conversion Tool</h1>
 <p class="subtitle lead">A <a href="https://spcanelon.github.io/useR2021-cost-conversion-tool/">cost-conversion tool</a> created for the <a href="user2021.r-project.org/">useR!2021 Conference</a> (July 5-9, 2021) that leverages Gross Domestic Product and Purchasing Power Parity to adapt sponsorship and registration fees according to the country of residence.</p>
-  <div class="quarto-categories">
-    <div class="quarto-category">useR</div>
-    <div class="quarto-category">tidyverse</div>
-    <div class="quarto-category">R</div>
-    </div>
+    <div class="quarto-categories">
+        <div class="quarto-category">useR</div>
+        <div class="quarto-category">tidyverse</div>
+        <div class="quarto-category">R</div>
+      </div>
   </div>
 
 
@@ -168,8 +169,12 @@ ul.task-list li input[type="checkbox"] {
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
 <!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
-<!-- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title"> -->
+<!-- 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title"> 
+-->
+<!-- <header id="title-block-header" class="quarto-title-block default page-columns"> -->
+<!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> -->
 
 
 <p><a href="https://user2021.r-project.org"><img src="https://user2021.r-project.org/img/artwork/user-logo-color.png" align="right" height="200" alt="The useR! logo which is adapted from the R project logo."></a>I created a cost conversion tool used for the useR!2021 Conference to adapt conference and sponsorship fees according to the country of residence. The cost conversion was done according to Gross Domestic Product (GDP) adjusted by Purchasing Power Parity (PPP) provided by the World Bank. We wanted conference attendees and sponsors from different parts of the world to be able to participate in useR! and believed that this is a fair approach. It reflects the reality that attendees and sponsors from “High income” countries have a different purchasing power than those from “Low income” countries. The income categories and cost conversions are listed in a <a href="https://user2021.r-project.org/participation/registration-details/">data table created in R</a> that attendees can use to search for their country and attendee status if applicable (i.e.&nbsp;Industry, Academia, Student). They can use a built-in search bar, or filter according to a specific column.</p>
@@ -178,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-</main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -32,6 +32,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../assets/silvia/img/logo_rounded.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -124,17 +125,17 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-<div class="quarto-title column-body page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);">
+<header id="title-block-header" class="quarto-title-block default page-columns">
+<div id="title-block-header-title" class="quarto-title page-columns page-full page-layout-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);">
 <h1 class="title">TidyTuesdayAltText</h1>
 <p class="subtitle lead">An R package with the goal of providing insight into the alternative (alt) text accompanying the data visualizations shared on Twitter as part of the <a href="https://github.com/rfordatascience/tidytuesday#a-weekly-social-data-project-in-r">TidyTuesday social project</a>.</p>
-  <div class="quarto-categories">
-    <div class="quarto-category">R</div>
-    <div class="quarto-category">TidyTuesday</div>
-    <div class="quarto-category">TidyTuesdayAltText</div>
-    <div class="quarto-category">accessibility</div>
-    <div class="quarto-category">Package</div>
-    </div>
+    <div class="quarto-categories">
+        <div class="quarto-category">R</div>
+        <div class="quarto-category">TidyTuesday</div>
+        <div class="quarto-category">TidyTuesdayAltText</div>
+        <div class="quarto-category">accessibility</div>
+        <div class="quarto-category">Package</div>
+      </div>
   </div>
 
 
@@ -173,8 +174,12 @@ ul.task-list li input[type="checkbox"] {
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
 <!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
-<!-- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title"> -->
+<!-- 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title"> 
+-->
+<!-- <header id="title-block-header" class="quarto-title-block default page-columns"> -->
+<!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> -->
 
 
 <section id="about-the-data" class="level2">
@@ -192,7 +197,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://raw.githubusercontent.com/spcanelon/csvConf2021/master/slides/img/webInspection.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure 1: Example of web inspection being used to identify the CSS selector utilized for alt-text web scraping"><img src="https://raw.githubusercontent.com/spcanelon/csvConf2021/master/slides/img/webInspection.png" class="img-fluid figure-img" alt="Web inspection tool being used to identify the CSS selector corresponding to the primary image of one of Hao Ye's (@Hao_and_Y) tweets with alt text"></a></p>
+<p><a href="https://raw.githubusercontent.com/spcanelon/csvConf2021/master/slides/img/webInspection.png" class="lightbox" title="Figure 1: Example of web inspection being used to identify the CSS selector utilized for alt-text web scraping" data-gallery="quarto-lightbox-gallery-1"><img src="https://raw.githubusercontent.com/spcanelon/csvConf2021/master/slides/img/webInspection.png" class="img-fluid figure-img" alt="Web inspection tool being used to identify the CSS selector corresponding to the primary image of one of Hao Ye's (@Hao_and_Y) tweets with alt text"></a></p>
 <figcaption class="figure-caption">Figure 1: Example of web inspection being used to identify the CSS selector utilized for alt-text web scraping</figcaption>
 </figure>
 </div>
@@ -204,13 +209,13 @@ ul.task-list li input[type="checkbox"] {
 <p>I use the data available in the TidyTuesday repository to populate some searchable TidyTuesday databases at <a href="https://tiny.cc/notion-dataviz">tiny.cc/notion-dataviz</a> with data visualizations tagged by the dataset of the week, hashtags, mentions, etc.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="tt-db-notion.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure 2: Screenshot of the 2021 TidyTuesday database on Notion, taken on June 1, 2021"><img src="tt-db-notion.png" class="img-fluid figure-img" alt="The Notion 2021 TidyTuesday database showing a gallery of the most recent data visualizations in the collection, organized in a grid,"></a></p>
+<p><a href="tt-db-notion.png" class="lightbox" title="Figure 2: Screenshot of the 2021 TidyTuesday database on Notion, taken on June 1, 2021" data-gallery="quarto-lightbox-gallery-2"><img src="tt-db-notion.png" class="img-fluid figure-img" alt="The Notion 2021 TidyTuesday database showing a gallery of the most recent data visualizations in the collection, organized in a grid,"></a></p>
 <figcaption class="figure-caption">Figure 2: Screenshot of the 2021 TidyTuesday database on Notion, taken on June 1, 2021</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="tweet-notion.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure 3: Screenshot of the tweet sharing the TidyTuesday database on Notion"><img src="tweet-notion.png" class="img-fluid figure-img" alt="Thanks to historical twitter data collected by @thomas_mock, the #TidyTuesday database now has tweets dating back to 2018! 6100+ searchable tweets w/ #dataviz creations from 1400+ participants 🤩 Check it out! http://tiny.cc/notion-dataviz" width="500"></a></p>
+<p><a href="tweet-notion.png" class="lightbox" title="Figure 3: Screenshot of the tweet sharing the TidyTuesday database on Notion" data-gallery="quarto-lightbox-gallery-3"><img src="tweet-notion.png" class="img-fluid figure-img" alt="Thanks to historical twitter data collected by @thomas_mock, the #TidyTuesday database now has tweets dating back to 2018! 6100+ searchable tweets w/ #dataviz creations from 1400+ participants 🤩 Check it out! http://tiny.cc/notion-dataviz" width="500"></a></p>
 <figcaption class="figure-caption">Figure 3: Screenshot of the tweet sharing the TidyTuesday database on Notion</figcaption>
 </figure>
 </div>
@@ -219,7 +224,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 
 
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
 <li id="fn1"><p><a href="https://developer.twitter.com/en/developer-terms/policy">Developer Policy – Twitter Developers | Twitter Developer</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
@@ -488,7 +493,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"loop":true,"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","selector":".lightbox"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":true,"selector":".lightbox","openEffect":"zoom"});</script>
 
 
 

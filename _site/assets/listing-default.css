@@ -1,24 +1,23 @@
-/* title and subtitle */
-#title-block-header {
-  margin: 2em 0 4em 0;
+/* title */
+
+/* remove styling from title block partial */
+#title-block-header, #title-block-header-title {
+  all: unset;
+  background-image: none !important;
 }
 
-/* title */
-.quarto-title {
-  font-size: 1.2em;
-  padding-bottom: 1em;
-  color: inherit;
-  box-shadow: none !important;
-  background-image: none !important;
+/* page title  */
+#title-block-header.quarto-title-block.default .quarto-title .title {
+  font-size: 2.5em;
   text-align: center;
+  margin: 0 0 -0.5em 0;
 }
 
 /* text below page title */
 .description p {
-  /* max-width: 40em; */
   text-align: center; 
-  justify-self: center;
-  margin: 0 1em 0 1em;
+  margin: 0 1em 10em 1em;
+  padding: 0 0 5em 0;
 }
 
 .description a {
@@ -29,7 +28,14 @@
   text-decoration: none !important;
 }
 
-/* remove extra margin on right side */
-.quarto-listing-container-default {
-  margin-right: 0em;
+/* listing cards  */
+.card {
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-img {
+    border-radius: 8px 8px 0px 0px;
 }

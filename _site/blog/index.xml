@@ -8,8 +8,8 @@
 <title>Silvia Canelón</title>
 <link>https://silviacanelon.com/blog/index.html</link>
 <atom:link href="https://silviacanelon.com/blog/index.xml" rel="self" type="application/rss+xml"/>
-<description>This is my blog where I practice sharing my curiosity about R.
-It includes notes and tutorials for my future self and hopefully also for you.
+<description>This is my blog where I practice sharing my curiosity about R.&lt;br&gt;
+It includes notes and tutorials for my future self and hopefully also for you.&lt;br&gt;
 [Subscribe via RSS](/index.xml)
 </description>
 <generator>quarto-1.3.450</generator>
@@ -21,8 +21,12 @@ It includes notes and tutorials for my future self and hopefully also for you.
   <description><![CDATA[ 
 
 <!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
-<!-- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title"> -->
+<!-- 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title"> 
+-->
+<!-- <header id="title-block-header" class="quarto-title-block default page-columns"> -->
+<!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> -->
 
 
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -60,7 +64,7 @@ width: 100%;
 
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2023" class="csl-entry quarto-appendix-citeas">
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2023" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2023. <span>“Philly Center City District Sips 2023: An
 Interactive Map.”</span> June 5, 2023. <a href="https://silviacanelon.com/blog/2023-06-05-ccd-sips">https://silviacanelon.com/blog/2023-06-05-ccd-sips</a>.
 </div></div></section></div> ]]></description>
@@ -82,8 +86,12 @@ Interactive Map.”</span> June 5, 2023. <a href="https://silviacanelon.com/blog
   <description><![CDATA[ 
 
 <!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
-<!-- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title"> -->
+<!-- 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title"> 
+-->
+<!-- <header id="title-block-header" class="quarto-title-block default page-columns"> -->
+<!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> -->
 
 
 <script src="index_files/libs/clipboard-2.0.6/clipboard.min.js"></script>
@@ -2068,7 +2076,7 @@ font-style: inherit;">true</span></span></code></pre></div>
 </section>
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2022" class="csl-entry quarto-appendix-citeas">
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2022" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2022. <span>“Philly Center City District Sips 2022: An
 Interactive Map.”</span> May 31, 2022. <a href="https://silviacanelon.com/blog/2022-05-31-ccd-sips">https://silviacanelon.com/blog/2022-05-31-ccd-sips</a>.
 </div></div></section></div> ]]></description>
@@ -2091,8 +2099,12 @@ Interactive Map.”</span> May 31, 2022. <a href="https://silviacanelon.com/blog
   <description><![CDATA[ 
 
 <!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
-<!-- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title"> -->
+<!-- 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title"> 
+-->
+<!-- <header id="title-block-header" class="quarto-title-block default page-columns"> -->
+<!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> -->
 
 
 <style type="text/css">
@@ -2178,7 +2190,7 @@ Interactive Map.”</span> May 31, 2022. <a href="https://silviacanelon.com/blog
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2022" class="csl-entry quarto-appendix-citeas">
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2022" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2022. <span>“Hello Umami: Deploying a Privacy-Friendly
 Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https://silviacanelon.com/blog/2022-01-18-hello-umami">https://silviacanelon.com/blog/2022-01-18-hello-umami</a>.
 </div></div></section></div> ]]></description>
@@ -2195,14 +2207,10 @@ Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https:/
   <title>Resources for Data Viz Accessibility</title>
   <dc:creator>Silvia Canelón</dc:creator>
   <link>https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/index.html</link>
-  <description><![CDATA[ 
-
-<!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
-<!-- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title"> -->
-
-
-<div class="cell">
+  <description><![CDATA[ <!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html --><!-- 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title"> 
+--><!-- <header id="title-block-header" class="quarto-title-block default page-columns"> --><!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> --><div class="cell">
 <style type="text/css">
 /*.main {
   display: grid | inline-grid;
@@ -2240,259 +2248,351 @@ Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https:/
 </div>
 <p><strong>Updated on 2021-11-19</strong> to include a link to a series of educational blog posts written by Mara Averick that cover {highcharter} and the accessibility module in detail. Thank you Mara!</p>
 <hr>
-<section id="general-resources" class="level2">
-<h2 class="anchored" data-anchor-id="general-resources">General resources</h2>
+<section id="general-resources" class="level2"><h2 class="anchored" data-anchor-id="general-resources">General resources</h2>
 <ul>
 <li><p><strong>Note:</strong> There is an extensive list of data viz accessibility resources at https://github.com/dataviza11y/resources/blob/main/README.md</p></li>
 <li><p>Article by Doug Schepers that provides great background on data viz accessibility, explains how data visualization itself is assistive technology, and offers considerations for a variety of readers: <a href="https://medium.com/nightingale/accessibility-is-at-the-heart-of-data-visualization-64a38d6c505b">Why Accessibility Is at the Heart of Data Visualization</a></p></li>
 <li><p>The <a href="https://chartability.fizz.studio/">Chartability methodology</a> helps data viz practitioners audit their data viz, and it’s language/tool-agnostic. Chartability was created by Frank Elavsky with input from the broader community and is the most thorough set of standards I’ve come across.</p></li>
-<li><p>Øystein Moseng provides some basic practices to consider in the post <a href="https://www.highcharts.com/blog/tutorials/10-guidelines-for-dataviz-accessibility/">10 Guidelines for DataViz Accessibility</a>. Among those included are these two which I don’t see covered as often:</p>
+<li>
+<p>Øystein Moseng provides some basic practices to consider in the post <a href="https://www.highcharts.com/blog/tutorials/10-guidelines-for-dataviz-accessibility/">10 Guidelines for DataViz Accessibility</a>. Among those included are these two which I don’t see covered as often:</p>
 <ul>
 <li><p>Do not rely on color alone to convey information. I’ve also heard this referred to as “color independence” and in some cases as “dual-encoding” of information</p></li>
-<li><p>Prefer simple, familiar visualizations over complex novelties.</p>
+<li>
+<p>Prefer simple, familiar visualizations over complex novelties.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/guidelines-oystein-moseng.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Pie chart from Øystein’s post using color and (optional) patterns to encode information"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/guidelines-oystein-moseng.png" class="img-fluid figure-img" alt="The pie chart using color and pattern to differentiate between slices. This screenshot also demos an interactive chart element in action: hovering over one pie slice enlarges the slice, reveals more information about the selected slice, and dims the non-selected slices."></a></p>
-<figcaption class="figure-caption">Pie chart from Øystein’s post using color and (optional) patterns to encode information</figcaption>
-</figure>
-</div></li>
-</ul></li>
+<figure class="figure"><p><a href="img/guidelines-oystein-moseng.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Pie chart from Øystein’s post using color and (optional) patterns to encode information"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/guidelines-oystein-moseng.png" class="img-fluid figure-img" alt="The pie chart using color and pattern to differentiate between slices. This screenshot also demos an interactive chart element in action: hovering over one pie slice enlarges the slice, reveals more information about the selected slice, and dims the non-selected slices."></a></p>
+<figcaption class="figure-caption">Pie chart from Øystein’s post using color and (optional) patterns to encode information</figcaption></figure>
+</div>
+</li>
+</ul>
+</li>
 <li><p>Talk at the Data Visualization Society’s Outlier conference earlier this year, by Frank Elavsky, Larene Le Gassick, and Sarah Fossheim: <a href="https://www.youtube.com/watch?v=SWB-KLXN-Ok">Are your visualizations excluding people?</a></p></li>
-<li><p>Guidelines by Amy Cesal on how to write alt text for data visualizations: <a href="https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81">Writing Alt Text for Data Visualization</a></p>
+<li>
+<p>Guidelines by Amy Cesal on how to write alt text for data visualizations: <a href="https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81">Writing Alt Text for Data Visualization</a></p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/alt-text-amy-cesal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Example template from Amy’s post"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/alt-text-amy-cesal.png" class="img-fluid figure-img" alt="Example alt text format that reads: Chart type of type of data where reason for including chart. Also the recommendation to include a link to the data source somewhere in the text."></a></p>
-<figcaption class="figure-caption">Example template from Amy’s post</figcaption>
-</figure>
-</div></li>
-<li><p>Post by Lisa Charlotte Muth on how to pick colors for your data viz that everyone can appreciate: <a href="https://blog.datawrapper.de/beautifulcolors/">How to pick more beautiful colors for your data visualizations - Datawrapper Blog</a></p>
+<figure class="figure"><p><a href="img/alt-text-amy-cesal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Example template from Amy’s post"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/alt-text-amy-cesal.png" class="img-fluid figure-img" alt="Example alt text format that reads: Chart type of type of data where reason for including chart. Also the recommendation to include a link to the data source somewhere in the text."></a></p>
+<figcaption class="figure-caption">Example template from Amy’s post</figcaption></figure>
+</div>
+</li>
+<li>
+<p>Post by Lisa Charlotte Muth on how to pick colors for your data viz that everyone can appreciate: <a href="https://blog.datawrapper.de/beautifulcolors/">How to pick more beautiful colors for your data visualizations - Datawrapper Blog</a></p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/datawrapper.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Example from Charlotte’s post of two different approaches to improving a pie chart"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/datawrapper.png" class="img-fluid figure-img" alt="The first pie chart uses colors of similar lightness that end up appearing the same when checked under grayscale simulation. The first option for improvement picks different colors that all stand out from one another in grayscale. The second option keeps the original colors but delineates pie slices with a contrasting border."></a></p>
-<figcaption class="figure-caption">Example from Charlotte’s post of two different approaches to improving a pie chart</figcaption>
-</figure>
-</div></li>
-<li><p>Post by Gareth Ford Williams from The Readability Group about how to make more informed font choices: <a href="https://medium.com/the-readability-group/a-guide-to-understanding-what-makes-a-typeface-accessible-and-how-to-make-informed-decisions-9e5c0b9040a0">A Guide to Understanding What Makes a Typeface Accessible</a></p>
+<figure class="figure"><p><a href="img/datawrapper.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Example from Charlotte’s post of two different approaches to improving a pie chart"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/datawrapper.png" class="img-fluid figure-img" alt="The first pie chart uses colors of similar lightness that end up appearing the same when checked under grayscale simulation. The first option for improvement picks different colors that all stand out from one another in grayscale. The second option keeps the original colors but delineates pie slices with a contrasting border."></a></p>
+<figcaption class="figure-caption">Example from Charlotte’s post of two different approaches to improving a pie chart</figcaption></figure>
+</div>
+</li>
+<li>
+<p>Post by Gareth Ford Williams from The Readability Group about how to make more informed font choices: <a href="https://medium.com/the-readability-group/a-guide-to-understanding-what-makes-a-typeface-accessible-and-how-to-make-informed-decisions-9e5c0b9040a0">A Guide to Understanding What Makes a Typeface Accessible</a></p>
 <ul>
-<li><p>Related is a talk from The Readability Group sharing findings from a survey study about font preferences including 2000+ participants. Among these were participants with dyslexia characteristics and participants with poor near vision: <a href="https://youtu.be/h8IOqUl1zII?t=1029">Don’t Believe the Type!</a></p>
+<li>
+<p>Related is a talk from The Readability Group sharing findings from a survey study about font preferences including 2000+ participants. Among these were participants with dyslexia characteristics and participants with poor near vision: <a href="https://youtu.be/h8IOqUl1zII?t=1029">Don’t Believe the Type!</a></p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/typeface-poor-near-vision.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Bar graph showing the frequency by which 20 different fonts were selected by study participants with strong poor near vision in comparison with users with no poor near vision."><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/typeface-poor-near-vision.png" class="img-fluid figure-img" alt="The fonts selected most often in this group were San Francisco Pro, Red Hat Text, Calibri, and Segoe UI, in that order. San Francisco Pro was selected by 68% of participants The fonts selected least often were Open Dyslexic, Dyslexie, Comic Sans MS, and Sylexiad Sans. Open Dyslexic was selected by 12% of participants. Both Times New Roman and Helvetica are highlighted as showing the largest differences between users with poor near vision and those without. Times New Roman was the 6th least selected and Helvetica was in the middle learning towards the most selected fonts."></a></p>
-<figcaption class="figure-caption">Bar graph showing the frequency by which 20 different fonts were selected by study participants with strong poor near vision in comparison with users with no poor near vision.</figcaption>
-</figure>
-</div></li>
-</ul></li>
-<li><p>Sarah Fossheim authored a post titled <a href="https://fossheim.io/writing/posts/accessible-dataviz-design/">An intro to designing accessible data visualizations</a> which uses real-word applications to demonstrate 10 different accessibility practices.</p>
+<figure class="figure"><p><a href="img/typeface-poor-near-vision.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Bar graph showing the frequency by which 20 different fonts were selected by study participants with strong poor near vision in comparison with users with no poor near vision."><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/typeface-poor-near-vision.png" class="img-fluid figure-img" alt="The fonts selected most often in this group were San Francisco Pro, Red Hat Text, Calibri, and Segoe UI, in that order. San Francisco Pro was selected by 68% of participants The fonts selected least often were Open Dyslexic, Dyslexie, Comic Sans MS, and Sylexiad Sans. Open Dyslexic was selected by 12% of participants. Both Times New Roman and Helvetica are highlighted as showing the largest differences between users with poor near vision and those without. Times New Roman was the 6th least selected and Helvetica was in the middle learning towards the most selected fonts."></a></p>
+<figcaption class="figure-caption">Bar graph showing the frequency by which 20 different fonts were selected by study participants with strong poor near vision in comparison with users with no poor near vision.</figcaption></figure>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<p>Sarah Fossheim authored a post titled <a href="https://fossheim.io/writing/posts/accessible-dataviz-design/">An intro to designing accessible data visualizations</a> which uses real-word applications to demonstrate 10 different accessibility practices.</p>
 <p>Sarah also provides a code-through showing how to make screenreader-friendly graphs using D3.js in their post <a href="https://fossheim.io/writing/posts/apple-dataviz-a11y-tutorial/">How to create a screen reader accessible graph like Apple’s with D3.js</a></p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/d3js-apple-rings.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/d3js-apple-rings.png" class="img-fluid figure-img" alt=""></a></p>
+<figure class="figure"><p><a href="img/d3js-apple-rings.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/d3js-apple-rings.png" class="img-fluid figure-img" alt=""></a></p>
 </figure>
-</div></li>
-<li><p>Amber Thomas provides an example of how to make scrollytales more accessible in a piece created with Ofunne Amaka for The Pudding: <a href="https://pudding.cool/2021/03/foundation-names/">The Naked Truth</a></p>
+</div>
+</li>
+<li>
+<p>Amber Thomas provides an example of how to make scrollytales more accessible in a piece created with Ofunne Amaka for The Pudding: <a href="https://pudding.cool/2021/03/foundation-names/">The Naked Truth</a></p>
 <blockquote class="twitter-tweet blockquote" data-conversation="none">
 <p lang="en" dir="ltr">
-</p><p>I'm excited to release this project for many reasons, but one among them is that I introduced lots of new (to me) <a href="https://twitter.com/hashtag/a11y?src=hash&amp;ref_src=twsrc%5Etfw">#a11y</a> features. My favorite: the ability to turn off scrollytelling 💖 Would love to hear what folks think! <a href="https://t.co/eDSQr9RjFe">pic.twitter.com/eDSQr9RjFe</a></p>
-<p></p>
+</p>
+<p>I'm excited to release this project for many reasons, but one among them is that I introduced lots of new (to me) <a href="https://twitter.com/hashtag/a11y?src=hash&amp;ref_src=twsrc%5Etfw">#a11y</a> features. My favorite: the ability to turn off scrollytelling 💖 Would love to hear what folks think! <a href="https://t.co/eDSQr9RjFe">pic.twitter.com/eDSQr9RjFe</a></p>
+
 <p>— Amber Thomas (@ProQuesAsker) <a href="https://twitter.com/ProQuesAsker/status/1375159092684058626?ref_src=twsrc%5Etfw">March 25, 2021</a></p>
 </blockquote>
-<script async="" src="img/https://platform.twitter.com/widgets.js" charset="utf-8"></script></li>
-<li><p>Chris DeMartini has a series of blog posts documenting his journey auditing one of his public Tableau visualizations for accessibility:</p>
+<script async="" src="img/https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</li>
+<li>
+<p>Chris DeMartini has a series of blog posts documenting his journey auditing one of his public Tableau visualizations for accessibility:</p>
 <ol type="1">
 <li><a href="https://datablick.com/blog/2021/2/4/a-tableau-accessibility-journey-part-i">A Tableau Accessibility Journey</a></li>
 <li><a href="https://datablick.com/blog/2021/2/18/a-tableau-accessibility-journey-part-ii-focus-order">Focus Order</a></li>
 <li><a href="https://www.datablick.com/blog/2021/4/15/a-tableau-accessibility-journey-part-iii-color-contrast-and-font-size">Color Contrast and Font Size</a></li>
-<li><a href="https://www.datablick.com/blog/2021/8/10/a-tableau-accessibility-journey-part-iv-keyboard-accessibility">Keyboard Accessibility</a> <br><br></li>
+<li>
+<a href="https://www.datablick.com/blog/2021/8/10/a-tableau-accessibility-journey-part-iv-keyboard-accessibility">Keyboard Accessibility</a> <br><br>
+</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/tableau-chris-demartini.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Title of Chris’s Tableau visualization being checked for color contrast."><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/tableau-chris-demartini.png" class="img-fluid figure-img" alt="The user is using a kind of selection tool to hover over an area of the visualization, in this case the title, and check font color contrast against its background. The tool pulls up details along the bottom of the page, including WCAG pass/fail test results, background and foreground color hex codes, and other color characteristics."></a></p>
-<figcaption class="figure-caption">Title of Chris’s Tableau visualization being checked for color contrast.</figcaption>
-</figure>
-</div></li>
-</ul>
-</section>
-<section id="r-resources" class="level2">
-<h2 class="anchored" data-anchor-id="r-resources">R resources</h2>
+<figure class="figure"><p><a href="img/tableau-chris-demartini.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Title of Chris’s Tableau visualization being checked for color contrast."><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/tableau-chris-demartini.png" class="img-fluid figure-img" alt="The user is using a kind of selection tool to hover over an area of the visualization, in this case the title, and check font color contrast against its background. The tool pulls up details along the bottom of the page, including WCAG pass/fail test results, background and foreground color hex codes, and other color characteristics."></a></p>
+<figcaption class="figure-caption">Title of Chris’s Tableau visualization being checked for color contrast.</figcaption></figure>
+</div>
+</li>
+</ul></section><section id="r-resources" class="level2"><h2 class="anchored" data-anchor-id="r-resources">R resources</h2>
 <ul>
-<li><p><a href="https://twitter.com/DogGeneticsLLC">Liz Hare</a> and I gave a talk earlier this year on alt text in data viz shared as a part of TidyTuesday on Twitter. After web-scraping alt text from TidyTuesday tweets we found that only 3% of data viz tweets had alt text to accompany them (over the first 3 years of the TidyTuesday project). Links to the video recording, slides, and resources at https://github.com/spcanelon/csvConf2021. The talk includes guidelines on what makes effective alt text for data viz (complementary to those Amy Cesal includes in her post).</p>
+<li>
+<p><a href="https://twitter.com/DogGeneticsLLC">Liz Hare</a> and I gave a talk earlier this year on alt text in data viz shared as a part of TidyTuesday on Twitter. After web-scraping alt text from TidyTuesday tweets we found that only 3% of data viz tweets had alt text to accompany them (over the first 3 years of the TidyTuesday project). Links to the video recording, slides, and resources at https://github.com/spcanelon/csvConf2021. The talk includes guidelines on what makes effective alt text for data viz (complementary to those Amy Cesal includes in her post).</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/alt-text-silvia-liz.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Slide from our presentation summarizing the most useful alt-text features found among 196 data viz tweets"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/alt-text-silvia-liz.png" class="img-fluid figure-img" alt="Effective alt includes a description that conveys meaning in the data, variables on the axes, scale described within the description, description of the type of plot. Direct link to slide: https://spcanelon.github.io/csvConf2021/slides/indexLH.html#11"></a></p>
-<figcaption class="figure-caption">Slide from our presentation summarizing the most useful alt-text features found among 196 data viz tweets</figcaption>
-</figure>
-</div></li>
-<li><p>Post from RStudio on how to add alt text to visualizations produced in R Markdown using code chunk option <code>fig.alt</code>: <a href="https://blog.rstudio.com/2021/04/20/knitr-fig-alt/">New in knitr: Improved accessibility with image alt text</a>. <br><strong>New in knitr v1.35:</strong> You can now add code chunk options <a href="https://github.com/yihui/knitr/blob/master/NEWS.md#new-features-1">inside the code chunk</a>!</p>
+<figure class="figure"><p><a href="img/alt-text-silvia-liz.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Slide from our presentation summarizing the most useful alt-text features found among 196 data viz tweets"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/alt-text-silvia-liz.png" class="img-fluid figure-img" alt="Effective alt includes a description that conveys meaning in the data, variables on the axes, scale described within the description, description of the type of plot. Direct link to slide: https://spcanelon.github.io/csvConf2021/slides/indexLH.html#11"></a></p>
+<figcaption class="figure-caption">Slide from our presentation summarizing the most useful alt-text features found among 196 data viz tweets</figcaption></figure>
+</div>
+</li>
+<li>
+<p>Post from RStudio on how to add alt text to visualizations produced in R Markdown using code chunk option <code>fig.alt</code>: <a href="https://blog.rstudio.com/2021/04/20/knitr-fig-alt/">New in knitr: Improved accessibility with image alt text</a>. <br><strong>New in knitr v1.35:</strong> You can now add code chunk options <a href="https://github.com/yihui/knitr/blob/master/NEWS.md#new-features-1">inside the code chunk</a>!</p>
 <p>Example updated thanks to a <a href="https://twitter.com/grrrck/status/1442941720455368704?s=20">heads-up from Garrick</a>:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| fig.cap: Bigger flippers, bigger bills </span></span>
-<span id="cb1-2"><span class="co" style="color: #5E5E5E;
+<span><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| fig.alt: Scatterplot of flipper length by bill length of 3 penguin species, where we show penguins with bigger flippers have bigger bills.</span></span>
-<span id="cb1-3"></span>
-<span id="cb1-4"><span class="fu" style="color: #4758AB;
+<span></span>
+<span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">ggplot</span>(<span class="at" style="color: #657422;
+font-style: inherit;">ggplot</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">data =</span> penguins, <span class="fu" style="color: #4758AB;
+font-style: inherit;">(</span>data <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">x =</span> flipper_length_mm,</span>
-<span id="cb1-5">                            <span class="at" style="color: #657422;
+font-style: inherit;">penguins</span>, <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">y =</span> bill_length_mm,</span>
-<span id="cb1-6">                            <span class="at" style="color: #657422;
+font-style: inherit;">aes</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">color =</span> species)) <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">(</span>x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">flipper_length_mm</span>,</span>
+<span>                            y <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">bill_length_mm</span>,</span>
+<span>                            color <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">species</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb1-7">  <span class="fu" style="color: #4758AB;
+<span>  <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">geom_point</span>(<span class="fu" style="color: #4758AB;
+font-style: inherit;">geom_point</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
+font-style: inherit;">(</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">shape =</span> species), <span class="at" style="color: #657422;
+font-style: inherit;">aes</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">alpha =</span> <span class="fl" style="color: #AD0000;
+font-style: inherit;">(</span>shape <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">0.8</span>) <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">species</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span>, alpha <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.8</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb1-8">  <span class="fu" style="color: #4758AB;
+<span>  <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">scale_color_manual</span>(</span>
-<span id="cb1-9">    <span class="at" style="color: #657422;
+font-style: inherit;">scale_color_manual</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">values =</span> <span class="fu" style="color: #4758AB;
+font-style: inherit;">(</span></span>
+<span>    values <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"darkorange"</span>,<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"purple"</span>,<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"cyan4"</span>)) </span></code></pre></div>
+font-style: inherit;">"cyan4"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> </span></code></pre></div>
 <p class="caption" style="text-align:center;">
-</p><p>Code chunk adapted from the RStudio blog post</p>
-<p></p>
-<details>
-<p>The previous example included <code>fig.cap</code> and <code>fig.alt</code> in the code chunk heading:</p>
+</p>
+<p>Code chunk adapted from the RStudio blog post</p>
+
+<details><p>The previous example included <code>fig.cap</code> and <code>fig.alt</code> in the code chunk heading:</p>
 <div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Bigger flippers, bigger bills"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" alt="Scatterplot of flipper length by bill length of 3 penguin species, where we show penguins with bigger flippers have bigger bills." width="672"></a></p>
-<figcaption class="figure-caption">Bigger flippers, bigger bills</figcaption>
-</figure>
+<figure class="figure"><p><a href="index_files/figure-html/unnamed-chunk-2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Bigger flippers, bigger bills"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" alt="Scatterplot of flipper length by bill length of 3 penguin species, where we show penguins with bigger flippers have bigger bills." width="672"></a></p>
+<figcaption class="figure-caption">Bigger flippers, bigger bills</figcaption></figure>
 </div>
 </div>
 </div>
-</details></li>
-<li><p>The <a href="https://coolbutuseless.github.io/package/ggpattern/index.html">ggpattern R package</a> developed by Mike FC supports filling ggplot2 geometries with patterns. If used judiciously, patterns can help make visualizations more accessible by providing an additional way to encode information without relying on color. Below is one example using ggpattern v0.2.2:</p>
+</details>
+</li>
+<li>
+<p>The <a href="https://coolbutuseless.github.io/package/ggpattern/index.html">ggpattern R package</a> developed by Mike FC supports filling ggplot2 geometries with patterns. If used judiciously, patterns can help make visualizations more accessible by providing an additional way to encode information without relying on color. Below is one example using ggpattern v0.2.2:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">library</span>(ggpattern)</span>
-<span id="cb2-2"></span>
-<span id="cb2-3">penguinColors <span class="ot" style="color: #003B4F;
+font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;"><a href="https://github.com/coolbutuseless/ggpattern">ggpattern</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">penguinColors</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+font-style: inherit;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"darkorange"</span>, <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"purple"</span>, <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"cyan4"</span>)</span>
-<span id="cb2-4"></span>
-<span id="cb2-5"><span class="fu" style="color: #4758AB;
+font-style: inherit;">"cyan4"</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">ggplot</span>(penguins, <span class="fu" style="color: #4758AB;
+font-style: inherit;">)</span></span>
+<span></span>
+<span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">aes</span>(species)) <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">ggplot</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">penguins</span>, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">species</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb2-6"><span class="fu" style="color: #4758AB;
+<span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">geom_bar_pattern</span>(<span class="fu" style="color: #4758AB;
+font-style: inherit;"><a href="https://rdrr.io/pkg/ggpattern/man/geom-docs.html">geom_bar_pattern</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
+font-style: inherit;">(</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">fill =</span> species,</span>
-<span id="cb2-7">                    <span class="at" style="color: #657422;
+font-style: inherit;">aes</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">pattern =</span> species,</span>
-<span id="cb2-8">                    <span class="at" style="color: #657422;
+font-style: inherit;">(</span>fill <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">pattern_color =</span> species),</span>
-<span id="cb2-9">  <span class="at" style="color: #657422;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">fill =</span> penguinColors,</span>
-<span id="cb2-10">  <span class="at" style="color: #657422;
+font-style: inherit;">species</span>,</span>
+<span>                    pattern <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">alpha =</span> <span class="fl" style="color: #AD0000;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">species</span>,</span>
+<span>                    pattern_color <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">species</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span>,</span>
+<span>  fill <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">penguinColors</span>,</span>
+<span>  alpha <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0.1</span>,</span>
-<span id="cb2-11">  <span class="at" style="color: #657422;
+<span>  linewidth <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">linewidth =</span> <span class="dv" style="color: #AD0000;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span>,</span>
-<span id="cb2-12">  <span class="at" style="color: #657422;
+<span>  color <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">color =</span> penguinColors,</span>
-<span id="cb2-13">  <span class="at" style="color: #657422;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">pattern_color =</span> penguinColors,</span>
-<span id="cb2-14">  <span class="at" style="color: #657422;
+font-style: inherit;">penguinColors</span>,</span>
+<span>  pattern_color <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">pattern_fill =</span> penguinColors,</span>
-<span id="cb2-15">  <span class="at" style="color: #657422;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">pattern_spacing =</span> <span class="fl" style="color: #AD0000;
+font-style: inherit;">penguinColors</span>,</span>
+<span>  pattern_fill <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">penguinColors</span>,</span>
+<span>  pattern_spacing <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0.025</span></span>
-<span id="cb2-16">) <span class="sc" style="color: #5E5E5E;
+<span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb2-17"><span class="fu" style="color: #4758AB;
+<span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">theme_minimal</span>() <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">theme_minimal</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb2-18"><span class="fu" style="color: #4758AB;
+<span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">theme</span>(<span class="at" style="color: #657422;
+font-style: inherit;">theme</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">legend.position =</span> <span class="st" style="color: #20794D;
+font-style: inherit;">(</span>legend.position <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">'none'</span>)</span></code></pre></div>
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'none'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Different patterns mapped onto penguin species along with different colors"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" alt="Bar chart showing 3 penguin species along the x axis and the number of observations on the y axis. The bar for the Adelie species uses the color orange and diagonal stripes, the bar for Chinstrap species uses the color purple and crosshatches, and the bar for the Gentoo species uses the color cyan and a dotted pattern." width="672"></a></p>
-<figcaption class="figure-caption">Different patterns mapped onto penguin species along with different colors</figcaption>
-</figure>
+<figure class="figure"><p><a href="index_files/figure-html/unnamed-chunk-3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Different patterns mapped onto penguin species along with different colors"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" alt="Bar chart showing 3 penguin species along the x axis and the number of observations on the y axis. The bar for the Adelie species uses the color orange and diagonal stripes, the bar for Chinstrap species uses the color purple and crosshatches, and the bar for the Gentoo species uses the color cyan and a dotted pattern." width="672"></a></p>
+<figcaption class="figure-caption">Different patterns mapped onto penguin species along with different colors</figcaption></figure>
 </div>
 </div>
-</div></li>
-<li><p>The <a href="https://jkunst.com/highcharter/index.html">Highcharter R package</a> developed by Joshua Kunst adds interactivity to data viz using Highcharts JavaScript components designed with <a href="https://www.highcharts.com/accessibility/#exploreFeatures">web accessibility in mind</a>. The package has a learning curve, but lucky for us Mara Averick wrote an excellent <a href="https://dataand.me/index.html#category:highcharter">series of blog posts on using the Highcharts accessibility module with {highcharter}</a>.</p>
+</div>
+</li>
+<li>
+<p>The <a href="https://jkunst.com/highcharter/index.html">Highcharter R package</a> developed by Joshua Kunst adds interactivity to data viz using Highcharts JavaScript components designed with <a href="https://www.highcharts.com/accessibility/#exploreFeatures">web accessibility in mind</a>. The package has a learning curve, but lucky for us Mara Averick wrote an excellent <a href="https://dataand.me/index.html#category:highcharter">series of blog posts on using the Highcharts accessibility module with {highcharter}</a>.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/highcharter-mara-averick.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Interactive scatterplot from Mara’s post using color and shape to encode information about penguin species"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/highcharter-mara-averick.png" class="img-fluid figure-img" alt="Scatterplot of the palmerpenguins dataset showing data points clustered by species and the highcharter package making it possible to focus on one cluster and identify the x and y values of a specific data point. In this case the data point is a Chinstrap penguin observation mapping to a flipper length of 201mm and bill length of 54.2mm. Explore this data viz with a screen reader in Mara's blog post: https://dataand.me/posts/2021-11-15-accessible-highcharter-part-4/#an-accessible-penguin-plot"></a></p>
-<figcaption class="figure-caption">Interactive scatterplot from Mara’s post using color and shape to encode information about penguin species</figcaption>
-</figure>
-</div></li>
+<figure class="figure"><p><a href="img/highcharter-mara-averick.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Interactive scatterplot from Mara’s post using color and shape to encode information about penguin species"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/highcharter-mara-averick.png" class="img-fluid figure-img" alt="Scatterplot of the palmerpenguins dataset showing data points clustered by species and the highcharter package making it possible to focus on one cluster and identify the x and y values of a specific data point. In this case the data point is a Chinstrap penguin observation mapping to a flipper length of 201mm and bill length of 54.2mm. Explore this data viz with a screen reader in Mara's blog post: https://dataand.me/posts/2021-11-15-accessible-highcharter-part-4/#an-accessible-penguin-plot"></a></p>
+<figcaption class="figure-caption">Interactive scatterplot from Mara’s post using color and shape to encode information about penguin species</figcaption></figure>
+</div>
+</li>
 </ul>
 
 
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2021" class="csl-entry quarto-appendix-citeas">
+</section><a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2021" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2021. <span>“Resources for Data Viz
 Accessibility.”</span> September 23, 2021. <a href="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y">https://silviacanelon.com/blog/2021-09-23-data-viz-a11y</a>.
 </div></div></section></div> ]]></description>
@@ -2512,8 +2612,12 @@ Accessibility.”</span> September 23, 2021. <a href="https://silviacanelon.com/
   <description><![CDATA[ 
 
 <!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
-<!-- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title"> -->
+<!-- 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title"> 
+-->
+<!-- <header id="title-block-header" class="quarto-title-block default page-columns"> -->
+<!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> -->
 
 
 <blockquote class="blockquote">
@@ -2535,7 +2639,7 @@ Accessibility.”</span> September 23, 2021. <a href="https://silviacanelon.com/
 </summary>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-ex-alt-text.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Reference pane of the tool elaborates on what the alert means, why it matters, how to fix it, a note on the tool’s algorithm, and a link to the WCAG standards and guidelines. Code section is expanded along the bottom and highlights exactly what part of the HTML code the alert is refering to."><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-ex-alt-text.png" class="img-fluid figure-img" alt="Reference pane of the tool elaborates on what the alert means, why it matters, how to fix it, a note on the tool's algorithm, and a link to the WCAG standards and guidelines. Code section is expanded along the bottom and highlights exactly what part of the HTML code the alert is refering to."></a></p>
+<p><a href="img/wave-ex-alt-text.png" class="lightbox" title="Reference pane of the tool elaborates on what the alert means, why it matters, how to fix it, a note on the tool’s algorithm, and a link to the WCAG standards and guidelines. Code section is expanded along the bottom and highlights exactly what part of the HTML code the alert is refering to." data-gallery="quarto-lightbox-gallery-1"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-ex-alt-text.png" class="img-fluid figure-img" alt="Reference pane of the tool elaborates on what the alert means, why it matters, how to fix it, a note on the tool's algorithm, and a link to the WCAG standards and guidelines. Code section is expanded along the bottom and highlights exactly what part of the HTML code the alert is refering to."></a></p>
 <figcaption class="figure-caption">Reference pane of the tool elaborates on what the alert means, why it matters, how to fix it, a note on the tool’s algorithm, and a link to the WCAG standards and guidelines. Code section is expanded along the bottom and highlights exactly what part of the HTML code the alert is refering to.</figcaption>
 </figure>
 </div>
@@ -2576,7 +2680,7 @@ Accessibility.”</span> September 23, 2021. <a href="https://silviacanelon.com/
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-home.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure 1: Audit for my home page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-home.png" class="img-fluid figure-img" alt="There is an error symbol next to the decorative image on the home page. There are also alert symbols for links in the navigation bar and footer."></a></p>
+<p><a href="img/wave-home.png" class="lightbox" title="Figure 1: Audit for my home page" data-gallery="quarto-lightbox-gallery-2"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-home.png" class="img-fluid figure-img" alt="There is an error symbol next to the decorative image on the home page. There are also alert symbols for links in the navigation bar and footer."></a></p>
 <figcaption class="figure-caption">Figure 1: Audit for my home page</figcaption>
 </figure>
 </div>
@@ -2602,13 +2706,13 @@ Accessibility.”</span> September 23, 2021. <a href="https://silviacanelon.com/
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-about-header.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure 2: Audit for my About page header"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-about-header.png" class="img-fluid figure-img" alt="About page showing an alert in my blurb"></a></p>
+<p><a href="img/wave-about-header.png" class="lightbox" title="Figure 2: Audit for my About page header" data-gallery="quarto-lightbox-gallery-3"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-about-header.png" class="img-fluid figure-img" alt="About page showing an alert in my blurb"></a></p>
 <figcaption class="figure-caption">Figure 2: Audit for my About page header</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-about-main-top.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure 3: Audit for the main section of my About page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-about-main-top.png" class="img-fluid figure-img" alt="An alert is shown next to some heading items, and a link. An error is shown next to a thumbnail image for the featured blog post"></a></p>
+<p><a href="img/wave-about-main-top.png" class="lightbox" title="Figure 3: Audit for the main section of my About page" data-gallery="quarto-lightbox-gallery-4"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-about-main-top.png" class="img-fluid figure-img" alt="An alert is shown next to some heading items, and a link. An error is shown next to a thumbnail image for the featured blog post"></a></p>
 <figcaption class="figure-caption">Figure 3: Audit for the main section of my About page</figcaption>
 </figure>
 </div>
@@ -2618,7 +2722,7 @@ Full page screenshot
 </summary>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-about.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure 4: Audit for my About page in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-about.png" class="img-fluid figure-img" alt="Alerts are shown for links in the navigation bar and footer, for some heading items, and for a few links throughout the page"></a></p>
+<p><a href="img/wave-about.png" class="lightbox" title="Figure 4: Audit for my About page in full page view" data-gallery="quarto-lightbox-gallery-5"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-about.png" class="img-fluid figure-img" alt="Alerts are shown for links in the navigation bar and footer, for some heading items, and for a few links throughout the page"></a></p>
 <figcaption class="figure-caption">Figure 4: Audit for my About page in full page view</figcaption>
 </figure>
 </div>
@@ -2642,7 +2746,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-blog.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure 5: Audit for my Blog listing page in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-blog.png" class="img-fluid figure-img" alt="Alerts are shown for the navigation bar and footer, and for blog post links. Errors shown for the decorative image for the page and for the blog post thumbnails."></a></p>
+<p><a href="img/wave-blog.png" class="lightbox" title="Figure 5: Audit for my Blog listing page in full page view" data-gallery="quarto-lightbox-gallery-6"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-blog.png" class="img-fluid figure-img" alt="Alerts are shown for the navigation bar and footer, and for blog post links. Errors shown for the decorative image for the page and for the blog post thumbnails."></a></p>
 <figcaption class="figure-caption">Figure 5: Audit for my Blog listing page in full page view</figcaption>
 </figure>
 </div>
@@ -2670,7 +2774,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-blog-hha-top.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Alerts shown for links in the navigation bar and for a heading item. Errors shown for the blog decorative image and for a link symbol next to a header."><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-blog-hha-top.png" class="img-fluid figure-img" alt="Figure 6: Audit for my Hello Hugo Apéro blog post"></a></p>
+<p><a href="img/wave-blog-hha-top.png" class="lightbox" title="Alerts shown for links in the navigation bar and for a heading item. Errors shown for the blog decorative image and for a link symbol next to a header." data-gallery="quarto-lightbox-gallery-7"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-blog-hha-top.png" class="img-fluid figure-img" alt="Figure 6: Audit for my Hello Hugo Apéro blog post"></a></p>
 <figcaption class="figure-caption">Alerts shown for links in the navigation bar and for a heading item. Errors shown for the blog decorative image and for a link symbol next to a header.</figcaption>
 </figure>
 </div>
@@ -2696,7 +2800,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-talks-top.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure 7: Audit for my Talk listing page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-talks-top.png" class="img-fluid figure-img" alt="Alerts displayed for a heading item and the primary link to a talk. An error is displayed for the talk thumbnail."></a></p>
+<p><a href="img/wave-talks-top.png" class="lightbox" title="Figure 7: Audit for my Talk listing page" data-gallery="quarto-lightbox-gallery-8"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-talks-top.png" class="img-fluid figure-img" alt="Alerts displayed for a heading item and the primary link to a talk. An error is displayed for the talk thumbnail."></a></p>
 <figcaption class="figure-caption">Figure 7: Audit for my Talk listing page</figcaption>
 </figure>
 </div>
@@ -2706,7 +2810,7 @@ Full page screenshot
 </summary>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-talks.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure 8: Audit for my About page header in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-talks.png" class="img-fluid figure-img" alt="Alerts displayed in the navigation bar and footer, some heading items, all primary talk links, and a YouTube button link. Errors displayed for all talk thumbnail images."></a></p>
+<p><a href="img/wave-talks.png" class="lightbox" title="Figure 8: Audit for my About page header in full page view" data-gallery="quarto-lightbox-gallery-9"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-talks.png" class="img-fluid figure-img" alt="Alerts displayed in the navigation bar and footer, some heading items, all primary talk links, and a YouTube button link. Errors displayed for all talk thumbnail images."></a></p>
 <figcaption class="figure-caption">Figure 8: Audit for my About page header in full page view</figcaption>
 </figure>
 </div>
@@ -2728,7 +2832,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-talks-csvconf.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure 9: Audit for my CSV Conf talk post in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-talks-csvconf.png" class="img-fluid figure-img" alt="Alerts displayed for the navigation bar and footer, as well as the talk summary. No errors are displayed."></a></p>
+<p><a href="img/wave-talks-csvconf.png" class="lightbox" title="Figure 9: Audit for my CSV Conf talk post in full page view" data-gallery="quarto-lightbox-gallery-10"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-talks-csvconf.png" class="img-fluid figure-img" alt="Alerts displayed for the navigation bar and footer, as well as the talk summary. No errors are displayed."></a></p>
 <figcaption class="figure-caption">Figure 9: Audit for my CSV Conf talk post in full page view</figcaption>
 </figure>
 </div>
@@ -2747,7 +2851,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-pubs-top.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figure 10: Audit for my Publication listing page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-pubs-top.png" class="img-fluid figure-img" alt="No errors or alerts displayed for this view"></a></p>
+<p><a href="img/wave-pubs-top.png" class="lightbox" title="Figure 10: Audit for my Publication listing page" data-gallery="quarto-lightbox-gallery-11"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-pubs-top.png" class="img-fluid figure-img" alt="No errors or alerts displayed for this view"></a></p>
 <figcaption class="figure-caption">Figure 10: Audit for my Publication listing page</figcaption>
 </figure>
 </div>
@@ -2757,7 +2861,7 @@ Full page screenshot
 </summary>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-pubs.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Alerts displayed for the navigation bar and footer"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-pubs.png" class="img-fluid figure-img" alt="Figure 11: Audit for my Publication listing page in full page view"></a></p>
+<p><a href="img/wave-pubs.png" class="lightbox" title="Alerts displayed for the navigation bar and footer" data-gallery="quarto-lightbox-gallery-12"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-pubs.png" class="img-fluid figure-img" alt="Figure 11: Audit for my Publication listing page in full page view"></a></p>
 <figcaption class="figure-caption">Alerts displayed for the navigation bar and footer</figcaption>
 </figure>
 </div>
@@ -2779,7 +2883,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-pubs-geo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Figure 12: Audit for my geospatial analysis publication in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-pubs-geo.png" class="img-fluid figure-img" alt="Alerts displayed for the header bar and footer and for the publication summary"></a></p>
+<p><a href="img/wave-pubs-geo.png" class="lightbox" title="Figure 12: Audit for my geospatial analysis publication in full page view" data-gallery="quarto-lightbox-gallery-13"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-pubs-geo.png" class="img-fluid figure-img" alt="Alerts displayed for the header bar and footer and for the publication summary"></a></p>
 <figcaption class="figure-caption">Figure 12: Audit for my geospatial analysis publication in full page view</figcaption>
 </figure>
 </div>
@@ -2801,7 +2905,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-projects-top.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Figure 13: Audit for my Project listing page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-projects-top.png" class="img-fluid figure-img" alt="Errors displayed next to each project thumbnail image"></a></p>
+<p><a href="img/wave-projects-top.png" class="lightbox" title="Figure 13: Audit for my Project listing page" data-gallery="quarto-lightbox-gallery-14"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-projects-top.png" class="img-fluid figure-img" alt="Errors displayed next to each project thumbnail image"></a></p>
 <figcaption class="figure-caption">Figure 13: Audit for my Project listing page</figcaption>
 </figure>
 </div>
@@ -2823,7 +2927,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-projects-ttat-top.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Figure 14: Audit for my TidyTuesdayAltText project post"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-projects-ttat-top.png" class="img-fluid figure-img" alt="Alert displayed in the project summary and next to an image alt-text. Error dislayed next to a link symbol accompanying a heading."></a></p>
+<p><a href="img/wave-projects-ttat-top.png" class="lightbox" title="Figure 14: Audit for my TidyTuesdayAltText project post" data-gallery="quarto-lightbox-gallery-15"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-projects-ttat-top.png" class="img-fluid figure-img" alt="Alert displayed in the project summary and next to an image alt-text. Error dislayed next to a link symbol accompanying a heading."></a></p>
 <figcaption class="figure-caption">Figure 14: Audit for my TidyTuesdayAltText project post</figcaption>
 </figure>
 </div>
@@ -2833,7 +2937,7 @@ Full page screenshot
 </summary>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-projects-ttat.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Figure 15: Audit for my TidyTuesdayAltText project post in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-projects-ttat.png" class="img-fluid figure-img" alt="Alerts shown in the navigation bar and footer, project summary, and image alt-text. Errors shown next to link symbols accompanying headings."></a></p>
+<p><a href="img/wave-projects-ttat.png" class="lightbox" title="Figure 15: Audit for my TidyTuesdayAltText project post in full page view" data-gallery="quarto-lightbox-gallery-16"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-projects-ttat.png" class="img-fluid figure-img" alt="Alerts shown in the navigation bar and footer, project summary, and image alt-text. Errors shown next to link symbols accompanying headings."></a></p>
 <figcaption class="figure-caption">Figure 15: Audit for my TidyTuesdayAltText project post in full page view</figcaption>
 </figure>
 </div>
@@ -2843,7 +2947,7 @@ Full page screenshot
 </section>
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2021" class="csl-entry quarto-appendix-citeas">
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2021" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2021. <span>“WAVE Audit No. 1.”</span> June 2, 2021. <a href="https://silviacanelon.com/blog/2021-06-02-wave-audit-1">https://silviacanelon.com/blog/2021-06-02-wave-audit-1</a>.
 </div></div></section></div> ]]></description>
   <category>Website</category>
@@ -2857,14 +2961,10 @@ Canelón, Silvia. 2021. <span>“WAVE Audit No. 1.”</span> June 2, 2021. <a hr
   <title>Hello Hugo Apéro: Converting a Blogdown Site from Hugo Academic</title>
   <dc:creator>Silvia Canelón</dc:creator>
   <link>https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/index.html</link>
-  <description><![CDATA[ 
-
-<!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
-<!-- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title"> -->
-
-
-<div class="cell">
+  <description><![CDATA[ <!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html --><!-- 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title"> 
+--><!-- <header id="title-block-header" class="quarto-title-block default page-columns"> --><!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> --><div class="cell">
 <div class="cell-output-display">
 
 </div>
@@ -2876,40 +2976,29 @@ Canelón, Silvia. 2021. <span>“WAVE Audit No. 1.”</span> June 2, 2021. <a hr
 }
 </style>
 </div>
-<section id="what-to-expect" class="level2">
-<h2 class="anchored" data-anchor-id="what-to-expect">What to expect</h2>
+<section id="what-to-expect" class="level2"><h2 class="anchored" data-anchor-id="what-to-expect">What to expect</h2>
 <p>By the end of the tutorial you will have switched your website from using the Hugo Academic theme to using the new <a href="https://alison.rbind.io/project/hugo-apero/">Hugo Apéro theme designed by Alison Hill</a> <i class="fa-solid fa-glass-cheers" aria-label="glass-cheers"></i></p>
 <p>Specifically you will be able to migrate your blog, publications, and talks. If you need to migrate courses, I recommend taking a look at how <a href="https://alison.rbind.io/project/">Alison</a> and <a href="https://www.kelly-bodwin.com/courses/">Kelly Bodwin</a> organized their courses and workshops into projects using this theme. I didn’t have projects prior to converting my site, but after creating a few projects post-Apéro I’m confident any projects you’ve created pre-Apéro will carry over easily.</p>
-<details>
-<summary>
+<details><summary>
 Projects on my site: https://silvia.rbind.io/project
-</summary>
-<div class="cell" data-layout-align="center">
+</summary><div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/silvia-project-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="My Project listing: https://silvia.rbind.io/project"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-project-list.png" class="img-fluid figure-img" alt="The Project listing page for my site with a grid layout featuring thumbnail images. The top of the page says 'Projects' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There are three projects featured with a decorative thumbnail image, a title, and a summary. Items also include an author and category links but they are cut off in this screenshot." width="1265"></a></p>
-<figcaption class="figure-caption">My Project listing: https://silvia.rbind.io/project</figcaption>
-</figure>
+<figure class="figure"><p><a href="img/silvia-project-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="My Project listing: https://silvia.rbind.io/project"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-project-list.png" class="img-fluid figure-img" alt="The Project listing page for my site with a grid layout featuring thumbnail images. The top of the page says 'Projects' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There are three projects featured with a decorative thumbnail image, a title, and a summary. Items also include an author and category links but they are cut off in this screenshot." width="1265"></a></p>
+<figcaption class="figure-caption">My Project listing: https://silvia.rbind.io/project</figcaption></figure>
 </div>
 </div>
 </div>
-</details>
-<p>If you like videos, Alison recorded a <a href="https://youtu.be/oBtDgW9u7Nw">walkthrough of this conversion process</a> using Julia Silge’s site as an example.</p>
+</details><p>If you like videos, Alison recorded a <a href="https://youtu.be/oBtDgW9u7Nw">walkthrough of this conversion process</a> using Julia Silge’s site as an example.</p>
 <p><strong>What <em>not</em> to expect</strong></p>
 <p>A tutorial on how to create a Hugo Apéro site from scratch – but don’t worry! Alison covers this in a <a href="https://alison.rbind.io/talk/2021-iyo-tunis/">workshop she gave for R-Ladies Tunis</a> and in the <a href="https://hugo-apero-docs.netlify.app/start/">Get started series of blog posts</a> included in the documentation site.</p>
-</section>
-<section id="the-plan" class="level2">
-<h2 class="anchored" data-anchor-id="the-plan">The Plan</h2>
+</section><section id="the-plan" class="level2"><h2 class="anchored" data-anchor-id="the-plan">The Plan</h2>
 <p>I was lucky that Alison had already started converting her own personal site because she gave me a template and example to follow! <i class="fa-solid fa-hands-helping" aria-label="hands-helping"></i></p>
 <p>We’ll follow the steps below throughout the tutorial and each of the six steps comes with its own commit in my git history, so you can see exactly what I changed and when. <i class="fa-solid fa-code-branch" aria-label="code-branch"></i></p>
 <p></p>
 <p>Then we’ll reuse and migrate your existing content, set up a contact form, tidy up your directory, explore some resources for customizing your new site, and end with the grand finale: deploying your new site!</p>
-</section>
-<section id="prework" class="level2">
-<h2 class="anchored" data-anchor-id="prework">Prework</h2>
-<section id="branch-deploy" class="level3">
-<h3 class="anchored" data-anchor-id="branch-deploy">Branch deploy</h3>
+</section><section id="prework" class="level2"><h2 class="anchored" data-anchor-id="prework">Prework</h2>
+<section id="branch-deploy" class="level3"><h3 class="anchored" data-anchor-id="branch-deploy">Branch deploy</h3>
 <p>Create a new <code>apero</code> branch from the primary branch of your website repository</p>
 <ol type="1">
 <li><p><code>git checkout -b apero</code> to create new local branch</p></li>
@@ -2920,37 +3009,48 @@ Projects on my site: https://silvia.rbind.io/project
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/netlify-branch-deploy.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Netlify site settings for deploy contexts"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/netlify-branch-deploy.png" class="img-fluid figure-img" style="width:75.0%" alt="The deploy contexts section after clicking the Edit settings button. This section shows three settings that can be edited. The first is the production branch which is set to 'main' in a free text box. The second is deploy previews which is a radio button set to 'any pull request against your production branch/branch deploy branches (as opposed to 'none'). The third is branch deploys which is a radio button set to 'all' (as opposed to 'none' and 'let me add individual branches'). There are two buttons at the bottom of this section, Save and Cancel."></a></p>
-<figcaption class="figure-caption">Netlify site settings for deploy contexts</figcaption>
-</figure>
+<figure class="figure"><p><a href="img/netlify-branch-deploy.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Netlify site settings for deploy contexts"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/netlify-branch-deploy.png" class="img-fluid figure-img" style="width:75.0%" alt="The deploy contexts section after clicking the Edit settings button. This section shows three settings that can be edited. The first is the production branch which is set to 'main' in a free text box. The second is deploy previews which is a radio button set to 'any pull request against your production branch/branch deploy branches (as opposed to 'none'). The third is branch deploys which is a radio button set to 'all' (as opposed to 'none' and 'let me add individual branches'). There are two buttons at the bottom of this section, Save and Cancel."></a></p>
+<figcaption class="figure-caption">Netlify site settings for deploy contexts</figcaption></figure>
 </div>
 </div>
 </div>
 <p>Your new apero branch deploy at this point is an independent copy of your current website so from here on out you can make changes freely without affecting anything in your main branch :tada:</p>
-</section>
-<section id="hugo-version" class="level3">
-<h3 class="anchored" data-anchor-id="hugo-version">Hugo version</h3>
+</section><section id="hugo-version" class="level3"><h3 class="anchored" data-anchor-id="hugo-version">Hugo version</h3>
 <p>The last piece of prework before we dive in is to update your local version of Hugo and update the Hugo version accordingly in a few different places.</p>
 <ol type="1">
-<li><p>Update Hugo locally using <code>blogdown::install_hugo()</code> (for me the latest version was v0.82.1)</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">blogdown<span class="sc" style="color: #5E5E5E;
+<li>
+<p>Update Hugo locally using <code><a href="https://pkgs.rstudio.com/blogdown/reference/install_hugo.html">blogdown::install_hugo()</a></code> (for me the latest version was v0.82.1)</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">blogdown</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">install_hugo</span>()</span></code></pre></div></li>
-<li><p>Update <strong>.Rprofile</strong> and then restart R per the instructions that appear in the console.</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="co" style="color: #5E5E5E;
+font-style: inherit;"><a href="https://pkgs.rstudio.com/blogdown/reference/install_hugo.html">install_hugo</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div>
+</li>
+<li>
+<p>Update <strong>.Rprofile</strong> and then restart R per the instructions that appear in the console.</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># fix Hugo version</span></span>
-<span id="cb2-2"><span class="fu" style="color: #4758AB;
+<span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">options</span>(<span class="at" style="color: #657422;
+font-style: inherit;"><a href="https://rdrr.io/r/base/options.html">options</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">blogdown.hugo.version =</span> <span class="st" style="color: #20794D;
+font-style: inherit;">(</span>blogdown.hugo.version <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">"0.82.1"</span>)</span></code></pre></div></li>
-<li><p>Update <strong>netlify.toml</strong></p>
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"0.82.1"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div>
+</li>
+<li>
+<p>Update <strong>netlify.toml</strong></p>
 <div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">[context.production.environment]</span>
 <span id="cb3-2">  HUGO_VERSION <span class="ot" style="color: #003B4F;
 background-color: null;
@@ -2984,13 +3084,12 @@ font-style: inherit;">-</span>preview.environment]</span>
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"0.82.1"</span></span></code></pre></div></li>
-<li><p>Run <code>blogdown::check_site()</code> to find any issues. In my case these checking functions found a Hugo version mismatch and I ended up having to specifically run <code>blogdown::install_hugo("0.82.1")</code> to resolve it.</p>
-<details>
-<summary>
-<p>Console output</p>
-</summary>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">― Checking netlify.toml...</span>
+font-style: inherit;">"0.82.1"</span></span></code></pre></div>
+</li>
+<li>
+<p>Run <code><a href="https://pkgs.rstudio.com/blogdown/reference/check_site.html">blogdown::check_site()</a></code> to find any issues. In my case these checking functions found a Hugo version mismatch and I ended up having to specifically run <code>blogdown::install_hugo("0.82.1")</code> to resolve it.</p>
+<details><summary><p>Console output</p>
+</summary><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">― Checking netlify.toml...</span>
 <span id="cb4-2">○ Found HUGO_VERSION <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
@@ -3067,45 +3166,47 @@ font-style: inherit;">:</span> public</span>
 <span id="cb4-9">― Check complete<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> netlify.toml</span></code></pre></div>
-</details></li>
+</details>
+</li>
 </ol>
-<p>If you end up needing to make your own changes, I recommend running <code>blogdown::check_site()</code> again when you’re done to make sure you’ve resolved all of the issues.</p>
-<p>And then run <code>blogdown::serve_site()</code> to render a live preview of your site :rocket:</p>
-<hr>
-</section>
-</section>
-<section id="install-theme-alongside-academic-change-in-config.toml" class="level2">
-<h2 class="anchored" data-anchor-id="install-theme-alongside-academic-change-in-config.toml">1. Install theme alongside Academic, change in <strong>config.toml</strong></h2>
+<p>If you end up needing to make your own changes, I recommend running <code><a href="https://pkgs.rstudio.com/blogdown/reference/check_site.html">blogdown::check_site()</a></code> again when you’re done to make sure you’ve resolved all of the issues.</p>
+<p>And then run <code><a href="https://pkgs.rstudio.com/blogdown/reference/serve_site.html">blogdown::serve_site()</a></code> to render a live preview of your site :rocket:</p>
+<hr></section></section><section id="install-theme-alongside-academic-change-in-config.toml" class="level2"><h2 class="anchored" data-anchor-id="install-theme-alongside-academic-change-in-config.toml">1. Install theme alongside Academic, change in <strong>config.toml</strong>
+</h2>
 <blockquote class="blockquote">
 <p><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> Follow along with me at <a href="https://github.com/spcanelon/silvia/commit/cc5d24d93676990675abc52145fd7a369c7bffa6">commit cc5d24</a></p>
 </blockquote>
 <p>The first step is to install all of the Hugo Apéro theme files to the <code>theme/</code> folder in your site directory:</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">blogdown<span class="sc" style="color: #5E5E5E;
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">blogdown</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">install_theme</span>(<span class="at" style="color: #657422;
+font-style: inherit;"><a href="https://pkgs.rstudio.com/blogdown/reference/install_theme.html">install_theme</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">theme =</span> <span class="st" style="color: #20794D;
+font-style: inherit;">(</span>theme <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"hugo-apero/hugo-apero"</span>,</span>
-<span id="cb5-2">                        <span class="at" style="color: #657422;
+<span>                        update_config <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">update_config =</span> <span class="cn" style="color: #8f5902;
+font-style: inherit;">=</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">FALSE</span>, </span>
-<span id="cb5-3">                        <span class="at" style="color: #657422;
+<span>                        force <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">force =</span> <span class="cn" style="color: #8f5902;
+font-style: inherit;">=</span> <span class="cn" style="color: #8f5902;
 background-color: null;
-font-style: inherit;">TRUE</span>)</span></code></pre></div>
+font-style: inherit;">TRUE</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div>
 </div>
-<details>
-<summary>
+<details><summary>
 Console output
-</summary>
-<div class="cell" data-layout-align="center">
+</summary><div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1">trying URL <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'https://github.com/hugo-apero/hugo-apero/archive/main.tar.gz'</span></span>
@@ -3129,8 +3230,7 @@ font-style: inherit;">:</span></span>
 background-color: null;
 font-style: inherit;">'s documentation and at least take a look at the config file config.toml (or .yaml) of the example site, because not all Hugo themes work with any config files. </span></span></code></pre></div>
 </div>
-</details>
-<p>As indicated in console output, modify the <strong>config.toml</strong> file so it points to your new theme folder instead of <code>hugo-academic</code>:</p>
+</details><p>As indicated in console output, modify the <strong>config.toml</strong> file so it points to your new theme folder instead of <code>hugo-academic</code>:</p>
 <div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb7-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#theme = "hugo-academic"</span></span>
@@ -3145,9 +3245,7 @@ font-style: inherit;">"hugo-apero"</span></span></code></pre></div>
 <div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb8-1">Could not build site because certain shortcodes weren't found</span>
 <span id="cb8-2"></span>
 <span id="cb8-3">Error: Error building site: "/Users/silvia/Documents/Website/silvia/content/home/demo.md:58:1": failed to extract shortcode: template for shortcode "alert" not found</span></code></pre></div>
-</section>
-<section id="copy-all-academic-shortcodes-to-layouts-root-remove-later" class="level2">
-<h2 class="anchored" data-anchor-id="copy-all-academic-shortcodes-to-layouts-root-remove-later">2. Copy all Academic shortcodes to <strong>layouts/</strong> root (remove later)</h2>
+</section><section id="copy-all-academic-shortcodes-to-layouts-root-remove-later" class="level2"><h2 class="anchored" data-anchor-id="copy-all-academic-shortcodes-to-layouts-root-remove-later">2. Copy all Academic shortcodes to <strong>layouts/</strong> root (remove later)</h2>
 <blockquote class="blockquote">
 <p><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> Follow along with me at <a href="https://github.com/spcanelon/silvia/commit/f3c7d5334b4effbd850b204eb267425f6740b4af">commit f3c7d53</a></p>
 </blockquote>
@@ -3162,9 +3260,7 @@ background-color: null;
 font-style: inherit;">Error:</span><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"> Error building site: TOCSS: failed to transform "style.main.scss" (text/x-scss): SCSS processing failed: file "stdin", line 7, col 24: Invalid CSS after "...textFontFamily:": expected expression (e.g. 1px, bold), was "&lt;no value&gt;;"</span></span></code></pre></div>
-</section>
-<section id="remove-all-assets" class="level2">
-<h2 class="anchored" data-anchor-id="remove-all-assets">3. Remove all assets</h2>
+</section><section id="remove-all-assets" class="level2"><h2 class="anchored" data-anchor-id="remove-all-assets">3. Remove all assets</h2>
 <blockquote class="blockquote">
 <p><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> Follow along with me at <a href="https://github.com/spcanelon/silvia/commit/3843c76a5da6184b2d9b547b18f96ec6810a695a">commit 3843c76</a></p>
 </blockquote>
@@ -3180,16 +3276,16 @@ background-color: null;
 font-style: inherit;">Error:</span><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"> Error building site: TOCSS: failed to transform "style.main.scss" (text/x-scss): SCSS processing failed: file "stdin", line 7, col 24: Invalid CSS after "...textFontFamily:": expected expression (e.g. 1px, bold), was "&lt;no value&gt;;"</span></span></code></pre></div>
-</section>
-<section id="remove-all-custom-layouts" class="level2">
-<h2 class="anchored" data-anchor-id="remove-all-custom-layouts">4. Remove all custom layouts</h2>
+</section><section id="remove-all-custom-layouts" class="level2"><h2 class="anchored" data-anchor-id="remove-all-custom-layouts">4. Remove all custom layouts</h2>
 <blockquote class="blockquote">
 <p><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> Follow along with me at <a href="https://github.com/spcanelon/silvia/commit/1ad7e3d491d309e71e1b4fa0bbad1e3af6b9d322">commit 1ad7e3d</a></p>
 </blockquote>
 <p>I had a couple of partials that I deleted from the <code>layouts/</code> folder:</p>
 <ul>
-<li><strong>partials/site_footer.html</strong> which provided a custom footer for my website</li>
-<li><strong>partials/widgets/about.html</strong> which included the custom formatting for certificates in the Education section of the About page of my Academic site</li>
+<li>
+<strong>partials/site_footer.html</strong> which provided a custom footer for my website</li>
+<li>
+<strong>partials/widgets/about.html</strong> which included the custom formatting for certificates in the Education section of the About page of my Academic site</li>
 </ul>
 <p><i class="fa-solid fa-exclamation-circle" aria-label="exclamation-circle"></i> My error message:</p>
 <div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><span class="an" style="color: #5E5E5E;
@@ -3197,9 +3293,7 @@ background-color: null;
 font-style: inherit;">Error:</span><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"> Error building site: TOCSS: failed to transform "style.main.scss" (text/x-scss): SCSS processing failed: file "stdin", line 7, col 24: Invalid CSS after "...textFontFamily:": expected expression (e.g. 1px, bold), was "&lt;no value&gt;;"</span></span></code></pre></div>
-</section>
-<section id="copy-over-apéro-example-site-config.toml-file" class="level2">
-<h2 class="anchored" data-anchor-id="copy-over-apéro-example-site-config.toml-file">5. Copy over Apéro example site <strong>config.toml</strong> file</h2>
+</section><section id="copy-over-apéro-example-site-config.toml-file" class="level2"><h2 class="anchored" data-anchor-id="copy-over-apéro-example-site-config.toml-file">5. Copy over Apéro example site <strong>config.toml</strong> file</h2>
 <blockquote class="blockquote">
 <p><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> Follow along with me at <a href="https://github.com/spcanelon/silvia/commit/db37289e768640522130f98353996de4a6e0abfc">commit db37289</a></p>
 </blockquote>
@@ -3215,9 +3309,7 @@ background-color: null;
 font-style: inherit;">Error:</span><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"> Error building site: failed to render pages: render of "page" failed: execute of template failed: template: _default/single.html:3:8: executing "_default/single.html" at &lt;partial "head.html" .&gt;: error calling partial: "/Users/silvia/Documents/Website/silvia/themes/hugo-apero/layouts/partials/head.html:14:53": execute of template failed: template: partials/head.html:14:53: executing "partials/head.html" at &lt;js&gt;: can't evaluate field Build in type string</span></span></code></pre></div>
-</section>
-<section id="remove-academic-config-directory" class="level2">
-<h2 class="anchored" data-anchor-id="remove-academic-config-directory">6. Remove Academic <strong>config/</strong> directory</h2>
+</section><section id="remove-academic-config-directory" class="level2"><h2 class="anchored" data-anchor-id="remove-academic-config-directory">6. Remove Academic <strong>config/</strong> directory</h2>
 <blockquote class="blockquote">
 <p><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> Follow along with me at <a href="https://github.com/spcanelon/silvia/commit/5541f38871911d5067c6c8856936d54d183b3ec9">commit 5541f38</a></p>
 </blockquote>
@@ -3229,17 +3321,17 @@ background-color: null;
 font-style: inherit;">Error:</span><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"> Error building site: failed to render pages: render of "page" failed: execute of template failed: template: _default/single.html:3:8: executing "_default/single.html" at &lt;partial "head.html" .&gt;: error calling partial: "/Users/silvia/Documents/Website/silvia/themes/hugo-apero/layouts/partials/head.html:14:53": execute of template failed: template: partials/head.html:14:53: executing "partials/head.html" at &lt;js&gt;: can't evaluate field Build in type string</span></span></code></pre></div>
-<hr>
-</section>
-<section id="migrating-the-content" class="level2">
-<h2 class="anchored" data-anchor-id="migrating-the-content">Migrating the content</h2>
+<hr></section><section id="migrating-the-content" class="level2"><h2 class="anchored" data-anchor-id="migrating-the-content">Migrating the content</h2>
 <p>Assuming you have made it this far and are able to at least serve a live site that uses the new Hugo Apéro theme, you are ready to start migrating your content! :tada:</p>
 <p>File are organized differently in Hugo Apéro and the next steps detail the high-level changes I made to get my content to fit the new structure. The goal was to have my site parallel the <a href="https://hugo-apero.netlify.app/">Hugo Apéro example site</a> and <a href="https://alison.rbind.io">Alison’s personal site</a>.</p>
-<section id="file-organization" class="level3">
-<h3 class="anchored" data-anchor-id="file-organization">File organization</h3>
+<section id="file-organization" class="level3"><h3 class="anchored" data-anchor-id="file-organization">File organization</h3>
 <p>To get an overview of how the file structure is different between the Academic and Apéro themes we’ll look at the <code>content/</code> folder of the Apéro example site, my old Academic site, and my current Apéro site. These are organized into the panelsets below.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true">Example site</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">My Academic site</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">My Apéro site</a></li></ul>
+<ul class="nav nav-tabs">
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true">Example site</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">My Academic site</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">My Apéro site</a></li>
+</ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <!-- {{< panelset class="content directory" >}}
@@ -3377,9 +3469,7 @@ font-style: inherit;">└──</span> talk</span></code></pre></div>
 </div>
 </div>
 <!-- end panel-tabset -->
-</section>
-<section id="about-page" class="level3">
-<h3 class="anchored" data-anchor-id="about-page">About page</h3>
+</section><section id="about-page" class="level3"><h3 class="anchored" data-anchor-id="about-page">About page</h3>
 <p>Resource: <a href="https://hugo-apero-docs.netlify.app/learn/about-page/">Customize your about page | Hugo Apéro</a></p>
 <p>My About page:</p>
 <ul>
@@ -3390,20 +3480,16 @@ font-style: inherit;">└──</span> talk</span></code></pre></div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/silvia-about-page-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="The header of my About page: https://silvia.rbind.io/about/"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-about-page-1.png" class="img-fluid figure-img" alt="My About page featuring a large headline to greet visitors and a short blurb about me in the header of the site. Below this area on the left in the main area of the page is more information with a heading and some prose. To the right of the main area is the sidebar which includes a small image, a name in large font, a subheading for the name, social media icons, and a spot for an audio clip for a name pronunciation. On the top edge of the page is a navigation bar with 'About' highlighted" width="1265"></a></p>
-<figcaption class="figure-caption">The header of my About page: https://silvia.rbind.io/about/</figcaption>
-</figure>
+<figure class="figure"><p><a href="img/silvia-about-page-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="The header of my About page: https://silvia.rbind.io/about/"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-about-page-1.png" class="img-fluid figure-img" alt="My About page featuring a large headline to greet visitors and a short blurb about me in the header of the site. Below this area on the left in the main area of the page is more information with a heading and some prose. To the right of the main area is the sidebar which includes a small image, a name in large font, a subheading for the name, social media icons, and a spot for an audio clip for a name pronunciation. On the top edge of the page is a navigation bar with 'About' highlighted" width="1265"></a></p>
+<figcaption class="figure-caption">The header of my About page: https://silvia.rbind.io/about/</figcaption></figure>
 </div>
 </div>
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/silvia-about-page-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="The main section of my About page: https://silvia.rbind.io/about/"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-about-page-2.png" class="img-fluid figure-img" alt="Below the header is the main area of the page on the left with more information about me with a heading and some prose. To the right of the main area is the sidebar which includes a small image of me, my name in large font, my professional title underneath along with social media icons and a short list of my interests." width="1265"></a></p>
-<figcaption class="figure-caption">The main section of my About page: https://silvia.rbind.io/about/</figcaption>
-</figure>
+<figure class="figure"><p><a href="img/silvia-about-page-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="The main section of my About page: https://silvia.rbind.io/about/"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-about-page-2.png" class="img-fluid figure-img" alt="Below the header is the main area of the page on the left with more information about me with a heading and some prose. To the right of the main area is the sidebar which includes a small image of me, my name in large font, my professional title underneath along with social media icons and a short list of my interests." width="1265"></a></p>
+<figcaption class="figure-caption">The main section of my About page: https://silvia.rbind.io/about/</figcaption></figure>
 </div>
 </div>
 </div>
@@ -3415,14 +3501,12 @@ font-style: inherit;">└──</span> talk</span></code></pre></div>
 <col style="width: 43%">
 <col style="width: 31%">
 </colgroup>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th>Step</th>
 <th>Content to copy</th>
 <th>From</th>
 <th>To</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td>1</td>
@@ -3461,19 +3545,14 @@ font-style: inherit;">└──</span> talk</span></code></pre></div>
 <td>content/about/sidebar/avatar.png</td>
 </tr>
 </tbody>
-</table>
-</section>
-<section id="homepage" class="level3">
-<h3 class="anchored" data-anchor-id="homepage">Homepage</h3>
+</table></section><section id="homepage" class="level3"><h3 class="anchored" data-anchor-id="homepage">Homepage</h3>
 <p>Resource: <a href="https://hugo-apero-docs.netlify.app/blog/homepage/">Customize your homepage | Hugo Apéro</a></p>
 <p>My homepage: <a href="https://github.com/spcanelon/silvia/blob/bef8a7c9fd7b529e7cb58c3c92dafe59aa8d2259/content/_index.md">content/_index.md</a></p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/silvia-home-page.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="My Homepage: https://silvia.rbind.io"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-home-page.png" class="img-fluid figure-img" alt="The homepage of my site which shows my name in large font on the left, my title, social media icons, a short blurb about me, and a link that says 'Read More' that can be clicked to enter the site. On the right side is a photo of one of my favorite lakes." width="1280"></a></p>
-<figcaption class="figure-caption">My Homepage: https://silvia.rbind.io</figcaption>
-</figure>
+<figure class="figure"><p><a href="img/silvia-home-page.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="My Homepage: https://silvia.rbind.io"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-home-page.png" class="img-fluid figure-img" alt="The homepage of my site which shows my name in large font on the left, my title, social media icons, a short blurb about me, and a link that says 'Read More' that can be clicked to enter the site. On the right side is a photo of one of my favorite lakes." width="1280"></a></p>
+<figcaption class="figure-caption">My Homepage: https://silvia.rbind.io</figcaption></figure>
 </div>
 </div>
 </div>
@@ -3481,18 +3560,13 @@ font-style: inherit;">└──</span> talk</span></code></pre></div>
 <li><p>Copy <strong>_ index.md</strong> from <code>themes/hugo-apero/content/</code> to <code>content/</code></p></li>
 <li><p>Save an image for your homepage in the <code>static/img/</code> folder</p></li>
 <li><p>Specify your homepage image in <strong>_ index.md</strong></p></li>
-</ol>
-</section>
-<section id="blog" class="level3">
-<h3 class="anchored" data-anchor-id="blog">Blog</h3>
+</ol></section><section id="blog" class="level3"><h3 class="anchored" data-anchor-id="blog">Blog</h3>
 <p>My blog listing: <a href="https://github.com/spcanelon/silvia/blob/bef8a7c9fd7b529e7cb58c3c92dafe59aa8d2259/content/blog/_index.md">content/blog/_index.md</a></p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/silvia-blog-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="My Blog listing: https://silvia.rbind.io/blog"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-blog-list.png" class="img-fluid figure-img" alt="The Blog listing page for my site with a sidebar layout and thumbnails enabled. There is a sidebar on the left side with some information about my blog including a blog name 'Meeting People Where They R'. It also includes my name as the blog author, a link to subscribe via RSS, and a decorative image of a small potted cactus plant sitting on top of a stack of books. On the right side in the main area of the page there are two blog posts featured, including this one. Each has a title, a summary, the date, and a decorative image as the thumbnail." width="1265"></a></p>
-<figcaption class="figure-caption">My Blog listing: https://silvia.rbind.io/blog</figcaption>
-</figure>
+<figure class="figure"><p><a href="img/silvia-blog-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="My Blog listing: https://silvia.rbind.io/blog"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-blog-list.png" class="img-fluid figure-img" alt="The Blog listing page for my site with a sidebar layout and thumbnails enabled. There is a sidebar on the left side with some information about my blog including a blog name 'Meeting People Where They R'. It also includes my name as the blog author, a link to subscribe via RSS, and a decorative image of a small potted cactus plant sitting on top of a stack of books. On the right side in the main area of the page there are two blog posts featured, including this one. Each has a title, a summary, the date, and a decorative image as the thumbnail." width="1265"></a></p>
+<figcaption class="figure-caption">My Blog listing: https://silvia.rbind.io/blog</figcaption></figure>
 </div>
 </div>
 </div>
@@ -3542,18 +3616,13 @@ font-style: inherit;"># &lt;-- item 2 in the navigation bar</span></span></code>
 <ul>
 <li><p>Make sure <code>text_link_url: /blog/</code></p></li>
 <li><p>The <code>author:</code> field will populate the by-line in each blog post unless another author is indicated in the YAML of the blog post.</p></li>
-</ul>
-</section>
-<section id="publications" class="level3">
-<h3 class="anchored" data-anchor-id="publications">Publications</h3>
+</ul></section><section id="publications" class="level3"><h3 class="anchored" data-anchor-id="publications">Publications</h3>
 <p>My publication listing: <a href="https://github.com/spcanelon/silvia/blob/bef8a7c9fd7b529e7cb58c3c92dafe59aa8d2259/content/publication/_index.md">content/publication/_index.md</a></p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/silvia-publication-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="My Publication listing: https://silvia.rbind.io/publication"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-publication-list.png" class="img-fluid figure-img" alt="The Publication listing page for my site with a single layout which doesn't have a sidebar. The top of the page says 'Publications' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There is primarily one publication featured with a title, a summary, the authors, and the date. This listing visually separates publications in the list with a horizontal bar" width="1265"></a></p>
-<figcaption class="figure-caption">My Publication listing: https://silvia.rbind.io/publication</figcaption>
-</figure>
+<figure class="figure"><p><a href="img/silvia-publication-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="My Publication listing: https://silvia.rbind.io/publication"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-publication-list.png" class="img-fluid figure-img" alt="The Publication listing page for my site with a single layout which doesn't have a sidebar. The top of the page says 'Publications' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There is primarily one publication featured with a title, a summary, the authors, and the date. This listing visually separates publications in the list with a horizontal bar" width="1265"></a></p>
+<figcaption class="figure-caption">My Publication listing: https://silvia.rbind.io/publication</figcaption></figure>
 </div>
 </div>
 </div>
@@ -3605,30 +3674,25 @@ font-style: inherit;"># &lt;-- item 4 in the navigation bar</span></span></code>
 <ul>
 <li>The Apéro theme doesn’t have a built-in “abstract” field so I copied and pasted the content in this field from the YAML of each publication page into the area below the YAML.</li>
 <li>If your publications have multiple authors, they can be included as a string list in the <code>author:</code> field of the YAML</li>
-</ul>
-</section>
-<section id="talks" class="level3">
-<h3 class="anchored" data-anchor-id="talks">Talks</h3>
+</ul></section><section id="talks" class="level3"><h3 class="anchored" data-anchor-id="talks">Talks</h3>
 <p>My talk listing: <a href="https://github.com/spcanelon/silvia/blob/bef8a7c9fd7b529e7cb58c3c92dafe59aa8d2259/content/talk/_index.md">content/talk/_index.md</a></p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/silvia-talk-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="My Talk listing: https://silvia.rbind.io/talk"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-talk-list.png" class="img-fluid figure-img" alt="The Talk listing page for my site with a single layout which doesn't have a sidebar and features decorative thumbnail images on the left. The top of the page says 'Talks' and below is a short description of what can be found on the page. This listing visually separates talks in the list by year with a horizontal bar." width="1265"></a></p>
-<figcaption class="figure-caption">My Talk listing: https://silvia.rbind.io/talk</figcaption>
-</figure>
+<figure class="figure"><p><a href="img/silvia-talk-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="My Talk listing: https://silvia.rbind.io/talk"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-talk-list.png" class="img-fluid figure-img" alt="The Talk listing page for my site with a single layout which doesn't have a sidebar and features decorative thumbnail images on the left. The top of the page says 'Talks' and below is a short description of what can be found on the page. This listing visually separates talks in the list by year with a horizontal bar." width="1265"></a></p>
+<figcaption class="figure-caption">My Talk listing: https://silvia.rbind.io/talk</figcaption></figure>
 </div>
 </div>
 </div>
 <p>Rename <strong>content/talk/_ index.md</strong> to <strong>_ index-old.md</strong> and copy over <strong>_ index.md</strong> from <code>themes/hugo-apero/exampleSite/content/talk/</code></p>
 <p>Edit <strong>content/talk/_ index.md</strong> to suit your preferences</p>
-</section>
-<section id="rmd-.rmarkdown" class="level3">
-<h3 class="anchored" data-anchor-id="rmd-.rmarkdown">.Rmd → .Rmarkdown</h3>
+</section><section id="rmd-.rmarkdown" class="level3"><h3 class="anchored" data-anchor-id="rmd-.rmarkdown">.Rmd → .Rmarkdown</h3>
 <p>You can create content for your blogdown site from <strong>.md</strong>, <strong>.Rmd</strong>, and <strong>.Rmarkdown</strong> files, anytime and anywhere. However, there are some limitations:</p>
 <ul>
-<li><strong>.md</strong> is great if your file doesn’t contain any R code</li>
-<li><strong>.Rmd</strong> files generate <strong>.html</strong> files while <strong>.Rmarkdown</strong> files generate <strong>.markdown</strong> files. Both can run R code, but only <strong>.markdown</strong> files generated from <strong>.Rmarkdown</strong> benefit from some of the features available from Hugo, like the syntax highlighting built into Apéro.</li>
+<li>
+<strong>.md</strong> is great if your file doesn’t contain any R code</li>
+<li>
+<strong>.Rmd</strong> files generate <strong>.html</strong> files while <strong>.Rmarkdown</strong> files generate <strong>.markdown</strong> files. Both can run R code, but only <strong>.markdown</strong> files generated from <strong>.Rmarkdown</strong> benefit from some of the features available from Hugo, like the syntax highlighting built into Apéro.</li>
 </ul>
 <p>If you were writing R tutorials/posts/etc. in <strong>.Rmd</strong> (like me), you will notice any code chunks you were displaying will not be formatted with proper syntax highlighting :cry: To remedy this, you will have to:</p>
 <ol type="1">
@@ -3638,21 +3702,18 @@ font-style: inherit;"># &lt;-- item 4 in the navigation bar</span></span></code>
 </ol>
 <p><i class="fas fa-exclamation-triangle pr2"></i> Rebuilding your R Markdown pages may not be a good idea if they contain code that might break, so please proceed with caution!</p>
 <p>If you made it this far, <strong>congratulations</strong>! You have a brand new site! :partying_face:</p>
-</section>
-</section>
-<section id="final-touches" class="level2">
-<h2 class="anchored" data-anchor-id="final-touches">Final touches</h2>
-<section id="contact-form" class="level3">
-<h3 class="anchored" data-anchor-id="contact-form">Contact form</h3>
+</section></section><section id="final-touches" class="level2"><h2 class="anchored" data-anchor-id="final-touches">Final touches</h2>
+<section id="contact-form" class="level3"><h3 class="anchored" data-anchor-id="contact-form">Contact form</h3>
 <p>Resource: <a href="https://hugo-apero-docs.netlify.app/learn/built-in-contact-form/">Built-in Contact Form | Hugo Apéro</a></p>
 <p>If you’d like to use Apéro’s built-in contact form powered by Formspree, copy the <code>themes/hugo-apero/exampleSite/content/form/</code> folder into <code>content/</code> and edit <strong>contact.md</strong>.</p>
-</section>
-<section id="tidying-up-your-directory" class="level3">
-<h3 class="anchored" data-anchor-id="tidying-up-your-directory">Tidying up your directory</h3>
+</section><section id="tidying-up-your-directory" class="level3"><h3 class="anchored" data-anchor-id="tidying-up-your-directory">Tidying up your directory</h3>
 <p>Now you can delete all of the files and folders you don’t need anymore!</p>
 <p>I’m including the files and folders I deleted as a list and as a directory tree. These are organized in the panelset below.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" aria-controls="tabset-2-1" aria-selected="true">List of items</a></li><li class="nav-item"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" aria-controls="tabset-2-2" aria-selected="false">Directory tree</a></li></ul>
+<ul class="nav nav-tabs">
+<li class="nav-item"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" aria-controls="tabset-2-1" aria-selected="true">List of items</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" aria-controls="tabset-2-2" aria-selected="false">Directory tree</a></li>
+</ul>
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" aria-labelledby="tabset-2-1-tab">
 <!-- {{< panelset class="files and folders to delete" >}}
@@ -3665,8 +3726,10 @@ font-style: inherit;"># &lt;-- item 4 in the navigation bar</span></span></code>
 <li>The assets/images folder</li>
 <li>The static/img/headers, static/publications, and static/rmarkdown-libs folders</li>
 <li>All of the <strong>index.html</strong> files in the blog, publication, and talks folders</li>
-<li>The old config file, that I had renamed <strong>config_old.toml</strong></li>
-<li>The old index files that I had renamed <strong>_ index-old.md</strong></li>
+<li>The old config file, that I had renamed <strong>config_old.toml</strong>
+</li>
+<li>The old index files that I had renamed <strong>_ index-old.md</strong>
+</li>
 <li>The partials in layouts/shortcodes</li>
 <li>And finally the themes/hugo-academic folder! 🔥</li>
 </ul>
@@ -3677,8 +3740,10 @@ font-style: inherit;"># &lt;-- item 4 in the navigation bar</span></span></code>
 <p>I deleted the following files:</p>
 <ul>
 <li>All of the <strong>index.html</strong> files in the blog, publication, and talks folders</li>
-<li>The old config file, that I had renamed <strong>config_old.toml</strong></li>
-<li>The old index files that I had renamed <strong>_ index-old.md</strong></li>
+<li>The old config file, that I had renamed <strong>config_old.toml</strong>
+</li>
+<li>The old index files that I had renamed <strong>_ index-old.md</strong>
+</li>
 </ul>
 <p>And I deleted the folders indicated in this directory tree:</p>
 <p><i class="fa-solid fa-route" aria-label="route"></i> Location: <code>silvia/</code></p>
@@ -3751,24 +3816,19 @@ font-style: inherit;"># &lt;-- this folder</span></span></code></pre></div>
 </div>
 </div>
 <!-- end tabset-panel -->
-</section>
-</section>
-<section id="customizing-your-site" class="level2">
-<h2 class="anchored" data-anchor-id="customizing-your-site">Customizing your site</h2>
+</section></section><section id="customizing-your-site" class="level2"><h2 class="anchored" data-anchor-id="customizing-your-site">Customizing your site</h2>
 <p>Hopefully all of that wasn’t terrible, and if it was, please know I’m rooting for you. You’re doing great! :raised_hands:</p>
 <p>Now you get to enjoy the fun part which is customizing your site! The theme documentation goes through this in detail:</p>
 <ul>
 <li><a href="https://hugo-apero-docs.netlify.app/learn/social/">Set up your social | Hugo Apéro</a></li>
 <li><a href="https://hugo-apero-docs.netlify.app/learn/fonts/">Style your site typography | Hugo Apéro</a></li>
 <li><a href="https://hugo-apero-docs.netlify.app/learn/color-themes/">Style your site colors | Hugo Apéro</a></li>
-</ul>
-</section>
-<section id="deploying-your-new-site" class="level2">
-<h2 class="anchored" data-anchor-id="deploying-your-new-site">Deploying your new site</h2>
+</ul></section><section id="deploying-your-new-site" class="level2"><h2 class="anchored" data-anchor-id="deploying-your-new-site">Deploying your new site</h2>
 <p>Once you’re happy with your new Apéro site, the last step is to merge your <code>apero</code> branch with the primary branch of your website repository. But first, a few steps:</p>
 <ol type="1">
 <li><p><strong>Optional:</strong> Create a branch of your primary branch and call it <code>hugo-academic</code> so that you have a snapshot of your Academic files right before the merge. Since we set up Netlify to deploy all of our branches, there will now be a live link for this new branch that you can visit whenever you feel like time traveling back to your old site. For me this link is https://hugo-academic–silvia.netlify.app/</p></li>
-<li><p>Switch back to your <code>apero</code> branch and update the <code>baseURL</code> field in <strong>config.toml</strong> to your regular website path. In my case:</p>
+<li>
+<p>Switch back to your <code>apero</code> branch and update the <code>baseURL</code> field in <strong>config.toml</strong> to your regular website path. In my case:</p>
 <div class="sourceCode" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb20-1"><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">baseURL</span> <span class="op" style="color: #5E5E5E;
@@ -3776,9 +3836,11 @@ background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"https://silvia.rbind.io/"</span></span></code></pre></div>
-<p>Then commit and push this change to your <code>apero</code> branch.</p></li>
+<p>Then commit and push this change to your <code>apero</code> branch.</p>
+</li>
 <li><p>Merge your <code>apero</code> branch with your primary branch. I usually use git commands in a combination of the RStudio terminal and the Git pane, but for this big merge I felt more comfortable doing it on github.com! :sweat_smile: Do what feels most comfortable for you.</p></li>
-<li><p>Resolve any merge conflicts (I had a few!) in the git tool of your choosing. These are the git commands GitHub recommended:</p>
+<li>
+<p>Resolve any merge conflicts (I had a few!) in the git tool of your choosing. These are the git commands GitHub recommended:</p>
 <div class="sourceCode" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> fetch origin       <span class="co" style="color: #5E5E5E;
@@ -3807,19 +3869,20 @@ background-color: null;
 font-style: inherit;">--no-ff</span> apero <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># creates a new commit for the merge</span></span></code></pre></div>
-<p>This step will sort of replace all of the files that both themes had in common with the <code>apero</code> version (e.g.&nbsp;<strong>config.toml</strong>, <strong>netlify.toml</strong>, <strong>content/publication</strong>), and leave the old Academic files alone. So you will have to delete these extra Academic files (again!). I’m not sure how to avoid this – maybe it’s not an issue when you don’t have merge conflicts? I don’t know :thinking:</p></li>
-<li><p>Tidy up your directory (again?)</p>
+<p>This step will sort of replace all of the files that both themes had in common with the <code>apero</code> version (e.g.&nbsp;<strong>config.toml</strong>, <strong>netlify.toml</strong>, <strong>content/publication</strong>), and leave the old Academic files alone. So you will have to delete these extra Academic files (again!). I’m not sure how to avoid this – maybe it’s not an issue when you don’t have merge conflicts? I don’t know :thinking:</p>
+</li>
+<li>
+<p>Tidy up your directory (again?)</p>
 <p>Go through the steps above to clean out any residual Academic files from your directory. Make sure to check your <code>content/</code> folders for any example files from Academic that might still be hanging around and delete them.</p>
-<p>Then run <code>blogdown::serve_site()</code> to build your new Apéro site locally. Go through the site and make sure everything looks the way it should and that links are generally pointing to the right places.</p>
-<p>When you’re satisfied, commit the changes to your primary branch!<br>There may be <em>a lot</em> of files that were deleted and added during the switch to Apéro and, while not generally recommended, I used the <code>git add .</code> command to stage all of the changes at once, commited the changes, and then pushed. I did this after thoroughly looking through the list of changed files so I knew what was happening.</p></li>
+<p>Then run <code><a href="https://pkgs.rstudio.com/blogdown/reference/serve_site.html">blogdown::serve_site()</a></code> to build your new Apéro site locally. Go through the site and make sure everything looks the way it should and that links are generally pointing to the right places.</p>
+<p>When you’re satisfied, commit the changes to your primary branch!<br>There may be <em>a lot</em> of files that were deleted and added during the switch to Apéro and, while not generally recommended, I used the <code>git add .</code> command to stage all of the changes at once, commited the changes, and then pushed. I did this after thoroughly looking through the list of changed files so I knew what was happening.</p>
+</li>
 <li><p>Wait a couple of minutes for the changes to get pushed to your primary branch (e.g.&nbsp;<code>main</code>) and then wait patiently for Netlify to build your site after the merge.</p></li>
 <li><p><i class="fa-solid fa-glass-cheers" aria-label="glass-cheers"></i> Celebrate and share your brand new site! 🎉 🥳 🍾<br>If you share on Twitter, use the #HugoApero hashtag so the <a href="https://twitter.com/apreshill/status/1397052533588185092">Hugo Apéro squad</a> can clap for you!</p></li>
 </ol>
 
 
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2021" class="csl-entry quarto-appendix-citeas">
+</section><a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2021" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2021. <span>“Hello Hugo Apéro: Converting a Blogdown
 Site from Hugo Academic.”</span> June 1, 2021. <a href="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero">https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero</a>.
 </div></div></section></div> ]]></description>
@@ -3840,8 +3903,12 @@ Site from Hugo Academic.”</span> June 1, 2021. <a href="https://silviacanelon.
   <description><![CDATA[ 
 
 <!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
-<!-- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title"> -->
+<!-- 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title"> 
+-->
+<!-- <header id="title-block-header" class="quarto-title-block default page-columns"> -->
+<!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> -->
 
 
 <blockquote class="blockquote">
@@ -4135,7 +4202,7 @@ font-style: inherit;">"master"</span>)</span></code></pre></div>
 </section>
 
 
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
 <li id="fn1"><p><a href="https://happygitwithr.com/rstudio-git-github.html">Chapter 12 Connect RStudio to Git and GitHub | Happy Git and GitHub for the useR</a>↩︎</p></li>
@@ -4160,8 +4227,12 @@ Pages.”</span> March 16, 2021. <a href="https://silviacanelon.com/blog/2021-03
   <description><![CDATA[ 
 
 <!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
-<!-- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title"> -->
+<!-- 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title"> 
+-->
+<!-- <header id="title-block-header" class="quarto-title-block default page-columns"> -->
+<!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> -->
 
 
 <script src="{{< blogdown/postref >}}index_files/fitvids/fitvids.min.js"></script>
@@ -4406,7 +4477,7 @@ Pages.”</span> March 16, 2021. <a href="https://silviacanelon.com/blog/2021-03
 </section>
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2020" class="csl-entry quarto-appendix-citeas">
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2020" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2020. <span>“Becoming Certified as an RStudio Tidyverse
 Instructor.”</span> October 7, 2020. <a href="https://silviacanelon.com/blog/2020-10-07-rstudio-instructor-certification-tidyverse">https://silviacanelon.com/blog/2020-10-07-rstudio-instructor-certification-tidyverse</a>.
 </div></div></section></div> ]]></description>
@@ -4425,8 +4496,12 @@ Instructor.”</span> October 7, 2020. <a href="https://silviacanelon.com/blog/2
   <description><![CDATA[ 
 
 <!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
-<!-- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title"> -->
+<!-- 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title"> 
+-->
+<!-- <header id="title-block-header" class="quarto-title-block default page-columns"> -->
+<!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> -->
 
 
 <style>.color-preview {
@@ -4683,7 +4758,7 @@ font-style: inherit;">;</span></span></code></pre></div>
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2020" class="csl-entry quarto-appendix-citeas">
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2020" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2020. <span>“Customizing Hugo Academic’s Dark Mode with
 Help from Atom.”</span> June 16, 2020. <a href="https://silviacanelon.com/blog/2020-05-26-dark-mode-custom-with-atom">https://silviacanelon.com/blog/2020-05-26-dark-mode-custom-with-atom</a>.
 </div></div></section></div> ]]></description>
@@ -4704,8 +4779,12 @@ Help from Atom.”</span> June 16, 2020. <a href="https://silviacanelon.com/blog
   <description><![CDATA[ 
 
 <!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
-<!-- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title"> -->
+<!-- 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title"> 
+-->
+<!-- <header id="title-block-header" class="quarto-title-block default page-columns"> -->
+<!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> -->
 
 
 <p><strong><a href="https://airtable.com/">Airtable</a> is a user-friendly and <em>powerful</em> tool</strong> that until recently I’d been using for personal projects (i.e.&nbsp;document organizing, apartment hunting, etc.). A couple of weeks ago I leaned on Airtable to create a base designed for the <a href="https://www.womensmedicalfund.org/prfc">Philadelphia Reproductive Freedom Collective</a> to support our COVID-19 mutual aid efforts.</p>
@@ -5551,7 +5630,7 @@ font-style: inherit;">"tidy_cards.csv"</span>)</span></code></pre></div>
 </section>
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2020" class="csl-entry quarto-appendix-citeas">
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2020" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2020. <span>“Migrating from Trello to Airtable: Working
 with JSON Data in R.”</span> May 12, 2020. <a href="https://silviacanelon.com/blog/2020-05-12-trello-to-airtable">https://silviacanelon.com/blog/2020-05-12-trello-to-airtable</a>.
 </div></div></section></div> ]]></description>
@@ -5568,14 +5647,10 @@ with JSON Data in R.”</span> May 12, 2020. <a href="https://silviacanelon.com/
   <title>Philly Center City Sips 2019: An Interactive Map</title>
   <dc:creator>Silvia Canelón</dc:creator>
   <link>https://silviacanelon.com/blog/2019-08-04-ccd-sips/index.html</link>
-  <description><![CDATA[ 
-
-<!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
-<!-- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title"> -->
-
-
-<blockquote class="blockquote">
+  <description><![CDATA[ <!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html --><!-- 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title"> 
+--><!-- <header id="title-block-header" class="quarto-title-block default page-columns"> --><!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> --><blockquote class="blockquote">
 <p>For a more recent map, check out <a href="../../blog/2022-ccd-sips/">Philly Center City District Sips 2022: An Interactive Map</a></p>
 </blockquote>
 <p>I used <strong>R</strong> to play around with <strong>webscraping</strong> and create an <a href="http://tiny.cc/ccdsips2019">interactive map</a> showing restaurants participating in Philly’s 2019 <a href="https://web.archive.org/web/20190625050339/https://centercityphila.org/explore-center-city/ccdsips">Center City District Sips</a>. Center City Sips is a series of summer Wednesday evenings filled with <strong>happy hour specials</strong>.</p>
@@ -5591,7 +5666,7 @@ with JSON Data in R.”</span> May 12, 2020. <a href="https://silviacanelon.com/
 
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2019" class="csl-entry quarto-appendix-citeas">
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2019" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2019. <span>“Philly Center City Sips 2019: An
 Interactive Map.”</span> August 4, 2019. <a href="https://silviacanelon.com/blog/2019-08-04-ccd-sips">https://silviacanelon.com/blog/2019-08-04-ccd-sips</a>.
 </div></div></section></div> ]]></description>
