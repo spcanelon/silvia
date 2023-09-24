@@ -25,7 +25,7 @@ links:
   url: https://github.com/presentable-user2021
 - icon: link
   name: related talk
-  url: ../../talk/2021-07-07-presentable-user2021/
+  url: ../../talk/2021-07-07-presentable-user2021/ 
 ---
 
 ## Abstract

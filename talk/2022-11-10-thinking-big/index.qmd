@@ -20,7 +20,7 @@ links:
   url: https://slides.silviacanelon.com/2022-thinking-big
 - icon: play-btn-fill
   name: video
-  url: https://youtu.be/wiAnmkbgcO8
+  url: https://youtu.be/wiAnmkbgcO8 
 ---
 
 The road to map-making can take some unexpected twists and turns when you scale up an interactive map from hundreds of features to hundreds of thousands. This talk is a story about creative spatial data wrangling, powerful R packages, and a heroic #RStats community.

@@ -13,19 +13,17 @@ categories:
   - EHR
   - pregnancy
   - medications
-abstract: 'Scientific Reports'
+description: 'Scientific Reports'
 # doi-title: Scientific Reports (DOI)
 # doi: "10.1038/s41598-022-24218-1"
 subtitle: EHR study describing an MWAS approach to explore connections between exposure to repurposed COVID-19 prescription medications and the risk of cesarean section, preterm birth, and stillbirth
-description: Description text example
-# abstract: ''
 links:
 - icon: file-richtext-fill
   name: Publication
   url: https://doi.org/10.1038/s41598-022-24218-1
 filters:
   - lightbox
-lightbox: auto
+lightbox: auto 
 ---
 
 ## Abstract

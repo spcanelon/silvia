@@ -1,18 +1,22 @@
 <!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
-<!-- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title"> -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-<div class="quarto-title column-body page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);">
+<!-- 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title"> 
+-->
+<!-- <header id="title-block-header" class="quarto-title-block default page-columns"> -->
+<!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> -->
+<header id="title-block-header" class="quarto-title-block default page-columns">
+<div id="title-block-header-title" class="quarto-title page-columns page-full page-layout-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);">
 <h1 class="title">$title$</h1>
 $if(subtitle)$
 <p class="subtitle lead">$subtitle$</p>
 $endif$
 $if(categories)$
   $if(quarto-template-params.title-block-categories)$
-<div class="quarto-categories">
-  $for(categories)$
-  <div class="quarto-category">$categories$</div>
-  $endfor$
+  <div class="quarto-categories">
+    $for(categories)$
+    <div class="quarto-category">$categories$</div>
+    $endfor$
   </div>
   $endif$
 $endif$
@@ -21,7 +25,7 @@ $endif$
 $if(hide-description)$
 $elseif(description)$
 <div>
-  <div class="description pt-4">
+  <div id="title-block-title-desc" class="description pt-4">
     $description$
   </div>
 </div>

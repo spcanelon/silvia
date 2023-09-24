@@ -1,9 +1,8 @@
 ---
 title: "Talks"
 description: |
-  This is a home for invited talks and workshops, each linked with accompanying materials.
-  
-  <br>A collection of slide decks can be found at [slides.silviacanelon.com](https://slides.silviacanelon.com)
+  This is a home for invited talks and workshops, each linked with accompanying materials.<br>
+  A collection of slide decks can be found at [slides.silviacanelon.com](https://slides.silviacanelon.com)
 listing: 
   contents: 
     - "**/index.qmd"
@@ -18,12 +17,9 @@ listing:
   image-align: left
   # image-height: 10em
   page-size: 5
-page-layout: article
 format: 
   html: 
-    grid:
-      sidebar-width: 0px
-      margin-width: 0px
+    page-layout: full
 title-block-banner: false
 
 header-includes: >

@@ -1,7 +1,8 @@
 ---
 title: "Publications" 
 description: |
-  This is home for my research publications, each linked with accompanying preprints, posters, and/or news pieces.
+  This is home for my research publications, each linked with<br>
+  accompanying preprints, posters, and/or news pieces.
 listing: 
   contents: 
     - "**/index.qmd"
@@ -16,12 +17,10 @@ listing:
   image-align: left
   # image-height: 10em
   page-size: 5
-page-layout: article
+
 format: 
   html: 
-    grid:
-      sidebar-width: 0px
-      margin-width: 0px
+    page-layout: full
 title-block-banner: false
 
 header-includes: >

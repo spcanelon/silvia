@@ -1,10 +1,8 @@
 ---
 title: "Meeting People Where They R"
 description: |
-  This is my blog where I practice sharing my curiosity about R.
-  
-  It includes notes and tutorials for my future self and hopefully also for you.
-
+  This is my blog where I practice sharing my curiosity about R.<br>
+  It includes notes and tutorials for my future self and hopefully also for you.<br>
   [Subscribe via RSS](/index.xml)
 listing: 
   contents: 
@@ -24,12 +22,9 @@ listing:
 citation: false
 toc: false
 comments: false
-page-layout: article
 format: 
   html: 
-    grid:
-      sidebar-width: 0px
-      margin-width: 0px
+    page-layout: full
 title-block-banner: false
 
 header-includes: >

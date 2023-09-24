@@ -3,7 +3,7 @@ execute:
   freeze: true
 
 # Enable banner style title blocks
-title-block-banner: false
+title-block-banner: true
 
 # Default fields for citation
 citation: false
