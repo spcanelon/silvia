@@ -7,6 +7,9 @@ website:
   title: "Silvia Canelón"
   site-url: https://silviacanelon.com
   description: "Researcher and R educator applying biomedical and spatial data science in ways that prioritize health equity."
+  favicon: assets/silvia/img/logo_rounded.svg
+  page-navigation: true
+  back-to-top-navigation: true
   comments: 
     utterances: 
       repo: spcanelon/silvia 
@@ -70,6 +73,7 @@ format:
         - assets/silvia/colors.scss
         - assets/silvia/fonts.scss
     highlight-style: a11y
+    code-link: true
 
 execute: 
   freeze: auto
