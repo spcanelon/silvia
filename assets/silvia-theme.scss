@@ -4,47 +4,52 @@
 // Variables: https://github.com/quarto-dev/quarto-cli/src/resources/formats/html/bootstrap/_bootstrap-variables.scss
 // Rules: https://github.com/quarto-dev/quarto-cli/src/resources/formats/html/bootstrap/_bootstrap-rules.scss
 
-// Colors
-$primary:                    $spc-primary-light !default;
-$secondary:                  $spc-secondary !default;
+// Colors: Quarto variables
+$primary:                    $spc-primary-light;
+$secondary:                  $spc-secondary;
+// Colors: custom variables
+$primary-dark:               $spc-primary;
+$secondary-light:            $spc-secondary-light;
+$accent:                     $spc-accent; 
+$accent-light:               $spc-accent-light;
+$accent-dark:                $spc-accent-dark;
 
 // Body
-$body-color:                 $spc-primary !default;
-$body-bg:                    $spc-bg !default;
-$body-secondary:             $spc-accent-dark !default;
+$body-color:                 $primary-dark;
+$body-bg:                    $spc-bg;
+$body-secondary:             $accent-dark;
 
 // Fonts
 
 // stylelint-disable-next-line value-keyword-case
-$font-family-sans-serif:     "Red Hat Text", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-// $font-family-serif: "Petrona", serif, !default;
-$headings-font-weight:       400 !default;
+$font-family-sans-serif:     "Red Hat Text", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+// $font-family-serif: "Petrona", serif,;
+$headings-font-weight:       400;
 
-$font-family-monospace:      "Dank Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-monospace:      "Dank Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
-$headings-font-family:       "Petrona" !default;
+$headings-font-family:       "Petrona";
 
 // Links
 
-$link-color:                  $secondary !default;
-$link-decoration:             underline !default;
-$link-hover-color:            $spc-secondary-light !default;
-$link-hover-decoration:       none !default;
+$link-color:                  $secondary;
+$link-decoration:             underline;
+$link-hover-color:            $secondary-light;
+$link-hover-decoration:       none;
 
 // Tables
 
-$table-border-color:          $primary !default;
-$table-group-separator-color: lighten($primary, 40) !default;
-$table-caption-color:         $primary !default;
+$table-border-color:          $primary;
+$table-group-separator-color: lighten($primary, 40%);
+$table-caption-color:         $primary;
 
 // Code blocks
 $code-block-bg:              white;
 $code-block-border:          #ebebeb;
 
 // Inline code
-$code-color:                  $spc-primary;
-$code-bg:                     $spc-accent-light;
-$code-padding:                $spc-accent;
+$code-color:                  $primary-dark;
+$code-bg:                     $accent-light;
 
 // Table of contents
 $toc-color:                   $link-color;
@@ -58,25 +63,30 @@ $navbar-fg:                   $secondary;
 $footer-fg:                   $primary;
 
 // table variable overrides
-$table-group-separator-color: lighten($primary, 25);
-$table-group-separator-color-lighter: lighten($primary, 50);
+$table-group-separator-color: lighten($primary, 25%);
+$table-group-separator-color-lighter: lighten($primary, 50%);
 
 // Miscellaneous (workarounds)
-$gray-200:                    lighten($primary, 60);
+$gray-200:                    lighten($primary, 60%);
 
 /*-- scss:rules --*/
 
 // Code
 
+// code block
+div.sourceCode {
+  background-color: $code-block-bg;
+  border: 1px solid $code-block-border;
+}
+
 // inline code
 p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
-  border: 1px solid $spc-accent;
+  border: 1px solid $accent;
 }
 
 // Blockquotes
-
 .blockquote {
-  color: lighten($primary, 15);
+  color: lighten($primary, 15%);
   font-style: oblique;
 }
 
@@ -87,7 +97,7 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
   color: $secondary !important;
   
   &:hover {
-    color: $spc-secondary-light !important;
+    color: $secondary-light !important;
   }
 }
 
@@ -96,7 +106,7 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
   color: $secondary !important;
 
   &:hover {
-    color: $spc-secondary-light !important;
+    color: $secondary-light !important;
   }
 }
 
@@ -139,7 +149,6 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
   color: white;
   border-color: $primary;
   &:hover {
-    // background-color: #6c757d;
     background-color: white;
     color: $primary;
   }
@@ -150,7 +159,6 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
   color: $secondary !important;
   border-color: $secondary !important;
   &:hover {
-  // background-color: #6c757d;
   background-color: $secondary;
   color: white !important;
   }
@@ -198,7 +206,7 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
     color: $secondary;
     // link on hover
     &:hover {
-      color: $spc-secondary-light;
+      color: $secondary-light;
     }
 }
 
@@ -272,13 +280,6 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
     }
   }
 }
-
-// Code: block
-div.sourceCode {
-  background-color: $code-block-bg;
-  border: 1px solid $code-block-border;
-}
-
 
 // Mobile
 
