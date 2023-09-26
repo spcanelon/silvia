@@ -1,5 +1,9 @@
 /*-- scss:defaults --*/
 
+// Quarto references:
+// Variables: https://github.com/quarto-dev/quarto-cli/src/resources/formats/html/bootstrap/_bootstrap-variables.scss
+// Rules: https://github.com/quarto-dev/quarto-cli/src/resources/formats/html/bootstrap/_bootstrap-rules.scss
+
 // Colors
 $primary:                    $spc-primary-light !default;
 $secondary:                  $spc-secondary !default;
@@ -37,6 +41,11 @@ $table-caption-color:         $primary !default;
 $code-block-bg:              white;
 $code-block-border:          #ebebeb;
 
+// Inline code
+$code-color:                  $spc-primary;
+$code-bg:                     $spc-accent-light;
+$code-padding:                $spc-accent;
+
 /*-- scss:rules --*/
 
 // Tables
@@ -49,8 +58,6 @@ $code-block-border:          #ebebeb;
 
 // inline code
 p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
-  color: $primary;
-  background-color: $spc-accent-light;
   border: 1px solid $spc-accent;
 }
 
