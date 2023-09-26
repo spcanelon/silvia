@@ -79,12 +79,9 @@ listing:
   fields: [title, subtitle, image]
   max-items: 1
   image-height: "200"
-page-layout: article
 format: 
   html: 
-    grid:
-      margin-width: 0px
-      sidebar-width: 0px
+    page-layout: full
 
 header-includes: >
   <link rel="stylesheet" href="../assets/about.css">
