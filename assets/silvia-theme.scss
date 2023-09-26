@@ -7,6 +7,7 @@ $secondary:                  $spc-secondary !default;
 // Body
 $body-color:                 $spc-primary !default;
 $body-bg:                    $spc-bg !default;
+$body-secondary:             $spc-accent-dark !default;
 
 // Fonts
 
@@ -127,10 +128,11 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
 
 // listings
 .listing-category {
-  color: $primary;
+  color: $secondary !important;
+  border-color: $secondary !important;
   &:hover {
   // background-color: #6c757d;
-  background-color: $primary;
+  background-color: $secondary;
   color: white !important;
   }
 }
