@@ -242,6 +242,15 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
   position: absolute;
 }
 
+// links in description
+
+.description a {
+  text-decoration: underline !important;
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
 // Throughout the site
 
 // title
