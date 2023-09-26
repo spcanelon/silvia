@@ -57,16 +57,14 @@ $navbar-fg:                   $secondary;
 // Footer text
 $footer-fg:                   $primary;
 
+// table variable overrides
+$table-group-separator-color: lighten($primary, 25);
+$table-group-separator-color-lighter: lighten($primary, 50);
+
 // Miscellaneous (workarounds)
 $gray-200:                    lighten($primary, 60);
 
 /*-- scss:rules --*/
-
-// Tables
-
-.table > :not(caption) > :not(:last-child) > * {
-  border-bottom-color: lighten($primary, 50);
-}
 
 // Code
 
