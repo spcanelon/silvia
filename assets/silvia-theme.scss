@@ -51,6 +51,9 @@ $toc-color:                   $link-color;
 $toc-active-border:           $toc-color;
 $toc-inactive-border:         lighten($toc-color, 50%);
 
+// Navbar icons
+$navbar-fg:                   $secondary;
+
 // Miscellaneous (workarounds)
 $gray-200:                    lighten($primary, 60);
 
