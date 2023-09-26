@@ -46,6 +46,11 @@ $code-color:                  $spc-primary;
 $code-bg:                     $spc-accent-light;
 $code-padding:                $spc-accent;
 
+// Table of contents
+$toc-color:                   $link-color;
+$toc-active-border:           $toc-color;
+$toc-inactive-border:         lighten($toc-color, 50%);
+
 /*-- scss:rules --*/
 
 // Tables
