@@ -22,10 +22,10 @@ links:
   url: https://doi.org/10.1001/jamanetworkopen.2021.34274
 - icon: file-word
   name: Supplemental Content (Accessible DocX)
-  url: publication/2021-sct-stillbirth/SupplementaryMaterial.docx
+  url: SupplementaryMaterial.docx
 - icon: file-earmark-pdf
   name: Supplemental Content (Accessible PDF)
-  url: publication/2021-sct-stillbirth/SupplementaryMaterial.pdf
+  url: SupplementaryMaterial.pdf
 filters:
   - lightbox
 lightbox: auto

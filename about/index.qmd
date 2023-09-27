@@ -11,7 +11,7 @@ about:
   links:
     - text: "{{< fa universal-access >}}"
       aria-label: "Accessibility statement"
-      href: accessibility.md
+      href: accessibility.qmd
     - icon: mastodon
       href: https://fosstodon.org/@spcanelon
     - icon: github

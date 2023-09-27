@@ -23,7 +23,7 @@ links:
   url: "/talk/2021-05-04-data-viz-accessibility/"
 - icon: bar-chart-line-fill
   name: tidytuesday databases on notion
-  url: tiny.cc/notion-dataviz
+  url: https://tiny.cc/notion-dataviz
 filters:
   - lightbox
 lightbox: auto

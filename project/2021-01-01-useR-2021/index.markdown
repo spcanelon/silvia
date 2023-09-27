@@ -10,8 +10,8 @@ categories:
   - useR
   - tidyverse
   - R
-subtitle: "A [cost-conversion tool](https://spcanelon.github.io/useR2021-cost-conversion-tool/) created for the [useR!2021 Conference](user2021.r-project.org/) (July 5-9, 2021) that leverages Gross Domestic Product and Purchasing Power Parity to adapt sponsorship and registration fees according to the country of residence."
-excerpt: "A [cost-conversion tool](https://spcanelon.github.io/useR2021-cost-conversion-tool/) created for the [useR!2021 Conference](user2021.r-project.org/) (July 5-9, 2021) that leverages Gross Domestic Product and Purchasing Power Parity to adapt sponsorship and registration fees according to the country of residence."
+subtitle: "A [cost-conversion tool](https://spcanelon.github.io/useR2021-cost-conversion-tool/) created for the [useR!2021 Conference](https://user2021.r-project.org/) (July 5-9, 2021) that leverages Gross Domestic Product and Purchasing Power Parity to adapt sponsorship and registration fees according to the country of residence."
+excerpt: "A [cost-conversion tool](https://spcanelon.github.io/useR2021-cost-conversion-tool/) created for the [useR!2021 Conference](https://user2021.r-project.org/) (July 5-9, 2021) that leverages Gross Domestic Product and Purchasing Power Parity to adapt sponsorship and registration fees according to the country of residence."
 links:
 - icon: arrow-left-right
   name: cost conversion tool

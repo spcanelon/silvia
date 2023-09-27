@@ -61,7 +61,7 @@ website:
         aria-label: "License Details"
         href: license.qmd
       - icon: rss
-        href: index.xml
+        href: blog/index.xml
 
 format: 
   html:
