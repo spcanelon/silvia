@@ -26,7 +26,7 @@
 /* about area */
 .about-entity {
   background-color: var(--spc-bg-dark);
-  padding: 3em 0em 3em 0em;
+  padding: 3em 0em 3em 0em !important;
   margin: 0em 2em 0em 2em;
   border-radius: 5px;
 }
@@ -74,5 +74,10 @@
   /* social links: block of links */
   .about-entity .about-links {
     font-size: 1em !important;
+  }
+
+  /* about area */
+  .about-entity {
+    margin: 0em 0em 0em 0em;
   }
 }
