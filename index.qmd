@@ -97,8 +97,9 @@ posts <-
   dplyr::mutate(
     # extract the year-slugs
     slugs = stringr::str_remove(file, "(?!\\d{4}-)\\d{2}-\\d{2}-(?!\\d)"),
-    # slugs = stringr::str_remove(file, "\\d{4}-\\d{2}-\\d{2}-(?!\\d)"),
-    # lines to insert to a netlify _redirect file
+    # create slug urls
+    slugs = paste0(folder, "/", slugs),
+    # create lines to insert to a netlify _redirect file
     redirects = paste0("/", slugs, " ", "/", folder, "/", file)
     )
 
