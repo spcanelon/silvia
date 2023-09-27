@@ -16,7 +16,7 @@ links:
   - icon: graph-up-arrow
     icon_pack: fas
     name: Umami Docs
-    url: umami.is
+    url: https://umami.is
 ---
 
 <style type="text/css">

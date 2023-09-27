@@ -18,7 +18,8 @@ listing:
   image-placeholder: sidebar.jpg
   image-align: right
   page-size: 5
-  feed: true
+  feed:
+    categories: [R]
 citation: false
 toc: false
 comments: false

@@ -163,8 +163,8 @@ If you’re a member of the MiR Community and like the idea of studying with som
 
 -   <i class="fas fa-images"></i> [Slides for the instructor training course • Greg Wilson](https://drive.google.com/drive/folders/13ohFt3D0EJ5PDbMaWTxnHH-hwA7G0IvY)
 -   <i class="fas fa-book"></i> [Teaching Tech Together • Greg Wilson](https://teachtogether.tech/)
--   <i class="fas fa-link"></i> [Teaching R and Data Science with RStudio • Mine Çetinkaya-Rundel](rstd.io/rit)
--   <i class="fas fa-link"></i> [Teaching in Production • Alison Hill](rstd.io/tip)
+-   <i class="fas fa-link"></i> [Teaching R and Data Science with RStudio • Mine Çetinkaya-Rundel](https://rstd.io/rit)
+-   <i class="fas fa-link"></i> [Teaching in Production • Alison Hill](https://rstd.io/tip)
 -   <i class="fab fa-youtube"></i> [Teaching Online at Short Notice - RStudio 2020 • Greg Wilson](https://www.youtube.com/watch?v=-2enQV3Dfng)
 -   <i class="fab fa-youtube"></i> [Sharing on Short Notice - RStudio 2020 • Alison Hill & Desirée De Leon](https://www.youtube.com/watch?v=QcE4RBH2auQ)
 -   <i class="fab fa-youtube"></i> [Evidence Based Teaching: What We Know and How to Use It - EuroSciPy 2015 • Greg Wilson](https://www.youtube.com/watch?v=kmVKGxPlTvc)
