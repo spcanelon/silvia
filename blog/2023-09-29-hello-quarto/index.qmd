@@ -1,0 +1,169 @@
+---
+title: 'Hello Quarto: Porting my Website from Hugo Apéro'
+author: Silvia Canelón
+date: '2023-09-29'
+image: featured.jpg
+categories:
+  - R
+  - quarto
+  - website
+  - git
+subtitle: >
+  Notes from porting my personal Blogdown website to Quarto
+description: ''
+links:
+- icon: journal-text
+  name: Quarto Docs
+  url: https://quarto.org/docs/websites/
+---
+
+## Goodbye, Hugo Apéro
+
+In 2019 I created my first website using blogdown and the [Hugo Academic theme](https://hugo-academic--silvia.netlify.app/), and in 2021 I migrated that site to the [Hugo Apéro theme](https://hugo-apero--silvia.netlify.app/) created by Alison Hill. I even [documented that trek in great detail 😅](../2021-06-01-hello-hugo-apero/) to provide something resembling a paved path for others to use on their journey adopting this beautiful and functional theme. Over the past two years, my Apéro site became a wonderful place to cultivate a [digital garden](https://youtu.be/E5ERSfydB30?feature=shared&t=694)^[See also [Digital gardens let you cultivate your own little bit of the internet | MIT Technology Review](https://www.technologyreview.com/2020/09/03/1007716/digital-gardens-let-you-cultivate-your-own-little-bit-of-the-internet/)]. Now the time has come to say thank you, say goodbye, and travel down a new path. Enter Quarto.
+
+## Why port to Quarto?
+
+[Quarto](https://quarto.org) is a new and powerful technical publishing system in active development, natively friendly to a variety of programming languages and IDEs. There are countless features available in Quarto that I was interested in having access to in my website, so I'll list just my top five:
+
+1. **Flexibility in design.** Quarto offers options for website navigation (top navigation vs. side navigation), "about" pages like the [postcard landing pages](https://github.com/seankross/postcards#the-templates) that a lot of folks use in their distill sites, listing pages that are generated from a list of documents, among others. These components would act like modules that I could combine to design a site that truly fit my needs.
+
+1. **Flexibility in content layout.** With Quarto I would gain the ability to organize content in ways I hadn't even dreamt of. Tables and figures could be laid out across multiple columns and rows as sub-tables and sub-figures of a panel. How much of the page the content took up would be up to me. Content could even go in the margin! 🤩 [I mean, it's pretty cool that content can go in the margin, right?? <br><br> It could even be a picture: <br><br> ![](featured.jpg){fig-alt="Book open in the green grass with some yellow leaves around it"}]{.aside}
+
+1. **Freezing computations.** Quarto would give me the option to [freeze posts](https://quarto.org/docs/websites/website-blog.html#freezing-posts) containing executable code. This was huge for me, because updating my blogdown site always produced a little bit of anxiety. I used to worry that blogdown might try to re-render old R Markdown blog posts and break things! 😱
+
+1. **Site search.** With content spread out over blog posts, talks, publications, and projects, I wanted site visitors (including myself!) to be able to keyword search for something in particular. Tags and categories in blogdown would get me part of the way there, but Quarto offers built-in search capability.
+
+1. **Embedding computations.** Ok this is a feature that I learned about a week ago at posit::conf(2023) from Mine Çetinkaya-Rundel's talk "Reproducible Manuscripts with Quarto." Mine demo'd pulling a table from one `.qmd` file and a figure from an `.ipynb` file into the same manuscript `.qmd` file, _without having to execute the source code again_! 👀 This is a game changer for anyone compiling results from computations performed in different files, and in my personal site I could see it coming in handy if I have a series of blog posts with outputs that I want to cross-reference. Currently we can only embed computations from Jupyter notebook files, but hopefully we'll be able to embed `.qmd` computations in Quarto v1.4! 🤞🏽
+
+## The cost of porting
+
+Gaining the aforementioned Quarto functionality did not come without a cost. To me, the biggest cost was the aesthetics -- the Hugo Apéro theme is quite lovely! -- but I customized my Quarto site enough to reflect the design aspects I loved the most. [More on styling later](#styling-my-site). Some other costs included:
+
+- **Loss of the sidebar layout.** The Apéro theme has options for adding a nicely styled sidebar that I had been using for my blog. It included a featured image and details about the individual post like tags, categories, length, etc. All of this information is available in Quarto posts, it's just organized a little differently.
+
+  <details><summary>Example of the sidebar</summary>
+  ![](img/blog-sidebar-2.png){fig-alt="Post title, author, date, and some content on the left hand side, and a sidebar with metadata on the right hand side. The image featured in the sidebar is a cactus plant in a terracota planter, sitting on top of a pile of books"}
+  </details>
+
+- **Loss of Utterances comments.** Any interactions with folks through Utteranc.es comments did not transfer over, and I'll miss them. The few comments on my site have been very kind (see example below) and I've really enjoy reading them!
+
+  <details><summary>Example of Utterances comments</summary>
+  ![](img/utterances.png){fig-alt="User @capolimia says 'Thank you so much!!!!!! This project last year helped me have a great summer, I appreciate your work!!!' and I respond 'Hi @capolimia, thank you for this comment! I don't how how I missed it. I'm happy to hear that the 2022 post was helpful to you! 🚀'"}
+  </details>
+
+- **Hugo Apéro collections.** The Apéro theme had a way of bundling together posts that were related into a collection of posts. Garrick and I used this feature for our [user!2021 xaringan workshop](../../talk/2021-07-07-presentable-user2021/) and it worked well to organize learning materials for different sections of our workshop. If I wanted something like this in the future, I would probably use Quarto's sidebar navigation feature like Andrew Bray did in his [Rmd to Quarto workshop](https://rstudio-conf-2022.github.io/rmd-to-quarto/materials/) for rstudio::conf(2022).
+
+- **Name pronunciation on the About page.** Apéro had a built-in option for adding an audio clip under your name that you could use to help people learn how your name is pronounced. I never used this feature myself, but if I wanted to, I could look to [Emil Hvitfeldt's site](https://github.com/EmilHvitfeldt/emilhvitfeldt.com/blob/main/about.qmd#L20-L24) as an example.
+
+- **Redirects.** The Apéro theme gave me the option to define the combination of date information and URL slugs for each of my posts, and I had them set up as "year-slug" (e.g., silviacanelon.com/blog/2023-ccd-sips). Quarto does not offer that functionality and strictly creates URLs for posts based on the filepath (e.g., silviacanelon.com/blog/2023-06-05-ccd-sips). In order to continue using my "year-month-day-slug" naming convention for my post folders, I had to set up redirects from the old URLs to the new ones so that there wouldn't be broken links sprinkled throughout the internet. [More on redirects later](#setting-up-redirects).
+
+
+## Layout
+
+::: {.panel-tabset}
+
+### Quarto
+
+```bash
+├── 404.qmd
+├── README.md
+├── _extensions
+├── _freeze
+├── _partials
+├── _quarto.yml
+├── _site
+├── about
+├── accessibility.qmd
+├── assets
+└── blog/
+    └── 2022-09-29-hello-quarto
+        └── index.qmd
+├── contact.qmd
+├── index.qmd
+├── license.qmd
+├── project/
+├── publication/
+├── silvia.Rproj
+├── static
+└── talk
+```
+
+### Hugo Apéro
+
+```bash
+.
+├── config.toml
+├── content
+    ├── _index.md       # <-- new!
+    ├── about           # <-- new!
+    ├── blog            # <-- renamed (formerly post)
+    ├── collection      # <-- new!
+    ├── form            # <-- new!
+    ├── license.md
+    ├── project
+    ├── publication
+    └── talk
+```
+
+:::
+
+- Root folder
+
+- Using listing pages to make "Lately" section
+  - Styling so that it adapted to mobile devices
+
+- Adding contact form
+  - [Tidy Tales - About Tidy Tales](https://tidytales.ca/about/), [source](https://github.com/mccarthy-m-g/tidytales/blob/main/about/index.qmd#L24-L46)
+  - Styling contact form
+
+## Adapting
+
+- Adapting Hugo Apéro YAML to fit Quarto YAML fields
+
+- Adding button links using a `_partial` for title blocks
+  - [Garrick Aden-Buie - Professional, Polished, Presentable](https://www.garrickadenbuie.com/talk/presentable-user2021/)
+
+## Styling my site
+
+- Customizing styling
+  - Repo-dive to find which SCSS variables are predefined: [quarto-cli/src/resources/formats/html/bootstrap/_bootstrap-variables.scss at fce74487ae58139b05b69bc368ccfa6c417c5223 · quarto-dev/quarto-cli](https://github.com/quarto-dev/quarto-cli/blob/fce74487ae58139b05b69bc368ccfa6c417c5223/src/resources/formats/html/bootstrap/_bootstrap-variables.scss)
+  - Repo-dive to find which classes use which SCSS variables: [quarto-cli/src/resources/formats/html/bootstrap/_bootstrap-rules.scss at ac01707b939303ae01d08a408aefba8edd2aac65 · quarto-dev/quarto-cli](https://github.com/quarto-dev/quarto-cli/blob/ac01707b939303ae01d08a408aefba8edd2aac65/src/resources/formats/html/bootstrap/_bootstrap-rules.scss#L658)
+  - Quarto discussions:
+    - [Setting color on block quotes, figure captions, and outlines · quarto-dev/quarto-cli · Discussion #2490](https://github.com/quarto-dev/quarto-cli/discussions/2490)
+
+- Styling Home, About, Contact, and listing pages separately using individual `.css` files
+  - https://github.com/gadenbuie/garrickadenbuie-com/blob/main/index.qmd#L49-L52
+	- [garrickadenbuie-com/index.css at main · gadenbuie/garrickadenbuie-com · GitHub](https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_assets/index.css)
+
+- Adding background image for title blocks
+  - Inspiration and source for web inspecting: [Matt Worthington - A Spatial/GIS Workflow for Interactive Maps in R](https://www.mrworthington.com/articles/rstats/mapping-in-r/)
+  - CSS ideas: [mrworthington.github.io/articles/rstats/mapping-in-r/page_header.css at master · mrworthington/mrworthington.github.io](https://github.com/mrworthington/mrworthington.github.io/blob/master/articles/rstats/mapping-in-r/page_header.css)
+  ```css
+  // style background image on posts
+  .featured-image { /* <1> */
+    // https://stackoverflow.com/a/24084708
+    // style = "background-image: url(featured.png), url(featured.jpg); background-size: cover; color: white; box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.65);"
+    background-size: cover; 
+    background-position: center;
+    color: white; 
+    box-shadow: inset 0 0 0 1000px rgba(0,38,66,0.75);
+  }
+  ```
+  1. Testing code annotation
+
+## Setting up redirects
+
+- Adding redirects for posts using slugs
+  - Adapted Danielle and Tom's code to fit a site with multiple folders of posts that all needed redirects, and also that combined with manual redirects
+	- [Notes from a data witch - Porting a distill blog to quarto](https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto/#netlify-redirects)
+	- [Example from themockup.blog](https://github.com/jthomasmock/themockup-blog/blob/bb069ef7315ad47d877f27c5052cc886ad80818e/index.qmd#L27C1-L48C4)
+- Ideas for redirects
+  - Post URLs
+  - Avatar URL if you've used that link anywhere else
+  - Custom domains if applicable
+
+## Acknowledgments {.appendix}
+
+Photo by <a href="https://unsplash.com/@anneliesgeneyn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Annelies Geneyn</a> on <a href="https://unsplash.com/photos/bhBONc07WsI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+Book page says "verdere expedities" (Dutch) which means "further expeditions"
