@@ -350,7 +350,7 @@ Last but not least, I can't finish this blog post without talking about the nece
 - Danielle's blog post: [Notes from a data witch - Porting a distill blog to quarto](https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto/#netlify-redirects)
 - Tom's source code: [index.qmd - The MockUp](https://github.com/jthomasmock/themockup-blog/blob/bb069ef7315ad47d877f27c5052cc886ad80818e/index.qmd#L27C1-L48C4)
 
-I adapted their code to (1) fit my site, which has multiple folders of posts that all need redirects, and (2) combine these automatically generated redirects with ones I had already defined manually. I placed this code within my home page `index.qmd` file and I specified `freeze: false` in the YAML so that the code would run each time I rendered the site. The following sections will take a look at the code piece by piece.
+I adapted their code to (1) fit my site, which has multiple folders of posts that all need redirects, and (2) combine these automatically generated redirects with ones I had already defined manually. I placed this code within my [home page index.qmd file {{< fa code-branch title="Git" >}} ](https://github.com/spcanelon/silvia/blob/main/index.qmd#L61-L114) and I specified `freeze: false` in the YAML so that the code would run each time I rendered the site. The following sections will take a look at the code piece by piece.
 
 ### Importing manual redirects
 
@@ -447,4 +447,4 @@ Now that it's been over a year since Quarto made its debut, there are so many wo
 
 ## Acknowledgments {.appendix}
 
-Photo by <a href="https://unsplash.com/@anneliesgeneyn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Annelies Geneyn</a> on <a href="https://unsplash.com/photos/bhBONc07WsI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.
+Featured photo by <a href="https://unsplash.com/@anneliesgeneyn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Annelies Geneyn</a> on <a href="https://unsplash.com/photos/bhBONc07WsI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.
