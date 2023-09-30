@@ -17,7 +17,7 @@ $accent-dark:                $spc-accent-dark;
 // Body
 $body-color:                 $primary-dark;
 $body-bg:                    $spc-bg;
-$body-secondary:             $accent-dark;
+$body-secondary:             #6C757D;
 
 // Fonts
 
@@ -41,7 +41,7 @@ $link-hover-decoration:       none;
 
 $table-border-color:          $primary;
 $table-group-separator-color: lighten($primary, 40%);
-$table-caption-color:         $primary;
+$table-caption-color:         $body-secondary;
 
 // Code blocks
 $code-block-bg:              white;
@@ -82,6 +82,17 @@ div.sourceCode {
 // inline code
 p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
   border: 1px solid $accent;
+}
+
+// code with filename
+.code-with-filename .code-with-filename-file {
+  color: $code-color;
+  background-color: $code-bg;
+  border: 1px solid $code-block-border;
+  border-bottom: none;
+  pre {
+    background-color: $code-bg;
+  }
 }
 
 // Blockquotes

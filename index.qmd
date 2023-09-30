@@ -73,34 +73,34 @@ manual_redirects <- manual_redirects$redirect
 # adapted from Tom Mock: https://github.com/jthomasmock/themockup-blog/blob/master/index.qmd#L27C1-L48C4
 # who adapted from Danielle Navarro: https://blog.djnavarro.net/porting-to-quarto/#netlify-redirects
 
-# function: obtain list of posts
-list_files <- function(folder) {
+# function: obtain list of post paths
+list_paths <- function(folder) {
   posts <-
     list.dirs(
     path = c(here::here(folder)),
     full.names = FALSE,
     recursive = FALSE
     ) |> 
-    tibble::as_tibble_col(column_name = "file")  |>
+    tibble::as_tibble_col(column_name = "path")  |>
     dplyr::mutate(folder = folder)
 }
 
 # define post folders
 folders <- c("blog", "project", "publication", "talk")
 
-# list posts by folder
-posts <- purrr::map(folders, list_files) |> purrr::list_rbind()
+# list post paths by folder
+posts <- purrr::map(folders, list_paths) |> purrr::list_rbind()
 
-# extract slugs and create redirects
+# extract short paths and create redirects
 posts <- 
   posts |> 
   dplyr::mutate(
     # extract the year-slugs
-    slugs = stringr::str_remove(file, "(?!\\d{4}-)\\d{2}-\\d{2}-(?!\\d)"),
-    # create slug urls
-    slugs = paste0(folder, "/", slugs),
+    short_path = stringr::str_remove(path, "(?!\\d{4}-)\\d{2}-\\d{2}-(?!\\d)"),
+    # create short paths
+    short_path = paste0(folder, "/", short_path),
     # create lines to insert to a netlify _redirect file
-    redirects = paste0("/", slugs, " ", "/", folder, "/", file)
+    redirects = paste0("/", short_path, " ", "/", folder, "/", path)
     )
 
 # extract redirects
