@@ -10,6 +10,7 @@ website:
   favicon: assets/silvia/img/logo_rounded.svg
   page-navigation: true
   back-to-top-navigation: true
+  twitter-card: true
   comments: 
     utterances: 
       repo: spcanelon/silvia 
