@@ -3,7 +3,7 @@ title: "Meeting People Where They R"
 description: |
   This is my blog where I practice sharing my curiosity about R.<br>
   It includes notes and tutorials for my future self and hopefully also for you.<br>
-  [Subscribe via RSS](/index.xml)
+  [Subscribe via RSS](/blog/index.xml)
 listing: 
   contents: 
     - "**/index.qmd"
