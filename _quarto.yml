@@ -81,6 +81,7 @@ format:
       light: assets/silvia/a11y-light.theme
       dark: assets/silvia/a11y-dark.theme
     code-link: true
+    pagetitle: "{{< meta title >}} | Silvia Canelón"
 
 execute: 
   freeze: auto
