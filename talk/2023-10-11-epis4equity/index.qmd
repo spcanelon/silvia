@@ -1,0 +1,19 @@
+---
+title: "Place-based Interventions to Promote Structural Change & Equity"
+subtitle: "Talk for the [Philadelphia Department of Public Health](https://www.phila.gov/departments/department-of-public-health/) Epis for Equity work group, highlighting the placed-based intervention projects at the [Urban Health Lab](https://www.urbanhealthlab.org)"
+author: 
+  - Silvia Canelón
+  - Emily Seeburger
+date: 2023-10-11T15:00:00
+slug: epis4equity
+image: featured.png
+categories:
+  - Research
+---
+
+## Projects highlighted
+
+- [Deeply Rooted](https://www.urbanhealthlab.org/deeply-rooted)
+- [IGNITE: A Randomized Controlled Trial of Concentrated Investment in Black Neighborhoods to Address Structural Racism as a Fundamental Cause of Poor Health](https://www.urbanhealthlab.org/nih-grant)
+- [SPARROw](https://www.urbanhealthlab.org/sparrow)
+- [Nature and Wellbeing Project](https://www.urbanhealthlab.org/urban-nature-nature-and-wellbeing)
