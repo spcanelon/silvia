@@ -1,0 +1,331 @@
+/*-- scss:defaults --*/
+
+// Quarto references:
+// Variables: https://github.com/quarto-dev/quarto-cli/src/resources/formats/html/bootstrap/_bootstrap-variables.scss
+// Rules: https://github.com/quarto-dev/quarto-cli/src/resources/formats/html/bootstrap/_bootstrap-rules.scss
+
+// Colors: Quarto variables
+$primary:                    $spc-primary-light;
+$secondary:                  $spc-secondary;
+// Colors: custom variables
+$primary-dark:               $spc-primary;
+$secondary-light:            $spc-secondary-light;
+$accent:                     $spc-accent; 
+$accent-light:               $spc-accent-light;
+$accent-dark:                $spc-accent-dark;
+
+// Body
+$body-color:                 $primary-dark;
+$body-bg:                    $spc-bg-0;
+$body-secondary:             #6C757D;
+
+// Fonts
+
+// stylelint-disable-next-line value-keyword-case
+$font-family-sans-serif:     "Red Hat Text", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+// $font-family-serif: "Petrona", serif,;
+$headings-font-weight:       400;
+
+$font-family-monospace:      "Dank Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+$headings-font-family:       "Petrona";
+
+// Links
+
+$link-color:                  $secondary;
+$link-decoration:             underline;
+$link-hover-color:            $secondary-light;
+$link-hover-decoration:       none;
+
+// Tables
+
+$table-border-color:          $primary;
+$table-group-separator-color: lighten($primary, 40%);
+$table-caption-color:         $body-secondary;
+
+// Code blocks
+$code-block-bg:              white;
+$code-block-border:          #ebebeb;
+
+// Inline code
+$code-color:                  $primary-dark;
+$code-bg:                     $accent-light;
+
+// Table of contents
+$toc-color:                   $link-color;
+$toc-active-border:           $toc-color;
+$toc-inactive-border:         lighten($toc-color, 50%);
+
+// Navbar icons
+$navbar-fg:                   $secondary;
+
+// Footer text
+$footer-fg:                   $primary;
+
+// table variable overrides
+$table-group-separator-color: lighten($primary, 25%);
+$table-group-separator-color-lighter: lighten($primary, 50%);
+
+// Miscellaneous (workarounds)
+$gray-200:                    lighten($primary, 60%);
+
+/*-- scss:rules --*/
+
+// Code
+
+// code block
+div.sourceCode {
+  background-color: $code-block-bg;
+  border: 1px solid $code-block-border;
+}
+
+// inline code
+p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
+  border: 1px solid $accent;
+}
+
+// code with filename
+.code-with-filename .code-with-filename-file {
+  color: $code-color;
+  background-color: $code-bg;
+  border: 1px solid $code-block-border;
+  border-bottom: none;
+  pre {
+    background-color: $code-bg;
+  }
+}
+
+// Blockquotes
+.blockquote {
+  color: lighten($primary, 15%);
+  font-style: oblique;
+}
+
+// Social icons
+
+// footer
+.nav-footer-center i {
+  color: $secondary !important;
+  
+  &:hover {
+    color: $secondary-light !important;
+  }
+}
+
+// home + about pages
+.about-links .about-link i {
+  color: $secondary !important;
+
+  &:hover {
+    color: $secondary-light !important;
+  }
+}
+
+// Contact
+
+// social links
+.link-dark.me-1 i {
+  color: $secondary !important;
+}
+
+// Buttons
+
+// post links
+.btn-secondary {
+  color: $secondary;
+  background: transparent;
+  border-radius: 5px;
+}
+
+// contact form
+.btn-primary:hover {
+  background-color: $secondary;
+  border-color: $secondary;
+}
+
+// pagination
+.page-link {
+  color: $primary;
+  &:hover {
+    color: white;
+    background-color: $primary;
+    border-color: $primary;
+  }
+}
+
+// Categories
+
+// posts
+.quarto-category {
+  background-color: $primary;
+  color: white;
+  border-color: $primary;
+  &:hover {
+    background-color: white;
+    color: $primary;
+  }
+}
+
+// listings
+.listing-category {
+  color: $secondary !important;
+  border-color: $secondary !important;
+  &:hover {
+  background-color: $secondary;
+  color: white !important;
+  }
+}
+
+// Navbar
+
+// header
+.navbar {
+  background: transparent;
+}
+
+// title
+.navbar-title {
+  font-size: 0.75em;
+  font-weight: 500;
+  color: $primary;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+
+  &:hover {
+    border-bottom: 1px solid $primary !important;
+  }
+}
+
+// links
+.navbar-nav .nav-link {
+    color: $secondary !important;
+    text-transform: uppercase;
+    letter-spacing: .1em; 
+    border-bottom: 0px hidden $secondary;    
+    margin: 0px 10px 0px 10px; 
+    padding: 2px 2px 4px 2px !important;
+
+    &:hover {
+      border-bottom: 1px solid $secondary !important;
+      padding: 2px 2px 0px 2px !important;
+    }
+}
+
+// Footer
+
+// links on left side
+.nav-footer a {
+    color: $secondary;
+    // link on hover
+    &:hover {
+      color: $secondary-light;
+    }
+}
+
+// links on right side
+.nav-footer .nav-link {
+    &:hover {
+      text-decoration: underline;
+    }
+}
+
+// Listing cards
+.card {
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-img {
+    border-radius: 4px 4px 0px 0px;
+}
+
+// Title block
+
+// style background image on posts
+.featured-image {
+  // https://stackoverflow.com/a/24084708
+  // style = "background-image: url(featured.png), url(featured.jpg); background-size: cover; color: white; box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.65);"
+  background-size: cover; 
+  background-position: center;
+  color: white; 
+  box-shadow: inset 0 0 0 1000px rgba(0,38,66,0.75);
+}
+
+// make nav bar be centered in mobile
+.fixed-top {
+  position: absolute;
+}
+
+.aa-DetachedOverlay {
+  position: absolute;
+}
+
+// links in description
+
+.description a {
+  text-decoration: underline !important;
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
+// Throughout the site
+
+// title
+.title {
+  font-size: 2.5em;
+  font-weight: 500;
+  line-height: 1.1em;
+}
+
+// subtitle + Learn More About Me
+.subtitle {
+  font-size: 1.2em;
+  // links within subtitles
+  a {
+    color: white;
+    text-decoration: underline !important;
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+}
+
+// Mobile
+
+@media screen and (max-width: 991.98px) {
+  // social media links
+  .about-entity .about-links {
+    flex-direction: row !important;
+    justify-content: center !important;
+  }
+
+  // navigation footer
+  .nav-footer {
+      flex-direction: row;
+    }
+
+  .nav-footer-center {
+    order: 1 !important;
+    flex-basis: 100%;
+    margin: 0 0 -1.2em 0;
+  }
+
+  .nav-footer-right {
+    order: 2 !important;
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .nav-footer-left {
+    order: 3 !important;
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .navbar .quarto-navbar-tools {
+    text-align: left;
+  }
+}

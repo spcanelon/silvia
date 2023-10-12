@@ -25,7 +25,7 @@
 
 /* about area */
 .about-entity {
-  background-color: var(--spc-bg-dark);
+  background-color: var(--spc-bg-1);
   padding: 3em 0em 3em 0em !important;
   margin: 0em 2em 0em 2em;
   border-radius: 5px;

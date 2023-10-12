@@ -19,7 +19,8 @@ website:
       issue-term: title
  
   navbar:
-    logo: assets/silvia/img/logo_noBg.svg
+    logo: assets/silvia/img/logo_rounded.svg
+    # logo: assets/silvia/img/logo_noBg.svg
     tools:
     - icon: github
       href: https://www.github.com/spcanelon/silvia
@@ -69,11 +70,16 @@ format:
     theme:
       light:
         - cosmo
-        # - superhero
-        - assets/silvia-theme.scss
-        - assets/silvia/colors.scss
+        - assets/silvia-theme-light.scss
+        - assets/silvia/colors-light.scss
         - assets/silvia/fonts.scss
-    highlight-style: a11y
+      dark: 
+        - cosmo
+        - assets/silvia-theme-dark.scss
+        - assets/silvia/colors-dark.scss
+    highlight-style:
+      light: assets/silvia/a11y-light.theme
+      dark: assets/silvia/a11y-dark.theme
     code-link: true
 
 execute: 

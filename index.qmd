@@ -2,7 +2,7 @@
 title: "Silvia Canelón, PhD"
 pagetitle: "Silvia Canelón, PhD"
 subtitle: "Data Analyst at the Penn Urban Health Lab"
-image: assets/silvia/img/skyline-philly.png
+image: assets/silvia/img/skyline-philly-dual.png
 image-alt: "Abstract data visualization depicting tall buildings in Philadelphia as a circle. The text inside the circle reads Philadelphia Skyline"
 
 twitter-card:

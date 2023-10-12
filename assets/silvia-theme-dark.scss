@@ -6,18 +6,18 @@
 
 // Colors: Quarto variables
 $primary:                    $spc-primary-light;
-$secondary:                  $spc-secondary;
+$secondary:                  $spc-secondary-light;
 // Colors: custom variables
 $primary-dark:               $spc-primary;
-$secondary-light:            $spc-secondary-light;
+$secondary-light:            $spc-secondary;
 $accent:                     $spc-accent; 
 $accent-light:               $spc-accent-light;
 $accent-dark:                $spc-accent-dark;
 
 // Body
 $body-color:                 $primary-dark;
-$body-bg:                    $spc-bg;
-$body-secondary:             #6C757D;
+$body-bg:                    $spc-bg-0;
+$body-secondary:             #9DA3AA; // 6c757d
 
 // Fonts
 
@@ -44,12 +44,12 @@ $table-group-separator-color: lighten($primary, 40%);
 $table-caption-color:         $body-secondary;
 
 // Code blocks
-$code-block-bg:              white;
-$code-block-border:          #ebebeb;
+$code-block-bg:              $spc-bg-1; // 2b2b2b
+$code-block-border:          $body-bg;
 
 // Inline code
-$code-color:                  $primary-dark;
-$code-bg:                     $accent-light;
+$code-color:                  $body-bg;
+$code-bg:                     $accent;
 
 // Table of contents
 $toc-color:                   $link-color;
@@ -68,6 +68,7 @@ $table-group-separator-color-lighter: lighten($primary, 50%);
 
 // Miscellaneous (workarounds)
 $gray-200:                    lighten($primary, 60%);
+$gray-700:                    lighten($primary, 60%);
 
 /*-- scss:rules --*/
 
@@ -87,12 +88,17 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
 // code with filename
 .code-with-filename .code-with-filename-file {
   color: $code-color;
-  background-color: $code-bg;
+  background-color: $code-bg !important; // $code-bg
   border: 1px solid $code-block-border;
   border-bottom: none;
   pre {
-    background-color: $code-bg;
+    background-color: $code-bg !important;
   }
+}
+
+// code output
+pre code {
+  color: $primary;
 }
 
 // Blockquotes
@@ -157,12 +163,12 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
 
 // posts
 .quarto-category {
-  background-color: $primary;
-  color: white;
+  background-color: $body-bg;
+  color: $primary;
   border-color: $primary;
   &:hover {
-    background-color: white;
-    color: $primary;
+    background-color: $primary;
+    color: $body-bg;
   }
 }
 
@@ -231,10 +237,10 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
 
 // Listing cards
 .card {
-  background: transparent;
+  background: $spc-bg-1 !important;
   border: none;
   border-radius: 4px;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 10px $spc-bg-00 !important;
 }
 
 .card-img {
@@ -291,6 +297,11 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
       text-decoration: none !important;
     }
   }
+}
+
+// details/summaries
+details > summary {
+  color: $body-secondary;
 }
 
 // Mobile
