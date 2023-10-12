@@ -44,7 +44,22 @@ It includes notes and tutorials for my future self and hopefully also for you.&l
 <p><strong>Loss of Utterances comments.</strong> Any interactions with folks through Utteranc.es comments did not transfer over, and I’ll miss them. The few comments on my site have been very kind (see example below) and I’ve really enjoy reading them!</p>
 <details><summary><p>Example of Utterances comments</p>
 </summary><p><img src="https://silviacanelon.com/blog/2023-09-29-hello-quarto/img/utterances.png" class="img-fluid" alt="User @capolimia says 'Thank you so much!!!!!! This project last year helped me have a great summer, I appreciate your work!!!' and I respond 'Hi @capolimia, thank you for this comment! I don't how how I missed it. I'm happy to hear that the 2022 post was helpful to you! 🚀'"></p>
-</details>
+</details><div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Update: Oct.&nbsp;12, 2023
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Thanks to Emily Riederer, I’m happy to report this is a non-issue! See her tips in the comments at the end of the post, or <a href="https://github.com/spcanelon/silvia/issues/100#issuecomment-1753438790">on GitHub</a>.</p>
+</div>
+</div>
+</div>
 </li>
 <li><p><strong>Hugo Apéro collections.</strong> The Apéro theme had a way of bundling together posts that were related into a collection of posts. Garrick and I used this feature for our <a href="../../talk/2021-07-07-presentable-user2021/">user!2021 xaringan workshop</a> and it worked well to organize learning materials for different sections of our workshop. If I wanted something like this in the future, I would probably use Quarto’s sidebar navigation feature like Andrew Bray did in his <a href="https://rstudio-conf-2022.github.io/rmd-to-quarto/materials/">Rmd to Quarto workshop</a> for rstudio::conf(2022).</p></li>
 <li><p><strong>Name pronunciation on the About page.</strong> Apéro had a built-in option for adding an audio clip under your name that you could use to help people learn how your name is pronounced. I never used this feature myself, but if I wanted to, I could look to <a href="https://github.com/EmilHvitfeldt/emilhvitfeldt.com/blob/main/about.qmd#L20-L24">Emil Hvitfeldt’s site</a> as an example.</p></li>
@@ -131,7 +146,7 @@ font-style: inherit;">└──</span> silvia.Rproj</span></code></pre></div>
 <div class="page-columns page-full"><p>I decided to use a combination of <a href="https://quarto.org/docs/websites/website-about.html">about pages</a> and <a href="https://quarto.org/docs/websites/website-listings.html">listing pages</a> to replicate the site structure I enjoyed in my Apéro site. I used an about page layout for both my home and about pages, and listing pages to generate a list of blog posts, talks, publications, and projects. There was also some custom CSS involved, but we haven’t gotten to that part of the blog post yet wink 😉 </p><div class="no-row-height column-margin column-container"><span class="">Dear reader, it’s at this point in my blog post drafting that I start realizing that what was meant to be a brief post is turning into a novel (<em>sigh</em>)</span></div></div>
 <p>One of the aspects I liked about my Apéro site was that the About page highlighted the most recent posts from the blog, talk, publication, and project groups. In my Quarto site, I achieved this by including a one-entry listing grid for each group on my <a href="../../about/index.html">About page</a>.</p>
 <div class="callout callout-style-simple callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -140,7 +155,7 @@ CSS tip
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>These listing cards looked great on a wide screen but as the screen got narrower (think mobile device) the listing cards just became narrower and narrower 😂. I took care of this by tweaking the CSS so that the cards would wrap.</p>
 <div class="code-with-filename">
@@ -207,7 +222,7 @@ font-style: inherit;">;</span></span>
 </section><section id="contact-form" class="level3"><h3 class="anchored" data-anchor-id="contact-form">Contact form</h3>
 <p>The last structural piece I wanted to recreate from Apéro was a <a href="../../contact.html">contact form</a>. I saw a great example on Michael McCarthy’s <a href="https://tidytales.ca/about/">Tidy Tales blog</a>, site and did a little <a href="https://github.com/mccarthy-m-g/tidytales/blob/main/about/index.qmd#L24-L46">repo-diving</a> to get ideas on how to organize the content. I ended up using the <a href="https://quarto.org/docs/output-formats/page-layout.html#css-grid">Bootstrap CSS Grid</a> to layout the content exactly how I wanted to. See what I mean about Quarto offering a lot of flexibility in content layout?</p>
 <div class="callout callout-style-simple callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -216,7 +231,7 @@ Bones of the contact page
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -734,19 +749,19 @@ font-style: inherit;">;</span></span>
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-6" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-annotation="1" data-code-cell="annotated-cell-6" data-code-lines="3">Have the image cover the background</span>
+<span data-code-cell="annotated-cell-6" data-code-lines="3" data-code-annotation="1">Have the image cover the background</span>
 </dd>
 <dt data-target-cell="annotated-cell-6" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-annotation="2" data-code-cell="annotated-cell-6" data-code-lines="4">Center the image</span>
+<span data-code-cell="annotated-cell-6" data-code-lines="4" data-code-annotation="2">Center the image</span>
 </dd>
 <dt data-target-cell="annotated-cell-6" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-annotation="3" data-code-cell="annotated-cell-6" data-code-lines="5">Make the overlaying text color white</span>
+<span data-code-cell="annotated-cell-6" data-code-lines="5" data-code-annotation="3">Make the overlaying text color white</span>
 </dd>
 <dt data-target-cell="annotated-cell-6" data-target-annotation="4">4</dt>
 <dd>
-<span data-code-annotation="4" data-code-cell="annotated-cell-6" data-code-lines="6">Add shadowing that gives the appearance of a dark overlay</span>
+<span data-code-cell="annotated-cell-6" data-code-lines="6" data-code-annotation="4">Add shadowing that gives the appearance of a dark overlay</span>
 </dd>
 </dl>
 <p>Alright, but why didn’t I use a <code>background-image</code> property to define the image? If I define the background image in my <code>.featured-image</code> class then that is the image that’s going to show up in all of the posts across my site. I want the title block of each post to display the featured image belonging to each individual post. That’s where the partial comes back in.</p>
@@ -3920,7 +3935,7 @@ Projects on my site: https://silvia.rbind.io/project
 </summary><div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-project-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="My Project listing: https://silvia.rbind.io/project"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-project-list.png" class="img-fluid figure-img" alt="The Project listing page for my site with a grid layout featuring thumbnail images. The top of the page says 'Projects' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There are three projects featured with a decorative thumbnail image, a title, and a summary. Items also include an author and category links but they are cut off in this screenshot." width="1265"></a></p>
+<figure class="figure"><p><a href="img/silvia-project-list.png" class="lightbox" title="My Project listing: https://silvia.rbind.io/project" data-gallery="quarto-lightbox-gallery-1"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-project-list.png" class="img-fluid figure-img" alt="The Project listing page for my site with a grid layout featuring thumbnail images. The top of the page says 'Projects' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There are three projects featured with a decorative thumbnail image, a title, and a summary. Items also include an author and category links but they are cut off in this screenshot." width="1265"></a></p>
 <figcaption class="figure-caption">My Project listing: https://silvia.rbind.io/project</figcaption></figure>
 </div>
 </div>
@@ -3945,7 +3960,7 @@ Projects on my site: https://silvia.rbind.io/project
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/netlify-branch-deploy.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Netlify site settings for deploy contexts"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/netlify-branch-deploy.png" class="img-fluid figure-img" style="width:75.0%" alt="The deploy contexts section after clicking the Edit settings button. This section shows three settings that can be edited. The first is the production branch which is set to 'main' in a free text box. The second is deploy previews which is a radio button set to 'any pull request against your production branch/branch deploy branches (as opposed to 'none'). The third is branch deploys which is a radio button set to 'all' (as opposed to 'none' and 'let me add individual branches'). There are two buttons at the bottom of this section, Save and Cancel."></a></p>
+<figure class="figure"><p><a href="img/netlify-branch-deploy.png" class="lightbox" title="Netlify site settings for deploy contexts" data-gallery="quarto-lightbox-gallery-2"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/netlify-branch-deploy.png" class="img-fluid figure-img" style="width:75.0%" alt="The deploy contexts section after clicking the Edit settings button. This section shows three settings that can be edited. The first is the production branch which is set to 'main' in a free text box. The second is deploy previews which is a radio button set to 'any pull request against your production branch/branch deploy branches (as opposed to 'none'). The third is branch deploys which is a radio button set to 'all' (as opposed to 'none' and 'let me add individual branches'). There are two buttons at the bottom of this section, Save and Cancel."></a></p>
 <figcaption class="figure-caption">Netlify site settings for deploy contexts</figcaption></figure>
 </div>
 </div>
@@ -4416,7 +4431,7 @@ font-style: inherit;">└──</span> talk</span></code></pre></div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-about-page-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="The header of my About page: https://silvia.rbind.io/about/"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-about-page-1.png" class="img-fluid figure-img" alt="My About page featuring a large headline to greet visitors and a short blurb about me in the header of the site. Below this area on the left in the main area of the page is more information with a heading and some prose. To the right of the main area is the sidebar which includes a small image, a name in large font, a subheading for the name, social media icons, and a spot for an audio clip for a name pronunciation. On the top edge of the page is a navigation bar with 'About' highlighted" width="1265"></a></p>
+<figure class="figure"><p><a href="img/silvia-about-page-1.png" class="lightbox" title="The header of my About page: https://silvia.rbind.io/about/" data-gallery="quarto-lightbox-gallery-3"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-about-page-1.png" class="img-fluid figure-img" alt="My About page featuring a large headline to greet visitors and a short blurb about me in the header of the site. Below this area on the left in the main area of the page is more information with a heading and some prose. To the right of the main area is the sidebar which includes a small image, a name in large font, a subheading for the name, social media icons, and a spot for an audio clip for a name pronunciation. On the top edge of the page is a navigation bar with 'About' highlighted" width="1265"></a></p>
 <figcaption class="figure-caption">The header of my About page: https://silvia.rbind.io/about/</figcaption></figure>
 </div>
 </div>
@@ -4424,7 +4439,7 @@ font-style: inherit;">└──</span> talk</span></code></pre></div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-about-page-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="The main section of my About page: https://silvia.rbind.io/about/"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-about-page-2.png" class="img-fluid figure-img" alt="Below the header is the main area of the page on the left with more information about me with a heading and some prose. To the right of the main area is the sidebar which includes a small image of me, my name in large font, my professional title underneath along with social media icons and a short list of my interests." width="1265"></a></p>
+<figure class="figure"><p><a href="img/silvia-about-page-2.png" class="lightbox" title="The main section of my About page: https://silvia.rbind.io/about/" data-gallery="quarto-lightbox-gallery-4"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-about-page-2.png" class="img-fluid figure-img" alt="Below the header is the main area of the page on the left with more information about me with a heading and some prose. To the right of the main area is the sidebar which includes a small image of me, my name in large font, my professional title underneath along with social media icons and a short list of my interests." width="1265"></a></p>
 <figcaption class="figure-caption">The main section of my About page: https://silvia.rbind.io/about/</figcaption></figure>
 </div>
 </div>
@@ -4487,7 +4502,7 @@ font-style: inherit;">└──</span> talk</span></code></pre></div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-home-page.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="My Homepage: https://silvia.rbind.io"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-home-page.png" class="img-fluid figure-img" alt="The homepage of my site which shows my name in large font on the left, my title, social media icons, a short blurb about me, and a link that says 'Read More' that can be clicked to enter the site. On the right side is a photo of one of my favorite lakes." width="1280"></a></p>
+<figure class="figure"><p><a href="img/silvia-home-page.png" class="lightbox" title="My Homepage: https://silvia.rbind.io" data-gallery="quarto-lightbox-gallery-5"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-home-page.png" class="img-fluid figure-img" alt="The homepage of my site which shows my name in large font on the left, my title, social media icons, a short blurb about me, and a link that says 'Read More' that can be clicked to enter the site. On the right side is a photo of one of my favorite lakes." width="1280"></a></p>
 <figcaption class="figure-caption">My Homepage: https://silvia.rbind.io</figcaption></figure>
 </div>
 </div>
@@ -4501,7 +4516,7 @@ font-style: inherit;">└──</span> talk</span></code></pre></div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-blog-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="My Blog listing: https://silvia.rbind.io/blog"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-blog-list.png" class="img-fluid figure-img" alt="The Blog listing page for my site with a sidebar layout and thumbnails enabled. There is a sidebar on the left side with some information about my blog including a blog name 'Meeting People Where They R'. It also includes my name as the blog author, a link to subscribe via RSS, and a decorative image of a small potted cactus plant sitting on top of a stack of books. On the right side in the main area of the page there are two blog posts featured, including this one. Each has a title, a summary, the date, and a decorative image as the thumbnail." width="1265"></a></p>
+<figure class="figure"><p><a href="img/silvia-blog-list.png" class="lightbox" title="My Blog listing: https://silvia.rbind.io/blog" data-gallery="quarto-lightbox-gallery-6"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-blog-list.png" class="img-fluid figure-img" alt="The Blog listing page for my site with a sidebar layout and thumbnails enabled. There is a sidebar on the left side with some information about my blog including a blog name 'Meeting People Where They R'. It also includes my name as the blog author, a link to subscribe via RSS, and a decorative image of a small potted cactus plant sitting on top of a stack of books. On the right side in the main area of the page there are two blog posts featured, including this one. Each has a title, a summary, the date, and a decorative image as the thumbnail." width="1265"></a></p>
 <figcaption class="figure-caption">My Blog listing: https://silvia.rbind.io/blog</figcaption></figure>
 </div>
 </div>
@@ -4557,7 +4572,7 @@ font-style: inherit;"># &lt;-- item 2 in the navigation bar</span></span></code>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-publication-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="My Publication listing: https://silvia.rbind.io/publication"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-publication-list.png" class="img-fluid figure-img" alt="The Publication listing page for my site with a single layout which doesn't have a sidebar. The top of the page says 'Publications' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There is primarily one publication featured with a title, a summary, the authors, and the date. This listing visually separates publications in the list with a horizontal bar" width="1265"></a></p>
+<figure class="figure"><p><a href="img/silvia-publication-list.png" class="lightbox" title="My Publication listing: https://silvia.rbind.io/publication" data-gallery="quarto-lightbox-gallery-7"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-publication-list.png" class="img-fluid figure-img" alt="The Publication listing page for my site with a single layout which doesn't have a sidebar. The top of the page says 'Publications' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There is primarily one publication featured with a title, a summary, the authors, and the date. This listing visually separates publications in the list with a horizontal bar" width="1265"></a></p>
 <figcaption class="figure-caption">My Publication listing: https://silvia.rbind.io/publication</figcaption></figure>
 </div>
 </div>
@@ -4615,7 +4630,7 @@ font-style: inherit;"># &lt;-- item 4 in the navigation bar</span></span></code>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-talk-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="My Talk listing: https://silvia.rbind.io/talk"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-talk-list.png" class="img-fluid figure-img" alt="The Talk listing page for my site with a single layout which doesn't have a sidebar and features decorative thumbnail images on the left. The top of the page says 'Talks' and below is a short description of what can be found on the page. This listing visually separates talks in the list by year with a horizontal bar." width="1265"></a></p>
+<figure class="figure"><p><a href="img/silvia-talk-list.png" class="lightbox" title="My Talk listing: https://silvia.rbind.io/talk" data-gallery="quarto-lightbox-gallery-8"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-talk-list.png" class="img-fluid figure-img" alt="The Talk listing page for my site with a single layout which doesn't have a sidebar and features decorative thumbnail images on the left. The top of the page says 'Talks' and below is a short description of what can be found on the page. This listing visually separates talks in the list by year with a horizontal bar." width="1265"></a></p>
 <figcaption class="figure-caption">My Talk listing: https://silvia.rbind.io/talk</figcaption></figure>
 </div>
 </div>

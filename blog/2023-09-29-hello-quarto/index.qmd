@@ -2,6 +2,7 @@
 title: 'Hello Quarto: Porting my Website from Hugo Apéro'
 author: Silvia Canelón
 date: '2023-09-29'
+date-modified: '2023-10-12'
 image: featured.jpg
 categories:
   - R
@@ -19,6 +20,8 @@ filters:
 code-annotations: below
 df-print: paged
 ---
+
+
 
 ## Goodbye, Hugo Apéro
 
@@ -53,6 +56,11 @@ Gaining the aforementioned Quarto functionality did not come without a cost. To 
   <details><summary>Example of Utterances comments</summary>
   ![](img/utterances.png){fig-alt="User @capolimia says 'Thank you so much!!!!!! This project last year helped me have a great summer, I appreciate your work!!!' and I respond 'Hi @capolimia, thank you for this comment! I don't how how I missed it. I'm happy to hear that the 2022 post was helpful to you! 🚀'"}
   </details>
+
+  ::: {.callout-note appearance="simple" collapse="false"}
+  ## Update: Oct. 12, 2023 
+  Thanks to Emily Riederer, I'm happy to report this is a non-issue! See her tips in the comments at the end of the post, or [on GitHub](https://github.com/spcanelon/silvia/issues/100#issuecomment-1753438790).    
+  :::
 
 - **Hugo Apéro collections.** The Apéro theme had a way of bundling together posts that were related into a collection of posts. Garrick and I used this feature for our [user!2021 xaringan workshop](../../talk/2021-07-07-presentable-user2021/) and it worked well to organize learning materials for different sections of our workshop. If I wanted something like this in the future, I would probably use Quarto's sidebar navigation feature like Andrew Bray did in his [Rmd to Quarto workshop](https://rstudio-conf-2022.github.io/rmd-to-quarto/materials/) for rstudio::conf(2022).
 
