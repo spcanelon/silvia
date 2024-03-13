@@ -1,6 +1,4 @@
-<a href='https://silvia.rbind.io'><img src='https://github.com/spcanelon/silvia/blob/main/assets/silvia/img/silvia-social.png?raw=true' align="right" height="180" alt=''/></a>
-
-# Personal website for<br>Silvia Canelón
+# Personal website for<br>Silvia Canelón <a href='https://silvia.rbind.io'><img src='https://repository-images.githubusercontent.com/210603161/7ba9fbb6-541f-4f67-a732-89a5c37dc2c9' align="right" height="180" alt=''/></a>
 
 👋 Hello, and welcome to the repo for [my personal website](https://silvia.rbind.io)!
 
