@@ -1,7 +1,7 @@
 ---
 title: "Silvia Canelón, PhD"
 pagetitle: "Silvia Canelón, PhD"
-subtitle: "Data Analyst at the Penn Urban Health Lab"
+subtitle: "Data Analyst at the Penn Medicine<br>Center for Health Justice"
 image: assets/silvia/img/skyline-philly-dual.png
 image-alt: "Abstract data visualization depicting tall buildings in Philadelphia as a circle. The text inside the circle reads Philadelphia Skyline"
 
@@ -20,7 +20,7 @@ about:
       aria-label: "Accessibility statement"
       href: accessibility.qmd
     - icon: mastodon
-      href: https://fosstodon.org/@spcanelon
+      href: https://hachyderm.io/@spcanelon
     - icon: github
       aria-label: GitHub
       href: https://github.com/spcanelon

@@ -1,6 +1,6 @@
 ---
 title: "Silvia Canelón"
-subtitle: Data Analyst,<br>Urban Health Lab @Penn
+subtitle: Data Analyst,<br>Penn Medicine Center for Health Justice
 image: sidebar/avatar.png
 image-alt: "Smiling woman with a tan complexion, dark eyes, and dark long wavy hair styled to one side"
 about:
@@ -94,7 +94,7 @@ resources:
 
 Thanks for stopping by!
 
-I'm a data analyst in the [Urban Health Lab](https://www.urbanhealthlab.org/) at the University of Pennsylvania. My research interests include applications of biomedical and spatial data science in the public and population health fields. 
+I'm a data analyst in the [Penn Medicine Center for Health Justice](https://chti.upenn.edu/center-for-health-justice) at the University of Pennsylvania. My research interests include applications of biomedical and spatial data science in the public and population health fields. 
 
 I work on projects that use electronic health record (EHR) and geospatial data to explore how the neighborhood environment and access to urban nature can impact the health of individuals in Philadelphia. Learn more about my research interests in [publications](/publication).
 
