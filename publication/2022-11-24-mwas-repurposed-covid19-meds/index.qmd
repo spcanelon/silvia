@@ -21,9 +21,6 @@ links:
 - icon: file-richtext-fill
   name: Publication
   url: https://doi.org/10.1038/s41598-022-24218-1
-filters:
-  - lightbox
-lightbox: auto 
 ---
 
 ## Abstract

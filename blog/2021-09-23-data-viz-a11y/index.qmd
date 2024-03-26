@@ -16,9 +16,6 @@ categories:
 subtitle: A selection of general and R-specific resources on how and why to make accessible data visualizations.
 execute: 
   eval: false
-filters: 
-  - lightbox
-lightbox: auto
 ---
 
 ```{r setup, echo=FALSE, message=FALSE, eval=TRUE}

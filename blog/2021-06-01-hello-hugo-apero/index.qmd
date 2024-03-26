@@ -21,9 +21,6 @@ links:
   - icon: journal-text
     name: Hugo Apéro Docs
     url: https://hugo-apero-docs.netlify.app/
-filters:
-  - lightbox
-lightbox: auto
 ---
 
 ```{r setup, echo=FALSE}

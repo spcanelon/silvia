@@ -42,9 +42,6 @@ links:
 - icon: person-heart
   name: 'Empathy Tool Mockup'
   url: https://codeforphilly.github.io/datahack2020/analyses/team11/
-filters:
-  - lightbox
-lightbox: auto
 ---
 
 [Referral process pipeline (PDF)](/project/2020-data-hack-opioid/pipeline.pdf)

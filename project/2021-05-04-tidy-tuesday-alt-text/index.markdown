@@ -24,9 +24,6 @@ links:
 - icon: bar-chart-line-fill
   name: tidytuesday databases on notion
   url: https://tiny.cc/notion-dataviz
-filters:
-  - lightbox
-lightbox: auto
 ---
 
 ## About the data  <a href='https://github.com/spcanelon/TidyTuesdayAltText'><img src='featured-hex.png' align="right" height="200" alt='Hex logo for the package. White with a thick black border. Inside, the TidyTuesday logo on the top half which are the words TidyTuesday in white against a broad brush stroke of black paint. On the bottom half, the words alt = "text" in black against a white background and within angle brackets to simulate html code.'/></a>

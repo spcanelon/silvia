@@ -34,9 +34,6 @@ links:
 - icon: file-richtext-fill
   name: Publication
   url: https://doi.org/10.1371/journal.pcbi.1010164
-filters:
-  - lightbox
-lightbox: auto
 ---
 
 ## Abstract

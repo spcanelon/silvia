@@ -23,9 +23,6 @@ links:
 - icon: file-richtext-fill
   name: Publication
   url: https://doi.org/10.1055/s-0042-1743240
-filters:
-  - lightbox
-lightbox: auto
 ---
 
 ## Abstract

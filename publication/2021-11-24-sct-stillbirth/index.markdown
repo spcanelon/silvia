@@ -26,9 +26,6 @@ links:
 - icon: file-earmark-pdf
   name: Supplemental Content (Accessible PDF)
   url: SupplementaryMaterial.pdf
-filters:
-  - lightbox
-lightbox: auto
 ---
 
 |
