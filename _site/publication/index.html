@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -55,7 +55,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -64,6 +70,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -107,6 +114,33 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <meta name="twitter:title" content="Publications | Silvia Canelón">
 <meta name="twitter:description" content="This is home for my research publications, each linked with accompanying preprints, posters, and/or news pieces.">
 <meta name="twitter:card" content="summary">
@@ -116,9 +150,9 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
     <img src="../assets/silvia/img/logo_rounded.svg" alt="" class="navbar-logo">
     </a>
@@ -133,31 +167,31 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../about/index.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="../about/index.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../blog/index.html" rel="" target="">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../talk/index.html" rel="" target="">
- <span class="menu-text">Talks</span></a>
+    <a class="nav-link" href="../talk/index.html"> 
+<span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../publication/index.html" rel="" target="" aria-current="page">
- <span class="menu-text">Publications</span></a>
+    <a class="nav-link active" href="../publication/index.html" aria-current="page"> 
+<span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../project/index.html" rel="" target="">
- <span class="menu-text">Projects</span></a>
+    <a class="nav-link" href="../project/index.html"> 
+<span class="menu-text">Projects</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-    <a href="https://www.github.com/spcanelon/silvia" rel="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+    <a href="https://www.github.com/spcanelon/silvia" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -188,7 +222,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -197,7 +231,9 @@ ul.task-list li input[type="checkbox"] {
   
 
 
+
 </header>
+
 
 
 
@@ -205,16 +241,14 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-left" data-index="0" data-categories="Research,covid-19,EHR,pregnancy,medications" data-listing-date-sort="1669266000000" data-listing-file-modified-sort="1695588632419" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-left" data-index="0" data-categories="Research,covid-19,EHR,pregnancy,medications" data-listing-date-sort="1669266000000" data-listing-file-modified-sort="1711418181773" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="198">
 <div class="body">
-<a href="../publication/2022-11-24-mwas-repurposed-covid19-meds/index.html">
 <h3 class="no-anchor listing-title">
-A medication-wide association study (MWAS) on repurposed drugs for COVID-19 with Pre-pandemic prescription medication exposure and pregnancy outcomes
+<a href="../publication/2022-11-24-mwas-repurposed-covid19-meds/index.html" class="no-external">A medication-wide association study (MWAS) on repurposed drugs for COVID-19 with Pre-pandemic prescription medication exposure and pregnancy outcomes</a>
 </h3>
 <div class="listing-subtitle">
-EHR study describing an MWAS approach to explore connections between exposure to repurposed COVID-19 prescription medications and the risk of cesarean section, preterm birth, and stillbirth
+<a href="../publication/2022-11-24-mwas-repurposed-covid19-meds/index.html" class="no-external">EHR study describing an MWAS approach to explore connections between exposure to repurposed COVID-19 prescription medications and the risk of cesarean section, preterm birth, and stillbirth</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Research'); return false;">
 Research
@@ -232,10 +266,9 @@ pregnancy
 medications
 </div>
 </div>
-<a href="../publication/2022-11-24-mwas-repurposed-covid19-meds/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="../publication/2022-11-24-mwas-repurposed-covid19-meds/index.html">
+<a href="../publication/2022-11-24-mwas-repurposed-covid19-meds/index.html" class="no-external">
 <div class="listing-date">
 Nov 24, 2022
 </div>
@@ -245,16 +278,14 @@ Lena Davidson, Silvia P. Canelón, Mary Regina Boland
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="1" data-categories="Education,community" data-listing-date-sort="1658376000000" data-listing-file-modified-sort="1695221189074" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-left" data-index="1" data-categories="Education,community" data-listing-date-sort="1658376000000" data-listing-file-modified-sort="1711418181772" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="273">
 <div class="body">
-<a href="../publication/2022-07-21-ten-simple-rules-inclusive-conference/index.html">
 <h3 class="no-anchor listing-title">
-Ten simple rules to host an inclusive conference
+<a href="../publication/2022-07-21-ten-simple-rules-inclusive-conference/index.html" class="no-external">Ten simple rules to host an inclusive conference</a>
 </h3>
 <div class="listing-subtitle">
-Community-led publication describing ten guidelines for hosting an inclusive conference
+<a href="../publication/2022-07-21-ten-simple-rules-inclusive-conference/index.html" class="no-external">Community-led publication describing ten guidelines for hosting an inclusive conference</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Education'); return false;">
 Education
@@ -263,10 +294,9 @@ Education
 community
 </div>
 </div>
-<a href="../publication/2022-07-21-ten-simple-rules-inclusive-conference/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="../publication/2022-07-21-ten-simple-rules-inclusive-conference/index.html">
+<a href="../publication/2022-07-21-ten-simple-rules-inclusive-conference/index.html" class="no-external">
 <div class="listing-date">
 Jul 21, 2022
 </div>
@@ -276,16 +306,14 @@ Rocío Joo, Andrea Sánchez-Tapia, Sara Mortara, Yanina Bellini Saibene, Heather
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="2" data-categories="Research,EHR,pregnancy,medications" data-listing-date-sort="1654574400000" data-listing-file-modified-sort="1695221189072" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-left" data-index="2" data-categories="Research,EHR,pregnancy,medications" data-listing-date-sort="1654574400000" data-listing-file-modified-sort="1711418181772" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="440">
 <div class="body">
-<a href="../publication/2022-06-07-mwas-multiple-birth/index.html">
 <h3 class="no-anchor listing-title">
-Medication-Wide Association Study Using Electronic Health Record Data of Prescription Medication Exposure and Multifetal Pregnancies: Retrospective Study
+<a href="../publication/2022-06-07-mwas-multiple-birth/index.html" class="no-external">Medication-Wide Association Study Using Electronic Health Record Data of Prescription Medication Exposure and Multifetal Pregnancies: Retrospective Study</a>
 </h3>
 <div class="listing-subtitle">
-EHR study describing an MWAS approach to explore connections between prescription medication exposure and the risk of multiple gestation pregnancies
+<a href="../publication/2022-06-07-mwas-multiple-birth/index.html" class="no-external">EHR study describing an MWAS approach to explore connections between prescription medication exposure and the risk of multiple gestation pregnancies</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Research'); return false;">
 Research
@@ -300,10 +328,9 @@ pregnancy
 medications
 </div>
 </div>
-<a href="../publication/2022-06-07-mwas-multiple-birth/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="../publication/2022-06-07-mwas-multiple-birth/index.html">
+<a href="../publication/2022-06-07-mwas-multiple-birth/index.html" class="no-external">
 <div class="listing-date">
 Jun 7, 2022
 </div>
@@ -313,16 +340,14 @@ Lena Davidson, Silvia P. Canelón, Mary Regina Boland
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="3" data-categories="Research,EHR,pregnancy,ppd" data-listing-date-sort="1646802000000" data-listing-file-modified-sort="1695221189071" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-left" data-index="3" data-categories="Research,EHR,pregnancy,ppd" data-listing-date-sort="1646802000000" data-listing-file-modified-sort="1711418181771" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="294">
 <div class="body">
-<a href="../publication/2022-03-09-ppd-ontology/index.html">
 <h3 class="no-anchor listing-title">
-Design and Evaluation of a Postpartum Depression Ontology
+<a href="../publication/2022-03-09-ppd-ontology/index.html" class="no-external">Design and Evaluation of a Postpartum Depression Ontology</a>
 </h3>
 <div class="listing-subtitle">
-Study describing an ontology created for the identification of patients with postpartum depression.
+<a href="../publication/2022-03-09-ppd-ontology/index.html" class="no-external">Study describing an ontology created for the identification of patients with postpartum depression.</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Research'); return false;">
 Research
@@ -337,10 +362,9 @@ pregnancy
 ppd
 </div>
 </div>
-<a href="../publication/2022-03-09-ppd-ontology/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="../publication/2022-03-09-ppd-ontology/index.html">
+<a href="../publication/2022-03-09-ppd-ontology/index.html" class="no-external">
 <div class="listing-date">
 Mar 9, 2022
 </div>
@@ -350,16 +374,14 @@ Rebecca B. Morse, Abigail C. Bretzin, Silvia P. Canelón, Bernadette A. D’Alon
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="4" data-categories="Research,EHR,pregnancy,sickle cell disease" data-listing-date-sort="1637730000000" data-listing-file-modified-sort="1695838866847" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-left" data-index="4" data-categories="Research,EHR,pregnancy,sickle cell disease" data-listing-date-sort="1637730000000" data-listing-file-modified-sort="1711418181771" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="544">
 <div class="body">
-<a href="../publication/2021-11-24-sct-stillbirth/index.html">
 <h3 class="no-anchor listing-title">
-Evaluation of Stillbirth Among Pregnant People With Sickle Cell Trait
+<a href="../publication/2021-11-24-sct-stillbirth/index.html" class="no-external">Evaluation of Stillbirth Among Pregnant People With Sickle Cell Trait</a>
 </h3>
 <div class="listing-subtitle">
-Retrospective cohort study finding both sickle cell trait and disease to be associated with an increased risk of stillbirth, suggesting that sickle cell carriers would benefit from additional risk assessment during pregnancy.
+<a href="../publication/2021-11-24-sct-stillbirth/index.html" class="no-external">Retrospective cohort study finding both sickle cell trait and disease to be associated with an increased risk of stillbirth, suggesting that sickle cell carriers would benefit from additional risk assessment during pregnancy.</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Research'); return false;">
 Research
@@ -374,10 +396,9 @@ pregnancy
 sickle cell disease
 </div>
 </div>
-<a href="../publication/2021-11-24-sct-stillbirth/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="../publication/2021-11-24-sct-stillbirth/index.html">
+<a href="../publication/2021-11-24-sct-stillbirth/index.html" class="no-external">
 <div class="listing-date">
 Nov 24, 2021
 </div>
@@ -387,16 +408,14 @@ Silvia P. Canelón, Samantha Butts, Mary Regina Boland
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="5" data-categories="Research,environment,EHR,PFAS" data-listing-date-sort="1628654400000" data-listing-file-modified-sort="1695221189068" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-left" data-index="5" data-categories="Research,environment,EHR,PFAS" data-listing-date-sort="1628654400000" data-listing-file-modified-sort="1711418181769" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="454">
 <div class="body">
-<a href="../publication/2021-08-11-ehr-environmental-exposure-pfas/index.html">
 <h3 class="no-anchor listing-title">
-Harnessing electronic health records to study emerging environmental disasters: a proof of concept with perfluoroalkyl substances (PFAS)
+<a href="../publication/2021-08-11-ehr-environmental-exposure-pfas/index.html" class="no-external">Harnessing electronic health records to study emerging environmental disasters: a proof of concept with perfluoroalkyl substances (PFAS)</a>
 </h3>
 <div class="listing-subtitle">
-Proof-of-concept study detailing how Electronic Health Record (EHR) data can be leveraged to study the impacts of environmental disasters like widespread exposure to perfluoroalkyl substances (PFAS).
+<a href="../publication/2021-08-11-ehr-environmental-exposure-pfas/index.html" class="no-external">Proof-of-concept study detailing how Electronic Health Record (EHR) data can be leveraged to study the impacts of environmental disasters like widespread exposure to perfluoroalkyl substances (PFAS).</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Research'); return false;">
 Research
@@ -411,10 +430,9 @@ EHR
 PFAS
 </div>
 </div>
-<a href="../publication/2021-08-11-ehr-environmental-exposure-pfas/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="../publication/2021-08-11-ehr-environmental-exposure-pfas/index.html">
+<a href="../publication/2021-08-11-ehr-environmental-exposure-pfas/index.html" class="no-external">
 <div class="listing-date">
 Aug 11, 2021
 </div>
@@ -424,16 +442,14 @@ Mary Regina Boland, Lena M. Davidson, Silvia P. Canelón, Jessica Meeker, Trevor
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="6" data-categories="Research,pregnancy,health disparities,EHR,preprint" data-listing-date-sort="1620705600000" data-listing-file-modified-sort="1695221189063" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-left" data-index="6" data-categories="Research,pregnancy,health disparities,EHR,preprint" data-listing-date-sort="1620705600000" data-listing-file-modified-sort="1695221189063" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="201">
 <div class="body">
-<a href="../publication/2021-05-11-geospatial-analysis-pregnancy-outcomes/index.html">
 <h3 class="no-anchor listing-title">
-A Bayesian Hierarchical Modeling Framework for Geospatial Analysis of Adverse Pregnancy Outcomes
+<a href="../publication/2021-05-11-geospatial-analysis-pregnancy-outcomes/index.html" class="no-external">A Bayesian Hierarchical Modeling Framework for Geospatial Analysis of Adverse Pregnancy Outcomes</a>
 </h3>
 <div class="listing-subtitle">
-Study describing a Bayesian hierarchichal modeling framework used to explore which neighborhood-level factors and patient-level features were most informative for preterm birth and stillbirth pregnancy outcomes.
+<a href="../publication/2021-05-11-geospatial-analysis-pregnancy-outcomes/index.html" class="no-external">Study describing a Bayesian hierarchichal modeling framework used to explore which neighborhood-level factors and patient-level features were most informative for preterm birth and stillbirth pregnancy outcomes.</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Research'); return false;">
 Research
@@ -451,10 +467,9 @@ EHR
 preprint
 </div>
 </div>
-<a href="../publication/2021-05-11-geospatial-analysis-pregnancy-outcomes/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="../publication/2021-05-11-geospatial-analysis-pregnancy-outcomes/index.html">
+<a href="../publication/2021-05-11-geospatial-analysis-pregnancy-outcomes/index.html" class="no-external">
 <div class="listing-date">
 May 11, 2021
 </div>
@@ -464,16 +479,14 @@ Cecilia Balocchi, Ray Bai, Jessica Liu, Silvia P. Canelón, Edward I. George, Yo
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="7" data-categories="Research,pregnancy,health disparities,EHR" data-listing-date-sort="1617854400000" data-listing-file-modified-sort="1695221189063" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-left" data-index="7" data-categories="Research,pregnancy,health disparities,EHR" data-listing-date-sort="1617854400000" data-listing-file-modified-sort="1695221189063" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="301">
 <div class="body">
-<a href="../publication/2021-04-08-smm-individual-neighborhood/index.html">
 <h3 class="no-anchor listing-title">
-Individual-Level and Neighborhood-Level Risk Factors for Severe Maternal Morbidity
+<a href="../publication/2021-04-08-smm-individual-neighborhood/index.html" class="no-external">Individual-Level and Neighborhood-Level Risk Factors for Severe Maternal Morbidity</a>
 </h3>
 <div class="listing-subtitle">
-Study showing that neighborhood-level risk factors are independent predictors of Severe Maternal Morbidity, providing further evidence that racial disparities in maternal outcomes are symptoms of historical and structural racism.
+<a href="../publication/2021-04-08-smm-individual-neighborhood/index.html" class="no-external">Study showing that neighborhood-level risk factors are independent predictors of Severe Maternal Morbidity, providing further evidence that racial disparities in maternal outcomes are symptoms of historical and structural racism.</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Research'); return false;">
 Research
@@ -488,10 +501,9 @@ health disparities
 EHR
 </div>
 </div>
-<a href="../publication/2021-04-08-smm-individual-neighborhood/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="../publication/2021-04-08-smm-individual-neighborhood/index.html">
+<a href="../publication/2021-04-08-smm-individual-neighborhood/index.html" class="no-external">
 <div class="listing-date">
 Apr 8, 2021
 </div>
@@ -501,16 +513,14 @@ Jessica R. Meeker, Silvia P. Canelón, Ray Bai, Lisa D. Levine, Mary Regina Bola
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="8" data-categories="Research,pregnancy,PSB,EHR" data-listing-date-sort="1607576400000" data-listing-file-modified-sort="1695506558189" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-left" data-index="8" data-categories="Research,pregnancy,PSB,EHR" data-listing-date-sort="1607576400000" data-listing-file-modified-sort="1695506558189" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="257">
 <div class="body">
-<a href="../publication/2020-12-10-csections-emergency-admissions/index.html">
 <h3 class="no-anchor listing-title">
-Not All C-sections Are the Same: Investigating Emergency vs.&nbsp;Elective C-section Deliveries as an Adverse Pregnancy Outcome
+<a href="../publication/2020-12-10-csections-emergency-admissions/index.html" class="no-external">Not All C-sections Are the Same: Investigating Emergency vs.&nbsp;Elective C-section Deliveries as an Adverse Pregnancy Outcome</a>
 </h3>
-</a><div class="listing-subtitle"><a href="../publication/2020-12-10-csections-emergency-admissions/index.html">
-Publication and poster accepted for the </a><a href="https://psb.stanford.edu/previous/psb21/">2021 Pacific Biocomputing Symposium</a>. This study utilizes Electronic Health Record (EHR) data to assess the impact of pregnancy-specific maternal morbidity and patient-specific characteristics on experiencing an emergency admission at the time of delivery and its relationship to Cesarean section (C-section) deliveries
+<div class="listing-subtitle">
+<a href="../publication/2020-12-10-csections-emergency-admissions/index.html" class="no-external">Publication and poster accepted for the </a><a href="https://psb.stanford.edu/previous/psb21/">2021 Pacific Biocomputing Symposium</a>. This study utilizes Electronic Health Record (EHR) data to assess the impact of pregnancy-specific maternal morbidity and patient-specific characteristics on experiencing an emergency admission at the time of delivery and its relationship to Cesarean section (C-section) deliveries
 </div>
-
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Research'); return false;">
 Research
@@ -525,10 +535,9 @@ PSB
 EHR
 </div>
 </div>
-<a href="../publication/2020-12-10-csections-emergency-admissions/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="../publication/2020-12-10-csections-emergency-admissions/index.html">
+<a href="../publication/2020-12-10-csections-emergency-admissions/index.html" class="no-external">
 <div class="listing-date">
 Dec 10, 2020
 </div>
@@ -538,25 +547,22 @@ Silvia P. Canelón, Mary Regina Boland
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="9" data-categories="Research" data-listing-date-sort="1605589200000" data-listing-file-modified-sort="1695507331153" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-left" data-index="9" data-categories="Research" data-listing-date-sort="1605589200000" data-listing-file-modified-sort="1695507331153" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="261">
 <div class="body">
-<a href="../publication/2020-08-02-maddie-ehr-delivery-episode-algorithm/index.html">
 <h3 class="no-anchor listing-title">
-Development and Evaluation of MADDIE: Method to Acquire Delivery Date Information from Electronic Health Records
+<a href="../publication/2020-08-02-maddie-ehr-delivery-episode-algorithm/index.html" class="no-external">Development and Evaluation of MADDIE: Method to Acquire Delivery Date Information from Electronic Health Records</a>
 </h3>
 <div class="listing-subtitle">
-An R algorithm designed to extract delivery episode details from structured Electronic Health Record data.
+<a href="../publication/2020-08-02-maddie-ehr-delivery-episode-algorithm/index.html" class="no-external">An R algorithm designed to extract delivery episode details from structured Electronic Health Record data.</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Research'); return false;">
 Research
 </div>
 </div>
-<a href="../publication/2020-08-02-maddie-ehr-delivery-episode-algorithm/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="../publication/2020-08-02-maddie-ehr-delivery-episode-algorithm/index.html">
+<a href="../publication/2020-08-02-maddie-ehr-delivery-episode-algorithm/index.html" class="no-external">
 <div class="listing-date">
 Nov 17, 2020
 </div>
@@ -566,16 +572,14 @@ Silvia P. Canelón, Heather H. Burris, Lisa D. Levine, Mary Regina Boland
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="10" data-categories="Research,EHR,covid-19,medications,pregnancy,English,preprint" data-listing-date-sort="1588737600000" data-listing-file-modified-sort="1695221189039" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-left" data-index="10" data-categories="Research,EHR,covid-19,medications,pregnancy,English,preprint" data-listing-date-sort="1588737600000" data-listing-file-modified-sort="1695221189039" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="300">
 <div class="body">
-<a href="../publication/2020-05-06-preprint-hydroxychloroquine-pregnancy/index.html">
 <h3 class="no-anchor listing-title">
-Is Hydroxychloroquine Safe During Pregnancy? Observations from Penn Medicine
+<a href="../publication/2020-05-06-preprint-hydroxychloroquine-pregnancy/index.html" class="no-external">Is Hydroxychloroquine Safe During Pregnancy? Observations from Penn Medicine</a>
 </h3>
 <div class="listing-subtitle">
-Preprint as a contribution from a rapid response exploration of hydroxychloroquine effects on pregnancy-related outcomes.
+<a href="../publication/2020-05-06-preprint-hydroxychloroquine-pregnancy/index.html" class="no-external">Preprint as a contribution from a rapid response exploration of hydroxychloroquine effects on pregnancy-related outcomes.</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Research'); return false;">
 Research
@@ -599,10 +603,9 @@ English
 preprint
 </div>
 </div>
-<a href="../publication/2020-05-06-preprint-hydroxychloroquine-pregnancy/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="../publication/2020-05-06-preprint-hydroxychloroquine-pregnancy/index.html">
+<a href="../publication/2020-05-06-preprint-hydroxychloroquine-pregnancy/index.html" class="no-external">
 <div class="listing-date">
 May 6, 2020
 </div>
@@ -612,16 +615,14 @@ Lena Davidson, Silvia P. Canelón, Mary Regina Boland
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="11" data-categories="Research,climate change,menstruation" data-listing-date-sort="1583384400000" data-listing-file-modified-sort="1695221189038" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-left" data-index="11" data-categories="Research,climate change,menstruation" data-listing-date-sort="1583384400000" data-listing-file-modified-sort="1695221189038" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="206">
 <div class="body">
-<a href="../publication/2020-03-05-climate-change-menarche/index.html">
 <h3 class="no-anchor listing-title">
-A Systematic Literature Review of Factors Affecting the Timing of Menarche: The Potential for Climate Change to Impact Women’s Health
+<a href="../publication/2020-03-05-climate-change-menarche/index.html" class="no-external">A Systematic Literature Review of Factors Affecting the Timing of Menarche: The Potential for Climate Change to Impact Women’s Health</a>
 </h3>
 <div class="listing-subtitle">
-Review paper highlighting how climate change could impact the timing of first menstruation and increase the burden of disease.
+<a href="../publication/2020-03-05-climate-change-menarche/index.html" class="no-external">Review paper highlighting how climate change could impact the timing of first menstruation and increase the burden of disease.</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Research'); return false;">
 Research
@@ -633,10 +634,9 @@ climate change
 menstruation
 </div>
 </div>
-<a href="../publication/2020-03-05-climate-change-menarche/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="../publication/2020-03-05-climate-change-menarche/index.html">
+<a href="../publication/2020-03-05-climate-change-menarche/index.html" class="no-external">
 <div class="listing-date">
 Mar 5, 2020
 </div>
@@ -646,16 +646,14 @@ Silvia P. Canelón, Mary Regina Boland
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="12" data-categories="Research,pregnancy,AMIA,EHR,sickle cell disease" data-listing-date-sort="1574226000000" data-listing-file-modified-sort="1695221189028" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-left" data-index="12" data-categories="Research,pregnancy,AMIA,EHR,sickle cell disease" data-listing-date-sort="1574226000000" data-listing-file-modified-sort="1695221189028" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="24">
 <div class="body">
-<a href="../publication/2019-11-20-amia-annual-symposium/index.html">
 <h3 class="no-anchor listing-title">
-Investigating Pregnancy-Related Health Outcomes Among Patients with Sickle Cell Disease and Linking with Health Disparities
+<a href="../publication/2019-11-20-amia-annual-symposium/index.html" class="no-external">Investigating Pregnancy-Related Health Outcomes Among Patients with Sickle Cell Disease and Linking with Health Disparities</a>
 </h3>
-</a><div class="listing-subtitle"><a href="../publication/2019-11-20-amia-annual-symposium/index.html">
-Poster presented at the </a><a href="https://amia.org/education-events/amia-2019-annual-symposium">2019 American Medical Informatics Association Annual Symposium</a> held November 16th-20th in Washington D.C.
+<div class="listing-subtitle">
+<a href="../publication/2019-11-20-amia-annual-symposium/index.html" class="no-external">Poster presented at the </a><a href="https://amia.org/education-events/amia-2019-annual-symposium">2019 American Medical Informatics Association Annual Symposium</a> held November 16th-20th in Washington D.C.
 </div>
-
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Research'); return false;">
 Research
@@ -673,10 +671,9 @@ EHR
 sickle cell disease
 </div>
 </div>
-<a href="../publication/2019-11-20-amia-annual-symposium/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="../publication/2019-11-20-amia-annual-symposium/index.html">
+<a href="../publication/2019-11-20-amia-annual-symposium/index.html" class="no-external">
 <div class="listing-date">
 Nov 20, 2019
 </div>
@@ -686,16 +683,14 @@ Silvia P. Canelón, Mary Regina Boland
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="13" data-categories="Research,osteoblasts,Type I collagen,BAPN,AFM,crosslinking,mechanical loading" data-listing-date-sort="1567483200000" data-listing-file-modified-sort="1695221189028" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-left" data-index="13" data-categories="Research,osteoblasts,Type I collagen,BAPN,AFM,crosslinking,mechanical loading" data-listing-date-sort="1567483200000" data-listing-file-modified-sort="1695221189028" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="250">
 <div class="body">
-<a href="../publication/2019-12-01-bapn-substrate-strain/index.html">
 <h3 class="no-anchor listing-title">
-Substrate Strain Mitigates Effects of β-Aminopropionitrile-Induced Reduction in Enzymatic Crosslinking
+<a href="../publication/2019-12-01-bapn-substrate-strain/index.html" class="no-external">Substrate Strain Mitigates Effects of β-Aminopropionitrile-Induced Reduction in Enzymatic Crosslinking</a>
 </h3>
 <div class="listing-subtitle">
-Research highlighting how the effects of BAPN on type I collagen, produced by osteoblasts, were mitigated by mechanical loading.
+<a href="../publication/2019-12-01-bapn-substrate-strain/index.html" class="no-external">Research highlighting how the effects of BAPN on type I collagen, produced by osteoblasts, were mitigated by mechanical loading.</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Research'); return false;">
 Research
@@ -719,10 +714,9 @@ crosslinking
 mechanical loading
 </div>
 </div>
-<a href="../publication/2019-12-01-bapn-substrate-strain/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="../publication/2019-12-01-bapn-substrate-strain/index.html">
+<a href="../publication/2019-12-01-bapn-substrate-strain/index.html" class="no-external">
 <div class="listing-date">
 Sep 3, 2019
 </div>
@@ -732,16 +726,14 @@ Silvia P. Canelón, Joseph M. Wallace
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="14" data-categories="Research,osteoblasts,Type I collagen,BAPN,AFM,crosslinking,mechanical loading" data-listing-date-sort="1525147200000" data-listing-file-modified-sort="1695221189022" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-left" data-index="14" data-categories="Research,osteoblasts,Type I collagen,BAPN,AFM,crosslinking,mechanical loading" data-listing-date-sort="1525147200000" data-listing-file-modified-sort="1695221189022" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="246">
 <div class="body">
-<a href="../publication/2018-05-01-dissertation/index.html">
 <h3 class="no-anchor listing-title">
-Characterization of Type I Collagen and Osteoblast Response to Mechanical Loading
+<a href="../publication/2018-05-01-dissertation/index.html" class="no-external">Characterization of Type I Collagen and Osteoblast Response to Mechanical Loading</a>
 </h3>
 <div class="listing-subtitle">
-Dissertation completed as part of the requirements for a doctorate degree in Biomedical Engineering.
+<a href="../publication/2018-05-01-dissertation/index.html" class="no-external">Dissertation completed as part of the requirements for a doctorate degree in Biomedical Engineering.</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Research'); return false;">
 Research
@@ -765,10 +757,9 @@ crosslinking
 mechanical loading
 </div>
 </div>
-<a href="../publication/2018-05-01-dissertation/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="../publication/2018-05-01-dissertation/index.html">
+<a href="../publication/2018-05-01-dissertation/index.html" class="no-external">
 <div class="listing-date">
 May 1, 2018
 </div>
@@ -778,16 +769,14 @@ Silvia P. Canelón
 </a>
 </div>
 </div>
-<div class="quarto-post image-left" data-index="15" data-categories="Research,osteoblasts,Type I collagen,BAPN,AFM,crosslinking" data-listing-date-sort="1478404800000" data-listing-file-modified-sort="1695221189022" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-left" data-index="15" data-categories="Research,osteoblasts,Type I collagen,BAPN,AFM,crosslinking" data-listing-date-sort="1478404800000" data-listing-file-modified-sort="1695221189022" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="301">
 <div class="body">
-<a href="../publication/2016-11-06-bapn-morphology/index.html">
 <h3 class="no-anchor listing-title">
-β-Aminopropionitrile-Induced Reduction in Enzymatic Crosslinking Causes In Vitro Changes in Collagen Morphology and Molecular Composition
+<a href="../publication/2016-11-06-bapn-morphology/index.html" class="no-external">β-Aminopropionitrile-Induced Reduction in Enzymatic Crosslinking Causes In Vitro Changes in Collagen Morphology and Molecular Composition</a>
 </h3>
 <div class="listing-subtitle">
-Publication highlighting how a reduction in enzymatic crosslinking alters type I collagen morphology through an increase in D-spacing.
+<a href="../publication/2016-11-06-bapn-morphology/index.html" class="no-external">Publication highlighting how a reduction in enzymatic crosslinking alters type I collagen morphology through an increase in D-spacing.</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Research'); return false;">
 Research
@@ -808,10 +797,9 @@ AFM
 crosslinking
 </div>
 </div>
-<a href="../publication/2016-11-06-bapn-morphology/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="../publication/2016-11-06-bapn-morphology/index.html">
+<a href="../publication/2016-11-06-bapn-morphology/index.html" class="no-external">
 <div class="listing-date">
 Nov 6, 2016
 </div>
@@ -870,6 +858,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -938,13 +953,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1023,10 +1040,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1036,8 +1052,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1050,6 +1075,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1093,6 +1237,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1118,6 +1263,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1182,18 +1353,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">© 2023 Silvia Canelón ∙ Made with <a href="https://quarto.org">Quarto</a></div>   
-    <div class="nav-footer-center"><a class="link-dark me-1" href="../accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener"><i class="fa-solid fa-universal-access" aria-label="universal-access"></i></a> <a class="link-dark me-1" href="https://hachyderm.io/@spcanelon" title="mastodon" target="_blank" rel="noopener"><i class="fa-brands fa-mastodon" aria-label="mastodon"></i></a> <a class="link-dark me-1" href="https://github.com/spcanelon" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://orcid.org/0000-0003-1709-1394" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid" style="color:black"></i></a> <a class="link-dark me-1" href="https://scholar.google.com/citations?user=GAzkvpcAAAAJ&amp;hl=en&amp;oi=ao" title="Google Scholar" target="_blank" rel="noopener"><i class="ai  ai-google-scholar" style="color:black"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/spcanelon" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a></div>
+    <div class="nav-footer-left">
+<p>© 2023 Silvia Canelón ∙ Made with <a href="https://quarto.org">Quarto</a></p>
+</div>   
+    <div class="nav-footer-center">
+<p><a class="link-dark me-1" href="../accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener"><i class="fa-solid fa-universal-access" aria-label="universal-access"></i></a> <a class="link-dark me-1" href="https://hachyderm.io/@spcanelon" title="mastodon" target="_blank" rel="noopener"><i class="fa-brands fa-mastodon" aria-label="mastodon"></i></a> <a class="link-dark me-1" href="https://github.com/spcanelon" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://orcid.org/0000-0003-1709-1394" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid" style="color:black"></i></a> <a class="link-dark me-1" href="https://scholar.google.com/citations?user=GAzkvpcAAAAJ&amp;hl=en&amp;oi=ao" title="Google Scholar" target="_blank" rel="noopener"><i class="ai  ai-google-scholar" style="color:black"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/spcanelon" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a></p>
+</div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="../accessibility.html">Accessibility</a>
+    <a class="nav-link" href="../accessibility.html">
+<p>Accessibility</p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../contact.html">Contact</a>
+    <a class="nav-link" href="../contact.html">
+<p>Contact</p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../license.html">License</a>
+    <a class="nav-link" href="../license.html">
+<p>License</p>
+</a>
   </li>  
     <li class="nav-item compact">
     <a class="nav-link" href="../blog/index.xml">
@@ -1205,6 +1386,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+
 
 
 

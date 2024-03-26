@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.549">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Silvia Canelón">
 <meta name="dcterms.date" content="2021-09-23">
@@ -21,7 +21,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -74,19 +74,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+<link href="../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -95,6 +101,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -109,8 +116,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     <img src="../../assets/silvia/img/logo_rounded.svg" alt="" class="navbar-logo"></a>
     <a class="navbar-brand" href="../../index.html">
@@ -124,31 +131,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
 <li class="nav-item">
-    <a class="nav-link" href="../../about/index.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="../../about/index.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../blog/index.html" rel="" target="">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="../../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../talk/index.html" rel="" target="">
- <span class="menu-text">Talks</span></a>
+    <a class="nav-link" href="../../talk/index.html"> 
+<span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../publication/index.html" rel="" target="">
- <span class="menu-text">Publications</span></a>
+    <a class="nav-link" href="../../publication/index.html"> 
+<span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../project/index.html" rel="" target="">
- <span class="menu-text">Projects</span></a>
+    <a class="nav-link" href="../../project/index.html"> 
+<span class="menu-text">Projects</span></a>
   </li>  
 </ul>
-<div class="quarto-navbar-tools">
-    <a href="https://www.github.com/spcanelon/silvia" rel="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+</div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+    <a href="https://www.github.com/spcanelon/silvia" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns"><div id="title-block-header-title" class="quarto-title page-columns page-full page-layout-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);">
 <h1 class="title">Resources for Data Viz Accessibility</h1>
@@ -189,6 +196,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     
   </div>
   
+
 
 
 </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
@@ -256,8 +264,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>
 <p>Prefer simple, familiar visualizations over complex novelties.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/guidelines-oystein-moseng.png" class="lightbox" title="Pie chart from Øystein’s post using color and (optional) patterns to encode information" data-gallery="quarto-lightbox-gallery-1"><img src="img/guidelines-oystein-moseng.png" class="img-fluid figure-img" alt="The pie chart using color and pattern to differentiate between slices. This screenshot also demos an interactive chart element in action: hovering over one pie slice enlarges the slice, reveals more information about the selected slice, and dims the non-selected slices."></a></p>
-<figcaption class="figure-caption">Pie chart from Øystein’s post using color and (optional) patterns to encode information</figcaption></figure>
+<figure class="figure"><p><a href="img/guidelines-oystein-moseng.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="Pie chart from Øystein’s post using color and (optional) patterns to encode information"><img src="img/guidelines-oystein-moseng.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The pie chart using color and pattern to differentiate between slices. This screenshot also demos an interactive chart element in action: hovering over one pie slice enlarges the slice, reveals more information about the selected slice, and dims the non-selected slices."></a></p>
+<figcaption>Pie chart from Øystein’s post using color and (optional) patterns to encode information</figcaption></figure>
 </div>
 </li>
 </ul>
@@ -266,15 +274,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>
 <p>Guidelines by Amy Cesal on how to write alt text for data visualizations: <a href="https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81">Writing Alt Text for Data Visualization</a></p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/alt-text-amy-cesal.png" class="lightbox" title="Example template from Amy’s post" data-gallery="quarto-lightbox-gallery-2"><img src="img/alt-text-amy-cesal.png" class="img-fluid figure-img" alt="Example alt text format that reads: Chart type of type of data where reason for including chart. Also the recommendation to include a link to the data source somewhere in the text."></a></p>
-<figcaption class="figure-caption">Example template from Amy’s post</figcaption></figure>
+<figure class="figure"><p><a href="img/alt-text-amy-cesal.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="Example template from Amy’s post"><img src="img/alt-text-amy-cesal.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Example alt text format that reads: Chart type of type of data where reason for including chart. Also the recommendation to include a link to the data source somewhere in the text."></a></p>
+<figcaption>Example template from Amy’s post</figcaption></figure>
 </div>
 </li>
 <li>
 <p>Post by Lisa Charlotte Muth on how to pick colors for your data viz that everyone can appreciate: <a href="https://blog.datawrapper.de/beautifulcolors/">How to pick more beautiful colors for your data visualizations - Datawrapper Blog</a></p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/datawrapper.png" class="lightbox" title="Example from Charlotte’s post of two different approaches to improving a pie chart" data-gallery="quarto-lightbox-gallery-3"><img src="img/datawrapper.png" class="img-fluid figure-img" alt="The first pie chart uses colors of similar lightness that end up appearing the same when checked under grayscale simulation. The first option for improvement picks different colors that all stand out from one another in grayscale. The second option keeps the original colors but delineates pie slices with a contrasting border."></a></p>
-<figcaption class="figure-caption">Example from Charlotte’s post of two different approaches to improving a pie chart</figcaption></figure>
+<figure class="figure"><p><a href="img/datawrapper.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="Example from Charlotte’s post of two different approaches to improving a pie chart"><img src="img/datawrapper.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The first pie chart uses colors of similar lightness that end up appearing the same when checked under grayscale simulation. The first option for improvement picks different colors that all stand out from one another in grayscale. The second option keeps the original colors but delineates pie slices with a contrasting border."></a></p>
+<figcaption>Example from Charlotte’s post of two different approaches to improving a pie chart</figcaption></figure>
 </div>
 </li>
 <li>
@@ -283,8 +291,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>
 <p>Related is a talk from The Readability Group sharing findings from a survey study about font preferences including 2000+ participants. Among these were participants with dyslexia characteristics and participants with poor near vision: <a href="https://youtu.be/h8IOqUl1zII?t=1029">Don’t Believe the Type!</a></p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/typeface-poor-near-vision.png" class="lightbox" title="Bar graph showing the frequency by which 20 different fonts were selected by study participants with strong poor near vision in comparison with users with no poor near vision." data-gallery="quarto-lightbox-gallery-4"><img src="img/typeface-poor-near-vision.png" class="img-fluid figure-img" alt="The fonts selected most often in this group were San Francisco Pro, Red Hat Text, Calibri, and Segoe UI, in that order. San Francisco Pro was selected by 68% of participants The fonts selected least often were Open Dyslexic, Dyslexie, Comic Sans MS, and Sylexiad Sans. Open Dyslexic was selected by 12% of participants. Both Times New Roman and Helvetica are highlighted as showing the largest differences between users with poor near vision and those without. Times New Roman was the 6th least selected and Helvetica was in the middle learning towards the most selected fonts."></a></p>
-<figcaption class="figure-caption">Bar graph showing the frequency by which 20 different fonts were selected by study participants with strong poor near vision in comparison with users with no poor near vision.</figcaption></figure>
+<figure class="figure"><p><a href="img/typeface-poor-near-vision.png" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="quarto-lightbox-gallery-4" title="Bar graph showing the frequency by which 20 different fonts were selected by study participants with strong poor near vision in comparison with users with no poor near vision."><img src="img/typeface-poor-near-vision.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The fonts selected most often in this group were San Francisco Pro, Red Hat Text, Calibri, and Segoe UI, in that order. San Francisco Pro was selected by 68% of participants The fonts selected least often were Open Dyslexic, Dyslexie, Comic Sans MS, and Sylexiad Sans. Open Dyslexic was selected by 12% of participants. Both Times New Roman and Helvetica are highlighted as showing the largest differences between users with poor near vision and those without. Times New Roman was the 6th least selected and Helvetica was in the middle learning towards the most selected fonts."></a></p>
+<figcaption>Bar graph showing the frequency by which 20 different fonts were selected by study participants with strong poor near vision in comparison with users with no poor near vision.</figcaption></figure>
 </div>
 </li>
 </ul>
@@ -292,10 +300,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>
 <p>Sarah Fossheim authored a post titled <a href="https://fossheim.io/writing/posts/accessible-dataviz-design/">An intro to designing accessible data visualizations</a> which uses real-word applications to demonstrate 10 different accessibility practices.</p>
 <p>Sarah also provides a code-through showing how to make screenreader-friendly graphs using D3.js in their post <a href="https://fossheim.io/writing/posts/apple-dataviz-a11y-tutorial/">How to create a screen reader accessible graph like Apple’s with D3.js</a></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/d3js-apple-rings.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/d3js-apple-rings.png" class="img-fluid figure-img" alt=""></a></p>
-</figure>
-</div>
+<p><a href="img/d3js-apple-rings.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/d3js-apple-rings.png" class="img-fluid" alt=""></a></p>
 </li>
 <li>
 <p>Amber Thomas provides an example of how to make scrollytales more accessible in a piece created with Ofunne Amaka for The Pudding: <a href="https://pudding.cool/2021/03/foundation-names/">The Naked Truth</a></p>
@@ -319,8 +324,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/tableau-chris-demartini.png" class="lightbox" title="Title of Chris’s Tableau visualization being checked for color contrast." data-gallery="quarto-lightbox-gallery-6"><img src="img/tableau-chris-demartini.png" class="img-fluid figure-img" alt="The user is using a kind of selection tool to hover over an area of the visualization, in this case the title, and check font color contrast against its background. The tool pulls up details along the bottom of the page, including WCAG pass/fail test results, background and foreground color hex codes, and other color characteristics."></a></p>
-<figcaption class="figure-caption">Title of Chris’s Tableau visualization being checked for color contrast.</figcaption></figure>
+<figure class="figure"><p><a href="img/tableau-chris-demartini.png" class="lightbox" data-glightbox="description: .lightbox-desc-6" data-gallery="quarto-lightbox-gallery-6" title="Title of Chris’s Tableau visualization being checked for color contrast."><img src="img/tableau-chris-demartini.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The user is using a kind of selection tool to hover over an area of the visualization, in this case the title, and check font color contrast against its background. The tool pulls up details along the bottom of the page, including WCAG pass/fail test results, background and foreground color hex codes, and other color characteristics."></a></p>
+<figcaption>Title of Chris’s Tableau visualization being checked for color contrast.</figcaption></figure>
 </div>
 </li>
 </ul></section><section id="r-resources" class="level2"><h2 class="anchored" data-anchor-id="r-resources">R resources</h2>
@@ -328,8 +333,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>
 <p><a href="https://twitter.com/DogGeneticsLLC">Liz Hare</a> and I gave a talk earlier this year on alt text in data viz shared as a part of TidyTuesday on Twitter. After web-scraping alt text from TidyTuesday tweets we found that only 3% of data viz tweets had alt text to accompany them (over the first 3 years of the TidyTuesday project). Links to the video recording, slides, and resources at https://github.com/spcanelon/csvConf2021. The talk includes guidelines on what makes effective alt text for data viz (complementary to those Amy Cesal includes in her post).</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/alt-text-silvia-liz.png" class="lightbox" title="Slide from our presentation summarizing the most useful alt-text features found among 196 data viz tweets" data-gallery="quarto-lightbox-gallery-7"><img src="img/alt-text-silvia-liz.png" class="img-fluid figure-img" alt="Effective alt includes a description that conveys meaning in the data, variables on the axes, scale described within the description, description of the type of plot. Direct link to slide: https://spcanelon.github.io/csvConf2021/slides/indexLH.html#11"></a></p>
-<figcaption class="figure-caption">Slide from our presentation summarizing the most useful alt-text features found among 196 data viz tweets</figcaption></figure>
+<figure class="figure"><p><a href="img/alt-text-silvia-liz.png" class="lightbox" data-glightbox="description: .lightbox-desc-7" data-gallery="quarto-lightbox-gallery-7" title="Slide from our presentation summarizing the most useful alt-text features found among 196 data viz tweets"><img src="img/alt-text-silvia-liz.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Effective alt includes a description that conveys meaning in the data, variables on the axes, scale described within the description, description of the type of plot. Direct link to slide: https://spcanelon.github.io/csvConf2021/slides/indexLH.html#11"></a></p>
+<figcaption>Slide from our presentation summarizing the most useful alt-text features found among 196 data viz tweets</figcaption></figure>
 </div>
 </li>
 <li>
@@ -352,8 +357,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="index_files/figure-html/unnamed-chunk-2-1.png" class="lightbox" title="Bigger flippers, bigger bills" data-gallery="quarto-lightbox-gallery-8"><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" alt="Scatterplot of flipper length by bill length of 3 penguin species, where we show penguins with bigger flippers have bigger bills." width="672"></a></p>
-<figcaption class="figure-caption">Bigger flippers, bigger bills</figcaption></figure>
+<figure class="figure"><p><a href="index_files/figure-html/unnamed-chunk-2-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-8" data-gallery="quarto-lightbox-gallery-8" title="Bigger flippers, bigger bills"><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" alt="Scatterplot of flipper length by bill length of 3 penguin species, where we show penguins with bigger flippers have bigger bills." width="672"></a></p>
+<figcaption>Bigger flippers, bigger bills</figcaption></figure>
 </div>
 </div>
 </div>
@@ -367,7 +372,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span><span class="va">penguinColors</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"darkorange"</span>, <span class="st">"purple"</span>, <span class="st">"cyan4"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">ggplot</span><span class="op">(</span><span class="va">penguins</span>, <span class="fu">aes</span><span class="op">(</span><span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span><span class="fu"><a href="https://rdrr.io/pkg/ggpattern/man/geom-docs.html">geom_bar_pattern</a></span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>fill <span class="op">=</span> <span class="va">species</span>,</span>
+<span><span class="fu">geom_bar_pattern</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>fill <span class="op">=</span> <span class="va">species</span>,</span>
 <span>                    pattern <span class="op">=</span> <span class="va">species</span>,</span>
 <span>                    pattern_color <span class="op">=</span> <span class="va">species</span><span class="op">)</span>,</span>
 <span>  fill <span class="op">=</span> <span class="va">penguinColors</span>,</span>
@@ -382,8 +387,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span><span class="fu">theme</span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">'none'</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="index_files/figure-html/unnamed-chunk-3-1.png" class="lightbox" title="Different patterns mapped onto penguin species along with different colors" data-gallery="quarto-lightbox-gallery-9"><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" alt="Bar chart showing 3 penguin species along the x axis and the number of observations on the y axis. The bar for the Adelie species uses the color orange and diagonal stripes, the bar for Chinstrap species uses the color purple and crosshatches, and the bar for the Gentoo species uses the color cyan and a dotted pattern." width="672"></a></p>
-<figcaption class="figure-caption">Different patterns mapped onto penguin species along with different colors</figcaption></figure>
+<figure class="figure"><p><a href="index_files/figure-html/unnamed-chunk-3-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-9" data-gallery="quarto-lightbox-gallery-9" title="Different patterns mapped onto penguin species along with different colors"><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" alt="Bar chart showing 3 penguin species along the x axis and the number of observations on the y axis. The bar for the Adelie species uses the color orange and diagonal stripes, the bar for Chinstrap species uses the color purple and crosshatches, and the bar for the Gentoo species uses the color cyan and a dotted pattern." width="672"></a></p>
+<figcaption>Different patterns mapped onto penguin species along with different colors</figcaption></figure>
 </div>
 </div>
 </div>
@@ -391,14 +396,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>
 <p>The <a href="https://jkunst.com/highcharter/index.html">Highcharter R package</a> developed by Joshua Kunst adds interactivity to data viz using Highcharts JavaScript components designed with <a href="https://www.highcharts.com/accessibility/#exploreFeatures">web accessibility in mind</a>. The package has a learning curve, but lucky for us Mara Averick wrote an excellent <a href="https://dataand.me/index.html#category:highcharter">series of blog posts on using the Highcharts accessibility module with {highcharter}</a>.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/highcharter-mara-averick.png" class="lightbox" title="Interactive scatterplot from Mara’s post using color and shape to encode information about penguin species" data-gallery="quarto-lightbox-gallery-10"><img src="img/highcharter-mara-averick.png" class="img-fluid figure-img" alt="Scatterplot of the palmerpenguins dataset showing data points clustered by species and the highcharter package making it possible to focus on one cluster and identify the x and y values of a specific data point. In this case the data point is a Chinstrap penguin observation mapping to a flipper length of 201mm and bill length of 54.2mm. Explore this data viz with a screen reader in Mara's blog post: https://dataand.me/posts/2021-11-15-accessible-highcharter-part-4/#an-accessible-penguin-plot"></a></p>
-<figcaption class="figure-caption">Interactive scatterplot from Mara’s post using color and shape to encode information about penguin species</figcaption></figure>
+<figure class="figure"><p><a href="img/highcharter-mara-averick.png" class="lightbox" data-glightbox="description: .lightbox-desc-10" data-gallery="quarto-lightbox-gallery-10" title="Interactive scatterplot from Mara’s post using color and shape to encode information about penguin species"><img src="img/highcharter-mara-averick.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Scatterplot of the palmerpenguins dataset showing data points clustered by species and the highcharter package making it possible to focus on one cluster and identify the x and y values of a specific data point. In this case the data point is a Chinstrap penguin observation mapping to a flipper length of 201mm and bill length of 54.2mm. Explore this data viz with a screen reader in Mara's blog post: https://dataand.me/posts/2021-11-15-accessible-highcharter-part-4/#an-accessible-penguin-plot"></a></p>
+<figcaption>Interactive scatterplot from Mara’s post using color and shape to encode information about penguin species</figcaption></figure>
 </div>
 </li>
 </ul>
 
 
-</section><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2021" class="csl-entry quarto-appendix-citeas" role="listitem">
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">Pie chart from Øystein’s post using color and (optional) patterns to encode information</span>
+<span class="glightbox-desc lightbox-desc-2">Example template from Amy’s post</span>
+<span class="glightbox-desc lightbox-desc-3">Example from Charlotte’s post of two different approaches to improving a pie chart</span>
+<span class="glightbox-desc lightbox-desc-4">Bar graph showing the frequency by which 20 different fonts were selected by study participants with strong poor near vision in comparison with users with no poor near vision.</span>
+<span class="glightbox-desc lightbox-desc-6">Title of Chris’s Tableau visualization being checked for color contrast.</span>
+<span class="glightbox-desc lightbox-desc-7">Slide from our presentation summarizing the most useful alt-text features found among 196 data viz tweets</span>
+<span class="glightbox-desc lightbox-desc-8">Bigger flippers, bigger bills</span>
+<span class="glightbox-desc lightbox-desc-9">Different patterns mapped onto penguin species along with different colors</span>
+<span class="glightbox-desc lightbox-desc-10">Interactive scatterplot from Mara’s post using color and shape to encode information about penguin species</span>
+</div>
+</section><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2021" class="csl-entry quarto-appendix-citeas" role="listitem">
 Canelón, Silvia. 2021. <span>“Resources for Data Viz
 Accessibility.”</span> September 23, 2021. <a href="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y">https://silviacanelon.com/blog/2021-09-23-data-viz-a11y</a>.
 </div></div></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
@@ -442,6 +458,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -510,13 +553,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -595,10 +640,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -608,8 +652,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -622,6 +675,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -665,6 +837,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -690,6 +863,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -752,18 +951,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
-    <div class="nav-footer-left">© 2023 Silvia Canelón ∙ Made with <a href="https://quarto.org">Quarto</a></div>   
-    <div class="nav-footer-center"><a class="link-dark me-1" href="../../accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener"><i class="fa-solid fa-universal-access" aria-label="universal-access"></i></a> <a class="link-dark me-1" href="https://hachyderm.io/@spcanelon" title="mastodon" target="_blank" rel="noopener"><i class="fa-brands fa-mastodon" aria-label="mastodon"></i></a> <a class="link-dark me-1" href="https://github.com/spcanelon" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://orcid.org/0000-0003-1709-1394" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid" style="color:black"></i></a> <a class="link-dark me-1" href="https://scholar.google.com/citations?user=GAzkvpcAAAAJ&amp;hl=en&amp;oi=ao" title="Google Scholar" target="_blank" rel="noopener"><i class="ai  ai-google-scholar" style="color:black"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/spcanelon" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a></div>
+    <div class="nav-footer-left">
+<p>© 2023 Silvia Canelón ∙ Made with <a href="https://quarto.org">Quarto</a></p>
+</div>   
+    <div class="nav-footer-center">
+<p><a class="link-dark me-1" href="../../accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener"><i class="fa-solid fa-universal-access" aria-label="universal-access"></i></a> <a class="link-dark me-1" href="https://hachyderm.io/@spcanelon" title="mastodon" target="_blank" rel="noopener"><i class="fa-brands fa-mastodon" aria-label="mastodon"></i></a> <a class="link-dark me-1" href="https://github.com/spcanelon" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://orcid.org/0000-0003-1709-1394" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid" style="color:black"></i></a> <a class="link-dark me-1" href="https://scholar.google.com/citations?user=GAzkvpcAAAAJ&amp;hl=en&amp;oi=ao" title="Google Scholar" target="_blank" rel="noopener"><i class="ai  ai-google-scholar" style="color:black"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/spcanelon" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a></p>
+</div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
 <li class="nav-item">
-    <a class="nav-link" href="../../accessibility.html">Accessibility</a>
+    <a class="nav-link" href="../../accessibility.html">
+<p>Accessibility</p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../../contact.html">Contact</a>
+    <a class="nav-link" href="../../contact.html">
+<p>Contact</p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../../license.html">License</a>
+    <a class="nav-link" href="../../license.html">
+<p>License</p>
+</a>
   </li>  
     <li class="nav-item compact">
     <a class="nav-link" href="../../blog/index.xml">
@@ -774,7 +983,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </ul>
 </div>
   </div>
-</footer><script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","descPosition":"bottom","loop":true,"closeEffect":"zoom"});</script>
+</footer><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom","openEffect":"zoom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 </body></html>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -55,7 +55,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -64,6 +70,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -107,7 +114,34 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="alternate" type="application/rss+xml" title="Silvia Canelón" href="index.xml"><meta name="twitter:title" content="Meeting People Where They R | Silvia Canelón">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="alternate" type="application/rss+xml" title="Silvia Canelón" href="index.xml" data-external="1"><meta name="twitter:title" content="Meeting People Where They R | Silvia Canelón">
 <meta name="twitter:description" content="This is my blog where I practice sharing my curiosity about R. It includes notes and tutorials for my future self and hopefully also for you. Subscribe via RSS">
 <meta name="twitter:image" content="https://silviacanelon.com/blog/2023-09-29-hello-quarto/featured.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -117,9 +151,9 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
     <img src="../assets/silvia/img/logo_rounded.svg" alt="" class="navbar-logo">
     </a>
@@ -134,31 +168,31 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../about/index.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="../about/index.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../blog/index.html" rel="" target="" aria-current="page">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link active" href="../blog/index.html" aria-current="page"> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../talk/index.html" rel="" target="">
- <span class="menu-text">Talks</span></a>
+    <a class="nav-link" href="../talk/index.html"> 
+<span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../publication/index.html" rel="" target="">
- <span class="menu-text">Publications</span></a>
+    <a class="nav-link" href="../publication/index.html"> 
+<span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../project/index.html" rel="" target="">
- <span class="menu-text">Projects</span></a>
+    <a class="nav-link" href="../project/index.html"> 
+<span class="menu-text">Projects</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-    <a href="https://www.github.com/spcanelon/silvia" rel="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+    <a href="https://www.github.com/spcanelon/silvia" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -189,7 +223,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -198,7 +232,9 @@ ul.task-list li input[type="checkbox"] {
   
 
 
+
 </header>
+
 
 
 
@@ -206,19 +242,19 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="R,quarto,website" data-listing-date-sort="1695960000000" data-listing-file-modified-sort="1697136342310" data-listing-date-modified-sort="1697083200000" data-listing-reading-time-sort="19">
+<div class="quarto-post image-right" data-index="0" data-categories="R,quarto,website" data-listing-date-sort="1695960000000" data-listing-file-modified-sort="1697136342310" data-listing-date-modified-sort="1697083200000" data-listing-reading-time-sort="19" data-listing-word-count-sort="3731">
 <div class="thumbnail">
-<p><a href="../blog/2023-09-29-hello-quarto/index.html"> <img src="../blog/2023-09-29-hello-quarto/featured.jpg" class="thumbnail-image"> </a></p>
+<p><a href="../blog/2023-09-29-hello-quarto/index.html" class="no-external"></a></p><a href="../blog/2023-09-29-hello-quarto/index.html" class="no-external">
+<p><img src="../blog/2023-09-29-hello-quarto/featured.jpg" class="thumbnail-image"></p>
+</a><p><a href="../blog/2023-09-29-hello-quarto/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../blog/2023-09-29-hello-quarto/index.html">
 <h3 class="no-anchor listing-title">
-Hello Quarto: Porting my Website from Hugo Apéro
+<a href="../blog/2023-09-29-hello-quarto/index.html" class="no-external">Hello Quarto: Porting my Website from Hugo Apéro</a>
 </h3>
 <div class="listing-subtitle">
-<p>Notes from porting my personal Blogdown website to Quarto</p>
+<a href="../blog/2023-09-29-hello-quarto/index.html" class="no-external">Notes from porting my personal Blogdown website to Quarto </a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
 R
@@ -230,10 +266,9 @@ quarto
 website
 </div>
 </div>
-<a href="../blog/2023-09-29-hello-quarto/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="../blog/2023-09-29-hello-quarto/index.html">
+<a href="../blog/2023-09-29-hello-quarto/index.html" class="no-external">
 <div class="listing-date">
 Sep 29, 2023
 </div>
@@ -243,19 +278,19 @@ Silvia Canelón
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="R,maps,webscraping,robotstxt,rvest,leaflet,tidygeocoder" data-listing-date-sort="1685937600000" data-listing-file-modified-sort="1695221188919" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="1" data-categories="R,maps,webscraping,robotstxt,rvest,leaflet,tidygeocoder" data-listing-date-sort="1685937600000" data-listing-file-modified-sort="1695221188919" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="182">
 <div class="thumbnail">
-<p><a href="../blog/2023-06-05-ccd-sips/index.html"> <img src="../blog/2023-06-05-ccd-sips/featured.png" class="thumbnail-image"> </a></p>
+<p><a href="../blog/2023-06-05-ccd-sips/index.html" class="no-external"></a></p><a href="../blog/2023-06-05-ccd-sips/index.html" class="no-external">
+<p><img src="../blog/2023-06-05-ccd-sips/featured.png" class="thumbnail-image"></p>
+</a><p><a href="../blog/2023-06-05-ccd-sips/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../blog/2023-06-05-ccd-sips/index.html">
 <h3 class="no-anchor listing-title">
-Philly Center City District Sips 2023: An Interactive Map
+<a href="../blog/2023-06-05-ccd-sips/index.html" class="no-external">Philly Center City District Sips 2023: An Interactive Map</a>
 </h3>
 <div class="listing-subtitle">
-<p>An interactive map showing restaurants participating in CCD Sips 2023</p>
+<a href="../blog/2023-06-05-ccd-sips/index.html" class="no-external">An interactive map showing restaurants participating in CCD Sips 2023 </a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
 R
@@ -279,10 +314,9 @@ leaflet
 tidygeocoder
 </div>
 </div>
-<a href="../blog/2023-06-05-ccd-sips/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="../blog/2023-06-05-ccd-sips/index.html">
+<a href="../blog/2023-06-05-ccd-sips/index.html" class="no-external">
 <div class="listing-date">
 Jun 5, 2023
 </div>
@@ -292,19 +326,19 @@ Silvia Canelón
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="R,tutorial,maps,webscraping,robotstxt,rvest,leaflet,ggmap" data-listing-date-sort="1653969600000" data-listing-file-modified-sort="1695221188823" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="77">
+<div class="quarto-post image-right" data-index="2" data-categories="R,tutorial,maps,webscraping,robotstxt,rvest,leaflet,ggmap" data-listing-date-sort="1653969600000" data-listing-file-modified-sort="1695221188823" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="77" data-listing-word-count-sort="15309">
 <div class="thumbnail">
-<p><a href="../blog/2022-05-31-ccd-sips/index.html"> <img src="../blog/2022-05-31-ccd-sips/featured.png" class="thumbnail-image"> </a></p>
+<p><a href="../blog/2022-05-31-ccd-sips/index.html" class="no-external"></a></p><a href="../blog/2022-05-31-ccd-sips/index.html" class="no-external">
+<p><img src="../blog/2022-05-31-ccd-sips/featured.png" class="thumbnail-image"></p>
+</a><p><a href="../blog/2022-05-31-ccd-sips/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../blog/2022-05-31-ccd-sips/index.html">
 <h3 class="no-anchor listing-title">
-Philly Center City District Sips 2022: An Interactive Map
+<a href="../blog/2022-05-31-ccd-sips/index.html" class="no-external">Philly Center City District Sips 2022: An Interactive Map</a>
 </h3>
 <div class="listing-subtitle">
-<p>An interactive map showing restaurants participating in CCD Sips 2022 &amp; a companion R tutorial on webscraping, geocoding, and map-making</p>
+<a href="../blog/2022-05-31-ccd-sips/index.html" class="no-external">An interactive map showing restaurants participating in CCD Sips 2022 &amp; a companion R tutorial on webscraping, geocoding, and map-making </a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
 R
@@ -331,10 +365,9 @@ leaflet
 ggmap
 </div>
 </div>
-<a href="../blog/2022-05-31-ccd-sips/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="../blog/2022-05-31-ccd-sips/index.html">
+<a href="../blog/2022-05-31-ccd-sips/index.html" class="no-external">
 <div class="listing-date">
 May 31, 2022
 </div>
@@ -344,19 +377,19 @@ Silvia Canelón
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="R,Website,blogdown,test,Hugo" data-listing-date-sort="1642482000000" data-listing-file-modified-sort="1695838866844" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="3" data-categories="R,Website,blogdown,test,Hugo" data-listing-date-sort="1642482000000" data-listing-file-modified-sort="1695838866844" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="522">
 <div class="thumbnail">
-<p><a href="../blog/2022-01-18-hello-umami/index.html"> <img src="../blog/2022-01-18-hello-umami/featured.jpg" class="thumbnail-image"> </a></p>
+<p><a href="../blog/2022-01-18-hello-umami/index.html" class="no-external"></a></p><a href="../blog/2022-01-18-hello-umami/index.html" class="no-external">
+<p><img src="../blog/2022-01-18-hello-umami/featured.jpg" class="thumbnail-image"></p>
+</a><p><a href="../blog/2022-01-18-hello-umami/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../blog/2022-01-18-hello-umami/index.html">
 <h3 class="no-anchor listing-title">
-Hello Umami: Deploying a Privacy-Friendly Open Source Tool for Web Analytics
+<a href="../blog/2022-01-18-hello-umami/index.html" class="no-external">Hello Umami: Deploying a Privacy-Friendly Open Source Tool for Web Analytics</a>
 </h3>
 <div class="listing-subtitle">
-A use case for adding Umami web analytics to a blogdown site and deploying using Railway.
+<a href="../blog/2022-01-18-hello-umami/index.html" class="no-external">A use case for adding Umami web analytics to a blogdown site and deploying using Railway.</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
 R
@@ -374,10 +407,9 @@ test
 Hugo
 </div>
 </div>
-<a href="../blog/2022-01-18-hello-umami/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="../blog/2022-01-18-hello-umami/index.html">
+<a href="../blog/2022-01-18-hello-umami/index.html" class="no-external">
 <div class="listing-date">
 Jan 18, 2022
 </div>
@@ -387,19 +419,19 @@ Silvia Canelón
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="R,data viz,a11y,ggpattern,highcharter" data-listing-date-sort="1632369600000" data-listing-file-modified-sort="1695221188789" data-listing-date-modified-sort="1637298000000" data-listing-reading-time-sort="10">
+<div class="quarto-post image-right" data-index="4" data-categories="R,data viz,a11y,ggpattern,highcharter" data-listing-date-sort="1632369600000" data-listing-file-modified-sort="1711418181767" data-listing-date-modified-sort="1637298000000" data-listing-reading-time-sort="10" data-listing-word-count-sort="1917">
 <div class="thumbnail">
-<p><a href="../blog/2021-09-23-data-viz-a11y/index.html"> <img src="../blog/2021-09-23-data-viz-a11y/featured.jpg" class="thumbnail-image"> </a></p>
+<p><a href="../blog/2021-09-23-data-viz-a11y/index.html" class="no-external"></a></p><a href="../blog/2021-09-23-data-viz-a11y/index.html" class="no-external">
+<p><img src="../blog/2021-09-23-data-viz-a11y/featured.jpg" class="thumbnail-image"></p>
+</a><p><a href="../blog/2021-09-23-data-viz-a11y/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../blog/2021-09-23-data-viz-a11y/index.html">
 <h3 class="no-anchor listing-title">
-Resources for Data Viz Accessibility
+<a href="../blog/2021-09-23-data-viz-a11y/index.html" class="no-external">Resources for Data Viz Accessibility</a>
 </h3>
 <div class="listing-subtitle">
-A selection of general and R-specific resources on how and why to make accessible data visualizations.
+<a href="../blog/2021-09-23-data-viz-a11y/index.html" class="no-external">A selection of general and R-specific resources on how and why to make accessible data visualizations.</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
 R
@@ -417,10 +449,9 @@ ggpattern
 highcharter
 </div>
 </div>
-<a href="../blog/2021-09-23-data-viz-a11y/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="../blog/2021-09-23-data-viz-a11y/index.html">
+<a href="../blog/2021-09-23-data-viz-a11y/index.html" class="no-external">
 <div class="listing-date">
 Sep 23, 2021
 </div>
@@ -430,19 +461,19 @@ Silvia Canelón
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="Website,Education,a11y" data-listing-date-sort="1622606400000" data-listing-file-modified-sort="1695221188764" data-listing-date-modified-sort="1623038400000" data-listing-reading-time-sort="9">
+<div class="quarto-post image-right" data-index="5" data-categories="Website,Education,a11y" data-listing-date-sort="1622606400000" data-listing-file-modified-sort="1711418181767" data-listing-date-modified-sort="1623038400000" data-listing-reading-time-sort="9" data-listing-word-count-sort="1652">
 <div class="thumbnail">
-<p><a href="../blog/2021-06-02-wave-audit-1/index.html"> <img data-src="../blog/2021-06-02-wave-audit-1/featured.jpg" class="thumbnail-image"> </a></p>
+<p><a href="../blog/2021-06-02-wave-audit-1/index.html" class="no-external"></a></p><a href="../blog/2021-06-02-wave-audit-1/index.html" class="no-external">
+<p><img data-src="../blog/2021-06-02-wave-audit-1/featured.jpg" class="thumbnail-image"></p>
+</a><p><a href="../blog/2021-06-02-wave-audit-1/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../blog/2021-06-02-wave-audit-1/index.html">
 <h3 class="no-anchor listing-title">
-WAVE Audit No.&nbsp;1
+<a href="../blog/2021-06-02-wave-audit-1/index.html" class="no-external">WAVE Audit No.&nbsp;1</a>
 </h3>
 <div class="listing-subtitle">
-First audit using the WebAIM Web Accessibility Evaluation Tool (WAVE)
+<a href="../blog/2021-06-02-wave-audit-1/index.html" class="no-external">First audit using the WebAIM Web Accessibility Evaluation Tool (WAVE)</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Website'); return false;">
 Website
@@ -454,10 +485,9 @@ Education
 a11y
 </div>
 </div>
-<a href="../blog/2021-06-02-wave-audit-1/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="../blog/2021-06-02-wave-audit-1/index.html">
+<a href="../blog/2021-06-02-wave-audit-1/index.html" class="no-external">
 <div class="listing-date">
 Jun 2, 2021
 </div>
@@ -467,19 +497,19 @@ Silvia Canelón
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="R,Website,Tutorial,git,blogdown,Hugo" data-listing-date-sort="1622520000000" data-listing-file-modified-sort="1695221188668" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="24">
+<div class="quarto-post image-right" data-index="6" data-categories="R,Website,Tutorial,git,blogdown,Hugo" data-listing-date-sort="1622520000000" data-listing-file-modified-sort="1711418181766" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="24" data-listing-word-count-sort="4621">
 <div class="thumbnail">
-<p><a href="../blog/2021-06-01-hello-hugo-apero/index.html"> <img data-src="../blog/2021-06-01-hello-hugo-apero/featured.png" class="thumbnail-image"> </a></p>
+<p><a href="../blog/2021-06-01-hello-hugo-apero/index.html" class="no-external"></a></p><a href="../blog/2021-06-01-hello-hugo-apero/index.html" class="no-external">
+<p><img data-src="../blog/2021-06-01-hello-hugo-apero/featured.png" class="thumbnail-image"></p>
+</a><p><a href="../blog/2021-06-01-hello-hugo-apero/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../blog/2021-06-01-hello-hugo-apero/index.html">
 <h3 class="no-anchor listing-title">
-Hello Hugo Apéro: Converting a Blogdown Site from Hugo Academic
+<a href="../blog/2021-06-01-hello-hugo-apero/index.html" class="no-external">Hello Hugo Apéro: Converting a Blogdown Site from Hugo Academic</a>
 </h3>
 <div class="listing-subtitle">
-A tutorial on how to take your personal Hugo Academic/Wowchemy website and convert it to the Hugo Apéro theme
+<a href="../blog/2021-06-01-hello-hugo-apero/index.html" class="no-external">A tutorial on how to take your personal Hugo Academic/Wowchemy website and convert it to the Hugo Apéro theme</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
 R
@@ -500,10 +530,9 @@ blogdown
 Hugo
 </div>
 </div>
-<a href="../blog/2021-06-01-hello-hugo-apero/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="../blog/2021-06-01-hello-hugo-apero/index.html">
+<a href="../blog/2021-06-01-hello-hugo-apero/index.html" class="no-external">
 <div class="listing-date">
 Jun 1, 2021
 </div>
@@ -513,19 +542,19 @@ Silvia Canelón
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="R,Tutorial,xaringan,git" data-listing-date-sort="1615867200000" data-listing-file-modified-sort="1695507133202" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9">
+<div class="quarto-post image-right" data-index="7" data-categories="R,Tutorial,xaringan,git" data-listing-date-sort="1615867200000" data-listing-file-modified-sort="1695507133202" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1654">
 <div class="thumbnail">
-<p><a href="../blog/2021-03-16-deploying-xaringan-slides/index.html"> <img data-src="../blog/2021-03-16-deploying-xaringan-slides/featured.png" class="thumbnail-image"> </a></p>
+<p><a href="../blog/2021-03-16-deploying-xaringan-slides/index.html" class="no-external"></a></p><a href="../blog/2021-03-16-deploying-xaringan-slides/index.html" class="no-external">
+<p><img data-src="../blog/2021-03-16-deploying-xaringan-slides/featured.png" class="thumbnail-image"></p>
+</a><p><a href="../blog/2021-03-16-deploying-xaringan-slides/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../blog/2021-03-16-deploying-xaringan-slides/index.html">
 <h3 class="no-anchor listing-title">
-Deploying xaringan Slides with GitHub Pages
+<a href="../blog/2021-03-16-deploying-xaringan-slides/index.html" class="no-external">Deploying xaringan Slides with GitHub Pages</a>
 </h3>
 <div class="listing-subtitle">
-A ten-step workflow for creating an HTML xaringan slide deck and deploying it to the web using GitHub Pages
+<a href="../blog/2021-03-16-deploying-xaringan-slides/index.html" class="no-external">A ten-step workflow for creating an HTML xaringan slide deck and deploying it to the web using GitHub Pages</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
 R
@@ -540,10 +569,9 @@ xaringan
 git
 </div>
 </div>
-<a href="../blog/2021-03-16-deploying-xaringan-slides/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="../blog/2021-03-16-deploying-xaringan-slides/index.html">
+<a href="../blog/2021-03-16-deploying-xaringan-slides/index.html" class="no-external">
 <div class="listing-date">
 Mar 16, 2021
 </div>
@@ -553,19 +581,19 @@ Silvia Canelón
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="R,RStudio,Education,tidyverse" data-listing-date-sort="1602043200000" data-listing-file-modified-sort="1695838866844" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13">
+<div class="quarto-post image-right" data-index="8" data-categories="R,RStudio,Education,tidyverse" data-listing-date-sort="1602043200000" data-listing-file-modified-sort="1695838866844" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2556">
 <div class="thumbnail">
-<p><a href="../blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html"> <img data-src="../blog/2020-10-07-rstudio-instructor-certification-tidyverse/featured.jpg" class="thumbnail-image"> </a></p>
+<p><a href="../blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html" class="no-external"></a></p><a href="../blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html" class="no-external">
+<p><img data-src="../blog/2020-10-07-rstudio-instructor-certification-tidyverse/featured.jpg" class="thumbnail-image"></p>
+</a><p><a href="../blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html">
 <h3 class="no-anchor listing-title">
-Becoming certified as an RStudio Tidyverse Instructor
+<a href="../blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html" class="no-external">Becoming certified as an RStudio Tidyverse Instructor</a>
 </h3>
 <div class="listing-subtitle">
-An overview of the RStudio Instructor certification process and collection of resources to support anyone on their certification journey.
+<a href="../blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html" class="no-external">An overview of the RStudio Instructor certification process and collection of resources to support anyone on their certification journey.</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
 R
@@ -580,10 +608,9 @@ Education
 tidyverse
 </div>
 </div>
-<a href="../blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="../blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html">
+<a href="../blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html" class="no-external">
 <div class="listing-date">
 Oct 7, 2020
 </div>
@@ -593,19 +620,19 @@ Silvia Canelón
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="Website,Tutorial,Atom,blogdown,Hugo,CSS" data-listing-date-sort="1592280000000" data-listing-file-modified-sort="1695221188613" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13">
+<div class="quarto-post image-right" data-index="9" data-categories="Website,Tutorial,Atom,blogdown,Hugo,CSS" data-listing-date-sort="1592280000000" data-listing-file-modified-sort="1695221188613" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2411">
 <div class="thumbnail">
-<p><a href="../blog/2020-05-26-dark-mode-custom-with-atom/index.html"> <img data-src="../blog/2020-05-26-dark-mode-custom-with-atom/featured.png" class="thumbnail-image"> </a></p>
+<p><a href="../blog/2020-05-26-dark-mode-custom-with-atom/index.html" class="no-external"></a></p><a href="../blog/2020-05-26-dark-mode-custom-with-atom/index.html" class="no-external">
+<p><img data-src="../blog/2020-05-26-dark-mode-custom-with-atom/featured.png" class="thumbnail-image"></p>
+</a><p><a href="../blog/2020-05-26-dark-mode-custom-with-atom/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../blog/2020-05-26-dark-mode-custom-with-atom/index.html">
 <h3 class="no-anchor listing-title">
-Customizing Hugo Academic’s Dark Mode with Help from Atom
+<a href="../blog/2020-05-26-dark-mode-custom-with-atom/index.html" class="no-external">Customizing Hugo Academic’s Dark Mode with Help from Atom</a>
 </h3>
 <div class="listing-subtitle">
-Tutorial on how to customize the dark mode in Hugo’s Academic theme with help from the Atom text editor package Pigments.
+<a href="../blog/2020-05-26-dark-mode-custom-with-atom/index.html" class="no-external">Tutorial on how to customize the dark mode in Hugo’s Academic theme with help from the Atom text editor package Pigments.</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Website'); return false;">
 Website
@@ -626,10 +653,9 @@ Hugo
 CSS
 </div>
 </div>
-<a href="../blog/2020-05-26-dark-mode-custom-with-atom/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="../blog/2020-05-26-dark-mode-custom-with-atom/index.html">
+<a href="../blog/2020-05-26-dark-mode-custom-with-atom/index.html" class="no-external">
 <div class="listing-date">
 Jun 16, 2020
 </div>
@@ -639,19 +665,19 @@ Silvia Canelón
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="R,Tutorial,json,jsonlite,tidyverse" data-listing-date-sort="1589256000000" data-listing-file-modified-sort="1695506510157" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13">
+<div class="quarto-post image-right" data-index="10" data-categories="R,Tutorial,json,jsonlite,tidyverse" data-listing-date-sort="1589256000000" data-listing-file-modified-sort="1695506510157" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2452">
 <div class="thumbnail">
-<p><a href="../blog/2020-05-12-trello-to-airtable/index.html"> <img data-src="../blog/2020-05-12-trello-to-airtable/featured.png" class="thumbnail-image"> </a></p>
+<p><a href="../blog/2020-05-12-trello-to-airtable/index.html" class="no-external"></a></p><a href="../blog/2020-05-12-trello-to-airtable/index.html" class="no-external">
+<p><img data-src="../blog/2020-05-12-trello-to-airtable/featured.png" class="thumbnail-image"></p>
+</a><p><a href="../blog/2020-05-12-trello-to-airtable/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../blog/2020-05-12-trello-to-airtable/index.html">
 <h3 class="no-anchor listing-title">
-Migrating from Trello to Airtable: Working with JSON Data in R
+<a href="../blog/2020-05-12-trello-to-airtable/index.html" class="no-external">Migrating from Trello to Airtable: Working with JSON Data in R</a>
 </h3>
 <div class="listing-subtitle">
-Tutorial on how to migrate your current Trello board to an Airtable base from start to finish.
+<a href="../blog/2020-05-12-trello-to-airtable/index.html" class="no-external">Tutorial on how to migrate your current Trello board to an Airtable base from start to finish.</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
 R
@@ -669,10 +695,9 @@ jsonlite
 tidyverse
 </div>
 </div>
-<a href="../blog/2020-05-12-trello-to-airtable/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="../blog/2020-05-12-trello-to-airtable/index.html">
+<a href="../blog/2020-05-12-trello-to-airtable/index.html" class="no-external">
 <div class="listing-date">
 May 12, 2020
 </div>
@@ -682,19 +707,19 @@ Silvia Canelón
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="R,maps,leaflet,RSelenium" data-listing-date-sort="1564891200000" data-listing-file-modified-sort="1695221188490" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="11" data-categories="R,maps,leaflet,RSelenium" data-listing-date-sort="1564891200000" data-listing-file-modified-sort="1695221188490" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="277">
 <div class="thumbnail">
-<p><a href="../blog/2019-08-04-ccd-sips/index.html"> <img data-src="../blog/2019-08-04-ccd-sips/featured.png" class="thumbnail-image"> </a></p>
+<p><a href="../blog/2019-08-04-ccd-sips/index.html" class="no-external"></a></p><a href="../blog/2019-08-04-ccd-sips/index.html" class="no-external">
+<p><img data-src="../blog/2019-08-04-ccd-sips/featured.png" class="thumbnail-image"></p>
+</a><p><a href="../blog/2019-08-04-ccd-sips/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="../blog/2019-08-04-ccd-sips/index.html">
 <h3 class="no-anchor listing-title">
-Philly Center City Sips 2019: An Interactive Map
+<a href="../blog/2019-08-04-ccd-sips/index.html" class="no-external">Philly Center City Sips 2019: An Interactive Map</a>
 </h3>
 <div class="listing-subtitle">
-An interactive map showing restaurants participating in Philly’s Center City District Sips 2019.
+<a href="../blog/2019-08-04-ccd-sips/index.html" class="no-external">An interactive map showing restaurants participating in Philly’s Center City District Sips 2019.</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
 R
@@ -709,10 +734,9 @@ leaflet
 RSelenium
 </div>
 </div>
-<a href="../blog/2019-08-04-ccd-sips/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="../blog/2019-08-04-ccd-sips/index.html">
+<a href="../blog/2019-08-04-ccd-sips/index.html" class="no-external">
 <div class="listing-date">
 Aug 4, 2019
 </div>
@@ -729,7 +753,7 @@ No matching items
 <nav id="listing-pagination" class="listing-pagination" aria-label="Page Navigation">
   <ul class="pagination"></ul>
 </nav>
-</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section></div></main> <!-- /main -->
+</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -771,6 +795,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -839,13 +890,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -924,10 +977,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -937,8 +989,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -951,6 +1012,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -994,6 +1174,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1019,6 +1200,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1081,18 +1288,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">© 2023 Silvia Canelón ∙ Made with <a href="https://quarto.org">Quarto</a></div>   
-    <div class="nav-footer-center"><a class="link-dark me-1" href="../accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener"><i class="fa-solid fa-universal-access" aria-label="universal-access"></i></a> <a class="link-dark me-1" href="https://hachyderm.io/@spcanelon" title="mastodon" target="_blank" rel="noopener"><i class="fa-brands fa-mastodon" aria-label="mastodon"></i></a> <a class="link-dark me-1" href="https://github.com/spcanelon" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://orcid.org/0000-0003-1709-1394" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid" style="color:black"></i></a> <a class="link-dark me-1" href="https://scholar.google.com/citations?user=GAzkvpcAAAAJ&amp;hl=en&amp;oi=ao" title="Google Scholar" target="_blank" rel="noopener"><i class="ai  ai-google-scholar" style="color:black"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/spcanelon" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a></div>
+    <div class="nav-footer-left">
+<p>© 2023 Silvia Canelón ∙ Made with <a href="https://quarto.org">Quarto</a></p>
+</div>   
+    <div class="nav-footer-center">
+<p><a class="link-dark me-1" href="../accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener"><i class="fa-solid fa-universal-access" aria-label="universal-access"></i></a> <a class="link-dark me-1" href="https://hachyderm.io/@spcanelon" title="mastodon" target="_blank" rel="noopener"><i class="fa-brands fa-mastodon" aria-label="mastodon"></i></a> <a class="link-dark me-1" href="https://github.com/spcanelon" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://orcid.org/0000-0003-1709-1394" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid" style="color:black"></i></a> <a class="link-dark me-1" href="https://scholar.google.com/citations?user=GAzkvpcAAAAJ&amp;hl=en&amp;oi=ao" title="Google Scholar" target="_blank" rel="noopener"><i class="ai  ai-google-scholar" style="color:black"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/spcanelon" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a></p>
+</div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="../accessibility.html">Accessibility</a>
+    <a class="nav-link" href="../accessibility.html">
+<p>Accessibility</p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../contact.html">Contact</a>
+    <a class="nav-link" href="../contact.html">
+<p>Contact</p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../license.html">License</a>
+    <a class="nav-link" href="../license.html">
+<p>License</p>
+</a>
   </li>  
     <li class="nav-item compact">
     <a class="nav-link" href="../blog/index.xml">
@@ -1104,6 +1321,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+
 
 
 

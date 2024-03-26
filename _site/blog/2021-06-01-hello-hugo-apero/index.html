@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.549">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Silvia Canelón">
 <meta name="dcterms.date" content="2021-06-01">
@@ -21,7 +21,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -74,19 +74,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+<link href="../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -95,6 +101,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -113,8 +120,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     <img src="../../assets/silvia/img/logo_rounded.svg" alt="" class="navbar-logo"></a>
     <a class="navbar-brand" href="../../index.html">
@@ -128,31 +135,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
 <li class="nav-item">
-    <a class="nav-link" href="../../about/index.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="../../about/index.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../blog/index.html" rel="" target="">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="../../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../talk/index.html" rel="" target="">
- <span class="menu-text">Talks</span></a>
+    <a class="nav-link" href="../../talk/index.html"> 
+<span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../publication/index.html" rel="" target="">
- <span class="menu-text">Publications</span></a>
+    <a class="nav-link" href="../../publication/index.html"> 
+<span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../project/index.html" rel="" target="">
- <span class="menu-text">Projects</span></a>
+    <a class="nav-link" href="../../project/index.html"> 
+<span class="menu-text">Projects</span></a>
   </li>  
 </ul>
-<div class="quarto-navbar-tools">
-    <a href="https://www.github.com/spcanelon/silvia" rel="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+</div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+    <a href="https://www.github.com/spcanelon/silvia" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns"><div id="title-block-header-title" class="quarto-title page-columns page-full page-layout-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);">
 <h1 class="title">Hello Hugo Apéro: Converting a Blogdown Site from Hugo Academic</h1>
@@ -188,6 +195,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     
   </div>
   
+
 
 <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
 <a href="https://hugo-apero-docs.netlify.app/" class="btn btn-secondary text-capitalize"><i class="bi bi-journal-text me-1"></i> Hugo Apéro Docs</a>
@@ -262,8 +270,8 @@ Projects on my site: https://silvia.rbind.io/project
 </summary><div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-project-list.png" class="lightbox" title="My Project listing: https://silvia.rbind.io/project" data-gallery="quarto-lightbox-gallery-1"><img src="img/silvia-project-list.png" class="img-fluid figure-img" alt="The Project listing page for my site with a grid layout featuring thumbnail images. The top of the page says 'Projects' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There are three projects featured with a decorative thumbnail image, a title, and a summary. Items also include an author and category links but they are cut off in this screenshot." width="1265"></a></p>
-<figcaption class="figure-caption">My Project listing: https://silvia.rbind.io/project</figcaption></figure>
+<figure class="figure"><p><a href="img/silvia-project-list.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="My Project listing: https://silvia.rbind.io/project"><img src="img/silvia-project-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Project listing page for my site with a grid layout featuring thumbnail images. The top of the page says 'Projects' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There are three projects featured with a decorative thumbnail image, a title, and a summary. Items also include an author and category links but they are cut off in this screenshot." width="1265"></a></p>
+<figcaption>My Project listing: https://silvia.rbind.io/project</figcaption></figure>
 </div>
 </div>
 </div>
@@ -273,7 +281,7 @@ Projects on my site: https://silvia.rbind.io/project
 </section><section id="the-plan" class="level2"><h2 class="anchored" data-anchor-id="the-plan">The Plan</h2>
 <p>I was lucky that Alison had already started converting her own personal site because she gave me a template and example to follow! <i class="fa-solid fa-hands-helping" aria-label="hands-helping"></i></p>
 <p>We’ll follow the steps below throughout the tutorial and each of the six steps comes with its own commit in my git history, so you can see exactly what I changed and when. <i class="fa-solid fa-code-branch" aria-label="code-branch"></i></p>
-<p></p>
+{{}}
 <p>Then we’ll <a href="#migrating-the-content">reuse and migrate</a> your existing content, set up a <a href="#contact-form">contact form</a>, <a href="#tidying-up-your-directory">tidy up your directory</a>, explore some resources for <a href="#customizing-your-site">customizing your new site</a>, and end with the grand finale: <a href="#deploying-your-new-site">deploying your new site</a>!</p>
 </section><section id="prework" class="level2"><h2 class="anchored" data-anchor-id="prework">Prework</h2>
 <section id="branch-deploy" class="level3"><h3 class="anchored" data-anchor-id="branch-deploy">Branch deploy</h3>
@@ -287,8 +295,8 @@ Projects on my site: https://silvia.rbind.io/project
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/netlify-branch-deploy.png" class="lightbox" title="Netlify site settings for deploy contexts" data-gallery="quarto-lightbox-gallery-2"><img src="img/netlify-branch-deploy.png" class="img-fluid figure-img" style="width:75.0%" alt="The deploy contexts section after clicking the Edit settings button. This section shows three settings that can be edited. The first is the production branch which is set to 'main' in a free text box. The second is deploy previews which is a radio button set to 'any pull request against your production branch/branch deploy branches (as opposed to 'none'). The third is branch deploys which is a radio button set to 'all' (as opposed to 'none' and 'let me add individual branches'). There are two buttons at the bottom of this section, Save and Cancel."></a></p>
-<figcaption class="figure-caption">Netlify site settings for deploy contexts</figcaption></figure>
+<figure class="figure"><p><a href="img/netlify-branch-deploy.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="Netlify site settings for deploy contexts"><img src="img/netlify-branch-deploy.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%" alt="The deploy contexts section after clicking the Edit settings button. This section shows three settings that can be edited. The first is the production branch which is set to 'main' in a free text box. The second is deploy previews which is a radio button set to 'any pull request against your production branch/branch deploy branches (as opposed to 'none'). The third is branch deploys which is a radio button set to 'all' (as opposed to 'none' and 'let me add individual branches'). There are two buttons at the bottom of this section, Save and Cancel."></a></p>
+<figcaption>Netlify site settings for deploy contexts</figcaption></figure>
 </div>
 </div>
 </div>
@@ -297,8 +305,8 @@ Projects on my site: https://silvia.rbind.io/project
 <p>The last piece of prework before we dive in is to update your local version of Hugo and update the Hugo version accordingly in a few different places.</p>
 <ol type="1">
 <li>
-<p>Update Hugo locally using <code><a href="https://pkgs.rstudio.com/blogdown/reference/install_hugo.html">blogdown::install_hugo()</a></code> (for me the latest version was v0.82.1)</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">blogdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/blogdown/reference/install_hugo.html">install_hugo</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Update Hugo locally using <code>blogdown::install_hugo()</code> (for me the latest version was v0.82.1)</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">blogdown</span><span class="fu">::</span><span class="fu">install_hugo</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </li>
 <li>
 <p>Update <strong>.Rprofile</strong> and then restart R per the instructions that appear in the console.</p>
@@ -319,7 +327,7 @@ Projects on my site: https://silvia.rbind.io/project
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  HUGO_VERSION <span class="ot">=</span> <span class="st">"0.82.1"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </li>
 <li>
-<p>Run <code><a href="https://pkgs.rstudio.com/blogdown/reference/check_site.html">blogdown::check_site()</a></code> to find any issues. In my case these checking functions found a Hugo version mismatch and I ended up having to specifically run <code>blogdown::install_hugo("0.82.1")</code> to resolve it.</p>
+<p>Run <code>blogdown::check_site()</code> to find any issues. In my case these checking functions found a Hugo version mismatch and I ended up having to specifically run <code>blogdown::install_hugo("0.82.1")</code> to resolve it.</p>
 <details><summary><p>Console output</p>
 </summary><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>― Checking netlify.toml...</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>○ Found HUGO_VERSION <span class="ot">=</span> <span class="dv">0</span>.<span class="fl">82.1</span> <span class="cf">in</span> [build] context of netlify.toml.</span>
@@ -333,8 +341,8 @@ Projects on my site: https://silvia.rbind.io/project
 </details>
 </li>
 </ol>
-<p>If you end up needing to make your own changes, I recommend running <code><a href="https://pkgs.rstudio.com/blogdown/reference/check_site.html">blogdown::check_site()</a></code> again when you’re done to make sure you’ve resolved all of the issues.</p>
-<p>And then run <code><a href="https://pkgs.rstudio.com/blogdown/reference/serve_site.html">blogdown::serve_site()</a></code> to render a live preview of your site :rocket:</p>
+<p>If you end up needing to make your own changes, I recommend running <code>blogdown::check_site()</code> again when you’re done to make sure you’ve resolved all of the issues.</p>
+<p>And then run <code>blogdown::serve_site()</code> to render a live preview of your site :rocket:</p>
 <hr></section></section><section id="install-theme-alongside-academic-change-in-config.toml" class="level2"><h2 class="anchored" data-anchor-id="install-theme-alongside-academic-change-in-config.toml">1. Install theme alongside Academic, change in <strong>config.toml</strong>
 </h2>
 <blockquote class="blockquote">
@@ -342,7 +350,7 @@ Projects on my site: https://silvia.rbind.io/project
 </blockquote>
 <p>The first step is to install all of the Hugo Apéro theme files to the <code>theme/</code> folder in your site directory:</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">blogdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/blogdown/reference/install_theme.html">install_theme</a></span><span class="op">(</span>theme <span class="op">=</span> <span class="st">"hugo-apero/hugo-apero"</span>,</span>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">blogdown</span><span class="fu">::</span><span class="fu">install_theme</span><span class="op">(</span>theme <span class="op">=</span> <span class="st">"hugo-apero/hugo-apero"</span>,</span>
 <span>                        update_config <span class="op">=</span> <span class="cn">FALSE</span>, </span>
 <span>                        force <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -432,8 +440,8 @@ Console output
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<!-- {{< panelset class="content directory" >}}
-{{< panel name="Example Site" >}} -->
+<!-- 
+ -->
 <p><i class="fa-solid fa-route" aria-label="route"></i> Location: <code>silvia/themes/hugo-apero/exampleSite</code></p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> config.toml</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> content</span>
@@ -449,8 +457,8 @@ Console output
 <span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    <span class="ex">└──</span> talk</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<!-- {{< /panel >}}
-{{< panel name="My Academic site" >}} -->
+<!-- 
+ -->
 <p><i class="fa-solid fa-route" aria-label="route"></i> Location: <code>silvia/</code></p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">.</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> config.toml</span>
@@ -466,8 +474,8 @@ Console output
 <span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    <span class="ex">└──</span> talk</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<!-- {{< /panel >}}
-{{< panel name="My Apéro site" >}} -->
+<!-- 
+ -->
 <p><i class="fa-solid fa-route" aria-label="route"></i> Location: <code>silvia/</code></p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">.</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> config.toml</span>
@@ -496,16 +504,16 @@ Console output
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-about-page-1.png" class="lightbox" title="The header of my About page: https://silvia.rbind.io/about/" data-gallery="quarto-lightbox-gallery-3"><img src="img/silvia-about-page-1.png" class="img-fluid figure-img" alt="My About page featuring a large headline to greet visitors and a short blurb about me in the header of the site. Below this area on the left in the main area of the page is more information with a heading and some prose. To the right of the main area is the sidebar which includes a small image, a name in large font, a subheading for the name, social media icons, and a spot for an audio clip for a name pronunciation. On the top edge of the page is a navigation bar with 'About' highlighted" width="1265"></a></p>
-<figcaption class="figure-caption">The header of my About page: https://silvia.rbind.io/about/</figcaption></figure>
+<figure class="figure"><p><a href="img/silvia-about-page-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="The header of my About page: https://silvia.rbind.io/about/"><img src="img/silvia-about-page-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="My About page featuring a large headline to greet visitors and a short blurb about me in the header of the site. Below this area on the left in the main area of the page is more information with a heading and some prose. To the right of the main area is the sidebar which includes a small image, a name in large font, a subheading for the name, social media icons, and a spot for an audio clip for a name pronunciation. On the top edge of the page is a navigation bar with 'About' highlighted" width="1265"></a></p>
+<figcaption>The header of my About page: https://silvia.rbind.io/about/</figcaption></figure>
 </div>
 </div>
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-about-page-2.png" class="lightbox" title="The main section of my About page: https://silvia.rbind.io/about/" data-gallery="quarto-lightbox-gallery-4"><img src="img/silvia-about-page-2.png" class="img-fluid figure-img" alt="Below the header is the main area of the page on the left with more information about me with a heading and some prose. To the right of the main area is the sidebar which includes a small image of me, my name in large font, my professional title underneath along with social media icons and a short list of my interests." width="1265"></a></p>
-<figcaption class="figure-caption">The main section of my About page: https://silvia.rbind.io/about/</figcaption></figure>
+<figure class="figure"><p><a href="img/silvia-about-page-2.png" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="quarto-lightbox-gallery-4" title="The main section of my About page: https://silvia.rbind.io/about/"><img src="img/silvia-about-page-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Below the header is the main area of the page on the left with more information about me with a heading and some prose. To the right of the main area is the sidebar which includes a small image of me, my name in large font, my professional title underneath along with social media icons and a short list of my interests." width="1265"></a></p>
+<figcaption>The main section of my About page: https://silvia.rbind.io/about/</figcaption></figure>
 </div>
 </div>
 </div>
@@ -567,8 +575,8 @@ Console output
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-home-page.png" class="lightbox" title="My Homepage: https://silvia.rbind.io" data-gallery="quarto-lightbox-gallery-5"><img src="img/silvia-home-page.png" class="img-fluid figure-img" alt="The homepage of my site which shows my name in large font on the left, my title, social media icons, a short blurb about me, and a link that says 'Read More' that can be clicked to enter the site. On the right side is a photo of one of my favorite lakes." width="1280"></a></p>
-<figcaption class="figure-caption">My Homepage: https://silvia.rbind.io</figcaption></figure>
+<figure class="figure"><p><a href="img/silvia-home-page.png" class="lightbox" data-glightbox="description: .lightbox-desc-5" data-gallery="quarto-lightbox-gallery-5" title="My Homepage: https://silvia.rbind.io"><img src="img/silvia-home-page.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The homepage of my site which shows my name in large font on the left, my title, social media icons, a short blurb about me, and a link that says 'Read More' that can be clicked to enter the site. On the right side is a photo of one of my favorite lakes." width="1280"></a></p>
+<figcaption>My Homepage: https://silvia.rbind.io</figcaption></figure>
 </div>
 </div>
 </div>
@@ -581,13 +589,13 @@ Console output
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-blog-list.png" class="lightbox" title="My Blog listing: https://silvia.rbind.io/blog" data-gallery="quarto-lightbox-gallery-6"><img src="img/silvia-blog-list.png" class="img-fluid figure-img" alt="The Blog listing page for my site with a sidebar layout and thumbnails enabled. There is a sidebar on the left side with some information about my blog including a blog name 'Meeting People Where They R'. It also includes my name as the blog author, a link to subscribe via RSS, and a decorative image of a small potted cactus plant sitting on top of a stack of books. On the right side in the main area of the page there are two blog posts featured, including this one. Each has a title, a summary, the date, and a decorative image as the thumbnail." width="1265"></a></p>
-<figcaption class="figure-caption">My Blog listing: https://silvia.rbind.io/blog</figcaption></figure>
+<figure class="figure"><p><a href="img/silvia-blog-list.png" class="lightbox" data-glightbox="description: .lightbox-desc-6" data-gallery="quarto-lightbox-gallery-6" title="My Blog listing: https://silvia.rbind.io/blog"><img src="img/silvia-blog-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Blog listing page for my site with a sidebar layout and thumbnails enabled. There is a sidebar on the left side with some information about my blog including a blog name 'Meeting People Where They R'. It also includes my name as the blog author, a link to subscribe via RSS, and a decorative image of a small potted cactus plant sitting on top of a stack of books. On the right side in the main area of the page there are two blog posts featured, including this one. Each has a title, a summary, the date, and a decorative image as the thumbnail." width="1265"></a></p>
+<figcaption>My Blog listing: https://silvia.rbind.io/blog</figcaption></figure>
 </div>
 </div>
 </div>
 <p>Update <code>[menu]</code> options in <strong>config.toml</strong> to activate Blog by changing <code>url = "/blog/"</code> and renaming <code>content/post/</code> to <code>content/blog/</code> to activate the new Apéro layout with the sidebar on the blog post listing and to enable thumbnails</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[[</span><span class="dt">menu</span><span class="kw">.</span><span class="dt">header</span><span class="kw">]]</span></span>
+<div class="sourceCode" id="cb17"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[[menu.header]]</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">name</span> <span class="op">=</span> <span class="st">"Blog"</span></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span> <span class="op">=</span> <span class="st">"Blog"</span></span>
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">url</span> <span class="op">=</span> <span class="st">"/blog/"</span></span>
@@ -601,13 +609,13 @@ Console output
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-publication-list.png" class="lightbox" title="My Publication listing: https://silvia.rbind.io/publication" data-gallery="quarto-lightbox-gallery-7"><img src="img/silvia-publication-list.png" class="img-fluid figure-img" alt="The Publication listing page for my site with a single layout which doesn't have a sidebar. The top of the page says 'Publications' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There is primarily one publication featured with a title, a summary, the authors, and the date. This listing visually separates publications in the list with a horizontal bar" width="1265"></a></p>
-<figcaption class="figure-caption">My Publication listing: https://silvia.rbind.io/publication</figcaption></figure>
+<figure class="figure"><p><a href="img/silvia-publication-list.png" class="lightbox" data-glightbox="description: .lightbox-desc-7" data-gallery="quarto-lightbox-gallery-7" title="My Publication listing: https://silvia.rbind.io/publication"><img src="img/silvia-publication-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Publication listing page for my site with a single layout which doesn't have a sidebar. The top of the page says 'Publications' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There is primarily one publication featured with a title, a summary, the authors, and the date. This listing visually separates publications in the list with a horizontal bar" width="1265"></a></p>
+<figcaption>My Publication listing: https://silvia.rbind.io/publication</figcaption></figure>
 </div>
 </div>
 </div>
 <p>Update <code>[menu]</code> options in <strong>config.toml</strong> to activate Publications</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[[</span><span class="dt">menu</span><span class="kw">.</span><span class="dt">header</span><span class="kw">]]</span></span>
+<div class="sourceCode" id="cb18"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[[menu.header]]</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">name</span> <span class="op">=</span> <span class="st">"Publications"</span></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span> <span class="op">=</span> <span class="st">"Publications"</span></span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">url</span> <span class="op">=</span> <span class="st">"/publication/"</span></span>
@@ -623,8 +631,8 @@ Console output
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-talk-list.png" class="lightbox" title="My Talk listing: https://silvia.rbind.io/talk" data-gallery="quarto-lightbox-gallery-8"><img src="img/silvia-talk-list.png" class="img-fluid figure-img" alt="The Talk listing page for my site with a single layout which doesn't have a sidebar and features decorative thumbnail images on the left. The top of the page says 'Talks' and below is a short description of what can be found on the page. This listing visually separates talks in the list by year with a horizontal bar." width="1265"></a></p>
-<figcaption class="figure-caption">My Talk listing: https://silvia.rbind.io/talk</figcaption></figure>
+<figure class="figure"><p><a href="img/silvia-talk-list.png" class="lightbox" data-glightbox="description: .lightbox-desc-8" data-gallery="quarto-lightbox-gallery-8" title="My Talk listing: https://silvia.rbind.io/talk"><img src="img/silvia-talk-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Talk listing page for my site with a single layout which doesn't have a sidebar and features decorative thumbnail images on the left. The top of the page says 'Talks' and below is a short description of what can be found on the page. This listing visually separates talks in the list by year with a horizontal bar." width="1265"></a></p>
+<figcaption>My Talk listing: https://silvia.rbind.io/talk</figcaption></figure>
 </div>
 </div>
 </div>
@@ -660,8 +668,8 @@ Console output
 </ul>
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<!-- {{< panelset class="files and folders to delete" >}}
-{{< panel name="List of items" >}} -->
+<!-- 
+ -->
 <ul>
 <li>The content folders carried over from Hugo Academic: authors, home, post, courses, and slides</li>
 <li>The config folder</li>
@@ -679,8 +687,8 @@ Console output
 </ul>
 </div>
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<!-- {{< /panel >}}
-{{< panel name="Directory tree" >}} -->
+<!-- 
+ -->
 <p>I deleted the following files:</p>
 <ul>
 <li>All of the <strong>index.html</strong> files in the blog, publication, and talks folders</li>
@@ -706,8 +714,8 @@ Console output
 <span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span>   └── shortcodes        <span class="co"># &lt;-- custom partials in this folder</span></span>
 <span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a><span class="ex">└──</span> themes</span>
 <span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>    <span class="ex">└──</span> hugo-academic     <span class="co"># &lt;-- this folder</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<!-- {{< /panel >}}
-{{< /panelset >}} -->
+<!-- 
+ -->
 </div>
 </div>
 </div>
@@ -742,7 +750,7 @@ Console output
 <li>
 <p>Tidy up your directory (again?)</p>
 <p>Go through <a href="#tidying-up-your-directory">the steps above</a> to clean out any residual Academic files from your directory. Make sure to check your <code>content/</code> folders for any example files from Academic that might still be hanging around and delete them.</p>
-<p>Then run <code><a href="https://pkgs.rstudio.com/blogdown/reference/serve_site.html">blogdown::serve_site()</a></code> to build your new Apéro site locally. Go through the site and make sure everything looks the way it should and that links are generally pointing to the right places.</p>
+<p>Then run <code>blogdown::serve_site()</code> to build your new Apéro site locally. Go through the site and make sure everything looks the way it should and that links are generally pointing to the right places.</p>
 <p>When you’re satisfied, commit the changes to your primary branch!<br>There may be <em>a lot</em> of files that were deleted and added during the switch to Apéro and, while not generally recommended, I used the <code>git add .</code> command to stage all of the changes at once, commited the changes, and then pushed. I did this after thoroughly looking through the list of changed files so I knew what was happening.</p>
 </li>
 <li><p>Wait a couple of minutes for the changes to get pushed to your primary branch (e.g.&nbsp;<code>main</code>) and then wait patiently for Netlify to build your site after the merge.</p></li>
@@ -750,7 +758,17 @@ Console output
 </ol>
 
 
-</section><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2021" class="csl-entry quarto-appendix-citeas" role="listitem">
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">My Project listing: https://silvia.rbind.io/project</span>
+<span class="glightbox-desc lightbox-desc-2">Netlify site settings for deploy contexts</span>
+<span class="glightbox-desc lightbox-desc-3">The header of my About page: https://silvia.rbind.io/about/</span>
+<span class="glightbox-desc lightbox-desc-4">The main section of my About page: https://silvia.rbind.io/about/</span>
+<span class="glightbox-desc lightbox-desc-5">My Homepage: https://silvia.rbind.io</span>
+<span class="glightbox-desc lightbox-desc-6">My Blog listing: https://silvia.rbind.io/blog</span>
+<span class="glightbox-desc lightbox-desc-7">My Publication listing: https://silvia.rbind.io/publication</span>
+<span class="glightbox-desc lightbox-desc-8">My Talk listing: https://silvia.rbind.io/talk</span>
+</div>
+</section><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2021" class="csl-entry quarto-appendix-citeas" role="listitem">
 Canelón, Silvia. 2021. <span>“Hello Hugo Apéro: Converting a Blogdown
 Site from Hugo Academic.”</span> June 1, 2021. <a href="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero">https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero</a>.
 </div></div></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
@@ -794,6 +812,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -862,13 +907,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -947,10 +994,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -960,8 +1006,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -974,6 +1029,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1017,6 +1191,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1042,6 +1217,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1104,18 +1305,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
-    <div class="nav-footer-left">© 2023 Silvia Canelón ∙ Made with <a href="https://quarto.org">Quarto</a></div>   
-    <div class="nav-footer-center"><a class="link-dark me-1" href="../../accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener"><i class="fa-solid fa-universal-access" aria-label="universal-access"></i></a> <a class="link-dark me-1" href="https://hachyderm.io/@spcanelon" title="mastodon" target="_blank" rel="noopener"><i class="fa-brands fa-mastodon" aria-label="mastodon"></i></a> <a class="link-dark me-1" href="https://github.com/spcanelon" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://orcid.org/0000-0003-1709-1394" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid" style="color:black"></i></a> <a class="link-dark me-1" href="https://scholar.google.com/citations?user=GAzkvpcAAAAJ&amp;hl=en&amp;oi=ao" title="Google Scholar" target="_blank" rel="noopener"><i class="ai  ai-google-scholar" style="color:black"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/spcanelon" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a></div>
+    <div class="nav-footer-left">
+<p>© 2023 Silvia Canelón ∙ Made with <a href="https://quarto.org">Quarto</a></p>
+</div>   
+    <div class="nav-footer-center">
+<p><a class="link-dark me-1" href="../../accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener"><i class="fa-solid fa-universal-access" aria-label="universal-access"></i></a> <a class="link-dark me-1" href="https://hachyderm.io/@spcanelon" title="mastodon" target="_blank" rel="noopener"><i class="fa-brands fa-mastodon" aria-label="mastodon"></i></a> <a class="link-dark me-1" href="https://github.com/spcanelon" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://orcid.org/0000-0003-1709-1394" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid" style="color:black"></i></a> <a class="link-dark me-1" href="https://scholar.google.com/citations?user=GAzkvpcAAAAJ&amp;hl=en&amp;oi=ao" title="Google Scholar" target="_blank" rel="noopener"><i class="ai  ai-google-scholar" style="color:black"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/spcanelon" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a></p>
+</div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
 <li class="nav-item">
-    <a class="nav-link" href="../../accessibility.html">Accessibility</a>
+    <a class="nav-link" href="../../accessibility.html">
+<p>Accessibility</p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../../contact.html">Contact</a>
+    <a class="nav-link" href="../../contact.html">
+<p>Contact</p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../../license.html">License</a>
+    <a class="nav-link" href="../../license.html">
+<p>License</p>
+</a>
   </li>  
     <li class="nav-item compact">
     <a class="nav-link" href="../../blog/index.xml">
@@ -1126,7 +1337,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </ul>
 </div>
   </div>
-</footer><script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","openEffect":"zoom","loop":true,"closeEffect":"zoom"});</script>
+</footer><script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","loop":false,"closeEffect":"zoom","descPosition":"bottom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 </body></html>
