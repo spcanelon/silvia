@@ -1,0 +1,17 @@
+---
+title: "Environmental Justice and Policy Panel"
+subtitle: "Panel discussion hosted by [Penn Science Policy and Diplomacy Group](https://www.pspdg.com) & [Climate Leaders @Penn](https://www.climateleadersatpenn.com/)"
+author: 
+  - Silvia Canelón
+date: 2024-03-26T18:00:00
+slug: env-justice
+image: featured.png
+categories:
+  - Research
+---
+
+Source: Climate Leaders @Penn on [LinkedIn](https://www.linkedin.com/posts/climate-leaders-penn_environmental-justice-and-policy-panel-activity-7176237910923325440-SspR?utm_source=share&utm_medium=member_desktop)
+
+**What:** Panel discussion with speakers from Philly Thrive, Penn Medicine Center for Health Justice, and Philadelphia Office of Sustainability
+
+**Topics:** How did you enter the environmental justice field? How can we engage with community care/environmental justice outside of our careers? Do I need to have a certain degree or job in order to advocate for change? How do we challenge hierarchies of knowledge? What are examples of place-based initiatives in Philadelphia?

@@ -82,6 +82,7 @@ format:
       dark: assets/silvia/a11y-dark.theme
     code-link: true
     pagetitle: "{{< meta title >}} | Silvia Canelón"
+    lightbox: true
 
 execute: 
   freeze: auto
