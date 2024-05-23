@@ -39,7 +39,7 @@ Check out the link at the top of this post for a larger version of the interacti
 <style>
 iframe {
 display: block;
-background: #FFFFFF;
+background: #000000;
 border: none; /* Reset default border */
 height: 70vh; /* Viewport-relative units */
 width: 100%;
