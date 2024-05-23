@@ -12,8 +12,57 @@
 It includes notes and tutorials for my future self and hopefully also for you.&lt;br&gt;
 [Subscribe via RSS](/blog/index.xml)
 </description>
-<generator>quarto-1.4.549</generator>
-<lastBuildDate>Fri, 29 Sep 2023 04:00:00 GMT</lastBuildDate>
+<generator>quarto-1.4.554</generator>
+<lastBuildDate>Wed, 05 Jun 2024 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>Philly Center City District Sips 2024: An Interactive Map</title>
+  <dc:creator>Silvia Canelón</dc:creator>
+  <link>https://silviacanelon.com/blog/2024-06-05-ccd-sips/</link>
+  <description><![CDATA[ 
+
+<!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
+<!-- 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title"> 
+-->
+<!-- <header id="title-block-header" class="quarto-title-block default page-columns"> -->
+<!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> -->
+
+
+
+<p>Philly’s Center City District posted a list of restaurants and bars participating in Philly’s 2024 <a href="https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view">CCD Sips</a>. CCD Sips is a series of summer Wednesday evenings (5-7pm) filled with <strong>happy hour specials</strong>, between June 5th and August 28th.</p>
+<p>I scraped some information from the website in order to present the information as a <strong>map</strong>. You can click or tap on the circle map markers to see information about each restaurant/bar along with a direct link to their posted happy hour specials.</p>
+<p>Check out the link at the top of this post for a larger version of the interactive map below, or take a look at CCD Sips maps from <a href="../../blog/2023-06-05-ccd-sips">2023</a>, <a href="../../blog/2022-05-31-ccd-sips">2022</a> and <a href="../../blog/2019-08-04-ccd-sips">2019</a>.</p>
+<!--https://dannyda.com/2021/06/09/how-to-make-html-iframe-responsive-iframe-height-equal-to-viewport-screen-height/-->
+<style>
+iframe {
+display: block;
+background: #000000;
+border: none; /* Reset default border */
+height: 70vh; /* Viewport-relative units */
+width: 100%;
+}
+</style>
+<iframe src="map.html" scrolling="no">
+</iframe>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2024" class="csl-entry quarto-appendix-citeas">
+Canelón, Silvia. 2024. <span>“Philly Center City District Sips 2024: An
+Interactive Map.”</span> June 5, 2024. <a href="https://silviacanelon.com/blog/2024-06-05-ccd-sips">https://silviacanelon.com/blog/2024-06-05-ccd-sips</a>.
+</div></div></section></div> ]]></description>
+  <category>R</category>
+  <category>maps</category>
+  <category>webscraping</category>
+  <category>robotstxt</category>
+  <category>rvest</category>
+  <category>leaflet</category>
+  <category>tidygeocoder</category>
+  <guid>https://silviacanelon.com/blog/2024-06-05-ccd-sips/</guid>
+  <pubDate>Wed, 05 Jun 2024 04:00:00 GMT</pubDate>
+  <media:content url="https://silviacanelon.com/blog/2024-06-05-ccd-sips/featured.png" medium="image" type="image/png" height="76" width="144"/>
+</item>
 <item>
   <title>Hello Quarto: Porting my Website from Hugo Apéro</title>
   <dc:creator>Silvia Canelón</dc:creator>
@@ -1447,7 +1496,7 @@ Expand to see web analytics
 <style>
 iframe {
 display: block;
-background: #FFFFFF;
+background: #000000;
 border: none; /* Reset default border */
 height: 70vh; /* Viewport-relative units */
 width: 100%;
@@ -3645,7 +3694,10 @@ Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https:/
 <li>
 <p>Prefer simple, familiar visualizations over complex novelties.</p>
 <div class="quarto-figure quarto-figure-center">
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><a href="img/guidelines-oystein-moseng.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="Pie chart from Øystein’s post using color and (optional) patterns to encode information"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/guidelines-oystein-moseng.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The pie chart using color and pattern to differentiate between slices. This screenshot also demos an interactive chart element in action: hovering over one pie slice enlarges the slice, reveals more information about the selected slice, and dims the non-selected slices."></a></p>
+</figure>
+</div>
 <figcaption>Pie chart from Øystein’s post using color and (optional) patterns to encode information</figcaption></figure>
 </div>
 </li>
@@ -3655,14 +3707,20 @@ Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https:/
 <li>
 <p>Guidelines by Amy Cesal on how to write alt text for data visualizations: <a href="https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81">Writing Alt Text for Data Visualization</a></p>
 <div class="quarto-figure quarto-figure-center">
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><a href="img/alt-text-amy-cesal.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="Example template from Amy’s post"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/alt-text-amy-cesal.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Example alt text format that reads: Chart type of type of data where reason for including chart. Also the recommendation to include a link to the data source somewhere in the text."></a></p>
+</figure>
+</div>
 <figcaption>Example template from Amy’s post</figcaption></figure>
 </div>
 </li>
 <li>
 <p>Post by Lisa Charlotte Muth on how to pick colors for your data viz that everyone can appreciate: <a href="https://blog.datawrapper.de/beautifulcolors/">How to pick more beautiful colors for your data visualizations - Datawrapper Blog</a></p>
 <div class="quarto-figure quarto-figure-center">
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><a href="img/datawrapper.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="Example from Charlotte’s post of two different approaches to improving a pie chart"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/datawrapper.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The first pie chart uses colors of similar lightness that end up appearing the same when checked under grayscale simulation. The first option for improvement picks different colors that all stand out from one another in grayscale. The second option keeps the original colors but delineates pie slices with a contrasting border."></a></p>
+</figure>
+</div>
 <figcaption>Example from Charlotte’s post of two different approaches to improving a pie chart</figcaption></figure>
 </div>
 </li>
@@ -3672,7 +3730,10 @@ Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https:/
 <li>
 <p>Related is a talk from The Readability Group sharing findings from a survey study about font preferences including 2000+ participants. Among these were participants with dyslexia characteristics and participants with poor near vision: <a href="https://youtu.be/h8IOqUl1zII?t=1029">Don’t Believe the Type!</a></p>
 <div class="quarto-figure quarto-figure-center">
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><a href="img/typeface-poor-near-vision.png" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="quarto-lightbox-gallery-4" title="Bar graph showing the frequency by which 20 different fonts were selected by study participants with strong poor near vision in comparison with users with no poor near vision."><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/typeface-poor-near-vision.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The fonts selected most often in this group were San Francisco Pro, Red Hat Text, Calibri, and Segoe UI, in that order. San Francisco Pro was selected by 68% of participants The fonts selected least often were Open Dyslexic, Dyslexie, Comic Sans MS, and Sylexiad Sans. Open Dyslexic was selected by 12% of participants. Both Times New Roman and Helvetica are highlighted as showing the largest differences between users with poor near vision and those without. Times New Roman was the 6th least selected and Helvetica was in the middle learning towards the most selected fonts."></a></p>
+</figure>
+</div>
 <figcaption>Bar graph showing the frequency by which 20 different fonts were selected by study participants with strong poor near vision in comparison with users with no poor near vision.</figcaption></figure>
 </div>
 </li>
@@ -3705,7 +3766,10 @@ Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https:/
 </li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><a href="img/tableau-chris-demartini.png" class="lightbox" data-glightbox="description: .lightbox-desc-6" data-gallery="quarto-lightbox-gallery-6" title="Title of Chris’s Tableau visualization being checked for color contrast."><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/tableau-chris-demartini.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The user is using a kind of selection tool to hover over an area of the visualization, in this case the title, and check font color contrast against its background. The tool pulls up details along the bottom of the page, including WCAG pass/fail test results, background and foreground color hex codes, and other color characteristics."></a></p>
+</figure>
+</div>
 <figcaption>Title of Chris’s Tableau visualization being checked for color contrast.</figcaption></figure>
 </div>
 </li>
@@ -3714,7 +3778,10 @@ Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https:/
 <li>
 <p><a href="https://twitter.com/DogGeneticsLLC">Liz Hare</a> and I gave a talk earlier this year on alt text in data viz shared as a part of TidyTuesday on Twitter. After web-scraping alt text from TidyTuesday tweets we found that only 3% of data viz tweets had alt text to accompany them (over the first 3 years of the TidyTuesday project). Links to the video recording, slides, and resources at https://github.com/spcanelon/csvConf2021. The talk includes guidelines on what makes effective alt text for data viz (complementary to those Amy Cesal includes in her post).</p>
 <div class="quarto-figure quarto-figure-center">
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><a href="img/alt-text-silvia-liz.png" class="lightbox" data-glightbox="description: .lightbox-desc-7" data-gallery="quarto-lightbox-gallery-7" title="Slide from our presentation summarizing the most useful alt-text features found among 196 data viz tweets"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/alt-text-silvia-liz.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Effective alt includes a description that conveys meaning in the data, variables on the axes, scale described within the description, description of the type of plot. Direct link to slide: https://spcanelon.github.io/csvConf2021/slides/indexLH.html#11"></a></p>
+</figure>
+</div>
 <figcaption>Slide from our presentation summarizing the most useful alt-text features found among 196 data viz tweets</figcaption></figure>
 </div>
 </li>
@@ -3967,7 +4034,10 @@ font-style: inherit;">)</span></span></code></pre></div>
 <li>
 <p>The <a href="https://jkunst.com/highcharter/index.html">Highcharter R package</a> developed by Joshua Kunst adds interactivity to data viz using Highcharts JavaScript components designed with <a href="https://www.highcharts.com/accessibility/#exploreFeatures">web accessibility in mind</a>. The package has a learning curve, but lucky for us Mara Averick wrote an excellent <a href="https://dataand.me/index.html#category:highcharter">series of blog posts on using the Highcharts accessibility module with {highcharter}</a>.</p>
 <div class="quarto-figure quarto-figure-center">
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><a href="img/highcharter-mara-averick.png" class="lightbox" data-glightbox="description: .lightbox-desc-10" data-gallery="quarto-lightbox-gallery-10" title="Interactive scatterplot from Mara’s post using color and shape to encode information about penguin species"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/highcharter-mara-averick.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Scatterplot of the palmerpenguins dataset showing data points clustered by species and the highcharter package making it possible to focus on one cluster and identify the x and y values of a specific data point. In this case the data point is a Chinstrap penguin observation mapping to a flipper length of 201mm and bill length of 54.2mm. Explore this data viz with a screen reader in Mara's blog post: https://dataand.me/posts/2021-11-15-accessible-highcharter-part-4/#an-accessible-penguin-plot"></a></p>
+</figure>
+</div>
 <figcaption>Interactive scatterplot from Mara’s post using color and shape to encode information about penguin species</figcaption></figure>
 </div>
 </li>
@@ -4023,7 +4093,7 @@ Accessibility.”</span> September 23, 2021. <a href="https://silviacanelon.com/
 </summary>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-ex-alt-text.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="Reference pane of the tool elaborates on what the alert means, why it matters, how to fix it, a note on the tool’s algorithm, and a link to the WCAG standards and guidelines. Code section is expanded along the bottom and highlights exactly what part of the HTML code the alert is refering to."><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-ex-alt-text.png" class="img-fluid figure-img" alt="Reference pane of the tool elaborates on what the alert means, why it matters, how to fix it, a note on the tool's algorithm, and a link to the WCAG standards and guidelines. Code section is expanded along the bottom and highlights exactly what part of the HTML code the alert is refering to."></a></p>
+<p><a href="img/wave-ex-alt-text.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="Reference pane of the tool elaborates on what the alert means, why it matters, how to fix it, a note on the tool’s algorithm, and a link to the WCAG standards and guidelines. Code section is expanded along the bottom and highlights exactly what part of the HTML code the alert is refering to."><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-ex-alt-text.png" class="img-fluid figure-img" alt="Reference pane of the tool elaborates on what the alert means, why it matters, how to fix it, a note on the tool's algorithm, and a link to the WCAG standards and guidelines. Code section is expanded along the bottom and highlights exactly what part of the HTML code the alert is refering to."></a></p>
 <figcaption>Reference pane of the tool elaborates on what the alert means, why it matters, how to fix it, a note on the tool’s algorithm, and a link to the WCAG standards and guidelines. Code section is expanded along the bottom and highlights exactly what part of the HTML code the alert is refering to.</figcaption>
 </figure>
 </div>
@@ -4064,7 +4134,7 @@ Accessibility.”</span> September 23, 2021. <a href="https://silviacanelon.com/
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-home.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="Figure 1: Audit for my home page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-home.png" class="img-fluid figure-img" alt="There is an error symbol next to the decorative image on the home page. There are also alert symbols for links in the navigation bar and footer."></a></p>
+<p><a href="img/wave-home.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="Figure 1: Audit for my home page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-home.png" class="img-fluid figure-img" alt="There is an error symbol next to the decorative image on the home page. There are also alert symbols for links in the navigation bar and footer."></a></p>
 <figcaption>Figure 1: Audit for my home page</figcaption>
 </figure>
 </div>
@@ -4090,13 +4160,13 @@ Accessibility.”</span> September 23, 2021. <a href="https://silviacanelon.com/
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-about-header.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="Figure 2: Audit for my About page header"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-about-header.png" class="img-fluid figure-img" alt="About page showing an alert in my blurb"></a></p>
+<p><a href="img/wave-about-header.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="Figure 2: Audit for my About page header"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-about-header.png" class="img-fluid figure-img" alt="About page showing an alert in my blurb"></a></p>
 <figcaption>Figure 2: Audit for my About page header</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-about-main-top.png" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="quarto-lightbox-gallery-4" title="Figure 3: Audit for the main section of my About page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-about-main-top.png" class="img-fluid figure-img" alt="An alert is shown next to some heading items, and a link. An error is shown next to a thumbnail image for the featured blog post"></a></p>
+<p><a href="img/wave-about-main-top.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="Figure 3: Audit for the main section of my About page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-about-main-top.png" class="img-fluid figure-img" alt="An alert is shown next to some heading items, and a link. An error is shown next to a thumbnail image for the featured blog post"></a></p>
 <figcaption>Figure 3: Audit for the main section of my About page</figcaption>
 </figure>
 </div>
@@ -4106,7 +4176,7 @@ Full page screenshot
 </summary>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-about.png" class="lightbox" data-glightbox="description: .lightbox-desc-5" data-gallery="quarto-lightbox-gallery-5" title="Figure 4: Audit for my About page in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-about.png" class="img-fluid figure-img" alt="Alerts are shown for links in the navigation bar and footer, for some heading items, and for a few links throughout the page"></a></p>
+<p><a href="img/wave-about.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5" title="Figure 4: Audit for my About page in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-about.png" class="img-fluid figure-img" alt="Alerts are shown for links in the navigation bar and footer, for some heading items, and for a few links throughout the page"></a></p>
 <figcaption>Figure 4: Audit for my About page in full page view</figcaption>
 </figure>
 </div>
@@ -4130,7 +4200,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-blog.png" class="lightbox" data-glightbox="description: .lightbox-desc-6" data-gallery="quarto-lightbox-gallery-6" title="Figure 5: Audit for my Blog listing page in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-blog.png" class="img-fluid figure-img" alt="Alerts are shown for the navigation bar and footer, and for blog post links. Errors shown for the decorative image for the page and for the blog post thumbnails."></a></p>
+<p><a href="img/wave-blog.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-glightbox="description: .lightbox-desc-6" title="Figure 5: Audit for my Blog listing page in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-blog.png" class="img-fluid figure-img" alt="Alerts are shown for the navigation bar and footer, and for blog post links. Errors shown for the decorative image for the page and for the blog post thumbnails."></a></p>
 <figcaption>Figure 5: Audit for my Blog listing page in full page view</figcaption>
 </figure>
 </div>
@@ -4158,7 +4228,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-blog-hha-top.png" class="lightbox" data-glightbox="description: .lightbox-desc-7" data-gallery="quarto-lightbox-gallery-7" title="Alerts shown for links in the navigation bar and for a heading item. Errors shown for the blog decorative image and for a link symbol next to a header."><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-blog-hha-top.png" class="img-fluid figure-img" alt="Figure 6: Audit for my Hello Hugo Apéro blog post"></a></p>
+<p><a href="img/wave-blog-hha-top.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" data-glightbox="description: .lightbox-desc-7" title="Alerts shown for links in the navigation bar and for a heading item. Errors shown for the blog decorative image and for a link symbol next to a header."><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-blog-hha-top.png" class="img-fluid figure-img" alt="Figure 6: Audit for my Hello Hugo Apéro blog post"></a></p>
 <figcaption>Alerts shown for links in the navigation bar and for a heading item. Errors shown for the blog decorative image and for a link symbol next to a header.</figcaption>
 </figure>
 </div>
@@ -4184,7 +4254,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-talks-top.png" class="lightbox" data-glightbox="description: .lightbox-desc-8" data-gallery="quarto-lightbox-gallery-8" title="Figure 7: Audit for my Talk listing page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-talks-top.png" class="img-fluid figure-img" alt="Alerts displayed for a heading item and the primary link to a talk. An error is displayed for the talk thumbnail."></a></p>
+<p><a href="img/wave-talks-top.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" data-glightbox="description: .lightbox-desc-8" title="Figure 7: Audit for my Talk listing page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-talks-top.png" class="img-fluid figure-img" alt="Alerts displayed for a heading item and the primary link to a talk. An error is displayed for the talk thumbnail."></a></p>
 <figcaption>Figure 7: Audit for my Talk listing page</figcaption>
 </figure>
 </div>
@@ -4194,7 +4264,7 @@ Full page screenshot
 </summary>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-talks.png" class="lightbox" data-glightbox="description: .lightbox-desc-9" data-gallery="quarto-lightbox-gallery-9" title="Figure 8: Audit for my About page header in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-talks.png" class="img-fluid figure-img" alt="Alerts displayed in the navigation bar and footer, some heading items, all primary talk links, and a YouTube button link. Errors displayed for all talk thumbnail images."></a></p>
+<p><a href="img/wave-talks.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" data-glightbox="description: .lightbox-desc-9" title="Figure 8: Audit for my About page header in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-talks.png" class="img-fluid figure-img" alt="Alerts displayed in the navigation bar and footer, some heading items, all primary talk links, and a YouTube button link. Errors displayed for all talk thumbnail images."></a></p>
 <figcaption>Figure 8: Audit for my About page header in full page view</figcaption>
 </figure>
 </div>
@@ -4216,7 +4286,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-talks-csvconf.png" class="lightbox" data-glightbox="description: .lightbox-desc-10" data-gallery="quarto-lightbox-gallery-10" title="Figure 9: Audit for my CSV Conf talk post in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-talks-csvconf.png" class="img-fluid figure-img" alt="Alerts displayed for the navigation bar and footer, as well as the talk summary. No errors are displayed."></a></p>
+<p><a href="img/wave-talks-csvconf.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" data-glightbox="description: .lightbox-desc-10" title="Figure 9: Audit for my CSV Conf talk post in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-talks-csvconf.png" class="img-fluid figure-img" alt="Alerts displayed for the navigation bar and footer, as well as the talk summary. No errors are displayed."></a></p>
 <figcaption>Figure 9: Audit for my CSV Conf talk post in full page view</figcaption>
 </figure>
 </div>
@@ -4235,7 +4305,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-pubs-top.png" class="lightbox" data-glightbox="description: .lightbox-desc-11" data-gallery="quarto-lightbox-gallery-11" title="Figure 10: Audit for my Publication listing page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-pubs-top.png" class="img-fluid figure-img" alt="No errors or alerts displayed for this view"></a></p>
+<p><a href="img/wave-pubs-top.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" data-glightbox="description: .lightbox-desc-11" title="Figure 10: Audit for my Publication listing page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-pubs-top.png" class="img-fluid figure-img" alt="No errors or alerts displayed for this view"></a></p>
 <figcaption>Figure 10: Audit for my Publication listing page</figcaption>
 </figure>
 </div>
@@ -4245,7 +4315,7 @@ Full page screenshot
 </summary>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-pubs.png" class="lightbox" data-glightbox="description: .lightbox-desc-12" data-gallery="quarto-lightbox-gallery-12" title="Alerts displayed for the navigation bar and footer"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-pubs.png" class="img-fluid figure-img" alt="Figure 11: Audit for my Publication listing page in full page view"></a></p>
+<p><a href="img/wave-pubs.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" data-glightbox="description: .lightbox-desc-12" title="Alerts displayed for the navigation bar and footer"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-pubs.png" class="img-fluid figure-img" alt="Figure 11: Audit for my Publication listing page in full page view"></a></p>
 <figcaption>Alerts displayed for the navigation bar and footer</figcaption>
 </figure>
 </div>
@@ -4267,7 +4337,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-pubs-geo.png" class="lightbox" data-glightbox="description: .lightbox-desc-13" data-gallery="quarto-lightbox-gallery-13" title="Figure 12: Audit for my geospatial analysis publication in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-pubs-geo.png" class="img-fluid figure-img" alt="Alerts displayed for the header bar and footer and for the publication summary"></a></p>
+<p><a href="img/wave-pubs-geo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" data-glightbox="description: .lightbox-desc-13" title="Figure 12: Audit for my geospatial analysis publication in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-pubs-geo.png" class="img-fluid figure-img" alt="Alerts displayed for the header bar and footer and for the publication summary"></a></p>
 <figcaption>Figure 12: Audit for my geospatial analysis publication in full page view</figcaption>
 </figure>
 </div>
@@ -4289,7 +4359,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-projects-top.png" class="lightbox" data-glightbox="description: .lightbox-desc-14" data-gallery="quarto-lightbox-gallery-14" title="Figure 13: Audit for my Project listing page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-projects-top.png" class="img-fluid figure-img" alt="Errors displayed next to each project thumbnail image"></a></p>
+<p><a href="img/wave-projects-top.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" data-glightbox="description: .lightbox-desc-14" title="Figure 13: Audit for my Project listing page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-projects-top.png" class="img-fluid figure-img" alt="Errors displayed next to each project thumbnail image"></a></p>
 <figcaption>Figure 13: Audit for my Project listing page</figcaption>
 </figure>
 </div>
@@ -4311,7 +4381,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-projects-ttat-top.png" class="lightbox" data-glightbox="description: .lightbox-desc-15" data-gallery="quarto-lightbox-gallery-15" title="Figure 14: Audit for my TidyTuesdayAltText project post"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-projects-ttat-top.png" class="img-fluid figure-img" alt="Alert displayed in the project summary and next to an image alt-text. Error dislayed next to a link symbol accompanying a heading."></a></p>
+<p><a href="img/wave-projects-ttat-top.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" data-glightbox="description: .lightbox-desc-15" title="Figure 14: Audit for my TidyTuesdayAltText project post"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-projects-ttat-top.png" class="img-fluid figure-img" alt="Alert displayed in the project summary and next to an image alt-text. Error dislayed next to a link symbol accompanying a heading."></a></p>
 <figcaption>Figure 14: Audit for my TidyTuesdayAltText project post</figcaption>
 </figure>
 </div>
@@ -4321,7 +4391,7 @@ Full page screenshot
 </summary>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-projects-ttat.png" class="lightbox" data-glightbox="description: .lightbox-desc-16" data-gallery="quarto-lightbox-gallery-16" title="Figure 15: Audit for my TidyTuesdayAltText project post in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-projects-ttat.png" class="img-fluid figure-img" alt="Alerts shown in the navigation bar and footer, project summary, and image alt-text. Errors shown next to link symbols accompanying headings."></a></p>
+<p><a href="img/wave-projects-ttat.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" data-glightbox="description: .lightbox-desc-16" title="Figure 15: Audit for my TidyTuesdayAltText project post in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-projects-ttat.png" class="img-fluid figure-img" alt="Alerts shown in the navigation bar and footer, project summary, and image alt-text. Errors shown next to link symbols accompanying headings."></a></p>
 <figcaption>Figure 15: Audit for my TidyTuesdayAltText project post in full page view</figcaption>
 </figure>
 </div>
@@ -4369,7 +4439,10 @@ Projects on my site: https://silvia.rbind.io/project
 </summary><div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-project-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="My Project listing: https://silvia.rbind.io/project"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-project-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Project listing page for my site with a grid layout featuring thumbnail images. The top of the page says 'Projects' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There are three projects featured with a decorative thumbnail image, a title, and a summary. Items also include an author and category links but they are cut off in this screenshot." width="1265"></a></p>
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="img/silvia-project-list.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="My Project listing: https://silvia.rbind.io/project"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-project-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Project listing page for my site with a grid layout featuring thumbnail images. The top of the page says 'Projects' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There are three projects featured with a decorative thumbnail image, a title, and a summary. Items also include an author and category links but they are cut off in this screenshot." width="1265"></a></p>
+</figure>
+</div>
 <figcaption>My Project listing: https://silvia.rbind.io/project</figcaption></figure>
 </div>
 </div>
@@ -4394,7 +4467,10 @@ Projects on my site: https://silvia.rbind.io/project
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/netlify-branch-deploy.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="Netlify site settings for deploy contexts"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/netlify-branch-deploy.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%" alt="The deploy contexts section after clicking the Edit settings button. This section shows three settings that can be edited. The first is the production branch which is set to 'main' in a free text box. The second is deploy previews which is a radio button set to 'any pull request against your production branch/branch deploy branches (as opposed to 'none'). The third is branch deploys which is a radio button set to 'all' (as opposed to 'none' and 'let me add individual branches'). There are two buttons at the bottom of this section, Save and Cancel."></a></p>
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="img/netlify-branch-deploy.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="Netlify site settings for deploy contexts"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/netlify-branch-deploy.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%" alt="The deploy contexts section after clicking the Edit settings button. This section shows three settings that can be edited. The first is the production branch which is set to 'main' in a free text box. The second is deploy previews which is a radio button set to 'any pull request against your production branch/branch deploy branches (as opposed to 'none'). The third is branch deploys which is a radio button set to 'all' (as opposed to 'none' and 'let me add individual branches'). There are two buttons at the bottom of this section, Save and Cancel."></a></p>
+</figure>
+</div>
 <figcaption>Netlify site settings for deploy contexts</figcaption></figure>
 </div>
 </div>
@@ -4719,8 +4795,8 @@ font-style: inherit;"> Error building site: failed to render pages: render of "p
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
-<!-- 
- -->
+<!-- {{< panelset "content directory" >}}
+{{< panel "Example Site" >}} -->
 <p><i class="fa-solid fa-route" aria-label="route"></i> Location: <code>silvia/themes/hugo-apero/exampleSite</code></p>
 <div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><span class="ex" style="color: null;
 background-color: null;
@@ -4760,8 +4836,8 @@ background-color: null;
 font-style: inherit;">└──</span> talk</span></code></pre></div>
 </div>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
-<!-- 
- -->
+<!-- {{< /panel  >}}
+{{< panel "My Academic site" >}} -->
 <p><i class="fa-solid fa-route" aria-label="route"></i> Location: <code>silvia/</code></p>
 <div class="sourceCode" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><span class="bu" style="color: null;
 background-color: null;
@@ -4801,8 +4877,8 @@ background-color: null;
 font-style: inherit;">└──</span> talk</span></code></pre></div>
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
-<!-- 
- -->
+<!-- {{< /panel  >}}
+{{< panel "My Apéro site" >}} -->
 <p><i class="fa-solid fa-route" aria-label="route"></i> Location: <code>silvia/</code></p>
 <div class="sourceCode" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><span class="bu" style="color: null;
 background-color: null;
@@ -4865,7 +4941,10 @@ font-style: inherit;">└──</span> talk</span></code></pre></div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-about-page-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="The header of my About page: https://silvia.rbind.io/about/"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-about-page-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="My About page featuring a large headline to greet visitors and a short blurb about me in the header of the site. Below this area on the left in the main area of the page is more information with a heading and some prose. To the right of the main area is the sidebar which includes a small image, a name in large font, a subheading for the name, social media icons, and a spot for an audio clip for a name pronunciation. On the top edge of the page is a navigation bar with 'About' highlighted" width="1265"></a></p>
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="img/silvia-about-page-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="The header of my About page: https://silvia.rbind.io/about/"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-about-page-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="My About page featuring a large headline to greet visitors and a short blurb about me in the header of the site. Below this area on the left in the main area of the page is more information with a heading and some prose. To the right of the main area is the sidebar which includes a small image, a name in large font, a subheading for the name, social media icons, and a spot for an audio clip for a name pronunciation. On the top edge of the page is a navigation bar with 'About' highlighted" width="1265"></a></p>
+</figure>
+</div>
 <figcaption>The header of my About page: https://silvia.rbind.io/about/</figcaption></figure>
 </div>
 </div>
@@ -4873,7 +4952,10 @@ font-style: inherit;">└──</span> talk</span></code></pre></div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-about-page-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="The main section of my About page: https://silvia.rbind.io/about/"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-about-page-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Below the header is the main area of the page on the left with more information about me with a heading and some prose. To the right of the main area is the sidebar which includes a small image of me, my name in large font, my professional title underneath along with social media icons and a short list of my interests." width="1265"></a></p>
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="img/silvia-about-page-2.png" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="quarto-lightbox-gallery-4" title="The main section of my About page: https://silvia.rbind.io/about/"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-about-page-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Below the header is the main area of the page on the left with more information about me with a heading and some prose. To the right of the main area is the sidebar which includes a small image of me, my name in large font, my professional title underneath along with social media icons and a short list of my interests." width="1265"></a></p>
+</figure>
+</div>
 <figcaption>The main section of my About page: https://silvia.rbind.io/about/</figcaption></figure>
 </div>
 </div>
@@ -4936,7 +5018,10 @@ font-style: inherit;">└──</span> talk</span></code></pre></div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-home-page.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5" title="My Homepage: https://silvia.rbind.io"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-home-page.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The homepage of my site which shows my name in large font on the left, my title, social media icons, a short blurb about me, and a link that says 'Read More' that can be clicked to enter the site. On the right side is a photo of one of my favorite lakes." width="1280"></a></p>
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="img/silvia-home-page.png" class="lightbox" data-glightbox="description: .lightbox-desc-5" data-gallery="quarto-lightbox-gallery-5" title="My Homepage: https://silvia.rbind.io"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-home-page.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The homepage of my site which shows my name in large font on the left, my title, social media icons, a short blurb about me, and a link that says 'Read More' that can be clicked to enter the site. On the right side is a photo of one of my favorite lakes." width="1280"></a></p>
+</figure>
+</div>
 <figcaption>My Homepage: https://silvia.rbind.io</figcaption></figure>
 </div>
 </div>
@@ -4950,7 +5035,10 @@ font-style: inherit;">└──</span> talk</span></code></pre></div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-blog-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-glightbox="description: .lightbox-desc-6" title="My Blog listing: https://silvia.rbind.io/blog"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-blog-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Blog listing page for my site with a sidebar layout and thumbnails enabled. There is a sidebar on the left side with some information about my blog including a blog name 'Meeting People Where They R'. It also includes my name as the blog author, a link to subscribe via RSS, and a decorative image of a small potted cactus plant sitting on top of a stack of books. On the right side in the main area of the page there are two blog posts featured, including this one. Each has a title, a summary, the date, and a decorative image as the thumbnail." width="1265"></a></p>
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="img/silvia-blog-list.png" class="lightbox" data-glightbox="description: .lightbox-desc-6" data-gallery="quarto-lightbox-gallery-6" title="My Blog listing: https://silvia.rbind.io/blog"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-blog-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Blog listing page for my site with a sidebar layout and thumbnails enabled. There is a sidebar on the left side with some information about my blog including a blog name 'Meeting People Where They R'. It also includes my name as the blog author, a link to subscribe via RSS, and a decorative image of a small potted cactus plant sitting on top of a stack of books. On the right side in the main area of the page there are two blog posts featured, including this one. Each has a title, a summary, the date, and a decorative image as the thumbnail." width="1265"></a></p>
+</figure>
+</div>
 <figcaption>My Blog listing: https://silvia.rbind.io/blog</figcaption></figure>
 </div>
 </div>
@@ -4998,7 +5086,10 @@ font-style: inherit;"># &lt;-- item 2 in the navigation bar</span></span></code>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-publication-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" data-glightbox="description: .lightbox-desc-7" title="My Publication listing: https://silvia.rbind.io/publication"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-publication-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Publication listing page for my site with a single layout which doesn't have a sidebar. The top of the page says 'Publications' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There is primarily one publication featured with a title, a summary, the authors, and the date. This listing visually separates publications in the list with a horizontal bar" width="1265"></a></p>
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="img/silvia-publication-list.png" class="lightbox" data-glightbox="description: .lightbox-desc-7" data-gallery="quarto-lightbox-gallery-7" title="My Publication listing: https://silvia.rbind.io/publication"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-publication-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Publication listing page for my site with a single layout which doesn't have a sidebar. The top of the page says 'Publications' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There is primarily one publication featured with a title, a summary, the authors, and the date. This listing visually separates publications in the list with a horizontal bar" width="1265"></a></p>
+</figure>
+</div>
 <figcaption>My Publication listing: https://silvia.rbind.io/publication</figcaption></figure>
 </div>
 </div>
@@ -5048,7 +5139,10 @@ font-style: inherit;"># &lt;-- item 4 in the navigation bar</span></span></code>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-talk-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" data-glightbox="description: .lightbox-desc-8" title="My Talk listing: https://silvia.rbind.io/talk"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-talk-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Talk listing page for my site with a single layout which doesn't have a sidebar and features decorative thumbnail images on the left. The top of the page says 'Talks' and below is a short description of what can be found on the page. This listing visually separates talks in the list by year with a horizontal bar." width="1265"></a></p>
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="img/silvia-talk-list.png" class="lightbox" data-glightbox="description: .lightbox-desc-8" data-gallery="quarto-lightbox-gallery-8" title="My Talk listing: https://silvia.rbind.io/talk"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-talk-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Talk listing page for my site with a single layout which doesn't have a sidebar and features decorative thumbnail images on the left. The top of the page says 'Talks' and below is a short description of what can be found on the page. This listing visually separates talks in the list by year with a horizontal bar." width="1265"></a></p>
+</figure>
+</div>
 <figcaption>My Talk listing: https://silvia.rbind.io/talk</figcaption></figure>
 </div>
 </div>
@@ -5085,8 +5179,8 @@ font-style: inherit;"># &lt;-- item 4 in the navigation bar</span></span></code>
 </ul>
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" aria-labelledby="tabset-2-1-tab">
-<!-- 
- -->
+<!-- {{< panelset "files and folders to delete" >}}
+{{< panel "List of items" >}} -->
 <ul>
 <li>The content folders carried over from Hugo Academic: authors, home, post, courses, and slides</li>
 <li>The config folder</li>
@@ -5104,8 +5198,8 @@ font-style: inherit;"># &lt;-- item 4 in the navigation bar</span></span></code>
 </ul>
 </div>
 <div id="tabset-2-2" class="tab-pane" aria-labelledby="tabset-2-2-tab">
-<!-- 
- -->
+<!-- {{< /panel  >}}
+{{< panel "Directory tree" >}} -->
 <p>I deleted the following files:</p>
 <ul>
 <li>All of the <strong>index.html</strong> files in the blog, publication, and talks folders</li>
@@ -5179,8 +5273,8 @@ background-color: null;
 font-style: inherit;">└──</span> hugo-academic     <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># &lt;-- this folder</span></span></code></pre></div>
-<!-- 
- -->
+<!-- {{< /panel  >}}
+{{< /panelset  >}} -->
 </div>
 </div>
 </div>
@@ -5607,7 +5701,7 @@ Pages.”</span> March 16, 2021. <a href="https://silviacanelon.com/blog/2021-03
 
 
 
-<script src="index_files/fitvids/fitvids.min.js"></script>
+<script src="{{< blogdown/postref  >}}index_files/fitvids/fitvids.min.js"></script>
 <p>February 12th, 2021 was <a href="https://twitter.com/gvwilson/status/1360304482496614402?s=20">Greg Wilson’s last day at RStudio</a>. This means he is no longer running the <a href="https://education.rstudio.com/trainers/#info">instructor training program</a>, so the future of the program is unclear. You may want to contact <a href="mailto:traininginstructor@rstudio.com" class="email">traininginstructor@rstudio.com</a> with any specific questions.</p>
 <p>You can also jump down in this blog post to Teaching resources to find a consolidated list of materials previously taught as part of the RStudio certification program, in addition to some related resources (thanks to Yanina for adding to this list!).</p>
 <p>Lastly, you may want to consider becoming certified through <a href="https://carpentries.org/blog/2018/07/apply-to-train/">The Carpentries</a>. Yanina Bellini Saibene (<a href="https://twitter.com/yabellini"><span class="citation" data-cites="yabellini">@yabellini</span></a>) and Dorris Scott (<a href="https://twitter.com/Dorris_Scott"><span class="citation" data-cites="Dorris_Scott">@Dorris_Scott</span></a>) are a couple of RStudio instructors that have also been certified through The Carpentries.</p>

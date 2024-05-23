@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.554">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Silvia Canelón">
 <meta name="dcterms.date" content="2021-06-01">
@@ -270,7 +270,10 @@ Projects on my site: https://silvia.rbind.io/project
 </summary><div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-project-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="My Project listing: https://silvia.rbind.io/project"><img src="img/silvia-project-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Project listing page for my site with a grid layout featuring thumbnail images. The top of the page says 'Projects' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There are three projects featured with a decorative thumbnail image, a title, and a summary. Items also include an author and category links but they are cut off in this screenshot." width="1265"></a></p>
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="img/silvia-project-list.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="My Project listing: https://silvia.rbind.io/project"><img src="img/silvia-project-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Project listing page for my site with a grid layout featuring thumbnail images. The top of the page says 'Projects' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There are three projects featured with a decorative thumbnail image, a title, and a summary. Items also include an author and category links but they are cut off in this screenshot." width="1265"></a></p>
+</figure>
+</div>
 <figcaption>My Project listing: https://silvia.rbind.io/project</figcaption></figure>
 </div>
 </div>
@@ -295,7 +298,10 @@ Projects on my site: https://silvia.rbind.io/project
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/netlify-branch-deploy.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="Netlify site settings for deploy contexts"><img src="img/netlify-branch-deploy.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%" alt="The deploy contexts section after clicking the Edit settings button. This section shows three settings that can be edited. The first is the production branch which is set to 'main' in a free text box. The second is deploy previews which is a radio button set to 'any pull request against your production branch/branch deploy branches (as opposed to 'none'). The third is branch deploys which is a radio button set to 'all' (as opposed to 'none' and 'let me add individual branches'). There are two buttons at the bottom of this section, Save and Cancel."></a></p>
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="img/netlify-branch-deploy.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="Netlify site settings for deploy contexts"><img src="img/netlify-branch-deploy.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%" alt="The deploy contexts section after clicking the Edit settings button. This section shows three settings that can be edited. The first is the production branch which is set to 'main' in a free text box. The second is deploy previews which is a radio button set to 'any pull request against your production branch/branch deploy branches (as opposed to 'none'). The third is branch deploys which is a radio button set to 'all' (as opposed to 'none' and 'let me add individual branches'). There are two buttons at the bottom of this section, Save and Cancel."></a></p>
+</figure>
+</div>
 <figcaption>Netlify site settings for deploy contexts</figcaption></figure>
 </div>
 </div>
@@ -440,8 +446,8 @@ Console output
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<!-- 
- -->
+<!-- {{< panelset "content directory" >}}
+{{< panel "Example Site" >}} -->
 <p><i class="fa-solid fa-route" aria-label="route"></i> Location: <code>silvia/themes/hugo-apero/exampleSite</code></p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> config.toml</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> content</span>
@@ -457,8 +463,8 @@ Console output
 <span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    <span class="ex">└──</span> talk</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<!-- 
- -->
+<!-- {{< /panel  >}}
+{{< panel "My Academic site" >}} -->
 <p><i class="fa-solid fa-route" aria-label="route"></i> Location: <code>silvia/</code></p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">.</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> config.toml</span>
@@ -474,8 +480,8 @@ Console output
 <span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    <span class="ex">└──</span> talk</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<!-- 
- -->
+<!-- {{< /panel  >}}
+{{< panel "My Apéro site" >}} -->
 <p><i class="fa-solid fa-route" aria-label="route"></i> Location: <code>silvia/</code></p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">.</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> config.toml</span>
@@ -504,7 +510,10 @@ Console output
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-about-page-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="The header of my About page: https://silvia.rbind.io/about/"><img src="img/silvia-about-page-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="My About page featuring a large headline to greet visitors and a short blurb about me in the header of the site. Below this area on the left in the main area of the page is more information with a heading and some prose. To the right of the main area is the sidebar which includes a small image, a name in large font, a subheading for the name, social media icons, and a spot for an audio clip for a name pronunciation. On the top edge of the page is a navigation bar with 'About' highlighted" width="1265"></a></p>
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="img/silvia-about-page-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="The header of my About page: https://silvia.rbind.io/about/"><img src="img/silvia-about-page-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="My About page featuring a large headline to greet visitors and a short blurb about me in the header of the site. Below this area on the left in the main area of the page is more information with a heading and some prose. To the right of the main area is the sidebar which includes a small image, a name in large font, a subheading for the name, social media icons, and a spot for an audio clip for a name pronunciation. On the top edge of the page is a navigation bar with 'About' highlighted" width="1265"></a></p>
+</figure>
+</div>
 <figcaption>The header of my About page: https://silvia.rbind.io/about/</figcaption></figure>
 </div>
 </div>
@@ -512,7 +521,10 @@ Console output
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-about-page-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="The main section of my About page: https://silvia.rbind.io/about/"><img src="img/silvia-about-page-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Below the header is the main area of the page on the left with more information about me with a heading and some prose. To the right of the main area is the sidebar which includes a small image of me, my name in large font, my professional title underneath along with social media icons and a short list of my interests." width="1265"></a></p>
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="img/silvia-about-page-2.png" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="quarto-lightbox-gallery-4" title="The main section of my About page: https://silvia.rbind.io/about/"><img src="img/silvia-about-page-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Below the header is the main area of the page on the left with more information about me with a heading and some prose. To the right of the main area is the sidebar which includes a small image of me, my name in large font, my professional title underneath along with social media icons and a short list of my interests." width="1265"></a></p>
+</figure>
+</div>
 <figcaption>The main section of my About page: https://silvia.rbind.io/about/</figcaption></figure>
 </div>
 </div>
@@ -575,7 +587,10 @@ Console output
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-home-page.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5" title="My Homepage: https://silvia.rbind.io"><img src="img/silvia-home-page.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The homepage of my site which shows my name in large font on the left, my title, social media icons, a short blurb about me, and a link that says 'Read More' that can be clicked to enter the site. On the right side is a photo of one of my favorite lakes." width="1280"></a></p>
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="img/silvia-home-page.png" class="lightbox" data-glightbox="description: .lightbox-desc-5" data-gallery="quarto-lightbox-gallery-5" title="My Homepage: https://silvia.rbind.io"><img src="img/silvia-home-page.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The homepage of my site which shows my name in large font on the left, my title, social media icons, a short blurb about me, and a link that says 'Read More' that can be clicked to enter the site. On the right side is a photo of one of my favorite lakes." width="1280"></a></p>
+</figure>
+</div>
 <figcaption>My Homepage: https://silvia.rbind.io</figcaption></figure>
 </div>
 </div>
@@ -589,7 +604,10 @@ Console output
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-blog-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-glightbox="description: .lightbox-desc-6" title="My Blog listing: https://silvia.rbind.io/blog"><img src="img/silvia-blog-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Blog listing page for my site with a sidebar layout and thumbnails enabled. There is a sidebar on the left side with some information about my blog including a blog name 'Meeting People Where They R'. It also includes my name as the blog author, a link to subscribe via RSS, and a decorative image of a small potted cactus plant sitting on top of a stack of books. On the right side in the main area of the page there are two blog posts featured, including this one. Each has a title, a summary, the date, and a decorative image as the thumbnail." width="1265"></a></p>
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="img/silvia-blog-list.png" class="lightbox" data-glightbox="description: .lightbox-desc-6" data-gallery="quarto-lightbox-gallery-6" title="My Blog listing: https://silvia.rbind.io/blog"><img src="img/silvia-blog-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Blog listing page for my site with a sidebar layout and thumbnails enabled. There is a sidebar on the left side with some information about my blog including a blog name 'Meeting People Where They R'. It also includes my name as the blog author, a link to subscribe via RSS, and a decorative image of a small potted cactus plant sitting on top of a stack of books. On the right side in the main area of the page there are two blog posts featured, including this one. Each has a title, a summary, the date, and a decorative image as the thumbnail." width="1265"></a></p>
+</figure>
+</div>
 <figcaption>My Blog listing: https://silvia.rbind.io/blog</figcaption></figure>
 </div>
 </div>
@@ -609,7 +627,10 @@ Console output
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-publication-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" data-glightbox="description: .lightbox-desc-7" title="My Publication listing: https://silvia.rbind.io/publication"><img src="img/silvia-publication-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Publication listing page for my site with a single layout which doesn't have a sidebar. The top of the page says 'Publications' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There is primarily one publication featured with a title, a summary, the authors, and the date. This listing visually separates publications in the list with a horizontal bar" width="1265"></a></p>
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="img/silvia-publication-list.png" class="lightbox" data-glightbox="description: .lightbox-desc-7" data-gallery="quarto-lightbox-gallery-7" title="My Publication listing: https://silvia.rbind.io/publication"><img src="img/silvia-publication-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Publication listing page for my site with a single layout which doesn't have a sidebar. The top of the page says 'Publications' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There is primarily one publication featured with a title, a summary, the authors, and the date. This listing visually separates publications in the list with a horizontal bar" width="1265"></a></p>
+</figure>
+</div>
 <figcaption>My Publication listing: https://silvia.rbind.io/publication</figcaption></figure>
 </div>
 </div>
@@ -631,7 +652,10 @@ Console output
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-talk-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" data-glightbox="description: .lightbox-desc-8" title="My Talk listing: https://silvia.rbind.io/talk"><img src="img/silvia-talk-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Talk listing page for my site with a single layout which doesn't have a sidebar and features decorative thumbnail images on the left. The top of the page says 'Talks' and below is a short description of what can be found on the page. This listing visually separates talks in the list by year with a horizontal bar." width="1265"></a></p>
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="img/silvia-talk-list.png" class="lightbox" data-glightbox="description: .lightbox-desc-8" data-gallery="quarto-lightbox-gallery-8" title="My Talk listing: https://silvia.rbind.io/talk"><img src="img/silvia-talk-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Talk listing page for my site with a single layout which doesn't have a sidebar and features decorative thumbnail images on the left. The top of the page says 'Talks' and below is a short description of what can be found on the page. This listing visually separates talks in the list by year with a horizontal bar." width="1265"></a></p>
+</figure>
+</div>
 <figcaption>My Talk listing: https://silvia.rbind.io/talk</figcaption></figure>
 </div>
 </div>
@@ -668,8 +692,8 @@ Console output
 </ul>
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<!-- 
- -->
+<!-- {{< panelset "files and folders to delete" >}}
+{{< panel "List of items" >}} -->
 <ul>
 <li>The content folders carried over from Hugo Academic: authors, home, post, courses, and slides</li>
 <li>The config folder</li>
@@ -687,8 +711,8 @@ Console output
 </ul>
 </div>
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<!-- 
- -->
+<!-- {{< /panel  >}}
+{{< panel "Directory tree" >}} -->
 <p>I deleted the following files:</p>
 <ul>
 <li>All of the <strong>index.html</strong> files in the blog, publication, and talks folders</li>
@@ -714,8 +738,8 @@ Console output
 <span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span>   └── shortcodes        <span class="co"># &lt;-- custom partials in this folder</span></span>
 <span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a><span class="ex">└──</span> themes</span>
 <span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>    <span class="ex">└──</span> hugo-academic     <span class="co"># &lt;-- this folder</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<!-- 
- -->
+<!-- {{< /panel  >}}
+{{< /panelset  >}} -->
 </div>
 </div>
 </div>
@@ -994,6 +1018,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/silviacanelon\.com");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1028,7 +1070,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -1337,7 +1383,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </ul>
 </div>
   </div>
-</footer><script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":false,"closeEffect":"zoom"});
+</footer><script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
