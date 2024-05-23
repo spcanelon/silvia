@@ -1,0 +1,56 @@
+---
+title: "webscraping"
+format: html
+execute: 
+  include: false
+---
+
+```{r setup}
+xfun::pkg_attach("tidyverse", 
+                 "rvest", 
+                 "robotstxt", 
+                 "tidygeocoder", 
+                 "leaflet")
+```
+
+```{r variables}
+year <- 2024
+slug <- "2024-06-05-ccd-sips"
+url <- "https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view"
+```
+
+```{r source-files}
+source(here::here("blog", slug, "R", "ccd_sips_functions.R"))
+```
+
+## Checking the page
+
+```{r check-tos}
+# check page's terms of service
+get_robotstxt(url)
+```
+
+## Scrape all pages
+
+```{r scrape-pages}
+table <- map_df(1:4, .f = get_tables, url = url) 
+
+table |> head()
+
+write_rds(table, file = here::here("blog", slug, "specialsScraped.Rds"))
+```
+
+## Geocoding
+
+```{r geocode}
+specials <- read_rds(file = here::here("blog", slug, "specialsScraped.Rds"))
+
+specials_geocoded <- 
+  specials |> 
+  geocode(Address, method = "google", 
+          lat = "Latitude", long = "Longitude")
+
+specials_geocoded |> 
+  write_rds(file = here("blog", slug, "specialsGeocoded.Rds"))
+
+```

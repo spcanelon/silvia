@@ -1,0 +1,111 @@
+---
+title: "Title"
+---
+
+
+
+<div id="meta--" class="section level1">
+<h1>meta ———————————————————-</h1>
+<p>library(metathis)</p>
+<p>meta() |&gt;
+# <a href="https://pkg.garrickadenbuie.com/metathis/reference/meta_viewport.html" class="uri">https://pkg.garrickadenbuie.com/metathis/reference/meta_viewport.html</a>
+meta_viewport(width = “device-width”,
+initial_scale = “1.0”,
+maximum_scale = “1.0”,
+user_scalable = “no”) |&gt;
+# tags for social media
+# <a href="https://pkg.garrickadenbuie.com/metathis/reference/meta_social.html" class="uri">https://pkg.garrickadenbuie.com/metathis/reference/meta_social.html</a>
+meta_social(
+title = “Philly CCD Sips 2023 Interactive Map”,
+url = “<a href="https://www.silviacanelon.com/blog/2023-ccd-sips/map.html" class="uri">https://www.silviacanelon.com/blog/2023-ccd-sips/map.html</a>”,
+image = “<a href="https://github.com/spcanelon/silvia/blob/main/content/blog/2023-06-05-ccd-sips/featured.png?raw=true" class="uri">https://github.com/spcanelon/silvia/blob/main/content/blog/2023-06-05-ccd-sips/featured.png?raw=true</a>”,
+image_alt = “Map of Philly’s Center City with a pop-up saying Center City District Sips 2023”,
+description = “An interactive map showing restaurants participating in Philadelphia’s CCD Sips 2023”,
+twitter_card_type = “summary_large_image”,
+twitter_creator = “<span class="citation">@spcanelon</span>”,
+og_type = “website”,
+og_author = “Silvia Canelón”
+) |&gt;
+meta_general(generator = “quarto”) |&gt;
+meta_name(“github-repo” = “spcanelon/silvia”) |&gt;
+# <a href="https://pkg.garrickadenbuie.com/metathis/index.html" class="uri">https://pkg.garrickadenbuie.com/metathis/index.html</a>
+# <a href="https://pkg.garrickadenbuie.com/metathis/reference/write_meta.html" class="uri">https://pkg.garrickadenbuie.com/metathis/reference/write_meta.html</a>
+write_meta(path = here::here(“content”, “blog”, “2023-06-05-ccd-sips”, “meta-map.html”))</p>
+</div>
+<div id="setup-map" class="section level1">
+<h1>setup-map —————————————————–</h1>
+<p>xfun::pkg_attach(“tidyverse”, “here”, “leaflet”)</p>
+<p>knitr::opts_chunk$set(echo = FALSE)</p>
+</div>
+<div id="import-data" class="section level1">
+<h1>import-data —————————————————</h1>
+<p>specials &lt;- read_rds(here(“content/blog/2023-06-05-ccd-sips/specialsGeocoded.Rds”))</p>
+</div>
+<div id="marker-for-the-specials" class="section level1">
+<h1>marker for the specials</h1>
+popInfoCircles&lt;-paste(“
+<h2 style='font-family: Red Hat Text, sans-serif; font-size: 1.6em; color:#EDA504;'>
+“,”<a style='color: #EDA504;' href=", specials$Specials, ">“, specials<span class="math inline">\(Name, &quot;&lt;/a&gt;&lt;/h2&gt;&quot;, &quot;&lt;p style=&#39;font-family: Red Hat Text, sans-serif; font-weight: normal; font-size: 1.5em; color:#9197A6;&#39;&gt;&quot;, specials\)</span>Address,”
+</p>
+<p>“)</p>
+</div>
+<div id="leaflet-markers" class="section level1">
+<h1>leaflet-markers ———————————————–</h1>
+</div>
+<div id="marker-for-the-center-of-the-map" class="section level1">
+<h1>marker for the center of the map</h1>
+popInfoMarker&lt;-paste(“
+<h1 style="padding-top: 0.5em; margin-top: 1em; margin-bottom: 0.5em; font-family: Red Hat Text, sans-serif; font-size: 1.8em; color:#43464C;">
+“,”<a style='color: #00857A;' href='https://centercityphila.org/explore-center-city/ccdsips'>“,”Center City District Sips 2023”, “</a>
+</h1>
+<p style="color:#9197A6; font-family: Red Hat Text, sans-serif; font-size: 1.5em; padding-bottom: 1em;">
+“,”Philadelphia, PA”, “
+</p>
+<p>“)</p>
+<p>awesome &lt;-
+makeAwesomeIcon(
+icon = “map-pin”,
+iconColor = “#FFFFFF”,
+markerColor = “darkblue”,
+library = “fa”
+)</p>
+</div>
+<div id="leaflet-map" class="section level1">
+<h1>leaflet-map —————————————————</h1>
+<p>specials |&gt;
+leaflet(width = “100%”,
+height = “850px”,
+# <a href="https://stackoverflow.com/a/42170340" class="uri">https://stackoverflow.com/a/42170340</a>
+options = tileOptions(minZoom = 15,
+maxZoom = 19)) |&gt;
+#add map markers
+addCircles(
+lat = ~ Latitude,
+lng = ~ Longitude,
+fillColor = “#EDA504”, # “#E46651”,
+fillOpacity = 0.6,
+stroke = F,
+radius = 12,
+popup = popInfoCircles,
+label = ~ Name,
+labelOptions = labelOptions(
+style = list(
+“font-family” = “Red Hat Text, sans-serif”,
+“font-size” = “1.2em”)
+)) |&gt;
+#add map tiles in the background
+addProviderTiles(
+providers<span class="math inline">\(CartoDB.Positron  ) |&gt;  # set the map view  setView(mean(specials\)</span>Longitude),
+mean(specials<span class="math inline">\(Latitude),  zoom = 16) |&gt;  addAwesomeMarkers(  icon = awesome,  lng = mean(specials\)</span>Longitude),
+lat = mean(specials$Latitude),
+label = “Center City District Sips 2023”,
+labelOptions = labelOptions(
+style = list(
+“font-family” = “Red Hat Text, sans-serif”,
+“font-size” = “1.2em”)
+),
+popup = popInfoMarker,
+popupOptions = popupOptions(maxWidth = 250)) |&gt;
+# add fullscreen control button
+leaflet.extras::addFullscreenControl()</p>
+</div>
