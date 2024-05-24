@@ -539,10 +539,10 @@ Bones of the contact page
 <div class="code-with-filename-file">
 <pre><strong>index.qmd</strong></pre>
 </div>
-<div class="sourceCode" id="cb11" data-filename="index.qmd" data-startfrom="42"><pre class="sourceCode numberSource yml number-lines code-with-copy"><code class="sourceCode yaml" style="counter-reset: source-line 41;"><span id="cb11-42"><a href="#cb11-42"></a><span class="fu">header-includes</span><span class="kw">: </span><span class="ch">&gt;</span></span>
-<span id="cb11-43"><a href="#cb11-43"></a>  &lt;link rel="stylesheet" href="assets/index.css"&gt;</span>
-<span id="cb11-44"><a href="#cb11-44"></a><span class="fu">resources</span><span class="kw">:</span></span>
-<span id="cb11-45"><a href="#cb11-45"></a><span class="at">  </span><span class="kw">-</span><span class="at"> assets/index.css</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11" data-filename="index.qmd" data-startfrom="42"><pre class="sourceCode numberSource yml number-lines code-with-copy"><code class="sourceCode yaml" style="counter-reset: source-line 41;"><span id="cb11-42"><a href="#cb11-42"></a><span class="at">  </span><span class="fu">warning</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb11-43"><a href="#cb11-43"></a></span>
+<span id="cb11-44"><a href="#cb11-44"></a><span class="fu">header-includes</span><span class="kw">: </span><span class="ch">&gt;</span></span>
+<span id="cb11-45"><a href="#cb11-45"></a>  &lt;link rel="stylesheet" href="assets/index.css"&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>
@@ -1333,7 +1333,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </ul>
 </div>
   </div>
-</footer><script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","loop":false,"descPosition":"bottom"});
+</footer><script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","loop":false});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
