@@ -1,0 +1,10 @@
+/* Adjust z-index properties to work with Leaflet 1.0 */
+
+.mapboxgl-ctrl-top-left,
+.mapboxgl-ctrl-top-right,
+.mapboxgl-ctrl-bottom-left,
+.mapboxgl-ctrl-bottom-right { z-index: 102; }
+
+.mapboxgl-popup-tip {
+    z-index: 101;
+}

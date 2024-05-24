@@ -4,6 +4,7 @@ include-in-header: meta-map.html
 format: 
   html:
     page-layout: custom
+    embed-resources: true
 ---
 
 ```{r meta, include=FALSE}
@@ -43,7 +44,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ```{r}
-sips <- read_rds(here("content/blog/2019-08-04-ccd-sips/sips.Rds"))
+sips <- read_rds(here("blog/2019-08-04-ccd-sips/sips.Rds"))
 ```
 
 ```{r}

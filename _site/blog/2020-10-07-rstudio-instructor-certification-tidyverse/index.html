@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -224,7 +224,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<script src="index_files/fitvids/fitvids.min.js"></script>
+<script src="{{< blogdown/postref  >}}index_files/fitvids/fitvids.min.js"></script>
 <p>February 12th, 2021 was <a href="https://twitter.com/gvwilson/status/1360304482496614402?s=20">Greg Wilson’s last day at RStudio</a>. This means he is no longer running the <a href="https://education.rstudio.com/trainers/#info">instructor training program</a>, so the future of the program is unclear. You may want to contact <a href="mailto:traininginstructor@rstudio.com" class="email">traininginstructor@rstudio.com</a> with any specific questions.</p>
 <p>You can also jump down in this blog post to <a href="#teaching-resources">Teaching resources</a> to find a consolidated list of materials previously taught as part of the RStudio certification program, in addition to some related resources (thanks to Yanina for adding to this list!).</p>
 <p>Lastly, you may want to consider becoming certified through <a href="https://carpentries.org/blog/2018/07/apply-to-train/">The Carpentries</a>. Yanina Bellini Saibene (<a href="https://twitter.com/yabellini"><span class="citation" data-cites="yabellini">@yabellini</span></a>) and Dorris Scott (<a href="https://twitter.com/Dorris_Scott"><span class="citation" data-cites="Dorris_Scott">@Dorris_Scott</span></a>) are a couple of RStudio instructors that have also been certified through The Carpentries.</p>
@@ -693,6 +693,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/silviacanelon\.com");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -727,7 +745,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
