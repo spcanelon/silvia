@@ -1,7 +1,7 @@
 ---
 title: 'Philly Center City District Sips 2024: An Interactive Map'
 author: Silvia Canelón
-date: 2024-06-05
+#date: 2024-06-05
 date-modified: today
 slug: ccd-sips
 image: featured-preview.png
