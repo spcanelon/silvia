@@ -19,8 +19,8 @@ about:
     - text: "{{< fa universal-access >}}"
       aria-label: "Accessibility statement"
       href: accessibility.qmd
-    - icon: mastodon
-      href: https://hachyderm.io/@spcanelon
+    - icon: substack
+      href: https://spcanelon.substack.com
     - icon: github
       aria-label: GitHub
       href: https://github.com/spcanelon
@@ -32,6 +32,8 @@ about:
     - icon: linkedin
       aria-label: "LinkedIn"
       href: https://linkedin.com/in/spcanelon
+    - icon: mastodon
+      href: https://hachyderm.io/@spcanelon
 page-layout: full
 
 execute: 
