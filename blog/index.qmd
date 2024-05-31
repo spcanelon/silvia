@@ -2,12 +2,12 @@
 title: "Meeting People Where They R"
 description: |
   This is my blog where I practice sharing my curiosity about R.<br>
-  It includes notes and tutorials for my future self and hopefully also for you.<br>
-  Subscribe via [Substack](https://spcanelon.substack.com/)
+  It includes notes and tutorials for my future self and hopefully also for you.<br><br>
+  {{< bi substack >}} Sign up for my [newsletter](https://spcanelon.substack.com/) to receive updates about new posts.
 listing: 
   contents: 
     - "**/index.qmd"
-    - "**/index.markdown"
+    - "**/index.markdown" 
     - "**/index.md"
   sort: "date desc"
   type: default
@@ -32,4 +32,5 @@ header-includes: >
   <link rel="stylesheet" href="../assets/listing-default.css">
 resources:
   - ../assets/listing-default.css 
+include-after-body: ../assets/silvia/subscribe.html
 ---
