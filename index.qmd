@@ -24,16 +24,19 @@ about:
     - icon: github
       aria-label: GitHub
       href: https://github.com/spcanelon
+    - icon: linkedin
+      aria-label: "LinkedIn"
+      href: https://linkedin.com/in/spcanelon
+    # - text: "{{< fa brands bluesky >}}" 
+    #   aria-label: "Bluesky"
+    #   href: https://bsky.app/profile/silviacanelon.com
+    - icon: mastodon
+      href: https://hachyderm.io/@spcanelon
     - text: "{{< ai orcid >}}"
       href: https://orcid.org/0000-0003-1709-1394
     - text: "{{< ai google-scholar >}}"
       aria-label: "Google Scholar"
       href: https://scholar.google.com/citations?user=GAzkvpcAAAAJ&hl=en&oi=ao
-    - icon: linkedin
-      aria-label: "LinkedIn"
-      href: https://linkedin.com/in/spcanelon
-    - icon: mastodon
-      href: https://hachyderm.io/@spcanelon
 page-layout: full
 
 execute: 
