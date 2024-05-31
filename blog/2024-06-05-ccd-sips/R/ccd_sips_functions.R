@@ -52,11 +52,11 @@ create_metadata <- function(year, slug) {
     # tags for social media
     # https://pkg.garrickadenbuie.com/metathis/reference/meta_social.html
     metathis::meta_social(
-      title = paste0("Philly CCD Sips ", year, " Interactive Map"),
+      title = paste0("Philly CCD SIPS ", year, " Interactive Map"),
       url = paste0("https://www.silviacanelon.com/blog/", slug, "/map.html"),
       image = "https://github.com/spcanelon/silvia/blob/main/content/blog/", slug, "/featured.png?raw=true",
-      image_alt = paste("Map of Philly's Center City with a pop-up saying Center City District Sips", year),
-      description = paste("An interactive map showing restaurants participating in Philadelphia's CCD Sips", year),
+      image_alt = paste("Map of Philly's Center City with a pop-up saying Center City District SIPS", year),
+      description = paste("An interactive map showing restaurants participating in Philadelphia's CCD SIPS", year),
       twitter_card_type = "summary_large_image",
       twitter_creator = "@spcanelon",
       og_type = "website",
@@ -132,7 +132,7 @@ create_center_popup <-
           padding_top = "0.5em"
         ),
         # link details
-        htmltools::a(paste("Center City District Sips", year),
+        htmltools::a(paste("Center City District SIPS", year),
                      style = htmltools::css(color = link_color),
                      href = "https://centercityphila.org/explore-center-city/ccdsips"), #specials$Specials),
       ),
@@ -214,7 +214,7 @@ create_leaflet_map <- function(year, df_specials, address_marker_labels, center_
       icon = popup_center_marker_icon,
       lng = mean(specials$Longitude),
       lat = mean(specials$Latitude),
-      label = paste("Center City District Sips", year),
+      label = paste("Center City District SIPS", year),
       labelOptions = leaflet::labelOptions(
         style = list(
           "font-family" = "Red Hat Text, sans-serif",

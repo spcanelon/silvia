@@ -1,5 +1,5 @@
 ---
-pagetitle: "Philly CCD Sips 2024 Map"
+pagetitle: "Philly CCD SIPS 2024 Map"
 include-in-header: meta-map.html
 format:
   html:
