@@ -14,3 +14,6 @@ format:
     code-overflow: wrap
     template-partials: 
       - ../_partials/title-block-link-buttons/title-block.html
+      
+# placeholder featured image
+image: featured.jpg
