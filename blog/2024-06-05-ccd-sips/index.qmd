@@ -1,10 +1,10 @@
 ---
 title: 'Philly Center City District Sips 2024: An Interactive Map'
 author: Silvia Canelón
-#date: 2024-06-05
+date: 2024-06-05
 date-modified: today
 slug: ccd-sips
-image: featured-preview.png
+image: featured.png
 categories:
   - R
   - maps
@@ -16,17 +16,28 @@ categories:
 subtitle: >
   An interactive map showing restaurants participating in CCD Sips 2024
 description: ''
+links:
+- icon: pin-map-fill
+  name: Interactive Map
+  url: http://tiny.cc/ccdsips2024
 ---
-
 
 Philly's Center City District posted a list of restaurants and bars participating in Philly's 2024 [CCD Sips](https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view). CCD Sips is a series of summer Wednesday evenings (5-7pm) filled with **happy hour specials**, between June 5th and August 28th.
 
-I'm in the process of creating this year's map!
+I scraped some information from the website in order to present the information as a **map**. You can click or tap on the circle map markers to see information about each restaurant/bar along with a direct link to their posted happy hour specials. 
 
-In the meantime, you can take a look at CCD Sips maps from [2023](/blog/2023-06-05-ccd-sips), [2022](/blog/2022-05-31-ccd-sips) and [2019](/blog/2019-08-04-ccd-sips).
+Check out the link at the top of this post for a larger version of the interactive map below, or take a look at CCD Sips maps from [2023](/blog/2023-06-05-ccd-sips), [2022](/blog/2022-05-31-ccd-sips) and [2019](/blog/2019-08-04-ccd-sips).
 
-To receive an e-mail update when the map goes live (and whenever I create a post), subscribe to my free newsletter on Substack.
 
-<iframe src="https://spcanelon.substack.com/embed" width="480" height="150" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
-
-![](featured-preview.png){fig-alt="Preview of the 2024 map in the background, with a 'Coming soon!' text box in the foreground"}
+<!--https://dannyda.com/2021/06/09/how-to-make-html-iframe-responsive-iframe-height-equal-to-viewport-screen-height/-->
+<style>
+iframe {
+display: block;
+background: #FFFBF2;
+border: none; /* Reset default border */
+height: 70vh; /* Viewport-relative units */
+width: 100%;
+}
+</style>
+<iframe src="map.html" scrolling="no">
+</iframe>
