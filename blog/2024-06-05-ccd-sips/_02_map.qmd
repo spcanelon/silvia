@@ -68,9 +68,9 @@ popup_center_marker_icon <-
 create_leaflet_map(year = year,
                    df_specials = specials,
                    address_marker_labels = popup_address_labels, 
-                   center_marker_label = popup_center_marker_label, 
+                   center_marker_label = popup_center_marker_label,
                    address_marker_fill_color = "#5389f7",
                    address_marker_color = "#1a3a7a",
                    # pop-up widths should be <=250 for mobile
-                   max_popup_width = 250) 
+                   max_popup_width = 250)
 ```

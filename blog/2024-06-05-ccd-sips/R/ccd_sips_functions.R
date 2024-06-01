@@ -203,7 +203,9 @@ create_leaflet_map <- function(year, df_specials, address_marker_labels, center_
     ) |>
     #add map tiles in the background
     leaflet::addProviderTiles(
-      providers$CartoDB.Positron
+      providers$CartoDB.Positron,
+      # add attribution
+      options = list(attribution = "Created by <a href='https://silviacanelon.com'>Silvia Canelón</a> | &copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors")
     ) |>
     # use centroid as map view
     leaflet::setView(mean(specials$Longitude),
