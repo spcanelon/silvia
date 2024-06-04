@@ -20,6 +20,12 @@ links:
 - icon: pin-map-fill
   name: Interactive Map
   url: http://tiny.cc/ccdsips2024
+- icon: qr-code
+  name: QR code
+  url: /blog/2024-06-05-ccd-sips/qr_code.png
+- icon: pencil-fill
+  name: Map tutorial
+  url: /blog/2022-05-31-ccd-sips
 ---
 
 Philly's Center City District posted a list of restaurants and bars participating in Philly's 2024 [CCD SIPS](https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view). CCD SIPS is a series of summer Wednesday evenings (5-7pm) filled with **happy hour specials**, between June 5th and August 28th.
