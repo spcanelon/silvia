@@ -162,7 +162,7 @@ create_center_popup <-
 
 # Leaflet map ---------------------------------------------------
 
-#' Title
+#' Leaflet map of CCD SIPS specials
 #'
 #' @param df_specials Dataframe with specials
 #' @param year Year of CCD Sips event
@@ -228,3 +228,34 @@ create_leaflet_map <- function(year, df_specials, address_marker_labels, center_
     leaflet.extras::addFullscreenControl()
   
 }
+
+
+# Searchable table ----------------------------------------------
+
+# <a href="https://github.com/rstudio/DT/issues">Github issues</a>
+
+#' Searchable table for happy hour specials
+#'
+#' @param df Dataframe with CCD SIPS specials 
+#'
+#' @return Searchable HTML table with links to specials
+#'
+create_table <- function(df) {
+  
+  df |> 
+    # create HTML link variable
+    dplyr::mutate(Link = glue::glue("<a href='{Specials}'>{Name}</a>")) |>
+    # select variables to display in table
+    dplyr::select(Link, Address) |> 
+    DT::datatable(
+      # number of items to include per page
+      options = list(pageLength = 20),
+      # remove row names/numbers
+      rownames = FALSE,
+      # label columns
+      colnames = c('Business', 'Address'),
+      # allow text to be interpreted as HTML
+      escape = FALSE)
+
+}
+
