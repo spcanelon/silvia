@@ -1,0 +1,42 @@
+---
+title: "Comparison of different definitions of traumatic brain injury: implications for cohort characteristics and survival in women, Philadelphia, USA"
+author: 
+- Bernadette A. D'Alonzo
+- Abigail C. Bretzin
+- Andrea L.C. Schneider
+- Rebecca B. Morse
+- name: Silvia P. Canelón
+  orcid: 0000-0003-1709-1394
+- Doug J. Wiebe
+- Mary Regina Boland
+date: '2024-05-27'
+slug: tbi-definitions
+image: featured.png
+categories:
+  - Research 
+  - EHR
+  - TBI
+description: 'Injury Prevention'
+subtitle: EHR study describing different definitions for Traumatic Brain Injury (TBI) and re-examining them to provide an expanded definition able to better characterize TBI among female patients.
+links:
+- icon: file-richtext-fill
+  name: Publication
+  url: https://doi.org/10.1136/ip-2023-045069
+- icon: github
+  name: Relevant files
+  url: https://github.com/bolandlab/TBI_Definition
+- icon: calendar-check
+  name: Related talk
+  url: /talk/2022-04-27-dbei-research-day/
+---
+
+## Abstract
+
+**Background:** Traumatic brain injury (TBI) is an acute injury that is understudied in civilian cohorts, especially among women, as TBI has historically been considered to be largely a condition of athletes and military service people. Both the Centres for Disease Control and Prevention (CDC) and Department of Defense (DOD)/Veterans Affairs (VA) have developed case definitions to identify patients with TBI from medical records; however, their definitions differ. We sought to re-examine these definitions to construct an expansive and more inclusive definition among a cohort of women with TBI.
+
+**Methods:** In this study, we use electronic health records (EHR) from a single healthcare system to study the impact of using different case definitions to identify patients with TBI. Specifically, we identified adult female patients with TBI using the CDC definition, DOD/VA definition and a combined and expanded definition herein called the Penn definition.
+
+**Results:** We identified 4446 adult-female TBI patients meeting the CDC definition, 3619 meeting the DOD/VA definition, and together, 6432 meeting our expanded Penn definition that includes the CDC ad DOD/VA definitions.
+
+**Conclusions:** Using the expanded definition identified almost two times as many patients, enabling investigations to more fully characterise these patients and related outcomes. Our expanded TBI case definition is available to other researchers interested in employing EHRs to investigate TBI.
+
