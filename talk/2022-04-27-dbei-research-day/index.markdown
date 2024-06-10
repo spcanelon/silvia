@@ -32,6 +32,9 @@ links:
 - icon: filetype-ppt
   name: slides
   url: DBEICCEB-ResearchDay-slides.pptx
+- icon: file-richtext-fill
+  name: Related publication
+  url: /publication/2024-05-27-tbi-definitions/
 ---
 
 This abstract was one of 10 selected for a flashtalk presentation. And the flashtalk received an award! 🎉 
