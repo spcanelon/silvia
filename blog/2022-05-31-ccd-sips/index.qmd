@@ -19,6 +19,9 @@ links:
 - icon: pin-map-fill
   name: Collection of maps
   url: /project/2024-06-16-ccd-sips
+- icon: calendar-check
+  name: Related workshop
+  url: /talk/2022-09-29-ccd-sips
 ---
 
 <script src="index_files/libs/clipboard-2.0.6/clipboard.min.js"></script>
