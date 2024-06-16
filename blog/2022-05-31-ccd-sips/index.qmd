@@ -1,8 +1,7 @@
 ---
-title: 'Philly Center City District Sips 2022: An Interactive Map'
+title: 'Creating the Philly Center City SIPS Interactive Map'
 author: Silvia Canelón
 date: '2022-05-31'
-slug: ccd-sips
 image: featured.png
 categories:
   - R
@@ -12,15 +11,14 @@ categories:
   - robotstxt
   - rvest
   - leaflet
-  - ggmap
+  - ggmap 
 subtitle: >
-  An interactive map showing restaurants participating in CCD Sips 2022 & 
-  a companion R tutorial on webscraping, geocoding, and map-making
-description: '' # Text that shows below the tags, not on listing page 
+  An R tutorial on webscraping, geocoding, and map-making
+description: '' # Text that shows below the tags, not on listing page
 links:
 - icon: pin-map-fill
-  name: Interactive Map
-  url: http://tiny.cc/ccdsips2022
+  name: Collection of maps
+  url: /project/2024-06-16-ccd-sips
 ---
 
 <script src="index_files/libs/clipboard-2.0.6/clipboard.min.js"></script>

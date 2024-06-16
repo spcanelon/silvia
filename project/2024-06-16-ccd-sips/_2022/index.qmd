@@ -1,0 +1,65 @@
+---
+title: 'Philly Center City District Sips 2022: An Interactive Map'
+author: Silvia Canelón
+date: '2022-05-31'
+slug: ccd-sips
+image: featured.png
+categories:
+  - R
+  - tutorial
+  - maps
+  - webscraping
+  - robotstxt
+  - rvest
+  - leaflet
+  - ggmap
+subtitle: >
+  An interactive map showing restaurants participating in CCD Sips 2022 & 
+  a companion R tutorial on webscraping, geocoding, and map-making
+description: '' # Text that shows below the tags, not on listing page 
+links:
+- icon: pin-map-fill
+  name: Interactive Map
+  url: http://tiny.cc/ccdsips2022
+---
+
+<script src="index_files/libs/clipboard-2.0.6/clipboard.min.js"></script>
+<link href="index_files/libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="index_files/libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<script src="index_files/libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="index_files/libs/jquery-1.12.4/jquery.min.js"></script>
+<link href="index_files/libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="index_files/libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="index_files/libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="index_files/libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="index_files/libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="index_files/libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="index_files/libs/leaflet-binding-2.1.1/leaflet.js"></script>
+<script src="index_files/libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
+<script src="index_files/libs/leaflet-providers-plugin-2.1.1/leaflet-providers-plugin.js"></script>
+<link href="index_files/libs/leaflet-awesomemarkers-2.0.3/leaflet.awesome-markers.css" rel="stylesheet" />
+<script src="index_files/libs/leaflet-awesomemarkers-2.0.3/leaflet.awesome-markers.min.js"></script>
+<link href="index_files/libs/fontawesome-4.7.0/font-awesome.min.css" rel="stylesheet" />
+<link href="index_files/libs/lfx-fullscreen-1.0.2/lfx-fullscreen-prod.css" rel="stylesheet" />
+<script src="index_files/libs/lfx-fullscreen-1.0.2/lfx-fullscreen-prod.js"></script>
+
+
+Philly's Center City District posted a list of restaurants and bars participating in Philly's 2022 [CCD Sips](https://centercityphila.org/explore-center-city/ccdsips). CCD Sips is a series of summer Wednesday evenings (4:30-7pm) filled with **happy hour specials**, between June 1st and August 31st.
+
+I prefer to take in this information as a **map** instead of a list, so I scraped some information from the website and made one! You can click or tap on the circle map markers to see information about each restaurant/bar along with a direct link to their posted happy hour specials.
+
+Check out the link at the top of this post for a larger version of the interactive map below. And check out the [companion blog post](/blog/2022-05-31-ccd-sips#tutorial-start) if you'd like to learn how I used R to build the interactive map!
+
+<!--https://dannyda.com/2021/06/09/how-to-make-html-iframe-responsive-iframe-height-equal-to-viewport-screen-height/-->
+<style>
+iframe {
+display: block;
+background: #FFFBF2;
+border: none; /* Reset default border */
+height: 70vh; /* Viewport-relative units */
+width: 100%;
+}
+</style>
+
+<iframe src="map.html" scrolling="no">
+</iframe>

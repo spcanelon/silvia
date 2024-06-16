@@ -6,7 +6,13 @@ execute:
 title-block-banner: true
 
 # Default fields for citation
-citation: false
+citation: true
+appendix-cite-as: display
+
+# Default for table of contents
+toc: true
+toc-title: Table of contents
+toc-location: right
 
 # Wrap overflow code
 format: 
@@ -14,3 +20,14 @@ format:
     code-overflow: wrap
     template-partials: 
       - ../_partials/title-block-link-buttons/title-block.html
+
+# Post info
+author: Silvia Canelón
+
+# Enable comments
+comments:
+  utterances:
+    repo: spcanelon/silvia
+    issue-term: title
+    theme: boxy-light
+    label: "comments :crystal_ball:"

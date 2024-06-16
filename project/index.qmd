@@ -1,12 +1,13 @@
 ---
 title: "Projects"
+author: ""
 description: |
-  This porfolio includes openly available educational material I have created,<br> along with software and tools I have contributed to or designed.
+  This porfolio includes openly available educational material I have created,<br> along with works, software, and tools I have contributed to or designed.
 listing: 
   contents:
-    - "**/index.qmd"
-    - "**/index.markdown"
-    - "**/index.md"
+    - "/*/index.qmd"
+    - "/*/index.markdown"
+    - "/*/index.md"
   type: grid
   fields: [title, categories, date, image]
   sort: "date desc"

@@ -1,0 +1,25 @@
+# Map metadata
+# - title: "2024"
+#   date: 2024-06-05
+#   image: 2024/featured.png
+#   path: 2024/map.html
+#   description: ""
+- title: "2023"
+  date: 2023-06-05
+  image: 2023/featured.png
+  path: 2023/map.html
+  description: >
+    <details><summary>Web analytics</summary>
+    1,760 unique visitors in the United States visited this post 2,330
+    times between June 7th and August 30th, 2023
+    </details>
+- title: "2022"
+  date: 2022-05-31
+  image: 2022/featured.png
+  path: 2022/map.html
+  description: ""
+- title: "2019"
+  date: 2019-08-04
+  image: 2019/featured.png
+  path: 2019/map.html
+  description: ""
