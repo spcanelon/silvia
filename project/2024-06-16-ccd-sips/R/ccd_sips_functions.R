@@ -240,7 +240,7 @@ create_leaflet_map <- function(year, df_specials, address_marker_labels, center_
 #'
 #' @return Searchable HTML table with links to specials
 #'
-create_table <- function(df) {
+create_table <- function(df, page_length = 10) {
   
   df |> 
     # create HTML link variable
@@ -249,13 +249,13 @@ create_table <- function(df) {
     dplyr::select(Link, Address) |> 
     DT::datatable(
       # number of items to include per page
-      options = list(pageLength = 20),
+      options = list(pageLength = page_length),
       # remove row names/numbers
       rownames = FALSE,
       # label columns
       colnames = c('Business', 'Address'),
       # allow text to be interpreted as HTML
       escape = FALSE)
-
+  
 }
 

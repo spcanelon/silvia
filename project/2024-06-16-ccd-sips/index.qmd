@@ -1,0 +1,95 @@
+---
+title: 'Philly Center City District SIPS: An Interactive Map'
+date: 2024-06-16
+date-modified: today
+slug: ccd-sips
+image: featured.png
+categories:
+  - R
+  - maps
+  - webscraping
+  - robotstxt
+  - rvest
+  - leaflet
+  - tidygeocoder
+subtitle: >
+  A collection of interactive maps showing restaurants participating in Phily's CCD SIPS
+description: ''
+
+listing: 
+- id: maps
+  contents: 
+    - "metadata.yml"
+  sort: date desc
+  type: grid
+  grid-columns: 2
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  fields: [image, title, description]
+  image-height: "200"
+
+links:
+- icon: pin-map-fill
+  name: Interactive Map
+  url: http://tiny.cc/ccdsips2024
+- icon: qr-code
+  name: QR code
+  url: /project/2024-06-16-ccd-sips/qr_code.png
+- icon: pencil-fill
+  name: Map tutorial
+  url: /blog/2022-05-31-ccd-sips
+- icon: calendar-check
+  name: Workshop
+  url: /talk/2022-09-29-ccd-sips
+---
+
+Philly's Center City District posted a list of restaurants and bars participating in Philly's 2024 [CCD SIPS](https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view). CCD SIPS is a series of summer Wednesday evenings (5-7pm) filled with **happy hour specials**, between June 5th and August 28th.
+
+I scraped some information from the website in order to present the information as a **map**. You can click or tap on the circle map markers to see information about each restaurant/bar along with a direct link to their posted happy hour specials.
+
+## Map view
+
+<!--https://dannyda.com/2021/06/09/how-to-make-html-iframe-responsive-iframe-height-equal-to-viewport-screen-height/-->
+<style>
+iframe {
+display: block;
+background: #FFFBF2;
+border: none; /* Reset default border */
+height: 70vh; /* Viewport-relative units */
+width: 100%;
+}
+</style>
+<iframe src="2024/map.html" scrolling="no">
+</iframe>
+
+## Table view
+
+```{r}
+#| label: table
+#| echo: false
+
+year <- "2024"
+
+source(here::here("project", "2024-06-16-ccd-sips", "R", "ccd_sips_functions.R"))
+
+specials <- readr::read_rds(here::here("project", "2024-06-16-ccd-sips", year, "specialsGeocoded.Rds"))
+
+create_table(specials, page_length = 10) 
+```
+
+
+## Past years
+
+<!-- start of grid layout -->
+:::: {.grid}
+
+::: {.g-col-12}
+
+::: {#maps}
+:::
+
+:::
+
+::::
+<!-- end of grid layout -->

@@ -1,8 +1,7 @@
 ---
 title: 'Philly Center City District SIPS 2024: An Interactive Map'
 author: Silvia Canelón
-# date: 2024-06-05
-date-modified: today
+date: 2024-06-05
 slug: ccd-sips
 image: featured.png
 categories:
@@ -26,6 +25,8 @@ links:
 - icon: pencil-fill
   name: Map tutorial
   url: /blog/2022-05-31-ccd-sips
+execute: 
+  include: false
 ---
 
 Philly's Center City District posted a list of restaurants and bars participating in Philly's 2024 [CCD SIPS](https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view). CCD SIPS is a series of summer Wednesday evenings (5-7pm) filled with **happy hour specials**, between June 5th and August 28th.
@@ -51,12 +52,12 @@ width: 100%;
 
 ## Table view
 
-```{r table}
-#| echo: false
+```{r}
+#| label: table
 
-source(here::here("blog", "2024-06-05-ccd-sips", "R", "ccd_sips_functions.R"))
+source(here::here("project", "2024-06-16-ccd-sips", "2024", "R", "ccd_sips_functions.R"))
 
-specials <- readr::read_rds(here::here("blog", "2024-06-05-ccd-sips", "specialsGeocoded.Rds"))
+specials <- readr::read_rds(here::here("project", "2024-06-16-ccd-sips", "2024", "specialsGeocoded.Rds"))
 
 create_table(specials)
 ```

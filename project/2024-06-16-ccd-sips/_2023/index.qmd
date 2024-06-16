@@ -21,11 +21,6 @@ links:
   url: http://tiny.cc/ccdsips2023
 ---
 
-::: {.callout-note collapse="false"}
-## Looking for the 2024 map?
-You can find it at [Philly Center City District SIPS 2024: An Interactive Map](../../blog/2024-06-05-ccd-sips)
-:::
-
 ::: {.callout-tip collapse="true"}
 ## Expand to see web analytics
 
