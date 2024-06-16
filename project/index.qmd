@@ -1,6 +1,8 @@
 ---
 title: "Projects"
 author: ""
+comments: false
+citation: false
 description: |
   This porfolio includes openly available educational material I have created,<br> along with works, software, and tools I have contributed to or designed.
 listing: 

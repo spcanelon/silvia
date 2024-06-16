@@ -60,7 +60,7 @@ height: 70vh; /* Viewport-relative units */
 width: 100%;
 }
 </style>
-<iframe src="2024/map.html" scrolling="no">
+<iframe src="_2024/map.html" scrolling="no">
 </iframe>
 
 ## Table view
@@ -69,7 +69,7 @@ width: 100%;
 #| label: table
 #| echo: false
 
-year <- "2024"
+year <- paste0("_", "2024")
 
 source(here::here("project", "2024-06-16-ccd-sips", "R", "ccd_sips_functions.R"))
 
