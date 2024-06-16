@@ -1,0 +1,31 @@
+---
+title: "R for the Rest of Us Podcast: Episode #7"
+author: Silvia Canelón
+date: 2023-04-18
+slug: r-for-the-rest-of-us
+image: featured.jpg
+categories:
+  - R
+  - xaringan
+  - R Markdown
+  - podcast
+subtitle: >
+  An interview with David Keyes of R for the Rest of Us, about using the xaringan package to build captivating, audience-friendly presentations directly from R Markdown.
+description: ''
+links:
+- icon: mic-fill
+  name: Podcast episode
+  url: https://rfortherestofus.com/2023/04/podcast-episode-7
+- icon: youtube
+  name: Companion video
+  url: https://youtu.be/V1sUtJUrw10
+- icon: book
+  name: Companion book chapter
+  url: https://book.rfortherestofus.com/presentations.html
+---
+
+<iframe width="100%" height="180" frameborder="no" scrolling="no" seamless src="https://share.transistor.fm/e/fab44489"></iframe>
+
+From David Keyes of [R for the Rest of Us](https://rfortherestofus.com):
+
+> In this episode, I talk with Silvia Canelón, a postdoctoral research scientist in the Department of Biostatistics, Epidemiology, and Informatics at the University of Pennsylvania. Silvia shares why she loves using xaringan to create captivating, audience-friendly presentations directly from R markdown. Making presentations with R Markdown not only saves her time, but also eases the stress associated with updating and distributing presentations.
