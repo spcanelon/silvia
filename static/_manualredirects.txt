@@ -24,9 +24,9 @@ https://silvia.rbind.io/talk/2021-03-16-xaringan-deploy-demo/           https://
 
 https://silvia.rbind.io/talk/2021-05-04-data-viz-accessibility/         https://silviacanelon.com/talk/2021-data-viz-accessibility/ 301!
 
-https://silvia.rbind.io/blog/2024-06-05-ccd-sips/                       https://silviacanelon.com/project/2024-06-16-ccd-sips/ 301!
+https://silviacanelon.com/blog/2024-06-05-ccd-sips/                     https://silviacanelon.com/project/2024-06-16-ccd-sips/ 301!
 
-https://silvia.rbind.io/blog/2023-06-05-ccd-sips/                       https://silviacanelon.com/project/2024-06-16-ccd-sips/ 301!
+https://silviacanelon.com/blog/2023-06-05-ccd-sips/                     https://silviacanelon.com/project/2024-06-16-ccd-sips/ 301!
 
-https://silvia.rbind.io/blog/2019-08-04-ccd-sips/                       https://silviacanelon.com/project/2024-06-16-ccd-sips/ 301!
+https://silviacanelon.com/blog/2019-08-04-ccd-sips/                     https://silviacanelon.com/project/2024-06-16-ccd-sips/ 301!
 
