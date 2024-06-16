@@ -6,8 +6,8 @@
 #   description: ""
 - title: "2023"
   date: 2023-06-05
-  image: 2023/featured.png
-  path: 2023/map.html
+  image: _2023/featured.png
+  path: _2023/map.html
   description: >
     <details><summary>Web analytics</summary>
     1,760 unique visitors in the United States visited this post 2,330
@@ -15,11 +15,11 @@
     </details>
 - title: "2022"
   date: 2022-05-31
-  image: 2022/featured.png
-  path: 2022/map.html
+  image: _2022/featured.png
+  path: _2022/map.html
   description: ""
 - title: "2019"
-  date: 2019-08-04
-  image: 2019/featured.png
-  path: 2019/map.html
+  date: _2019-08-04
+  image: _2019/featured.png
+  path: _2019/map.html
   description: ""
