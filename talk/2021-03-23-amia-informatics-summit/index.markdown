@@ -18,7 +18,7 @@ tags:
   - sickle cell disease
   - AMIA
 # event: AMIA 2021 Informatics Summit
-# event_url: https://www.amia.org/summit2021
+# event_url: https://web.archive.org/web/20210417043850/https://www.amia.org/summit2021/oral-presentations
 # location: Virtual
 subtitle: "Applied Clinical Research Informatics: Solving Real World Problems. Oral Presentations S17: March 23, 2021 11:30am-1pm ET"
 description: AMIA 2021 Informatics Summit

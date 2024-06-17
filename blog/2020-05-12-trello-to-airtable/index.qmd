@@ -18,13 +18,10 @@ lastmod: '2020-05-12'
 links:
   - icon: file-code
     name: R script
-    url: "https://github.com/spcanelon/silvia/blob/main/content/blog/2020-05-12-trello-to-airtable/index.R"
-  - icon: file-code
-    name: R Markdown
-    url: "https://github.com/spcanelon/silvia/blob/main/content/blog/2020-05-12-trello-to-airtable/index.Rmarkdown"
+    url: /blog/2020-05-12-trello-to-airtable/index.R
   - icon: table
     name: JSON example file
-    url: program-mgmt.json
+    url: /blog/2020-05-12-trello-to-airtable/program-mgmt.json
 ---
 
 **[Airtable](https://airtable.com/) is a user-friendly and _powerful_ tool** that until recently I'd been using for personal projects (i.e. document organizing, apartment hunting, etc.). A couple of weeks ago I leaned on Airtable to create a base designed for the [Philadelphia Reproductive Freedom Collective](https://www.womensmedicalfund.org/prfc) to support our COVID-19 mutual aid efforts. 

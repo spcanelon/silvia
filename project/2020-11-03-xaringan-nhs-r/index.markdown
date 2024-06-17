@@ -10,8 +10,8 @@ categories:
   - R
   - xaringan
   - Education
-subtitle: "A four hour workshop introducing the [xaringan](https://github.com/yihui/xaringan#xaringan) package for presentations, created for the [NHS-R Community](https://nhsrcommunity.com/about/) [2020 Virtual Conference](https://nhsrcommunity.com/nhsr-conference-2020/)"
-excerpt: "A four hour workshop introducing the [xaringan](https://github.com/yihui/xaringan#xaringan) package for presentations, created for the [NHS-R Community](https://nhsrcommunity.com/about/) [2020 Virtual Conference](https://nhsrcommunity.com/nhsr-conference-2020/)"
+subtitle: "A four hour workshop introducing the [xaringan](https://github.com/yihui/xaringan#xaringan) package for presentations, created for the [NHS-R Community](https://nhsrcommunity.com/about/) [2020 Virtual Conference](https://nhsrcommunity.com/events/nhs-r-virtual-conference-2020/)"
+excerpt: "A four hour workshop introducing the [xaringan](https://github.com/yihui/xaringan#xaringan) package for presentations, created for the [NHS-R Community](https://nhsrcommunity.com/about/) [2020 Virtual Conference](https://nhsrcommunity.com/events/nhs-r-virtual-conference-2020/)"
 description: This four-hour hands-on workshop is a gentle introduction to the xaringan package as a tool to create impressive presentation slides that can be deployed to the web for easy sharing.
 links:
 - icon: book

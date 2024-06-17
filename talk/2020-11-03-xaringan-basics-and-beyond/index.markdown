@@ -8,7 +8,7 @@ categories:
   - xaringan
   - Workshop
   - xaringan
-subtitle: An introduction to xaringan for presentations, created for the [NHS-R Community](https://nhsrcommunity.com/about/) [2020 Virtual Conference](https://nhsrcommunity.com/nhsr-conference-2020/)
+subtitle: An introduction to xaringan for presentations, created for the [NHS-R Community](https://nhsrcommunity.com/about/) [2020 Virtual Conference](https://nhsrcommunity.com/events/nhs-r-virtual-conference-2020/)
 description: NHS-R Conference 2020
 slug: xaringan-basics-and-beyond
 image: featured.png

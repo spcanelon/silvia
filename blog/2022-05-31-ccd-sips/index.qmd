@@ -650,7 +650,7 @@ pagetitle: "Philly CCD Sips 2022 Map"
 
 ### Fixing the mobile-responsiveness
 
-The mobile-responsiveness issue could be solved by adding metadata to the map HTML, but I would need to be able to blend HTML with R code. I have been practicing using [Quarto](https://quarto.org/) and figured I could make a standalone map from a Quarto document (`.qmd`) rather than an R Markdown one (`.Rmd` or `.Rmarkdown`). You can find the map's Quarto document [alongside this blog post](https://github.com/spcanelon/silvia/blob/main/content/blog/2022-05-31-ccd-sips/map.qmd).
+The mobile-responsiveness issue could be solved by adding metadata to the map HTML, but I would need to be able to blend HTML with R code. I have been practicing using [Quarto](https://quarto.org/) and figured I could make a standalone map from a Quarto document (`.qmd`) rather than an R Markdown one (`.Rmd` or `.Rmarkdown`). You can find the map's Quarto document [alongside this blog post](https://github.com/spcanelon/silvia/blob/main/blog/2022-05-31-ccd-sips/_map.qmd).
 
 According to the [Leaflet library documentation](https://leafletjs.com/examples/mobile/) and [this Stack Overflow answer](https://stackoverflow.com/a/42796918), fixing the map to be mobile-responsive required adding the following metadata to the HTML code:
 

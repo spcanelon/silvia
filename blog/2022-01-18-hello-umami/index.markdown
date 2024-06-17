@@ -111,7 +111,7 @@ directory + steps in "Create database tables" at
 [#HugoApero](https://twitter.com/hashtag/HugoApero)
 [#blogdown](https://twitter.com/hashtag/blogdown)
 site I added it to layouts/partials/head.html. My example at
-<https://github.com/spcanelon/silvia/blob/main/layouts/partials/head.html#L21-L29>
+<https://github.com/spcanelon/silvia/blob/7d407b5967ae5d1bfe9df97e9a395fd02adeb985/layouts/partials/head.html#L21-L29>
 
 
 

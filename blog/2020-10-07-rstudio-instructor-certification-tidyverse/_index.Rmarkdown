@@ -148,7 +148,7 @@ I relied on the [instructor training materials](https://drive.google.com/drive/f
 
 You can find [all materials for my teaching demonstration](https://github.com/spcanelon/rit-teaching-exam) on GitHub. They include the slides below and [this R Markdown file](https://github.com/spcanelon/rit-teaching-exam/blob/master/lubridate_livecode.Rmd) that I used to incorporate live coding into the lesson.
 
-I found an excellent reference for a demonstration lesson in [Florencia D'Andrea](https://education.rstudio.com/trainers/people/dandrea+florencia/)'s post [Two examples of iteration with purrr - Class for the RStudio certification](https://florencia.netlify.app/2020/06/two-examples-of-iteration-with-purrr.en-us/).
+I found an excellent reference for a demonstration lesson in [Florencia D'Andrea](https://education.rstudio.com/trainers/people/dandrea+florencia/)'s post [Two examples of iteration with purrr - Class for the RStudio certification](https://florencia.netlify.app/blog/two-examples-of-iteration-with-purrr.en-us/).
 
 It comes highly recommended that someone take a look at each one of our lessons before it ships out because it seems it's common not to realize we've packed too much in! Yanina was kind enough to sit through my lesson as a learner and provided fantastic feedback. Some of the things I was able to work on before my teaching exam included providing context for the lesson at the beginning (asking the learner to download the file, introducing the lesson in the context of a workshop, etc.) and talking through all my key strokes during the live coding portions. Thanks again Yani!
 
@@ -192,7 +192,7 @@ If you're a member of the MiR Community and like the idea of studying with some 
 
 ## Experiences with the certification process
 
-- Yanina Bellini Saibene -- [Obtaining RStudio certification. A shared path](https://yabellini.netlify.app/post/rstudiocertification/)
+- Yanina Bellini Saibene -- [Obtaining RStudio certification. A shared path](https://yabellini.netlify.app/blog/2020_rstudiocertification_en/)
 - Shelmith Kariuki -- [The RStudio Certification Process](https://shelkariuki.netlify.app/post/certification/)
 - Ted Laderas -- [My Experience with RStudio Instructor Training](https://education.rstudio.com/blog/2019/11/my-experience-with-rstudio-instructor-training/#tidyverse-certification-exam)
 - Rayna Harris -- [A Review: RStudio Teaching Certification Course](https://www.raynamharris.com/blog/rstudioTTT/)

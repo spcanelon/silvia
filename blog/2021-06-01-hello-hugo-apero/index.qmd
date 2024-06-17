@@ -385,7 +385,7 @@ I wanted to reuse my content from the About section of my Academic site, so I di
 
 ### Homepage
 
-Resource: [Customize your homepage | Hugo Apéro](https://hugo-apero-docs.netlify.app/blog/homepage/)
+Resource: [Customize your homepage | Hugo Apéro](https://hugo-apero-docs.netlify.app/learn/homepage/)
 
 My homepage: [content/_index.md](https://github.com/spcanelon/silvia/blob/bef8a7c9fd7b529e7cb58c3c92dafe59aa8d2259/content/_index.md)
 
