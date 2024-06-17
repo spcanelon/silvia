@@ -44,7 +44,7 @@ links:
   url: https://codeforphilly.github.io/datahack2020/analyses/team11/
 ---
 
-[Referral process pipeline (PDF)](/project/2020-data-hack-opioid/pipeline.pdf)
+[Referral process pipeline (PDF)](/project/2020-03-25-data-hack-opioid/pipeline.pdf)
 
 ![Schematic representation of the Medication Assisted Treatment (MAT) referral process pipeline as part of the recovery for someone with Opioid Use Disorder (OUD)](pipeline.png){fig-alt="Medication Assistment Treatment pipeline starting with the person with Opioid Use Disorder. They then might interact with the Payer (e.g. health insurance), a harm reduction center like Prevention Point Philadelphia, and/or a clinical setting like an Assessment Center or other location offering Withdrawal Management care. From there the person with Opioid Use Disorder might enter a Treatment Setting. This schematic depicts many possibilities and a very complex referral process that is difficult to navigate."}
 

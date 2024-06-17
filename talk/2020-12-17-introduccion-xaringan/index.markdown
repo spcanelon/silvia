@@ -22,7 +22,7 @@ description: ""
 links:
 - icon: images
   name: diapositivas
-  url: https://slides.silviacanelon.com/introduccion-xaringan
+  url: https://slides.silviacanelon.com/2020-12-17-introduccion-xaringan
 - icon: github
   name: repositorio
   url: https://bit.ly/xaringan-xalapa
