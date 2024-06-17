@@ -977,7 +977,7 @@
     "href": "blog/2022-01-18-hello-umami/index.html#railway",
     "title": "Hello Umami: Deploying a Privacy-Friendly Open Source Tool for Web Analytics",
     "section": "Railway",
-    "text": "Railway\n07:50pm5. Link local setup to Railway project in the terminal w/ railway link &lt;projectid&gt;. Project ID is in the Railway dashboard under Setup\n\nCreate PostgreSQL tables using railway run in local umami directory + steps in “Create database tables” at https://umami.is/docs/running-on-railway\n\n07:50pm7. Deploy with railway up! 🚄\n\nFollow steps in Umami Getting Started docs https://umami.is/docs/login to login & add website\nAdd tracking code to website. In my #HugoApero #blogdown site I added it to layouts/partials/head.html. My example at https://github.com/spcanelon/silvia/blob/main/layouts/partials/head.html#L21-L29"
+    "text": "Railway\n07:50pm5. Link local setup to Railway project in the terminal w/ railway link &lt;projectid&gt;. Project ID is in the Railway dashboard under Setup\n\nCreate PostgreSQL tables using railway run in local umami directory + steps in “Create database tables” at https://umami.is/docs/running-on-railway\n\n07:50pm7. Deploy with railway up! 🚄\n\nFollow steps in Umami Getting Started docs https://umami.is/docs/login to login & add website\nAdd tracking code to website. In my #HugoApero #blogdown site I added it to layouts/partials/head.html. My example at https://github.com/spcanelon/silvia/blob/7d407b5967ae5d1bfe9df97e9a395fd02adeb985/layouts/partials/head.html#L21-L29"
   },
   {
     "objectID": "blog/2022-01-18-hello-umami/index.html#tracker-configuration",

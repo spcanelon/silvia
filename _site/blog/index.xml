@@ -3217,7 +3217,7 @@ font-style: inherit;">"Philly CCD Sips 2022 Map"</span></span></code></pre></div
 </section>
 <section id="fixing-the-mobile-responsiveness" class="level3">
 <h3 class="anchored" data-anchor-id="fixing-the-mobile-responsiveness">Fixing the mobile-responsiveness</h3>
-<p>The mobile-responsiveness issue could be solved by adding metadata to the map HTML, but I would need to be able to blend HTML with R code. I have been practicing using <a href="https://quarto.org/">Quarto</a> and figured I could make a standalone map from a Quarto document (<code>.qmd</code>) rather than an R Markdown one (<code>.Rmd</code> or <code>.Rmarkdown</code>). You can find the map’s Quarto document <a href="https://github.com/spcanelon/silvia/blob/main/content/blog/2022-05-31-ccd-sips/map.qmd">alongside this blog post</a>.</p>
+<p>The mobile-responsiveness issue could be solved by adding metadata to the map HTML, but I would need to be able to blend HTML with R code. I have been practicing using <a href="https://quarto.org/">Quarto</a> and figured I could make a standalone map from a Quarto document (<code>.qmd</code>) rather than an R Markdown one (<code>.Rmd</code> or <code>.Rmarkdown</code>). You can find the map’s Quarto document <a href="https://github.com/spcanelon/silvia/blob/main/blog/2022-05-31-ccd-sips/_map.qmd">alongside this blog post</a>.</p>
 <p>According to the <a href="https://leafletjs.com/examples/mobile/">Leaflet library documentation</a> and <a href="https://stackoverflow.com/a/42796918">this Stack Overflow answer</a>, fixing the map to be mobile-responsive required adding the following metadata to the HTML code:</p>
 <div class="sourceCode" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb18-1"><span class="dt" style="color: #AD0000;
 background-color: null;
@@ -3496,7 +3496,7 @@ Interactive Map.”</span> May 31, 2022. <a href="https://silviacanelon.com/blog
 <p><span class="tweet-timestamp"><a class="tweet-link" href="https://twitter.com/spcanelon/status/1480703750247440385" title="2022-01-11 00:50:58" target="_blank" rel="noopener noreferrer"><span class="tweet-timestamp__text">07:50pm<i class="pl2 fab fa-twitter fa-fw"></i></span></a></span>7. Deploy with <code>railway up</code>! 🚄</p>
 <ol start="8" type="1">
 <li><p>Follow steps in Umami Getting Started docs <a href="https://umami.is/docs/login" class="uri">https://umami.is/docs/login</a> to login &amp; add website</p></li>
-<li><p>Add tracking code to website. In my <a href="https://twitter.com/hashtag/HugoApero">#HugoApero</a> <a href="https://twitter.com/hashtag/blogdown">#blogdown</a> site I added it to layouts/partials/head.html. My example at <a href="https://github.com/spcanelon/silvia/blob/main/layouts/partials/head.html#L21-L29" class="uri">https://github.com/spcanelon/silvia/blob/main/layouts/partials/head.html#L21-L29</a></p></li>
+<li><p>Add tracking code to website. In my <a href="https://twitter.com/hashtag/HugoApero">#HugoApero</a> <a href="https://twitter.com/hashtag/blogdown">#blogdown</a> site I added it to layouts/partials/head.html. My example at <a href="https://github.com/spcanelon/silvia/blob/7d407b5967ae5d1bfe9df97e9a395fd02adeb985/layouts/partials/head.html#L21-L29" class="uri">https://github.com/spcanelon/silvia/blob/7d407b5967ae5d1bfe9df97e9a395fd02adeb985/layouts/partials/head.html#L21-L29</a></p></li>
 </ol>
 </section>
 <section id="tracker-configuration" class="level2">
@@ -3600,7 +3600,7 @@ Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https:/
 <p>Prefer simple, familiar visualizations over complex novelties.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/guidelines-oystein-moseng.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="Pie chart from Øystein’s post using color and (optional) patterns to encode information"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/guidelines-oystein-moseng.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The pie chart using color and pattern to differentiate between slices. This screenshot also demos an interactive chart element in action: hovering over one pie slice enlarges the slice, reveals more information about the selected slice, and dims the non-selected slices."></a></p>
+<figure class="figure"><p><a href="img/guidelines-oystein-moseng.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="Pie chart from Øystein’s post using color and (optional) patterns to encode information"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/guidelines-oystein-moseng.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The pie chart using color and pattern to differentiate between slices. This screenshot also demos an interactive chart element in action: hovering over one pie slice enlarges the slice, reveals more information about the selected slice, and dims the non-selected slices."></a></p>
 </figure>
 </div>
 <figcaption>Pie chart from Øystein’s post using color and (optional) patterns to encode information</figcaption></figure>
@@ -3613,7 +3613,7 @@ Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https:/
 <p>Guidelines by Amy Cesal on how to write alt text for data visualizations: <a href="https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81">Writing Alt Text for Data Visualization</a></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/alt-text-amy-cesal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="Example template from Amy’s post"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/alt-text-amy-cesal.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Example alt text format that reads: Chart type of type of data where reason for including chart. Also the recommendation to include a link to the data source somewhere in the text."></a></p>
+<figure class="figure"><p><a href="img/alt-text-amy-cesal.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="Example template from Amy’s post"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/alt-text-amy-cesal.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Example alt text format that reads: Chart type of type of data where reason for including chart. Also the recommendation to include a link to the data source somewhere in the text."></a></p>
 </figure>
 </div>
 <figcaption>Example template from Amy’s post</figcaption></figure>
@@ -3623,7 +3623,7 @@ Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https:/
 <p>Post by Lisa Charlotte Muth on how to pick colors for your data viz that everyone can appreciate: <a href="https://blog.datawrapper.de/beautifulcolors/">How to pick more beautiful colors for your data visualizations - Datawrapper Blog</a></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/datawrapper.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="Example from Charlotte’s post of two different approaches to improving a pie chart"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/datawrapper.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The first pie chart uses colors of similar lightness that end up appearing the same when checked under grayscale simulation. The first option for improvement picks different colors that all stand out from one another in grayscale. The second option keeps the original colors but delineates pie slices with a contrasting border."></a></p>
+<figure class="figure"><p><a href="img/datawrapper.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="Example from Charlotte’s post of two different approaches to improving a pie chart"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/datawrapper.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The first pie chart uses colors of similar lightness that end up appearing the same when checked under grayscale simulation. The first option for improvement picks different colors that all stand out from one another in grayscale. The second option keeps the original colors but delineates pie slices with a contrasting border."></a></p>
 </figure>
 </div>
 <figcaption>Example from Charlotte’s post of two different approaches to improving a pie chart</figcaption></figure>
@@ -3636,7 +3636,7 @@ Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https:/
 <p>Related is a talk from The Readability Group sharing findings from a survey study about font preferences including 2000+ participants. Among these were participants with dyslexia characteristics and participants with poor near vision: <a href="https://youtu.be/h8IOqUl1zII?t=1029">Don’t Believe the Type!</a></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/typeface-poor-near-vision.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="Bar graph showing the frequency by which 20 different fonts were selected by study participants with strong poor near vision in comparison with users with no poor near vision."><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/typeface-poor-near-vision.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The fonts selected most often in this group were San Francisco Pro, Red Hat Text, Calibri, and Segoe UI, in that order. San Francisco Pro was selected by 68% of participants The fonts selected least often were Open Dyslexic, Dyslexie, Comic Sans MS, and Sylexiad Sans. Open Dyslexic was selected by 12% of participants. Both Times New Roman and Helvetica are highlighted as showing the largest differences between users with poor near vision and those without. Times New Roman was the 6th least selected and Helvetica was in the middle learning towards the most selected fonts."></a></p>
+<figure class="figure"><p><a href="img/typeface-poor-near-vision.png" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="quarto-lightbox-gallery-4" title="Bar graph showing the frequency by which 20 different fonts were selected by study participants with strong poor near vision in comparison with users with no poor near vision."><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/typeface-poor-near-vision.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The fonts selected most often in this group were San Francisco Pro, Red Hat Text, Calibri, and Segoe UI, in that order. San Francisco Pro was selected by 68% of participants The fonts selected least often were Open Dyslexic, Dyslexie, Comic Sans MS, and Sylexiad Sans. Open Dyslexic was selected by 12% of participants. Both Times New Roman and Helvetica are highlighted as showing the largest differences between users with poor near vision and those without. Times New Roman was the 6th least selected and Helvetica was in the middle learning towards the most selected fonts."></a></p>
 </figure>
 </div>
 <figcaption>Bar graph showing the frequency by which 20 different fonts were selected by study participants with strong poor near vision in comparison with users with no poor near vision.</figcaption></figure>
@@ -3672,7 +3672,7 @@ Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https:/
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/tableau-chris-demartini.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-glightbox="description: .lightbox-desc-6" title="Title of Chris’s Tableau visualization being checked for color contrast."><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/tableau-chris-demartini.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The user is using a kind of selection tool to hover over an area of the visualization, in this case the title, and check font color contrast against its background. The tool pulls up details along the bottom of the page, including WCAG pass/fail test results, background and foreground color hex codes, and other color characteristics."></a></p>
+<figure class="figure"><p><a href="img/tableau-chris-demartini.png" class="lightbox" data-glightbox="description: .lightbox-desc-6" data-gallery="quarto-lightbox-gallery-6" title="Title of Chris’s Tableau visualization being checked for color contrast."><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/tableau-chris-demartini.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The user is using a kind of selection tool to hover over an area of the visualization, in this case the title, and check font color contrast against its background. The tool pulls up details along the bottom of the page, including WCAG pass/fail test results, background and foreground color hex codes, and other color characteristics."></a></p>
 </figure>
 </div>
 <figcaption>Title of Chris’s Tableau visualization being checked for color contrast.</figcaption></figure>
@@ -3684,7 +3684,7 @@ Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https:/
 <p><a href="https://twitter.com/DogGeneticsLLC">Liz Hare</a> and I gave a talk earlier this year on alt text in data viz shared as a part of TidyTuesday on Twitter. After web-scraping alt text from TidyTuesday tweets we found that only 3% of data viz tweets had alt text to accompany them (over the first 3 years of the TidyTuesday project). Links to the video recording, slides, and resources at https://github.com/spcanelon/csvConf2021. The talk includes guidelines on what makes effective alt text for data viz (complementary to those Amy Cesal includes in her post).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/alt-text-silvia-liz.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" data-glightbox="description: .lightbox-desc-7" title="Slide from our presentation summarizing the most useful alt-text features found among 196 data viz tweets"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/alt-text-silvia-liz.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Effective alt includes a description that conveys meaning in the data, variables on the axes, scale described within the description, description of the type of plot. Direct link to slide: https://spcanelon.github.io/csvConf2021/slides/indexLH.html#11"></a></p>
+<figure class="figure"><p><a href="img/alt-text-silvia-liz.png" class="lightbox" data-glightbox="description: .lightbox-desc-7" data-gallery="quarto-lightbox-gallery-7" title="Slide from our presentation summarizing the most useful alt-text features found among 196 data viz tweets"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/alt-text-silvia-liz.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Effective alt includes a description that conveys meaning in the data, variables on the axes, scale described within the description, description of the type of plot. Direct link to slide: https://spcanelon.github.io/csvConf2021/slides/indexLH.html#11"></a></p>
 </figure>
 </div>
 <figcaption>Slide from our presentation summarizing the most useful alt-text features found among 196 data viz tweets</figcaption></figure>
@@ -3786,7 +3786,7 @@ font-style: inherit;">)</span> </span></code></pre></div>
 <div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="index_files/figure-html/unnamed-chunk-2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" data-glightbox="description: .lightbox-desc-8" title="Bigger flippers, bigger bills"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" alt="Scatterplot of flipper length by bill length of 3 penguin species, where we show penguins with bigger flippers have bigger bills." width="672"></a></p>
+<figure class="figure"><p><a href="index_files/figure-html/unnamed-chunk-2-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-8" data-gallery="quarto-lightbox-gallery-8" title="Bigger flippers, bigger bills"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" alt="Scatterplot of flipper length by bill length of 3 penguin species, where we show penguins with bigger flippers have bigger bills." width="672"></a></p>
 <figcaption>Bigger flippers, bigger bills</figcaption></figure>
 </div>
 </div>
@@ -3930,7 +3930,7 @@ background-color: null;
 font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="index_files/figure-html/unnamed-chunk-3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" data-glightbox="description: .lightbox-desc-9" title="Different patterns mapped onto penguin species along with different colors"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" alt="Bar chart showing 3 penguin species along the x axis and the number of observations on the y axis. The bar for the Adelie species uses the color orange and diagonal stripes, the bar for Chinstrap species uses the color purple and crosshatches, and the bar for the Gentoo species uses the color cyan and a dotted pattern." width="672"></a></p>
+<figure class="figure"><p><a href="index_files/figure-html/unnamed-chunk-3-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-9" data-gallery="quarto-lightbox-gallery-9" title="Different patterns mapped onto penguin species along with different colors"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" alt="Bar chart showing 3 penguin species along the x axis and the number of observations on the y axis. The bar for the Adelie species uses the color orange and diagonal stripes, the bar for Chinstrap species uses the color purple and crosshatches, and the bar for the Gentoo species uses the color cyan and a dotted pattern." width="672"></a></p>
 <figcaption>Different patterns mapped onto penguin species along with different colors</figcaption></figure>
 </div>
 </div>
@@ -3940,7 +3940,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <p>The <a href="https://jkunst.com/highcharter/index.html">Highcharter R package</a> developed by Joshua Kunst adds interactivity to data viz using Highcharts JavaScript components designed with <a href="https://www.highcharts.com/accessibility/#exploreFeatures">web accessibility in mind</a>. The package has a learning curve, but lucky for us Mara Averick wrote an excellent <a href="https://dataand.me/index.html#category:highcharter">series of blog posts on using the Highcharts accessibility module with {highcharter}</a>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/highcharter-mara-averick.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" data-glightbox="description: .lightbox-desc-10" title="Interactive scatterplot from Mara’s post using color and shape to encode information about penguin species"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/highcharter-mara-averick.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Scatterplot of the palmerpenguins dataset showing data points clustered by species and the highcharter package making it possible to focus on one cluster and identify the x and y values of a specific data point. In this case the data point is a Chinstrap penguin observation mapping to a flipper length of 201mm and bill length of 54.2mm. Explore this data viz with a screen reader in Mara's blog post: https://dataand.me/posts/2021-11-15-accessible-highcharter-part-4/#an-accessible-penguin-plot"></a></p>
+<figure class="figure"><p><a href="img/highcharter-mara-averick.png" class="lightbox" data-glightbox="description: .lightbox-desc-10" data-gallery="quarto-lightbox-gallery-10" title="Interactive scatterplot from Mara’s post using color and shape to encode information about penguin species"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/highcharter-mara-averick.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Scatterplot of the palmerpenguins dataset showing data points clustered by species and the highcharter package making it possible to focus on one cluster and identify the x and y values of a specific data point. In this case the data point is a Chinstrap penguin observation mapping to a flipper length of 201mm and bill length of 54.2mm. Explore this data viz with a screen reader in Mara's blog post: https://dataand.me/posts/2021-11-15-accessible-highcharter-part-4/#an-accessible-penguin-plot"></a></p>
 </figure>
 </div>
 <figcaption>Interactive scatterplot from Mara’s post using color and shape to encode information about penguin species</figcaption></figure>
@@ -3984,7 +3984,7 @@ Accessibility.”</span> September 23, 2021. <a href="https://silviacanelon.com/
 </blockquote>
 <p>This finding is one of many from an accessibility analysis that non-profit WebAIM (Web Accessibility in Mind) conducts annually on home pages of the top one million websites. You can find a summary of these findings in a WebAIM <a href="https://webaim.org/blog/webaim-million-2021/">blog post</a> and detailed information in the <a href="https://webaim.org/projects/million/#wcag">full report</a>, both published on April 30, 2021.</p>
 <p>Learning about all of the ways that digital content is made inaccessible to people with disabilities has made me take inventory of the different ways that I have contributed to this problem (there was some shame to process here 🙈).</p>
-<p>The magic of <a href="https://bookdown.org/yihui/rmarkdown/">R Markdown</a> has given me the gift of turning R code into a variety of HTML outputs including R notebooks, <a href="../../project/xaringan-nhs-r/">xaringan presentation slides</a>, and websites like this one – all of which I’ve been able to share freely online with others. This magic though (like all magic?) comes with limitations. R tools (and technology more broadly) can’t automatically ensure that its various outputs are accessible to everyone. That’s where we come in as software developers and content creators and take personal responsibility. At the risk of extending this metaphor too far, I’ll finish by offering the framework that we all need to practice (accessibility) spells/skills in order to use these magical tools responsibly.</p>
+<p>The magic of <a href="https://bookdown.org/yihui/rmarkdown/">R Markdown</a> has given me the gift of turning R code into a variety of HTML outputs including R notebooks, <a href="../../project/#category=xaringan">xaringan presentation slides</a>, and websites like this one – all of which I’ve been able to share freely online with others. This magic though (like all magic?) comes with limitations. R tools (and technology more broadly) can’t automatically ensure that its various outputs are accessible to everyone. That’s where we come in as software developers and content creators and take personal responsibility. At the risk of extending this metaphor too far, I’ll finish by offering the framework that we all need to practice (accessibility) spells/skills in order to use these magical tools responsibly.</p>
 <p>All of this to say that gaining awareness about accessibility as a way to create the more inclusive world that I want to live in has motivated me to do better. I even found myself excited to conduct accessibility audits on my digital content, including my personal website (<a href="https://chartability.fizz.studio/">data viz</a> too)!</p>
 <section id="my-audit-results" class="level3">
 <h3 class="anchored" data-anchor-id="my-audit-results">My audit results</h3>
@@ -3998,7 +3998,7 @@ Accessibility.”</span> September 23, 2021. <a href="https://silviacanelon.com/
 </summary>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-ex-alt-text.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="Reference pane of the tool elaborates on what the alert means, why it matters, how to fix it, a note on the tool’s algorithm, and a link to the WCAG standards and guidelines. Code section is expanded along the bottom and highlights exactly what part of the HTML code the alert is refering to."><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-ex-alt-text.png" class="img-fluid figure-img" alt="Reference pane of the tool elaborates on what the alert means, why it matters, how to fix it, a note on the tool's algorithm, and a link to the WCAG standards and guidelines. Code section is expanded along the bottom and highlights exactly what part of the HTML code the alert is refering to."></a></p>
+<p><a href="img/wave-ex-alt-text.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="Reference pane of the tool elaborates on what the alert means, why it matters, how to fix it, a note on the tool’s algorithm, and a link to the WCAG standards and guidelines. Code section is expanded along the bottom and highlights exactly what part of the HTML code the alert is refering to."><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-ex-alt-text.png" class="img-fluid figure-img" alt="Reference pane of the tool elaborates on what the alert means, why it matters, how to fix it, a note on the tool's algorithm, and a link to the WCAG standards and guidelines. Code section is expanded along the bottom and highlights exactly what part of the HTML code the alert is refering to."></a></p>
 <figcaption>Reference pane of the tool elaborates on what the alert means, why it matters, how to fix it, a note on the tool’s algorithm, and a link to the WCAG standards and guidelines. Code section is expanded along the bottom and highlights exactly what part of the HTML code the alert is refering to.</figcaption>
 </figure>
 </div>
@@ -4011,7 +4011,7 @@ Accessibility.”</span> September 23, 2021. <a href="https://silviacanelon.com/
 <section id="next-steps" class="level3">
 <h3 class="anchored" data-anchor-id="next-steps">Next steps</h3>
 <p>I’m <em>definitely</em> not an accessibility expert by any stretch of the imagination. But the great thing is, I don’t have to be an expert in order to correct some of these failures! :muscle:</p>
-<p>I’m going to need some more Hugo knowledge to correct some of the other ones but I <em>think</em> I’ve become familiar enough with the Hugo Apéro theme building this site that I <em>might</em> be able to poke around and make some changes. In either case, I’ll be documenting my changes in this <a href="../../blog/2021-a11y-website/">a11y series of blog posts</a>, so stay tuned and follow along with me!</p>
+<p>I’m going to need some more Hugo knowledge to correct some of the other ones but I <em>think</em> I’ve become familiar enough with the Hugo Apéro theme building this site that I <em>might</em> be able to poke around and make some changes. In either case, I’ll be documenting my changes in this <a href="https://silviacanelon.com/blog/#category=a11y">a11y series of blog posts</a>, so stay tuned and follow along with me!</p>
 <blockquote class="blockquote">
 <p>Update (June 7, 2021): I’ve opened <a href="https://github.com/spcanelon/silvia/issues/28">issue #28</a> and have the first changes in branch <code>wave-audit-1</code> <a href="https://deploy-preview-29--silvia.netlify.app/">available to preview</a> before merging.</p>
 </blockquote>
@@ -4039,7 +4039,7 @@ Accessibility.”</span> September 23, 2021. <a href="https://silviacanelon.com/
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-home.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="Figure 1: Audit for my home page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-home.png" class="img-fluid figure-img" alt="There is an error symbol next to the decorative image on the home page. There are also alert symbols for links in the navigation bar and footer."></a></p>
+<p><a href="img/wave-home.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="Figure 1: Audit for my home page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-home.png" class="img-fluid figure-img" alt="There is an error symbol next to the decorative image on the home page. There are also alert symbols for links in the navigation bar and footer."></a></p>
 <figcaption>Figure 1: Audit for my home page</figcaption>
 </figure>
 </div>
@@ -4065,13 +4065,13 @@ Accessibility.”</span> September 23, 2021. <a href="https://silviacanelon.com/
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-about-header.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="Figure 2: Audit for my About page header"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-about-header.png" class="img-fluid figure-img" alt="About page showing an alert in my blurb"></a></p>
+<p><a href="img/wave-about-header.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="Figure 2: Audit for my About page header"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-about-header.png" class="img-fluid figure-img" alt="About page showing an alert in my blurb"></a></p>
 <figcaption>Figure 2: Audit for my About page header</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-about-main-top.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="Figure 3: Audit for the main section of my About page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-about-main-top.png" class="img-fluid figure-img" alt="An alert is shown next to some heading items, and a link. An error is shown next to a thumbnail image for the featured blog post"></a></p>
+<p><a href="img/wave-about-main-top.png" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="quarto-lightbox-gallery-4" title="Figure 3: Audit for the main section of my About page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-about-main-top.png" class="img-fluid figure-img" alt="An alert is shown next to some heading items, and a link. An error is shown next to a thumbnail image for the featured blog post"></a></p>
 <figcaption>Figure 3: Audit for the main section of my About page</figcaption>
 </figure>
 </div>
@@ -4081,7 +4081,7 @@ Full page screenshot
 </summary>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-about.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5" title="Figure 4: Audit for my About page in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-about.png" class="img-fluid figure-img" alt="Alerts are shown for links in the navigation bar and footer, for some heading items, and for a few links throughout the page"></a></p>
+<p><a href="img/wave-about.png" class="lightbox" data-glightbox="description: .lightbox-desc-5" data-gallery="quarto-lightbox-gallery-5" title="Figure 4: Audit for my About page in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-about.png" class="img-fluid figure-img" alt="Alerts are shown for links in the navigation bar and footer, for some heading items, and for a few links throughout the page"></a></p>
 <figcaption>Figure 4: Audit for my About page in full page view</figcaption>
 </figure>
 </div>
@@ -4105,7 +4105,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-blog.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-glightbox="description: .lightbox-desc-6" title="Figure 5: Audit for my Blog listing page in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-blog.png" class="img-fluid figure-img" alt="Alerts are shown for the navigation bar and footer, and for blog post links. Errors shown for the decorative image for the page and for the blog post thumbnails."></a></p>
+<p><a href="img/wave-blog.png" class="lightbox" data-glightbox="description: .lightbox-desc-6" data-gallery="quarto-lightbox-gallery-6" title="Figure 5: Audit for my Blog listing page in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-blog.png" class="img-fluid figure-img" alt="Alerts are shown for the navigation bar and footer, and for blog post links. Errors shown for the decorative image for the page and for the blog post thumbnails."></a></p>
 <figcaption>Figure 5: Audit for my Blog listing page in full page view</figcaption>
 </figure>
 </div>
@@ -4133,7 +4133,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-blog-hha-top.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" data-glightbox="description: .lightbox-desc-7" title="Alerts shown for links in the navigation bar and for a heading item. Errors shown for the blog decorative image and for a link symbol next to a header."><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-blog-hha-top.png" class="img-fluid figure-img" alt="Figure 6: Audit for my Hello Hugo Apéro blog post"></a></p>
+<p><a href="img/wave-blog-hha-top.png" class="lightbox" data-glightbox="description: .lightbox-desc-7" data-gallery="quarto-lightbox-gallery-7" title="Alerts shown for links in the navigation bar and for a heading item. Errors shown for the blog decorative image and for a link symbol next to a header."><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-blog-hha-top.png" class="img-fluid figure-img" alt="Figure 6: Audit for my Hello Hugo Apéro blog post"></a></p>
 <figcaption>Alerts shown for links in the navigation bar and for a heading item. Errors shown for the blog decorative image and for a link symbol next to a header.</figcaption>
 </figure>
 </div>
@@ -4159,7 +4159,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-talks-top.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" data-glightbox="description: .lightbox-desc-8" title="Figure 7: Audit for my Talk listing page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-talks-top.png" class="img-fluid figure-img" alt="Alerts displayed for a heading item and the primary link to a talk. An error is displayed for the talk thumbnail."></a></p>
+<p><a href="img/wave-talks-top.png" class="lightbox" data-glightbox="description: .lightbox-desc-8" data-gallery="quarto-lightbox-gallery-8" title="Figure 7: Audit for my Talk listing page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-talks-top.png" class="img-fluid figure-img" alt="Alerts displayed for a heading item and the primary link to a talk. An error is displayed for the talk thumbnail."></a></p>
 <figcaption>Figure 7: Audit for my Talk listing page</figcaption>
 </figure>
 </div>
@@ -4169,7 +4169,7 @@ Full page screenshot
 </summary>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-talks.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" data-glightbox="description: .lightbox-desc-9" title="Figure 8: Audit for my About page header in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-talks.png" class="img-fluid figure-img" alt="Alerts displayed in the navigation bar and footer, some heading items, all primary talk links, and a YouTube button link. Errors displayed for all talk thumbnail images."></a></p>
+<p><a href="img/wave-talks.png" class="lightbox" data-glightbox="description: .lightbox-desc-9" data-gallery="quarto-lightbox-gallery-9" title="Figure 8: Audit for my About page header in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-talks.png" class="img-fluid figure-img" alt="Alerts displayed in the navigation bar and footer, some heading items, all primary talk links, and a YouTube button link. Errors displayed for all talk thumbnail images."></a></p>
 <figcaption>Figure 8: Audit for my About page header in full page view</figcaption>
 </figure>
 </div>
@@ -4191,7 +4191,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-talks-csvconf.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" data-glightbox="description: .lightbox-desc-10" title="Figure 9: Audit for my CSV Conf talk post in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-talks-csvconf.png" class="img-fluid figure-img" alt="Alerts displayed for the navigation bar and footer, as well as the talk summary. No errors are displayed."></a></p>
+<p><a href="img/wave-talks-csvconf.png" class="lightbox" data-glightbox="description: .lightbox-desc-10" data-gallery="quarto-lightbox-gallery-10" title="Figure 9: Audit for my CSV Conf talk post in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-talks-csvconf.png" class="img-fluid figure-img" alt="Alerts displayed for the navigation bar and footer, as well as the talk summary. No errors are displayed."></a></p>
 <figcaption>Figure 9: Audit for my CSV Conf talk post in full page view</figcaption>
 </figure>
 </div>
@@ -4210,7 +4210,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-pubs-top.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" data-glightbox="description: .lightbox-desc-11" title="Figure 10: Audit for my Publication listing page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-pubs-top.png" class="img-fluid figure-img" alt="No errors or alerts displayed for this view"></a></p>
+<p><a href="img/wave-pubs-top.png" class="lightbox" data-glightbox="description: .lightbox-desc-11" data-gallery="quarto-lightbox-gallery-11" title="Figure 10: Audit for my Publication listing page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-pubs-top.png" class="img-fluid figure-img" alt="No errors or alerts displayed for this view"></a></p>
 <figcaption>Figure 10: Audit for my Publication listing page</figcaption>
 </figure>
 </div>
@@ -4220,7 +4220,7 @@ Full page screenshot
 </summary>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-pubs.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" data-glightbox="description: .lightbox-desc-12" title="Alerts displayed for the navigation bar and footer"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-pubs.png" class="img-fluid figure-img" alt="Figure 11: Audit for my Publication listing page in full page view"></a></p>
+<p><a href="img/wave-pubs.png" class="lightbox" data-glightbox="description: .lightbox-desc-12" data-gallery="quarto-lightbox-gallery-12" title="Alerts displayed for the navigation bar and footer"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-pubs.png" class="img-fluid figure-img" alt="Figure 11: Audit for my Publication listing page in full page view"></a></p>
 <figcaption>Alerts displayed for the navigation bar and footer</figcaption>
 </figure>
 </div>
@@ -4242,7 +4242,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-pubs-geo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" data-glightbox="description: .lightbox-desc-13" title="Figure 12: Audit for my geospatial analysis publication in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-pubs-geo.png" class="img-fluid figure-img" alt="Alerts displayed for the header bar and footer and for the publication summary"></a></p>
+<p><a href="img/wave-pubs-geo.png" class="lightbox" data-glightbox="description: .lightbox-desc-13" data-gallery="quarto-lightbox-gallery-13" title="Figure 12: Audit for my geospatial analysis publication in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-pubs-geo.png" class="img-fluid figure-img" alt="Alerts displayed for the header bar and footer and for the publication summary"></a></p>
 <figcaption>Figure 12: Audit for my geospatial analysis publication in full page view</figcaption>
 </figure>
 </div>
@@ -4264,7 +4264,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-projects-top.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" data-glightbox="description: .lightbox-desc-14" title="Figure 13: Audit for my Project listing page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-projects-top.png" class="img-fluid figure-img" alt="Errors displayed next to each project thumbnail image"></a></p>
+<p><a href="img/wave-projects-top.png" class="lightbox" data-glightbox="description: .lightbox-desc-14" data-gallery="quarto-lightbox-gallery-14" title="Figure 13: Audit for my Project listing page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-projects-top.png" class="img-fluid figure-img" alt="Errors displayed next to each project thumbnail image"></a></p>
 <figcaption>Figure 13: Audit for my Project listing page</figcaption>
 </figure>
 </div>
@@ -4286,7 +4286,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-projects-ttat-top.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" data-glightbox="description: .lightbox-desc-15" title="Figure 14: Audit for my TidyTuesdayAltText project post"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-projects-ttat-top.png" class="img-fluid figure-img" alt="Alert displayed in the project summary and next to an image alt-text. Error dislayed next to a link symbol accompanying a heading."></a></p>
+<p><a href="img/wave-projects-ttat-top.png" class="lightbox" data-glightbox="description: .lightbox-desc-15" data-gallery="quarto-lightbox-gallery-15" title="Figure 14: Audit for my TidyTuesdayAltText project post"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-projects-ttat-top.png" class="img-fluid figure-img" alt="Alert displayed in the project summary and next to an image alt-text. Error dislayed next to a link symbol accompanying a heading."></a></p>
 <figcaption>Figure 14: Audit for my TidyTuesdayAltText project post</figcaption>
 </figure>
 </div>
@@ -4296,7 +4296,7 @@ Full page screenshot
 </summary>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-projects-ttat.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" data-glightbox="description: .lightbox-desc-16" title="Figure 15: Audit for my TidyTuesdayAltText project post in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-projects-ttat.png" class="img-fluid figure-img" alt="Alerts shown in the navigation bar and footer, project summary, and image alt-text. Errors shown next to link symbols accompanying headings."></a></p>
+<p><a href="img/wave-projects-ttat.png" class="lightbox" data-glightbox="description: .lightbox-desc-16" data-gallery="quarto-lightbox-gallery-16" title="Figure 15: Audit for my TidyTuesdayAltText project post in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-projects-ttat.png" class="img-fluid figure-img" alt="Alerts shown in the navigation bar and footer, project summary, and image alt-text. Errors shown next to link symbols accompanying headings."></a></p>
 <figcaption>Figure 15: Audit for my TidyTuesdayAltText project post in full page view</figcaption>
 </figure>
 </div>
@@ -5719,7 +5719,7 @@ Pages.”</span> March 16, 2021. <a href="https://silviacanelon.com/blog/2021-03
 <h2 class="anchored" data-anchor-id="teaching-exam">Teaching exam</h2>
 <p>I relied on the <a href="https://drive.google.com/drive/folders/13ohFt3D0EJ5PDbMaWTxnHH-hwA7G0IvY">instructor training materials</a> and my in-class notes to prepare my demonstration lesson and study for the written component of the teaching exam. For anything that didn’t fully sink in, I consulted <a href="https://teachtogether.tech/">Teaching Tech Together</a>.</p>
 <p>You can find <a href="https://github.com/spcanelon/rit-teaching-exam">all materials for my teaching demonstration</a> on GitHub. They include the slides below and <a href="https://github.com/spcanelon/rit-teaching-exam/blob/master/lubridate_livecode.Rmd">this R Markdown file</a> that I used to incorporate live coding into the lesson.</p>
-<p>I found an excellent reference for a demonstration lesson in <a href="https://education.rstudio.com/trainers/people/dandrea+florencia/">Florencia D’Andrea</a>’s post <a href="https://florencia.netlify.app/2020/06/two-examples-of-iteration-with-purrr.en-us/">Two examples of iteration with purrr - Class for the RStudio certification</a>.</p>
+<p>I found an excellent reference for a demonstration lesson in <a href="https://education.rstudio.com/trainers/people/dandrea+florencia/">Florencia D’Andrea</a>’s post <a href="https://florencia.netlify.app/blog/two-examples-of-iteration-with-purrr.en-us/">Two examples of iteration with purrr - Class for the RStudio certification</a>.</p>
 <p>It comes highly recommended that someone take a look at each one of our lessons before it ships out because it seems it’s common not to realize we’ve packed too much in! Yanina was kind enough to sit through my lesson as a learner and provided fantastic feedback. Some of the things I was able to work on before my teaching exam included providing context for the lesson at the beginning (asking the learner to download the file, introducing the lesson in the context of a workshop, etc.) and talking through all my key strokes during the live coding portions. Thanks again Yani!</p>
 <div class="shareagain" style="min-width:300px;margin:1em auto;text-align:center;" data-external="1">
 <iframe src="https://spcanelon.github.io/rit-teaching-exam" width="600" height="337.5" style="border:2px solid currentColor;" loading="lazy" allowfullscreen="">
@@ -5759,7 +5759,7 @@ Pages.”</span> March 16, 2021. <a href="https://silviacanelon.com/blog/2021-03
 <section id="experiences-with-the-certification-process" class="level2">
 <h2 class="anchored" data-anchor-id="experiences-with-the-certification-process">Experiences with the certification process</h2>
 <ul>
-<li>Yanina Bellini Saibene – <a href="https://yabellini.netlify.app/post/rstudiocertification/">Obtaining RStudio certification. A shared path</a></li>
+<li>Yanina Bellini Saibene – <a href="https://yabellini.netlify.app/blog/2020_rstudiocertification_en/">Obtaining RStudio certification. A shared path</a></li>
 <li>Shelmith Kariuki – <a href="https://shelkariuki.netlify.app/post/certification/">The RStudio Certification Process</a></li>
 <li>Ted Laderas – <a href="https://education.rstudio.com/blog/2019/11/my-experience-with-rstudio-instructor-training/#tidyverse-certification-exam">My Experience with RStudio Instructor Training</a></li>
 <li>Rayna Harris – <a href="https://www.raynamharris.com/blog/rstudioTTT/">A Review: RStudio Teaching Certification Course</a></li>
