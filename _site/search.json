@@ -1117,7 +1117,7 @@
     "href": "project/2024-06-16-ccd-sips/index.html",
     "title": "Philly Center City District SIPS: An Interactive Map",
     "section": "",
-    "text": "Philly’s Center City District posted a list of restaurants and bars participating in Philly’s 2024 CCD SIPS. CCD SIPS is a series of summer Wednesday evenings (5-7pm) filled with happy hour specials, between June 5th and August 28th.\nI scraped some information from the website in order to present the information as a map. You can click or tap on the circle map markers to see information about each restaurant/bar along with a direct link to their posted happy hour specials."
+    "text": "Philly’s Center City District posted a list of restaurants and bars participating in Philly’s 2024 CCD SIPS. CCD SIPS is a series of summer Wednesday evenings (5-7pm) filled with happy hour specials, between June 5th and August 28th.\nI scraped some information from the website in order to present the information as a map. You can click or tap on the circle map markers to see information about each restaurant/bar along with a direct link to their posted happy hour specials.\nCheck out the link at the top of this post for a larger version of the interactive map below, search the table below, or take a look at CCD SIPS maps from past years."
   },
   {
     "objectID": "project/2024-06-16-ccd-sips/index.html#map-view",
