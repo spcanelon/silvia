@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.4.554">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<meta name="author" content="Silvia Canelón">
-<meta name="dcterms.date" content="2022-11-10">
-<meta name="description" content="CANSSI Ontario Statistical Software Conference talk on interactive map-making with large vector data">
-<title>Thinking Big with Maps in R | Silvia Canelón</title>
+
+<meta name="dcterms.date" content="2024-06-20">
+
+<title>Philly downtown restaurants over time | Silvia Canelón</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +22,7 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 </style>
+
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
@@ -46,9 +48,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-contrib/bootstrap-icons-1.9.1/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+<script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -74,24 +74,30 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><!-- umami cloud --><script async="" src="https://analytics.umami.is/script.js" data-website-id="6ba73b87-31aa-44ac-8d5e-e0dad5760753" data-do-not-track="true">
-</script><script src="../../site_libs/fitvids-2.1.1/fitvids.min.js"></script>
-<meta name="twitter:title" content="Thinking Big with Maps in R | Silvia Canelón">
-<meta name="twitter:description" content="CANSSI Ontario Statistical Software Conference talk on interactive map-making with large vector data">
-<meta name="twitter:image" content="https://silviacanelon.com/talk/2022-11-10-thinking-big/featured.png">
+}</script>
+<!-- umami cloud -->
+<script async="" src="https://analytics.umami.is/script.js" data-website-id="6ba73b87-31aa-44ac-8d5e-e0dad5760753" data-do-not-track="true">
+</script>
+
+
+<meta name="twitter:title" content="Philly downtown restaurants over time | Silvia Canelón">
+<meta name="twitter:description" content="Data-driven exploration of Center City District restaurants over time">
+<meta name="twitter:image" content="https://silviacanelon.com/blog/2024-06-20-ccd-sips-years/featured.jpg">
 <meta name="twitter:creator" content="@spcanelon">
 <meta name="twitter:site" content="@spcanelon">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image-height" content="471">
-<meta name="twitter:image-width" content="900">
 </head>
-<body class="nav-fixed fullcontent">
+
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../assets/silvia/img/logo_rounded.svg" alt="" class="navbar-logo"></a>
+    <img src="../../assets/silvia/img/logo_rounded.svg" alt="" class="navbar-logo">
+    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Silvia Canelón</span>
     </a>
@@ -102,7 +108,7 @@ ul.task-list li input[type="checkbox"] {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-<li class="nav-item">
+  <li class="nav-item">
     <a class="nav-link" href="../../about/index.html"> 
 <span class="menu-text">About</span></a>
   </li>  
@@ -123,41 +129,41 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Projects</span></a>
   </li>  
 </ul>
-</div> <!-- /navcollapse -->
+          </div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools">
     <a href="https://www.github.com/spcanelon/silvia" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
-    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns"><div id="title-block-header-title" class="quarto-title page-columns page-full page-layout-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);">
-<h1 class="title">Thinking Big with Maps in R</h1>
-<p class="subtitle lead">Tips on Wrangling Large Vector Data into Interactive Maps</p>
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns">
+<div id="title-block-header-title" class="quarto-title page-columns page-full page-layout-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);">
+<h1 class="title">Philly downtown restaurants over time</h1>
+<p class="subtitle lead"></p><p>Data-driven exploration of Center City District restaurants over time</p><p></p>
     <div class="quarto-categories">
         <div class="quarto-category">R</div>
-        <div class="quarto-category">geospatial</div>
+        <div class="quarto-category">Philly</div>
       </div>
   </div>
 
-<div>
-  <div id="title-block-title-desc" class="description pt-4">
-    <a href="https://canssiontario.utoronto.ca/event/statistical-software-conference/">CANSSI Ontario Statistical Software Conference</a> talk on interactive map-making with large vector data
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">Authors</div>
     <div class="quarto-title-meta-contents">
              <p>Silvia Canelón </p>
+             <p>Mallori Lofton-Malachi </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 10, 2022</p>
+      <p class="date">June 20, 2024</p>
     </div>
   </div>
   
@@ -167,39 +173,59 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
-<a href="https://slides.silviacanelon.com/2022-thinking-big" class="btn btn-secondary text-capitalize"><i class="bi bi-images me-1"></i> slides</a>
-<a href="https://youtu.be/wiAnmkbgcO8" class="btn btn-secondary text-capitalize"><i class="bi bi-play-btn-fill me-1"></i> video</a>
+<a href="https://quarto.org/docs/websites/" class="btn btn-secondary text-capitalize"><i class="bi bi-journal-text me-1"></i> Quarto Docs</a>
 </div>
 
 </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#resources" id="toc-resources" class="nav-link active" data-scroll-target="#resources">Resources</a></li>
+  
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content"><!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html --><!-- 
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+<!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
+<!-- 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title"> 
---><!-- <header id="title-block-header" class="quarto-title-block default page-columns"> --><!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> --><p>The road to map-making can take some unexpected twists and turns when you scale up an interactive map from hundreds of features to hundreds of thousands. This talk is a story about creative spatial data wrangling, powerful R packages, and a heroic #RStats community.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div class="shareagain" style="min-width:300px;margin:1em auto;" data-exeternal="1">
-<iframe src="https://slides.silviacanelon.com/2022-thinking-big" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen=""></iframe>
-<script>fitvids('.shareagain', {players: 'iframe'});</script>
-</div>
-</div>
-</div>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="canssi.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="canssi.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="CANSSI Ontario logo featuring a radial bar chart"></a></p>
-</figure>
-</div>
-</div>
-</div>
+-->
+<!-- <header id="title-block-header" class="quarto-title-block default page-columns"> -->
+<!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> -->
 
 
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<ul>
+<li><a href="https://web.archive.org/web/*/http://centercityphila.org/*">Wayback Machine</a></li>
+<li>CCD SIPS 2006: <a href="https://web.archive.org/web/20060305150821/http://www.centercityphila.org:80/docs/centercitysips.pdf">Wayback Machine</a></li>
+<li>CCD SIPS May 13, 2008: <a href="https://web.archive.org/web/20080513125935/http://centercityphila.org:80/life/Sips.php">Center City District / Central Philadelphia Development Corporation Of Philadelphia</a></li>
+<li>Liberty Net Philadelphia as possible site to browse: <a href="https://web.archive.org/web/20000302012824/http://www.libertynet.com/rol/default.asp">LibertyNet Philadelphia, PA an affiliate of RegionOnline</a></li>
+</ul>
+</section>
+
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="acknowledgments" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Acknowledgments</h2><div class="quarto-appendix-contents">
+
+<ul>
+<li>Featured photo by <a href="https://unsplash.com/@chrisliverani?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Chris Liverani</a> on <a href="https://unsplash.com/photos/formal-dinner-setup-oCsaxvGCehM?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Unsplash</a></li>
+<li>Web Archive</li>
+</ul>
+
+
+</div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2024" class="csl-entry quarto-appendix-citeas" role="listitem">
+Canelón, Silvia, and Mallori Lofton-Malachi. 2024. <span>“Philly
+Downtown Restaurants over Time.”</span> June 20, 2024. <a href="https://silviacanelon.com/blog/2024-06-20-ccd-sips-years">https://silviacanelon.com/blog/2024-06-20-ccd-sips-years</a>.
+</div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -751,10 +777,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script><script src="https://utteranc.es/client.js" repo="spcanelon/silvia" issue-term="title" theme="body-light" crossorigin="anonymous" async="">
+</script>
+<script src="https://utteranc.es/client.js" repo="spcanelon/silvia" issue-term="title" theme="boxy-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer">
+<footer class="footer">
+  <div class="nav-footer">
     <div class="nav-footer-left">
 <p>© 2023 Silvia Canelón ∙ Made with <a href="https://quarto.org">Quarto</a></p>
 </div>   
@@ -763,7 +791,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
-<li class="nav-item">
+    <li class="nav-item">
     <a class="nav-link" href="../../accessibility.html">
 <p>Accessibility</p>
 </a>
@@ -785,33 +813,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
 </ul>
-</div>
+    </div>
   </div>
-</footer><script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom","loop":false});
-window.onload = () => {
-  lightboxQuarto.on('slide_before_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    const href = trigger.getAttribute('href');
-    if (href !== null) {
-      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-      if (imgEl !== null) {
-        const srcAttr = imgEl.getAttribute("src");
-        if (srcAttr && srcAttr.startsWith("data:")) {
-          slideConfig.href = srcAttr;
-        }
-      }
-    } 
-  });
+</footer>
 
-  lightboxQuarto.on('slide_after_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    if (window.Quarto?.typesetMath) {
-      window.Quarto.typesetMath(slideNode);
-    }
-  });
 
-};
-          </script>
 
 
 </body></html>

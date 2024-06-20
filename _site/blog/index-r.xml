@@ -13,7 +13,51 @@ It includes notes and tutorials for my future self and hopefully also for you.&l
 {{&lt; bi substack &gt;}} Sign up for my [newsletter](https://spcanelon.substack.com/) to receive updates about new posts.
 </description>
 <generator>quarto-1.4.554</generator>
-<lastBuildDate>Fri, 29 Sep 2023 04:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 20 Jun 2024 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>Philly downtown restaurants over time</title>
+  <link>https://silviacanelon.com/blog/2024-06-20-ccd-sips-years/</link>
+  <description><![CDATA[ 
+
+<!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
+<!-- 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title"> 
+-->
+<!-- <header id="title-block-header" class="quarto-title-block default page-columns"> -->
+<!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> -->
+
+
+
+<section id="resources" class="level2">
+
+<ul>
+<li><a href="https://web.archive.org/web/*/http://centercityphila.org/*">Wayback Machine</a></li>
+<li>CCD SIPS 2006: <a href="https://web.archive.org/web/20060305150821/http://www.centercityphila.org:80/docs/centercitysips.pdf">Wayback Machine</a></li>
+<li>CCD SIPS May 13, 2008: <a href="https://web.archive.org/web/20080513125935/http://centercityphila.org:80/life/Sips.php">Center City District / Central Philadelphia Development Corporation Of Philadelphia</a></li>
+<li>Liberty Net Philadelphia as possible site to browse: <a href="https://web.archive.org/web/20000302012824/http://www.libertynet.com/rol/default.asp">LibertyNet Philadelphia, PA an affiliate of RegionOnline</a></li>
+</ul>
+</section>
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="acknowledgments" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Acknowledgments</h2><div class="quarto-appendix-contents">
+
+<ul>
+<li>Featured photo by <a href="https://unsplash.com/@chrisliverani?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Chris Liverani</a> on <a href="https://unsplash.com/photos/formal-dinner-setup-oCsaxvGCehM?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Unsplash</a></li>
+<li>Web Archive</li>
+</ul>
+
+
+</div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2024" class="csl-entry quarto-appendix-citeas">
+Canelón, Silvia, and Mallori Lofton-Malachi. 2024. <span>“Philly
+Downtown Restaurants over Time.”</span> June 20, 2024. <a href="https://silviacanelon.com/blog/2024-06-20-ccd-sips-years">https://silviacanelon.com/blog/2024-06-20-ccd-sips-years</a>.
+</div></div></section></div> ]]></description>
+  <category>R</category>
+  <category>Philly</category>
+  <guid>https://silviacanelon.com/blog/2024-06-20-ccd-sips-years/</guid>
+  <pubDate>Thu, 20 Jun 2024 04:00:00 GMT</pubDate>
+  <media:content url="https://silviacanelon.com/blog/2024-06-20-ccd-sips-years/featured.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Hello Quarto: Porting my Website from Hugo Apéro</title>
   <dc:creator>Silvia Canelón</dc:creator>
@@ -3600,7 +3644,7 @@ Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https:/
 <p>Prefer simple, familiar visualizations over complex novelties.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/guidelines-oystein-moseng.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="Pie chart from Øystein’s post using color and (optional) patterns to encode information"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/guidelines-oystein-moseng.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The pie chart using color and pattern to differentiate between slices. This screenshot also demos an interactive chart element in action: hovering over one pie slice enlarges the slice, reveals more information about the selected slice, and dims the non-selected slices."></a></p>
+<figure class="figure"><p><a href="img/guidelines-oystein-moseng.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="Pie chart from Øystein’s post using color and (optional) patterns to encode information"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/guidelines-oystein-moseng.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The pie chart using color and pattern to differentiate between slices. This screenshot also demos an interactive chart element in action: hovering over one pie slice enlarges the slice, reveals more information about the selected slice, and dims the non-selected slices."></a></p>
 </figure>
 </div>
 <figcaption>Pie chart from Øystein’s post using color and (optional) patterns to encode information</figcaption></figure>
@@ -3613,7 +3657,7 @@ Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https:/
 <p>Guidelines by Amy Cesal on how to write alt text for data visualizations: <a href="https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81">Writing Alt Text for Data Visualization</a></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/alt-text-amy-cesal.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="Example template from Amy’s post"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/alt-text-amy-cesal.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Example alt text format that reads: Chart type of type of data where reason for including chart. Also the recommendation to include a link to the data source somewhere in the text."></a></p>
+<figure class="figure"><p><a href="img/alt-text-amy-cesal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="Example template from Amy’s post"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/alt-text-amy-cesal.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Example alt text format that reads: Chart type of type of data where reason for including chart. Also the recommendation to include a link to the data source somewhere in the text."></a></p>
 </figure>
 </div>
 <figcaption>Example template from Amy’s post</figcaption></figure>
@@ -3623,7 +3667,7 @@ Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https:/
 <p>Post by Lisa Charlotte Muth on how to pick colors for your data viz that everyone can appreciate: <a href="https://blog.datawrapper.de/beautifulcolors/">How to pick more beautiful colors for your data visualizations - Datawrapper Blog</a></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/datawrapper.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="Example from Charlotte’s post of two different approaches to improving a pie chart"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/datawrapper.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The first pie chart uses colors of similar lightness that end up appearing the same when checked under grayscale simulation. The first option for improvement picks different colors that all stand out from one another in grayscale. The second option keeps the original colors but delineates pie slices with a contrasting border."></a></p>
+<figure class="figure"><p><a href="img/datawrapper.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="Example from Charlotte’s post of two different approaches to improving a pie chart"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/datawrapper.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The first pie chart uses colors of similar lightness that end up appearing the same when checked under grayscale simulation. The first option for improvement picks different colors that all stand out from one another in grayscale. The second option keeps the original colors but delineates pie slices with a contrasting border."></a></p>
 </figure>
 </div>
 <figcaption>Example from Charlotte’s post of two different approaches to improving a pie chart</figcaption></figure>
@@ -3636,7 +3680,7 @@ Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https:/
 <p>Related is a talk from The Readability Group sharing findings from a survey study about font preferences including 2000+ participants. Among these were participants with dyslexia characteristics and participants with poor near vision: <a href="https://youtu.be/h8IOqUl1zII?t=1029">Don’t Believe the Type!</a></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/typeface-poor-near-vision.png" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="quarto-lightbox-gallery-4" title="Bar graph showing the frequency by which 20 different fonts were selected by study participants with strong poor near vision in comparison with users with no poor near vision."><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/typeface-poor-near-vision.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The fonts selected most often in this group were San Francisco Pro, Red Hat Text, Calibri, and Segoe UI, in that order. San Francisco Pro was selected by 68% of participants The fonts selected least often were Open Dyslexic, Dyslexie, Comic Sans MS, and Sylexiad Sans. Open Dyslexic was selected by 12% of participants. Both Times New Roman and Helvetica are highlighted as showing the largest differences between users with poor near vision and those without. Times New Roman was the 6th least selected and Helvetica was in the middle learning towards the most selected fonts."></a></p>
+<figure class="figure"><p><a href="img/typeface-poor-near-vision.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="Bar graph showing the frequency by which 20 different fonts were selected by study participants with strong poor near vision in comparison with users with no poor near vision."><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/typeface-poor-near-vision.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The fonts selected most often in this group were San Francisco Pro, Red Hat Text, Calibri, and Segoe UI, in that order. San Francisco Pro was selected by 68% of participants The fonts selected least often were Open Dyslexic, Dyslexie, Comic Sans MS, and Sylexiad Sans. Open Dyslexic was selected by 12% of participants. Both Times New Roman and Helvetica are highlighted as showing the largest differences between users with poor near vision and those without. Times New Roman was the 6th least selected and Helvetica was in the middle learning towards the most selected fonts."></a></p>
 </figure>
 </div>
 <figcaption>Bar graph showing the frequency by which 20 different fonts were selected by study participants with strong poor near vision in comparison with users with no poor near vision.</figcaption></figure>
@@ -3672,7 +3716,7 @@ Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https:/
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/tableau-chris-demartini.png" class="lightbox" data-glightbox="description: .lightbox-desc-6" data-gallery="quarto-lightbox-gallery-6" title="Title of Chris’s Tableau visualization being checked for color contrast."><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/tableau-chris-demartini.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The user is using a kind of selection tool to hover over an area of the visualization, in this case the title, and check font color contrast against its background. The tool pulls up details along the bottom of the page, including WCAG pass/fail test results, background and foreground color hex codes, and other color characteristics."></a></p>
+<figure class="figure"><p><a href="img/tableau-chris-demartini.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-glightbox="description: .lightbox-desc-6" title="Title of Chris’s Tableau visualization being checked for color contrast."><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/tableau-chris-demartini.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The user is using a kind of selection tool to hover over an area of the visualization, in this case the title, and check font color contrast against its background. The tool pulls up details along the bottom of the page, including WCAG pass/fail test results, background and foreground color hex codes, and other color characteristics."></a></p>
 </figure>
 </div>
 <figcaption>Title of Chris’s Tableau visualization being checked for color contrast.</figcaption></figure>
@@ -3684,7 +3728,7 @@ Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https:/
 <p><a href="https://twitter.com/DogGeneticsLLC">Liz Hare</a> and I gave a talk earlier this year on alt text in data viz shared as a part of TidyTuesday on Twitter. After web-scraping alt text from TidyTuesday tweets we found that only 3% of data viz tweets had alt text to accompany them (over the first 3 years of the TidyTuesday project). Links to the video recording, slides, and resources at https://github.com/spcanelon/csvConf2021. The talk includes guidelines on what makes effective alt text for data viz (complementary to those Amy Cesal includes in her post).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/alt-text-silvia-liz.png" class="lightbox" data-glightbox="description: .lightbox-desc-7" data-gallery="quarto-lightbox-gallery-7" title="Slide from our presentation summarizing the most useful alt-text features found among 196 data viz tweets"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/alt-text-silvia-liz.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Effective alt includes a description that conveys meaning in the data, variables on the axes, scale described within the description, description of the type of plot. Direct link to slide: https://spcanelon.github.io/csvConf2021/slides/indexLH.html#11"></a></p>
+<figure class="figure"><p><a href="img/alt-text-silvia-liz.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" data-glightbox="description: .lightbox-desc-7" title="Slide from our presentation summarizing the most useful alt-text features found among 196 data viz tweets"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/alt-text-silvia-liz.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Effective alt includes a description that conveys meaning in the data, variables on the axes, scale described within the description, description of the type of plot. Direct link to slide: https://spcanelon.github.io/csvConf2021/slides/indexLH.html#11"></a></p>
 </figure>
 </div>
 <figcaption>Slide from our presentation summarizing the most useful alt-text features found among 196 data viz tweets</figcaption></figure>
@@ -3786,7 +3830,7 @@ font-style: inherit;">)</span> </span></code></pre></div>
 <div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="index_files/figure-html/unnamed-chunk-2-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-8" data-gallery="quarto-lightbox-gallery-8" title="Bigger flippers, bigger bills"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" alt="Scatterplot of flipper length by bill length of 3 penguin species, where we show penguins with bigger flippers have bigger bills." width="672"></a></p>
+<figure class="figure"><p><a href="index_files/figure-html/unnamed-chunk-2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" data-glightbox="description: .lightbox-desc-8" title="Bigger flippers, bigger bills"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" alt="Scatterplot of flipper length by bill length of 3 penguin species, where we show penguins with bigger flippers have bigger bills." width="672"></a></p>
 <figcaption>Bigger flippers, bigger bills</figcaption></figure>
 </div>
 </div>
@@ -3930,7 +3974,7 @@ background-color: null;
 font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="index_files/figure-html/unnamed-chunk-3-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-9" data-gallery="quarto-lightbox-gallery-9" title="Different patterns mapped onto penguin species along with different colors"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" alt="Bar chart showing 3 penguin species along the x axis and the number of observations on the y axis. The bar for the Adelie species uses the color orange and diagonal stripes, the bar for Chinstrap species uses the color purple and crosshatches, and the bar for the Gentoo species uses the color cyan and a dotted pattern." width="672"></a></p>
+<figure class="figure"><p><a href="index_files/figure-html/unnamed-chunk-3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" data-glightbox="description: .lightbox-desc-9" title="Different patterns mapped onto penguin species along with different colors"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" alt="Bar chart showing 3 penguin species along the x axis and the number of observations on the y axis. The bar for the Adelie species uses the color orange and diagonal stripes, the bar for Chinstrap species uses the color purple and crosshatches, and the bar for the Gentoo species uses the color cyan and a dotted pattern." width="672"></a></p>
 <figcaption>Different patterns mapped onto penguin species along with different colors</figcaption></figure>
 </div>
 </div>
@@ -3940,7 +3984,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <p>The <a href="https://jkunst.com/highcharter/index.html">Highcharter R package</a> developed by Joshua Kunst adds interactivity to data viz using Highcharts JavaScript components designed with <a href="https://www.highcharts.com/accessibility/#exploreFeatures">web accessibility in mind</a>. The package has a learning curve, but lucky for us Mara Averick wrote an excellent <a href="https://dataand.me/index.html#category:highcharter">series of blog posts on using the Highcharts accessibility module with {highcharter}</a>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/highcharter-mara-averick.png" class="lightbox" data-glightbox="description: .lightbox-desc-10" data-gallery="quarto-lightbox-gallery-10" title="Interactive scatterplot from Mara’s post using color and shape to encode information about penguin species"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/highcharter-mara-averick.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Scatterplot of the palmerpenguins dataset showing data points clustered by species and the highcharter package making it possible to focus on one cluster and identify the x and y values of a specific data point. In this case the data point is a Chinstrap penguin observation mapping to a flipper length of 201mm and bill length of 54.2mm. Explore this data viz with a screen reader in Mara's blog post: https://dataand.me/posts/2021-11-15-accessible-highcharter-part-4/#an-accessible-penguin-plot"></a></p>
+<figure class="figure"><p><a href="img/highcharter-mara-averick.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" data-glightbox="description: .lightbox-desc-10" title="Interactive scatterplot from Mara’s post using color and shape to encode information about penguin species"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/highcharter-mara-averick.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Scatterplot of the palmerpenguins dataset showing data points clustered by species and the highcharter package making it possible to focus on one cluster and identify the x and y values of a specific data point. In this case the data point is a Chinstrap penguin observation mapping to a flipper length of 201mm and bill length of 54.2mm. Explore this data viz with a screen reader in Mara's blog post: https://dataand.me/posts/2021-11-15-accessible-highcharter-part-4/#an-accessible-penguin-plot"></a></p>
 </figure>
 </div>
 <figcaption>Interactive scatterplot from Mara’s post using color and shape to encode information about penguin species</figcaption></figure>
@@ -3991,7 +4035,7 @@ Projects on my site: https://silvia.rbind.io/project
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-project-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="My Project listing: https://silvia.rbind.io/project"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-project-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Project listing page for my site with a grid layout featuring thumbnail images. The top of the page says 'Projects' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There are three projects featured with a decorative thumbnail image, a title, and a summary. Items also include an author and category links but they are cut off in this screenshot." width="1265"></a></p>
+<figure class="figure"><p><a href="img/silvia-project-list.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="My Project listing: https://silvia.rbind.io/project"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-project-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Project listing page for my site with a grid layout featuring thumbnail images. The top of the page says 'Projects' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There are three projects featured with a decorative thumbnail image, a title, and a summary. Items also include an author and category links but they are cut off in this screenshot." width="1265"></a></p>
 </figure>
 </div>
 <figcaption>My Project listing: https://silvia.rbind.io/project</figcaption></figure>
@@ -4019,7 +4063,7 @@ Projects on my site: https://silvia.rbind.io/project
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/netlify-branch-deploy.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="Netlify site settings for deploy contexts"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/netlify-branch-deploy.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%" alt="The deploy contexts section after clicking the Edit settings button. This section shows three settings that can be edited. The first is the production branch which is set to 'main' in a free text box. The second is deploy previews which is a radio button set to 'any pull request against your production branch/branch deploy branches (as opposed to 'none'). The third is branch deploys which is a radio button set to 'all' (as opposed to 'none' and 'let me add individual branches'). There are two buttons at the bottom of this section, Save and Cancel."></a></p>
+<figure class="figure"><p><a href="img/netlify-branch-deploy.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="Netlify site settings for deploy contexts"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/netlify-branch-deploy.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%" alt="The deploy contexts section after clicking the Edit settings button. This section shows three settings that can be edited. The first is the production branch which is set to 'main' in a free text box. The second is deploy previews which is a radio button set to 'any pull request against your production branch/branch deploy branches (as opposed to 'none'). The third is branch deploys which is a radio button set to 'all' (as opposed to 'none' and 'let me add individual branches'). There are two buttons at the bottom of this section, Save and Cancel."></a></p>
 </figure>
 </div>
 <figcaption>Netlify site settings for deploy contexts</figcaption></figure>
@@ -4493,7 +4537,7 @@ font-style: inherit;">└──</span> talk</span></code></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-about-page-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="The header of my About page: https://silvia.rbind.io/about/"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-about-page-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="My About page featuring a large headline to greet visitors and a short blurb about me in the header of the site. Below this area on the left in the main area of the page is more information with a heading and some prose. To the right of the main area is the sidebar which includes a small image, a name in large font, a subheading for the name, social media icons, and a spot for an audio clip for a name pronunciation. On the top edge of the page is a navigation bar with 'About' highlighted" width="1265"></a></p>
+<figure class="figure"><p><a href="img/silvia-about-page-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="The header of my About page: https://silvia.rbind.io/about/"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-about-page-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="My About page featuring a large headline to greet visitors and a short blurb about me in the header of the site. Below this area on the left in the main area of the page is more information with a heading and some prose. To the right of the main area is the sidebar which includes a small image, a name in large font, a subheading for the name, social media icons, and a spot for an audio clip for a name pronunciation. On the top edge of the page is a navigation bar with 'About' highlighted" width="1265"></a></p>
 </figure>
 </div>
 <figcaption>The header of my About page: https://silvia.rbind.io/about/</figcaption></figure>
@@ -4504,7 +4548,7 @@ font-style: inherit;">└──</span> talk</span></code></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-about-page-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="The main section of my About page: https://silvia.rbind.io/about/"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-about-page-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Below the header is the main area of the page on the left with more information about me with a heading and some prose. To the right of the main area is the sidebar which includes a small image of me, my name in large font, my professional title underneath along with social media icons and a short list of my interests." width="1265"></a></p>
+<figure class="figure"><p><a href="img/silvia-about-page-2.png" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="quarto-lightbox-gallery-4" title="The main section of my About page: https://silvia.rbind.io/about/"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-about-page-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Below the header is the main area of the page on the left with more information about me with a heading and some prose. To the right of the main area is the sidebar which includes a small image of me, my name in large font, my professional title underneath along with social media icons and a short list of my interests." width="1265"></a></p>
 </figure>
 </div>
 <figcaption>The main section of my About page: https://silvia.rbind.io/about/</figcaption></figure>
@@ -4570,7 +4614,7 @@ font-style: inherit;">└──</span> talk</span></code></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-home-page.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5" title="My Homepage: https://silvia.rbind.io"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-home-page.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The homepage of my site which shows my name in large font on the left, my title, social media icons, a short blurb about me, and a link that says 'Read More' that can be clicked to enter the site. On the right side is a photo of one of my favorite lakes." width="1280"></a></p>
+<figure class="figure"><p><a href="img/silvia-home-page.png" class="lightbox" data-glightbox="description: .lightbox-desc-5" data-gallery="quarto-lightbox-gallery-5" title="My Homepage: https://silvia.rbind.io"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-home-page.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The homepage of my site which shows my name in large font on the left, my title, social media icons, a short blurb about me, and a link that says 'Read More' that can be clicked to enter the site. On the right side is a photo of one of my favorite lakes." width="1280"></a></p>
 </figure>
 </div>
 <figcaption>My Homepage: https://silvia.rbind.io</figcaption></figure>
@@ -4587,7 +4631,7 @@ font-style: inherit;">└──</span> talk</span></code></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-blog-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-glightbox="description: .lightbox-desc-6" title="My Blog listing: https://silvia.rbind.io/blog"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-blog-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Blog listing page for my site with a sidebar layout and thumbnails enabled. There is a sidebar on the left side with some information about my blog including a blog name 'Meeting People Where They R'. It also includes my name as the blog author, a link to subscribe via RSS, and a decorative image of a small potted cactus plant sitting on top of a stack of books. On the right side in the main area of the page there are two blog posts featured, including this one. Each has a title, a summary, the date, and a decorative image as the thumbnail." width="1265"></a></p>
+<figure class="figure"><p><a href="img/silvia-blog-list.png" class="lightbox" data-glightbox="description: .lightbox-desc-6" data-gallery="quarto-lightbox-gallery-6" title="My Blog listing: https://silvia.rbind.io/blog"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-blog-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Blog listing page for my site with a sidebar layout and thumbnails enabled. There is a sidebar on the left side with some information about my blog including a blog name 'Meeting People Where They R'. It also includes my name as the blog author, a link to subscribe via RSS, and a decorative image of a small potted cactus plant sitting on top of a stack of books. On the right side in the main area of the page there are two blog posts featured, including this one. Each has a title, a summary, the date, and a decorative image as the thumbnail." width="1265"></a></p>
 </figure>
 </div>
 <figcaption>My Blog listing: https://silvia.rbind.io/blog</figcaption></figure>
@@ -4638,7 +4682,7 @@ font-style: inherit;"># &lt;-- item 2 in the navigation bar</span></span></code>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-publication-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" data-glightbox="description: .lightbox-desc-7" title="My Publication listing: https://silvia.rbind.io/publication"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-publication-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Publication listing page for my site with a single layout which doesn't have a sidebar. The top of the page says 'Publications' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There is primarily one publication featured with a title, a summary, the authors, and the date. This listing visually separates publications in the list with a horizontal bar" width="1265"></a></p>
+<figure class="figure"><p><a href="img/silvia-publication-list.png" class="lightbox" data-glightbox="description: .lightbox-desc-7" data-gallery="quarto-lightbox-gallery-7" title="My Publication listing: https://silvia.rbind.io/publication"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-publication-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Publication listing page for my site with a single layout which doesn't have a sidebar. The top of the page says 'Publications' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There is primarily one publication featured with a title, a summary, the authors, and the date. This listing visually separates publications in the list with a horizontal bar" width="1265"></a></p>
 </figure>
 </div>
 <figcaption>My Publication listing: https://silvia.rbind.io/publication</figcaption></figure>
@@ -4691,7 +4735,7 @@ font-style: inherit;"># &lt;-- item 4 in the navigation bar</span></span></code>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-talk-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" data-glightbox="description: .lightbox-desc-8" title="My Talk listing: https://silvia.rbind.io/talk"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-talk-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Talk listing page for my site with a single layout which doesn't have a sidebar and features decorative thumbnail images on the left. The top of the page says 'Talks' and below is a short description of what can be found on the page. This listing visually separates talks in the list by year with a horizontal bar." width="1265"></a></p>
+<figure class="figure"><p><a href="img/silvia-talk-list.png" class="lightbox" data-glightbox="description: .lightbox-desc-8" data-gallery="quarto-lightbox-gallery-8" title="My Talk listing: https://silvia.rbind.io/talk"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-talk-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Talk listing page for my site with a single layout which doesn't have a sidebar and features decorative thumbnail images on the left. The top of the page says 'Talks' and below is a short description of what can be found on the page. This listing visually separates talks in the list by year with a horizontal bar." width="1265"></a></p>
 </figure>
 </div>
 <figcaption>My Talk listing: https://silvia.rbind.io/talk</figcaption></figure>
