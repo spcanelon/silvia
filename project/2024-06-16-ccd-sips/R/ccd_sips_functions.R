@@ -42,19 +42,19 @@ get_tables <- function(url, page_number) {
 #' @return HTML file containing metadata for the map.
 #'
 create_metadata <- function(year, slug) {
-
+  
   metathis::meta() |>
     # https://pkg.garrickadenbuie.com/metathis/reference/meta_viewport.html
     metathis::meta_viewport(width = "device-width",
-                  initial_scale = "1.0",
-                  maximum_scale = "1.0",
-                  user_scalable = "no") |>
+                            initial_scale = "1.0",
+                            maximum_scale = "1.0",
+                            user_scalable = "no") |>
     # tags for social media
     # https://pkg.garrickadenbuie.com/metathis/reference/meta_social.html
     metathis::meta_social(
       title = paste0("Philly CCD SIPS ", year, " Interactive Map"),
-      url = paste0("https://www.silviacanelon.com/blog/", slug, "/map.html"),
-      image = "https://github.com/spcanelon/silvia/blob/main/content/blog/", slug, "/featured.png?raw=true",
+      url = paste0("https://www.silviacanelon.com/project/", slug, paste0("/_", year), "/map.html"),
+      image = paste0("https://github.com/spcanelon/silvia/blob/main/content/project/", slug, "/_", year, "/featured.png?raw=true"),
       image_alt = paste("Map of Philly's Center City with a pop-up saying Center City District SIPS", year),
       description = paste("An interactive map showing restaurants participating in Philadelphia's CCD SIPS", year),
       twitter_card_type = "summary_large_image",
@@ -66,8 +66,8 @@ create_metadata <- function(year, slug) {
     metathis::meta_name("github-repo" = "spcanelon/silvia") |> 
     # https://pkg.garrickadenbuie.com/metathis/index.html
     # https://pkg.garrickadenbuie.com/metathis/reference/write_meta.html
-    metathis::write_meta(path = here::here("blog", slug, "meta-map.html"))
-    
+    metathis::write_meta(path = here::here("project", slug, paste0("_", year), "meta-map.html"))
+  
 }
 
 

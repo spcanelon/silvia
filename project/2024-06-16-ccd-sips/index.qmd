@@ -61,7 +61,7 @@ width: 100%;
 }
 </style>
 <iframe src="_2024/map.html" scrolling="no">
-</iframe>
+</iframe> 
 
 ## Table view
 

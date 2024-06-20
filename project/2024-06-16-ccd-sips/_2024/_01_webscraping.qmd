@@ -15,13 +15,13 @@ xfun::pkg_attach("tidyverse",
 
 ```{r variables}
 year <- 2024
-slug <- "2024-06-05-ccd-sips"
+slug <- "2024-06-16-ccd-sips"
 url <- "https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view"
 total_pages <- 5
 ```
 
 ```{r source-files}
-source(here::here("blog", slug, "R", "ccd_sips_functions.R"))
+source(here::here("project", slug, paste0("_", year), "R", "ccd_sips_functions.R"))
 ```
 
 ## Checking the page
@@ -38,13 +38,13 @@ table <- map_df(1:total_pages, .f = get_tables, url = url)
 
 table |> head()
 
-write_rds(table, file = here::here("blog", slug, "specialsScraped.Rds"))
+write_rds(table, file = here::here("project", slug, paste0("_", year), "specialsScraped.Rds"))
 ```
 
 ## Geocoding
 
 ```{r geocode}
-specials <- read_rds(file = here::here("blog", slug, "specialsScraped.Rds"))
+specials <- read_rds(file = here::here("project", slug, paste0("_", year), "specialsScraped.Rds"))
 
 specials_geocoded <- 
   specials |> 
@@ -52,6 +52,6 @@ specials_geocoded <-
           lat = "Latitude", long = "Longitude")
 
 specials_geocoded |> 
-  write_rds(file = here::here("blog", slug, "specialsGeocoded.Rds"))
+  write_rds(file = here::here("project", slug, paste0("_", year), "specialsGeocoded.Rds"))
 
 ```

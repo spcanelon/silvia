@@ -14,13 +14,13 @@ output-file: map.html
 ---
 
 ```{r source-scripts}
-source(here::here("blog", "2024-06-05-ccd-sips", "R",
+source(here::here("project", "2024-06-16-ccd-sips", "R",
                   "ccd_sips_functions.R"))
 ```
 
 ```{r metadata}
 year <- 2024
-slug <- "2024-06-05-ccd-sips"
+slug <- "2024-06-16-ccd-sips"
 create_metadata(year = year, slug = slug)
 ```
 
@@ -29,7 +29,7 @@ xfun::pkg_attach("tidyverse", "leaflet")
 ```
 
 ```{r import-data}
-specials <- read_rds(here::here("blog", slug, "specialsGeocoded.Rds"))
+specials <- read_rds(here::here("project", slug, paste0("_", year), "specialsGeocoded.Rds"))
 ```
 
 ```{=html}
