@@ -227,7 +227,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://raw.githubusercontent.com/spcanelon/csvConf2021/master/slides/img/webInspection.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="Figure 1: Example of web inspection being used to identify the CSS selector utilized for alt-text web scraping"><img src="https://raw.githubusercontent.com/spcanelon/csvConf2021/master/slides/img/webInspection.png" class="img-fluid figure-img" alt="Web inspection tool being used to identify the CSS selector corresponding to the primary image of one of Hao Ye's (@Hao_and_Y) tweets with alt text"></a></p>
+<p><a href="https://raw.githubusercontent.com/spcanelon/csvConf2021/master/slides/img/webInspection.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="Figure 1: Example of web inspection being used to identify the CSS selector utilized for alt-text web scraping"><img src="https://raw.githubusercontent.com/spcanelon/csvConf2021/master/slides/img/webInspection.png" class="img-fluid figure-img" alt="Web inspection tool being used to identify the CSS selector corresponding to the primary image of one of Hao Ye's (@Hao_and_Y) tweets with alt text"></a></p>
 <figcaption>Figure 1: Example of web inspection being used to identify the CSS selector utilized for alt-text web scraping</figcaption>
 </figure>
 </div>
@@ -239,13 +239,13 @@ ul.task-list li input[type="checkbox"] {
 <p>I use the data available in the TidyTuesday repository to populate some searchable TidyTuesday databases at <a href="https://tiny.cc/notion-dataviz">tiny.cc/notion-dataviz</a> with data visualizations tagged by the dataset of the week, hashtags, mentions, etc.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="tt-db-notion.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="Figure 2: Screenshot of the 2021 TidyTuesday database on Notion, taken on June 1, 2021"><img src="tt-db-notion.png" class="img-fluid figure-img" alt="The Notion 2021 TidyTuesday database showing a gallery of the most recent data visualizations in the collection, organized in a grid,"></a></p>
+<p><a href="tt-db-notion.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="Figure 2: Screenshot of the 2021 TidyTuesday database on Notion, taken on June 1, 2021"><img src="tt-db-notion.png" class="img-fluid figure-img" alt="The Notion 2021 TidyTuesday database showing a gallery of the most recent data visualizations in the collection, organized in a grid,"></a></p>
 <figcaption>Figure 2: Screenshot of the 2021 TidyTuesday database on Notion, taken on June 1, 2021</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="tweet-notion.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="Figure 3: Screenshot of the tweet sharing the TidyTuesday database on Notion"><img src="tweet-notion.png" class="img-fluid figure-img" alt="Thanks to historical twitter data collected by @thomas_mock, the #TidyTuesday database now has tweets dating back to 2018! 6100+ searchable tweets w/ #dataviz creations from 1400+ participants 🤩 Check it out! http://tiny.cc/notion-dataviz" width="500"></a></p>
+<p><a href="tweet-notion.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="Figure 3: Screenshot of the tweet sharing the TidyTuesday database on Notion"><img src="tweet-notion.png" class="img-fluid figure-img" alt="Thanks to historical twitter data collected by @thomas_mock, the #TidyTuesday database now has tweets dating back to 2018! 6100+ searchable tweets w/ #dataviz creations from 1400+ participants 🤩 Check it out! http://tiny.cc/notion-dataviz" width="500"></a></p>
 <figcaption>Figure 3: Screenshot of the tweet sharing the TidyTuesday database on Notion</figcaption>
 </figure>
 </div>
@@ -861,7 +861,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","loop":false,"descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","openEffect":"zoom","loop":false,"closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
