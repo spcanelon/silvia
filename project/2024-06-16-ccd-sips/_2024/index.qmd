@@ -55,10 +55,16 @@ width: 100%;
 ```{r}
 #| label: table
 
-source(here::here("project", "2024-06-16-ccd-sips", "2024", "R", "ccd_sips_functions.R"))
+year <- paste0("_", "2024")
 
-specials <- readr::read_rds(here::here("project", "2024-06-16-ccd-sips", "2024", "specialsGeocoded.Rds"))
+source(here::here("project", "2024-06-16-ccd-sips", "R", "ccd_sips_functions.R"))
 
-create_table(specials)
+specials <- readr::read_rds(here::here("project", "2024-06-16-ccd-sips", year, "specialsGeocoded.Rds"))
+
+create_table(specials, page_length = 10)
+
+# write to CSV
+specials |> readr::write_csv(
+  here::here("project", "2024-06-16-ccd-sips", year, "specialsGeocoded.csv"))
 ```
 

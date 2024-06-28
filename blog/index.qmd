@@ -17,7 +17,7 @@ listing:
   fields: [title, author, categories, date, image]
   image-placeholder: sidebar.jpg
   image-align: right
-  page-size: 5
+  # page-size: 5
   feed:
     categories: [R]
 citation: false

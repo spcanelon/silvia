@@ -16,7 +16,7 @@ listing:
   fields: [title, author, categories, date]
   image-align: left
   # image-height: 10em
-  page-size: 5
+  # page-size: 5
 
 format: 
   html: 

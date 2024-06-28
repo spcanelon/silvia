@@ -77,7 +77,7 @@ source(here::here("project", "2024-06-16-ccd-sips", "R", "ccd_sips_functions.R")
 
 specials <- readr::read_rds(here::here("project", "2024-06-16-ccd-sips", year, "specialsGeocoded.Rds"))
 
-create_table(specials, page_length = 10) 
+create_table(specials, page_length = 10)
 ```
 
 
