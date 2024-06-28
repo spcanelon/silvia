@@ -113,7 +113,7 @@ Get in touch by [sending me a note](/contact.qmd)! {{< fa feather-pointed >}}
 
 ::: {.g-col-6 #about-me-1}
 
-Biomedical engineer turned informaticist, curious about all intersections of data and society.
+**Biomedical engineer turned informaticist, curious about all intersections of data and society.**
 
 I enjoy using [R](https://www.r-project.org/about.html) to optimize my data science workflow and have noticed it making guest appearances elsewhere in my life. I'm certified as an [RStudio Tidyverse Instructor](https://education.rstudio.com/trainers/people/canelon+silvia/) and am passionate about R education and data literacy as ways to build power in communities. Keep up with my R tinkering in my [blog](/blog) and presentations in [talks](/talk).
 
@@ -125,7 +125,7 @@ I enjoy using [R](https://www.r-project.org/about.html) to optimize my data scie
 
 ::: {.g-col-6 #about-me-2}
 
-Prior to joining the Urban Health Lab, I developed novel data mining methods to extract meaningful information from the EHR and study health outcomes and disparities in pregnant populations. I'm particularly interested in research that combines biomedical data science with open data sources in ways that prioritize health equity in communities.
+Prior to joining the Center for Health Justice, I developed novel data mining methods to extract meaningful information from the EHR and study health outcomes and disparities in pregnant populations. I'm particularly interested in research that combines biomedical data science with open data sources in ways that prioritize health equity in communities.
 
 <ul class="fa-ul">
    <li><span class="fa-li"><i class="fa-solid fa-certificate"></i></span><a href="https://www.med.upenn.edu/mbmi/certificate.html">Certificate in Biomedical Informatics</a> ∙ University of Pennsylvania ∙ 2019</li>
