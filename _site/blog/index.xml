@@ -12,7 +12,7 @@
 It includes notes and tutorials for my future self and hopefully also for you.&lt;br&gt;&lt;br&gt;
 {{&lt; bi substack &gt;}} Sign up for my [newsletter](https://spcanelon.substack.com/) to receive updates about new posts.
 </description>
-<generator>quarto-1.4.554</generator>
+<generator>quarto-1.5.54</generator>
 <lastBuildDate>Fri, 29 Sep 2023 04:00:00 GMT</lastBuildDate>
 <item>
   <title>Hello Quarto: Porting my Website from Hugo Apéro</title>
@@ -172,6 +172,7 @@ background-color: null;
 font-style: inherit;">.grid</span> {</span>
 <span id="cb3-65">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">display</span><span class="ch" style="color: #20794D;
 background-color: null;
 font-style: inherit;">:</span> <span class="dv" style="color: #AD0000;
@@ -181,6 +182,7 @@ background-color: null;
 font-style: inherit;">;</span></span>
 <span id="cb3-66">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">flex-wrap</span><span class="ch" style="color: #20794D;
 background-color: null;
 font-style: inherit;">:</span> <span class="dv" style="color: #AD0000;
@@ -210,6 +212,7 @@ background-color: null;
 font-style: inherit;">#projects</span> {</span>
 <span id="cb3-71">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">flex-basis</span><span class="ch" style="color: #20794D;
 background-color: null;
 font-style: inherit;">:</span> <span class="dv" style="color: #AD0000;
@@ -313,15 +316,18 @@ font-style: inherit;">&lt;!-- end grid --&gt;</span></span></code></pre></div>
 background-color: null;
 font-style: inherit;">links</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
 <span id="cb5-2"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">-</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">icon</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> journal-text</span></span>
@@ -331,6 +337,7 @@ font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> Quarto Docs</span></span>
@@ -340,6 +347,7 @@ font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">url</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> https://quarto.org/docs/websites/</span></span></code></pre></div>
@@ -354,6 +362,7 @@ font-style: inherit;"> https://quarto.org/docs/websites/</span></span></code></p
 background-color: null;
 font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">header</span><span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;"> id</span><span class="op" style="color: #5E5E5E;
@@ -367,6 +376,7 @@ font-style: inherit;">&gt;</span></span>
 background-color: null;
 font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">h1</span><span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;"> class</span><span class="op" style="color: #5E5E5E;
@@ -379,6 +389,7 @@ font-style: inherit;">&gt;</span>$title$<span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">h1</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&gt;</span>$endif$</span>
@@ -387,6 +398,7 @@ font-style: inherit;">&gt;</span>$endif$</span>
 background-color: null;
 font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">p</span><span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;"> class</span><span class="op" style="color: #5E5E5E;
@@ -399,6 +411,7 @@ font-style: inherit;">&gt;</span>$subtitle$<span class="dt" style="color: #AD000
 background-color: null;
 font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">p</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&gt;</span></span>
@@ -408,6 +421,7 @@ font-style: inherit;">&gt;</span></span>
 background-color: null;
 font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">p</span><span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;"> class</span><span class="op" style="color: #5E5E5E;
@@ -420,6 +434,7 @@ font-style: inherit;">&gt;</span>$author$<span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">p</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&gt;</span></span>
@@ -430,6 +445,7 @@ font-style: inherit;">&gt;</span></span>
 background-color: null;
 font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">p</span><span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;"> class</span><span class="op" style="color: #5E5E5E;
@@ -442,6 +458,7 @@ font-style: inherit;">&gt;</span>$date$<span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">p</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&gt;</span></span>
@@ -451,6 +468,7 @@ font-style: inherit;">&gt;</span></span>
 background-color: null;
 font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">div</span><span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;"> class</span><span class="op" style="color: #5E5E5E;
@@ -464,6 +482,7 @@ font-style: inherit;">&gt;</span></span>
 background-color: null;
 font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">div</span><span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;"> class</span><span class="op" style="color: #5E5E5E;
@@ -476,6 +495,7 @@ font-style: inherit;">&gt;</span>$abstract-title$<span class="dt" style="color: 
 background-color: null;
 font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">div</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&gt;</span></span>
@@ -484,6 +504,7 @@ font-style: inherit;">&gt;</span></span>
 background-color: null;
 font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">div</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&gt;</span></span>
@@ -492,6 +513,7 @@ font-style: inherit;">&gt;</span></span>
 background-color: null;
 font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">header</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&gt;</span></span></code></pre></div>
@@ -506,6 +528,7 @@ font-style: inherit;">&gt;</span></span></code></pre></div>
 background-color: null;
 font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">header</span><span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;"> id</span><span class="op" style="color: #5E5E5E;
@@ -527,6 +550,7 @@ font-style: inherit;">&gt;</span></span>
 background-color: null;
 font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">div</span><span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;"> class</span><span class="op" style="color: #5E5E5E;
@@ -553,6 +577,7 @@ font-style: inherit;">&gt;</span></span>
 background-color: null;
 font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">a</span><span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;"> href</span><span class="op" style="color: #5E5E5E;
@@ -569,6 +594,7 @@ font-style: inherit;">"btn btn-secondary text-capitalize"</span><span class="dt"
 background-color: null;
 font-style: inherit;">&gt;&lt;</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">i</span><span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;"> class</span><span class="op" style="color: #5E5E5E;
@@ -579,12 +605,14 @@ font-style: inherit;">"bi bi-$links.icon$ me-1"</span><span class="dt" style="co
 background-color: null;
 font-style: inherit;">&gt;&lt;/</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">i</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&gt;</span>$links.name$<span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">a</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&gt;</span></span>
@@ -593,6 +621,7 @@ font-style: inherit;">&gt;</span></span>
 background-color: null;
 font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">div</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&gt;</span></span>
@@ -602,6 +631,7 @@ font-style: inherit;">&gt;</span></span>
 background-color: null;
 font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">header</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&gt;</span></span></code></pre></div>
@@ -679,6 +709,7 @@ font-style: inherit;">,</span></span>
 <span id="cb9-6">caption {</span>
 <span id="cb9-7">  <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">font-size</span>: <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0.9</span><span class="dt" style="color: #AD0000;
@@ -723,6 +754,7 @@ font-style: inherit;">;</span></span></code></pre></div>
 background-color: null;
 font-style: inherit;">execute</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span></span>
@@ -732,6 +764,7 @@ font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">freeze</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="ch" style="color: #20794D;
@@ -743,6 +776,7 @@ font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">echo</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="ch" style="color: #20794D;
@@ -754,6 +788,7 @@ font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">warning</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="ch" style="color: #20794D;
@@ -784,6 +819,7 @@ background-color: null;
 font-style: inherit;">.featured-image</span> {</span>
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-6" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-6-3" class="code-annotation-target">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">background-size</span>: <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">cover</span><span class="op" style="color: #5E5E5E;
@@ -791,6 +827,7 @@ background-color: null;
 font-style: inherit;">;</span></span>
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-6" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-6-4" class="code-annotation-target">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">background-position</span>: <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">center</span><span class="op" style="color: #5E5E5E;
@@ -798,6 +835,7 @@ background-color: null;
 font-style: inherit;">;</span></span>
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-6" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-6-5" class="code-annotation-target">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">color</span>: <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">white</span><span class="op" style="color: #5E5E5E;
@@ -805,6 +843,7 @@ background-color: null;
 font-style: inherit;">;</span></span>
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-6" data-target-annotation="4" onclick="event.preventDefault();">4</a><span id="annotated-cell-6-6" class="code-annotation-target">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">box-shadow</span>: <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">inset</span> <span class="dv" style="color: #AD0000;
@@ -867,6 +906,7 @@ font-style: inherit;">;</span></span>
 background-color: null;
 font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">div</span><span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;"> </span></span>
@@ -902,6 +942,7 @@ font-style: inherit;">&gt;</span></span>
 background-color: null;
 font-style: inherit;">&lt;/</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">div</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&gt;</span></span></code></pre></div>
@@ -1052,6 +1093,7 @@ font-style: inherit;">list_paths</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
@@ -1418,7 +1460,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <li id="fn6"><p>Don’t skip this step! People will almost certainly have shared one or more of your posts somewhere on the internet, and it helps everyone if you can point them to the right spot↩︎</p></li>
 </ol></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2023" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2023. <span>“Hello Quarto: Porting My Website from Hugo
-Apéro.”</span> September 29, 2023. <a href="https://silviacanelon.com/blog/2023-09-29-hello-quarto">https://silviacanelon.com/blog/2023-09-29-hello-quarto</a>.
+Apéro.”</span> September 29, 2023. <a href="https://silviacanelon.com/blog/2023-09-29-hello-quarto/">https://silviacanelon.com/blog/2023-09-29-hello-quarto/</a>.
 </div></div></section></div> ]]></description>
   <category>R</category>
   <category>quarto</category>
@@ -1478,7 +1520,7 @@ width: 100%;
 <section id="tutorial-start" class="level2">
 <h2 class="anchored" data-anchor-id="tutorial-start">Tutorial start</h2>
 <p>Aside from the <code>tidyverse</code> and <code>here</code> packages, I used a handful of R packages to bring this map project together.</p>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
 <col style="width: 61%">
@@ -1916,6 +1958,7 @@ https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#a
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>(pageNumber) {</span>
 <span id="cb6-2">  <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -3209,6 +3252,7 @@ font-style: inherit;">addFullscreenControl</span>()</span></code></pre></div>
 background-color: null;
 font-style: inherit;">pagetitle</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="st" style="color: #20794D;
@@ -3223,6 +3267,7 @@ font-style: inherit;">"Philly CCD Sips 2022 Map"</span></span></code></pre></div
 background-color: null;
 font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">meta</span><span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;"> name</span><span class="op" style="color: #5E5E5E;
@@ -3341,6 +3386,7 @@ font-style: inherit;">"meta-map.html"</span>)</span></code></pre></div></li>
 background-color: null;
 font-style: inherit;">include-in-header</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> meta-map.html</span></span></code></pre></div></li>
@@ -3353,6 +3399,7 @@ font-style: inherit;"> meta-map.html</span></span></code></pre></div></li>
 background-color: null;
 font-style: inherit;">format</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span></span>
@@ -3362,6 +3409,7 @@ font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">html</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
 <span id="cb23-3"><span class="at" style="color: #657422;
 background-color: null;
@@ -3369,6 +3417,7 @@ font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">page-layout</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> custom</span></span></code></pre></div>
@@ -3381,6 +3430,7 @@ font-style: inherit;"> custom</span></span></code></pre></div>
 background-color: null;
 font-style: inherit;">format</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
 <span id="cb24-2"><span class="at" style="color: #657422;
 background-color: null;
@@ -3388,6 +3438,7 @@ font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">html</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
 <span id="cb24-3"><span class="at" style="color: #657422;
 background-color: null;
@@ -3395,6 +3446,7 @@ font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">page-layout</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> custom</span></span>
@@ -3404,6 +3456,7 @@ font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">self-contained</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="ch" style="color: #20794D;
@@ -3416,7 +3469,7 @@ font-style: inherit;">true</span></span></code></pre></div>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2022" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2022. <span>“Creating the Philly Center City SIPS
-Interactive Map.”</span> May 31, 2022. <a href="https://silviacanelon.com/blog/2022-05-31-ccd-sips">https://silviacanelon.com/blog/2022-05-31-ccd-sips</a>.
+Interactive Map.”</span> May 31, 2022. <a href="https://silviacanelon.com/blog/2022-05-31-ccd-sips/">https://silviacanelon.com/blog/2022-05-31-ccd-sips/</a>.
 </div></div></section></div> ]]></description>
   <category>R</category>
   <category>tutorial</category>
@@ -3531,7 +3584,7 @@ Interactive Map.”</span> May 31, 2022. <a href="https://silviacanelon.com/blog
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2022" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2022. <span>“Hello Umami: Deploying a Privacy-Friendly
-Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https://silviacanelon.com/blog/2022-01-18-hello-umami">https://silviacanelon.com/blog/2022-01-18-hello-umami</a>.
+Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https://silviacanelon.com/blog/2022-01-18-hello-umami/">https://silviacanelon.com/blog/2022-01-18-hello-umami/</a>.
 </div></div></section></div> ]]></description>
   <category>R</category>
   <category>Website</category>
@@ -3600,7 +3653,7 @@ Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https:/
 <p>Prefer simple, familiar visualizations over complex novelties.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/guidelines-oystein-moseng.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="Pie chart from Øystein’s post using color and (optional) patterns to encode information"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/guidelines-oystein-moseng.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The pie chart using color and pattern to differentiate between slices. This screenshot also demos an interactive chart element in action: hovering over one pie slice enlarges the slice, reveals more information about the selected slice, and dims the non-selected slices."></a></p>
+<figure class="figure"><p><a href="img/guidelines-oystein-moseng.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Pie chart from Øystein’s post using color and (optional) patterns to encode information"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/guidelines-oystein-moseng.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The pie chart using color and pattern to differentiate between slices. This screenshot also demos an interactive chart element in action: hovering over one pie slice enlarges the slice, reveals more information about the selected slice, and dims the non-selected slices."></a></p>
 </figure>
 </div>
 <figcaption>Pie chart from Øystein’s post using color and (optional) patterns to encode information</figcaption></figure>
@@ -3613,7 +3666,7 @@ Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https:/
 <p>Guidelines by Amy Cesal on how to write alt text for data visualizations: <a href="https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81">Writing Alt Text for Data Visualization</a></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/alt-text-amy-cesal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="Example template from Amy’s post"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/alt-text-amy-cesal.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Example alt text format that reads: Chart type of type of data where reason for including chart. Also the recommendation to include a link to the data source somewhere in the text."></a></p>
+<figure class="figure"><p><a href="img/alt-text-amy-cesal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Example template from Amy’s post"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/alt-text-amy-cesal.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Example alt text format that reads: Chart type of type of data where reason for including chart. Also the recommendation to include a link to the data source somewhere in the text."></a></p>
 </figure>
 </div>
 <figcaption>Example template from Amy’s post</figcaption></figure>
@@ -3623,7 +3676,7 @@ Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https:/
 <p>Post by Lisa Charlotte Muth on how to pick colors for your data viz that everyone can appreciate: <a href="https://blog.datawrapper.de/beautifulcolors/">How to pick more beautiful colors for your data visualizations - Datawrapper Blog</a></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/datawrapper.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="Example from Charlotte’s post of two different approaches to improving a pie chart"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/datawrapper.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The first pie chart uses colors of similar lightness that end up appearing the same when checked under grayscale simulation. The first option for improvement picks different colors that all stand out from one another in grayscale. The second option keeps the original colors but delineates pie slices with a contrasting border."></a></p>
+<figure class="figure"><p><a href="img/datawrapper.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Example from Charlotte’s post of two different approaches to improving a pie chart"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/datawrapper.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The first pie chart uses colors of similar lightness that end up appearing the same when checked under grayscale simulation. The first option for improvement picks different colors that all stand out from one another in grayscale. The second option keeps the original colors but delineates pie slices with a contrasting border."></a></p>
 </figure>
 </div>
 <figcaption>Example from Charlotte’s post of two different approaches to improving a pie chart</figcaption></figure>
@@ -3636,7 +3689,7 @@ Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https:/
 <p>Related is a talk from The Readability Group sharing findings from a survey study about font preferences including 2000+ participants. Among these were participants with dyslexia characteristics and participants with poor near vision: <a href="https://youtu.be/h8IOqUl1zII?t=1029">Don’t Believe the Type!</a></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/typeface-poor-near-vision.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="Bar graph showing the frequency by which 20 different fonts were selected by study participants with strong poor near vision in comparison with users with no poor near vision."><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/typeface-poor-near-vision.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The fonts selected most often in this group were San Francisco Pro, Red Hat Text, Calibri, and Segoe UI, in that order. San Francisco Pro was selected by 68% of participants The fonts selected least often were Open Dyslexic, Dyslexie, Comic Sans MS, and Sylexiad Sans. Open Dyslexic was selected by 12% of participants. Both Times New Roman and Helvetica are highlighted as showing the largest differences between users with poor near vision and those without. Times New Roman was the 6th least selected and Helvetica was in the middle learning towards the most selected fonts."></a></p>
+<figure class="figure"><p><a href="img/typeface-poor-near-vision.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Bar graph showing the frequency by which 20 different fonts were selected by study participants with strong poor near vision in comparison with users with no poor near vision."><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/typeface-poor-near-vision.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The fonts selected most often in this group were San Francisco Pro, Red Hat Text, Calibri, and Segoe UI, in that order. San Francisco Pro was selected by 68% of participants The fonts selected least often were Open Dyslexic, Dyslexie, Comic Sans MS, and Sylexiad Sans. Open Dyslexic was selected by 12% of participants. Both Times New Roman and Helvetica are highlighted as showing the largest differences between users with poor near vision and those without. Times New Roman was the 6th least selected and Helvetica was in the middle learning towards the most selected fonts."></a></p>
 </figure>
 </div>
 <figcaption>Bar graph showing the frequency by which 20 different fonts were selected by study participants with strong poor near vision in comparison with users with no poor near vision.</figcaption></figure>
@@ -3672,7 +3725,7 @@ Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https:/
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/tableau-chris-demartini.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-glightbox="description: .lightbox-desc-6" title="Title of Chris’s Tableau visualization being checked for color contrast."><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/tableau-chris-demartini.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The user is using a kind of selection tool to hover over an area of the visualization, in this case the title, and check font color contrast against its background. The tool pulls up details along the bottom of the page, including WCAG pass/fail test results, background and foreground color hex codes, and other color characteristics."></a></p>
+<figure class="figure"><p><a href="img/tableau-chris-demartini.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Title of Chris’s Tableau visualization being checked for color contrast."><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/tableau-chris-demartini.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The user is using a kind of selection tool to hover over an area of the visualization, in this case the title, and check font color contrast against its background. The tool pulls up details along the bottom of the page, including WCAG pass/fail test results, background and foreground color hex codes, and other color characteristics."></a></p>
 </figure>
 </div>
 <figcaption>Title of Chris’s Tableau visualization being checked for color contrast.</figcaption></figure>
@@ -3684,7 +3737,7 @@ Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https:/
 <p><a href="https://twitter.com/DogGeneticsLLC">Liz Hare</a> and I gave a talk earlier this year on alt text in data viz shared as a part of TidyTuesday on Twitter. After web-scraping alt text from TidyTuesday tweets we found that only 3% of data viz tweets had alt text to accompany them (over the first 3 years of the TidyTuesday project). Links to the video recording, slides, and resources at https://github.com/spcanelon/csvConf2021. The talk includes guidelines on what makes effective alt text for data viz (complementary to those Amy Cesal includes in her post).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/alt-text-silvia-liz.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" data-glightbox="description: .lightbox-desc-7" title="Slide from our presentation summarizing the most useful alt-text features found among 196 data viz tweets"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/alt-text-silvia-liz.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Effective alt includes a description that conveys meaning in the data, variables on the axes, scale described within the description, description of the type of plot. Direct link to slide: https://spcanelon.github.io/csvConf2021/slides/indexLH.html#11"></a></p>
+<figure class="figure"><p><a href="img/alt-text-silvia-liz.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Slide from our presentation summarizing the most useful alt-text features found among 196 data viz tweets"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/alt-text-silvia-liz.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Effective alt includes a description that conveys meaning in the data, variables on the axes, scale described within the description, description of the type of plot. Direct link to slide: https://spcanelon.github.io/csvConf2021/slides/indexLH.html#11"></a></p>
 </figure>
 </div>
 <figcaption>Slide from our presentation summarizing the most useful alt-text features found among 196 data viz tweets</figcaption></figure>
@@ -3786,7 +3839,7 @@ font-style: inherit;">)</span> </span></code></pre></div>
 <div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="index_files/figure-html/unnamed-chunk-2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" data-glightbox="description: .lightbox-desc-8" title="Bigger flippers, bigger bills"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" alt="Scatterplot of flipper length by bill length of 3 penguin species, where we show penguins with bigger flippers have bigger bills." width="672"></a></p>
+<figure class="figure"><p><a href="index_files/figure-html/unnamed-chunk-2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Bigger flippers, bigger bills"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" alt="Scatterplot of flipper length by bill length of 3 penguin species, where we show penguins with bigger flippers have bigger bills." width="672"></a></p>
 <figcaption>Bigger flippers, bigger bills</figcaption></figure>
 </div>
 </div>
@@ -3798,6 +3851,7 @@ font-style: inherit;">)</span> </span></code></pre></div>
 <div class="cell">
 <div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
@@ -3930,7 +3984,7 @@ background-color: null;
 font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="index_files/figure-html/unnamed-chunk-3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" data-glightbox="description: .lightbox-desc-9" title="Different patterns mapped onto penguin species along with different colors"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" alt="Bar chart showing 3 penguin species along the x axis and the number of observations on the y axis. The bar for the Adelie species uses the color orange and diagonal stripes, the bar for Chinstrap species uses the color purple and crosshatches, and the bar for the Gentoo species uses the color cyan and a dotted pattern." width="672"></a></p>
+<figure class="figure"><p><a href="index_files/figure-html/unnamed-chunk-3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Different patterns mapped onto penguin species along with different colors"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" alt="Bar chart showing 3 penguin species along the x axis and the number of observations on the y axis. The bar for the Adelie species uses the color orange and diagonal stripes, the bar for Chinstrap species uses the color purple and crosshatches, and the bar for the Gentoo species uses the color cyan and a dotted pattern." width="672"></a></p>
 <figcaption>Different patterns mapped onto penguin species along with different colors</figcaption></figure>
 </div>
 </div>
@@ -3940,7 +3994,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <p>The <a href="https://jkunst.com/highcharter/index.html">Highcharter R package</a> developed by Joshua Kunst adds interactivity to data viz using Highcharts JavaScript components designed with <a href="https://www.highcharts.com/accessibility/#exploreFeatures">web accessibility in mind</a>. The package has a learning curve, but lucky for us Mara Averick wrote an excellent <a href="https://dataand.me/index.html#category:highcharter">series of blog posts on using the Highcharts accessibility module with {highcharter}</a>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/highcharter-mara-averick.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" data-glightbox="description: .lightbox-desc-10" title="Interactive scatterplot from Mara’s post using color and shape to encode information about penguin species"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/highcharter-mara-averick.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Scatterplot of the palmerpenguins dataset showing data points clustered by species and the highcharter package making it possible to focus on one cluster and identify the x and y values of a specific data point. In this case the data point is a Chinstrap penguin observation mapping to a flipper length of 201mm and bill length of 54.2mm. Explore this data viz with a screen reader in Mara's blog post: https://dataand.me/posts/2021-11-15-accessible-highcharter-part-4/#an-accessible-penguin-plot"></a></p>
+<figure class="figure"><p><a href="img/highcharter-mara-averick.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Interactive scatterplot from Mara’s post using color and shape to encode information about penguin species"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/img/highcharter-mara-averick.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Scatterplot of the palmerpenguins dataset showing data points clustered by species and the highcharter package making it possible to focus on one cluster and identify the x and y values of a specific data point. In this case the data point is a Chinstrap penguin observation mapping to a flipper length of 201mm and bill length of 54.2mm. Explore this data viz with a screen reader in Mara's blog post: https://dataand.me/posts/2021-11-15-accessible-highcharter-part-4/#an-accessible-penguin-plot"></a></p>
 </figure>
 </div>
 <figcaption>Interactive scatterplot from Mara’s post using color and shape to encode information about penguin species</figcaption></figure>
@@ -3949,10 +4003,9 @@ font-style: inherit;">)</span></span></code></pre></div>
 </ul>
 
 
-
 </section><a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2021" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2021. <span>“Resources for Data Viz
-Accessibility.”</span> September 23, 2021. <a href="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y">https://silviacanelon.com/blog/2021-09-23-data-viz-a11y</a>.
+Accessibility.”</span> September 23, 2021. <a href="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/">https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/</a>.
 </div></div></section></div> ]]></description>
   <category>R</category>
   <category>data viz</category>
@@ -3998,7 +4051,7 @@ Accessibility.”</span> September 23, 2021. <a href="https://silviacanelon.com/
 </summary>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-ex-alt-text.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="Reference pane of the tool elaborates on what the alert means, why it matters, how to fix it, a note on the tool’s algorithm, and a link to the WCAG standards and guidelines. Code section is expanded along the bottom and highlights exactly what part of the HTML code the alert is refering to."><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-ex-alt-text.png" class="img-fluid figure-img" alt="Reference pane of the tool elaborates on what the alert means, why it matters, how to fix it, a note on the tool's algorithm, and a link to the WCAG standards and guidelines. Code section is expanded along the bottom and highlights exactly what part of the HTML code the alert is refering to."></a></p>
+<p><a href="img/wave-ex-alt-text.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Reference pane of the tool elaborates on what the alert means, why it matters, how to fix it, a note on the tool’s algorithm, and a link to the WCAG standards and guidelines. Code section is expanded along the bottom and highlights exactly what part of the HTML code the alert is refering to."><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-ex-alt-text.png" class="img-fluid figure-img" alt="Reference pane of the tool elaborates on what the alert means, why it matters, how to fix it, a note on the tool's algorithm, and a link to the WCAG standards and guidelines. Code section is expanded along the bottom and highlights exactly what part of the HTML code the alert is refering to."></a></p>
 <figcaption>Reference pane of the tool elaborates on what the alert means, why it matters, how to fix it, a note on the tool’s algorithm, and a link to the WCAG standards and guidelines. Code section is expanded along the bottom and highlights exactly what part of the HTML code the alert is refering to.</figcaption>
 </figure>
 </div>
@@ -4039,7 +4092,7 @@ Accessibility.”</span> September 23, 2021. <a href="https://silviacanelon.com/
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-home.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="Figure 1: Audit for my home page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-home.png" class="img-fluid figure-img" alt="There is an error symbol next to the decorative image on the home page. There are also alert symbols for links in the navigation bar and footer."></a></p>
+<p><a href="img/wave-home.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure 1: Audit for my home page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-home.png" class="img-fluid figure-img" alt="There is an error symbol next to the decorative image on the home page. There are also alert symbols for links in the navigation bar and footer."></a></p>
 <figcaption>Figure 1: Audit for my home page</figcaption>
 </figure>
 </div>
@@ -4065,13 +4118,13 @@ Accessibility.”</span> September 23, 2021. <a href="https://silviacanelon.com/
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-about-header.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="Figure 2: Audit for my About page header"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-about-header.png" class="img-fluid figure-img" alt="About page showing an alert in my blurb"></a></p>
+<p><a href="img/wave-about-header.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure 2: Audit for my About page header"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-about-header.png" class="img-fluid figure-img" alt="About page showing an alert in my blurb"></a></p>
 <figcaption>Figure 2: Audit for my About page header</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-about-main-top.png" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="quarto-lightbox-gallery-4" title="Figure 3: Audit for the main section of my About page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-about-main-top.png" class="img-fluid figure-img" alt="An alert is shown next to some heading items, and a link. An error is shown next to a thumbnail image for the featured blog post"></a></p>
+<p><a href="img/wave-about-main-top.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure 3: Audit for the main section of my About page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-about-main-top.png" class="img-fluid figure-img" alt="An alert is shown next to some heading items, and a link. An error is shown next to a thumbnail image for the featured blog post"></a></p>
 <figcaption>Figure 3: Audit for the main section of my About page</figcaption>
 </figure>
 </div>
@@ -4081,7 +4134,7 @@ Full page screenshot
 </summary>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-about.png" class="lightbox" data-glightbox="description: .lightbox-desc-5" data-gallery="quarto-lightbox-gallery-5" title="Figure 4: Audit for my About page in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-about.png" class="img-fluid figure-img" alt="Alerts are shown for links in the navigation bar and footer, for some heading items, and for a few links throughout the page"></a></p>
+<p><a href="img/wave-about.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure 4: Audit for my About page in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-about.png" class="img-fluid figure-img" alt="Alerts are shown for links in the navigation bar and footer, for some heading items, and for a few links throughout the page"></a></p>
 <figcaption>Figure 4: Audit for my About page in full page view</figcaption>
 </figure>
 </div>
@@ -4105,7 +4158,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-blog.png" class="lightbox" data-glightbox="description: .lightbox-desc-6" data-gallery="quarto-lightbox-gallery-6" title="Figure 5: Audit for my Blog listing page in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-blog.png" class="img-fluid figure-img" alt="Alerts are shown for the navigation bar and footer, and for blog post links. Errors shown for the decorative image for the page and for the blog post thumbnails."></a></p>
+<p><a href="img/wave-blog.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure 5: Audit for my Blog listing page in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-blog.png" class="img-fluid figure-img" alt="Alerts are shown for the navigation bar and footer, and for blog post links. Errors shown for the decorative image for the page and for the blog post thumbnails."></a></p>
 <figcaption>Figure 5: Audit for my Blog listing page in full page view</figcaption>
 </figure>
 </div>
@@ -4133,7 +4186,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-blog-hha-top.png" class="lightbox" data-glightbox="description: .lightbox-desc-7" data-gallery="quarto-lightbox-gallery-7" title="Alerts shown for links in the navigation bar and for a heading item. Errors shown for the blog decorative image and for a link symbol next to a header."><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-blog-hha-top.png" class="img-fluid figure-img" alt="Figure 6: Audit for my Hello Hugo Apéro blog post"></a></p>
+<p><a href="img/wave-blog-hha-top.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Alerts shown for links in the navigation bar and for a heading item. Errors shown for the blog decorative image and for a link symbol next to a header."><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-blog-hha-top.png" class="img-fluid figure-img" alt="Figure 6: Audit for my Hello Hugo Apéro blog post"></a></p>
 <figcaption>Alerts shown for links in the navigation bar and for a heading item. Errors shown for the blog decorative image and for a link symbol next to a header.</figcaption>
 </figure>
 </div>
@@ -4159,7 +4212,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-talks-top.png" class="lightbox" data-glightbox="description: .lightbox-desc-8" data-gallery="quarto-lightbox-gallery-8" title="Figure 7: Audit for my Talk listing page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-talks-top.png" class="img-fluid figure-img" alt="Alerts displayed for a heading item and the primary link to a talk. An error is displayed for the talk thumbnail."></a></p>
+<p><a href="img/wave-talks-top.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure 7: Audit for my Talk listing page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-talks-top.png" class="img-fluid figure-img" alt="Alerts displayed for a heading item and the primary link to a talk. An error is displayed for the talk thumbnail."></a></p>
 <figcaption>Figure 7: Audit for my Talk listing page</figcaption>
 </figure>
 </div>
@@ -4169,7 +4222,7 @@ Full page screenshot
 </summary>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-talks.png" class="lightbox" data-glightbox="description: .lightbox-desc-9" data-gallery="quarto-lightbox-gallery-9" title="Figure 8: Audit for my About page header in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-talks.png" class="img-fluid figure-img" alt="Alerts displayed in the navigation bar and footer, some heading items, all primary talk links, and a YouTube button link. Errors displayed for all talk thumbnail images."></a></p>
+<p><a href="img/wave-talks.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure 8: Audit for my About page header in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-talks.png" class="img-fluid figure-img" alt="Alerts displayed in the navigation bar and footer, some heading items, all primary talk links, and a YouTube button link. Errors displayed for all talk thumbnail images."></a></p>
 <figcaption>Figure 8: Audit for my About page header in full page view</figcaption>
 </figure>
 </div>
@@ -4191,7 +4244,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-talks-csvconf.png" class="lightbox" data-glightbox="description: .lightbox-desc-10" data-gallery="quarto-lightbox-gallery-10" title="Figure 9: Audit for my CSV Conf talk post in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-talks-csvconf.png" class="img-fluid figure-img" alt="Alerts displayed for the navigation bar and footer, as well as the talk summary. No errors are displayed."></a></p>
+<p><a href="img/wave-talks-csvconf.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure 9: Audit for my CSV Conf talk post in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-talks-csvconf.png" class="img-fluid figure-img" alt="Alerts displayed for the navigation bar and footer, as well as the talk summary. No errors are displayed."></a></p>
 <figcaption>Figure 9: Audit for my CSV Conf talk post in full page view</figcaption>
 </figure>
 </div>
@@ -4210,7 +4263,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-pubs-top.png" class="lightbox" data-glightbox="description: .lightbox-desc-11" data-gallery="quarto-lightbox-gallery-11" title="Figure 10: Audit for my Publication listing page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-pubs-top.png" class="img-fluid figure-img" alt="No errors or alerts displayed for this view"></a></p>
+<p><a href="img/wave-pubs-top.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figure 10: Audit for my Publication listing page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-pubs-top.png" class="img-fluid figure-img" alt="No errors or alerts displayed for this view"></a></p>
 <figcaption>Figure 10: Audit for my Publication listing page</figcaption>
 </figure>
 </div>
@@ -4220,7 +4273,7 @@ Full page screenshot
 </summary>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-pubs.png" class="lightbox" data-glightbox="description: .lightbox-desc-12" data-gallery="quarto-lightbox-gallery-12" title="Alerts displayed for the navigation bar and footer"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-pubs.png" class="img-fluid figure-img" alt="Figure 11: Audit for my Publication listing page in full page view"></a></p>
+<p><a href="img/wave-pubs.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Alerts displayed for the navigation bar and footer"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-pubs.png" class="img-fluid figure-img" alt="Figure 11: Audit for my Publication listing page in full page view"></a></p>
 <figcaption>Alerts displayed for the navigation bar and footer</figcaption>
 </figure>
 </div>
@@ -4242,7 +4295,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-pubs-geo.png" class="lightbox" data-glightbox="description: .lightbox-desc-13" data-gallery="quarto-lightbox-gallery-13" title="Figure 12: Audit for my geospatial analysis publication in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-pubs-geo.png" class="img-fluid figure-img" alt="Alerts displayed for the header bar and footer and for the publication summary"></a></p>
+<p><a href="img/wave-pubs-geo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Figure 12: Audit for my geospatial analysis publication in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-pubs-geo.png" class="img-fluid figure-img" alt="Alerts displayed for the header bar and footer and for the publication summary"></a></p>
 <figcaption>Figure 12: Audit for my geospatial analysis publication in full page view</figcaption>
 </figure>
 </div>
@@ -4264,7 +4317,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-projects-top.png" class="lightbox" data-glightbox="description: .lightbox-desc-14" data-gallery="quarto-lightbox-gallery-14" title="Figure 13: Audit for my Project listing page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-projects-top.png" class="img-fluid figure-img" alt="Errors displayed next to each project thumbnail image"></a></p>
+<p><a href="img/wave-projects-top.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Figure 13: Audit for my Project listing page"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-projects-top.png" class="img-fluid figure-img" alt="Errors displayed next to each project thumbnail image"></a></p>
 <figcaption>Figure 13: Audit for my Project listing page</figcaption>
 </figure>
 </div>
@@ -4286,7 +4339,7 @@ Full page screenshot
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-projects-ttat-top.png" class="lightbox" data-glightbox="description: .lightbox-desc-15" data-gallery="quarto-lightbox-gallery-15" title="Figure 14: Audit for my TidyTuesdayAltText project post"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-projects-ttat-top.png" class="img-fluid figure-img" alt="Alert displayed in the project summary and next to an image alt-text. Error dislayed next to a link symbol accompanying a heading."></a></p>
+<p><a href="img/wave-projects-ttat-top.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Figure 14: Audit for my TidyTuesdayAltText project post"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-projects-ttat-top.png" class="img-fluid figure-img" alt="Alert displayed in the project summary and next to an image alt-text. Error dislayed next to a link symbol accompanying a heading."></a></p>
 <figcaption>Figure 14: Audit for my TidyTuesdayAltText project post</figcaption>
 </figure>
 </div>
@@ -4296,19 +4349,18 @@ Full page screenshot
 </summary>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/wave-projects-ttat.png" class="lightbox" data-glightbox="description: .lightbox-desc-16" data-gallery="quarto-lightbox-gallery-16" title="Figure 15: Audit for my TidyTuesdayAltText project post in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-projects-ttat.png" class="img-fluid figure-img" alt="Alerts shown in the navigation bar and footer, project summary, and image alt-text. Errors shown next to link symbols accompanying headings."></a></p>
+<p><a href="img/wave-projects-ttat.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Figure 15: Audit for my TidyTuesdayAltText project post in full page view"><img src="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/img/wave-projects-ttat.png" class="img-fluid figure-img" alt="Alerts shown in the navigation bar and footer, project summary, and image alt-text. Errors shown next to link symbols accompanying headings."></a></p>
 <figcaption>Figure 15: Audit for my TidyTuesdayAltText project post in full page view</figcaption>
 </figure>
 </div>
 </details>
 
 
-
 </section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2021" class="csl-entry quarto-appendix-citeas">
-Canelón, Silvia. 2021. <span>“WAVE Audit No. 1.”</span> June 2, 2021. <a href="https://silviacanelon.com/blog/2021-06-02-wave-audit-1">https://silviacanelon.com/blog/2021-06-02-wave-audit-1</a>.
+Canelón, Silvia. 2021. <span>“WAVE Audit No. 1.”</span> June 2, 2021. <a href="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/">https://silviacanelon.com/blog/2021-06-02-wave-audit-1/</a>.
 </div></div></section></div> ]]></description>
   <category>Website</category>
   <category>Education</category>
@@ -4345,7 +4397,7 @@ Projects on my site: https://silvia.rbind.io/project
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-project-list.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="My Project listing: https://silvia.rbind.io/project"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-project-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Project listing page for my site with a grid layout featuring thumbnail images. The top of the page says 'Projects' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There are three projects featured with a decorative thumbnail image, a title, and a summary. Items also include an author and category links but they are cut off in this screenshot." width="1265"></a></p>
+<figure class="figure"><p><a href="img/silvia-project-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="My Project listing: https://silvia.rbind.io/project"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-project-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Project listing page for my site with a grid layout featuring thumbnail images. The top of the page says 'Projects' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There are three projects featured with a decorative thumbnail image, a title, and a summary. Items also include an author and category links but they are cut off in this screenshot." width="1265"></a></p>
 </figure>
 </div>
 <figcaption>My Project listing: https://silvia.rbind.io/project</figcaption></figure>
@@ -4373,7 +4425,7 @@ Projects on my site: https://silvia.rbind.io/project
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/netlify-branch-deploy.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="Netlify site settings for deploy contexts"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/netlify-branch-deploy.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%" alt="The deploy contexts section after clicking the Edit settings button. This section shows three settings that can be edited. The first is the production branch which is set to 'main' in a free text box. The second is deploy previews which is a radio button set to 'any pull request against your production branch/branch deploy branches (as opposed to 'none'). The third is branch deploys which is a radio button set to 'all' (as opposed to 'none' and 'let me add individual branches'). There are two buttons at the bottom of this section, Save and Cancel."></a></p>
+<figure class="figure"><p><a href="img/netlify-branch-deploy.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Netlify site settings for deploy contexts"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/netlify-branch-deploy.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%" alt="The deploy contexts section after clicking the Edit settings button. This section shows three settings that can be edited. The first is the production branch which is set to 'main' in a free text box. The second is deploy previews which is a radio button set to 'any pull request against your production branch/branch deploy branches (as opposed to 'none'). The third is branch deploys which is a radio button set to 'all' (as opposed to 'none' and 'let me add individual branches'). There are two buttons at the bottom of this section, Save and Cancel."></a></p>
 </figure>
 </div>
 <figcaption>Netlify site settings for deploy contexts</figcaption></figure>
@@ -4464,6 +4516,7 @@ font-style: inherit;">0</span>.<span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">82.1</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> [build] context of netlify.toml.</span>
 <span id="cb4-3"><span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -4497,6 +4550,7 @@ font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"0.69.2"</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> netlify.toml to match local version.</span>
 <span id="cb4-6">● [TODO] Option <span class="dv" style="color: #AD0000;
 background-color: null;
@@ -4516,6 +4570,7 @@ font-style: inherit;">blogdown.hugo.version =</span> <span class="st" style="col
 background-color: null;
 font-style: inherit;">"0.82.1"</span>) <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> .Rprofile to pin this Hugo <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">version</span> (also remember to restart R).</span>
@@ -4584,6 +4639,7 @@ font-style: inherit;">21.4</span> MB</span>
 background-color: null;
 font-style: inherit;">'theme'</span> option <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'config.toml'</span> to <span class="st" style="color: #20794D;
@@ -4847,7 +4903,7 @@ font-style: inherit;">└──</span> talk</span></code></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-about-page-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="The header of my About page: https://silvia.rbind.io/about/"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-about-page-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="My About page featuring a large headline to greet visitors and a short blurb about me in the header of the site. Below this area on the left in the main area of the page is more information with a heading and some prose. To the right of the main area is the sidebar which includes a small image, a name in large font, a subheading for the name, social media icons, and a spot for an audio clip for a name pronunciation. On the top edge of the page is a navigation bar with 'About' highlighted" width="1265"></a></p>
+<figure class="figure"><p><a href="img/silvia-about-page-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="The header of my About page: https://silvia.rbind.io/about/"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-about-page-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="My About page featuring a large headline to greet visitors and a short blurb about me in the header of the site. Below this area on the left in the main area of the page is more information with a heading and some prose. To the right of the main area is the sidebar which includes a small image, a name in large font, a subheading for the name, social media icons, and a spot for an audio clip for a name pronunciation. On the top edge of the page is a navigation bar with 'About' highlighted" width="1265"></a></p>
 </figure>
 </div>
 <figcaption>The header of my About page: https://silvia.rbind.io/about/</figcaption></figure>
@@ -4858,7 +4914,7 @@ font-style: inherit;">└──</span> talk</span></code></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-about-page-2.png" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="quarto-lightbox-gallery-4" title="The main section of my About page: https://silvia.rbind.io/about/"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-about-page-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Below the header is the main area of the page on the left with more information about me with a heading and some prose. To the right of the main area is the sidebar which includes a small image of me, my name in large font, my professional title underneath along with social media icons and a short list of my interests." width="1265"></a></p>
+<figure class="figure"><p><a href="img/silvia-about-page-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="The main section of my About page: https://silvia.rbind.io/about/"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-about-page-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Below the header is the main area of the page on the left with more information about me with a heading and some prose. To the right of the main area is the sidebar which includes a small image of me, my name in large font, my professional title underneath along with social media icons and a short list of my interests." width="1265"></a></p>
 </figure>
 </div>
 <figcaption>The main section of my About page: https://silvia.rbind.io/about/</figcaption></figure>
@@ -4866,7 +4922,7 @@ font-style: inherit;">└──</span> talk</span></code></pre></div>
 </div>
 </div>
 <p>I wanted to reuse my content from the About section of my Academic site, so I did a lot of copy-and-pasting into the right spots before editing. These steps are outlined in the table below.</p>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 5%">
 <col style="width: 19%">
@@ -4924,7 +4980,7 @@ font-style: inherit;">└──</span> talk</span></code></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-home-page.png" class="lightbox" data-glightbox="description: .lightbox-desc-5" data-gallery="quarto-lightbox-gallery-5" title="My Homepage: https://silvia.rbind.io"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-home-page.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The homepage of my site which shows my name in large font on the left, my title, social media icons, a short blurb about me, and a link that says 'Read More' that can be clicked to enter the site. On the right side is a photo of one of my favorite lakes." width="1280"></a></p>
+<figure class="figure"><p><a href="img/silvia-home-page.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="My Homepage: https://silvia.rbind.io"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-home-page.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The homepage of my site which shows my name in large font on the left, my title, social media icons, a short blurb about me, and a link that says 'Read More' that can be clicked to enter the site. On the right side is a photo of one of my favorite lakes." width="1280"></a></p>
 </figure>
 </div>
 <figcaption>My Homepage: https://silvia.rbind.io</figcaption></figure>
@@ -4941,7 +4997,7 @@ font-style: inherit;">└──</span> talk</span></code></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-blog-list.png" class="lightbox" data-glightbox="description: .lightbox-desc-6" data-gallery="quarto-lightbox-gallery-6" title="My Blog listing: https://silvia.rbind.io/blog"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-blog-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Blog listing page for my site with a sidebar layout and thumbnails enabled. There is a sidebar on the left side with some information about my blog including a blog name 'Meeting People Where They R'. It also includes my name as the blog author, a link to subscribe via RSS, and a decorative image of a small potted cactus plant sitting on top of a stack of books. On the right side in the main area of the page there are two blog posts featured, including this one. Each has a title, a summary, the date, and a decorative image as the thumbnail." width="1265"></a></p>
+<figure class="figure"><p><a href="img/silvia-blog-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="My Blog listing: https://silvia.rbind.io/blog"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-blog-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Blog listing page for my site with a sidebar layout and thumbnails enabled. There is a sidebar on the left side with some information about my blog including a blog name 'Meeting People Where They R'. It also includes my name as the blog author, a link to subscribe via RSS, and a decorative image of a small potted cactus plant sitting on top of a stack of books. On the right side in the main area of the page there are two blog posts featured, including this one. Each has a title, a summary, the date, and a decorative image as the thumbnail." width="1265"></a></p>
 </figure>
 </div>
 <figcaption>My Blog listing: https://silvia.rbind.io/blog</figcaption></figure>
@@ -4951,6 +5007,7 @@ font-style: inherit;">└──</span> talk</span></code></pre></div>
 <p>Update <code>[menu]</code> options in <strong>config.toml</strong> to activate Blog by changing <code>url = "/blog/"</code> and renaming <code>content/post/</code> to <code>content/blog/</code> to activate the new Apéro layout with the sidebar on the blog post listing and to enable thumbnails</p>
 <div class="sourceCode" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb17-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">[[menu.header]]</span></span>
 <span id="cb17-2">  <span class="dt" style="color: #AD0000;
 background-color: null;
@@ -4992,7 +5049,7 @@ font-style: inherit;"># &lt;-- item 2 in the navigation bar</span></span></code>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-publication-list.png" class="lightbox" data-glightbox="description: .lightbox-desc-7" data-gallery="quarto-lightbox-gallery-7" title="My Publication listing: https://silvia.rbind.io/publication"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-publication-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Publication listing page for my site with a single layout which doesn't have a sidebar. The top of the page says 'Publications' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There is primarily one publication featured with a title, a summary, the authors, and the date. This listing visually separates publications in the list with a horizontal bar" width="1265"></a></p>
+<figure class="figure"><p><a href="img/silvia-publication-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="My Publication listing: https://silvia.rbind.io/publication"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-publication-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Publication listing page for my site with a single layout which doesn't have a sidebar. The top of the page says 'Publications' and below is a short description of what can be found on the page. It also includes a by-line that reads 'Written by Silvia Canelón.' There is primarily one publication featured with a title, a summary, the authors, and the date. This listing visually separates publications in the list with a horizontal bar" width="1265"></a></p>
 </figure>
 </div>
 <figcaption>My Publication listing: https://silvia.rbind.io/publication</figcaption></figure>
@@ -5002,6 +5059,7 @@ font-style: inherit;"># &lt;-- item 2 in the navigation bar</span></span></code>
 <p>Update <code>[menu]</code> options in <strong>config.toml</strong> to activate Publications</p>
 <div class="sourceCode" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb18-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">[[menu.header]]</span></span>
 <span id="cb18-2">  <span class="dt" style="color: #AD0000;
 background-color: null;
@@ -5045,7 +5103,7 @@ font-style: inherit;"># &lt;-- item 4 in the navigation bar</span></span></code>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="img/silvia-talk-list.png" class="lightbox" data-glightbox="description: .lightbox-desc-8" data-gallery="quarto-lightbox-gallery-8" title="My Talk listing: https://silvia.rbind.io/talk"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-talk-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Talk listing page for my site with a single layout which doesn't have a sidebar and features decorative thumbnail images on the left. The top of the page says 'Talks' and below is a short description of what can be found on the page. This listing visually separates talks in the list by year with a horizontal bar." width="1265"></a></p>
+<figure class="figure"><p><a href="img/silvia-talk-list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="My Talk listing: https://silvia.rbind.io/talk"><img src="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/img/silvia-talk-list.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="The Talk listing page for my site with a single layout which doesn't have a sidebar and features decorative thumbnail images on the left. The top of the page says 'Talks' and below is a short description of what can be found on the page. This listing visually separates talks in the list by year with a horizontal bar." width="1265"></a></p>
 </figure>
 </div>
 <figcaption>My Talk listing: https://silvia.rbind.io/talk</figcaption></figure>
@@ -5250,10 +5308,9 @@ font-style: inherit;"># creates a new commit for the merge</span></span></code><
 </ol>
 
 
-
 </section><a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2021" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2021. <span>“Hello Hugo Apéro: Converting a Blogdown
-Site from Hugo Academic.”</span> June 1, 2021. <a href="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero">https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero</a>.
+Site from Hugo Academic.”</span> June 1, 2021. <a href="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/">https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/</a>.
 </div></div></section></div> ]]></description>
   <category>R</category>
   <category>Website</category>
@@ -5326,7 +5383,7 @@ font-style: inherit;">"filepath/for/your/presentation"</span></span>
 <section id="packages" class="level2">
 <h2 class="anchored" data-anchor-id="packages">Packages</h2>
 <p>This workflow was developed using:</p>
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Software / package</th>
@@ -5580,7 +5637,7 @@ font-style: inherit;">"master"</span>)</span></code></pre></div>
 </ol>
 </section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2021" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2021. <span>“Deploying Xaringan Slides with GitHub
-Pages.”</span> March 16, 2021. <a href="https://silviacanelon.com/blog/2021-03-16-deploying-xaringan-slides">https://silviacanelon.com/blog/2021-03-16-deploying-xaringan-slides</a>.
+Pages.”</span> March 16, 2021. <a href="https://silviacanelon.com/blog/2021-03-16-deploying-xaringan-slides/">https://silviacanelon.com/blog/2021-03-16-deploying-xaringan-slides/</a>.
 </div></div></section></div> ]]></description>
   <category>R</category>
   <category>Tutorial</category>
@@ -5850,7 +5907,7 @@ Pages.”</span> March 16, 2021. <a href="https://silviacanelon.com/blog/2021-03
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2020" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2020. <span>“Becoming Certified as an RStudio Tidyverse
-Instructor.”</span> October 7, 2020. <a href="https://silviacanelon.com/blog/2020-10-07-rstudio-instructor-certification-tidyverse">https://silviacanelon.com/blog/2020-10-07-rstudio-instructor-certification-tidyverse</a>.
+Instructor.”</span> October 7, 2020. <a href="https://silviacanelon.com/blog/2020-10-07-rstudio-instructor-certification-tidyverse/">https://silviacanelon.com/blog/2020-10-07-rstudio-instructor-certification-tidyverse/</a>.
 </div></div></section></div> ]]></description>
   <category>R</category>
   <category>RStudio</category>
@@ -5942,6 +5999,7 @@ background-color: null;
 font-style: inherit;">.dark</span> code {</span>
 <span id="cb1-3">  <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">color</span><span class="ch" style="color: #20794D;
 background-color: null;
 font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
@@ -5965,6 +6023,7 @@ background-color: null;
 font-style: inherit;">// cyan code text color</span></span>
 <span id="cb1-4">  <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">background-color</span><span class="ch" style="color: #20794D;
 background-color: null;
 font-style: inherit;">:</span> <span class="fu" style="color: #4758AB;
@@ -6136,7 +6195,7 @@ font-style: inherit;">;</span></span></code></pre></div>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2020" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2020. <span>“Customizing Hugo Academic’s Dark Mode with
-Help from Atom.”</span> June 16, 2020. <a href="https://silviacanelon.com/blog/2020-05-26-dark-mode-custom-with-atom">https://silviacanelon.com/blog/2020-05-26-dark-mode-custom-with-atom</a>.
+Help from Atom.”</span> June 16, 2020. <a href="https://silviacanelon.com/blog/2020-05-26-dark-mode-custom-with-atom/">https://silviacanelon.com/blog/2020-05-26-dark-mode-custom-with-atom/</a>.
 </div></div></section></div> ]]></description>
   <category>Website</category>
   <category>Tutorial</category>
@@ -6504,8 +6563,10 @@ background-color: null;
 font-style: inherit;"># downloading urls and checking for errors using try()</span></span>
 <span id="cb6-15"><span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> (i <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
@@ -6550,6 +6611,7 @@ background-color: null;
 font-style: inherit;">destfile =</span> locAttachments))</span>
 <span id="cb6-19">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"try-error"</span> <span class="sc" style="color: #5E5E5E;
@@ -6631,8 +6693,10 @@ background-color: null;
 font-style: inherit;"># creates individual directory folders for each card id</span></span>
 <span id="cb8-2"><span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> (i <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
@@ -7015,7 +7079,7 @@ font-style: inherit;">"tidy_cards.csv"</span>)</span></code></pre></div>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2020" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2020. <span>“Migrating from Trello to Airtable: Working
-with JSON Data in R.”</span> May 12, 2020. <a href="https://silviacanelon.com/blog/2020-05-12-trello-to-airtable">https://silviacanelon.com/blog/2020-05-12-trello-to-airtable</a>.
+with JSON Data in R.”</span> May 12, 2020. <a href="https://silviacanelon.com/blog/2020-05-12-trello-to-airtable/">https://silviacanelon.com/blog/2020-05-12-trello-to-airtable/</a>.
 </div></div></section></div> ]]></description>
   <category>R</category>
   <category>Tutorial</category>
