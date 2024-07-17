@@ -101,10 +101,11 @@ create_address_popups <-
       htmltools::p(
         specials$Address[special_number],
         style = htmltools::css(font_family = "Red Hat Text, sans-serif",
-                              font_weight = "normal",
-                              font_size = "1.5em",
-                              color = text_color)
-      )
+                               font_weight = "normal",
+                               font_size = "1.5em",
+                               color = text_color)
+      ),
+      
     ) |> 
       # converts list item to character for use in Leaflet argument
       as.character()
@@ -139,11 +140,11 @@ create_center_popup <-
       
       # paragraph text under heading
       htmltools::p("Philadelphia, PA",
-        style = htmltools::css(font_family = "Red Hat Text, sans-serif",
-                               font_weight = "normal",
-                               font_size = "1.5em",
-                               color = text_color,
-                               padding_bottom = "1em")
+                   style = htmltools::css(font_family = "Red Hat Text, sans-serif",
+                                          font_weight = "normal",
+                                          font_size = "1.5em",
+                                          color = text_color,
+                                          padding_bottom = "1em")
       )
     ) |> 
       # converts list item to character for use in Leaflet argument
@@ -157,7 +158,7 @@ create_center_popup <-
     #     iconColor = "#FFFFFF",
     #     markerColor = marker_color
     #   )
-} 
+  } 
 
 
 # Leaflet map ---------------------------------------------------
@@ -175,6 +176,13 @@ create_center_popup <-
 #' 
 create_leaflet_map <- function(year, df_specials, address_marker_labels, center_marker_label, address_marker_fill_color, address_marker_color, max_popup_width = NULL) {
   
+  palette <- viridisLite::viridis(2, begin = 0.6, end = 1, direction = -1)
+  # my_palette <- colorFactor(palette, specials_w_inspection$foodborne_cat,
+  #                           na.color = "lightgray")
+  my_palette <- colorFactor(c("#912b60", "#7AD151"),
+                            specials_w_inspection$foodborne_cat,
+                            na.color = "lightgray")
+  
   df_specials |>
     leaflet::leaflet(
       width = "100%", 
@@ -182,11 +190,13 @@ create_leaflet_map <- function(year, df_specials, address_marker_labels, center_
       # https://stackoverflow.com/a/42170340
       options = leaflet::tileOptions(minZoom = 15,
                                      maxZoom = 19)) |>
-    #add map markers
+    # add map markers for specials
     leaflet::addCircles(
-      lat = ~ Latitude,
-      lng = ~ Longitude,
+      group = "Specials only",
+      lat = ~ latitude,
+      lng = ~ longitude,
       fillColor = address_marker_fill_color,
+      # fillColor = c("#7AD151FF", "#912b60", "lightgray"),
       fillOpacity = 1,
       stroke = TRUE,
       color = address_marker_color,
@@ -194,28 +204,90 @@ create_leaflet_map <- function(year, df_specials, address_marker_labels, center_
       opacity = 1,
       radius = 12,
       popup = address_marker_labels,
-      label = ~ Name,
+      label = ~ name,
       labelOptions = leaflet::labelOptions(
         style = list(
           "font-family" = "Red Hat Text, sans-serif",
           "font-size" = "1.2em")
       )
     ) |>
-    #add map tiles in the background
-    leaflet::addProviderTiles(
+    # add map markers for foodborne illness violations ----
+  leaflet::addCircles(
+    group = "Foodborne illness risk factors",
+    lat = ~ latitude,
+    lng = ~ longitude,
+    fillColor = ~my_palette(foodborne_cat),
+    fillOpacity = 1,
+    stroke = TRUE,
+    color = address_marker_color,
+    weight = 3,
+    opacity = 1,
+    radius = 12,
+    popup = address_marker_labels,
+    label = ~ name,
+    labelOptions = leaflet::labelOptions(
+      style = list(
+        "font-family" = "Red Hat Text, sans-serif",
+        "font-size" = "1.2em")
+    )
+  ) |>
+    # add map markers for retail practice violations ----
+  leaflet::addCircles(
+    group = "Lack of good retail practices",
+    lat = ~ latitude,
+    lng = ~ longitude,
+    fillColor = ~my_palette(retail_cat),
+    # fillColor = c("#7AD151FF", "#912b60", "lightgray"),
+    fillOpacity = 1,
+    stroke = TRUE,
+    color = address_marker_color,
+    weight = 3,
+    opacity = 1,
+    radius = 12,
+    popup = address_marker_labels,
+    label = ~ name,
+    labelOptions = leaflet::labelOptions(
+      style = list(
+        "font-family" = "Red Hat Text, sans-serif",
+        "font-size" = "1.2em")
+    )
+  ) |>
+    # add layers control
+    addLayersControl(
+      overlayGroups = c("Specials only", 
+                        "Foodborne illness risk factor",
+                        "Lack of good retail practices"),
+      options = layersControlOptions(collapsed = FALSE,
+                                     position = "topright")
+    ) |>
+    # set default layers view
+    hideGroup(c("Specials only", "Lack of good retail practices")) |>
+    # add legend
+    addLegend(
+      # position = "bottomright", 
+      pal = my_palette, 
+      values = ~foodborne_cat,
+      # group = "Foodborne illness violations",
+      title = "Recent food safety<br>inspection violations",
+      # labFormat = labelFormat(c("factor")),
+      opacity = 1,
+      na.label = "Report not found"
+    ) |> 
+    # add map tiles in the background
+    addProviderTiles(
       providers$CartoDB.Positron,
       # add attribution
       options = list(attribution = "Created by <a href='https://silviacanelon.com'>Silvia Canelón</a> | &copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors")
     ) |>
     # use centroid as map view
-    leaflet::setView(mean(specials$Longitude),
-                     mean(specials$Latitude),
+    leaflet::setView(mean(df_specials$longitude),
+                     mean(df_specials$latitude),
                      zoom = 16) |>
     # add center icon
     leaflet::addAwesomeMarkers(
       icon = popup_center_marker_icon,
-      lng = mean(specials$Longitude),
-      lat = mean(specials$Latitude),
+      lng = mean(df_specials$longitude),
+      lat = mean(df_specials$latitude),
       label = paste("Center City District SIPS", year),
       labelOptions = leaflet::labelOptions(
         style = list(
@@ -244,18 +316,29 @@ create_table <- function(df, page_length = 10) {
   
   df |> 
     # create HTML link variable
-    dplyr::mutate(Link = glue::glue("<a href='{Specials}'>{Name}</a>")) |>
+    dplyr::mutate(link = glue::glue("<a href='{specials}'>{name}</a>")) |>
+    # replace NAs in category vars
+    dplyr::mutate(dplyr::across(
+      .cols = c(foodborne_cat, retail_cat),
+      .fns = ~forcats::fct_na_value_to_level(
+        ., level = "Report not found"))) |> 
     # select variables to display in table
-    dplyr::select(Link, Address) |> 
+    dplyr::select(link, address,
+                  foodborne_cat, retail_cat, inspection_date) |>
+    # format date variable
+    dplyr::mutate(inspection_date = format(
+      lubridate::as_date(inspection_date), "%B %d, %Y")) |> 
     DT::datatable(
       # number of items to include per page
       options = list(pageLength = page_length),
       # remove row names/numbers
       rownames = FALSE,
       # label columns
-      colnames = c('Business', 'Address'),
+      colnames = c('Business', 'Address',
+                   "Foodborne illness risk factor",
+                   "Lack of good retail practices",
+                   "Food safety inspection date"),
       # allow text to be interpreted as HTML
       escape = FALSE)
   
 }
-

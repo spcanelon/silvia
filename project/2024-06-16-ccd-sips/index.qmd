@@ -2,6 +2,9 @@
 title: 'Philly Center City District SIPS: An Interactive Map'
 date: 2024-06-16
 date-modified: today
+author:
+  - Silvia Canelón
+  - Mallori Lofton-Malachi
 slug: ccd-sips
 image: featured.png
 categories:
@@ -15,7 +18,6 @@ categories:
 subtitle: >
   A collection of interactive maps showing restaurants participating in Phily's CCD SIPS
 description: ''
-
 listing: 
 - id: maps
   contents: 
@@ -46,9 +48,26 @@ links:
 
 Philly's Center City District posted a list of restaurants and bars participating in Philly's 2024 [CCD SIPS](https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view). CCD SIPS is a series of summer Wednesday evenings (5-7pm) filled with **happy hour specials**, between June 5th and August 28th.
 
-I scraped some information from the website in order to present the information as a **map**. You can click or tap on the circle map markers to see information about each restaurant/bar along with a direct link to their posted happy hour specials.
+Information from the website was scarped in order to present the information as a **map**. You can click or tap on the circle map markers to see information about each restaurant/bar along with a direct link to their posted happy hour specials.
 
-Check out the link at the top of this post for a larger version of the interactive map below, search the [table below](#table-view), or take a look at CCD SIPS [maps from past years](#past-years).
+Check out the link at the top of this post for a larger version of the interactive map below, search the [table below](#table-view), or take a look at CCD SIPS [maps from past years](#past-years). 
+
+::: {.callout-note collapse="true"}
+
+## Update: food safety inspection layers added to the map
+
+We've recently augmented the map with findings from the [most recent food safety inspection report](https://www.phila.gov/services/permits-violations-licenses/get-a-license/business-licenses/food-businesses/look-up-a-food-safety-inspection-report/) made available by the Philadelphia Department of Public Health for each establishment. 
+
+Each establishment is marked "Yes" if it had any violations in either the "foodborne illness risk factors" or "lack of good retail practices" categories. Here's a summary from the Philly Inquirer [Clean Plates tool](https://data.inquirer.com/inspections/montgomery/), of what these categories mean:
+
+> [**How to Interpret Inspection Findings**](http://www.philly.com/philly/health/special_reports/clean-plates/How_to_Make_Sense_of_an_Inspection_Report.html)
+> 
+> _Items on inspection reports are divided into two categories:_  
+> 
+> -   **"Foodborne Illness Risk Factors"** (top half of the form) are food establishments' practices or procedures that scientists say play a direct role in transmitting germs. These are given higher priority during inspections. Repeat problems are taken more seriously; those that are fixed through public health interventions during the visit, less so. Specific violations or combinations of violations may trigger reinspections, which are common.
+> -   **"Good Retail Practices"** (bottom half) are given a lower priority. Research suggests that they can prevent the conditions that lead to contamination but do not cause illness directly. But a high number of violations may indicate a problem. 
+
+:::
 
 ## Map view
 
@@ -75,7 +94,7 @@ year <- paste0("_", "2024")
 
 source(here::here("project", "2024-06-16-ccd-sips", "R", "ccd_sips_functions.R"))
 
-specials <- readr::read_rds(here::here("project", "2024-06-16-ccd-sips", year, "specialsGeocoded.Rds"))
+specials <- readr::read_rds(here::here("project", "2024-06-16-ccd-sips", year, "specialsInspections.Rds"))
 
 create_table(specials, page_length = 10)
 ```

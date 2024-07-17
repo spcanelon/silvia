@@ -1,0 +1,57 @@
+---
+title: "Creating food violation dataset"
+format: html
+execute: 
+  freeze: true
+---
+
+```{r setup}
+xfun::pkg_attach("tidyverse", 
+                 "googlesheets4")
+```
+
+## Importing
+
+Pulling data from Google Sheet. First had to run `googlesheets4::gs4_auth()` to walk through the login process in a browser.
+
+```{r import}
+naList <- c("n/a", "na", "N/A", "NA", "", " ")
+
+data_raw <- read_sheet("https://docs.google.com/spreadsheets/d/1a27HdkJZJnQOd7YPvvV5eI7p3BQhgsnt5JgnDf60nUc/edit?gid=2104015523#gid=2104015523", na = naList)
+```
+
+## Wrangling
+
+```{r}
+data_clean <-
+  data_raw |> 
+  select(Name, foodborne = `Foodborne Illness Risk Factors`, retail = `Lack of Good Retail Practices`, inspection_date = `Date of inspection`) |> 
+  # clean names
+  janitor::clean_names()
+
+data <-
+  data_clean |> 
+  # add color category
+  mutate(
+    foodborne_cat = case_when(
+      foodborne == 0 ~ "No",
+      foodborne > 0 ~ "Yes"
+      ),
+    retail_cat = case_when(
+      retail == 0 ~ "No",
+      retail > 0 ~ "Yes"
+    )
+  ) |> 
+  # create factors
+  mutate(across(.cols = c(foodborne_cat, retail_cat),
+                .fns = as_factor))
+```
+
+## Exporting
+
+```{r}
+write_rds(x = data,
+          file = here::here("project", "2024-06-16-ccd-sips", "_2024", "foodSafetyInspection.Rds"))
+```
+
+

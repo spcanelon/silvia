@@ -14,7 +14,7 @@ output-file: map.html
 ---
 
 ```{r source-scripts}
-source(here::here("project", "2024-06-16-ccd-sips", "R",
+source(here::here("project", "2024-06-16-ccd-sips", "_2024", "R",
                   "ccd_sips_functions.R"))
 ```
 
@@ -30,17 +30,31 @@ xfun::pkg_attach("tidyverse", "leaflet")
 
 ```{r import-data}
 specials <- read_rds(here::here("project", slug, paste0("_", year), "specialsGeocoded.Rds"))
+
+inspection <- read_rds(here::here("project", slug, paste0("_", year), "foodSafetyInspection.Rds"))
 ```
 
+```{r join-data}
+specials_w_inspection <-
+  specials |> 
+  janitor::clean_names() |> 
+  left_join(inspection)
+
+# export data
+specials_w_inspection |> 
+  write_rds(here::here("project", slug, paste0("_", year), "specialsInspections.Rds"))
+```
+
+
 ```{=html}
-<link rel="stylesheet" href="../../assets/silvia/fonts.scss">
+<link rel="stylesheet" href="../../../assets/silvia/fonts.scss">
 ```
 
 
 ```{r leaflet-markers}
 # list of markers for the specials
 popup_address_labels <-
-  1:nrow(specials) |> 
+  1:nrow(specials_w_inspection) |> 
   map(\(special_number) create_address_popups(
     special_number, 
     link_color = "#5389f7",
@@ -66,7 +80,7 @@ popup_center_marker_icon <-
 #| include: true
 
 create_leaflet_map(year = year,
-                   df_specials = specials,
+                   df_specials = specials_w_inspection,
                    address_marker_labels = popup_address_labels, 
                    center_marker_label = popup_center_marker_label,
                    address_marker_fill_color = "#5389f7",
