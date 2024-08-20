@@ -307,7 +307,7 @@ Ok one of the aesthetic pieces I was excited to add to my Quarto site that I _di
 
 After some web inspecting and [repo-diving in Matt's website repo](https://github.com/mrworthington/mrworthington.github.io/blob/master/articles/rstats/mapping-in-r/page_header.css) I came up with some styling that I could apply to the title block of each post. It took modifying the [title block partial](#partials) described earlier, and adding some CSS to my custom theme.
 
-For styling that I wanted to apply uniformly to all post title blocks, I created a `.figured-image` CSS class in my custom theme:
+For styling that I wanted to apply uniformly to all post title blocks, I created a `.featured-image` CSS class in my custom theme:
 
 [Don't miss the [code annotations](https://quarto.org/docs/authoring/code-annotation.html) for this code chunk! 👀 <br>Such a cool feature!]{.aside}
 
