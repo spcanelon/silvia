@@ -1,6 +1,6 @@
 ---
 title: "Considering Equity in Data Visualization"
-subtitle: "Invited talk for the [Leonard Davis Institute of Health Economics Summer Undergraduate Mentored Research Program (SUMR)](https://www.urban.org/research/publication/do-no-harm-guide-applying-equity-awareness-data-visualization)"
+subtitle: "Invited talk for the [Leonard Davis Institute of Health Economics Summer Undergraduate Mentored Research Program (SUMR)](https://ldi.upenn.edu/education/penn-ldi-training-programs/sumr/)"
 author: 
   - Silvia Canelón
   - Emily Seeburger
