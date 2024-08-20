@@ -6,13 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Lena Davidson">
-<meta name="author" content="Silvia P. Canelón">
-<meta name="author" content="Mary Regina Boland">
-<meta name="dcterms.date" content="2022-06-07">
-<meta name="description" content="JMIR Medical Informatics">
+<meta name="author" content="Silvia Canelón">
+<meta name="author" content="Emily Seeburger">
+<meta name="dcterms.date" content="2024-07-10">
 
-<title>Medication-Wide Association Study Using Electronic Health Record Data of Prescription Medication Exposure and Multifetal Pregnancies: Retrospective Study | Silvia Canelón – Silvia Canelón</title>
+<title>Considering Equity in Data Visualization | Silvia Canelón – Silvia Canelón</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -52,9 +50,6 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-contrib/bootstrap-icons-1.9.1/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -87,12 +82,14 @@ ul.task-list li input[type="checkbox"] {
 </script>
 
 
-<meta name="twitter:title" content="Medication-Wide Association Study Using Electronic Health Record Data of Prescription Medication Exposure and Multifetal Pregnancies: Retrospective Study | Silvia Canelón">
-<meta name="twitter:description" content="JMIR Medical Informatics">
-<meta name="twitter:image" content="https://silviacanelon.com/publication/featured.jpg">
+<meta name="twitter:title" content="Considering Equity in Data Visualization | Silvia Canelón">
+<meta name="twitter:description" content="Invited talk for the Leonard Davis Institute of Health Economics Summer Undergraduate Mentored Research Program (SUMR)">
+<meta name="twitter:image" content="https://silviacanelon.com/talk/2024-07-10-data-equity-ldi/featured.png">
 <meta name="twitter:creator" content="@spcanelon">
 <meta name="twitter:site" content="@spcanelon">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="1574">
+<meta name="twitter:image-width" content="3000">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -147,21 +144,13 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns">
 <div id="title-block-header-title" class="quarto-title page-columns page-full page-layout-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);">
-<h1 class="title">Medication-Wide Association Study Using Electronic Health Record Data of Prescription Medication Exposure and Multifetal Pregnancies: Retrospective Study</h1>
-<p class="subtitle lead">EHR study describing an MWAS approach to explore connections between prescription medication exposure and the risk of multiple gestation pregnancies</p>
+<h1 class="title">Considering Equity in Data Visualization</h1>
+<p class="subtitle lead">Invited talk for the <a href="https://www.urban.org/research/publication/do-no-harm-guide-applying-equity-awareness-data-visualization">Leonard Davis Institute of Health Economics Summer Undergraduate Mentored Research Program (SUMR)</a></p>
     <div class="quarto-categories">
         <div class="quarto-category">Research</div>
-        <div class="quarto-category">EHR</div>
-        <div class="quarto-category">pregnancy</div>
-        <div class="quarto-category">medications</div>
       </div>
   </div>
 
-<div>
-  <div id="title-block-title-desc" class="description pt-4">
-    JMIR Medical Informatics
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
@@ -169,16 +158,15 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Authors</div>
     <div class="quarto-title-meta-contents">
-             <p>Lena Davidson </p>
-             <p>Silvia P. Canelón <a href="https://orcid.org/0000-0003-1709-1394" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
-             <p>Mary Regina Boland </p>
+             <p>Silvia Canelón </p>
+             <p>Emily Seeburger </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 7, 2022</p>
+      <p class="date">July 10, 2024</p>
     </div>
   </div>
   
@@ -187,9 +175,6 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
-<a href="https://doi.org/10.2196/32229" class="btn btn-secondary text-capitalize"><i class="bi bi-file-richtext-fill me-1"></i> Publication</a>
-</div>
 
 </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
@@ -208,19 +193,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="abstract" class="level2">
-<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
-<p><strong>Background.</strong> Medication-wide association studies (MWAS) have been applied to assess the risk of individual prescription use and a wide range of health outcomes, including cancer, acute myocardial infarction, acute liver failure, acute renal failure, and upper gastrointestinal ulcers. Current literature on the use of preconception and periconception medication and its association with the risk of multiple gestation pregnancies (eg, monozygotic and dizygotic) is largely based on assisted reproductive technology (ART) cohorts. However, among non-ART pregnancies, it is unknown whether other medications increase the risk of multifetal pregnancies.</p>
-<p><strong>Objective.</strong> This study aimed to investigate the risk of multiple gestational births (eg., <em>twins</em> and <em>triplets</em>) following preconception and periconception exposure to prescription medications in patients who delivered at Penn Medicine.</p>
-<p><strong>Methods.</strong> We used electronic health record data between 2010 and 2017 on patients who delivered babies at Penn Medicine, a health care system in the Greater Philadelphia area. We explored 3 logistic regression models: model 1 (no adjustment); model 2 (adjustment for maternal age); and model 3—our final logistic regression model (adjustment for maternal age, ART use, and infertility diagnosis). In all models, multiple births (MBs) were our outcome of interest (binary outcome), and each medication was assessed separately as a binary variable. To assess our MWAS model performance, we defined ART medications as our gold standard, given that these medications are known to increase the risk of MB.</p>
-<p><strong>Results.</strong> Of the 63,334 distinct deliveries in our cohort, only 1877 pregnancies (2.96%) were prescribed any medication during the preconception and first trimester period. Of the 123 medications prescribed, we found 26 (21.1%) medications associated with MB (using nominal <em>P</em> values) and 10 (8.1%) medications associated with MB (using Bonferroni adjustment) in fully adjusted model 3. We found that our model 3 algorithm had an accuracy of 85% (using nominal <em>P</em> values) and 89% (using Bonferroni-adjusted <em>P</em> values).</p>
-<p><strong>Conclusions.</strong> Our work demonstrates the opportunities in applying the MWAS approach with electronic health record data to explore associations between preconception and periconception medication exposure and the risk of MB while identifying novel candidate medications for further study. Overall, we found 3 novel medications linked with MB that could be explored in further work; this demonstrates the potential of our method to be used for hypothesis generation.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="featured.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="A graphical overview of the medication-wide association study analyses on multiple birth."><img src="featured.png" class="img-fluid figure-img" alt="Confounding relationships for medication-outcome associations are illustrated. Within the MWAS, we adjust for maternal age, infertility diagnosis, and assisted reproductive technology–resulting pregnancy diagnosis. The study does not adjust for all known associations of multiple birth such as obstetric complications or family history of multiples. The validation of the MWAS models observed performance in capturing fertility medication exposure."></a></p>
-<figcaption>A graphical overview of the medication-wide association study analyses on multiple birth.</figcaption>
-</figure>
-</div>
+<section id="description" class="level2">
+<h2 class="anchored" data-anchor-id="description">Description</h2>
+<p>Emily and I had the pleasure of presenting to the 2024 cohort of LDI Summer Undergraduate Mentored Research Program (SUMR). The materials for this interactive presentation were adapted from the Urban Institute’s series of <a href="https://www.urban.org/research/publication/do-no-harm-guide-applying-equity-awareness-data-visualization">Do No Harm guides</a>, which focus on how to incorporate principles of equity into data collection, visualization, and communication. We concluded our talk by playing a game with the Scholars, encouraging them to use what they took away from the presentation to identify areas for improvement in a series of visualizations taken from published dashboards, papers, and other sources.</p>
 
 
 </section>
@@ -828,38 +803,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","loop":false});
-(function() {
-  let previousOnload = window.onload;
-  window.onload = () => {
-    if (previousOnload) {
-      previousOnload();
-    }
-    lightboxQuarto.on('slide_before_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      const href = trigger.getAttribute('href');
-      if (href !== null) {
-        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-        if (imgEl !== null) {
-          const srcAttr = imgEl.getAttribute("src");
-          if (srcAttr && srcAttr.startsWith("data:")) {
-            slideConfig.href = srcAttr;
-          }
-        }
-      } 
-    });
-  
-    lightboxQuarto.on('slide_after_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(slideNode);
-      }
-    });
-  
-  };
-  
-})();
-          </script>
 
 
 
