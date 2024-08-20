@@ -77,7 +77,7 @@ iframe {
 display: block;
 background: #FFFBF2;
 border: none; /* Reset default border */
-height: 70vh; /* Viewport-relative units */
+height: 45vh; /* Viewport-relative units */
 width: 100%;
 }
 </style>
