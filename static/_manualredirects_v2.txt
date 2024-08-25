@@ -1,0 +1,73 @@
+https://silvia.rbind.io/authors/silvia/avatar.png https://silviacanelon.com/about/sidebar/avatar.png 301!
+https://silvia.rbind.io/post/* https://silviacanelon.com/blog/:splat 301!
+https://silvia.rbind.io/blog/* https://silviacanelon.com/blog/:splat 301!
+https://silvia.rbind.io/talk/* https://silviacanelon.com/talk/:splat 301!
+https://silvia.rbind.io/project/* https://silviacanelon.com/project/:splat 301!
+http://silvia.rbind.io/* https://silviacanelon.com/:splat 301!
+https://silvia.rbind.io/* https://silviacanelon.com/:splat 301!
+/blog/2021-audit-1 /blog/2021-06-02-wave-audit-1/ 301!
+/blog/2021-deploying-xaringan-slides /blog/2021-03-16-deploying-xaringan-slides/ 301!
+/blog/2020-trello-to-airtable/ /blog/2020-05-12-trello-to-airtable/ 301!
+/blog/2020-dark-theme-custom-with-atom/ /blog/2020-05-26-dark-mode-custom-with-atom/ 301!
+/talk/2021-data-viz-accessibility/ /talk/2021-05-04-data-viz-accessibility/ 301!
+/talk/2021-xaringan-deploy-demo/ /talk/2021-03-16-xaringan-deploy-demo/ 301!
+/talk/2020-introduccion-xaringan/ /talk/2020-12-17-introduccion-xaringan/ 301!
+/talk/2020-xaringan-basics-and-beyond/ /talk/2020-11-03-xaringan-basics-and-beyond/ 301!
+/talk/2020-tour-of-the-tidyverse/ /talk/2020-08-31-tour-of-the-tidyverse/ 301!
+NA NA NA
+/blog/2024-06-05-ccd-sips/ /project/2024-06-16-ccd-sips/ 301!
+/blog/2023-06-05-ccd-sips/ /project/2024-06-16-ccd-sips/ 301!
+/blog/2019-08-04-ccd-sips/ /project/2024-06-16-ccd-sips/ 301!
+/blog/2020-trello-to-airtable /blog/2020-05-12-trello-to-airtable
+/blog/2020-dark-mode-custom-with-atom /blog/2020-05-26-dark-mode-custom-with-atom
+/blog/2020-rstudio-instructor-certification-tidyverse /blog/2020-10-07-rstudio-instructor-certification-tidyverse
+/blog/2021-deploying-xaringan-slides /blog/2021-03-16-deploying-xaringan-slides
+/blog/2021-hello-hugo-apero /blog/2021-06-01-hello-hugo-apero
+/blog/2021-wave-audit-1 /blog/2021-06-02-wave-audit-1
+/blog/2021-data-viz-a11y /blog/2021-09-23-data-viz-a11y
+/blog/2022-hello-umami /blog/2022-01-18-hello-umami
+/blog/2022-ccd-sips /blog/2022-05-31-ccd-sips
+/blog/2023-hello-quarto /blog/2023-09-29-hello-quarto
+/project/2020-data-hack-opioid /project/2020-03-25-data-hack-opioid
+/project/2020-nhsrtheme /project/2020-10-29-nhsrtheme
+/project/2020-xaringan-nhs-r /project/2020-11-03-xaringan-nhs-r
+/project/2020-xaringan /project/2020-12-09-xaringan
+/project/2020-teaching-tech-together-es /project/2020-12-28-teaching-tech-together-es
+/project/2021-useR-2021 /project/2021-01-01-useR-2021
+/project/2021-tidy-tuesday-alt-text /project/2021-05-04-tidy-tuesday-alt-text
+/project/2021-presentable-user2021 /project/2021-07-07-presentable-user2021
+/project/2023-r-for-the-rest-of-us /project/2023-04-18-r-for-the-rest-of-us
+/project/2024-ccd-sips /project/2024-06-16-ccd-sips
+/publication/2016-bapn-morphology /publication/2016-11-06-bapn-morphology
+/publication/2018-dissertation /publication/2018-05-01-dissertation
+/publication/2019-amia-annual-symposium /publication/2019-11-20-amia-annual-symposium
+/publication/2019-bapn-substrate-strain /publication/2019-12-01-bapn-substrate-strain
+/publication/2020-climate-change-menarche /publication/2020-03-05-climate-change-menarche
+/publication/2020-preprint-hydroxychloroquine-pregnancy /publication/2020-05-06-preprint-hydroxychloroquine-pregnancy
+/publication/2020-maddie-ehr-delivery-episode-algorithm /publication/2020-08-02-maddie-ehr-delivery-episode-algorithm
+/publication/2020-csections-emergency-admissions /publication/2020-12-10-csections-emergency-admissions
+/publication/2021-smm-individual-neighborhood /publication/2021-04-08-smm-individual-neighborhood
+/publication/2021-geospatial-analysis-pregnancy-outcomes /publication/2021-05-11-geospatial-analysis-pregnancy-outcomes
+/publication/2021-ehr-environmental-exposure-pfas /publication/2021-08-11-ehr-environmental-exposure-pfas
+/publication/2021-sct-stillbirth /publication/2021-11-24-sct-stillbirth
+/publication/2022-ppd-ontology /publication/2022-03-09-ppd-ontology
+/publication/2022-mwas-multiple-birth /publication/2022-06-07-mwas-multiple-birth
+/publication/2022-ten-simple-rules-inclusive-conference /publication/2022-07-21-ten-simple-rules-inclusive-conference
+/publication/2022-mwas-repurposed-covid19-meds /publication/2022-11-24-mwas-repurposed-covid19-meds
+/publication/2024-tbi-definitions /publication/2024-05-27-tbi-definitions
+/talk/2020-tour-of-the-tidyverse /talk/2020-08-31-tour-of-the-tidyverse
+/talk/2020-xaringan-basics-and-beyond /talk/2020-11-03-xaringan-basics-and-beyond
+/talk/2020-introduccion-xaringan /talk/2020-12-17-introduccion-xaringan
+/talk/2021-r-teaching-panel /talk/2021-02-18-r-teaching-panel
+/talk/2021-xaringan-deploy-demo /talk/2021-03-16-xaringan-deploy-demo
+/talk/2021-amia-informatics-summit /talk/2021-03-23-amia-informatics-summit
+/talk/2021-data-viz-accessibility /talk/2021-05-04-data-viz-accessibility
+/talk/2021-presentable-user2021 /talk/2021-07-07-presentable-user2021
+/talk/2022-tdw-ehr-lessons /talk/2022-02-11-tdw-ehr-lessons
+/talk/2022-dbei-research-day /talk/2022-04-27-dbei-research-day
+/talk/2022-ccd-sips /talk/2022-09-29-ccd-sips
+/talk/2022-thinking-big /talk/2022-11-10-thinking-big
+/talk/2023-penn-community-scholars /talk/2023-03-09-penn-community-scholars
+/talk/2023-epis4equity /talk/2023-10-11-epis4equity
+/talk/2024-env-justice /talk/2024-03-26-env-justice
+/talk/2024-data-equity-ldi /talk/2024-07-10-data-equity-ldi
