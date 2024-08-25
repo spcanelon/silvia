@@ -63,7 +63,7 @@ I am a researcher and R educator with a love for community. <br>My **research** 
 <!-- hero-heading -->
 
 ```{r write-manual-redirects}
-#| eval: false
+#| eval: true
 
 manual_redirects <-
   readr::read_table(here::here("static", "_manualredirects.txt"),
@@ -75,56 +75,4 @@ manual_redirects <- manual_redirects$redirect
 # write the _redirect file
 writeLines(manual_redirects, here::here("_site", "_redirects"))
 
-```
-
-```{r import-manual-redirects}
-#| eval: false
-manual_redirects <-
-  readr::read_table(here::here("static", "_manualredirects.txt"),
-                    col_names = FALSE) |> 
-  dplyr::mutate(redirect = paste0(X1, " ", X2, " ", X3))
-manual_redirects <- manual_redirects$redirect
-```
-
-```{r write-redirects}
-#| eval: false
-# adapted from Tom Mock: https://github.com/jthomasmock/themockup-blog/blob/master/index.qmd#L27C1-L48C4
-# who adapted from Danielle Navarro: https://blog.djnavarro.net/porting-to-quarto/#netlify-redirects
-# function: obtain list of post paths
-
-list_paths <- function(folder) {
-  posts <-
-    list.dirs(
-    path = c(here::here(folder)),
-    full.names = FALSE,
-    recursive = FALSE
-    ) |> 
-    tibble::as_tibble_col(column_name = "path")  |>
-    dplyr::mutate(folder = folder)
-}
-
-# define post folders
-folders <- c("blog", "project", "publication", "talk")
-# list post paths by folder
-posts <- purrr::map(folders, list_paths) |> purrr::list_rbind()
-# extract short paths and create redirects
-posts <- 
-  posts |> 
-  dplyr::mutate(
-    # extract the year-slugs
-    short_path = stringr::str_remove(path, "(?!\\d{4}-)\\d{2}-\\d{2}-(?!\\d)"),
-    # create short paths
-    short_path = paste0(folder, "/", short_path),
-    # create lines to insert to a netlify _redirect file
-    redirects = paste0("/", short_path, " ", "/", folder, "/", path)
-    )
-
-# extract redirects
-redirects <- posts$redirects
-
-# combine with manual redirects
-redirects_combined <- c(manual_redirects, redirects)
-
-# write the _redirect file
-writeLines(redirects_combined, here::here("static", "_manualredirects_v2.txt"))
 ```
