@@ -8,8 +8,7 @@ categories:
   - R
   - quarto
   - website
-subtitle: >
-  Notes from porting my personal Blogdown website to Quarto
+subtitle: "Notes from porting my personal Blogdown website to Quarto"
 description: ''
 links:
 - icon: journal-text
@@ -19,8 +18,12 @@ filters:
    - include-code-files
 code-annotations: below
 df-print: paged
+# format:
+#   pdf:
+#     toc: true
+#     number-sections: true
+#     colorlinks: true
 ---
-
 
 
 ## Goodbye, Hugo Apéro
