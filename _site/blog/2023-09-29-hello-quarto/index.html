@@ -163,8 +163,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </div> <!-- /container-fluid -->
     </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns"><div id="title-block-header-title" class="quarto-title page-columns page-full page-layout-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);">
 <h1 class="title">Hello Quarto: Porting my Website from Hugo Apéro</h1>
-<p class="subtitle lead"></p>
-<p>Notes from porting my personal Blogdown website to Quarto</p>
+<p class="subtitle lead">Notes from porting my personal Blogdown website to Quarto</p>
     <div class="quarto-categories">
         <div class="quarto-category">R</div>
         <div class="quarto-category">quarto</div>
@@ -557,7 +556,7 @@ Bones of the contact page
 </ul></section><section id="background-image-for-title-blocks" class="level3 page-columns page-full"><h3 class="anchored" data-anchor-id="background-image-for-title-blocks">Background image for title blocks</h3>
 <p>Ok one of the aesthetic pieces I was excited to add to my Quarto site that I <em>didn’t</em> have in my old site is a featured image at the top of each post. I was inspired by Matt Worthington’s site while I was reading one of his excellent blog posts on <a href="https://www.mrworthington.com/articles/rstats/mapping-in-r/">a workflow for interactive maps in R</a> – I loved that the title block included an image in the background! 🤩</p>
 <p>After some web inspecting and <a href="https://github.com/mrworthington/mrworthington.github.io/blob/master/articles/rstats/mapping-in-r/page_header.css">repo-diving in Matt’s website repo</a> I came up with some styling that I could apply to the title block of each post. It took modifying the <a href="#partials">title block partial</a> described earlier, and adding some CSS to my custom theme.</p>
-<p>For styling that I wanted to apply uniformly to all post title blocks, I created a <code>.figured-image</code> CSS class in my custom theme:</p>
+<p>For styling that I wanted to apply uniformly to all post title blocks, I created a <code>.featured-image</code> CSS class in my custom theme:</p>
 <div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="margin-aside">Don’t miss the <a href="https://quarto.org/docs/authoring/code-annotation.html">code annotations</a> for this code chunk! 👀 <br>Such a cool feature!</span></div></div>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -681,7 +680,7 @@ Example warning
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["path"],"name":[1],"type":["chr"],"align":["left"]},{"label":["folder"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"2019-08-04-ccd-sips","2":"blog"},{"1":"2020-05-12-trello-to-airtable","2":"blog"},{"1":"2020-05-26-dark-mode-custom-with-atom","2":"blog"},{"1":"2020-10-07-rstudio-instructor-certification-tidyverse","2":"blog"},{"1":"2021-03-16-deploying-xaringan-slides","2":"blog"},{"1":"2021-06-01-hello-hugo-apero","2":"blog"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["path"],"name":[1],"type":["chr"],"align":["left"]},{"label":["folder"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"2020-05-12-trello-to-airtable","2":"blog"},{"1":"2020-05-26-dark-mode-custom-with-atom","2":"blog"},{"1":"2020-10-07-rstudio-instructor-certification-tidyverse","2":"blog"},{"1":"2021-03-16-deploying-xaringan-slides","2":"blog"},{"1":"2021-06-01-hello-hugo-apero","2":"blog"},{"1":"2021-06-02-wave-audit-1","2":"blog"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 </div>
@@ -709,7 +708,7 @@ Example warning
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["path"],"name":[1],"type":["chr"],"align":["left"]},{"label":["folder"],"name":[2],"type":["chr"],"align":["left"]},{"label":["short_path"],"name":[3],"type":["chr"],"align":["left"]},{"label":["redirects"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"2019-08-04-ccd-sips","2":"blog","3":"blog/2019-ccd-sips","4":"/blog/2019-ccd-sips /blog/2019-08-04-ccd-sips"},{"1":"2020-05-12-trello-to-airtable","2":"blog","3":"blog/2020-trello-to-airtable","4":"/blog/2020-trello-to-airtable /blog/2020-05-12-trello-to-airtable"},{"1":"2020-05-26-dark-mode-custom-with-atom","2":"blog","3":"blog/2020-dark-mode-custom-with-atom","4":"/blog/2020-dark-mode-custom-with-atom /blog/2020-05-26-dark-mode-custom-with-atom"},{"1":"2020-10-07-rstudio-instructor-certification-tidyverse","2":"blog","3":"blog/2020-rstudio-instructor-certification-tidyverse","4":"/blog/2020-rstudio-instructor-certification-tidyverse /blog/2020-10-07-rstudio-instructor-certification-tidyverse"},{"1":"2021-03-16-deploying-xaringan-slides","2":"blog","3":"blog/2021-deploying-xaringan-slides","4":"/blog/2021-deploying-xaringan-slides /blog/2021-03-16-deploying-xaringan-slides"},{"1":"2021-06-01-hello-hugo-apero","2":"blog","3":"blog/2021-hello-hugo-apero","4":"/blog/2021-hello-hugo-apero /blog/2021-06-01-hello-hugo-apero"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["path"],"name":[1],"type":["chr"],"align":["left"]},{"label":["folder"],"name":[2],"type":["chr"],"align":["left"]},{"label":["short_path"],"name":[3],"type":["chr"],"align":["left"]},{"label":["redirects"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"2020-05-12-trello-to-airtable","2":"blog","3":"blog/2020-trello-to-airtable","4":"/blog/2020-trello-to-airtable /blog/2020-05-12-trello-to-airtable"},{"1":"2020-05-26-dark-mode-custom-with-atom","2":"blog","3":"blog/2020-dark-mode-custom-with-atom","4":"/blog/2020-dark-mode-custom-with-atom /blog/2020-05-26-dark-mode-custom-with-atom"},{"1":"2020-10-07-rstudio-instructor-certification-tidyverse","2":"blog","3":"blog/2020-rstudio-instructor-certification-tidyverse","4":"/blog/2020-rstudio-instructor-certification-tidyverse /blog/2020-10-07-rstudio-instructor-certification-tidyverse"},{"1":"2021-03-16-deploying-xaringan-slides","2":"blog","3":"blog/2021-deploying-xaringan-slides","4":"/blog/2021-deploying-xaringan-slides /blog/2021-03-16-deploying-xaringan-slides"},{"1":"2021-06-01-hello-hugo-apero","2":"blog","3":"blog/2021-hello-hugo-apero","4":"/blog/2021-hello-hugo-apero /blog/2021-06-01-hello-hugo-apero"},{"1":"2021-06-02-wave-audit-1","2":"blog","3":"blog/2021-wave-audit-1","4":"/blog/2021-wave-audit-1 /blog/2021-06-02-wave-audit-1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 </div>
@@ -1347,7 +1346,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </ul>
 </div>
   </div>
-</footer><script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","loop":false});
+</footer><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","openEffect":"zoom","loop":false});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
