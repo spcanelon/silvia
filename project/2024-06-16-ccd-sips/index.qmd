@@ -15,7 +15,7 @@ categories:
   - rvest
   - leaflet
   - tidygeocoder
-subtitle: "A collection of interactive maps showing restaurants participating in Phily's CCD SIPS"
+subtitle: "A collection of interactive maps showing restaurants participating in Philly's CCD SIPS"
 description: ''
 listing: 
 - id: maps
