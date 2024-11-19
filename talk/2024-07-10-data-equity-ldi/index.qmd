@@ -9,6 +9,10 @@ slug: data-equity-ldi-sumr
 image: featured.png
 categories:
   - Research
+links:
+- icon: filetype-pdf
+  name: slides
+  url: EquityandData_LDI_20240710.pdf
 ---
 
 ## Description
