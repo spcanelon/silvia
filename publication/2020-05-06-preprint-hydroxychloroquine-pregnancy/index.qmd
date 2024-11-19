@@ -1,49 +1,26 @@
 ---
 title: 'Is Hydroxychloroquine Safe During Pregnancy? Observations from Penn Medicine'
+author:
+  - Lena Davidson
+  - name: Silvia P. Canelón
+    orcid: 0000-0003-1709-1394
+  - Mary Regina Boland
 date: '2020-05-06'
 slug: preprint-hydroxychloroquine-pregnancy
 alias:
   - /publication/preprint-hydroxychloroquine-pregnancy/
 categories:
   - Research
-tags:
   - EHR
   - 'covid-19'
   - medications
   - pregnancy
-  - English
-author: "Lena M. Davidson, Silvia P. Canelón, Mary Regina Boland"
-doi:
-publishDate: '2020-05-08T20:26:47-04:00'
-publication_types:
-  - '3'
-publication: 'medRxiv'
-publication_short: 'medRxiv'
-summary: 'Preprint as a contribution from a rapid response exploration of hydroxychloroquine effects on pregnancy-related outcomes.'
-subtitle: 'Preprint as a contribution from a rapid response exploration of hydroxychloroquine effects on pregnancy-related outcomes.'
-featured: yes
-url_pdf:
-url_code: ~
-url_dataset: ~
-url_poster: ~
-url_project: ~
-url_slides: ~
-url_source:
-url_video: ~
-image:
-  caption: ''
-  focal_point: ''
-  preview_only: no
-projects: []
-slides: ''
+  - preprint
+description: medRxiv
+subtitle: Preprint as a contribution from a rapid response exploration of hydroxychloroquine effects on pregnancy-related outcomes
 links:
-- icon: file-pdf
-  icon_pack: fas
-  name: PDF
-  url: https://www.medrxiv.org/content/10.1101/2020.04.29.20085621v1.full.pdf
-- icon: doi
-  icon_pack: ai
-  name: DOI
+- icon: 
+  name: '{{< ai doi >}} Preprint'
   url: https://doi.org/10.1101/2020.04.29.20085621
 ---
 
