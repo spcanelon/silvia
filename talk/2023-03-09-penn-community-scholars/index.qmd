@@ -1,6 +1,6 @@
 ---
 title: "Data Analytics 101"
-subtitle: "Practical talk highlighting how data can be leveraged to support community-academic partnerships"
+subtitle: "Invited talk for the [Penn Community Scholars Program](https://reachpenn.com/programs/community-scholars-program/) highlighting practical ways data can be leveraged to support community-academic partnerships"
 author: 
   - Silvia Canelón
   - Emily Seeburger
