@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.54">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Silvia Canelón">
+<meta name="dcterms.date" content="2020-06-16">
+
+<title>Customizing Hugo Academic’s Dark Mode with Help from Atom – Silvia Canelón</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/silvia/img/logo_rounded.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/bootstrap-icons-1.9.1/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<!-- umami cloud -->
+<script async="" src="https://analytics.umami.is/script.js" data-website-id="6ba73b87-31aa-44ac-8d5e-e0dad5760753" data-do-not-track="true">
+</script>
+
+
+<meta name="twitter:title" content="Customizing Hugo Academic’s Dark Mode with Help from Atom">
+<meta name="twitter:description" content="Tutorial on how to customize the dark mode in Hugo’s Academic theme with help from the Atom text editor package Pigments.">
+<meta name="twitter:image" content="https://silviacanelon.com/blog/2020-05-26-dark-mode-custom-with-atom/featured.png">
+<meta name="twitter:creator" content="@spcanelon">
+<meta name="twitter:site" content="@spcanelon">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image-height" content="594">
+<meta name="twitter:image-width" content="1050">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/silvia/img/logo_rounded.svg" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Silvia Canelón</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about/index.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../talk/index.html"> 
+<span class="menu-text">Talks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../publication/index.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../project/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <a href="https://www.github.com/spcanelon/silvia" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns">
+<div id="title-block-header-title" class="quarto-title page-columns page-full page-layout-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);">
+<h1 class="title">Customizing Hugo Academic’s Dark Mode with Help from Atom</h1>
+<p class="subtitle lead">Tutorial on how to customize the dark mode in Hugo’s Academic theme with help from the Atom text editor package Pigments.</p>
+    <div class="quarto-categories">
+        <div class="quarto-category">Website</div>
+        <div class="quarto-category">Tutorial</div>
+        <div class="quarto-category">Atom</div>
+        <div class="quarto-category">blogdown</div>
+        <div class="quarto-category">Hugo</div>
+        <div class="quarto-category">CSS</div>
+      </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Silvia Canelón </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 16, 2020</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+<a href="https://github.com/spcanelon/silvia/blob/hugo-academic/assets/scss/custom.scss" class="btn btn-secondary text-capitalize"><i class="bi bi-filetype-css me-1"></i> CSS</a>
+</div>
+
+</header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#where-i-started" id="toc-where-i-started" class="nav-link active" data-scroll-target="#where-i-started">Where I started</a></li>
+  <li><a href="#choose-your-own-adventure" id="toc-choose-your-own-adventure" class="nav-link" data-scroll-target="#choose-your-own-adventure">Choose your own adventure</a></li>
+  <li><a href="#why-atom" id="toc-why-atom" class="nav-link" data-scroll-target="#why-atom">Why Atom?</a></li>
+  <li><a href="#adding-dark-mode-definitions-to-stylesheet" id="toc-adding-dark-mode-definitions-to-stylesheet" class="nav-link" data-scroll-target="#adding-dark-mode-definitions-to-stylesheet">Adding dark mode definitions to stylesheet</a></li>
+  <li><a href="#choosing-dark-theme-colors" id="toc-choosing-dark-theme-colors" class="nav-link" data-scroll-target="#choosing-dark-theme-colors">Choosing dark theme colors</a>
+  <ul class="collapse">
+  <li><a href="#basics-of-dark-theme-design" id="toc-basics-of-dark-theme-design" class="nav-link" data-scroll-target="#basics-of-dark-theme-design">Basics of dark theme design</a></li>
+  <li><a href="#tools-to-explore-palettes" id="toc-tools-to-explore-palettes" class="nav-link" data-scroll-target="#tools-to-explore-palettes">Tools to explore palettes</a></li>
+  </ul></li>
+  <li><a href="#color-variables" id="toc-color-variables" class="nav-link" data-scroll-target="#color-variables">Color variables</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+<!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
+<!-- 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title"> 
+-->
+<!-- <header id="title-block-header" class="quarto-title-block default page-columns"> -->
+<!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> -->
+
+
+
+<style>.color-preview {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  margin: 0 0.33em;
+  vertical-align: middle;
+  transition: transform 100ms ease-in-out;
+}
+.color-preview:hover {
+  cursor: pointer;
+  transform: scale(2);
+  transform-origin: 50% 50%;
+}</style>
+<!--`<span class="color-preview" style="background-color: 414073"></span><code>414073</code>`{=html}
+<span class="color-preview" style="background-color: #414073"></span><code>#414073</code>-->
+<section id="where-i-started" class="level1">
+<h1>Where I started</h1>
+<p>With Alison Hill’s <a href="https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/">Up and Running with Blogdown</a> post! <strong>Super helpful</strong>, though because I came to it 2.5 years late, it was more like ‘up and running with lots of water breaks’ because I had to stop and account for changes made to the Hugo Academic theme in the meantime.</p>
+<ul>
+<li>For example, prior to Academic version 4.6, custom CSS was added using the <code>plugins_css</code> option in <code>params.toml</code>, but <a href="https://sourcethemes.com/academic/docs/customization/#customize-style-css">in current version 4.8</a>, the theme supports SCSS (a superset of CSS) and a <strong>custom.scss</strong> file is added in the <code>assets/scss/</code> folder.</li>
+</ul>
+<p>The <a href="https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/#going-further">going futher</a> section in Alison’s post specifically talks about customizing the out-of-the-box theme and Alison directly links to her custom CSS file, which I closely referred to when changing colors in <a href="https://github.com/spcanelon/silvia/blob/master/assets/scss/custom.scss">my custom SCSS file</a>.</p>
+<p>Alison’s CSS helped me customize everything from text colors and fonts to alert colors and borders for Academic’s light mode. At this point I had the light mode looking the way I wanted but the dark mode still used out-of-the-box colors for the most part and they <strong><em>just didn’t go</em></strong>.</p>
+<p><img src="img/academic-minimal-dark-theme.png" title="Out-of-the-box colors included an eggplant page background with a light purple foreground. The issue I perceived was that these colors clashed with the navy blue and gold color changes I had made and was happy with in the light mode. I particularly was bothered by a cyan color highlight for code text" alt="Out-of-the-box colors included an eggplant page background with a light purple foreground. The issue I perceived was that these colors clashed with the navy blue and gold color changes I had made and was happy with in the light mode. I particularly was bothered by a cyan color highlight for code text" width="50%" style="display: block; margin: auto;"></p>
+<p>So I decided not to enable the dark-mode option in <strong>params.toml</strong> until I could figure out how to customize my stylesheet accordingly. That time has come because it turns out <a href="https://github.com/gcushen/hugo-academic/issues/988#issuecomment-475896178">it’s pretty straightforward</a>!</p>
+<p>The <a href="https://bookdown.org/yihui/blogdown/css.html">Blogdown book</a> does an excellent job summarizing what you need to know about CSS. This post builds on that a little by incorporating <a href="https://sass-lang.com/guide">features made possible by SCSS</a> including <strong>variables</strong>.</p>
+</section>
+<section id="choose-your-own-adventure" class="level1">
+<h1>Choose your own adventure</h1>
+<ol type="1">
+<li><strong>Check out the SCSS file</strong> linked above <i class="fas fa-hand-point-up"></i> to see how I customized my theme.</li>
+<li><strong>Keep reading</strong> to follow along and learn with me <i class="fas fa-user-friends"></i>.</li>
+</ol>
+</section>
+<section id="why-atom" class="level1">
+<h1>Why Atom?</h1>
+<p><a href="https://atom.io/">Atom</a> is a text editor that I like to use to <em>modify</em> any files in my website directory. I say modify because I much prefer to <em>create</em> content for posts like this one using the <a href="https://bookdown.org/yihui/blogdown/rstudio-ide.html">Blogdown addins in RStudio</a>. It’s such a breeze! But here’s why I think Atom is a fantastic companion to the RStudio IDE:</p>
+<ol type="1">
+<li><strong>Seeing your directory files is made friendly in Tree View</strong> when you open your website folder as a ‘project folder.’ You can just click on the file once to preview it and double-click if you want to actually open it. I find this to be really helpful when I can’t remember which file contains what I’m looking for because I don’t have to actually open each file to see what’s in it.</li>
+<li><strong>Searching for something specific is easy with the built-in search tool</strong>. I’ve used this many times when I can’t remember where that specific parameter (e.g.&nbsp;fonts) or file type (e.g.&nbsp;<code>.scss</code>) is located within my directory. I also find it super handy to find specific HTML color codes or color variables. This brings me to my most favorite feature in Atom…</li>
+<li><strong>The <a href="https://atom.io/packages/pigments">pigments</a> package!</strong> Like R, Atom has a universe of handy packages and <code>pigments</code> will <strong>display colors</strong> behind the code text that represents it. It’s kind of magical and has been a real game changer for me. Having this package will make customizing your scss file much easier on the eyes and brain.</li>
+</ol>
+<ul>
+<li>You may also choose to install the <a href="https://atom.io/packages/highlight-selected">highlight-selected</a> package to make highlighted text easier to spot throughout your file and the <a href="https://atom.io/packages/file-icons">file-icons</a> package to make it easier to discern between different file types in your tree view. You can install packages in <em>Atom &gt; Preferences &gt; Install</em>.</li>
+</ul>
+</section>
+<section id="adding-dark-mode-definitions-to-stylesheet" class="level1">
+<h1>Adding dark mode definitions to stylesheet</h1>
+<p>Looking through GitHub issues I found that including two sub-themes, one for light mode and one for dark mode, <a href="https://github.com/gcushen/hugo-academic/issues/995">may be considered for Academic in the future but is not a priority</a>. A related issue shared that if you use a custom CSS, you can <a href="https://github.com/gcushen/hugo-academic/issues/988">define <code>.dark .&lt;SELECTOR-NAME&gt; {...}</code> for dark mode</a>.</p>
+<p>Not knowing what all of the options were for dark mode, I took a look at the <strong>dark.scss</strong> dark mode stylesheet built in to Academic in <code>themes/hugo-academic/assets/scss/academic/</code> folder. You can see the <code>pigments</code> package in action here! It makes it easier to identify elements with colors that you want to change. I’m looking at you inline code text color <code>rgb(139, 233, 253)</code><span class="color-preview" style="background-color: rgb(139, 233, 253)"></span></p>
+<details>
+<summary>
+CSS code
+</summary>
+<p>Note that in SCSS syntax <code>//</code> indicates comments and <code>#</code> indicates hex codes</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.dark</span> pre<span class="op">,</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.dark</span> code {</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="fu">rgb(</span><span class="dv">139</span><span class="op">,</span> <span class="dv">233</span><span class="op">,</span> <span class="dv">253</span><span class="fu">)</span><span class="op">;</span> <span class="er">// cyan code text color</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background-color</span><span class="ch">:</span> <span class="fu">rgb(</span><span class="dv">68</span><span class="op">,</span> <span class="dv">71</span><span class="op">,</span> <span class="dv">90</span><span class="fu">)</span><span class="op">;</span> <span class="er">// light purple code background</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<p><img src="img/atom-inline-text-color.png" title="CSS code chunk styling inline code. The Atom editor enables viewers to see the color that hex and rgb color codes correspond to, as the background of the color code text. This screenshot demonstrates that the inline code text color was cyan and the inline code background was light purple." alt="CSS code chunk styling inline code. The Atom editor enables viewers to see the color that hex and rgb color codes correspond to, as the background of the color code text. This screenshot demonstrates that the inline code text color was cyan and the inline code background was light purple." width="726" style="display: block; margin: auto;"></p>
+<p>Another way to find the css for the element you want to change is to use your browser’s web inspector tool. In the screenshot below from Hugo Academic’s <a href="https://web.archive.org/web/20200512194921/https://sourcethemes.com/academic/docs/customization/">customization documentation (available in the Internet Archive)</a> I right-clicked on <strong>themes/academic/data/themes/minimal.toml</strong> and then clicked on “inspect element.” The element code was <code>.dark pre, .dark code</code> which you might recognize from the code in <strong>dark.scss</strong>.</p>
+<p><img src="img/web-element-inspector.png" title="A view of the Firefox web inspector inspecting some inline code available on the Hugo Academic documentation site which used the out-of-the-box dark mode colors. The inspector reveals that the selected text was styled by the CSS code chunk included earlier and includes color previews so you can visually identify elements by color." alt="A view of the Firefox web inspector inspecting some inline code available on the Hugo Academic documentation site which used the out-of-the-box dark mode colors. The inspector reveals that the selected text was styled by the CSS code chunk included earlier and includes color previews so you can visually identify elements by color." width="700px" style="display: block; margin: auto;"></p>
+<p>You can copy and paste this new <code>.dark</code> theme code into a new (or existing) <strong>custom.scss</strong> file saved in the <code>assets/scss/</code> folder of your directory to start seeing how changes you make affect the look of your site.</p>
+</section>
+<section id="choosing-dark-theme-colors" class="level1">
+<h1>Choosing dark theme colors</h1>
+<p>Alright. Now that we have some new dark theme code in our custom file, we can move on to the exciting task of <strong>choosing colors</strong>! If you’re looking for some inspiration, <a href="https://coolors.co/palettes/trending/dark">Coolors has some dark color palettes</a>:</p>
+<p><img src="img/coolors-dark-palettes.png" title="Six different palettes available under the &quot;Dark&quot; category in the Coolors galleries, which feature deeper colors" alt="Six different palettes available under the &quot;Dark&quot; category in the Coolors galleries, which feature deeper colors" width="732" style="display: block; margin: auto;"></p>
+<p>Coolors is also a great place to save colors into custom palettes. Here’s a basic example of mine:</p>
+<p><img src="img/coolors-my-basic-palette.png" title="My palette saved in Coolors, featuring a navy blue primary color with a darker and lighter variant, a gold secondary color also with variants, and a neutral off-white color between them" alt="My palette saved in Coolors, featuring a navy blue primary color with a darker and lighter variant, a gold secondary color also with variants, and a neutral off-white color between them" width="700px" style="display: block; margin: auto;"></p>
+<p>If you’re like me and want to design a dark theme that uses the primary and secondary colors you picked for your light theme, keep reading! I’m gonna share highlights from what I learned about dark theme design and how to ensure your color combinations meet <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines (WCAG)</a>.</p>
+<p>The bulk of what I learned came from the extensive Material Design resources, including (of course) the <a href="https://www.material.io/design/color/dark-theme.html">dark theme foundational material</a>, which will look familiar if you’ve ever used an Android device.</p>
+<section id="basics-of-dark-theme-design" class="level2">
+<h2 class="anchored" data-anchor-id="basics-of-dark-theme-design">Basics of dark theme design</h2>
+<ul>
+<li><p>The primary <strong>surface color</strong> for dark themes should be dark gray, rather than black. The recommended color is <code>#121212</code><span class="color-preview" style="background-color: #121212"></span></p></li>
+<li><p>As you layer components, surfaces with a higher elevation (closer to the hypothetical ‘light source’) should be lighter than those below it to create a visual hierarchy. This can be achieved by applying a semi-transparent white overlay to the primary dark gray surface.</p></li>
+</ul>
+<p><img src="img/material-surface-overlays.png" title="Ten different dark mode overlay examples from Material Design. The darkest/base layer contains 0% white overlay, elevation level 01 has 5% of a white overlay, level 02 has 7%, level 04 has 8%, level 05 has 9%, level 06 has 11%, level 08 has 12%, level 12 has 14%, level 16 has 15%, and level 24 has 16%" alt="Ten different dark mode overlay examples from Material Design. The darkest/base layer contains 0% white overlay, elevation level 01 has 5% of a white overlay, level 02 has 7%, level 04 has 8%, level 05 has 9%, level 06 has 11%, level 08 has 12%, level 12 has 14%, level 16 has 15%, and level 24 has 16%" width="524" style="display: block; margin: auto;"></p>
+<ul>
+<li>The primary <strong>text color</strong> for dark themes should not be 100% opaque white (i.e.&nbsp;<code>#FFFFFF</code><span class="color-preview" style="background-color: #FFFFFF; border: 2px solid gray;"></span>) because it can appear to bleed or blur against dark backgrounds and be difficult to read.</li>
+<li>Text hierarchy is established by controlling the opacity, for example:
+<ul>
+<li>High emphasis text is white with 87% opacity:<br><code>rgba(255, 255, 255, 0.87)</code><span class="color-preview" style="background-color: rgba(255, 255, 255, 0.87); border: 2px solid gray;"></span></li>
+<li>Medium emphasis is white with 60% opacity:<br><code>rgba(255, 255, 255, 0.60)</code><span class="color-preview" style="background-color: rgba(255, 255, 255, 0.60); border: 2px solid gray;"></span></li>
+<li>Disabled text is white with 38% opacity:<br><code>rgba(255, 255, 255, 0.38)</code><span class="color-preview" style="background-color: rgba(255, 255, 255, 0.38); border: 2px solid gray;"></span></li>
+</ul></li>
+<li>To meet WCAG AA standard, there must be a 4.5:1 contrast level between the body text and the dark theme surface at the highest/lightest elevation. The contrast level is 7:1 for the WCAG AAA standard.</li>
+</ul>
+</section>
+<section id="tools-to-explore-palettes" class="level2">
+<h2 class="anchored" data-anchor-id="tools-to-explore-palettes">Tools to explore palettes</h2>
+<p>Material Design has a <a href="https://material.io/design/color/the-color-system.html#tools-for-picking-colors">color palette generator</a> and a <a href="https://material.io/resources/color/">color tool</a> that can be used to dark and light variants of a color. I used the color tool to find a dark and light variant of my primary and secondary colors. The accessibility feature of the color tool is helpful to determine the minimum opacity for white text to ensure enough contrast. The <a href="https://coolors.co/contrast-checker">Coolors color contrast checker</a> is another great tool.</p>
+</section>
+</section>
+<section id="color-variables" class="level1">
+<h1>Color variables</h1>
+<p>One of the cool features of SCSS is the ability to use variables defined by prefix <code>$</code> (i.e.&nbsp;<code>$spc-primary: #122140;</code>. You can set your variables at the top of your SCSS file and use the variable name throughout the file. This makes it super easy to try out different dark mode colors without having to use find-and-replace. If you’re using the <code>pigments</code> package in Atom, it’ll even show you the variable colors in a dropdown!</p>
+<blockquote class="blockquote">
+<strong>Tip:</strong> I like using a bright color like
+
+<span style="background-color:#FDF4F4; color:#A90533">red </span>
+
+<p>to test color changes for different CSS elements because stands out and makes it easier to see what was modified.</p>
+</blockquote>
+<p>I defined my primary colors and variants, text colors, and various background colors as variables. And although dark gray (#121212) is recommended as a standard dark theme background, you can also create a custom background color by mixing it with your primary color. In my case I used <code>mix(#122140, #121212, 40)</code> to create a color that was 40% my primary color and 60% dark gray.</p>
+<blockquote class="blockquote">
+<p>I controlled white text opacity by using <code>rgba()</code> in CSS which accepts an alpha value between 0 and 1.</p>
+</blockquote>
+<p>Now, ideally I’d be able to define the result of this <code>mix()</code> as a color variable, but some CSS properties like <code>background-color</code> don’t recognize it. So I had to convert the result to a color code and define that as a variable instead. <code>pigments</code> made this conversion easy when I toggled the menu (Shift+Command+P on a Mac) and searched for the <code>pigments: convert</code> options.</p>
+<p><img src="img/atom-pigments-menu.png" title="The command palette in the Atom editor lets you search for packages and functions. When you type &quot;pigments: convert&quot; you can see the options like &quot;Pigments: Convert To Hex&quot;, &quot;Pigments: Convert to Rgba&quot;, etc." alt="The command palette in the Atom editor lets you search for packages and functions. When you type &quot;pigments: convert&quot; you can see the options like &quot;Pigments: Convert To Hex&quot;, &quot;Pigments: Convert to Rgba&quot;, etc." width="700px" style="display: block; margin: auto;"></p>
+<p>This <code>mix()</code> function also came in handy when defining background surfaces with semi-transparent white overlays.</p>
+<details>
+<summary>
+CSS code
+</summary>
+<p>Note that in SCSS syntax <code>//</code> indicates comments and <code>#</code> indicates hex codes</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">// COLOR CALCULATIONS</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">// below from mix($spc-primary, $spc-bkg-dark-std, 25)</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">// custom bkg</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="va">$spc-bkg-dark</span>: <span class="cn">#12151d</span><span class="op">;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">// below from mix($spc-primary, $spc-bkg-dark-std, 40)</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">// 00dp surface</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="va">$spc-00dp</span>: <span class="cn">#121824</span><span class="op">;</span>     </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">// below from mix($spc-00dp, white, 95)</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">// 00dp with 5% white overlay</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="va">$spc-01dp</span>: <span class="cn">#1d232e</span><span class="op">;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co">// below from mix($spc-00dp, white, 93)</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co">// 00dp with 7% white overlay</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="va">$spc-02dp</span>: <span class="cn">#222833</span><span class="op">;</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co">// below from mix($spc-00dp, white, 92)</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co">// 00dp with 8% white overlay</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="va">$spc-03dp</span>: <span class="cn">#242a35</span><span class="op">;</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co">// below from mix($spc-00dp, white, 91)</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co">// 00dp with 9% white overlay</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="va">$spc-04dp</span>: <span class="cn">#272c37</span><span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<p><img src="img/atom-background-color-definitions.png" title="Atom editor showing the color variables I assigned to different elevation levels of my base background color. The mix() SCSS function let me mix by base dark color with white to create the effect of a white overlay as recommended by Material Design." alt="Atom editor showing the color variables I assigned to different elevation levels of my base background color. The mix() SCSS function let me mix by base dark color with white to create the effect of a white overlay as recommended by Material Design." width="700px" style="display: block; margin: auto;"></p>
+<p><strong>And that’s a wrap</strong>. Have fun building your new custom dark theme!</p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2020" class="csl-entry quarto-appendix-citeas" role="listitem">
+Canelón, Silvia. 2020. <span>“Customizing Hugo Academic’s Dark Mode with
+Help from Atom.”</span> June 16, 2020. <a href="https://silviacanelon.com/blog/2020-05-26-dark-mode-custom-with-atom/">https://silviacanelon.com/blog/2020-05-26-dark-mode-custom-with-atom/</a>.
+</div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/silviacanelon\.com");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://utteranc.es/client.js" repo="spcanelon/silvia" issue-term="title" theme="boxy-light" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2023 Silvia Canelón ∙ Made with <a href="https://quarto.org">Quarto</a></p>
+</div>   
+    <div class="nav-footer-center">
+<p><a class="link-dark me-1" href="../../accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener"><i class="fa-solid fa-universal-access" aria-label="universal-access"></i></a> <a class="link-dark me-1" href="https://spcanelon.substack.com" title="Substack" target="_blank" rel="noopener"><i class="bi-substack " style="" role="img" aria-hidden="true"></i></a> <a class="link-dark me-1" href="https://github.com/spcanelon" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/spcanelon" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> <a class="link-dark me-1" href="https://hachyderm.io/@spcanelon" title="mastodon" target="_blank" rel="noopener"><i class="fa-brands fa-mastodon" aria-label="mastodon"></i></a> <a class="link-dark me-1" href="https://orcid.org/0000-0003-1709-1394" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid"></i></a> <a class="link-dark me-1" href="https://scholar.google.com/citations?user=GAzkvpcAAAAJ&amp;hl=en&amp;oi=ao" title="Google Scholar" target="_blank" rel="noopener"><i class="ai  ai-google-scholar"></i></a></p>
+</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../accessibility.html">
+<p>Accessibility</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../contact.html">
+<p>Contact</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../license.html">
+<p>License</p>
+</a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="../../blog/index.xml">
+      <i class="bi bi-rss" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
