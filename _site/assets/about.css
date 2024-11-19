@@ -1,0 +1,83 @@
+@import url(silvia/colors.scss);
+
+/* title and subtitle */
+#title-block-header {
+  margin-bottom: 0px;
+}
+
+/* see all links */
+.about-links.subtitle {
+  font-family: "Red Hat Text"
+}
+
+/* social links: block of links */
+.about-entity .about-links {
+  justify-content: center !important;
+  column-gap: 0em !important;
+  font-size: 1.2em !important;
+}
+
+/* social links: individual links */
+.about-entity .about-link {
+  padding: 0.25em 0.25em !important;
+  border: none !important;  
+}
+
+/* about area */
+.about-entity {
+  background-color: var(--spc-bg-1);
+  padding: 3em 0em 3em 0em !important;
+  margin: 0em 2em 0em 2em;
+  border-radius: 5px;
+}
+
+/* mobile query up for screens up to ~992px wide */
+@media screen and (max-width: 991.98px) {
+  /* wrap lately section */
+  #lately .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* listings */
+  #blog, #talks, #publications, #projects {
+    flex-basis: 40% !important;
+    flex-grow: 1;
+  }
+
+  /* social links: block of links */
+  .about-entity .about-links {
+    font-size: 1.2em !important;
+  }
+}
+
+/* mobile query up for screens up to ~576px wide */
+@media screen and (max-width: 576px) {
+
+  /* wrap about me section */
+  #about-me .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* wrap lately section */
+  #lately .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* listings */
+  #blog, #talks, #publications, #projects {
+    flex-basis: 100% !important;
+  }
+
+  /* social links: block of links */
+  .about-entity .about-links {
+    font-size: 1em !important;
+  }
+
+  /* about area */
+  .about-entity {
+    margin: 0em 0em 0em 0em;
+  }
+}

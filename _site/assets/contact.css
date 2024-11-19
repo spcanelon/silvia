@@ -1,0 +1,32 @@
+#form {
+  margin-top: 2em;
+}
+
+/* mobile query up for screens up to ~992px wide */
+@media screen and (max-width: 991.98px) {
+  /* wrap lately section */
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  #form {
+    margin-top: 0em;
+    flex-basis: 100% !important;
+    flex-grow: 1;
+  }
+}
+
+/* 
+#custom-substack-embed p.success {
+  color: #002642 !important;
+  font-family: "Red Hat Text";
+  font-weight: 400;
+}
+
+
+#custom-substack-embed .custom-substack-widget.csw-theme-custom {
+  font-family: "Red Hat Text";
+  font-weight: 400;
+}
+*/
