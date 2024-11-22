@@ -26,13 +26,13 @@ You can use this form to contact me about speaking engagements, collaborations, 
 I also love hearing if my educational materials have been helpful for you, and how they could be improved &#8212; particularly if they could be made more accessible {{< bi heart-fill >}}
 
 <a class="link-dark me-1" href="/accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener">{{< fa universal-access >}}</a>
-<a class="link-dark me-1" href="https://spcanelon.substack.com" title="Substack" target="_blank" rel="noopener">{{< bi substack >}}</a>
-<a class="link-dark me-1" href="https://github.com/spcanelon" title="github" target="_blank" rel="noopener">{{< fa brands github >}}</a>
+<a class="link-dark me-1" href="https://bsky.app/profile/silviacanelon.com" title="bluesky" target="_blank" rel="noopener">{{< fa brands bluesky >}}</a>
 <a class="link-dark me-1" href="https://linkedin.com/in/spcanelon" title="LinkedIn" target="_blank" rel="noopener">{{< fa brands linkedin >}}</a>
-<a class="link-dark me-1" href="https://hachyderm.io/@spcanelon" title="mastodon" target="_blank" rel="noopener">{{< fa brands mastodon >}}</a>
+<a class="link-dark me-1" href="https://github.com/spcanelon" title="github" target="_blank" rel="noopener">{{< fa brands github >}}</a>
+<!-- <a class="link-dark me-1" href="https://hachyderm.io/@spcanelon" title="mastodon" target="_blank" rel="noopener">{{< fa brands mastodon >}}</a> -->
 <a class="link-dark me-1" href="https://orcid.org/0000-0003-1709-1394" title="orcid" target="_blank" rel="noopener">{{< ai orcid >}}</a>
 <a class="link-dark me-1" href="https://scholar.google.com/citations?user=GAzkvpcAAAAJ&hl=en&oi=ao" title="Google Scholar" target="_blank"rel="noopener">{{< ai google-scholar >}}</a>
-
+<a class="link-dark me-1" href="https://spcanelon.substack.com" title="Substack" target="_blank" rel="noopener">{{< bi substack >}}</a>
 
 :::
 <!-- source: https://github.com/mccarthy-m-g/tidytales/blob/main/about/index.qmd#L24-L46 -->
@@ -61,7 +61,7 @@ I also love hearing if my educational materials have been helpful for you, and h
 
 ::: {.g-col-5 #substack}
 
-# Sign-up for my newsletter {{< bi substack >}}
+# Sign up for my newsletter {{< bi substack >}}
 
 You can use this form to sign up to receive a little e-mail note from me anytime I post something new on my website.
 
