@@ -7,7 +7,7 @@ author:
 date: '2019-11-20'
 slug: amia-annual-symposium
 categories:
-  - Research
+  - research
   - pregnancy
   - AMIA
   - EHR

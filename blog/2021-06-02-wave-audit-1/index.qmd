@@ -6,8 +6,8 @@ date-modified: 2021-06-07
 slug: audit-1
 image: featured.jpg
 categories: 
-  - Website
-  - Education
+  - website
+  - education
   - a11y
 alias:
   - /blog/2021-a11y-website/01-wave-audit-1/

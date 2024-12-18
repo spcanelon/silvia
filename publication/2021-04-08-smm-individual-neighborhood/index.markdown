@@ -12,10 +12,10 @@ slug: smm-individual-neighborhood
 alias:
   - /publication/smm-individual-neighborhood/
 categories:
-  - Research
+  - research
+  - EHR
   - pregnancy
   - health disparities
-  - EHR
 description: 'Obstetrics & Gynecology'
 # publication_short: 'Obstet Gynecol'
 summary: 'Study showing that neighborhood-level risk factors are independent predictors of Severe Maternal Morbidity, providing further evidence that racial disparities in maternal outcomes are symptoms of historical and structural racism.'

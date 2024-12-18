@@ -10,9 +10,8 @@ alias:
   - /project/presentable-user2021/
 categories:
   - R
+  - education
   - xaringan
-  - R
-  - Education
 subtitle: "Making Great Slides with xaringan"
 description: "A three hour intermediate xaringan tutorial created for [useR!2021](https://user2021.r-project.org/)"
 abstract: ''

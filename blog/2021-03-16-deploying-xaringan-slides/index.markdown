@@ -9,7 +9,7 @@ alias:
   - /blog/2021-03-16-deploying-xaringan-slides/
 categories:
   - R
-  - Tutorial
+  - tutorial
   - xaringan
   - git
 subtitle: 'A ten-step workflow for creating an HTML xaringan slide deck and deploying it to the web using GitHub Pages'

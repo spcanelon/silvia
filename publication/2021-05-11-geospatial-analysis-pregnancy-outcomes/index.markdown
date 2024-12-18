@@ -14,10 +14,10 @@ slug: geospatial-analysis-pregnancy-outcomes
 alias:
   - /publication/geospatial-analysis-pregnancy-outcomes/
 categories:
-  - Research
+  - research
+  - EHR
   - pregnancy
   - health disparities
-  - EHR
   - preprint
 description: 'arXiv'
 subtitle: 'Study describing a Bayesian hierarchichal modeling framework used to explore which neighborhood-level factors and patient-level features were most informative for preterm birth and stillbirth pregnancy outcomes.'

@@ -14,9 +14,9 @@ slug: ehr-environmental-exposure-pfas
 alias:
   - /publication/ehr-environmental-exposure-pfas/
 categories:
-  - Research
-  - environment
+  - research
   - EHR
+  - environment
   - PFAS
 description: 'npj Digital Medicine'
 summary: 'Proof-of-concept study detailing how Electronic Health Record (EHR) data can be leveraged to study the impacts of environmental disasters like widespread exposure perfluoroalkyl substances (PFAS).'

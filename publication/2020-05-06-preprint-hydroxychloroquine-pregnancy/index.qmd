@@ -10,9 +10,9 @@ slug: preprint-hydroxychloroquine-pregnancy
 alias:
   - /publication/preprint-hydroxychloroquine-pregnancy/
 categories:
-  - Research
+  - research
   - EHR
-  - 'covid-19'
+  - covid-19
   - medications
   - pregnancy
   - preprint

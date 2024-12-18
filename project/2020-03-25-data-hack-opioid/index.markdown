@@ -18,7 +18,7 @@ image: featured.png
 alias:
   - /publication/data-hack-opioid/
 categories:
-  - Education
+  - education
   - data hack
   - opioid
 summary: 'Code for Philly [2020 Opioid Data Hackathon](https://github.com/CodeForPhilly/datahack2020#2020-opioid-data-hackathon) project to better understand recovery from opioid use disorder.'

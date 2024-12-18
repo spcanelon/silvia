@@ -13,7 +13,7 @@ date: '2024-05-27'
 slug: tbi-definitions
 image: featured.png
 categories:
-  - Research 
+  - research 
   - EHR
   - TBI
 description: 'Injury Prevention'

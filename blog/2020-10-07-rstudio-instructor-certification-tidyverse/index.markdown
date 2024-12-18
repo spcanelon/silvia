@@ -6,7 +6,7 @@ image: featured.jpg
 categories:
   - R
   - RStudio
-  - Education
+  - education
   - tidyverse
 slug: rstudio-instructor-certification-tidyverse
 alias:

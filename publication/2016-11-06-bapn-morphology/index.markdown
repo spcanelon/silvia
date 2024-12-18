@@ -9,9 +9,9 @@ slug: bapn-morphology
 alias:
   - /publication/bapn-morphology/
 categories:
-  - Research
+  - research
   - osteoblasts
-  - Type I collagen
+  - type I collagen
   - BAPN
   - AFM
   - crosslinking

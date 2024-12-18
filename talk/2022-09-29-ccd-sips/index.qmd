@@ -8,9 +8,9 @@ slug: ccd-sips
 image: featured.png
 categories:
   - R
-  - Workshop
-  - Education
   - R-Ladies
+  - education
+  - workshop
   - rvest
   - tidygeocoder
   - leaflet

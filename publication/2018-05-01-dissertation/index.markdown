@@ -8,9 +8,9 @@ slug: dissertation
 alias:
   - /publication/dissertation/
 categories:
-  - Research
+  - research
   - osteoblasts
-  - Type I collagen
+  - type I collagen
   - BAPN
   - AFM
   - crosslinking

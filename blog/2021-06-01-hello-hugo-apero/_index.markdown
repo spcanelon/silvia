@@ -8,12 +8,11 @@ alias:
   - /blog/2021-06-01-hello-hugo-apero/
 categories:
   - R
-  - Website
-  - Tutorial
-  - R
+  - website
+  - tutorial
   - git
   - blogdown
-  - Hugo
+  - hugo
 subtitle: 'A tutorial on how to take your personal Hugo Academic/Wowchemy website and convert it to the Hugo Apéro theme'
 summary: 'A tutorial on how to take your personal Hugo Academic/Wowchemy website and convert it to the Hugo Apéro theme'
 links:

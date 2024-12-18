@@ -8,7 +8,7 @@ author:
 date: '2021-11-24'
 slug: sct-stillbirth
 categories:
-  - Research
+  - research
   - EHR
   - pregnancy
   - sickle cell disease

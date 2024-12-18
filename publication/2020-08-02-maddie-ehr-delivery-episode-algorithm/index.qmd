@@ -13,11 +13,11 @@ alias:
 categories:
   - Research
 tags:
+  - research
+  - EHR
   - pregnancy
   - algorithm
   - AMIA
-  - EHR
-  - R
 description: 'International Journal of Biomedical Informatics'
 # publication_short: 'Int J Med Inform'
 subtitle: 'An R algorithm designed to extract delivery episode details from structured Electronic Health Record data.'

@@ -6,10 +6,10 @@ date: '2022-01-18'
 slug: hello-umami
 categories:
   - R
-  - Website
+  - website
   - blogdown
   - test
-  - Hugo
+  - hugo
 subtitle: 'A use case for adding Umami web analytics to a blogdown site and deploying using Railway.'
 summary: 'A use case for adding Umami web analytics to a blogdown site and deploying using Railway.'
 links:

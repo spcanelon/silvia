@@ -25,7 +25,7 @@ author:
 date: '2022-07-21'
 slug: ten-simple-rules-inclusive-conference
 categories:
-  - Education
+  - education
   - community
 description: 'PLOS Computational Biology'
 subtitle: 'Community-led publication describing ten guidelines for hosting an inclusive conference'

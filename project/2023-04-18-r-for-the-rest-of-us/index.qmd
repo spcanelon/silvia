@@ -7,7 +7,6 @@ image: featured.jpg
 categories:
   - R
   - xaringan
-  - R Markdown
   - podcast
 subtitle: "An interview with David Keyes of R for the Rest of Us, about using the xaringan package to build captivating, audience-friendly presentations directly from R Markdown."
 description: ''

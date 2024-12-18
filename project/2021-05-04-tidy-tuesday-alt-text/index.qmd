@@ -5,11 +5,11 @@ date: 2021-05-04
 author: Silvia Canelón
 image: featured.png
 categories:
+  - R
   - TidyTuesday
   - TidyTuesdayAltText
   - accessibility
-  - R
-  - Package
+  - package
 links:
 - icon: box
   icon_pack: fas

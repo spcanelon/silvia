@@ -7,7 +7,7 @@ date: 2024-03-26T18:00:00
 slug: env-justice
 image: featured.png
 categories:
-  - Research
+  - research
 ---
 
 Source: Climate Leaders @Penn on [LinkedIn](https://www.linkedin.com/posts/climate-leaders-penn_environmental-justice-and-policy-panel-activity-7176237910923325440-SspR?utm_source=share&utm_medium=member_desktop)

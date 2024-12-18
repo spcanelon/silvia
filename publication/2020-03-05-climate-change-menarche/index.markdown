@@ -9,7 +9,7 @@ slug: climate-change-menarche
 alias:
   - /publication/climate-change-menarche/
 categories:
-  - Research
+  - research
   - climate change
   - menstruation
 description: 'International Journal of Environmental Research and Public Health'

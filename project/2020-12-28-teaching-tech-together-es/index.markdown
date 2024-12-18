@@ -7,8 +7,7 @@ image: featured.png
 alias:
   - /project/teaching-tech-together-es/
 categories:
-  - Education
-  - Español
+  - education
 subtitle: 'Traducción colaborativa al castellano del libro “[Teaching Tech Together](https://teachtogether.tech/). How to create and deliver lessons that work and build a teaching community around them" escrito por Greg Wilson'
 excerpt: 'Traducción colaborativa al castellano del libro "[Teaching Tech Together](https://teachtogether.tech/). How to create and deliver lessons that work and build a teaching community around them" escrito por Greg Wilson'
 description: Enseñar Tecnología en Comunidad. Cómo crear lecciones que funcionen y construir una comunidad docente alrededor 

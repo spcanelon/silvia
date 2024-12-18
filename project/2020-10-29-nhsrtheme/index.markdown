@@ -6,7 +6,7 @@ slug: nhsrtheme
 image: featured.png
 alias:
   - /project/nhsrtheme/
-tags:
+categories:
   - R
   - xaringan
   - css

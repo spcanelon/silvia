@@ -8,7 +8,7 @@ slug: ccd-sips
 image: featured.png
 categories:
   - R
-  - Tutorial
+  - tutorial
 tags:
   - R
   - maps

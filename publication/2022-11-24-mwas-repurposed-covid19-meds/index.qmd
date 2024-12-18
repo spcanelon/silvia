@@ -8,9 +8,9 @@ author:
 date: '2022-11-24'
 slug: mwas-repurposed-covid19-meds 
 categories:
-  - Research 
-  - covid-19
+  - research
   - EHR
+  - covid-19
   - pregnancy
   - medications
 description: 'Scientific Reports'

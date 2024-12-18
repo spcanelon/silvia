@@ -6,7 +6,7 @@ date: 2022-02-11T12:00:00
 slug: tdw-ehr-lessons
 image: featured.png
 categories:
-  - Research
+  - research
   - EHR
 # event: "Toronto Data Workshop"
 # event_url: https://rohanalexander.com/events-tdw.html#section-2

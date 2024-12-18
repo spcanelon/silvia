@@ -8,7 +8,7 @@ alias:
   - /blog/trello-to-airtable
 categories:
   - R
-  - Tutorial
+  - tutorial
   - json
   - jsonlite
   - tidyverse

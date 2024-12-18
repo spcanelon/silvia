@@ -5,12 +5,12 @@ date: '2020-06-16'
 image: featured.png
 slug: dark-theme-custom-with-atom
 categories:
-  - Website
-  - Tutorial
-  - Atom
+  - website
+  - tutorial
+  - atom
   - blogdown
-  - Hugo
-  - CSS
+  - hHugo
+  - css
 alias:
   - /blog/dark-theme-custom-with-atom/
 subtitle: Tutorial on how to customize the dark mode in Hugo's Academic theme with help from the Atom text editor package Pigments.

@@ -8,7 +8,7 @@ date: 2023-10-11T15:00:00
 slug: epis4equity
 image: featured.png
 categories:
-  - Research
+  - research
 ---
 
 ## Projects highlighted

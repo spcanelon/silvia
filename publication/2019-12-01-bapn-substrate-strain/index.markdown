@@ -9,9 +9,9 @@ slug: bapn-substrate-strain
 alias:
   - /publication/bapn-substrate-strain/
 categories:
-  - Research
+  - research
   - osteoblasts
-  - Type I collagen
+  - type I collagen
   - BAPN
   - AFM
   - crosslinking

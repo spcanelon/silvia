@@ -8,7 +8,7 @@ date: 2022-04-27T10:00:00
 slug: dbei-research-day
 image: featured.png
 categories:
-  - Research
+  - research
   - EHR
   - TBI
 # event: "2022 DBEI & CCEB Research Day"

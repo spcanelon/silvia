@@ -8,7 +8,8 @@ date: 2024-07-10T12:00:00
 slug: data-equity-ldi-sumr
 image: featured.png
 categories:
-  - Research
+  - research
+  - data viz
 links:
 - icon: filetype-pdf
   name: slides

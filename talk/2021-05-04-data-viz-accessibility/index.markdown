@@ -11,11 +11,12 @@ alias:
   - /talk/2021-05-04-data-viz-accessibility/
 categories:
   - R
-  - Education
+  - education
   - TidyTuesday
   - TidyTuesdayAltText
   - rtweet
   - RSelenium
+  - data viz
   - accessibility
 # event: "csv,conf,v6"
 # event_url: https://www.eventbrite.com/e/csvconfv6-tickets-144250211265

@@ -9,8 +9,8 @@ alias:
   - /talk/2021-02-18-r-teaching-panel/
 categories:
   - R
-  - Education
   - R-Ladies
+  - education
 subtitle: An R-Ladies Philly panel and discussion event on R instruction and education.
 description:  An R-Ladies Philly panel and discussion event on R instruction and education.
 # event: R-Ladies Philly Meetup

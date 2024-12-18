@@ -11,8 +11,7 @@ image: featured.png
 alias:
   - /talk/2021-03-22-amia-informatics-summit/
 categories:
-  - Research
-tags:
+  - research
   - EHR
   - pregnancy
   - sickle cell disease

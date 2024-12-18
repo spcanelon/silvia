@@ -8,7 +8,7 @@ author:
 date: '2022-06-07'
 slug: mwas-multiple-birth
 categories:
-  - Research
+  - research
   - EHR
   - pregnancy
   - medications
