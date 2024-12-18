@@ -12,3 +12,7 @@ Thumbs.db
 /.luarc.json
 
 /assets/silvia/
+
+/blog/2024-11-27-nearby-parks/data/
+/blog/2024-11-27-tree-canopy/data/
+/blog/2024-12-17-causality-311/data/

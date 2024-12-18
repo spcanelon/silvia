@@ -1,0 +1,15 @@
+{
+  "hash": "aeb5b3ba9afb36115df3c5882c9cb42e",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: 'Using spatial analysis to find tree canopy cover'\nauthor: Silvia Canelón\ndate: '2024-11-27'\nimage: featured.png\ncategories:\n  - R\n  - tutorial\n  - maps\n  - sf\n  - leaflet\n  - ggmap \n  - greenspace\nsubtitle: >\n  An R tutorial on finding vector polygon intersections using spatial tools.\ndescription: '' # Text that shows below the tags, not on listing page\nlinks:\n- icon: pin-map-fill\n  name: Collection of maps\n  url: /project/2024-06-16-ccd-sips\n---\n\n\n\n\n\n\n## Notes\n\n- [GitHub - ivelasq/leaidr: An R Package for U.S. School District Shapefiles](https://github.com/ivelasq/leaidr) -- school district shape files\n- [9 Walkthrough 3: Using school-level aggregate data to illuminate educational inequities | Data Science in Education Using R](https://datascienceineducation.com/c09#data-sources-2) - data sources for aggregate datasets related to education\n- [GitHub - data-edu/dataedu: An R package associated with the Data Science in Education Using R book](https://github.com/data-edu/dataedu) - Data Edu package\n- [Schools Parcels - OpenDataPhilly](https://opendataphilly.org/datasets/schools-parcels/)\n- [Schools - OpenDataPhilly](https://opendataphilly.org/datasets/schools/)\n- [PPR Tree Canopy - OpenDataPhilly](https://opendataphilly.org/datasets/ppr-tree-canopy/)\n- [OSF | PAD-US-AR](https://osf.io/pwdsg/)\n\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors\n```\n\n\n:::\n\n```{.r .cell-code}\nlibrary(sf)\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\nLinking to GEOS 3.11.0, GDAL 3.5.3, PROJ 9.1.0; sf_use_s2() is TRUE\n```\n\n\n:::\n:::\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

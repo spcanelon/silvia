@@ -1,0 +1,77 @@
+---
+title: 'Exploring causality in 311 calls'
+author: Silvia Canelón
+date: '2024-12-17'
+image: featured.png
+categories:
+  - R
+  - tutorial
+  - greenspace
+  - maps
+  - rspatial
+  - sf
+  - mapview
+subtitle: >
+  Using causal inference methodology to explore the relationship between X and Y.
+description: '' # Text that shows below the tags, not on listing page
+# links:
+# - icon: pin-map-fill
+#   name: Collection of maps
+#   url: /project/2024-06-16-ccd-sips
+draft: true
+---
+
+
+## Notes
+
+- [GitHub - ivelasq/leaidr: An R Package for U.S. School District Shapefiles](https://github.com/ivelasq/leaidr) -- school district shape files
+- [9 Walkthrough 3: Using school-level aggregate data to illuminate educational inequities | Data Science in Education Using R](https://datascienceineducation.com/c09#data-sources-2) - data sources for aggregate datasets related to education
+- [GitHub - data-edu/dataedu: An R package associated with the Data Science in Education Using R book](https://github.com/data-edu/dataedu) - Data Edu package
+- [Schools Parcels - OpenDataPhilly](https://opendataphilly.org/datasets/schools-parcels/)
+- [Schools - OpenDataPhilly](https://opendataphilly.org/datasets/schools/)
+- [PPR Tree Canopy - OpenDataPhilly](https://opendataphilly.org/datasets/ppr-tree-canopy/)
+- [OSF | PAD-US-AR](https://osf.io/pwdsg/)
+- Research:
+  - [Urban Greenspaces: Bridging Mental Health Disparities | US Forest Service Research and Development](https://research.fs.usda.gov/nrs/projects/urbangreenspaces#research) - "Researchers found that higher levels of residential tree cover, particularly within a 250-meter radius of an individuals' home, were associated with significantly better mental health. "
+
+```{r setup}
+#| include: false
+library(tidyverse)
+library(sf)
+library(mapview)
+
+data_dir <- "/Users/scanelon/Sync/Repos/3-Resources/Data"
+```
+
+```{r import}
+#| include: false
+
+requests <- read_sf(paste(data_dir, "raw", "Open Data Philly", "311", "requests_2024", "public_cases_fc.shp", sep = "/"))
+
+```
+
+```{r}
+requests_trim <-
+  requests |> 
+  filter(agency_res)
+
+requests_2024 |> 
+  st_drop_geometry() |> 
+  gtsummary::tbl_summary(include = c(service_name, agency_responsible),
+                         sort = list(everything() ~ c("frequency")))
+
+requests_2024 |> 
+  filter(agency_responsible == "Parks & Recreation") |> 
+  gtsummary::tbl_summary(include = c(service_name),
+                         sort = list(everything() ~ c("frequency")))
+```
+
+
+
+```{r export}
+#| include: false
+
+st_write(obj = schools,
+         dsn = paste(data_dir, "clean", "Open Data Philly", "schools", "schools_parcels.gpkg", sep = "/"))
+```
+

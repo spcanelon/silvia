@@ -1,0 +1,52 @@
+---
+title: 'Using spatial analysis to find tree canopy cover'
+author: Silvia Canelón
+date: '2024-11-27'
+image: featured.png
+categories:
+  - R
+  - tutorial
+  - maps
+  - sf
+  - leaflet
+  - ggmap 
+  - greenspace
+subtitle: >
+  An R tutorial on finding vector polygon intersections using spatial tools.
+description: '' # Text that shows below the tags, not on listing page
+links:
+- icon: pin-map-fill
+  name: Collection of maps
+  url: /project/2024-06-16-ccd-sips
+draft: true
+---
+
+
+## Notes
+
+- [GitHub - ivelasq/leaidr: An R Package for U.S. School District Shapefiles](https://github.com/ivelasq/leaidr) -- school district shape files
+- [9 Walkthrough 3: Using school-level aggregate data to illuminate educational inequities | Data Science in Education Using R](https://datascienceineducation.com/c09#data-sources-2) - data sources for aggregate datasets related to education
+- [GitHub - data-edu/dataedu: An R package associated with the Data Science in Education Using R book](https://github.com/data-edu/dataedu) - Data Edu package
+- [Schools Parcels - OpenDataPhilly](https://opendataphilly.org/datasets/schools-parcels/)
+- [Schools - OpenDataPhilly](https://opendataphilly.org/datasets/schools/)
+- [PPR Tree Canopy - OpenDataPhilly](https://opendataphilly.org/datasets/ppr-tree-canopy/)
+- [OSF | PAD-US-AR](https://osf.io/pwdsg/)
+
+```{r setup}
+library(tidyverse)
+library(sf)
+```
+
+```{r import}
+#| include: false
+
+tree_canopy_2008_2018 <- read_sf("/Users/scanelon/Sync/Repos/3-Resources/Data/raw/Open Data Philly/tree-canopy/TreeCanopyChange_2008_2018.geojson")
+```
+
+```{r wrangling}
+#| include: false
+tree_canopy_2018 <-
+  tree_canopy_2008_2018 |> 
+  filter(CLASS_NAME %in% c("No Change", "Gain"))
+```
+
