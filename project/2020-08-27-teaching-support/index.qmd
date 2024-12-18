@@ -1,0 +1,44 @@
+---
+title: "Teaching support"
+subtitle: |
+  A list of coding workshops that I have supported.
+description: | 
+  Artwork in banner illustrated by [Alison Horst](https://allisonhorst.com/data-science-art)<br>Alt text: Header text "R learners" above five friendly monsters holding up signs that together read “we believe in you.”
+date: 2020-08-27
+date-modified: 2023-08-18 
+listing:
+  contents:
+    - "metadata.yml"
+  field-display-names: 
+    title: "Workshop"
+    subtitle: "Context"
+    author: "Instructor"
+  type: table
+  fields: [date, subtitle, author, title, image]
+  sort: "date desc"
+  image-height: 100px
+  image-placeholder: featured.png
+  categories: false
+categories:
+  - R
+  - education
+  - tidyverse
+  - quarto
+  - tidymodels
+page-layout: article
+image: featured.png
+# page-layout: full
+# include-in-header: assets/umami.html
+# execute: 
+#   freeze: false
+#   warning: false
+#   echo: false
+
+# title-block-banner: false
+
+# header-includes: >
+#   <link rel="stylesheet" href="assets/listing-default.css">
+# resources:
+#   - assets/listing-default.css
+---
+

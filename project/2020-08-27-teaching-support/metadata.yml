@@ -1,0 +1,51 @@
+- title: "[Machine learning: Advanced tidymodels](https://workshops.tidymodels.org/archive/2023-09-posit-conf/#advanced-tidymodels-1)"
+  subtitle: "Posit::conf(2023)<br>_Chicago, IL_"
+  author: Max Kuhn
+  date: 2023-09-18
+  image: img/featured-20230918.png
+  categories:
+   - R
+   - tidymodels
+- title: "[Machine learning: introduction to tidymodels](https://workshops.tidymodels.org/archive/2023-09-posit-conf/#introduction-to-tidymodels-1)"
+  subtitle: "Posit::conf(2023)<br>_Chicago, IL_"
+  author:
+    - Hannah Frick
+    - Simon Couch
+    - Emil Hvitfeldt
+  date: 2023-09-17
+  image: img/featured-20230917.png
+  categories:
+    - R
+    - tidymodels
+- title: "[From R Markdown to Quarto](https://rstudio-conf-2022.github.io/rmd-to-quarto/)"
+  subtitle: "RStudio::conf(2022)<br>_National Harbor, MD_"
+  author: Andrew Bray
+  date: 2022-07-25
+  image: img/featured-20220725.png
+  categories:
+    - R
+    - quarto
+- title: "[CHOP R 101: Intro to R for Clinicians](https://skadauke.github.io/intro-to-r-for-clinicians-chop/)"
+  subtitle: "Children's Hospital of Philadelphia<br>_Virtual_"
+  author: Stephen Kadauke
+  date: 2020-10-20
+  image: img/featured-20201020.png
+  categories:
+    - R
+    - tidyverse
+- title: "[R 201: Intro to Tidymodels](https://tmv.netlify.app/site/)"
+  subtitle: "R/Medicine Conference<br>_Virtual_"
+  author: Alison Hill
+  date: 2020-08-27
+  image: img/featured-20200827-tidymodels.png
+  categories:
+    - R
+    - tidymodels
+- title: "[R 101: Intro to R for Clinicians](https://skadauke.github.io/rmed2020-101-site/)"
+  subtitle: "R/Medicine Conference<br>_Virtual_"
+  author: Stephen Kadauke
+  date: 2020-08-27
+  image: img/featured-20200827-tidyverse.png
+  categories:
+    - R
+    - tidyverse
