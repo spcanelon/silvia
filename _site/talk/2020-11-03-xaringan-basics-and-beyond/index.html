@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.54">
-
+<meta name="generator" content="quarto-1.6.39">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-<meta name="author" content="Silvia Canelón">
 <meta name="dcterms.date" content="2020-11-03">
-<meta name="description" content="NHS-R Conference 2020">
-
+<meta name="description" content="An introduction to xaringan for presentations, created for the NHS-R Community 2020 Virtual Conference">
 <title>Sharing Your Work with xaringan: The Basics and Beyond – Silvia Canelón</title>
 <style>
 code{white-space: pre-wrap;}
@@ -25,7 +21,6 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 
-
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
@@ -39,18 +34,20 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-4798f49a90c852830ec6262f6cac104c.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-ba45ce9dc5cd1a65c393561f93ac8f81.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-ee1fb94ed73a03fd99aafc7557ba3b54.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-b46977b051dc0d7981d6964f332a6c3e.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/bootstrap-icons-1.9.1/all.css" rel="stylesheet">
-<script id="quarto-search-options" type="application/json">{
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -76,14 +73,10 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-<!-- umami cloud -->
-<script async="" src="https://analytics.umami.is/script.js" data-website-id="6ba73b87-31aa-44ac-8d5e-e0dad5760753" data-do-not-track="true">
+}</script><!-- umami cloud --><script async="" src="https://analytics.umami.is/script.js" data-website-id="6ba73b87-31aa-44ac-8d5e-e0dad5760753" data-do-not-track="true">
 </script>
-
-
 <meta name="twitter:title" content="Sharing Your Work with xaringan: The Basics and Beyond">
-<meta name="twitter:description" content="NHS-R Conference 2020">
+<meta name="twitter:description" content="An introduction to xaringan for presentations, created for the NHS-R Community 2020 Virtual Conference">
 <meta name="twitter:image" content="https://silviacanelon.com/talk/2020-11-03-xaringan-basics-and-beyond/featured.png">
 <meta name="twitter:creator" content="@spcanelon">
 <meta name="twitter:site" content="@spcanelon">
@@ -91,17 +84,13 @@ ul.task-list li input[type="checkbox"] {
 <meta name="twitter:image-height" content="1341">
 <meta name="twitter:image-width" content="2560">
 </head>
-
 <body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../assets/silvia/img/logo_rounded.svg" alt="" class="navbar-logo">
-    </a>
+    <img src="../../assets/silvia/img/logo_rounded.svg" alt="" class="navbar-logo"></a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Silvia Canelón</span>
     </a>
@@ -112,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="../../about/index.html"> 
 <span class="menu-text">About</span></a>
   </li>  
@@ -133,42 +122,32 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Projects</span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
+</div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
     <a href="https://www.github.com/spcanelon/silvia" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns">
-<div id="title-block-header-title" class="quarto-title page-columns page-full page-layout-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);">
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns"><div id="title-block-header-title" class="quarto-title page-columns page-full page-layout-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);">
 <h1 class="title">Sharing Your Work with xaringan: The Basics and Beyond</h1>
-<p class="subtitle lead">An introduction to xaringan for presentations, created for the <a href="https://nhsrcommunity.com/about/">NHS-R Community</a> <a href="https://nhsrcommunity.com/events/nhs-r-virtual-conference-2020/">2020 Virtual Conference</a></p>
+<p class="subtitle lead">An introduction to xaringan for presentations, created for the NHS-R Community 2020 Virtual Conference</p>
     <div class="quarto-categories">
         <div class="quarto-category">R</div>
+        <div class="quarto-category">education</div>
         <div class="quarto-category">xaringan</div>
-        <div class="quarto-category">Workshop</div>
-        <div class="quarto-category">xaringan</div>
+        <div class="quarto-category">workshop</div>
       </div>
   </div>
 
 <div>
   <div id="title-block-title-desc" class="description pt-4">
-    NHS-R Conference 2020
+    An introduction to xaringan for presentations, created for the <a href="https://nhsrcommunity.com/about/">NHS-R Community</a> <a href="https://nhsrcommunity.com/nhsr-conference-2020/">2020 Virtual Conference</a>
   </div>
 </div>
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Silvia Canelón </p>
-          </div>
-  </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
@@ -180,11 +159,17 @@ ul.task-list li input[type="checkbox"] {
     
   </div>
   
+<div>
+  <div class="abstract">
+    <div class="block-title">Abstract</div>
+    This four-hour hands-on workshop will be a gentle introduction to the xaringan package as a tool to create impressive presentation slides that can be deployed to the web for easy sharing. <br><br>Day 1 (Nov.&nbsp;3, 3-5pm BST) will cover the nuts and bolts of creating presentation slides using xaringan and deploying them in HTML format for easy sharing with others. <br><br>Day 2 (Nov.&nbsp;5, 3-5pm BST) will cover how to take your slides to the next level with the xaringanExtra package and how to customize slides with CSS.<br><br>This workshop is designed for R users already familiar with R Markdown and GitHub.
+  </div>
+</div>
 
 
 <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
-<a href="https://bit.ly/xaringan-nhsr" class="btn btn-secondary text-capitalize"><i class="bi bi-book me-1"></i> workshop site</a>
-<a href="https://nhsrcommunity.com/events/nhs-r-virtual-conference-2020/" class="btn btn-secondary text-capitalize"><i class="bi bi-calendar-check-fill me-1"></i> conference program</a>
+<a href="https://bit.ly/xaringan-nhsr" class="btn btn-secondary text-capitalize"><i class="bi bi-book-open me-1"></i> workshop site</a>
+<a href="https://nhsrcommunity.com/events/nhs-r-virtual-conference-2020/" class="btn btn-secondary text-capitalize"><i class="bi bi-calendar-check me-1"></i> conference program</a>
 <a href="https://github.com/nhs-r-community/Conference_2020#nhs-r-community-conference-workshops-2020-" class="btn btn-secondary text-capitalize"><i class="bi bi-github me-1"></i> conference repo</a>
 </div>
 
@@ -193,31 +178,22 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
-
-<!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
-<!-- 
+<main class="content quarto-banner-title-block" id="quarto-document-content"><!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html --><!-- 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title"> 
--->
-<!-- <header id="title-block-header" class="quarto-title-block default page-columns"> -->
-<!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> -->
+--><!-- <header id="title-block-header" class="quarto-title-block default page-columns"> --><!-- <div class="quarto-title page-columns page-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);"> --><section id="description" class="level2"><h2 class="anchored" data-anchor-id="description">Description</h2>
+<p>This four-hour hands-on workshop will be a gentle introduction to the xaringan package as a tool to create impressive presentation slides that can be deployed to the web for easy sharing. <br><br>Day 1 (Nov.&nbsp;3, 3-5pm BST) will cover the nuts and bolts of creating presentation slides using xaringan and deploying them in HTML format for easy sharing with others. <br><br>Day 2 (Nov.&nbsp;5, 3-5pm BST) will cover how to take your slides to the next level with the xaringanExtra package and how to customize slides with CSS.<br><br>This workshop is designed for R users already familiar with R Markdown and GitHub.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="nhsr-logo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="nhsr-logo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Logo for the NHS-R Community featuring the R logo forming the R of NHS-R"></a></p>
+</figure>
+</div>
+</div>
+</div>
 
 
-
-<section id="description" class="level2">
-<h2 class="anchored" data-anchor-id="description">Description</h2>
-<p>This four-hour hands-on workshop will be a gentle introduction to the xaringan package as a tool to create impressive presentation slides that can be deployed to the web for easy sharing.</p>
-<p>Day 1 (Nov.&nbsp;3, 3-5pm BST) will cover the nuts and bolts of creating presentation slides using xaringan and deploying them in HTML format for easy sharing with others.</p>
-<p>Day 2 (Nov.&nbsp;5, 3-5pm BST) will cover how to take your slides to the next level with the xaringanExtra package and how to customize slides with CSS.</p>
-<p>This workshop is designed for R users already familiar with R Markdown and GitHub.</p>
-<p><img src="nhsr-logo.png" title="Logo for the NHS-R Community featuring the R logo forming the R of NHS-R" alt="Logo for the NHS-R Community featuring the R logo forming the R of NHS-R" width="60%" style="display: block; margin: auto;"></p>
-
-
-</section>
-
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -443,8 +419,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -555,7 +529,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
@@ -780,12 +753,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<script src="https://utteranc.es/client.js" repo="spcanelon/silvia" issue-term="title" theme="body-light" crossorigin="anonymous" async="">
+</script><script src="https://utteranc.es/client.js" repo="spcanelon/silvia" issue-term="title" theme="body-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p>© 2023 Silvia Canelón ∙ Made with <a href="https://quarto.org">Quarto</a></p>
 </div>   
@@ -794,7 +765,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
-    <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="../../accessibility.html">
 <p>Accessibility</p>
 </a>
@@ -816,11 +787,40 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
 </ul>
-    </div>
+</div>
   </div>
-</footer>
-
-
+</footer><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 </body></html>

@@ -2,12 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.54">
+<meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Garrick Aden-Buie &amp; Silvia Canelón">
+<meta name="author" content="Silvia Canelón">
+<meta name="author" content="Garrick Aden-Buie">
 <meta name="dcterms.date" content="2021-07-07">
+<meta name="description" content="A useR!2021 tutorial about making great slides with xaringan">
 
 <title>Professional, Polished, Presentable: Making Great Slides with xaringan – Silvia Canelón</title>
 <style>
@@ -38,12 +40,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-4798f49a90c852830ec6262f6cac104c.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-ba45ce9dc5cd1a65c393561f93ac8f81.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-ee1fb94ed73a03fd99aafc7557ba3b54.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-b46977b051dc0d7981d6964f332a6c3e.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
@@ -144,23 +146,30 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns">
 <div id="title-block-header-title" class="quarto-title page-columns page-full page-layout-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);">
 <h1 class="title">Professional, Polished, Presentable: Making Great Slides with xaringan</h1>
-<p class="subtitle lead">A <a href="https://user2021.r-project.org/">useR!2021</a> tutorial about making great slides with xaringan</p>
+<p class="subtitle lead">A useR!2021 tutorial about making great slides with xaringan</p>
     <div class="quarto-categories">
         <div class="quarto-category">R</div>
-        <div class="quarto-category">Education</div>
-        <div class="quarto-category">xaringan</div>
         <div class="quarto-category">useR</div>
+        <div class="quarto-category">education</div>
+        <div class="quarto-category">workshop</div>
+        <div class="quarto-category">xaringan</div>
       </div>
   </div>
 
+<div>
+  <div id="title-block-title-desc" class="description pt-4">
+    A <a href="https://user2021.r-project.org/">useR!2021</a> tutorial about making great slides with xaringan
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">Authors</div>
     <div class="quarto-title-meta-contents">
-             <p>Garrick Aden-Buie &amp; Silvia Canelón </p>
+             <p>Silvia Canelón </p>
+             <p>Garrick Aden-Buie </p>
           </div>
   </div>
     
@@ -174,13 +183,19 @@ ul.task-list li input[type="checkbox"] {
     
   </div>
   
+<div>
+  <div class="abstract">
+    <div class="block-title">Abstract</div>
+    The xaringan package brings professional, impressive, and visually appealing slides to the powerful R Markdown ecosystem. Through our hands-on tutorial, you will learn how to design highly effective slides that support presentations for teaching and reporting alike. Over three hours, you will learn how to create an accessible baseline design that matches your institution or organization’s style guide. Together we’ll explore the basics of CSS—the design language of the internet—and how we can leverage CSS to produce elegant slides for effective communication.
+  </div>
+</div>
 
 
 <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
-<a href="https://presentable-user2021.netlify.app/" class="btn btn-secondary text-capitalize"><i class="bi bi-book me-1"></i> course site</a>
-<a href="https://youtu.be/RPFh3y9UAX4" class="btn btn-secondary text-capitalize"><i class="bi bi-play-btn-fill me-1"></i> video</a>
+<a href="https://presentable-user2021.netlify.app/" class="btn btn-secondary text-capitalize"><i class="bi bi-book-open me-1"></i> course site</a>
+<a href="https://youtu.be/RPFh3y9UAX4" class="btn btn-secondary text-capitalize"><i class="bi bi-youtube me-1"></i> video</a>
 <a href="https://github.com/presentable-user2021" class="btn btn-secondary text-capitalize"><i class="bi bi-github me-1"></i> presentable-user2021</a>
-<a href="https://user2021.r-project.org/program/schedule/" class="btn btn-secondary text-capitalize"><i class="bi bi-calendar-check-fill me-1"></i> program schedule</a>
+<a href="https://user2021.r-project.org/program/schedule/" class="btn btn-secondary text-capitalize"><i class="bi bi-calendar-check me-1"></i> program schedule</a>
 </div>
 
 </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
@@ -435,8 +450,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -547,7 +560,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

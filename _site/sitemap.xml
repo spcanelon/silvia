@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://silviacanelon.com/talk/2021-05-04-data-viz-accessibility/index.html</loc>
-    <lastmod>2023-09-27T18:21:06.848Z</lastmod>
+    <lastmod>2024-12-18T01:00:23.060Z</lastmod>
   </url>
   <url>
     <loc>https://silviacanelon.com/talk/2022-02-11-tdw-ehr-lessons/index.html</loc>
-    <lastmod>2024-06-17T01:38:40.903Z</lastmod>
+    <lastmod>2024-12-18T00:57:17.364Z</lastmod>
   </url>
   <url>
     <loc>https://silviacanelon.com/talk/2020-08-31-tour-of-the-tidyverse/index.html</loc>
-    <lastmod>2023-09-20T14:46:29.148Z</lastmod>
+    <lastmod>2024-12-18T00:40:22.452Z</lastmod>
   </url>
   <url>
     <loc>https://silviacanelon.com/talk/index.html</loc>
@@ -18,23 +18,23 @@
   </url>
   <url>
     <loc>https://silviacanelon.com/talk/2021-02-18-r-teaching-panel/index.html</loc>
-    <lastmod>2023-09-20T14:46:29.159Z</lastmod>
+    <lastmod>2024-12-18T00:55:49.240Z</lastmod>
   </url>
   <url>
     <loc>https://silviacanelon.com/talk/2020-12-17-introduccion-xaringan/index.html</loc>
-    <lastmod>2024-06-17T00:43:19.131Z</lastmod>
+    <lastmod>2024-12-18T00:43:38.753Z</lastmod>
   </url>
   <url>
     <loc>https://silviacanelon.com/talk/2020-11-03-xaringan-basics-and-beyond/index.html</loc>
-    <lastmod>2024-06-17T01:30:24.698Z</lastmod>
+    <lastmod>2024-12-18T00:31:22.301Z</lastmod>
   </url>
   <url>
     <loc>https://silviacanelon.com/talk/2023-10-11-epis4equity/index.html</loc>
-    <lastmod>2023-10-12T19:01:51.701Z</lastmod>
+    <lastmod>2024-12-18T00:59:25.964Z</lastmod>
   </url>
   <url>
     <loc>https://silviacanelon.com/talk/2022-09-29-ccd-sips/index.html</loc>
-    <lastmod>2024-06-16T23:54:07.368Z</lastmod>
+    <lastmod>2024-12-18T00:58:02.411Z</lastmod>
   </url>
   <url>
     <loc>https://silviacanelon.com/license.html</loc>
@@ -42,11 +42,11 @@
   </url>
   <url>
     <loc>https://silviacanelon.com/project/2021-07-07-presentable-user2021/index.html</loc>
-    <lastmod>2023-09-24T20:48:59.261Z</lastmod>
+    <lastmod>2024-12-18T01:25:56.993Z</lastmod>
   </url>
   <url>
     <loc>https://silviacanelon.com/project/2020-03-25-data-hack-opioid/index.html</loc>
-    <lastmod>2024-06-17T01:25:12.585Z</lastmod>
+    <lastmod>2024-12-18T01:23:14.995Z</lastmod>
   </url>
   <url>
     <loc>https://silviacanelon.com/project/2024-06-16-ccd-sips/index.html</loc>
@@ -58,147 +58,159 @@
   </url>
   <url>
     <loc>https://silviacanelon.com/project/2021-05-04-tidy-tuesday-alt-text/index.html</loc>
-    <lastmod>2024-08-25T22:15:15.096Z</lastmod>
+    <lastmod>2024-12-18T01:25:36.578Z</lastmod>
   </url>
   <url>
-    <loc>https://silviacanelon.com/blog/2022-05-31-ccd-sips/index.html</loc>
-    <lastmod>2024-06-17T01:23:56.125Z</lastmod>
-  </url>
-  <url>
-    <loc>https://silviacanelon.com/blog/2022-01-18-hello-umami/index.html</loc>
-    <lastmod>2024-06-17T01:19:46.426Z</lastmod>
-  </url>
-  <url>
-    <loc>https://silviacanelon.com/blog/2021-03-16-deploying-xaringan-slides/index.html</loc>
-    <lastmod>2023-09-23T22:12:13.202Z</lastmod>
-  </url>
-  <url>
-    <loc>https://silviacanelon.com/blog/index.html</loc>
-    <lastmod>2024-06-28T15:00:31.222Z</lastmod>
-  </url>
-  <url>
-    <loc>https://silviacanelon.com/blog/2021-06-02-wave-audit-1/index.html</loc>
-    <lastmod>2024-06-17T00:46:49.071Z</lastmod>
-  </url>
-  <url>
-    <loc>https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/index.html</loc>
-    <lastmod>2024-06-17T01:13:08.664Z</lastmod>
-  </url>
-  <url>
-    <loc>https://silviacanelon.com/about/index.html</loc>
-    <lastmod>2024-11-22T21:55:57.270Z</lastmod>
-  </url>
-  <url>
-    <loc>https://silviacanelon.com/publication/2020-05-06-preprint-hydroxychloroquine-pregnancy/index.html</loc>
-    <lastmod>2024-11-19T02:19:23.059Z</lastmod>
-  </url>
-  <url>
-    <loc>https://silviacanelon.com/publication/2021-11-24-sct-stillbirth/index.html</loc>
-    <lastmod>2024-03-26T01:56:21.771Z</lastmod>
-  </url>
-  <url>
-    <loc>https://silviacanelon.com/publication/2022-11-24-mwas-repurposed-covid19-meds/index.html</loc>
-    <lastmod>2024-05-31T03:28:09.769Z</lastmod>
-  </url>
-  <url>
-    <loc>https://silviacanelon.com/publication/2020-08-02-maddie-ehr-delivery-episode-algorithm/index.html</loc>
-    <lastmod>2023-09-23T22:15:31.153Z</lastmod>
-  </url>
-  <url>
-    <loc>https://silviacanelon.com/publication/2024-05-27-tbi-definitions/index.html</loc>
-    <lastmod>2024-06-10T00:03:55.100Z</lastmod>
-  </url>
-  <url>
-    <loc>https://silviacanelon.com/publication/2020-12-10-csections-emergency-admissions/index.html</loc>
-    <lastmod>2023-09-23T22:02:38.189Z</lastmod>
-  </url>
-  <url>
-    <loc>https://silviacanelon.com/publication/index.html</loc>
-    <lastmod>2024-06-28T15:00:31.253Z</lastmod>
-  </url>
-  <url>
-    <loc>https://silviacanelon.com/publication/2018-05-01-dissertation/index.html</loc>
-    <lastmod>2023-09-20T14:46:29.022Z</lastmod>
-  </url>
-  <url>
-    <loc>https://silviacanelon.com/publication/2021-04-08-smm-individual-neighborhood/index.html</loc>
-    <lastmod>2023-09-20T14:46:29.063Z</lastmod>
-  </url>
-  <url>
-    <loc>https://silviacanelon.com/contact.html</loc>
-    <lastmod>2024-11-22T21:57:54.552Z</lastmod>
-  </url>
-  <url>
-    <loc>https://silviacanelon.com/publication/2022-03-09-ppd-ontology/index.html</loc>
-    <lastmod>2024-03-26T01:56:21.771Z</lastmod>
-  </url>
-  <url>
-    <loc>https://silviacanelon.com/publication/2020-03-05-climate-change-menarche/index.html</loc>
-    <lastmod>2023-09-20T14:46:29.038Z</lastmod>
-  </url>
-  <url>
-    <loc>https://silviacanelon.com/publication/2021-08-11-ehr-environmental-exposure-pfas/index.html</loc>
-    <lastmod>2024-03-26T01:56:21.769Z</lastmod>
-  </url>
-  <url>
-    <loc>https://silviacanelon.com/publication/2022-06-07-mwas-multiple-birth/index.html</loc>
-    <lastmod>2024-03-26T01:56:21.772Z</lastmod>
-  </url>
-  <url>
-    <loc>https://silviacanelon.com/publication/2021-05-11-geospatial-analysis-pregnancy-outcomes/index.html</loc>
-    <lastmod>2023-09-20T14:46:29.063Z</lastmod>
-  </url>
-  <url>
-    <loc>https://silviacanelon.com/publication/2016-11-06-bapn-morphology/index.html</loc>
-    <lastmod>2024-11-19T02:14:57.674Z</lastmod>
-  </url>
-  <url>
-    <loc>https://silviacanelon.com/publication/2019-12-01-bapn-substrate-strain/index.html</loc>
-    <lastmod>2023-09-20T14:46:29.028Z</lastmod>
-  </url>
-  <url>
-    <loc>https://silviacanelon.com/publication/2022-07-21-ten-simple-rules-inclusive-conference/index.html</loc>
-    <lastmod>2024-03-26T01:56:21.772Z</lastmod>
-  </url>
-  <url>
-    <loc>https://silviacanelon.com/publication/2019-11-20-amia-annual-symposium/index.html</loc>
-    <lastmod>2023-09-20T14:46:29.028Z</lastmod>
-  </url>
-  <url>
-    <loc>https://silviacanelon.com/index.html</loc>
-    <lastmod>2024-11-22T21:55:12.938Z</lastmod>
-  </url>
-  <url>
-    <loc>https://silviacanelon.com/blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html</loc>
-    <lastmod>2024-06-17T01:11:03.704Z</lastmod>
-  </url>
-  <url>
-    <loc>https://silviacanelon.com/blog/2023-09-29-hello-quarto/index.html</loc>
-    <lastmod>2024-08-25T22:17:03.814Z</lastmod>
-  </url>
-  <url>
-    <loc>https://silviacanelon.com/blog/2020-05-26-dark-mode-custom-with-atom/index.html</loc>
-    <lastmod>2023-09-20T14:46:28.613Z</lastmod>
-  </url>
-  <url>
-    <loc>https://silviacanelon.com/blog/2020-05-12-trello-to-airtable/index.html</loc>
-    <lastmod>2024-06-17T01:07:21.558Z</lastmod>
+    <loc>https://silviacanelon.com/blog/2024-11-27-nearby-parks/index.html</loc>
+    <lastmod>2024-12-18T00:16:04.462Z</lastmod>
   </url>
   <url>
     <loc>https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/index.html</loc>
     <lastmod>2024-03-26T01:56:21.767Z</lastmod>
   </url>
   <url>
+    <loc>https://silviacanelon.com/blog/2020-05-12-trello-to-airtable/index.html</loc>
+    <lastmod>2024-12-18T01:12:18.748Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/blog/2020-05-26-dark-mode-custom-with-atom/index.html</loc>
+    <lastmod>2024-12-18T01:17:14.501Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/blog/2024-12-17-causality-311/index.html</loc>
+    <lastmod>2024-12-18T00:15:28.887Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/blog/2023-09-29-hello-quarto/index.html</loc>
+    <lastmod>2024-08-25T22:17:03.814Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html</loc>
+    <lastmod>2024-12-18T01:17:27.389Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/index.html</loc>
+    <lastmod>2024-11-22T21:55:12.938Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/publication/2019-11-20-amia-annual-symposium/index.html</loc>
+    <lastmod>2024-12-18T01:27:22.239Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/publication/2022-07-21-ten-simple-rules-inclusive-conference/index.html</loc>
+    <lastmod>2024-12-18T01:11:48.868Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/publication/2019-12-01-bapn-substrate-strain/index.html</loc>
+    <lastmod>2024-12-18T01:27:36.986Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/publication/2016-11-06-bapn-morphology/index.html</loc>
+    <lastmod>2024-12-18T01:27:04.160Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/publication/2021-05-11-geospatial-analysis-pregnancy-outcomes/index.html</loc>
+    <lastmod>2024-12-18T01:30:25.727Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/publication/2022-06-07-mwas-multiple-birth/index.html</loc>
+    <lastmod>2024-12-18T01:31:31.951Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/publication/2021-08-11-ehr-environmental-exposure-pfas/index.html</loc>
+    <lastmod>2024-12-18T01:30:55.525Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/publication/2020-03-05-climate-change-menarche/index.html</loc>
+    <lastmod>2024-12-18T01:27:44.550Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/publication/2022-03-09-ppd-ontology/index.html</loc>
+    <lastmod>2024-12-18T01:31:15.450Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/contact.html</loc>
+    <lastmod>2024-11-22T21:57:54.552Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/publication/2021-04-08-smm-individual-neighborhood/index.html</loc>
+    <lastmod>2024-12-18T01:28:59.245Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/publication/2018-05-01-dissertation/index.html</loc>
+    <lastmod>2024-12-18T01:27:14.241Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/publication/index.html</loc>
+    <lastmod>2024-06-28T15:00:31.253Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/publication/2020-12-10-csections-emergency-admissions/index.html</loc>
+    <lastmod>2024-12-18T01:29:08.039Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/publication/2024-05-27-tbi-definitions/index.html</loc>
+    <lastmod>2024-12-18T01:32:13.483Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/publication/2020-08-02-maddie-ehr-delivery-episode-algorithm/index.html</loc>
+    <lastmod>2024-12-18T01:28:27.962Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/publication/2022-11-24-mwas-repurposed-covid19-meds/index.html</loc>
+    <lastmod>2024-12-18T01:31:59.606Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/publication/2021-11-24-sct-stillbirth/index.html</loc>
+    <lastmod>2024-12-18T01:31:07.519Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/publication/2020-05-06-preprint-hydroxychloroquine-pregnancy/index.html</loc>
+    <lastmod>2024-12-18T01:27:56.555Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/about/index.html</loc>
+    <lastmod>2024-11-22T21:55:57.270Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/index.html</loc>
+    <lastmod>2024-12-18T01:12:21.765Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/blog/2021-06-02-wave-audit-1/index.html</loc>
+    <lastmod>2024-12-18T01:11:46.584Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/blog/2024-11-27-tree-canopy/index.html</loc>
+    <lastmod>2024-12-18T00:15:48.632Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/blog/index.html</loc>
+    <lastmod>2024-06-28T15:00:31.222Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/blog/2021-03-16-deploying-xaringan-slides/index.html</loc>
+    <lastmod>2024-12-18T01:17:37.243Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/blog/2022-01-18-hello-umami/index.html</loc>
+    <lastmod>2024-12-18T01:19:00.819Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/blog/2022-05-31-ccd-sips/index.html</loc>
+    <lastmod>2024-06-17T01:23:56.125Z</lastmod>
+  </url>
+  <url>
     <loc>https://silviacanelon.com/project/2021-01-01-useR-2021/index.html</loc>
-    <lastmod>2023-09-27T18:21:06.846Z</lastmod>
+    <lastmod>2024-12-18T01:25:18.250Z</lastmod>
   </url>
   <url>
     <loc>https://silviacanelon.com/project/2020-11-03-xaringan-nhs-r/index.html</loc>
-    <lastmod>2024-06-17T01:27:40.585Z</lastmod>
+    <lastmod>2024-12-18T01:23:49.911Z</lastmod>
   </url>
   <url>
     <loc>https://silviacanelon.com/project/2023-04-18-r-for-the-rest-of-us/index.html</loc>
-    <lastmod>2024-08-25T22:16:31.408Z</lastmod>
+    <lastmod>2024-12-18T01:26:14.172Z</lastmod>
   </url>
   <url>
     <loc>https://silviacanelon.com/project/index.html</loc>
@@ -206,11 +218,11 @@
   </url>
   <url>
     <loc>https://silviacanelon.com/project/2020-12-28-teaching-tech-together-es/index.html</loc>
-    <lastmod>2023-09-20T14:46:28.994Z</lastmod>
+    <lastmod>2024-12-18T01:24:43.538Z</lastmod>
   </url>
   <url>
     <loc>https://silviacanelon.com/project/2020-10-29-nhsrtheme/index.html</loc>
-    <lastmod>2023-09-20T14:46:28.986Z</lastmod>
+    <lastmod>2024-12-18T01:24:03.055Z</lastmod>
   </url>
   <url>
     <loc>https://silviacanelon.com/accessibility.html</loc>
@@ -218,7 +230,7 @@
   </url>
   <url>
     <loc>https://silviacanelon.com/talk/2023-03-09-penn-community-scholars/index.html</loc>
-    <lastmod>2024-11-19T05:20:10.750Z</lastmod>
+    <lastmod>2024-12-18T00:59:02.596Z</lastmod>
   </url>
   <url>
     <loc>https://silviacanelon.com/talk/2022-11-10-thinking-big/index.html</loc>
@@ -226,26 +238,26 @@
   </url>
   <url>
     <loc>https://silviacanelon.com/talk/2022-04-27-dbei-research-day/index.html</loc>
-    <lastmod>2024-06-01T02:42:39.211Z</lastmod>
+    <lastmod>2024-12-18T00:57:31.822Z</lastmod>
   </url>
   <url>
     <loc>https://silviacanelon.com/talk/2024-03-26-env-justice/index.html</loc>
-    <lastmod>2024-03-26T01:56:21.776Z</lastmod>
+    <lastmod>2024-12-18T00:59:40.328Z</lastmod>
   </url>
   <url>
     <loc>https://silviacanelon.com/talk/2021-03-16-xaringan-deploy-demo/index.html</loc>
-    <lastmod>2023-09-23T22:10:16.147Z</lastmod>
+    <lastmod>2024-12-18T00:54:12.508Z</lastmod>
   </url>
   <url>
     <loc>https://silviacanelon.com/talk/2021-07-07-presentable-user2021/index.html</loc>
-    <lastmod>2023-09-20T14:46:29.169Z</lastmod>
+    <lastmod>2024-12-18T00:40:37.590Z</lastmod>
   </url>
   <url>
     <loc>https://silviacanelon.com/talk/2021-03-23-amia-informatics-summit/index.html</loc>
-    <lastmod>2024-06-17T01:36:54.296Z</lastmod>
+    <lastmod>2024-12-18T00:55:17.689Z</lastmod>
   </url>
   <url>
     <loc>https://silviacanelon.com/talk/2024-07-10-data-equity-ldi/index.html</loc>
-    <lastmod>2024-11-19T05:05:48.966Z</lastmod>
+    <lastmod>2024-12-18T01:00:39.278Z</lastmod>
   </url>
 </urlset>
