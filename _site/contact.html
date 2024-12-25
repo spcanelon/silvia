@@ -152,7 +152,7 @@ ul.task-list li input[type="checkbox"] {
 
 <p>You can use this form to contact me about speaking engagements, collaborations, or simply to say hello.</p>
 <p>I also love hearing if my educational materials have been helpful for you, and how they could be improved — particularly if they could be made more accessible <i class="bi-heart-fill " style="" role="img" aria-hidden="true"></i></p>
-<p><a class="link-dark me-1" href="./accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener"><i class="fa-solid fa-universal-access" aria-label="universal-access"></i></a> <a class="link-dark me-1" href="https://bsky.app/profile/silviacanelon.com" title="bluesky" target="_blank" rel="noopener"><i class="fa-brands fa-bluesky" aria-label="bluesky"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/spcanelon" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> <a class="link-dark me-1" href="https://github.com/spcanelon" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <!-- <a class="link-dark me-1" href="https://hachyderm.io/@spcanelon" title="mastodon" target="_blank" rel="noopener"></a> --> <a class="link-dark me-1" href="https://orcid.org/0000-0003-1709-1394" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid"></i></a> <a class="link-dark me-1" href="https://scholar.google.com/citations?user=GAzkvpcAAAAJ&amp;hl=en&amp;oi=ao" title="Google Scholar" target="_blank" rel="noopener"><i class="ai  ai-google-scholar"></i></a> <a class="link-dark me-1" href="https://spcanelon.substack.com" title="Substack" target="_blank" rel="noopener"><i class="bi-substack " style="" role="img" aria-hidden="true"></i></a></p>
+<p><a class="link-dark me-1" href="./accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener"><i class="fa-solid fa-universal-access" aria-label="universal-access"></i></a> <a class="link-dark me-1" href="https://bsky.app/profile/silviacanelon.com" title="bluesky" target="_blank" rel="noopener"><i class="fa-brands fa-bluesky" aria-label="bluesky"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/spcanelon" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> <a class="link-dark me-1" href="https://github.com/spcanelon" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <!-- <a class="link-dark me-1" href="https://hachyderm.io/@spcanelon" title="mastodon" target="_blank" rel="noopener"></a> --> <a class="link-dark me-1" href="https://orcid.org/0000-0003-1709-1394" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid"></i></a> <a class="link-dark me-1" href="https://scholar.google.com/citations?user=GAzkvpcAAAAJ&amp;hl=en&amp;oi=ao" title="Google Scholar" target="_blank" rel="noopener"><i class="ai  ai-google-scholar"></i></a> <a class="link-dark me-1" href="https://buttondown.com/spcanelon" title="Newsletter" target="_blank" rel="noopener"><i class="fa-solid fa-envelope" aria-label="envelope"></i></a></p>
 </section>
 </div>
 <!-- source: https://github.com/mccarthy-m-g/tidytales/blob/main/about/index.qmd#L24-L46 -->
@@ -160,7 +160,7 @@ ul.task-list li input[type="checkbox"] {
 
 </div>
 <div id="form" class="g-col-6">
-<form action="https://formspree.io/f/mwkapgzw" method="POST" accept-charset="utf-8">
+<form style="margin-top: -2em;" action="https://formspree.io/f/mwkapgzw" method="POST" accept-charset="utf-8">
 <p><label for="full-name">Full Name</label> <input type="text" name="name" id="full-name" class="form-control" placeholder="First and Last" required=""></p>
 <p><label for="email-address">Email Address</label> <input type="email" name="_replyto" id="email-address" class="form-control" placeholder="your@email.here" required=""></p>
 <label for="message">Message</label>
@@ -170,34 +170,25 @@ Send message
 </button>
 </form>
 </div>
-<div id="substack" class="g-col-5">
+<div id="buttondown" class="g-col-5">
 <section id="sign-up-for-my-newsletter" class="level1">
-<h1>Sign up for my newsletter <i class="bi-substack " style="" role="img" aria-hidden="true"></i></h1>
+<h1>Sign up for my newsletter <i class="fa-solid fa-envelope" aria-label="envelope"></i></h1>
 <p>You can use this form to sign up to receive a little e-mail note from me anytime I post something new on my website.</p>
 </section>
 </div>
 <div class="g-col-1">
 
 </div>
-<div id="substack-form" class="g-col-6">
-<p><br><br> <iframe src="https://spcanelon.substack.com/embed" width="100%" height="170" style="border:2px solid #FAF0E3; background:white;" frameborder="2" scrolling="no" id="substack-embed"></iframe></p>
-<!-- <div id="custom-substack-embed"></div> -->
-<!-- <script> -->
-<!--   window.CustomSubstackWidget = { -->
-<!--     substackUrl: "spcanelon.substack.com", -->
-<!--     placeholder: "your@email.here", -->
-<!--     buttonText: "Subscribe", -->
-<!--     theme: "custom", -->
-<!--     colors: { -->
-<!--       primary: "#A23E02", -->
-<!--       input: "#FFFBF2", -->
-<!--       email: "#173552", -->
-<!--       text: "#FFFFFF", -->
-<!--     }, -->
-<!--     // Go to substackapi.com to unlock custom redirect -->
-<!--   }; -->
-<!-- </script> -->
-<!-- <script src="https://substackapi.com/widget.js" async></script> -->
+<div id="buttondown-form" class="g-col-6">
+<form style="margin-top: 7em;" action="https://buttondown.com/api/emails/embed-subscribe/spcanelon" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/spcanelon?tag=website', 'popupwindow')" class="embeddable-buttondown-form">
+  <label for="bd-email">Enter your email</label>
+  <input type="email" name="email" id="bd-email">
+  
+  <input type="submit" value="Subscribe">
+  <p>
+    <a href="https://buttondown.com/refer/spcanelon" target="_blank">Powered by Buttondown.</a>
+  </p>
+</form>
 </div>
 </div>
 <!-- end grid -->
@@ -772,10 +763,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2023 Silvia Canelón ∙ Made with <a href="https://quarto.org">Quarto</a></p>
+<p>© 2024 Silvia Canelón ∙ Made with <a href="https://quarto.org">Quarto</a></p>
 </div>   
     <div class="nav-footer-center">
-<p><a class="link-dark me-1" href="./accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener"><i class="fa-solid fa-universal-access" aria-label="universal-access"></i></a> <a class="link-dark me-1" href="https://bsky.app/profile/silviacanelon.com" title="Bluesky" target="_blank" rel="noopener"><i class="fa-brands fa-bluesky" aria-label="bluesky"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/spcanelon" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> <a class="link-dark me-1" href="https://github.com/spcanelon" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://orcid.org/0000-0003-1709-1394" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid"></i></a> <a class="link-dark me-1" href="https://scholar.google.com/citations?user=GAzkvpcAAAAJ&amp;hl=en&amp;oi=ao" title="Google Scholar" target="_blank" rel="noopener"><i class="ai  ai-google-scholar"></i></a> <a class="link-dark me-1" href="https://spcanelon.substack.com" title="Substack" target="_blank" rel="noopener"><i class="bi-substack " style="" role="img" aria-hidden="true"></i></a></p>
+<p><a class="link-dark me-1" href="./accessibility.html" title="Accessibility commitment" target="_blank" rel="noopener"><i class="fa-solid fa-universal-access" aria-label="universal-access"></i></a> <a class="link-dark me-1" href="https://bsky.app/profile/silviacanelon.com" title="Bluesky" target="_blank" rel="noopener"><i class="fa-brands fa-bluesky" aria-label="bluesky"></i></a> <a class="link-dark me-1" href="https://linkedin.com/in/spcanelon" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> <a class="link-dark me-1" href="https://github.com/spcanelon" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://orcid.org/0000-0003-1709-1394" title="orcid" target="_blank" rel="noopener"><i class="ai  ai-orcid"></i></a> <a class="link-dark me-1" href="https://scholar.google.com/citations?user=GAzkvpcAAAAJ&amp;hl=en&amp;oi=ao" title="Google Scholar" target="_blank" rel="noopener"><i class="ai  ai-google-scholar"></i></a> <a class="link-dark me-1" href="https://buttondown.com/spcanelon" title="Newsletter" target="_blank" rel="noopener"><i class="fa-solid fa-envelope" aria-label="envelope"></i></a></p>
 </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">

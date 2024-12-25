@@ -750,7 +750,8 @@ font-style: inherit;">;</span></span></code></pre></div>
 <div class="code-with-filename-file">
 <pre><strong>index.qmd</strong></pre>
 </div>
-<div class="sourceCode" id="cb11" data-filename="index.qmd" data-startfrom="42" style="background: #f1f3f5;"><pre class="sourceCode numberSource yml number-lines code-with-copy"><code class="sourceCode yaml" style="counter-reset: source-line 41;"><span id="cb11-42"><span class="fu" style="color: #4758AB;
+<div class="sourceCode" id="cb11" data-filename="index.qmd" data-startfrom="42" style="background: #f1f3f5;"><pre class="sourceCode numberSource yml number-lines code-with-copy"><code class="sourceCode yaml" style="counter-reset: source-line 41;"><span id="cb11-42"></span>
+<span id="cb11-43"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">execute</span><span class="kw" style="color: #003B4F;
 background-color: null;
@@ -758,7 +759,7 @@ font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span></span>
-<span id="cb11-43"><span class="at" style="color: #657422;
+<span id="cb11-44"><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -770,23 +771,11 @@ background-color: null;
 font-style: inherit;"> </span><span class="ch" style="color: #20794D;
 background-color: null;
 font-style: inherit;">false</span></span>
-<span id="cb11-44"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">echo</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="ch" style="color: #20794D;
-background-color: null;
-font-style: inherit;">false</span></span>
 <span id="cb11-45"><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">warning</span><span class="kw" style="color: #003B4F;
+font-style: inherit;">echo</span><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
