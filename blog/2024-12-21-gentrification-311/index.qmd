@@ -1,0 +1,78 @@
+---
+title: 'Exploring 311 calls in relation to gentrification'
+author: Silvia Canelón
+date: '2024-12-17'
+image: featured.png
+categories:
+  - R
+  - tutorial
+  - maps
+  - rspatial
+  - sf
+  - mapview
+subtitle: >
+  Recreating BuzzFeed News analysis on 311 complains and gentrification.
+description: '' # Text that shows below the tags, not on listing page
+# links:
+# - icon: pin-map-fill
+#   name: Collection of maps
+#   url: /project/2024-06-16-ccd-sips
+draft: true
+eval: false
+---
+
+
+## Notes
+
+- [They Played Dominoes Outside Their Apartment For Decades. Then The White People Moved In And Police Started Showing Up.](https://www.buzzfeednews.com/article/lamvo/gentrification-complaints-311-new-york)
+- 2020 (2012-2017): [Gentrification and Disinvestment 2020 » NCRC](https://ncrc.org/gentrification20/#elementor-toc__heading-anchor-3)
+
+
+### Other resources
+
+- [Effects of gentrification on longtime residents are not as negative as typically perceived, Philly Fed says](https://www.inquirer.com/real-estate/housing/philadelphia-federal-reserve-bank-study-gentrification-change-original-neighborhood-residents-poverty-education-20190716.html)
+  - [The Effects of Gentrification on the Well-Being and Opportunity of Original Resident Adults and Children](https://www.philadelphiafed.org/community-development/housing-and-neighborhoods/the-effects-of-gentrification-on-the-well-being-and-opportunity-of-original-resident)
+  - Greening, climate change, and displacement: [How can Philly build green without displacing residents?](https://www.inquirer.com/science/climate/gentrification-green-development-infrastructure-climate-change-heat-20230810.html)
+- 2019 (2000-2013): [Shifting Neighborhoods: Gentrification and Cultural Displacement in American Cities » NCRC](https://ncrc.org/gentrification/)
+
+
+
+```{r setup}
+#| include: false
+library(tidyverse)
+library(sf)
+library(mapview)
+
+data_dir <- "/Users/scanelon/Sync/Repos/3-Resources/Data"
+```
+
+```{r import}
+#| include: false
+
+requests <- read_sf(paste(data_dir, "raw", "Open Data Philly", "311", "requests_2024", "public_cases_fc.shp", sep = "/"))
+
+```
+
+```{r}
+requests_trim <-
+  requests |> 
+  filter(agency_res)
+
+requests_2024 |> 
+  st_drop_geometry() |> 
+  gtsummary::tbl_summary(include = c(service_name, agency_responsible),
+                         sort = list(everything() ~ c("frequency")))
+
+requests_2024 |> 
+  filter(agency_responsible == "Parks & Recreation") |> 
+  gtsummary::tbl_summary(include = c(service_name),
+                         sort = list(everything() ~ c("frequency")))
+```
+
+```{r export}
+#| include: false
+
+st_write(obj = schools,
+         dsn = paste(data_dir, "clean", "Open Data Philly", "schools", "schools_parcels.gpkg", sep = "/"))
+```
+
