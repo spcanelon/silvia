@@ -1,0 +1,15 @@
+{
+  "hash": "c3335bcd0874eefc02fa1b8a84feae98",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: 'Exploring 311 calls in relation to gentrification'\nauthor: Silvia Canelón\ndate: '2024-12-17'\nimage: featured.png\ncategories:\n  - R\n  - tutorial\n  - maps\n  - rspatial\n  - sf\n  - mapview\nsubtitle: >\n  Recreating BuzzFeed News analysis on 311 complains and gentrification.\ndescription: '' # Text that shows below the tags, not on listing page\n# links:\n# - icon: pin-map-fill\n#   name: Collection of maps\n#   url: /project/2024-06-16-ccd-sips\ndraft: true\neval: false\n---\n\n\n\n\n\n## Notes\n\n- [They Played Dominoes Outside Their Apartment For Decades. Then The White People Moved In And Police Started Showing Up.](https://www.buzzfeednews.com/article/lamvo/gentrification-complaints-311-new-york)\n- 2020 (2012-2017): [Gentrification and Disinvestment 2020 » NCRC](https://ncrc.org/gentrification20/#elementor-toc__heading-anchor-3)\n\n\n### Other resources\n\n- [Effects of gentrification on longtime residents are not as negative as typically perceived, Philly Fed says](https://www.inquirer.com/real-estate/housing/philadelphia-federal-reserve-bank-study-gentrification-change-original-neighborhood-residents-poverty-education-20190716.html)\n  - [The Effects of Gentrification on the Well-Being and Opportunity of Original Resident Adults and Children](https://www.philadelphiafed.org/community-development/housing-and-neighborhoods/the-effects-of-gentrification-on-the-well-being-and-opportunity-of-original-resident)\n  - Greening, climate change, and displacement: [How can Philly build green without displacing residents?](https://www.inquirer.com/science/climate/gentrification-green-development-infrastructure-climate-change-heat-20230810.html)\n- 2019 (2000-2013): [Shifting Neighborhoods: Gentrification and Cultural Displacement in American Cities » NCRC](https://ncrc.org/gentrification/)\n\n\n\n\n\n\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nrequests_trim <-\n  requests |> \n  filter(agency_res)\n\nrequests_2024 |> \n  st_drop_geometry() |> \n  gtsummary::tbl_summary(include = c(service_name, agency_responsible),\n                         sort = list(everything() ~ c(\"frequency\")))\n\nrequests_2024 |> \n  filter(agency_responsible == \"Parks & Recreation\") |> \n  gtsummary::tbl_summary(include = c(service_name),\n                         sort = list(everything() ~ c(\"frequency\")))\n```\n:::\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
