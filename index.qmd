@@ -35,8 +35,9 @@ about:
     - text: "{{< ai google-scholar >}}"
       aria-label: "Google Scholar"
       href: https://scholar.google.com/citations?user=GAzkvpcAAAAJ&hl=en&oi=ao
-    - icon: substack
-      href: https://spcanelon.substack.com
+    - text: "{{< fa envelope >}}"
+      aria-label: Newsletter
+      href: https://buttondown.com/spcanelon
 page-layout: full
 
 execute: 
