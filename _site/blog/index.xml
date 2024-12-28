@@ -10,10 +10,73 @@
 <atom:link href="https://silviacanelon.com/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>This is my blog where I practice sharing my curiosity about R.&lt;br&gt;
 It includes notes and tutorials for my future self and hopefully also for you.&lt;br&gt;&lt;br&gt;
-{{&lt; bi substack &gt;}} Sign up for my [newsletter](https://spcanelon.substack.com/) to receive updates about new posts.
+{{&lt; fa envelope &gt;}} Sign up for my [newsletter](https://buttondown.com/spcanelon) to receive updates about new posts.
 </description>
 <generator>quarto-1.6.39</generator>
-<lastBuildDate>Fri, 29 Sep 2023 04:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 17 Dec 2024 05:00:00 GMT</lastBuildDate>
+<item>
+  <title></title>
+  <dc:creator>Silvia Canelón</dc:creator>
+  <link>https://silviacanelon.com/blog/2024-12-17-causality-311/</link>
+  <description><![CDATA[ undefined ]]></description>
+  <category>R</category>
+  <category>tutorial</category>
+  <category>greenspace</category>
+  <category>maps</category>
+  <category>rspatial</category>
+  <category>sf</category>
+  <category>mapview</category>
+  <guid>https://silviacanelon.com/blog/2024-12-17-causality-311/</guid>
+  <pubDate>Tue, 17 Dec 2024 05:00:00 GMT</pubDate>
+  <media:content url="https://silviacanelon.com/blog/2024-12-17-causality-311/featured.png" medium="image" type="image/png" height="75" width="144"/>
+</item>
+<item>
+  <title></title>
+  <dc:creator>Silvia Canelón</dc:creator>
+  <link>https://silviacanelon.com/blog/2024-12-21-gentrification-311/</link>
+  <description><![CDATA[ undefined ]]></description>
+  <category>R</category>
+  <category>tutorial</category>
+  <category>maps</category>
+  <category>rspatial</category>
+  <category>sf</category>
+  <category>mapview</category>
+  <guid>https://silviacanelon.com/blog/2024-12-21-gentrification-311/</guid>
+  <pubDate>Tue, 17 Dec 2024 05:00:00 GMT</pubDate>
+  <media:content url="https://silviacanelon.com/blog/2024-12-21-gentrification-311/featured.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title></title>
+  <dc:creator>Silvia Canelón</dc:creator>
+  <link>https://silviacanelon.com/blog/2024-11-27-nearby-parks/</link>
+  <description><![CDATA[ undefined ]]></description>
+  <category>R</category>
+  <category>tutorial</category>
+  <category>maps</category>
+  <category>greenspace</category>
+  <category>rspatial</category>
+  <category>sf</category>
+  <category>mapview</category>
+  <guid>https://silviacanelon.com/blog/2024-11-27-nearby-parks/</guid>
+  <pubDate>Wed, 04 Dec 2024 05:00:00 GMT</pubDate>
+  <media:content url="https://silviacanelon.com/blog/2024-11-27-nearby-parks/featured.png" medium="image" type="image/png" height="75" width="144"/>
+</item>
+<item>
+  <title></title>
+  <dc:creator>Silvia Canelón</dc:creator>
+  <link>https://silviacanelon.com/blog/2024-11-27-tree-canopy/</link>
+  <description><![CDATA[ undefined ]]></description>
+  <category>R</category>
+  <category>tutorial</category>
+  <category>maps</category>
+  <category>greenspace</category>
+  <category>rspatial</category>
+  <category>sf</category>
+  <category>mapview</category>
+  <guid>https://silviacanelon.com/blog/2024-11-27-tree-canopy/</guid>
+  <pubDate>Wed, 27 Nov 2024 05:00:00 GMT</pubDate>
+  <media:content url="https://silviacanelon.com/blog/2024-11-27-tree-canopy/featured.png" medium="image" type="image/png" height="75" width="144"/>
+</item>
 <item>
   <title>Hello Quarto: Porting my Website from Hugo Apéro</title>
   <dc:creator>Silvia Canelón</dc:creator>
