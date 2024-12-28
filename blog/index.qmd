@@ -3,7 +3,7 @@ title: "Meeting People Where They R"
 description: |
   This is my blog where I practice sharing my curiosity about R.<br>
   It includes notes and tutorials for my future self and hopefully also for you.<br><br>
-  {{< fa envelope >}} Sign up for my [newsletter](https://buttondown.com/spcanelon) to receive updates about new posts.
+  {{< fa envelope >}} Sign up for my [newsletter](/contact.html#buttondown) to receive updates about new posts.
 listing: 
   contents: 
     - "**/index.qmd"
