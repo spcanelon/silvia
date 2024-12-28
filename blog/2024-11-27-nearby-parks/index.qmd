@@ -6,8 +6,8 @@ image: featured.png
 categories:
   - R
   - tutorial
-  - greenspace
   - maps
+  - greenspace
   - rspatial
   - sf
   - mapview
@@ -46,32 +46,21 @@ data_dir <- "/Users/scanelon/Sync/Repos/3-Resources/Data"
 ```{r import}
 #| include: false
 
-zips <- read_sf(paste(data_dir, "raw", "Open Data Philly", "city-boundaries", "zipcodes.geojson", sep = "/"))
+county <- read_sf(paste(data_dir, "Open Data Philly", "clean", "city_boundaries", "phl_county_line.gpkg", sep = "/"))
 
-schools <- read_sf(paste(data_dir, "raw", "Open Data Philly", "schools", "schools_parcels.geojson", sep = "/"))
+schools <- read_sf(paste(data_dir, "Open Data Philly", "clean", "schools", "schools_parcels.gpkg", sep = "/"))
 
-parks <- read_sf(paste(data_dir, "raw", "Open Data Philly", "parks", "PPR_Properties.geojson", sep = "/"))
+parks_accessible <- read_sf(paste(data_dir, "PAD-US-AR-V1", "clean", "padus_ar_phl.gpkg", sep = "/"))
 
-```
-
-```{r}
-#| include: false
-philly <- st_union(zips) |> st_as_sf()
-
-schools <- schools |> 
-  mutate(across(.cols = c(TYPE, TYPE_SPECIFIC),
-                .fns = factor)) |> 
-  mutate(TYPE = fct_recode(TYPE,
-                           "PUBLIC" = "1",
-                           "CHARTER" = "2",
-                           "PRIVATE" = "3"))
+parks_ppr <- read_sf(paste(data_dir, "Open Data Philly", "raw", "parks", "PPR_Properties.geojson", sep = "/"))
 ```
 
 ```{r}
 #| include: false
 
-mapview(philly)
-mapview(parks, col.region = "blue") + mapview(schools, zcol = "type")
+mapview(parks_ppr, col.region = "blue") +
+  mapview(parks_accessible, col.region = "cyan") +
+  mapview(schools, col.regions = "yellow")
 ```
 
 ## Wrangling
@@ -92,12 +81,41 @@ parks <- parks |>
   select(park_id, public_name, 
          park_address = address_brt,
          property_classification, geometry)
+
+parks_accessible <- 
   
 # CRS projections ----
 philly <- philly |> st_transform(crs = "EPSG:6564")
 schools <- schools |> st_transform(crs = "EPSG:6564")
 parks <- parks |> st_transform(crs = "EPSG:6564")
 ```
+
+## Combining park datasets
+
+```{r}
+# TODO: check 02_add_parks.qmd file for GeoBirth-IGNITE
+# supplement PAD-US-AR dataset with PPR parks that don't intersect
+# resource: https://stackoverflow.com/a/66989798
+
+list_parks <- 
+  list(parks_accessible, parks_without_overlap) |> 
+  bind_rows() |> 
+  st_make_valid()
+
+# merge parks and preserve features
+parks <- 
+  st_union(list_parks, by_feature = TRUE) |> 
+  mutate(park_id = row_number()) |> 
+  relocate(park_id, .before = everything())
+```
+
+## Example set
+
+```{r}
+# subset of schools by objectid
+examples <- c("194", "26", "455", "367", "169", "140", "187", "294", "384", "273", "188", "234", "396", "487")
+```
+
 
 ## Number of nearby parks
 

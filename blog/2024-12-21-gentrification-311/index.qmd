@@ -25,6 +25,7 @@ eval: false
 ## Notes
 
 - [They Played Dominoes Outside Their Apartment For Decades. Then The White People Moved In And Police Started Showing Up.](https://www.buzzfeednews.com/article/lamvo/gentrification-complaints-311-new-york)
+  - GitHub: https://github.com/BuzzFeedNews/2018-06-nyc-311-complaints-and-gentrification
 - 2020 (2012-2017): [Gentrification and Disinvestment 2020 » NCRC](https://ncrc.org/gentrification20/#elementor-toc__heading-anchor-3)
 
 
