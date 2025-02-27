@@ -7,6 +7,7 @@ image: featured.png
 alias:
   - /project/user-2021/
 categories:
+  - journalism
   - R
   - tidyverse
   - useR

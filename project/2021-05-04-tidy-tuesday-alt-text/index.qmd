@@ -5,6 +5,7 @@ date: 2021-05-04
 author: Silvia Canelón
 image: featured.png
 categories:
+  - journalism
   - R
   - TidyTuesday
   - TidyTuesdayAltText

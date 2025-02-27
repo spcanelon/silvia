@@ -1,0 +1,29 @@
+---
+title: "NICAR 2025 Calendar"
+author: Silvia Canelón
+date: 2025-02-27
+slug: nicar-2025
+image: featured.png
+categories:
+  - journalism
+  - R
+  - shiny
+  - reactable
+  - r6
+  - webscraping
+  - rvest
+  - json
+  - jsonlite
+subtitle: "An interview with David Keyes of R for the Rest of Us, about using the xaringan package to build captivating, audience-friendly presentations directly from R Markdown."
+description: ''
+links:
+- icon: calendar-week
+  name: Calendar app
+  url: https://rfortherestofus.com/2023/04/podcast-episode-7
+- icon: qr-code
+  name: QR code
+  url: /project/2025-02-27-nicar-2025/qr_code.png
+draft: true
+---
+
+

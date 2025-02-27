@@ -5,6 +5,7 @@ date: '2022-05-31'
 image: featured.png
 categories:
   - R
+  - journalism
   - tutorial
   - maps
   - webscraping

@@ -18,6 +18,7 @@ image: featured.png
 alias:
   - /publication/data-hack-opioid/
 categories:
+  - journalism
   - education
   - data hack
   - opioid

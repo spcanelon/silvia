@@ -8,6 +8,7 @@ author:
 slug: ccd-sips
 image: featured.png
 categories:
+  - journalism
   - R
   - maps
   - webscraping

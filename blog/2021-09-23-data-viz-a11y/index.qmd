@@ -9,6 +9,7 @@ aliases:
     - /blog/2021-curated-compilations/01-data-viz-a11y/
 categories: 
   - R
+  - journalism
   - data viz
   - a11y
   - ggpattern

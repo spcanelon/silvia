@@ -1,6 +1,6 @@
 ---
 title: "Silvia Canelón"
-subtitle: Data Analyst,<br>Penn Medicine Center for Health Justice
+subtitle: Data Scientist & Journalist
 image: sidebar/avatar.png
 image-alt: "Smiling woman with a tan complexion, dark eyes, and dark long wavy hair styled to one side"
 about:
@@ -100,7 +100,7 @@ resources:
 
 Thanks for stopping by!
 
-I work as a data analyst in the [Penn Medicine Center for Health Justice](https://chti.upenn.edu/center-for-health-justice) at the University of Pennsylvania. My research interests include applications of biomedical and spatial data science in the public and population health fields. 
+I work as a data scientist at the [Urban Health Lab](https://www.urbanhealthlab.org/) at the University of Pennsylvania. My research interests include applications of biomedical and spatial data science in the public and population health fields. 
 
 My current projects use electronic health record (EHR) and geospatial data to explore how the neighborhood environment and access to urban nature can impact the health of individuals in Philadelphia. Learn more about my research interests in [publications](/publication).
 
@@ -126,7 +126,7 @@ I enjoy using [R](https://www.r-project.org/about.html) to optimize my data scie
 
 ::: {.g-col-6 #about-me-2}
 
-Prior to joining the Center for Health Justice, I developed novel data mining methods to extract meaningful information from the EHR and study health outcomes and disparities in pregnant populations. I'm particularly interested in research that combines biomedical data science with open data sources in ways that prioritize health equity in communities.
+Prior to joining the Urban Health Lab, I developed novel data mining methods to extract meaningful information from the EHR and study health outcomes and disparities in pregnant populations. I'm particularly interested in research that combines biomedical data science with open data sources in ways that prioritize health equity in communities.
 
 <ul class="fa-ul">
    <li><span class="fa-li"><i class="fa-solid fa-certificate"></i></span><a href="https://www.med.upenn.edu/mbmi/certificate.html">Certificate in Biomedical Informatics</a> ∙ University of Pennsylvania ∙ 2019</li>

@@ -10,6 +10,7 @@ image: featured.jpg
 alias:
   - /talk/2021-05-04-data-viz-accessibility/
 categories:
+  - journalism
   - R
   - education
   - TidyTuesday

@@ -1,14 +1,14 @@
 ---
 title: "Silvia Canelón, PhD"
 pagetitle: "Silvia Canelón, PhD"
-subtitle: "Data Analyst at the Penn Medicine<br>Center for Health Justice"
+subtitle: "Data Scientist at the University of Pennsylvania"
 image: assets/silvia/img/skyline-philly-dual.png
 image-alt: "Abstract data visualization depicting tall buildings in Philadelphia as a circle. The text inside the circle reads Philadelphia Skyline"
 
 twitter-card:
     title: Silvia Canelón, PhD
     description: |
-      Researcher and R educator applying biomedical and spatial data science in ways that prioritize health equity.
+      Researcher, educator, and journalist with data science expertise.
     image: assets/silvia/img/silvia-social.png
 
 about:
@@ -56,7 +56,7 @@ resources:
 
 ::: {#hero-heading}
 
-I am a researcher and R educator with a love for community. <br>My **research** leverages electronic health record and spatial data to study the intersection of health equity and urban nature. My **community** projects value the partnership between open source tools and data literacy as a way to build power and effect change.
+I am a researcher, R educator, and data journalist with a love for community. My **research** leverages electronic health record and spatial data to study the intersection of health equity and urban nature. My **journalism** and **community** projects value the partnership between open source tools and data literacy as a way to build power and effect change.
 
 [Learn more about me &rarr;](/about){.about-links .subtitle}
 
