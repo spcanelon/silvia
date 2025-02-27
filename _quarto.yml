@@ -6,7 +6,7 @@ project:
 website:
   title: "Silvia Canelón"
   site-url: https://silviacanelon.com
-  description: "Researcher, educator, and journalist with expertise in data science."
+  description: "Researcher, educator, and journalist with data science expertise."
   favicon: assets/silvia/img/logo_rounded.svg
   page-navigation: true
   back-to-top-navigation: true
