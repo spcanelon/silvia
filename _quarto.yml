@@ -20,6 +20,17 @@ website:
       label: utterances
       theme: body-light
       issue-term: title
+  # search:
+  #   algolia:
+  #     index-name: silviacanelon_com_2nwwu5566h_pages
+  #     application-id: 2NWWU5566H
+  #     search-only-api-key: 4fc205c04b677b0951348a8571b2d7d0
+  #     show-logo: false
+      # index-fields:
+      #   href: url
+      #   title: title
+      #   section: subtitle
+      #   text: body
  
   navbar:
     logo: assets/silvia/img/logo_rounded.svg
