@@ -48,6 +48,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -181,7 +184,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
-<a href="https://tiny.cc/nicar-2025" class="btn btn-secondary text-capitalize"><i class="bi bi-calendar-week me-1"></i> Calendar app</a>
+<a href="https://tiny.cc/nicar-2025" class="btn btn-secondary text-capitalize"><i class="bi bi-calendar-week me-1"></i> Calendar tool</a>
 <a href="../../project/2025-02-28-nicar-2025/qr_code.png" class="btn btn-secondary text-capitalize"><i class="bi bi-qr-code me-1"></i> QR code</a>
 <a href="https://github.com/spcanelon/nicar-2025-calendar" class="btn btn-secondary text-capitalize"><i class="bi bi-github me-1"></i> Source code</a>
 </div>
@@ -194,7 +197,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#other-journalism-projects" id="toc-other-journalism-projects" class="nav-link active" data-scroll-target="#other-journalism-projects">Other journalism projects</a></li>
+  <li><a href="#backstory" id="toc-backstory" class="nav-link active" data-scroll-target="#backstory">Backstory</a></li>
+  <li><a href="#other-journalism-projects" id="toc-other-journalism-projects" class="nav-link" data-scroll-target="#other-journalism-projects">Other journalism projects</a></li>
   </ul>
 </nav>
     </div>
@@ -212,17 +216,27 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>This year I’m excited to be attending <a href="https://www.ire.org/training/conferences/nicar-2025/">NICAR 2025</a> which seems to be a wildly popular U.S. conference for data journalists. 🥳📊</p>
-<p>As soon as nonprofit <a href="https://www.ire.org/">Investigative Reporters and Editors (IRE)</a> posted the <a href="https://schedules.ire.org/nicar-2025/">official schedule</a> of 213+ sessions and workshops I felt like I do when I’m deciding what ice cream flavor I want – they all look great and I know I know some touch decisions have to be made!</p>
-<p>I immediately had flashbacks to RStudio Global 2021, which took place virtually all over the world for a continuous 24 hours. So many of us were trying to make sense of the <a href="https://web.archive.org/web/20210122034233/https://global.rstudio.com/student/all_events">long list of sessions</a>, both when the sessions were happening (across different timezones) and which were in conflict with one another.</p>
+<p>I built a <strong>build-your-own calendar</strong> tool to help me explore, find, and export a custom selection of sessions to a calendar file. My hope is you find it helpful too! 👇🏽</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="social-card.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="NICAR 2025 calendar Shiny app"><img src="social-card.png" class="img-fluid figure-img" alt="Shiny app table of NICAR 2025 sessions, displaying fields including session type, time, length, skill level, location, and whether the recorded. The interactive options to filter the sessions include a keyword search bar, a radio button for the day of the conference, a slider for the time of day, a search bar for speakers, session type, and skill level, and lastly, a radio button for whether the session will be recorded. Official conference schedule is posted online at https://schedules.ire.org/nicar-2025/index.html"></a></p>
+<figcaption>NICAR 2025 calendar Shiny app</figcaption>
+</figure>
+</div>
+<p>If you happen to see me at NICAR, please say hello! It will be my first time attending, and I’ll be so happy to meet new folks. If you’re curious about <a href="#other-journalism-projects">my other journalism projects</a>, I’ve curated them in a list below.</p>
+<section id="backstory" class="level2">
+<h2 class="anchored" data-anchor-id="backstory">Backstory</h2>
+<p>As soon as nonprofit <a href="https://www.ire.org/">Investigative Reporters and Editors (IRE)</a> posted the <a href="https://schedules.ire.org/nicar-2025/">official schedule</a> of 213+ sessions and workshops I felt like I do when I’m deciding what ice cream flavor I want – they all look great and, <em>how was I going to decide???</em>. I knew some tough decisions would have to be made!</p>
+<p>Seeing this list immediately brought memories to RStudio Global 2021, which took place virtually all over the world for a continuous 24 hours. So many of us were trying to make sense of the <a href="https://web.archive.org/web/20210122034233/https://global.rstudio.com/student/all_events">long list of sessions</a>, both when the sessions were happening (across different timezones) and which were in conflict with one another.</p>
 <p>The Twitter #RStats community (8 different people!) really came together to crowdsource a solution that used R (of course) to take in these sessions and produce a calendar file that we could import into our personal calendars. By the end of this community effort, Garrick Aden-Buie had built a Shiny app that I adapted for NICAR 2025!</p>
 <p>This is my first time building a Shiny app, and it seems like this one may be too complex for shinylive, so I opted to host on shinyapps.io. I have my fingers crossed that the free tier will be enough to handle the traffic! 🤞</p>
-<p>If you happen to see me at NICAR, please don’t be shy and say hello! I’ll be so happy to meet new folks. And please see the list below if you’re curious about my other journalism projects.</p>
+</section>
 <section id="other-journalism-projects" class="level2">
 <h2 class="anchored" data-anchor-id="other-journalism-projects">Other journalism projects</h2>
 <ul>
 <li><a href="../../talk/2021-05-04-data-viz-accessibility/">Revealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community</a> – Data visualization accessibility talk revealing a lack of accessibilty after scraping alternative (alt) text from data viz shared on Twitter as part of the #TidyTuesday social project.</li>
 <li><a href="../../project/2021-05-04-tidy-tuesday-alt-text/">TidyTuesdayAltText</a> – An R data package with the goal of providing insight into the alternative (alt) text accompanying the data visualizations shared on Twitter as part of the TidyTuesday social project.</li>
-<li><a href="../../project/2021-05-04-tidy-tuesday-alt-text/#tidytuesday-databases-on-notion">TidyTuesday databases on Notion</a> – searchable TidyTuesday databases that democratize data visualization resources shared by the #RStats Twitter community from 2018-2021.</li>
+<li><a href="../../project/2021-05-04-tidy-tuesday-alt-text/#tidytuesday-databases-on-notion">TidyTuesday databases on Notion</a> – searchable TidyTuesday databases that democratize data visualization resources shared by the #RStats Twitter community between 2018-2021.</li>
 <li><a href="../../blog/2021-09-23-data-viz-a11y/">Resources for Data Viz Accessibility</a> – A selection of general and R-specific resources on how and why to make accessible data visualizations.</li>
 <li><a href="../../talk/2024-07-10-data-equity-ldi/">Considering Equity in Data Visualization</a> – Slides for an interactive presentation summarizing a selection of the principles including in the Urban Institute’s series of Do No Harm guides, which focus on how to incorporate principles of equity into data collection, visualization, and communication.</li>
 <li><a href="../../project/2024-06-16-ccd-sips/">Philly Center City District SIPS: An Interactive Map</a> – An interactive map showing restaurants participating in CCD Sips 2022 &amp; a companion R tutorial on webscraping, geocoding, and map-making</li>
@@ -837,6 +851,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

@@ -13,7 +13,7 @@ It includes notes and tutorials for my future self and hopefully also for you.&l
 {{&lt; fa envelope &gt;}} Sign up for my [newsletter](/contact.html#buttondown) to receive updates about new posts.
 </description>
 <generator>quarto-1.6.39</generator>
-<lastBuildDate>Fri, 29 Sep 2023 04:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 29 Sep 2023 05:00:00 GMT</lastBuildDate>
 <item>
   <title>Hello Quarto: Porting my Website from Hugo Apéro</title>
   <dc:creator>Silvia Canelón</dc:creator>
@@ -1455,7 +1455,7 @@ Apéro.”</span> September 29, 2023. <a href="https://silviacanelon.com/blog/20
   <category>quarto</category>
   <category>website</category>
   <guid>https://silviacanelon.com/blog/2023-09-29-hello-quarto/</guid>
-  <pubDate>Fri, 29 Sep 2023 04:00:00 GMT</pubDate>
+  <pubDate>Fri, 29 Sep 2023 05:00:00 GMT</pubDate>
   <media:content url="https://silviacanelon.com/blog/2023-09-29-hello-quarto/featured.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -3470,7 +3470,7 @@ Interactive Map.”</span> May 31, 2022. <a href="https://silviacanelon.com/blog
   <category>leaflet</category>
   <category>ggmap</category>
   <guid>https://silviacanelon.com/blog/2022-05-31-ccd-sips/</guid>
-  <pubDate>Tue, 31 May 2022 04:00:00 GMT</pubDate>
+  <pubDate>Tue, 31 May 2022 05:00:00 GMT</pubDate>
   <media:content url="https://silviacanelon.com/blog/2022-05-31-ccd-sips/featured.png" medium="image" type="image/png" height="75" width="144"/>
 </item>
 <item>
@@ -3582,7 +3582,7 @@ Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https:/
   <category>test</category>
   <category>hugo</category>
   <guid>https://silviacanelon.com/blog/2022-01-18-hello-umami/</guid>
-  <pubDate>Tue, 18 Jan 2022 05:00:00 GMT</pubDate>
+  <pubDate>Tue, 18 Jan 2022 06:00:00 GMT</pubDate>
   <media:content url="https://silviacanelon.com/blog/2022-01-18-hello-umami/featured.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -4004,7 +4004,7 @@ Accessibility.”</span> September 23, 2021. <a href="https://silviacanelon.com/
   <category>ggpattern</category>
   <category>highcharter</category>
   <guid>https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/</guid>
-  <pubDate>Thu, 23 Sep 2021 04:00:00 GMT</pubDate>
+  <pubDate>Thu, 23 Sep 2021 05:00:00 GMT</pubDate>
   <media:content url="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/featured.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -4960,7 +4960,7 @@ Site from Hugo Academic.”</span> June 1, 2021. <a href="https://silviacanelon.
   <category>blogdown</category>
   <category>Hugo</category>
   <guid>https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/</guid>
-  <pubDate>Tue, 01 Jun 2021 04:00:00 GMT</pubDate>
+  <pubDate>Tue, 01 Jun 2021 05:00:00 GMT</pubDate>
   <media:content url="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/featured.png" medium="image" type="image/png" height="75" width="144"/>
 </item>
 <item>
@@ -5285,7 +5285,7 @@ Pages.”</span> March 16, 2021. <a href="https://silviacanelon.com/blog/2021-03
   <category>xaringan</category>
   <category>git</category>
   <guid>https://silviacanelon.com/blog/2021-03-16-deploying-xaringan-slides/</guid>
-  <pubDate>Tue, 16 Mar 2021 04:00:00 GMT</pubDate>
+  <pubDate>Tue, 16 Mar 2021 05:00:00 GMT</pubDate>
   <media:content url="https://silviacanelon.com/blog/2021-03-16-deploying-xaringan-slides/featured.png" medium="image" type="image/png" height="75" width="144"/>
 </item>
 <item>
@@ -5555,7 +5555,7 @@ Instructor.”</span> October 7, 2020. <a href="https://silviacanelon.com/blog/2
   <category>education</category>
   <category>tidyverse</category>
   <guid>https://silviacanelon.com/blog/2020-10-07-rstudio-instructor-certification-tidyverse/</guid>
-  <pubDate>Wed, 07 Oct 2020 04:00:00 GMT</pubDate>
+  <pubDate>Wed, 07 Oct 2020 05:00:00 GMT</pubDate>
   <media:content url="https://silviacanelon.com/blog/2020-10-07-rstudio-instructor-certification-tidyverse/featured.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -6438,7 +6438,7 @@ with JSON Data in R.”</span> May 12, 2020. <a href="https://silviacanelon.com/
   <category>jsonlite</category>
   <category>tidyverse</category>
   <guid>https://silviacanelon.com/blog/2020-05-12-trello-to-airtable/</guid>
-  <pubDate>Tue, 12 May 2020 04:00:00 GMT</pubDate>
+  <pubDate>Tue, 12 May 2020 05:00:00 GMT</pubDate>
   <media:content url="https://silviacanelon.com/blog/2020-05-12-trello-to-airtable/featured.png" medium="image" type="image/png" height="85" width="144"/>
 </item>
 </channel>
