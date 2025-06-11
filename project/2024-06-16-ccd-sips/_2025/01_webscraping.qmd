@@ -1,0 +1,57 @@
+---
+title: "Webscraping the specials and addresses from the posted tables"
+format: html
+execute: 
+  freeze: true
+---
+
+```{r setup}
+xfun::pkg_attach("tidyverse", 
+                 "rvest", 
+                 "robotstxt", 
+                 "tidygeocoder", 
+                 "leaflet")
+```
+
+```{r variables}
+year <- 2025
+slug <- "2024-06-16-ccd-sips"
+url <- "https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view"
+total_pages <- 5
+```
+
+```{r source-files}
+source(here::here("project", slug, paste0("_", year), "R", "ccd_sips_functions.R"))
+```
+
+## Checking the page
+
+```{r check-tos}
+# check page's terms of service
+get_robotstxt(url)
+```
+
+## Scrape all pages
+
+```{r scrape-pages}
+table <- map_df(1:total_pages, .f = get_tables, url = url) 
+
+table |> head()
+
+write_rds(table, file = here::here("project", slug, paste0("_", year), "specialsScraped.Rds"))
+```
+
+## Geocoding
+
+```{r geocode}
+specials <- read_rds(file = here::here("project", slug, paste0("_", year), "specialsScraped.Rds"))
+
+specials_geocoded <- 
+  specials |> 
+  geocode(Address, method = "google", 
+          lat = "Latitude", long = "Longitude")
+
+specials_geocoded |> 
+  write_rds(file = here::here("project", slug, paste0("_", year), "specialsGeocoded.Rds"))
+
+```

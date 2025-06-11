@@ -91,14 +91,14 @@ create_address_popups <-
           font_size = "1.6em",
           #color = "#5389f7"
         ),
-        htmltools::a(specials$Name[special_number],
+        htmltools::a(specials$name[special_number],
                      style = htmltools::css(color = link_color),
-                     href = specials$Specials[special_number]),
+                     href = specials$specials[special_number]),
       ),
       
       # paragraph text under heading
       htmltools::p(
-        specials$Address[special_number],
+        specials$address[special_number],
         style = htmltools::css(font_family = "Red Hat Text, sans-serif",
                                font_weight = "normal",
                                font_size = "1.5em",
@@ -175,13 +175,6 @@ create_center_popup <-
 #' 
 create_leaflet_map <- function(year, df_specials, address_marker_labels, center_marker_label, address_marker_fill_color, address_marker_color, max_popup_width = NULL) {
   
-  palette <- viridisLite::viridis(2, begin = 0.6, end = 1, direction = -1)
-  # my_palette <- colorFactor(palette, specials_w_inspection$foodborne_cat,
-  #                           na.color = "lightgray")
-  my_palette <- colorFactor(c("#912b60", "#7AD151"),
-                            specials_w_inspection$foodborne_cat,
-                            na.color = "lightgray")
-  
   df_specials |>
     leaflet::leaflet(
       width = "100%", 
@@ -210,73 +203,11 @@ create_leaflet_map <- function(year, df_specials, address_marker_labels, center_
           "font-size" = "1.2em")
       )
     ) |>
-    # add map markers for foodborne illness violations ----
-    leaflet::addCircles(
-      group = "Foodborne illness risk factors",
-      lat = ~ latitude,
-      lng = ~ longitude,
-      fillColor = ~my_palette(foodborne_cat),
-      fillOpacity = 1,
-      stroke = TRUE,
-      color = address_marker_color,
-      weight = 3,
-      opacity = 1,
-      radius = 12,
-      popup = address_marker_labels,
-      label = ~ name,
-      labelOptions = leaflet::labelOptions(
-        style = list(
-          "font-family" = "Red Hat Text, sans-serif",
-          "font-size" = "1.2em")
-      )
-    ) |>
-    # add map markers for retail practice violations ----
-  leaflet::addCircles(
-    group = "Lack of good retail practices",
-    lat = ~ latitude,
-    lng = ~ longitude,
-    fillColor = ~my_palette(retail_cat),
-    # fillColor = c("#7AD151FF", "#912b60", "lightgray"),
-    fillOpacity = 1,
-    stroke = TRUE,
-    color = address_marker_color,
-    weight = 3,
-    opacity = 1,
-    radius = 12,
-    popup = address_marker_labels,
-    label = ~ name,
-    labelOptions = leaflet::labelOptions(
-      style = list(
-        "font-family" = "Red Hat Text, sans-serif",
-        "font-size" = "1.2em")
-    )
-  ) |>
-    # add layers control
-    addLayersControl(
-      overlayGroups = c("Specials only", 
-                        "Foodborne illness risk factor",
-                        "Lack of good retail practices"),
-      options = layersControlOptions(collapsed = FALSE,
-                                     position = "topright")
-    ) |>
-    # set default layers view
-    hideGroup(c("Specials only", "Lack of good retail practices")) |>
-    # add legend
-    addLegend(
-      # position = "bottomright", 
-      pal = my_palette, 
-      values = ~foodborne_cat,
-      # group = "Foodborne illness violations",
-      title = "Recent food safety<br>inspection violations",
-      # labFormat = labelFormat(c("factor")),
-      opacity = 1,
-      na.label = "Report not found"
-    ) |> 
     # add map tiles in the background
     addProviderTiles(
       providers$CartoDB.Positron,
       # add attribution
-      options = list(attribution = "Created by <a href='https://silviacanelon.com'>Silvia Canelón</a> with Mallori Lofton-Malachi | &copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors")
+      options = list(attribution = "Created by <a href='https://silviacanelon.com'>Silvia Canelón</a> | &copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors")
     ) |>
     # use centroid as map view
     leaflet::setView(mean(df_specials$longitude),
@@ -316,26 +247,15 @@ create_table <- function(df, page_length = 10) {
   df |> 
     # create HTML link variable
     dplyr::mutate(link = glue::glue("<a href='{specials}'>{name}</a>")) |>
-    # replace NAs in category vars
-    dplyr::mutate(dplyr::across(
-      .cols = c(foodborne_cat, retail_cat),
-      .fns = ~ifelse(is.na(.), "Report not found", .))) |>
     # select variables to display in table
-    dplyr::select(link, address,
-                  foodborne_cat, retail_cat, inspection_date) |>
-    # format date variable
-    dplyr::mutate(inspection_date = format(
-      lubridate::as_date(inspection_date), "%B %d, %Y")) |> 
+    dplyr::select(link, address) |>
     DT::datatable(
       # number of items to include per page
       options = list(pageLength = page_length),
       # remove row names/numbers
       rownames = FALSE,
       # label columns
-      colnames = c('Business', 'Address',
-                   "Foodborne illness risk factor",
-                   "Lack of good retail practices",
-                   "Food safety inspection date"),
+      colnames = c('Business', 'Address'),
       # allow text to be interpreted as HTML
       escape = FALSE)
   

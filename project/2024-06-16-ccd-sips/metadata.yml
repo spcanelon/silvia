@@ -1,9 +1,20 @@
 # Map metadata
-# - title: "2024"
-#   date: 2024-06-05
-#   image: 2024/featured.png
-#   path: 2024/map.html
+# - title: "2025"
+#   date: 2025-06-04
+#   image: _2025/featured.png
+#   path: _2025/map.html
 #   description: ""
+- title: "2024"
+  date: 2024-06-05
+  image: _2024/featured.png
+  path: _2024/map.html
+  description: >
+    Contains food safety inspection layer, 
+    created in collaboration with Mallori Lofton-Malachi
+    <details><summary>Web analytics</summary>
+    1,552 unique visitors in the United States visited this post 2,032 
+    times between June 5th and August 28th, 2024
+    </details>
 - title: "2023"
   date: 2023-06-05
   image: _2023/featured.png

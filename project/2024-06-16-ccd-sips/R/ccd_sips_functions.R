@@ -316,28 +316,16 @@ create_table <- function(df, page_length = 10) {
   
   df |> 
     # create HTML link variable
-    dplyr::mutate(link = glue::glue("<a href='{specials}'>{name}</a>")) |>
-    # replace NAs in category vars
-    dplyr::mutate(dplyr::across(
-      .cols = c(foodborne_cat, retail_cat),
-      .fns = ~forcats::fct_na_value_to_level(
-        ., level = "Report not found"))) |> 
+    dplyr::mutate(link = glue::glue("<a href='{Specials}'>{Name}</a>")) |>
     # select variables to display in table
-    dplyr::select(link, address,
-                  foodborne_cat, retail_cat, inspection_date) |>
-    # format date variable
-    dplyr::mutate(inspection_date = format(
-      lubridate::as_date(inspection_date), "%B %d, %Y")) |> 
+    dplyr::select(link, Address) |>
     DT::datatable(
       # number of items to include per page
       options = list(pageLength = page_length),
       # remove row names/numbers
       rownames = FALSE,
       # label columns
-      colnames = c('Business', 'Address',
-                   "Foodborne illness risk factor",
-                   "Lack of good retail practices",
-                   "Food safety inspection date"),
+      colnames = c('Business', 'Address'),
       # allow text to be interpreted as HTML
       escape = FALSE)
   
