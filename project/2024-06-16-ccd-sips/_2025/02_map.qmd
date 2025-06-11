@@ -1,0 +1,77 @@
+---
+pagetitle: "Philly CCD SIPS 2025 Map"
+include-in-header: meta-map.html
+format:
+  html:
+    page-layout: custom
+    embed-resources: true
+    # css: "../../assets/silvia/fonts.scss"
+execute: 
+  freeze: true
+  include: false
+  echo: false
+output-file: map.html
+---
+
+```{r source-scripts}
+source(here::here("project", "2024-06-16-ccd-sips", "_2025", "R",
+                  "ccd_sips_functions.R"))
+```
+
+```{r metadata}
+year <- 2025
+slug <- "2024-06-16-ccd-sips"
+create_metadata(year = year, slug = slug)
+```
+
+```{r setup-map}
+xfun::pkg_attach("tidyverse", "leaflet")
+```
+
+```{r import-data}
+specials <- read_rds(here::here("project", slug, paste0("_", year), "specialsGeocoded.Rds")) |> 
+  janitor::clean_names()
+```
+
+```{=html}
+<link rel="stylesheet" href="../../../assets/silvia/fonts.scss">
+```
+
+
+```{r leaflet-markers}
+# list of markers for the specials
+popup_address_labels <-
+  1:nrow(specials) |> 
+  map(\(special_number) create_address_popups(
+    special_number, 
+    link_color = "#f75389",
+    text_color = "#9197A6"))
+
+# marker for the center of the map
+popup_center_marker_label <-
+  create_center_popup(link_color = "#f75389", 
+                      text_color = "#9197A6",
+                      year = year)
+
+popup_center_marker_icon <-
+  awesomeIcons(
+    icon = "map-pin",
+    library = "fa",
+    iconColor = "#FFFFFF",
+    #markerColor = "darkblue",
+    markerColor = "blue"
+  )
+```
+
+```{r leaflet-map}
+#| include: true
+# viridisLite::viridis(6, begin = 0.1, end = 1, direction = -1)
+create_leaflet_map(year = year,
+                   df_specials = specials,
+                   address_marker_labels = popup_address_labels, 
+                   center_marker_label = popup_center_marker_label,
+                   address_marker_fill_color = "#f75389",
+                   address_marker_color = "#7b2944",
+                   # pop-up widths should be <=250 for mobile
+                   max_popup_width = 250)
+```
