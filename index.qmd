@@ -1,6 +1,6 @@
 ---
-title: "Silvia Canelón, PhD"
-pagetitle: "Silvia Canelón, PhD"
+title: "Bob's page"
+pagetitle: "Bob's page"
 subtitle: "Data Scientist at the University of Pennsylvania"
 image: assets/silvia/img/skyline-philly-dual.png
 image-alt: "Abstract data visualization depicting tall buildings in Philadelphia as a circle. The text inside the circle reads Philadelphia Skyline"

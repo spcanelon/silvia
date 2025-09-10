@@ -4,7 +4,7 @@ project:
   #   - "cp -rnv static/. _site" # source: https://github.com/quarto-dev/quarto-cli/discussions/4162#discussioncomment-4831352
 
 website:
-  title: "Silvia Canelón"
+  title: "Bob's page"
   site-url: https://silviacanelon.com
   description: "Researcher, educator, and journalist with data science expertise."
   favicon: assets/silvia/img/logo_rounded.svg
@@ -80,21 +80,9 @@ website:
       - icon: rss
         href: blog/index.xml
 
-format: 
+format:
   html:
-    theme:
-      light:
-        - cosmo
-        - assets/silvia-theme-light.scss
-        - assets/silvia/colors-light.scss
-        - assets/silvia/fonts.scss
-      dark: 
-        - cosmo
-        - assets/silvia-theme-dark.scss
-        - assets/silvia/colors-dark.scss
-    highlight-style:
-      light: assets/silvia/a11y-light.theme
-      dark: assets/silvia/a11y-dark.theme
+    theme: cosmo
     code-link: true
     pagetitle: "{{< meta title >}}"
     lightbox: true
@@ -102,4 +90,3 @@ format:
 execute: 
   freeze: auto
 
-include-in-header: assets/silvia/umami.html
