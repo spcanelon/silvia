@@ -1,0 +1,34 @@
+---
+title: "Risk of Mortality Among Adult Females Diagnosed with Traumatic Brain Injury in an Academic Medical System"
+author: 
+- Bernadette A. D'Alonzo
+- Abigail C. Bretzin
+- Andrea L.C. Schneider
+- Rebecca B. Morse
+- name: Silvia P. Canelón
+  orcid: 0000-0003-1709-1394
+- Doug J. Wiebe
+- Andrea L.C. Schneider
+- Mary Regina Boland
+date: 2025-08-01
+slug: tbi-survival
+image: featured.png
+categories:
+  - research 
+  - EHR
+  - TBI
+description: 'Neurotrauma Reports'
+subtitle: EHR study evaluating the 5-year survival of female patients diagnosed with Traumatic Brain Injury (TBI), considering TBI severity, encounter type, and age.
+links:
+- icon: file-richtext-fill
+  name: Publication
+  url: https://www.liebertpub.com/doi/full/10.1177/08977151251361700
+- icon: github
+  name: Relevant files
+  url: https://github.com/bolandlab/TBI_Definition
+---
+
+## Abstract
+
+The objective of this retrospective cohort study was to evaluate mortality risk over five years among 6,432 female patients with a health care encounter diagnosis of TBI from hospitals and outpatient clinics within a university health system. We used TBI severity, defined by the Centers for Disease Control and Department of Defense/Veterans Affairs: mild, moderate/severe/penetrating, indeterminate severity. To determine patient death, we used death in a Penn Medicine facility and linkage to the Social Security Death Index. We used Cox proportional hazards models adjusted for age at the time of TBI diagnosis, race, and encounter type to estimate associations of TBI severity with mortality risk. We evaluated interactions with encounter type and age, and stratified results by inpatient/outpatient and age group (≥65 years). Median age was 47 years (25th–75th percentiles: 29–63). Patients were most commonly self-reported White race (n = 4,126, 64.0%), and diagnosed at an outpatient encounter (n = 5,099, 79.3%; among them, 1–2% urgent/emergent). Median follow-up time was 4.22 years (IQR, 2.3–4.9 years). Overall, 2.9% (n = 185) of patients died within five years of injury. Compared with mild TBI, mortality risk over five years was 2.06 times higher (95% CI = 1.27–3.33) for moderate/severe/penetrating TBI, and 1.54 times higher (95% CI = 0.98–2.42) for indeterminate TBI. Associations were attenuated among females with inpatient encounter type and those aged 65 years or older. Our results demonstrate that TBI severity affects survival among females, and this differs by encounter type and age. Findings motivate future, more focused research into the dynamics of TBI among females.
+
