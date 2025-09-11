@@ -17,6 +17,10 @@ categories:
 subtitle: A selection of general and R-specific resources on how and why to make accessible data visualizations.
 execute: 
   eval: false
+links:
+- icon: calendar-check
+  name: Related talk
+  url: /talk/2025-09-09-ropensci-a11y
 ---
 
 ```{r setup, echo=FALSE, message=FALSE, eval=TRUE}
@@ -64,13 +68,13 @@ library(palmerpenguins)
 }
 ```
 
-**Updated on 2021-11-19** to include a link to a series of educational blog posts written by Mara Averick that cover {highcharter} and the accessibility module in detail. Thank you Mara!
+**Updated on 2021-11-19** to include a link to a series of educational blog posts written by Mara Averick that cover `highcharter` and the accessibility module in detail. Thank you Mara!
 
 ----
 
 ## General resources
 
-- **Note:** There is an extensive list of data viz accessibility resources at https://github.com/dataviza11y/resources/blob/main/README.md
+- **Note:** There is an extensive list of data viz accessibility resources at <https://github.com/dataviza11y/resources>
 
 - Article by Doug Schepers that provides great background on data viz accessibility, explains how data visualization itself is assistive technology, and offers considerations for a variety of readers: [Why Accessibility Is at the Heart of Data Visualization](https://medium.com/nightingale/accessibility-is-at-the-heart-of-data-visualization-64a38d6c505b)
   
