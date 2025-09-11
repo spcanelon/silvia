@@ -201,6 +201,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
+<div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
+<a href="../../talk/2025-09-09-ropensci-a11y" class="btn btn-secondary text-capitalize"><i class="bi bi-calendar-check me-1"></i> Related talk</a>
+</div>
 
 </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
@@ -253,11 +256,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 </div>
-<p><strong>Updated on 2021-11-19</strong> to include a link to a series of educational blog posts written by Mara Averick that cover {highcharter} and the accessibility module in detail. Thank you Mara!</p>
+<p><strong>Updated on 2021-11-19</strong> to include a link to a series of educational blog posts written by Mara Averick that cover <code>highcharter</code> and the accessibility module in detail. Thank you Mara!</p>
 <hr>
 <section id="general-resources" class="level2"><h2 class="anchored" data-anchor-id="general-resources">General resources</h2>
 <ul>
-<li><p><strong>Note:</strong> There is an extensive list of data viz accessibility resources at https://github.com/dataviza11y/resources/blob/main/README.md</p></li>
+<li><p><strong>Note:</strong> There is an extensive list of data viz accessibility resources at <a href="https://github.com/dataviza11y/resources" class="uri">https://github.com/dataviza11y/resources</a></p></li>
 <li><p>Article by Doug Schepers that provides great background on data viz accessibility, explains how data visualization itself is assistive technology, and offers considerations for a variety of readers: <a href="https://medium.com/nightingale/accessibility-is-at-the-heart-of-data-visualization-64a38d6c505b">Why Accessibility Is at the Heart of Data Visualization</a></p></li>
 <li><p>The <a href="https://chartability.fizz.studio/">Chartability methodology</a> helps data viz practitioners audit their data viz, and it’s language/tool-agnostic. Chartability was created by Frank Elavsky with input from the broader community and is the most thorough set of standards I’ve come across.</p></li>
 <li>
@@ -393,7 +396,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span><span class="va">penguinColors</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"darkorange"</span>, <span class="st">"purple"</span>, <span class="st">"cyan4"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">ggplot</span><span class="op">(</span><span class="va">penguins</span>, <span class="fu">aes</span><span class="op">(</span><span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span><span class="fu">geom_bar_pattern</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>fill <span class="op">=</span> <span class="va">species</span>,</span>
+<span><span class="fu"><a href="https://trevorldavis.com/R/ggpattern/reference/geom-docs.html">geom_bar_pattern</a></span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>fill <span class="op">=</span> <span class="va">species</span>,</span>
 <span>                    pattern <span class="op">=</span> <span class="va">species</span>,</span>
 <span>                    pattern_color <span class="op">=</span> <span class="va">species</span><span class="op">)</span>,</span>
 <span>  fill <span class="op">=</span> <span class="va">penguinColors</span>,</span>

@@ -3628,11 +3628,11 @@ Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https:/
 }
 </style>
 </div>
-<p><strong>Updated on 2021-11-19</strong> to include a link to a series of educational blog posts written by Mara Averick that cover {highcharter} and the accessibility module in detail. Thank you Mara!</p>
+<p><strong>Updated on 2021-11-19</strong> to include a link to a series of educational blog posts written by Mara Averick that cover <code>highcharter</code> and the accessibility module in detail. Thank you Mara!</p>
 <hr>
 <section id="general-resources" class="level2"><h2 class="anchored" data-anchor-id="general-resources">General resources</h2>
 <ul>
-<li><p><strong>Note:</strong> There is an extensive list of data viz accessibility resources at https://github.com/dataviza11y/resources/blob/main/README.md</p></li>
+<li><p><strong>Note:</strong> There is an extensive list of data viz accessibility resources at <a href="https://github.com/dataviza11y/resources" class="uri">https://github.com/dataviza11y/resources</a></p></li>
 <li><p>Article by Doug Schepers that provides great background on data viz accessibility, explains how data visualization itself is assistive technology, and offers considerations for a variety of readers: <a href="https://medium.com/nightingale/accessibility-is-at-the-heart-of-data-visualization-64a38d6c505b">Why Accessibility Is at the Heart of Data Visualization</a></p></li>
 <li><p>The <a href="https://chartability.fizz.studio/">Chartability methodology</a> helps data viz practitioners audit their data viz, and it’s language/tool-agnostic. Chartability was created by Frank Elavsky with input from the broader community and is the most thorough set of standards I’ve come across.</p></li>
 <li>
@@ -3889,7 +3889,7 @@ background-color: null;
 font-style: inherit;">+</span></span>
 <span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">geom_bar_pattern</span><span class="op" style="color: #5E5E5E;
+font-style: inherit;"><a href="https://trevorldavis.com/R/ggpattern/reference/geom-docs.html">geom_bar_pattern</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="fu" style="color: #4758AB;
 background-color: null;
