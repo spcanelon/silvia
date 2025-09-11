@@ -1,0 +1,29 @@
+---
+title: "Improving Accessibility In Your Work"
+subtitle: "[rOpenSci](https://ropensci.org/events/coworking-2025-09/) social coworking and office hours about accessibility"
+author: 
+  - Silvia Canelón
+date: 2025-09-09T08:00:00
+slug: ropensci-a11y
+image: featured.jpg
+categories:
+  - data viz
+  - accessibility
+  - education
+  - R
+links:
+- icon: github
+  name: resources
+  url: https://github.com/spcanelon/ropensci-a11y
+- icon: pencil-fill
+  name: Related blog post
+  url: /blog/2021-09-23-data-viz-a11y
+---
+
+## Description
+
+I had the pleasure of joining Steffi LaZerte from rOpenSci as a community host for their social coworking and office hours about accessibility.
+
+About 12 of us gathered in a breakout room to chat about all things accessibility, while the rest of the group stayed in the main room for quiet coworking time. I had prepared a list of resources ahead of time, but welcomed folks' questions, curiosities, and opinions guided our conversation. We had a lively and informative discussion!
+
+Collaborative links and notes from the call can be found linked at the top of this post.
