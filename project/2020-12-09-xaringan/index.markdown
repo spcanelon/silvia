@@ -2,6 +2,7 @@
 title: "nhsr CSS Theme for xaringan"
 author: Silvia Canelón
 date: 2020-12-09
+date-modified: 2020-12-09
 slug: xaringan
 image: featured.png
 alias:

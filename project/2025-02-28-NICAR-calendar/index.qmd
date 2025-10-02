@@ -2,6 +2,7 @@
 title: "NICAR 2025 Calendar"
 author: Silvia Canelón
 date: 2025-02-28
+date-modified: 2025-03-10
 slug: nicar-2025
 image: featured.png
 categories:

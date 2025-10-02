@@ -2,6 +2,7 @@
 title: "Sharing Your Work with xaringan"
 author: "Silvia Canelón"
 date: 2020-11-03
+date-modified: 2020-11-03
 slug: xaringan-nhs-r
 image: featured.png
 alias:
