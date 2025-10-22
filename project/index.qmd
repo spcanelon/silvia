@@ -4,14 +4,15 @@ author: ""
 comments: false
 citation: false
 description: |
-  This porfolio includes openly available educational material I have created,<br> along with works, software, and tools I have contributed to or designed.
+  This porfolio includes openly available educational material I have created,<br>along with works, software, and tools I have contributed to or designed.
 listing: 
   contents:
     - "/*/index.qmd"
     - "/*/index.markdown"
     - "/*/index.md"
+    - "external-items/metadata.yml"
   type: grid
-  fields: [title, categories, date, image]
+  fields: [title, subtitle, categories, date, image]
   sort: "date desc"
   filter-ui: false
   image-align: left
