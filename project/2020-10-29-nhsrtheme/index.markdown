@@ -2,6 +2,7 @@
 title: "xaringan CSS Theme for nhsrtheme"
 author: "Silvia Canelón"
 date: 2020-10-29
+date-modified: 2020-10-29
 slug: nhsrtheme
 image: featured.png
 alias:

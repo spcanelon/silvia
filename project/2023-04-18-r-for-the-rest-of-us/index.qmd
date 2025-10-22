@@ -2,6 +2,7 @@
 title: "R for the Rest of Us Podcast: Episode #7"
 author: Silvia Canelón
 date: 2023-04-18
+date-modified: 2023-04-16
 slug: r-for-the-rest-of-us
 image: featured.jpg
 categories:

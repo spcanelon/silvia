@@ -2,6 +2,7 @@
 title: "Enseñar Tecnología en Comunidad"
 author: "Silvia Canelón"
 date: 2020-12-28
+date-modified: 2020-12-28
 slug: teaching-tech-together-es
 image: featured.png
 alias:
