@@ -31,11 +31,12 @@ about:
     - text: "{{< fa envelope >}}"
       aria-label: Newsletter
       href: https://buttondown.com/spcanelon
-listing: 
-- id: blog
+listing:
+- id: project
   contents: 
-    - "../blog/*/index.qmd"
-    - "../blog/*/index.markdown"
+    - "../project/*/index.qmd"
+    - "../project/*/index.markdown"
+    - "../project/external-items/metadata.yml"
   sort: date desc
   type: grid
   grid-columns: 1
@@ -49,6 +50,19 @@ listing:
   contents: 
     - "../talk/*/index.qmd"
     - "../talk/*/index.markdown"
+  sort: date desc
+  type: grid
+  grid-columns: 1
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  fields: [title, subtitle, image]
+  max-items: 1
+  image-height: "200"
+- id: blog
+  contents: 
+    - "../blog/*/index.qmd"
+    - "../blog/*/index.markdown"
   sort: date desc
   type: grid
   grid-columns: 1
@@ -72,20 +86,6 @@ listing:
   max-items: 1
   image-height: "200"
   image-placeholder: ../publication/featured.jpg
-- id: project
-  contents: 
-    - "../project/*/index.qmd"
-    - "../project/*/index.markdown"
-    - "../project/external-items/metadata.yml"
-  sort: date desc
-  type: grid
-  grid-columns: 1
-  categories: false
-  sort-ui: false
-  filter-ui: false
-  fields: [title, subtitle, image]
-  max-items: 1
-  image-height: "200"
 format: 
   html: 
     page-layout: full
@@ -145,10 +145,10 @@ Prior to joining the Urban Health Lab, I developed novel data mining methods to 
 :::: {.grid}
 
 ::: {.g-col-3}
-#### Blog
-::: {#blog}
+#### Projects
+::: {#project}
 :::
-[See all &rarr;](../blog){.about-links .subtitle}
+[See all &rarr;](../project){.about-links .subtitle}
 :::
 
 ::: {.g-col-3}
@@ -159,17 +159,17 @@ Prior to joining the Urban Health Lab, I developed novel data mining methods to 
 :::
 
 ::: {.g-col-3}
+#### Blog
+::: {#blog}
+:::
+[See all &rarr;](../blog){.about-links .subtitle}
+:::
+
+::: {.g-col-3}
 #### Publications
 ::: {#publication}
 :::
 [See all &rarr;](../publication){.about-links .subtitle}
-:::
-
-::: {.g-col-3}
-#### Projects
-::: {#project}
-:::
-[See all &rarr;](../project){.about-links .subtitle}
 :::
 
 ::::
