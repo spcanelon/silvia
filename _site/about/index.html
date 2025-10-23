@@ -77,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-blog .list');
+    const listingTargetEl = window.document.querySelector('#listing-project .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -90,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-blog'] = new List('listing-blog', options);
+    window['quarto-listings']['listing-project'] = new List('listing-project', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -133,20 +133,20 @@ ul.task-list li input[type="checkbox"] {
   
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-publication .list');
+    const listingTargetEl = window.document.querySelector('#listing-blog .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-subtitle','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
       searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-publication'] = new List('listing-publication', options);
+    window['quarto-listings']['listing-blog'] = new List('listing-blog', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -161,20 +161,20 @@ ul.task-list li input[type="checkbox"] {
   
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-project .list');
+    const listingTargetEl = window.document.querySelector('#listing-publication .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-subtitle','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
       searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-project'] = new List('listing-project', options);
+    window['quarto-listings']['listing-publication'] = new List('listing-publication', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -374,22 +374,22 @@ Hey, I’m happy you’re here
 <section id="lately" class="level2">
 <h2 data-anchor-id="lately">Lately …</h2>
 <div class="grid">
-<section id="blog" class="level4 g-col-3">
-<h4 data-anchor-id="blog">Blog</h4>
-<div id="listing-blog" class="quarto-listing quarto-listing-container-grid">
+<section id="projects" class="level4 g-col-3">
+<h4 data-anchor-id="projects">Projects</h4>
+<div id="listing-project" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-1">
-<div class="g-col-1" data-index="0" data-categories="UiUyQ3F1YXJ0byUyQ3dlYnNpdGU=" data-listing-date-sort="1695960000000" data-listing-file-modified-sort="1724624223814" data-listing-date-modified-sort="1697083200000" data-listing-reading-time-sort="19" data-listing-word-count-sort="3731">
-<a href="../blog/2023-09-29-hello-quarto/index.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="0" data-categories="am91cm5hbGlzbSUyQ1IlMkNkYXRhJTIwdml6" data-listing-date-sort="1761019200000">
+<a href="https://www.kensingtonvoice.com/new-fast-track-court-for-kensington-lands-most-with-warrants-back-into-the-cycle-of-addiction-and-homelessness/" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="../blog/2023-09-29-hello-quarto/featured.jpg" class="thumbnail-image card-img" style="height: 200;">
+<img loading="lazy" src="../project/external-items/2025-10-21-kv-wellness-court/featured.png" class="thumbnail-image card-img" style="height: 200;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-Hello Quarto: Porting my Website from Hugo Apéro
+New Kensington ‘fast-track court’ lands most with warrants, back into the cycle of addiction and homelessness<br><em>Photo by Solmaira Valerio</em>
 </h5>
 <div class="card-subtitle listing-subtitle">
-Notes from porting my personal Blogdown website to Quarto
+Kensington Voice
 </div>
 </div>
 </div>
@@ -400,7 +400,7 @@ Notes from porting my personal Blogdown website to Quarto
 No matching items
 </div>
 </div>
-<p><a href="../blog" class="about-links subtitle">See all →</a></p>
+<p><a href="../project" class="about-links subtitle">See all →</a></p>
 </section>
 <section id="talks" class="level4 g-col-3">
 <h4 data-anchor-id="talks">Talks</h4>
@@ -430,6 +430,34 @@ No matching items
 </div>
 <p><a href="../talk" class="about-links subtitle">See all →</a></p>
 </section>
+<section id="blog" class="level4 g-col-3">
+<h4 data-anchor-id="blog">Blog</h4>
+<div id="listing-blog" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-1">
+<div class="g-col-1" data-index="0" data-categories="UiUyQ3R1dG9yaWFsJTJDZ3JlZW5zcGFjZSUyQ21hcHMlMkNyc3BhdGlhbCUyQ3NmJTJDbWFwdmlldw==" data-listing-date-sort="1734411600000" data-listing-file-modified-sort="1734491370701" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="257">
+<a href="../blog/2024-12-17-causality-311/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../blog/2024-12-17-causality-311/featured.png" class="thumbnail-image card-img" style="height: 200;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Exploring causality in 311 calls
+</h5>
+<div class="card-subtitle listing-subtitle">
+<p>Using causal inference methodology to explore the relationship between X and Y.</p>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+<p><a href="../blog" class="about-links subtitle">See all →</a></p>
+</section>
 <section id="publications" class="level4 g-col-3">
 <h4 data-anchor-id="publications">Publications</h4>
 <div id="listing-publication" class="quarto-listing quarto-listing-container-grid">
@@ -454,34 +482,6 @@ No matching items
 </div>
 </div>
 <p><a href="../publication" class="about-links subtitle">See all →</a></p>
-</section>
-<section id="projects" class="level4 g-col-3">
-<h4 data-anchor-id="projects">Projects</h4>
-<div id="listing-project" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-1">
-<div class="g-col-1" data-index="0" data-categories="am91cm5hbGlzbSUyQ1IlMkNkYXRhJTIwdml6" data-listing-date-sort="1761019200000">
-<a href="https://www.kensingtonvoice.com/new-fast-track-court-for-kensington-lands-most-with-warrants-back-into-the-cycle-of-addiction-and-homelessness/" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../project/external-items/2025-10-21-kv-wellness-court/featured.png" class="thumbnail-image card-img" style="height: 200;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-New Kensington ‘fast-track court’ lands most with warrants, back into the cycle of addiction and homelessness<br><em>Photo by Solmaira Valerio</em>
-</h5>
-<div class="card-subtitle listing-subtitle">
-Kensington Voice
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
-<p><a href="../project" class="about-links subtitle">See all →</a></p>
 </section>
 </div>
 
