@@ -10,7 +10,7 @@ listing:
     - "/*/index.qmd"
     - "/*/index.markdown"
     - "/*/index.md"
-    - "external-items/metadata.yml"
+    - "/external-items/metadata.yml"
   type: grid
   fields: [title, subtitle, categories, date, image]
   sort: "date-modified desc"

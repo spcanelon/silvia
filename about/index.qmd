@@ -76,6 +76,7 @@ listing:
   contents: 
     - "../project/*/index.qmd"
     - "../project/*/index.markdown"
+    - "../project/external-items/metadata.yml"
   sort: date desc
   type: grid
   grid-columns: 1
