@@ -42,18 +42,19 @@ website:
       - text: About
         aria-label: "About Me"
         href: about/index.qmd
-      - text: Blog
-        aria-label: "Meeting People Where They R"
-        href: blog/index.qmd
-      - text: Talks
-        aria-label: "Invited Talks"
-        href: talk/index.qmd  
-      - text: Publications
-        aria-label: "Publications"
-        href: publication/index.qmd
       - text: Projects
         aria-label: "Project Portfolio"
         href: project/index.qmd
+      - text: Talks
+        aria-label: "Invited Talks"
+        href: talk/index.qmd  
+      - text: Blog
+        aria-label: "Meeting People Where They R"
+        href: blog/index.qmd
+      - text: Publications
+        aria-label: "Publications"
+        href: publication/index.qmd
+
   
   page-footer:  
     left: >-
