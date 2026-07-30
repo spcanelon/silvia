@@ -8,27 +8,25 @@
   date: 2024-06-05
   image: _2024/featured.png
   path: _2024/map.html
-  description: >
-    Contains food safety inspection layer, 
-    created in collaboration with Mallori Lofton-Malachi
-    <details><summary>Web analytics</summary>
-    1,552 unique visitors in the United States visited this post 2,032 
-    times between June 5th and August 28th, 2024
-    </details>
+  description: Contains food safety inspection layer, 
+    created in collaboration with Mallori Lofton-Malachi. <b>Web analytics:</b>
+    1,552 US visitors (2,032 views), June 5 to Aug. 28, 2024
+
 - title: "2023"
   date: 2023-06-05
   image: _2023/featured.png
   path: _2023/map.html
   description: >
-    <details><summary>Web analytics</summary>
+    <b>Web analytics:</b>
     1,760 unique visitors in the United States visited this post 2,330
-    times between June 7th and August 30th, 2023
-    </details>
+    times between June 7 and August 30, 2023
+
 - title: "2022"
   date: 2022-05-31
   image: _2022/featured.png
   path: _2022/map.html
   description: ""
+
 - title: "2019"
   date: _2019-08-04
   image: _2019/featured.png
