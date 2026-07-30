@@ -46,6 +46,8 @@
       "/project/2020-10-29-nhsrtheme/index.html",
       "/project/2020-08-27-teaching-support/index.html",
       "/project/2020-03-25-data-hack-opioid/index.html",
+      "/talk/2026-07-30-data-viz-meetup/index.html",
+      "/talk/2026-07-25-nahj-conf/index.html",
       "/talk/2025-09-09-ropensci-a11y/index.html",
       "/talk/2024-07-10-data-equity-ldi/index.html",
       "/talk/2024-03-26-env-justice/index.html",
@@ -144,6 +146,8 @@
   {
     "listing": "/talk/index.html",
     "items": [
+      "/talk/2026-07-30-data-viz-meetup/index.html",
+      "/talk/2026-07-25-nahj-conf/index.html",
       "/talk/2025-09-09-ropensci-a11y/index.html",
       "/talk/2024-07-10-data-equity-ldi/index.html",
       "/talk/2024-03-26-env-justice/index.html",
