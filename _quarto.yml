@@ -7,7 +7,7 @@ website:
   title: "Silvia Canelón"
   site-url: https://silviacanelon.com
   description: "Researcher, educator, and journalist with data science expertise."
-  favicon: assets/silvia/img/logo_rounded.svg
+  favicon: _assets/silvia/img/logo_rounded.svg
   page-navigation: true
   back-to-top-navigation: true
   twitter-card:
@@ -33,7 +33,7 @@ website:
       #   text: body
  
   navbar:
-    logo: assets/silvia/img/logo_rounded.svg
+    logo: _assets/silvia/img/logo_rounded.svg
     # logo: assets/silvia/img/logo_noBg.svg
     tools:
     - icon: github
@@ -87,15 +87,15 @@ format:
       light:
         - cosmo
         - assets/silvia-theme-light.scss
-        - assets/silvia/colors-light.scss
-        - assets/silvia/fonts.scss
+        - _assets/silvia/colors-light.scss
+        - _assets/silvia/fonts.scss
       dark: 
         - cosmo
         - assets/silvia-theme-dark.scss
-        - assets/silvia/colors-dark.scss
+        - _assets/silvia/colors-dark.scss
     highlight-style:
-      light: assets/silvia/a11y-light.theme
-      dark: assets/silvia/a11y-dark.theme
+      light: _assets/silvia/a11y-light.theme
+      dark: _assets/silvia/a11y-dark.theme
     code-link: true
     pagetitle: "{{< meta title >}}"
     lightbox: true
@@ -104,5 +104,5 @@ execute:
   freeze: auto
 
 include-in-header:
-  - assets/silvia/umami.html
-  - assets/silvia/google-search-console.html
+  - _assets/silvia/umami.html
+  - _assets/silvia/google-search-console.html

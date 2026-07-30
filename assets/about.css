@@ -1,4 +1,5 @@
-@import url(silvia/colors.scss);
+@import url(../_assets/silvia/colors-dark.scss);
+@import url(../_assets/silvia/colors-light.scss);
 
 /* title and subtitle */
 #title-block-header {
@@ -20,7 +21,7 @@
 /* social links: individual links */
 .about-entity .about-link {
   padding: 0.25em 0.25em !important;
-  border: none !important;  
+  border: none !important;
 }
 
 /* about area */
@@ -33,14 +34,18 @@
 
 /* mobile query up for screens up to ~992px wide */
 @media screen and (max-width: 991.98px) {
+
   /* wrap lately section */
   #lately .grid {
     display: flex;
     flex-wrap: wrap;
   }
-  
+
   /* listings */
-  #blog, #talks, #publications, #projects {
+  #blog,
+  #talks,
+  #publications,
+  #projects {
     flex-basis: 40% !important;
     flex-grow: 1;
   }
@@ -67,7 +72,10 @@
   }
 
   /* listings */
-  #blog, #talks, #publications, #projects {
+  #blog,
+  #talks,
+  #publications,
+  #projects {
     flex-basis: 100% !important;
   }
 

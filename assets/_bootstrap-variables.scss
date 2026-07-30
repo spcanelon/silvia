@@ -42,24 +42,18 @@ $callout-margin-bottom: 1.25rem !default;
 
 // Navbar
 $theme-name: if(variable-exists(theme), $theme, "");
-$navbar-default: if(
-  variable-exists(theme),
-  if(variable-exists(primary), $primary, #517699),
-  #517699
-);
+$navbar-default: if(variable-exists(theme),
+    if(variable-exists(primary), $primary, #517699),
+    #517699);
 
 // If the user provides a navbar-bg, we ned to ignore the
 // theme overide and just recalculate a good value
-$navbar-hl-override: if(
-  variable-exists(navbar-bg) and variable-exists(link-color),
-  theme-contrast($link-color, $navbar-bg),
-  false
-);
-$navbar-bg: theme-override-value(
-  $theme-name,
-  "navbar-bg",
-  $navbar-default
-) !default;
+$navbar-hl-override: if(variable-exists(navbar-bg) and variable-exists(link-color),
+    theme-contrast($link-color, $navbar-bg),
+    false);
+$navbar-bg: theme-override-value($theme-name,
+    "navbar-bg",
+    $navbar-default) !default;
 
 $btn-bg: if(variable-exists(secondary), $secondary, #6c757d) !default;
 $btn-fg: theme-contrast($btn-bg, $btn-bg) !default;
@@ -68,43 +62,27 @@ $white: #ffffff !default;
 $gray-900: #212529 !default;
 $body-contrast-bg: if(variable-exists(body-bg), $body-bg, $white);
 $body-contrast-color: if(variable-exists(body-color), $body-color, $gray-900);
-$navbar-fg: if(
-  $navbar-bg == transparent,
-  theme-override-value(
-    $theme-name,
-    "navbar-fg",
-    theme-contrast($body-contrast-color, $body-contrast-bg)
-  ),
-  theme-override-value(
-    $theme-name,
-    "navbar-fg",
-    theme-contrast($navbar-bg, $navbar-bg)
-  )
-) !default;
+$navbar-fg: if($navbar-bg ==transparent,
+    theme-override-value($theme-name,
+      "navbar-fg",
+      theme-contrast($body-contrast-color, $body-contrast-bg)),
+    theme-override-value($theme-name,
+      "navbar-fg",
+      theme-contrast($navbar-bg, $navbar-bg))) !default;
 
-$navbar-hl: if(
-  $navbar-hl-override != false,
-  $navbar-hl-override,
-  theme-override-value(
-    $theme-name,
-    "navbar-hl",
-    if(
-      variable-exists(link-color),
-      theme-contrast($link-color, $navbar-bg),
-      $navbar-fg
-    )
-  )
-) !default;
-$navbar-brand: theme-override-value(
-  $theme-name,
-  "navbar-brand",
-  $navbar-fg
-) !default;
-$navbar-brand-hl: theme-override-value(
-  $theme-name,
-  "navbar-brand-hl",
-  $navbar-hl
-) !default;
+$navbar-hl: if($navbar-hl-override !=false,
+    $navbar-hl-override,
+    theme-override-value($theme-name,
+      "navbar-hl",
+      if(variable-exists(link-color),
+        theme-contrast($link-color, $navbar-bg),
+        $navbar-fg ))) !default;
+$navbar-brand: theme-override-value($theme-name,
+    "navbar-brand",
+    $navbar-fg) !default;
+$navbar-brand-hl: theme-override-value($theme-name,
+    "navbar-brand-hl",
+    $navbar-hl) !default;
 
 $navbar-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-fg}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $navbar-toggler-border-color: rgba($navbar-fg, 0) !default;
@@ -140,11 +118,15 @@ $navbar-dark-brand-hover-color: $navbar-brand-hl;
 // Sidebar coloring
 $sidebar-bg: if(variable-exists(light), $light, #fff) !default;
 $sidebar-fg: null !default;
-@if $sidebar-bg == transparent {
+
+@if $sidebar-bg ==transparent {
   $sidebar-fg: theme-contrast($body-contrast-color, $body-contrast-bg) !default;
-} @else {
+}
+
+@else {
   $sidebar-fg: theme-contrast($sidebar-bg, $sidebar-bg) !default;
 }
+
 $sidebar-hl: null;
 $sidebar-font-size: 0.925rem !default;
 $sidebar-font-size-section: 0.875rem !default;
@@ -180,26 +162,20 @@ $input-bg: if(variable-exists(body-bg), $body-bg, null) !default;
 // This is a change to override the input border color for
 // darkly, which sets the border color to the body color for
 // whatever reason.
-$input-border-color: theme-override-value(
-  $theme-name,
-  "input-border-color",
-  if(variable-exists(input-border-color), $input-border-color, null)
-);
+$input-border-color: theme-override-value($theme-name,
+    "input-border-color",
+    if(variable-exists(input-border-color), $input-border-color, null));
 
 // Same as above (default is respected if there is not override
 // so the `!default` keyword is omitted). Some themes don't provide
 // active tab border colors and they customize the main border
 // color which results in the tabs looking slightly weird since the
 // colors may not match (for example, simplex).
-$nav-tabs-link-active-border-color: theme-override-value(
-  $theme-name,
-  "nav-tabs-link-active-border-color",
-  if(
-    variable-exists(nav-tabs-link-active-border-color),
-    $nav-tabs-link-active-border-color,
-    null
-  )
-);
+$nav-tabs-link-active-border-color: theme-override-value($theme-name,
+    "nav-tabs-link-active-border-color",
+    if(variable-exists(nav-tabs-link-active-border-color),
+      $nav-tabs-link-active-border-color,
+      null));
 
 /* GRID VARIABLES */
 // The left hand sidebar
@@ -218,11 +194,7 @@ $code-annotation-higlight-bg: #aaaaaa22 !default;
 $breadcrumb-divider: quote(">") !default;
 
 // table variable overrides
-$table-group-separator-color: lighten(
-  if(variable-exists(body-color), $body-color, $gray-900),
-  50%
-) !default;
-$table-group-separator-color-lighter: lighten(
-  if(variable-exists(body-color), $body-color, $gray-900),
-  70%
-) !default;
+$table-group-separator-color: lighten(if(variable-exists(body-color), $body-color, $gray-900),
+    50%) !default;
+$table-group-separator-color-lighter: lighten(if(variable-exists(body-color), $body-color, $gray-900),
+    70%) !default;

@@ -12,7 +12,7 @@
 It includes notes and tutorials for my future self and hopefully also for you.&lt;br&gt;&lt;br&gt;
 {{&lt; fa envelope &gt;}} Sign up for my [newsletter](/contact.html#buttondown) to receive updates about new posts.
 </description>
-<generator>quarto-1.6.39</generator>
+<generator>quarto-1.9.36</generator>
 <lastBuildDate>Fri, 29 Sep 2023 04:00:00 GMT</lastBuildDate>
 <item>
   <title>Hello Quarto: Porting my Website from Hugo Apéro</title>
@@ -50,7 +50,7 @@ It includes notes and tutorials for my future self and hopefully also for you.&l
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Update: Oct.&nbsp;12, 2023
+<span class="screen-reader-only">Note</span>Update: Oct.&nbsp;12, 2023
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -69,12 +69,12 @@ Update: Oct.&nbsp;12, 2023
 <section id="structure" class="level3"><h3 class="anchored" data-anchor-id="structure">Structure</h3>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true">Quarto</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">Hugo Apéro</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Quarto</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">Hugo Apéro</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="bu" style="color: null;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">.</span></span>
 <span id="cb1-2"><span class="ex" style="color: null;
@@ -100,10 +100,10 @@ background-color: null;
 font-style: inherit;">├──</span> index.qmd</span>
 <span id="cb1-9"><span class="ex" style="color: null;
 background-color: null;
-font-style: inherit;">└──</span> silvia.Rproj</span></code></pre></div>
+font-style: inherit;">└──</span> silvia.Rproj</span></code></pre></div></div>
 </div>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="bu" style="color: null;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">.</span></span>
 <span id="cb2-2"><span class="ex" style="color: null;
@@ -138,7 +138,7 @@ background-color: null;
 font-style: inherit;">├──</span> index.Rmd</span>
 <span id="cb2-12"><span class="ex" style="color: null;
 background-color: null;
-font-style: inherit;">└──</span> silvia.Rproj</span></code></pre></div>
+font-style: inherit;">└──</span> silvia.Rproj</span></code></pre></div></div>
 </div>
 </div>
 </div>
@@ -146,12 +146,12 @@ font-style: inherit;">└──</span> silvia.Rproj</span></code></pre></div>
 <div class="page-columns page-full"><p>I decided to use a combination of <a href="https://quarto.org/docs/websites/website-about.html">about pages</a> and <a href="https://quarto.org/docs/websites/website-listings.html">listing pages</a> to replicate the site structure I enjoyed in my Apéro site. I used an about page layout for both my home and about pages, and listing pages to generate a list of blog posts, talks, publications, and projects. There was also some custom CSS involved, but we haven’t gotten to that part of the blog post yet wink 😉 </p><div class="no-row-height column-margin column-container"><span class="margin-aside">Dear reader, it’s at this point in my blog post drafting that I start realizing that what was meant to be a brief post is turning into a novel (<em>sigh</em>)</span></div></div>
 <p>One of the aspects I liked about my Apéro site was that the About page highlighted the most recent posts from the blog, talk, publication, and project groups. In my Quarto site, I achieved this by including a one-entry listing grid for each group on my <a href="../../about/index.html">About page</a>.</p>
 <div class="callout callout-style-simple callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-CSS tip
+<span class="screen-reader-only">Caution</span>CSS tip
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -162,15 +162,12 @@ CSS tip
 <div class="code-with-filename-file">
 <pre><strong>assets/about.css</strong></pre>
 </div>
-<div class="sourceCode" id="cb3" data-filename="assets/about.css" data-startfrom="63" style="background: #f1f3f5;"><pre class="sourceCode css code-with-copy"><code class="sourceCode css" style="counter-reset: source-line 62;"><span id="cb3-63">  <span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-filename="assets/about.css" data-startfrom="63" style="background: #f1f3f5;"><pre class="sourceCode css code-with-copy"><code class="sourceCode css" style="counter-reset: source-line 62;"><span id="cb3-63">  <span class="pp" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">/* wrap lately section */</span></span>
-<span id="cb3-64">  <span class="pp" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">#lately</span> <span class="fu" style="color: #4758AB;
+font-style: inherit;">#about-me</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">.grid</span> {</span>
-<span id="cb3-65">    <span class="kw" style="color: #003B4F;
+<span id="cb3-64">    <span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">display</span><span class="ch" style="color: #20794D;
@@ -180,7 +177,7 @@ background-color: null;
 font-style: inherit;">flex</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">;</span></span>
-<span id="cb3-66">    <span class="kw" style="color: #003B4F;
+<span id="cb3-65">    <span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">flex-wrap</span><span class="ch" style="color: #20794D;
@@ -190,41 +187,37 @@ background-color: null;
 font-style: inherit;">wrap</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">;</span></span>
-<span id="cb3-67">  }</span>
-<span id="cb3-68"></span>
-<span id="cb3-69">  <span class="co" style="color: #5E5E5E;
+<span id="cb3-66">  }</span>
+<span id="cb3-67"></span>
+<span id="cb3-68">  <span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">/* listings */</span></span>
-<span id="cb3-70">  <span class="pp" style="color: #AD0000;
+font-style: inherit;">/* wrap lately section */</span></span>
+<span id="cb3-69">  <span class="pp" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">#blog</span><span class="op" style="color: #5E5E5E;
+font-style: inherit;">#lately</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">,</span> <span class="pp" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">#talks</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="pp" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">#publications</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">,</span> <span class="pp" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">#projects</span> {</span>
-<span id="cb3-71">    <span class="kw" style="color: #003B4F;
+font-style: inherit;">.grid</span> {</span>
+<span id="cb3-70">    <span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
-font-style: inherit;">flex-basis</span><span class="ch" style="color: #20794D;
+font-style: inherit;">display</span><span class="ch" style="color: #20794D;
 background-color: null;
 font-style: inherit;">:</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">100</span><span class="dt" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">%</span> <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">!important</span><span class="op" style="color: #5E5E5E;
+font-style: inherit;">flex</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">;</span></span>
-<span id="cb3-72">  }</span></code></pre></div>
+<span id="cb3-71">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">flex-wrap</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">:</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">wrap</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb3-72">  }</span></code></pre></div></div>
 </div>
 <p><a href="https://github.com/spcanelon/silvia/blob/32853dd0e70a71514b0922ee306f80ed5897f776/assets/about.css#L63-L72"><i class="fa-solid fa-code-branch" title="Git" aria-label="code-branch"></i> source code</a></p>
 </div>
@@ -233,12 +226,12 @@ font-style: inherit;">;</span></span>
 </section><section id="contact-form" class="level3"><h3 class="anchored" data-anchor-id="contact-form">Contact form</h3>
 <p>The last structural piece I wanted to recreate from Apéro was a <a href="../../contact.html">contact form</a>. I saw a great example on Michael McCarthy’s <a href="https://tidytales.ca/about/">Tidy Tales blog</a>, site and did a little <a href="https://github.com/mccarthy-m-g/tidytales/blob/main/about/index.qmd#L24-L46">repo-diving</a> to get ideas on how to organize the content. I ended up using the <a href="https://quarto.org/docs/output-formats/page-layout.html#css-grid">Bootstrap CSS Grid</a> to layout the content exactly how I wanted to. See what I mean about Quarto offering a lot of flexibility in content layout?</p>
 <div class="callout callout-style-simple callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Bones of the contact page
+<span class="screen-reader-only">Tip</span>Bones of the contact page
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -248,7 +241,7 @@ Bones of the contact page
 <div class="code-with-filename-file">
 <pre><strong>contact.qmd</strong></pre>
 </div>
-<div class="sourceCode" id="cb4" data-filename="contact.qmd" style="background: #f1f3f5;"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb4-1"></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" data-filename="contact.qmd" style="background: #f1f3f5;"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb4-1"></span>
 <span id="cb4-2"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&lt;!-- start grid --&gt;</span></span>
@@ -291,7 +284,7 @@ font-style: inherit;">&lt;</span> HTML embed code provided by Formspree &gt;</sp
 <span id="cb4-27">:::</span>
 <span id="cb4-28"><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">&lt;!-- end grid --&gt;</span></span></code></pre></div>
+font-style: inherit;">&lt;!-- end grid --&gt;</span></span></code></pre></div></div>
 </div>
 <p><a href="https://github.com/spcanelon/silvia/blob/32853dd0e70a71514b0922ee306f80ed5897f776/contact.qmd#L18-L60"><i class="fa-solid fa-code-branch" title="Git" aria-label="code-branch"></i> source code</a></p>
 </div>
@@ -312,7 +305,7 @@ font-style: inherit;">&lt;!-- end grid --&gt;</span></span></code></pre></div>
 <li>Add <code>image</code> (e.g.&nbsp;<code>image: featured.png</code>)</li>
 </ul></section><section id="partials" class="level3 page-columns page-full"><h3 class="anchored" data-anchor-id="partials">Partials</h3>
 <p>If you’ve used Apéro you might have come to love the cute button links created from the <code>links</code> field in the YAML, like the one at the top of this post, pointing to the Quarto docs.</p>
-<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">links</span><span class="kw" style="color: #003B4F;
 background-color: null;
@@ -350,7 +343,7 @@ background-color: null;
 font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;"> https://quarto.org/docs/websites/</span></span></code></pre></div>
+font-style: inherit;"> https://quarto.org/docs/websites/</span></span></code></pre></div></div>
 <p>Well, these button links are not ready-made by Quarto, but lucky for me (us!), Garrick figured out a way to bring them in right where we I need them. I repo-dived and found that he modified an <a href="https://quarto.org/docs/journals/templates.html#html-partials">HTML partial for title blocks</a>, which controls the layout and styling of the post title, description, and tags, shown at the top of the page.</p>
 <p>The original title block partial has sections controlling the placement and styling of text provided in the title, subtitle, authors, date, and abstract fields of the document YAML.</p>
 <div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="margin-aside">As an example, line 2 might read:<br>If there’s something in the <strong>title</strong> field of the YAML, give it a level 1 heading and style it with CSS class <code>.title</code></span></div></div>
@@ -358,7 +351,7 @@ font-style: inherit;"> https://quarto.org/docs/websites/</span></span></code></p
 <div class="code-with-filename-file">
 <pre><strong>github.com/quarto-dev/quarto-cli/src/resources/formats/html/pandoc/title-block.html</strong></pre>
 </div>
-<div class="sourceCode" id="cb6" data-filename="github.com/quarto-dev/quarto-cli/src/resources/formats/html/pandoc/title-block.html" style="background: #f1f3f5;"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb6-1"><span class="dt" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" data-filename="github.com/quarto-dev/quarto-cli/src/resources/formats/html/pandoc/title-block.html" style="background: #f1f3f5;"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb6-1"><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
 background-color: null;
@@ -516,7 +509,7 @@ background-color: null;
 font-weight: bold;
 font-style: inherit;">header</span><span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">&gt;</span></span></code></pre></div>
+font-style: inherit;">&gt;</span></span></code></pre></div></div>
 </div>
 <p>The <a href="https://github.com/spcanelon/silvia/blob/32853dd0e70a71514b0922ee306f80ed5897f776/_partials/title-block-link-buttons/title-block.html">modified partial <i class="fa-solid fa-code-branch" title="Git" aria-label="code-branch"></i></a> includes some additional sections but I’ll break down the one for links.</p>
 <div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="margin-aside">There’s more styling going on in the modified partial, but starting on line 6, the structure for the link buttons is effectively:<br><br>If the <strong>links</strong> field is populated in the YAML, create an HTML container styled by some CSS, and give it some specific HTML properies.<br><br>Then, for each sub-item of the <strong>links</strong> field: create a hyperlink from the <strong>url</strong> sub-item, apply some CSS classes to create the button, add a Bootstrap icon defined by the <strong>icon</strong> sub-item, and finally add hyperlink text defined by the <strong>name</strong> sub-item.</span></div></div>
@@ -524,7 +517,7 @@ font-style: inherit;">&gt;</span></span></code></pre></div>
 <div class="code-with-filename-file">
 <pre><strong>_partials/title-block-link-buttons/title-block.html</strong></pre>
 </div>
-<div class="sourceCode" id="cb7" data-filename="_partials/title-block-link-buttons/title-block.html" style="background: #f1f3f5;"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb7-1"><span class="dt" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-filename="_partials/title-block-link-buttons/title-block.html" style="background: #f1f3f5;"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb7-1"><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
 background-color: null;
@@ -634,7 +627,7 @@ background-color: null;
 font-weight: bold;
 font-style: inherit;">header</span><span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">&gt;</span></span></code></pre></div>
+font-style: inherit;">&gt;</span></span></code></pre></div></div>
 </div>
 </section></section><section id="styling-the-site" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="styling-the-site">Styling the site</h2>
 <section id="scss-variables" class="level3"><h3 class="anchored" data-anchor-id="scss-variables">SCSS variables</h3>
@@ -645,7 +638,7 @@ font-style: inherit;">&gt;</span></span></code></pre></div>
 <div class="code-with-filename-file">
 <pre><strong>assets/silvia-theme.scss</strong></pre>
 </div>
-<div class="sourceCode" id="cb8" data-filename="assets/silvia-theme.scss" style="background: #f1f3f5;"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb8-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8" data-filename="assets/silvia-theme.scss" style="background: #f1f3f5;"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb8-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">/*-- scss:defaults --*/</span></span>
 <span id="cb8-2"></span>
@@ -665,7 +658,7 @@ font-style: inherit;">$secondary</span>:                  <span class="va" style
 background-color: null;
 font-style: inherit;">$spc-secondary</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">;</span></span></code></pre></div>
+font-style: inherit;">;</span></span></code></pre></div></div>
 </div>
 <p>The Sass variables listed in the documentation got me pretty far, but there were still elements of my site using default colors and styling that I wanted to change. So I repo-dived to learn about additional Quarto Bootstrap variables and rules:</p>
 <ul>
@@ -681,7 +674,7 @@ font-style: inherit;">;</span></span></code></pre></div>
 <li><p>Run a keyword search for “figure-caption” in the <a href="https://github.com/quarto-dev/quarto-cli/blob/main/src/resources/formats/html/bootstrap/_bootstrap-variables.scss">Bootstrap variables file</a>. This will yield no results 🤔</p></li>
 <li>
 <p>Run the same keyword search in the <a href="https://github.com/quarto-dev/quarto-cli/blob/main/src/resources/formats/html/bootstrap/_bootstrap-rules.scss">Bootstrap rules file</a> – success! We have a clue, which is that <code>.figure-caption</code> is styled by a variable named <code>body-secondary</code> 🔍</p>
-<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb9-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb9-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">.panel-caption</span><span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -722,7 +715,7 @@ background-color: null;
 font-style: inherit;">@include</span> body-secondary<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">;</span></span>
-<span id="cb9-9">}</span></code></pre></div>
+<span id="cb9-9">}</span></code></pre></div></div>
 </li>
 <li>
 <p>Define your own <code>body-secondary</code> color variable in your custom theme file</p>
@@ -730,7 +723,7 @@ font-style: inherit;">;</span></span>
 <div class="code-with-filename-file">
 <pre><strong>assets/custom-theme.scss</strong></pre>
 </div>
-<div class="sourceCode" id="cb10" data-filename="assets/custom-theme.scss" style="background: #f1f3f5;"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb10-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10" data-filename="assets/custom-theme.scss" style="background: #f1f3f5;"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb10-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">/*-- scss:defaults --*/</span></span>
 <span id="cb10-2"></span>
@@ -740,7 +733,7 @@ font-style: inherit;">$body-secondary</span>: <span class="cn" style="color: #8f
 background-color: null;
 font-style: inherit;">#6C757D</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">;</span></span></code></pre></div>
+font-style: inherit;">;</span></span></code></pre></div></div>
 </div>
 </li>
 <li><p>Enjoy the fruits of your labor as a CSS detective 🕵🏽‍♀️</p></li>
@@ -750,7 +743,7 @@ font-style: inherit;">;</span></span></code></pre></div>
 <div class="code-with-filename-file">
 <pre><strong>index.qmd</strong></pre>
 </div>
-<div class="sourceCode" id="cb11" data-filename="index.qmd" data-startfrom="42" style="background: #f1f3f5;"><pre class="sourceCode numberSource yml number-lines code-with-copy"><code class="sourceCode yaml" style="counter-reset: source-line 41;"><span id="cb11-42"></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-filename="index.qmd" data-startfrom="42" style="background: #f1f3f5;"><pre class="sourceCode numberSource yml number-lines code-with-copy"><code class="sourceCode yaml" style="counter-reset: source-line 41;"><span id="cb11-42"></span>
 <span id="cb11-43"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">execute</span><span class="kw" style="color: #003B4F;
@@ -782,7 +775,7 @@ font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="ch" style="color: #20794D;
 background-color: null;
-font-style: inherit;">false</span></span></code></pre></div>
+font-style: inherit;">false</span></span></code></pre></div></div>
 </div>
 <ul>
 <li>
@@ -800,7 +793,7 @@ font-style: inherit;">false</span></span></code></pre></div>
 <div class="code-with-filename-file">
 <pre><strong>assets/custom-theme.scss</strong></pre>
 </div>
-<div class="sourceCode" id="annotated-cell-6" data-filename="assets/custom-theme.scss" style="background: #f1f3f5;"><pre class="sourceCode scss code-annotation-code code-with-copy code-annotated"><code class="sourceCode scss"><span id="annotated-cell-6-1">  <span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="annotated-cell-6" data-filename="assets/custom-theme.scss" style="background: #f1f3f5;"><pre class="sourceCode scss code-annotation-code code-with-copy code-annotated"><code class="sourceCode scss"><span id="annotated-cell-6-1">  <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">// style background image on posts</span></span>
 <span id="annotated-cell-6-2">  <span class="fu" style="color: #4758AB;
@@ -866,7 +859,7 @@ background-color: null;
 font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">;</span></span>
-<span id="annotated-cell-6-7">  }</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div>
+<span id="annotated-cell-6-7">  }</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div></div>
 </div>
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-6" data-target-annotation="1">1</dt>
@@ -891,7 +884,7 @@ font-style: inherit;">;</span></span>
 <div class="code-with-filename-file">
 <pre><strong>_partials/title-block-link-buttons/title-block.html</strong></pre>
 </div>
-<div class="sourceCode" id="cb12" data-filename="_partials/title-block-link-buttons/title-block.html" style="background: #f1f3f5;"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb12-1"><span class="dt" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12" data-filename="_partials/title-block-link-buttons/title-block.html" style="background: #f1f3f5;"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb12-1"><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
 background-color: null;
@@ -934,7 +927,7 @@ background-color: null;
 font-weight: bold;
 font-style: inherit;">div</span><span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">&gt;</span></span></code></pre></div>
+font-style: inherit;">&gt;</span></span></code></pre></div></div>
 </div>
 <p>Along with some other CSS classes, the div container for the title block is styled with the <code>featured-image</code> class defined earlier, using the <code>class=</code> property. In addition, the div itself is styled using the <code>style=</code> property, and that’s where I defined the background image. The partial will look for a featured image of some kind either in the same folder as the post, or in the parent folder, and display it in the background of the title block.</p>
 <p>This is a hacky way of getting what I really want which is for the partial to check for a featured image in the order I specify and then just stop once it finds one. As it stands right now, the styling attempts to layer on all three images, with the first image on the top and the last image on the bottom. This means that I get a warning every time I preview or render my site because the partial can’t find one or two of the other urls, but I’m ok with that!</p>
@@ -944,11 +937,11 @@ font-style: inherit;">&gt;</span></span></code></pre></div>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Example warning
+<span class="screen-reader-only">Caution</span>Example warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb13-1">/blog/2023-09-29-hello-quarto/featured.png (404: Not Found)</span></code></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb13-1">/blog/2023-09-29-hello-quarto/featured.png (404: Not Found)</span></code></pre></div></div>
 </div>
 </div>
 </section></section><section id="setting-up-redirects" class="level2"><h2 class="anchored" data-anchor-id="setting-up-redirects">Setting up redirects</h2>
@@ -968,7 +961,7 @@ Example warning
 <div class="code-with-filename-file">
 <pre><strong>index.qmd</strong></pre>
 </div>
-<div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">manual_redirects</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -1055,7 +1048,7 @@ font-style: inherit;">(</span><span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">manual_redirects</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">)</span></span></code></pre></div>
+font-style: inherit;">)</span></span></code></pre></div></div>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "https://silvia.rbind.io/authors/silvia/avatar.png https://silviacanelon.com/about/sidebar/avatar.png 301!"
@@ -1073,7 +1066,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="code-with-filename-file">
 <pre><strong>index.qmd</strong></pre>
 </div>
-<div class="sourceCode" id="cb16" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># function: obtain list of post paths</span></span>
 <span><span class="va" style="color: #111111;
@@ -1240,7 +1233,7 @@ font-style: inherit;">(</span><span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">posts</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">)</span></span></code></pre></div>
+font-style: inherit;">)</span></span></code></pre></div></div>
 </div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
@@ -1257,7 +1250,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <p>To the longer <strong>year-month-day-slug</strong> Quarto link to this post:</p>
 <p><a href="https://silviacanelon.com/blog/2023-09-29-hello-quarto" class="uri">https://silviacanelon.com/blog/2023-09-29-hello-quarto</a></p>
 <div class="cell">
-<div class="sourceCode" id="cb17" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># extract short paths and create redirects</span></span>
 <span><span class="va" style="color: #111111;
@@ -1355,7 +1348,7 @@ font-style: inherit;">(</span><span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">posts</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">)</span></span></code></pre></div>
+font-style: inherit;">)</span></span></code></pre></div></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -1371,7 +1364,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="code-with-filename-file">
 <pre><strong>index.qmd</strong></pre>
 </div>
-<div class="sourceCode" id="cb18" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># extract redirects</span></span>
 <span><span class="va" style="color: #111111;
@@ -1430,7 +1423,7 @@ font-style: inherit;">"_redirects"</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">)</span></span></code></pre></div>
+font-style: inherit;">)</span></span></code></pre></div></div>
 </div>
 </div>
 </section></section><section id="fin" class="level2"><h2 class="anchored" data-anchor-id="fin">Fin</h2>
@@ -1449,7 +1442,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 <li id="fn6"><p>Don’t skip this step! People will almost certainly have shared one or more of your posts somewhere on the internet, and it helps everyone if you can point them to the right spot↩︎</p></li>
 </ol></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2023" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2023. <span>“Hello Quarto: Porting My Website from Hugo
-Apéro.”</span> September 29, 2023. <a href="https://silviacanelon.com/blog/2023-09-29-hello-quarto/">https://silviacanelon.com/blog/2023-09-29-hello-quarto/</a>.
+Apéro.”</span> September 29. <a href="https://silviacanelon.com/blog/2023-09-29-hello-quarto/">https://silviacanelon.com/blog/2023-09-29-hello-quarto/</a>.
 </div></div></section></div> ]]></description>
   <category>R</category>
   <category>quarto</category>
@@ -1463,6 +1456,7 @@ Apéro.”</span> September 29, 2023. <a href="https://silviacanelon.com/blog/20
   <dc:creator>Silvia Canelón</dc:creator>
   <link>https://silviacanelon.com/blog/2022-05-31-ccd-sips/</link>
   <description><![CDATA[ 
+
 
 <!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
 <!-- 
@@ -1557,16 +1551,16 @@ width: 100%;
 <h3 class="anchored" data-anchor-id="checking-site-permissions">Checking site permissions</h3>
 <p>Check the site’s terms of service using the <a href="https://docs.ropensci.org/robotstxt/">robotstxt</a> package, which downloads and parses the site’s robots.txt file.</p>
 <p>What I wanted to look for was whether any pages are not allowed to be crawled by bots/scrapers. In my case there weren’t any, indicated by <code>Allow: /</code>.</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">get_robotstxt</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view"</span>)</span></code></pre></div>
+font-style: inherit;">"https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view"</span>)</span></code></pre></div></div>
 <details>
 <summary>
 Output
 </summary>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">[</span><span class="ot" style="color: #003B4F;
 background-color: null;
@@ -1647,14 +1641,14 @@ background-color: null;
 font-style: inherit;">]</span></span>
 <span id="cb2-36">--------------------------------------</span>
 <span id="cb2-37"></span>
-<span id="cb2-38">problems, cached, request, class</span></code></pre></div>
+<span id="cb2-38">problems, cached, request, class</span></code></pre></div></div>
 </details>
 </section>
 <section id="harvesting-data-from-the-first-page" class="level3">
 <h3 class="anchored" data-anchor-id="harvesting-data-from-the-first-page">Harvesting data from the first page</h3>
 <p>Then I used the <a href="https://rvest.tidyverse.org/index.html">rvest</a> package to scrape the information from the tables of restaurants/bars participating in CCD Sips.</p>
 <p>I’ve learned that ideally you would only scrape each page once, so I checked my approach with the first page before I wrote a function to scrape the remaining pages.</p>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># define the page</span></span>
 <span id="cb3-2">url <span class="ot" style="color: #003B4F;
@@ -1703,7 +1697,7 @@ font-style: inherit;">|&gt;</span> kableExtra<span class="sc" style="color: #5E5
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">kable</span>()</span></code></pre></div>
+font-style: inherit;">kable</span>()</span></code></pre></div></div>
 <table>
 <thead>
 <tr>
@@ -1766,7 +1760,7 @@ CCD SIPS Specials
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># extract hyperlinks to specific restaurant/bar specials</span></span>
 <span id="cb4-2">links <span class="ot" style="color: #003B4F;
@@ -1804,7 +1798,7 @@ font-style: inherit;">|&gt;</span> kableExtra<span class="sc" style="color: #5E5
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">kable</span>()</span></code></pre></div>
+font-style: inherit;">kable</span>()</span></code></pre></div></div>
 <table>
 <thead>
 <tr>
@@ -1831,7 +1825,7 @@ value
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># add full hyperlinks to the table info</span></span>
 <span id="cb5-2">table1Mod <span class="ot" style="color: #003B4F;
@@ -1876,7 +1870,7 @@ font-style: inherit;">|&gt;</span> kableExtra<span class="sc" style="color: #5E5
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">kable</span>()</span></code></pre></div>
+font-style: inherit;">kable</span>()</span></code></pre></div></div>
 <table>
 <thead>
 <tr>
@@ -1943,7 +1937,7 @@ https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#a
 <section id="harvesting-data-from-the-remaining-pages" class="level3">
 <h3 class="anchored" data-anchor-id="harvesting-data-from-the-remaining-pages">Harvesting data from the remaining pages</h3>
 <p>Once I could confirm that the above approach harvested the information I needed, I adapted the code into a function that I could apply to pages 2-3 of the site.</p>
-<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1">getTables <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1">getTables <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
@@ -2040,9 +2034,9 @@ background-color: null;
 font-style: inherit;">CCD SIPS Specials</span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">`</span>, value))</span>
-<span id="cb6-23">}</span></code></pre></div>
+<span id="cb6-23">}</span></code></pre></div></div>
 <p>I used my <code>getTable()</code> function and the <code>purrr::map_df()</code> function to harvest the table of restaurants/bars from pages 2 and 3. Then I combined all the data frames together and saved the complete data frame as an <code>.Rds</code> object so that I wouldn’t have to scrape the data again.</p>
-<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># get remaining tables</span></span>
 <span id="cb7-2">table2 <span class="ot" style="color: #003B4F;
@@ -2077,7 +2071,7 @@ font-style: inherit;">|&gt;</span> kableExtra<span class="sc" style="color: #5E5
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">kable</span>()</span></code></pre></div>
+font-style: inherit;">kable</span>()</span></code></pre></div></div>
 <table>
 <thead>
 <tr>
@@ -2140,7 +2134,7 @@ https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#1
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># save full table to file</span></span>
 <span id="cb8-2"><span class="fu" style="color: #4758AB;
@@ -2154,14 +2148,14 @@ background-color: null;
 font-style: inherit;">here</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"content/blog/2022-05-31-ccd-sips/specialsScraped.Rds"</span>)</span>
-<span id="cb8-5">  )</span></code></pre></div>
+<span id="cb8-5">  )</span></code></pre></div></div>
 </section>
 </section>
 <section id="geocoding-addresses" class="level2">
 <h2 class="anchored" data-anchor-id="geocoding-addresses">Geocoding addresses</h2>
 <p>The next step was to use geocoding to convert the restaurant/bar addresses to geographical coordinates (longitude and latitude) that I could map. I used the <a href="https://github.com/dkahle/ggmap">ggmap</a> package and the Google Geocoding API service because this was a small project (59 addresses/requests) which wouldn’t make a dent in the <a href="https://mapsplatform.google.com/pricing/">free credit available on the platform</a>.</p>
 <p>The last time I geocoded addresses was for an <a href="../2019-ccd-sips">almost identical project in 2019</a> and I had issues using the same API key from back then, so I made a new one. I restricted my new key to the Geocoding and Geolocation APIs.</p>
-<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># register my API key</span></span>
 <span id="cb9-2"><span class="co" style="color: #5E5E5E;
@@ -2210,7 +2204,7 @@ font-style: inherit;">|&gt;</span> kableExtra<span class="sc" style="color: #5E5
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">kable</span>()</span></code></pre></div>
+font-style: inherit;">kable</span>()</span></code></pre></div></div>
 <table>
 <thead>
 <tr>
@@ -2298,7 +2292,7 @@ https://centercityphila.org/explore-center-city/ccd-sips/sips-list-view?page=1#1
 </tbody>
 </table>
 <p>I made sure to save the new data frame with geographical coordinates as an <code>.Rds</code> object so I wouldn’t have to geocode the data again! This would be particularly important if I was working on a large project.</p>
-<div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># save table with geocoded addresses to file</span></span>
 <span id="cb10-2"><span class="fu" style="color: #4758AB;
@@ -2311,7 +2305,7 @@ font-style: inherit;">file =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">here</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"content/blog/2022-05-31-ccd-sips/specialsGeocoded.Rds"</span>))</span></code></pre></div>
+font-style: inherit;">"content/blog/2022-05-31-ccd-sips/specialsGeocoded.Rds"</span>))</span></code></pre></div></div>
 </section>
 <section id="building-the-map" class="level2">
 <h2 class="anchored" data-anchor-id="building-the-map">Building the map</h2>
@@ -2323,7 +2317,7 @@ font-style: inherit;">"content/blog/2022-05-31-ccd-sips/specialsGeocoded.Rds"</s
 </ul>
 <section id="customizing-map-markers" class="level3">
 <h3 class="anchored" data-anchor-id="customizing-map-markers">Customizing map markers</h3>
-<div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># style pop-ups for the map with inline css styling</span></span>
 <span id="cb11-2"></span>
@@ -2404,11 +2398,11 @@ background-color: null;
 font-style: inherit;">library =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"fa"</span></span>
-<span id="cb11-16">  )</span></code></pre></div>
+<span id="cb11-16">  )</span></code></pre></div></div>
 </section>
 <section id="plotting-the-restaurantsbars" class="level3">
 <h3 class="anchored" data-anchor-id="plotting-the-restaurantsbars">Plotting the restaurants/bars</h3>
-<div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">leaflet</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -2514,7 +2508,7 @@ background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"1.2em"</span>)</span>
-<span id="cb12-21">      ))</span></code></pre></div>
+<span id="cb12-21">      ))</span></code></pre></div></div>
 <div id="htmlwidget-8da517f516a7434828d6" class="leaflet html-widget" style="width:100%;height:850px;">
 
 </div>
@@ -2522,7 +2516,7 @@ font-style: inherit;">"1.2em"</span>)</span>
 </section>
 <section id="adding-the-map-background" class="level3">
 <h3 class="anchored" data-anchor-id="adding-the-map-background">Adding the map background</h3>
-<div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">leaflet</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -2638,7 +2632,7 @@ font-style: inherit;"># add map tiles in the background ----</span></span>
 background-color: null;
 font-style: inherit;">addProviderTiles</span>(providers<span class="sc" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">$</span>CartoDB.Positron)</span></code></pre></div>
+font-style: inherit;">$</span>CartoDB.Positron)</span></code></pre></div></div>
 <div id="htmlwidget-7dc4ee36115a567df670" class="leaflet html-widget" style="width:100%;height:850px;">
 
 </div>
@@ -2646,7 +2640,7 @@ font-style: inherit;">$</span>CartoDB.Positron)</span></code></pre></div>
 </section>
 <section id="setting-the-map-view" class="level3">
 <h3 class="anchored" data-anchor-id="setting-the-map-view">Setting the map view</h3>
-<div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">leaflet</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -2784,7 +2778,7 @@ font-style: inherit;">$</span>Latitude), </span>
 background-color: null;
 font-style: inherit;">zoom =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">16</span>)</span></code></pre></div>
+font-style: inherit;">16</span>)</span></code></pre></div></div>
 <div id="htmlwidget-c1824e6f3608ae690abe" class="leaflet html-widget" style="width:100%;height:850px;">
 
 </div>
@@ -2792,7 +2786,7 @@ font-style: inherit;">16</span>)</span></code></pre></div>
 </section>
 <section id="adding-a-marker-at-the-center" class="level3">
 <h3 class="anchored" data-anchor-id="adding-a-marker-at-the-center">Adding a marker at the center</h3>
-<div class="sourceCode" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">leaflet</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -2997,7 +2991,7 @@ font-style: inherit;">popupOptions</span>(<span class="at" style="color: #657422
 background-color: null;
 font-style: inherit;">maxWidth =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">250</span>))</span></code></pre></div>
+font-style: inherit;">250</span>))</span></code></pre></div></div>
 <div id="htmlwidget-f05211b106559ee0aae9" class="leaflet html-widget" style="width:100%;height:850px;">
 
 </div>
@@ -3005,7 +2999,7 @@ font-style: inherit;">250</span>))</span></code></pre></div>
 </section>
 <section id="adding-fullscreen-control" class="level3">
 <h3 class="anchored" data-anchor-id="adding-fullscreen-control">Adding fullscreen control</h3>
-<div class="sourceCode" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">leaflet</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -3220,7 +3214,7 @@ font-style: inherit;"># add fullscreen control button ----</span></span>
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">addFullscreenControl</span>()</span></code></pre></div>
+font-style: inherit;">addFullscreenControl</span>()</span></code></pre></div></div>
 <div id="htmlwidget-e817ae84c38d566ca5a5" class="leaflet html-widget" style="width:100%;height:850px;">
 
 </div>
@@ -3237,7 +3231,7 @@ font-style: inherit;">addFullscreenControl</span>()</span></code></pre></div>
 <section id="changing-the-webpage-title" class="level3">
 <h3 class="anchored" data-anchor-id="changing-the-webpage-title">Changing the webpage title</h3>
 <p>The webpage title was a quick one to fix thanks to a Stack Overflow response to a <a href="https://stackoverflow.com/questions/59668347/rmarkdown-turn-off-title">question about turning off the title in an R Markdown document</a>. The <code>pagetitle</code> YAML option lets you set the HTML’s title tag independently of the document title:</p>
-<div class="sourceCode" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb17-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb17-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">pagetitle</span><span class="kw" style="color: #003B4F;
 background-color: null;
@@ -3246,13 +3240,13 @@ font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Philly CCD Sips 2022 Map"</span></span></code></pre></div>
+font-style: inherit;">"Philly CCD Sips 2022 Map"</span></span></code></pre></div></div>
 </section>
 <section id="fixing-the-mobile-responsiveness" class="level3">
 <h3 class="anchored" data-anchor-id="fixing-the-mobile-responsiveness">Fixing the mobile-responsiveness</h3>
 <p>The mobile-responsiveness issue could be solved by adding metadata to the map HTML, but I would need to be able to blend HTML with R code. I have been practicing using <a href="https://quarto.org/">Quarto</a> and figured I could make a standalone map from a Quarto document (<code>.qmd</code>) rather than an R Markdown one (<code>.Rmd</code> or <code>.Rmarkdown</code>). You can find the map’s Quarto document <a href="https://github.com/spcanelon/silvia/blob/main/blog/2022-05-31-ccd-sips/_map.qmd">alongside this blog post</a>.</p>
 <p>According to the <a href="https://leafletjs.com/examples/mobile/">Leaflet library documentation</a> and <a href="https://stackoverflow.com/a/42796918">this Stack Overflow answer</a>, fixing the map to be mobile-responsive required adding the following metadata to the HTML code:</p>
-<div class="sourceCode" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb18-1"><span class="dt" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb18-1"><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">&lt;</span><span class="kw" style="color: #003B4F;
 background-color: null;
@@ -3273,9 +3267,9 @@ font-style: inherit;">"width=device-width, initial-scale=1.0, maximum-scale=1.0,
 background-color: null;
 font-style: inherit;"> </span><span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">/&gt;</span></span></code></pre></div>
+font-style: inherit;">/&gt;</span></span></code></pre></div></div>
 <p>I used the <a href="https://pkg.garrickadenbuie.com/metathis">metathis</a> R package to add this metadata to an R code chunk in my Quarto document using the <code>meta_viewport()</code> function:</p>
-<div class="sourceCode" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># make mobile-responsive</span></span>
 <span id="cb19-2"><span class="fu" style="color: #4758AB;
@@ -3301,7 +3295,7 @@ background-color: null;
 font-style: inherit;">user_scalable =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"no"</span></span>
-<span id="cb19-7">  )</span></code></pre></div>
+<span id="cb19-7">  )</span></code></pre></div></div>
 <blockquote class="blockquote">
 <p>Update: In the process of updating this post I’m noticing that specifying the viewport metadata tag doesn’t seem to be necessary anymore, and I don’t understand why 🤔 …so I’ll leave the step as is, just in case it’s helpful to anyone 🤷🏽‍♀️</p>
 </blockquote>
@@ -3310,7 +3304,7 @@ font-style: inherit;">"no"</span></span>
 <h3 class="anchored" data-anchor-id="adding-social-media-tags">Adding social media tags</h3>
 <p>Then I added more metadata. I was particularly interested in adding social media tags so that if I (or anyone else) shared this map webpage, <a href="https://twitter.com/spcanelon/status/1531644079687229441">an informative preview would display as a social card</a>.</p>
 <p>I used the <code>meta_social()</code> function to add these tags:</p>
-<div class="sourceCode" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># tags for social media</span></span>
 <span id="cb20-2"><span class="fu" style="color: #4758AB;
@@ -3356,11 +3350,11 @@ background-color: null;
 font-style: inherit;">twitter_creator =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"@spcanelon"</span></span>
-<span id="cb20-11">)</span></code></pre></div>
+<span id="cb20-11">)</span></code></pre></div></div>
 <p>Great, I had added all of the metadata I was interested in! Except that because I was using Quarto, and not one of the <a href="https://pkg.garrickadenbuie.com/metathis/index.html#works-in">more common outputs</a> I had a couple of extra steps to take:</p>
 <ol type="1">
 <li><p>Write my metadata tags to an HTML file, using the <code>write_meta()</code> function:</p>
-<div class="sourceCode" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># write meta tags to file</span></span>
 <span id="cb21-2"><span class="fu" style="color: #4758AB;
@@ -3369,22 +3363,22 @@ font-style: inherit;">write_meta</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">path =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"meta-map.html"</span>)</span></code></pre></div></li>
+font-style: inherit;">"meta-map.html"</span>)</span></code></pre></div></div></li>
 <li><p>Manually include this HTML in my webpage via the Quarto file. The <a href="https://quarto.org/docs/output-formats/html-basics.html#includes"><code>include-in-header</code></a> Quarto YAML option helped me here:</p>
-<div class="sourceCode" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb22-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb22-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">include-in-header</span><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;"> meta-map.html</span></span></code></pre></div></li>
+font-style: inherit;"> meta-map.html</span></span></code></pre></div></div></li>
 </ol>
 </section>
 <section id="making-the-map-fullscreen" class="level3">
 <h3 class="anchored" data-anchor-id="making-the-map-fullscreen">Making the map fullscreen</h3>
 <p>A side effect of creating the map from a Quarto (or R Markdown) document is that the output is styled by default to fit within the width of an article (in this case 900 pixels). I wanted the map to take up the whole width of the page, so I made use of the <a href="https://quarto.org/docs/interactive/layout.html#full-page-layout"><code>page-layout</code></a> Quarto YAML option:</p>
-<div class="sourceCode" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb23-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb23-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">format</span><span class="kw" style="color: #003B4F;
 background-color: null;
@@ -3409,13 +3403,13 @@ background-color: null;
 font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;"> custom</span></span></code></pre></div>
+font-style: inherit;"> custom</span></span></code></pre></div></div>
 <p>Another option that worked pretty well was to use the <code>column: screen</code> code chunk option built into Quarto. The Quarto documentation even shows an <a href="https://quarto.org/docs/authoring/article-layout.html#screen-column">example to display a Leaflet map</a> I but it left a thin margin at the top margin, and I wanted the map to be flush against the top edge of the webpage.</p>
 </section>
 <section id="rendering-the-standalone-map" class="level3">
 <h3 class="anchored" data-anchor-id="rendering-the-standalone-map">Rendering the standalone map</h3>
 <p>Lastly, I added one more option to the YAML that would render the Quarto document into a <a href="https://quarto.org/docs/output-formats/html-publishing.html#standalone-html">self-contained HTML</a> with all of the content needed to create the map.</p>
-<div class="sourceCode" id="cb24" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb24-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb24-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">format</span><span class="kw" style="color: #003B4F;
 background-color: null;
@@ -3450,7 +3444,7 @@ font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="ch" style="color: #20794D;
 background-color: null;
-font-style: inherit;">true</span></span></code></pre></div>
+font-style: inherit;">true</span></span></code></pre></div></div>
 
 
 </section>
@@ -3458,7 +3452,7 @@ font-style: inherit;">true</span></span></code></pre></div>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2022" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2022. <span>“Creating the Philly Center City SIPS
-Interactive Map.”</span> May 31, 2022. <a href="https://silviacanelon.com/blog/2022-05-31-ccd-sips/">https://silviacanelon.com/blog/2022-05-31-ccd-sips/</a>.
+Interactive Map.”</span> May 31. <a href="https://silviacanelon.com/blog/2022-05-31-ccd-sips/">https://silviacanelon.com/blog/2022-05-31-ccd-sips/</a>.
 </div></div></section></div> ]]></description>
   <category>R</category>
   <category>journalism</category>
@@ -3478,6 +3472,7 @@ Interactive Map.”</span> May 31, 2022. <a href="https://silviacanelon.com/blog
   <dc:creator>Silvia Canelón</dc:creator>
   <link>https://silviacanelon.com/blog/2022-01-18-hello-umami/</link>
   <description><![CDATA[ 
+
 
 <!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
 <!-- 
@@ -3574,7 +3569,7 @@ Interactive Map.”</span> May 31, 2022. <a href="https://silviacanelon.com/blog
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2022" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2022. <span>“Hello Umami: Deploying a Privacy-Friendly
-Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https://silviacanelon.com/blog/2022-01-18-hello-umami/">https://silviacanelon.com/blog/2022-01-18-hello-umami/</a>.
+Open Source Tool for Web Analytics.”</span> January 18. <a href="https://silviacanelon.com/blog/2022-01-18-hello-umami/">https://silviacanelon.com/blog/2022-01-18-hello-umami/</a>.
 </div></div></section></div> ]]></description>
   <category>R</category>
   <category>website</category>
@@ -3736,7 +3731,7 @@ Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https:/
 <li>
 <p>Post from RStudio on how to add alt text to visualizations produced in R Markdown using code chunk option <code>fig.alt</code>: <a href="https://blog.rstudio.com/2021/04/20/knitr-fig-alt/">New in knitr: Improved accessibility with image alt text</a>. <br><strong>New in knitr v1.35:</strong> You can now add code chunk options <a href="https://github.com/yihui/knitr/blob/master/NEWS.md#new-features-1">inside the code chunk</a>!</p>
 <p>Example updated thanks to a <a href="https://twitter.com/grrrck/status/1442941720455368704?s=20">heads-up from Garrick</a>:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| fig.cap: Bigger flippers, bigger bills </span></span>
 <span><span class="co" style="color: #5E5E5E;
@@ -3820,7 +3815,7 @@ font-style: inherit;">"cyan4"</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">)</span> </span></code></pre></div>
+font-style: inherit;">)</span> </span></code></pre></div></div>
 <p class="caption" style="text-align:center;">
 </p>
 <p>Code chunk adapted from the RStudio blog post</p>
@@ -3839,7 +3834,7 @@ font-style: inherit;">)</span> </span></code></pre></div>
 <li>
 <p>The <a href="https://coolbutuseless.github.io/package/ggpattern/index.html">ggpattern R package</a> developed by Mike FC supports filling ggplot2 geometries with patterns. If used judiciously, patterns can help make visualizations more accessible by providing an additional way to encode information without relying on color. Below is one example using ggpattern v0.2.2:</p>
 <div class="cell">
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
@@ -3889,7 +3884,7 @@ background-color: null;
 font-style: inherit;">+</span></span>
 <span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;"><a href="https://trevorldavis.com/R/ggpattern/reference/geom-docs.html">geom_bar_pattern</a></span><span class="op" style="color: #5E5E5E;
+font-style: inherit;">geom_bar_pattern</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -3971,7 +3966,7 @@ font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'none'</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">)</span></span></code></pre></div>
+font-style: inherit;">)</span></span></code></pre></div></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><a href="index_files/figure-html/unnamed-chunk-3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Different patterns mapped onto penguin species along with different colors"><img src="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" alt="Bar chart showing 3 penguin species along the x axis and the number of observations on the y axis. The bar for the Adelie species uses the color orange and diagonal stripes, the bar for Chinstrap species uses the color purple and crosshatches, and the bar for the Gentoo species uses the color cyan and a dotted pattern." width="672"></a></p>
@@ -3995,7 +3990,7 @@ font-style: inherit;">)</span></span></code></pre></div>
 
 </section><a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2021" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2021. <span>“Resources for Data Viz
-Accessibility.”</span> September 23, 2021. <a href="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/">https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/</a>.
+Accessibility.”</span> September 23. <a href="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/">https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/</a>.
 </div></div></section></div> ]]></description>
   <category>R</category>
   <category>journalism</category>
@@ -4051,7 +4046,7 @@ Projects on my site: https://silvia.rbind.io/project
 </section><section id="the-plan" class="level2"><h2 class="anchored" data-anchor-id="the-plan">The Plan</h2>
 <p>I was lucky that Alison had already started converting her own personal site because she gave me a template and example to follow! <i class="fa-solid fa-hands-helping" aria-label="hands-helping"></i></p>
 <p>We’ll follow the steps below throughout the tutorial and each of the six steps comes with its own commit in my git history, so you can see exactly what I changed and when. <i class="fa-solid fa-code-branch" aria-label="code-branch"></i></p>
-{{}}
+{{&lt; tweet 1370027805543698432 &gt;}}
 <p>Then we’ll reuse and migrate your existing content, set up a contact form, tidy up your directory, explore some resources for customizing your new site, and end with the grand finale: deploying your new site!</p>
 </section><section id="prework" class="level2"><h2 class="anchored" data-anchor-id="prework">Prework</h2>
 <section id="branch-deploy" class="level3"><h3 class="anchored" data-anchor-id="branch-deploy">Branch deploy</h3>
@@ -4079,7 +4074,7 @@ Projects on my site: https://silvia.rbind.io/project
 <ol type="1">
 <li>
 <p>Update Hugo locally using <code>blogdown::install_hugo()</code> (for me the latest version was v0.82.1)</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">blogdown</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -4089,11 +4084,11 @@ font-style: inherit;">install_hugo</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">)</span></span></code></pre></div>
+font-style: inherit;">)</span></span></code></pre></div></div>
 </li>
 <li>
 <p>Update <strong>.Rprofile</strong> and then restart R per the instructions that appear in the console.</p>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># fix Hugo version</span></span>
 <span><span class="fu" style="color: #4758AB;
@@ -4106,11 +4101,11 @@ font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"0.82.1"</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">)</span></span></code></pre></div>
+font-style: inherit;">)</span></span></code></pre></div></div>
 </li>
 <li>
 <p>Update <strong>netlify.toml</strong></p>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">[context.production.environment]</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">[context.production.environment]</span>
 <span id="cb4-2">  HUGO_VERSION <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
@@ -4143,12 +4138,12 @@ font-style: inherit;">-</span>preview.environment]</span>
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"0.82.1"</span></span></code></pre></div>
+font-style: inherit;">"0.82.1"</span></span></code></pre></div></div>
 </li>
 <li>
 <p>Run <code>blogdown::check_site()</code> to find any issues. In my case these checking functions found a Hugo version mismatch and I ended up having to specifically run <code>blogdown::install_hugo("0.82.1")</code> to resolve it.</p>
 <details><summary><p>Console output</p>
-</summary><div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">― Checking netlify.toml...</span>
+</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">― Checking netlify.toml...</span>
 <span id="cb5-2">○ Found HUGO_VERSION <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
@@ -4227,7 +4222,7 @@ background-color: null;
 font-style: inherit;">:</span> public</span>
 <span id="cb5-9">― Check complete<span class="sc" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">:</span> netlify.toml</span></code></pre></div>
+font-style: inherit;">:</span> netlify.toml</span></code></pre></div></div>
 </details>
 </li>
 </ol>
@@ -4240,7 +4235,7 @@ font-style: inherit;">:</span> netlify.toml</span></code></pre></div>
 </blockquote>
 <p>The first step is to install all of the Hugo Apéro theme files to the <code>theme/</code> folder in your site directory:</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">blogdown</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -4264,12 +4259,12 @@ font-style: inherit;">=</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">TRUE</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">)</span></span></code></pre></div>
+font-style: inherit;">)</span></span></code></pre></div></div>
 </div>
 <details><summary>
 Console output
 </summary><div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1">trying URL <span class="st" style="color: #20794D;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1">trying URL <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'https://github.com/hugo-apero/hugo-apero/archive/main.tar.gz'</span></span>
 <span id="cb7-2">downloaded <span class="fl" style="color: #AD0000;
@@ -4291,10 +4286,10 @@ background-color: null;
 font-style: inherit;">:</span></span>
 <span id="cb7-6">The theme has provided an example site. You should read the theme<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">'s documentation and at least take a look at the config file config.toml (or .yaml) of the example site, because not all Hugo themes work with any config files. </span></span></code></pre></div>
+font-style: inherit;">'s documentation and at least take a look at the config file config.toml (or .yaml) of the example site, because not all Hugo themes work with any config files. </span></span></code></pre></div></div>
 </div>
 </details><p>As indicated in console output, modify the <strong>config.toml</strong> file so it points to your new theme folder instead of <code>hugo-academic</code>:</p>
-<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb8-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb8-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#theme = "hugo-academic"</span></span>
 <span id="cb8-2"><span class="dt" style="color: #AD0000;
@@ -4303,11 +4298,13 @@ font-style: inherit;">theme</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"hugo-apero"</span></span></code></pre></div>
+font-style: inherit;">"hugo-apero"</span></span></code></pre></div></div>
 <p><i class="fa-solid fa-exclamation-circle" aria-label="exclamation-circle"></i> At this point you will probably start to get some error messages like the one below. Don’t panic! Let’s get through the rest of the steps first. I’m including my errors in this post in case they are helpful/validating for you!</p>
-<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb9-1">Could not build site because certain shortcodes weren't found</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb9-1">Could not build site because certain shortcodes weren't found</span>
 <span id="cb9-2"></span>
-<span id="cb9-3">Error: Error building site: "/Users/silvia/Documents/Website/silvia/content/home/demo.md:58:1": failed to extract shortcode: template for shortcode "alert" not found</span></code></pre></div>
+<span id="cb9-3">Error: Error building site: "/Users/silvia/Documents/Website/silvia/content/home/demo.md<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:58:</span>1": failed to extract shortcode: template for shortcode "alert" not found</span></code></pre></div></div>
 </section><section id="copy-all-academic-shortcodes-to-layouts-root-remove-later" class="level2"><h2 class="anchored" data-anchor-id="copy-all-academic-shortcodes-to-layouts-root-remove-later">2. Copy all Academic shortcodes to <strong>layouts/</strong> root (remove later)</h2>
 <blockquote class="blockquote">
 <p><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> Follow along with me at <a href="https://github.com/spcanelon/silvia/commit/f3c7d5334b4effbd850b204eb267425f6740b4af">commit f3c7d53</a></p>
@@ -4318,11 +4315,11 @@ font-style: inherit;">"hugo-apero"</span></span></code></pre></div>
 <li><p>To <code>layouts/shortcodes/</code></p></li>
 </ul>
 <p><i class="fa-solid fa-exclamation-circle" aria-label="exclamation-circle"></i> My error message:</p>
-<div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><span class="an" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><span class="an" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">Error:</span><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"> Error building site: TOCSS: failed to transform "style.main.scss" (text/x-scss): SCSS processing failed: file "stdin", line 7, col 24: Invalid CSS after "...textFontFamily:": expected expression (e.g. 1px, bold), was "&lt;no value&gt;;"</span></span></code></pre></div>
+font-style: inherit;"> Error building site: TOCSS: failed to transform "style.main.scss" (text/x-scss): SCSS processing failed: file "stdin", line 7, col 24: Invalid CSS after "...textFontFamily:": expected expression (e.g. 1px, bold), was "&lt;no value&gt;;"</span></span></code></pre></div></div>
 </section><section id="remove-all-assets" class="level2"><h2 class="anchored" data-anchor-id="remove-all-assets">3. Remove all assets</h2>
 <blockquote class="blockquote">
 <p><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> Follow along with me at <a href="https://github.com/spcanelon/silvia/commit/3843c76a5da6184b2d9b547b18f96ec6810a695a">commit 3843c76</a></p>
@@ -4334,11 +4331,11 @@ font-style: inherit;"> Error building site: TOCSS: failed to transform "style.ma
 <li><p>the <code>scss/</code> folder which might contain your <code>custom.scss</code> file</p></li>
 </ul>
 <p><i class="fa-solid fa-exclamation-circle" aria-label="exclamation-circle"></i> My error message:</p>
-<div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><span class="an" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><span class="an" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">Error:</span><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"> Error building site: TOCSS: failed to transform "style.main.scss" (text/x-scss): SCSS processing failed: file "stdin", line 7, col 24: Invalid CSS after "...textFontFamily:": expected expression (e.g. 1px, bold), was "&lt;no value&gt;;"</span></span></code></pre></div>
+font-style: inherit;"> Error building site: TOCSS: failed to transform "style.main.scss" (text/x-scss): SCSS processing failed: file "stdin", line 7, col 24: Invalid CSS after "...textFontFamily:": expected expression (e.g. 1px, bold), was "&lt;no value&gt;;"</span></span></code></pre></div></div>
 </section><section id="remove-all-custom-layouts" class="level2"><h2 class="anchored" data-anchor-id="remove-all-custom-layouts">4. Remove all custom layouts</h2>
 <blockquote class="blockquote">
 <p><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> Follow along with me at <a href="https://github.com/spcanelon/silvia/commit/1ad7e3d491d309e71e1b4fa0bbad1e3af6b9d322">commit 1ad7e3d</a></p>
@@ -4351,11 +4348,11 @@ font-style: inherit;"> Error building site: TOCSS: failed to transform "style.ma
 <strong>partials/widgets/about.html</strong> which included the custom formatting for certificates in the Education section of the About page of my Academic site</li>
 </ul>
 <p><i class="fa-solid fa-exclamation-circle" aria-label="exclamation-circle"></i> My error message:</p>
-<div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><span class="an" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><span class="an" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">Error:</span><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"> Error building site: TOCSS: failed to transform "style.main.scss" (text/x-scss): SCSS processing failed: file "stdin", line 7, col 24: Invalid CSS after "...textFontFamily:": expected expression (e.g. 1px, bold), was "&lt;no value&gt;;"</span></span></code></pre></div>
+font-style: inherit;"> Error building site: TOCSS: failed to transform "style.main.scss" (text/x-scss): SCSS processing failed: file "stdin", line 7, col 24: Invalid CSS after "...textFontFamily:": expected expression (e.g. 1px, bold), was "&lt;no value&gt;;"</span></span></code></pre></div></div>
 </section><section id="copy-over-apéro-example-site-config.toml-file" class="level2"><h2 class="anchored" data-anchor-id="copy-over-apéro-example-site-config.toml-file">5. Copy over Apéro example site <strong>config.toml</strong> file</h2>
 <blockquote class="blockquote">
 <p><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> Follow along with me at <a href="https://github.com/spcanelon/silvia/commit/db37289e768640522130f98353996de4a6e0abfc">commit db37289</a></p>
@@ -4367,11 +4364,11 @@ font-style: inherit;"> Error building site: TOCSS: failed to transform "style.ma
 <li><p>To your root directory (in my case it was <code>silvia/</code>)</p></li>
 </ul>
 <p><i class="fa-solid fa-exclamation-circle" aria-label="exclamation-circle"></i> My error message:</p>
-<div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><span class="an" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><span class="an" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">Error:</span><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"> Error building site: failed to render pages: render of "page" failed: execute of template failed: template: _default/single.html:3:8: executing "_default/single.html" at &lt;partial "head.html" .&gt;: error calling partial: "/Users/silvia/Documents/Website/silvia/themes/hugo-apero/layouts/partials/head.html:14:53": execute of template failed: template: partials/head.html:14:53: executing "partials/head.html" at &lt;js&gt;: can't evaluate field Build in type string</span></span></code></pre></div>
+font-style: inherit;"> Error building site: failed to render pages: render of "page" failed: execute of template failed: template: _default/single.html:3:8: executing "_default/single.html" at &lt;partial "head.html" .&gt;: error calling partial: "/Users/silvia/Documents/Website/silvia/themes/hugo-apero/layouts/partials/head.html:14:53": execute of template failed: template: partials/head.html:14:53: executing "partials/head.html" at &lt;js&gt;: can't evaluate field Build in type string</span></span></code></pre></div></div>
 </section><section id="remove-academic-config-directory" class="level2"><h2 class="anchored" data-anchor-id="remove-academic-config-directory">6. Remove Academic <strong>config/</strong> directory</h2>
 <blockquote class="blockquote">
 <p><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> Follow along with me at <a href="https://github.com/spcanelon/silvia/commit/5541f38871911d5067c6c8856936d54d183b3ec9">commit 5541f38</a></p>
@@ -4379,11 +4376,11 @@ font-style: inherit;"> Error building site: failed to render pages: render of "p
 <p>Delete the <code>config/</code> folder from your root directory (in my case <code>silvia/</code>)</p>
 <p>I learned <a href="https://github.com/hugo-apero/hugo-apero-docs/issues/78">the hard way</a> that the error below was due to not using an updated version of Hugo, which is why I included that step in the Prework. All this to say, I’m hoping you don’t see the error below!</p>
 <p><i class="fa-solid fa-exclamation-circle" aria-label="exclamation-circle"></i> My error message:</p>
-<div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><span class="an" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><span class="an" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">Error:</span><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"> Error building site: failed to render pages: render of "page" failed: execute of template failed: template: _default/single.html:3:8: executing "_default/single.html" at &lt;partial "head.html" .&gt;: error calling partial: "/Users/silvia/Documents/Website/silvia/themes/hugo-apero/layouts/partials/head.html:14:53": execute of template failed: template: partials/head.html:14:53: executing "partials/head.html" at &lt;js&gt;: can't evaluate field Build in type string</span></span></code></pre></div>
+font-style: inherit;"> Error building site: failed to render pages: render of "page" failed: execute of template failed: template: _default/single.html:3:8: executing "_default/single.html" at &lt;partial "head.html" .&gt;: error calling partial: "/Users/silvia/Documents/Website/silvia/themes/hugo-apero/layouts/partials/head.html:14:53": execute of template failed: template: partials/head.html:14:53: executing "partials/head.html" at &lt;js&gt;: can't evaluate field Build in type string</span></span></code></pre></div></div>
 <hr></section><section id="migrating-the-content" class="level2"><h2 class="anchored" data-anchor-id="migrating-the-content">Migrating the content</h2>
 <p>Assuming you have made it this far and are able to at least serve a live site that uses the new Hugo Apéro theme, you are ready to start migrating your content! :tada:</p>
 <p>File are organized differently in Hugo Apéro and the next steps detail the high-level changes I made to get my content to fit the new structure. The goal was to have my site parallel the <a href="https://hugo-apero.netlify.app/">Hugo Apéro example site</a> and <a href="https://alison.rbind.io">Alison’s personal site</a>.</p>
@@ -4391,16 +4388,16 @@ font-style: inherit;"> Error building site: failed to render pages: render of "p
 <p>To get an overview of how the file structure is different between the Academic and Apéro themes we’ll look at the <code>content/</code> folder of the Apéro example site, my old Academic site, and my current Apéro site. These are organized into the panelsets below.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true">Example site</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false">My Academic site</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false">My Apéro site</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true" href="">Example site</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false" href="">My Academic site</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" aria-controls="tabset-1-3" aria-selected="false" href="">My Apéro site</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <!-- {{< panelset class="content directory" >}}
 {{< panel name="Example Site" >}} -->
 <p><i class="fa-solid fa-route" aria-label="route"></i> Location: <code>silvia/themes/hugo-apero/exampleSite</code></p>
-<div class="sourceCode" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><span class="ex" style="color: null;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">├──</span> config.toml</span>
 <span id="cb15-2"><span class="ex" style="color: null;
@@ -4435,13 +4432,13 @@ background-color: null;
 font-style: inherit;">├──</span> project</span>
 <span id="cb15-12">    <span class="ex" style="color: null;
 background-color: null;
-font-style: inherit;">└──</span> talk</span></code></pre></div>
+font-style: inherit;">└──</span> talk</span></code></pre></div></div>
 </div>
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <!-- {{< /panel >}}
 {{< panel name="My Academic site" >}} -->
 <p><i class="fa-solid fa-route" aria-label="route"></i> Location: <code>silvia/</code></p>
-<div class="sourceCode" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><span class="bu" style="color: null;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">.</span></span>
 <span id="cb16-2"><span class="ex" style="color: null;
@@ -4476,13 +4473,13 @@ background-color: null;
 font-style: inherit;">├──</span> slides</span>
 <span id="cb16-12">    <span class="ex" style="color: null;
 background-color: null;
-font-style: inherit;">└──</span> talk</span></code></pre></div>
+font-style: inherit;">└──</span> talk</span></code></pre></div></div>
 </div>
 <div id="tabset-1-3" class="tab-pane" aria-labelledby="tabset-1-3-tab">
 <!-- {{< /panel >}}
 {{< panel name="My Apéro site" >}} -->
 <p><i class="fa-solid fa-route" aria-label="route"></i> Location: <code>silvia/</code></p>
-<div class="sourceCode" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><span class="bu" style="color: null;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">.</span></span>
 <span id="cb17-2"><span class="ex" style="color: null;
@@ -4527,7 +4524,7 @@ background-color: null;
 font-style: inherit;">├──</span> publication</span>
 <span id="cb17-12">    <span class="ex" style="color: null;
 background-color: null;
-font-style: inherit;">└──</span> talk</span></code></pre></div>
+font-style: inherit;">└──</span> talk</span></code></pre></div></div>
 </div>
 </div>
 </div>
@@ -4646,7 +4643,7 @@ font-style: inherit;">└──</span> talk</span></code></pre></div>
 </div>
 </div>
 <p>Update <code>[menu]</code> options in <strong>config.toml</strong> to activate Blog by changing <code>url = "/blog/"</code> and renaming <code>content/post/</code> to <code>content/blog/</code> to activate the new Apéro layout with the sidebar on the blog post listing and to enable thumbnails</p>
-<div class="sourceCode" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb18-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb18-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">[[menu.header]]</span></span>
@@ -4679,7 +4676,7 @@ font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span>            <span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"># &lt;-- item 2 in the navigation bar</span></span></code></pre></div>
+font-style: inherit;"># &lt;-- item 2 in the navigation bar</span></span></code></pre></div></div>
 <p>Edit <strong>content/blog/_ index.md</strong> with heading for the Blog listing page</p>
 <ul>
 <li><p>Make sure <code>text_link_url: /blog/</code></p></li>
@@ -4698,7 +4695,7 @@ font-style: inherit;"># &lt;-- item 2 in the navigation bar</span></span></code>
 </div>
 </div>
 <p>Update <code>[menu]</code> options in <strong>config.toml</strong> to activate Publications</p>
-<div class="sourceCode" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb19-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb19-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">[[menu.header]]</span></span>
@@ -4731,7 +4728,7 @@ font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">4</span>            <span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"># &lt;-- item 4 in the navigation bar</span></span></code></pre></div>
+font-style: inherit;"># &lt;-- item 4 in the navigation bar</span></span></code></pre></div></div>
 <p>Rename <strong>content/publication/_ index.md</strong> to <strong>_ index-old.md</strong> and copy over <strong>_ index.md</strong> from <code>themes/hugo-apero/exampleSite/content/blog/</code></p>
 <p>Edit <strong>content/publication/_ index.md</strong> to suit your preferences</p>
 <p>Modify individual publications:</p>
@@ -4778,8 +4775,8 @@ font-style: inherit;"># &lt;-- item 4 in the navigation bar</span></span></code>
 <p>I’m including the files and folders I deleted as a list and as a directory tree. These are organized in the panelset below.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs">
-<li class="nav-item"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" aria-controls="tabset-2-1" aria-selected="true">List of items</a></li>
-<li class="nav-item"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" aria-controls="tabset-2-2" aria-selected="false">Directory tree</a></li>
+<li class="nav-item"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" aria-controls="tabset-2-1" aria-selected="true" href="">List of items</a></li>
+<li class="nav-item"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" aria-controls="tabset-2-2" aria-selected="false" href="">Directory tree</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" aria-labelledby="tabset-2-1-tab">
@@ -4814,7 +4811,7 @@ font-style: inherit;"># &lt;-- item 4 in the navigation bar</span></span></code>
 </ul>
 <p>And I deleted the folders indicated in this directory tree:</p>
 <p><i class="fa-solid fa-route" aria-label="route"></i> Location: <code>silvia/</code></p>
-<div class="sourceCode" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><span class="bu" style="color: null;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">.</span></span>
 <span id="cb20-2"><span class="ex" style="color: null;
@@ -4876,7 +4873,7 @@ font-style: inherit;">└──</span> themes</span>
 background-color: null;
 font-style: inherit;">└──</span> hugo-academic     <span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"># &lt;-- this folder</span></span></code></pre></div>
+font-style: inherit;"># &lt;-- this folder</span></span></code></pre></div></div>
 <!-- {{< /panel >}}
 {{< /panelset >}} -->
 </div>
@@ -4896,19 +4893,19 @@ font-style: inherit;"># &lt;-- this folder</span></span></code></pre></div>
 <li><p><strong>Optional:</strong> Create a branch of your primary branch and call it <code>hugo-academic</code> so that you have a snapshot of your Academic files right before the merge. Since we set up Netlify to deploy all of our branches, there will now be a live link for this new branch that you can visit whenever you feel like time traveling back to your old site. For me this link is https://hugo-academic–silvia.netlify.app/</p></li>
 <li>
 <p>Switch back to your <code>apero</code> branch and update the <code>baseURL</code> field in <strong>config.toml</strong> to your regular website path. In my case:</p>
-<div class="sourceCode" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb21-1"><span class="dt" style="color: #AD0000;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb21-1"><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">baseURL</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"https://silvia.rbind.io/"</span></span></code></pre></div>
+font-style: inherit;">"https://silvia.rbind.io/"</span></span></code></pre></div></div>
 <p>Then commit and push this change to your <code>apero</code> branch.</p>
 </li>
 <li><p>Merge your <code>apero</code> branch with your primary branch. I usually use git commands in a combination of the RStudio terminal and the Git pane, but for this big merge I felt more comfortable doing it on github.com! :sweat_smile: Do what feels most comfortable for you.</p></li>
 <li>
 <p>Resolve any merge conflicts (I had a few!) in the git tool of your choosing. These are the git commands GitHub recommended:</p>
-<div class="sourceCode" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> fetch origin       <span class="co" style="color: #5E5E5E;
 background-color: null;
@@ -4922,9 +4919,9 @@ font-style: inherit;"># moves you to your `apero` branch</span></span>
 background-color: null;
 font-style: inherit;">git</span> merge main         <span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"># attempts a merge with your `main` branch</span></span></code></pre></div>
+font-style: inherit;"># attempts a merge with your `main` branch</span></span></code></pre></div></div>
 <p>When you’re finished, commit your changes and push. Then follow these next steps, also recommended by GitHub:</p>
-<div class="sourceCode" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">git</span> checkout main       <span class="co" style="color: #5E5E5E;
 background-color: null;
@@ -4935,7 +4932,7 @@ font-style: inherit;">git</span> merge <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">--no-ff</span> apero <span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"># creates a new commit for the merge</span></span></code></pre></div>
+font-style: inherit;"># creates a new commit for the merge</span></span></code></pre></div></div>
 <p>This step will sort of replace all of the files that both themes had in common with the <code>apero</code> version (e.g.&nbsp;<strong>config.toml</strong>, <strong>netlify.toml</strong>, <strong>content/publication</strong>), and leave the old Academic files alone. So you will have to delete these extra Academic files (again!). I’m not sure how to avoid this – maybe it’s not an issue when you don’t have merge conflicts? I don’t know :thinking:</p>
 </li>
 <li>
@@ -4951,7 +4948,7 @@ font-style: inherit;"># creates a new commit for the merge</span></span></code><
 
 </section><a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2021" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2021. <span>“Hello Hugo Apéro: Converting a Blogdown
-Site from Hugo Academic.”</span> June 1, 2021. <a href="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/">https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/</a>.
+Site from Hugo Academic.”</span> June 1. <a href="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/">https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/</a>.
 </div></div></section></div> ]]></description>
   <category>R</category>
   <category>website</category>
@@ -4968,6 +4965,7 @@ Site from Hugo Academic.”</span> June 1, 2021. <a href="https://silviacanelon.
   <dc:creator>Silvia Canelón</dc:creator>
   <link>https://silviacanelon.com/blog/2021-03-16-deploying-xaringan-slides/</link>
   <description><![CDATA[ 
+
 
 <!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
 <!-- 
@@ -4991,7 +4989,7 @@ Site from Hugo Academic.”</span> June 1, 2021. <a href="https://silviacanelon.
 <li><p><strong>Option 1:</strong> Start at the beginning of the workflow to make a slide deck using the R Markdown template built into the <code>xaringan</code> package. The built-in template doubles as documentation for the <code>xaringan</code> package, so it is a great way to familiarize yourself with the package features, but it also includes a lot of content that you will probably want to remove and modify when creating your presentation.</p></li>
 <li><p><strong>Option 2:</strong> Start with an <a href="https://spcanelon.github.io/RLadies-xaringan-template">R-Ladies themed xaringan template</a> (embedded below). This is an example slide deck originally created as a teaching tool to highlight some of the main features of the <code>xaringan</code> package, and to demo some customization that incorporates the R-Ladies CSS theme built into xaringan. Please feel welcome to use/modify it to suit your needs! When you are ready, you can follow the steps immediately below 👇 to download the files to your machine, and then skip down to Initialize version control with git.</p></li>
 </ul>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">usethis<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">usethis<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -5006,7 +5004,7 @@ background-color: null;
 font-style: inherit;">destdir =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"filepath/for/your/presentation"</span></span>
-<span id="cb1-4">  )</span></code></pre></div>
+<span id="cb1-4">  )</span></code></pre></div></div>
 <blockquote class="blockquote">
 <p>Note: After copying the files to your machine you’ll probably want to rename the file folder to whatever makes sense for your presentation.</p>
 </blockquote>
@@ -5050,7 +5048,7 @@ font-style: inherit;">"filepath/for/your/presentation"</span></span>
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">install.packages</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -5059,18 +5057,18 @@ font-style: inherit;">"xaringan"</span>)</span>
 background-color: null;
 font-style: inherit;">install.packages</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"usethis"</span>)</span></code></pre></div>
+font-style: inherit;">"usethis"</span>)</span></code></pre></div></div>
 </section>
 <section id="creating-your-xaringan-slide-deck" class="level2">
 <h2 class="anchored" data-anchor-id="creating-your-xaringan-slide-deck">Creating your xaringan slide deck</h2>
 <p><strong>1. Create a new RStudio project for your presentation:</strong></p>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">usethis<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">usethis<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">create_project</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"filepath/for/your/presentation/repo-name"</span>)</span></code></pre></div>
+font-style: inherit;">"filepath/for/your/presentation/repo-name"</span>)</span></code></pre></div></div>
 <blockquote class="blockquote">
 <p>📍 If you’re not sure where you are on your computer, check your working directory with <code>getwd()</code> and use it as a filepath reference point</p>
 </blockquote>
@@ -5091,20 +5089,20 @@ font-style: inherit;">"filepath/for/your/presentation/repo-name"</span>)</span><
 <p><strong>2. Create a xaringan deck using a xaringan template:</strong><br> <em>File</em> &gt; <em>New File</em> &gt; <em>R Markdown</em> &gt; <em>From Template</em> &gt; <em>Ninja Presentation</em> &gt; <em>OK</em></p>
 <p><strong>3. Delete what you don’t need and save your R Markdown file with whatever name you like.</strong> If you pick <code>index.Rmd</code> the live link you share at the end will be relatively short.</p>
 <p><strong>4. Render HTML slides from the open Rmd file using xaringan’s infinite moon reader:</strong></p>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">xaringan<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">xaringan<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">infinite_moon_reader</span>()</span></code></pre></div>
+font-style: inherit;">infinite_moon_reader</span>()</span></code></pre></div></div>
 </section>
 <section id="initialize-version-control-with-git" class="level2">
 <h2 class="anchored" data-anchor-id="initialize-version-control-with-git">Initialize version control with git</h2>
 <p><strong>5. Initialize version control of your slides with git:</strong></p>
-<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">usethis<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">usethis<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">use_git</span>()</span></code></pre></div>
+font-style: inherit;">use_git</span>()</span></code></pre></div></div>
 <p>You’ll be asked if you want to commit the files in your project (with the message “Initial commit”) and then if you want to restart to activate the Git pane. Say yes to both ✅</p>
 <blockquote class="blockquote">
 <p>Note: At the moment <code>usethis</code> names the primary branch “master” by default. <a href="https://github.com/r-lib/usethis/issues/1341">Issue #1341</a> suggests the option to instead name it “main” is in the works.</p>
@@ -5143,11 +5141,11 @@ Selection:
 
 -->
 <p><strong>6. Connect your local project with a GitHub repo:</strong></p>
-<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1">usethis<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1">usethis<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">use_github</span>()</span></code></pre></div>
+font-style: inherit;">use_github</span>()</span></code></pre></div></div>
 <blockquote class="blockquote">
 <p>You could use the function argument <code>private = TRUE</code> to create a private GitHub repository. But you may have to remember to change the visibility before deploying to GitHub Pages.</p>
 </blockquote>
@@ -5169,13 +5167,13 @@ font-style: inherit;">use_github</span>()</span></code></pre></div>
 <section id="making-and-committing-changes-to-your-slides" class="level2">
 <h2 class="anchored" data-anchor-id="making-and-committing-changes-to-your-slides">Making and committing changes to your slides</h2>
 <p><strong>8. Edit your slides as you wish.</strong> Commit often! And then push to GitHub. Use the tools provided by the Git pane in RStudio, or use the following commands in the Terminal:</p>
-<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Step 1: Stage all modified files</span></span>
 <span id="cb7-2"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">git</span> add .</span></code></pre></div>
-<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><span class="co" style="color: #5E5E5E;
+font-style: inherit;">git</span> add .</span></code></pre></div></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Step 2: Describe the changes you made to your files</span></span>
 <span id="cb8-2"><span class="fu" style="color: #4758AB;
@@ -5184,21 +5182,21 @@ font-style: inherit;">git</span> commit <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">-m</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"&lt;A brief but descriptive commit message&gt;"</span></span></code></pre></div>
+font-style: inherit;">"&lt;A brief but descriptive commit message&gt;"</span></span></code></pre></div></div>
 <blockquote class="blockquote">
 <p>Consider writing a commit message that finishes the following sentence:<sup>2</sup> “If applied, this commit will…” (e.g.&nbsp;“Change the slide theme,” “Add hello slide”)</p>
 </blockquote>
-<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Step 3: Push the changes to your GitHub repository</span></span>
 <span id="cb9-2"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">git</span> push</span></code></pre></div>
+font-style: inherit;">git</span> push</span></code></pre></div></div>
 </section>
 <section id="deploying-your-slides" class="level2">
 <h2 class="anchored" data-anchor-id="deploying-your-slides">Deploying your slides</h2>
 <p><strong>9. When you’re ready to deploy your slides, you can use the <code>usethis::use_github_pages()</code> function</strong> which makes the process of deploying via GitHub Pages super easy. I recommend pointing <code>branch</code> to the name of your primary branch.</p>
-<div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1">usethis<span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1">usethis<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -5206,7 +5204,7 @@ font-style: inherit;">use_github_pages</span>(<span class="at" style="color: #65
 background-color: null;
 font-style: inherit;">branch =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"master"</span>)</span></code></pre></div>
+font-style: inherit;">"master"</span>)</span></code></pre></div></div>
 <blockquote class="blockquote">
 <p>Note: Your repository must be <strong>public</strong> for your deployed slides to be available publicly, unless you have a paid GitHub account.</p>
 </blockquote>
@@ -5278,7 +5276,7 @@ font-style: inherit;">"master"</span>)</span></code></pre></div>
 </ol>
 </section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2021" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2021. <span>“Deploying Xaringan Slides with GitHub
-Pages.”</span> March 16, 2021. <a href="https://silviacanelon.com/blog/2021-03-16-deploying-xaringan-slides/">https://silviacanelon.com/blog/2021-03-16-deploying-xaringan-slides/</a>.
+Pages.”</span> March 16. <a href="https://silviacanelon.com/blog/2021-03-16-deploying-xaringan-slides/">https://silviacanelon.com/blog/2021-03-16-deploying-xaringan-slides/</a>.
 </div></div></section></div> ]]></description>
   <category>R</category>
   <category>tutorial</category>
@@ -5293,6 +5291,7 @@ Pages.”</span> March 16, 2021. <a href="https://silviacanelon.com/blog/2021-03
   <dc:creator>Silvia Canelón</dc:creator>
   <link>https://silviacanelon.com/blog/2020-10-07-rstudio-instructor-certification-tidyverse/</link>
   <description><![CDATA[ 
+
 
 <!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
 <!-- 
@@ -5548,7 +5547,7 @@ Pages.”</span> March 16, 2021. <a href="https://silviacanelon.com/blog/2021-03
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2020" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2020. <span>“Becoming Certified as an RStudio Tidyverse
-Instructor.”</span> October 7, 2020. <a href="https://silviacanelon.com/blog/2020-10-07-rstudio-instructor-certification-tidyverse/">https://silviacanelon.com/blog/2020-10-07-rstudio-instructor-certification-tidyverse/</a>.
+Instructor.”</span> October 7. <a href="https://silviacanelon.com/blog/2020-10-07-rstudio-instructor-certification-tidyverse/">https://silviacanelon.com/blog/2020-10-07-rstudio-instructor-certification-tidyverse/</a>.
 </div></div></section></div> ]]></description>
   <category>R</category>
   <category>RStudio</category>
@@ -5563,6 +5562,7 @@ Instructor.”</span> October 7, 2020. <a href="https://silviacanelon.com/blog/2
   <dc:creator>Silvia Canelón</dc:creator>
   <link>https://silviacanelon.com/blog/2020-05-12-trello-to-airtable/</link>
   <description><![CDATA[ 
+
 
 <!-- source: https://github.com/gadenbuie/garrickadenbuie-com/blob/main/_partials/title-block-link-buttons/title-block.html -->
 <!-- 
@@ -5608,7 +5608,7 @@ Instructor.”</span> October 7, 2020. <a href="https://silviacanelon.com/blog/2
 </section>
 <section id="importing-json-file" class="level1">
 <h1>Importing JSON file</h1>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># loading libraries</span></span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -5619,8 +5619,8 @@ background-color: null;
 font-style: inherit;">library</span>(lubridate)</span>
 <span id="cb1-4"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">library</span>(tidyverse)</span></code></pre></div>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">trello <span class="ot" style="color: #003B4F;
+font-style: inherit;">library</span>(tidyverse)</span></code></pre></div></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">trello <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -5630,10 +5630,10 @@ font-style: inherit;">file</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"program-mgmt.json"</span>)) <span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"># produces a data frame</span></span></code></pre></div>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+font-style: inherit;"># produces a data frame</span></span></code></pre></div></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">glimpse</span>(trello)</span></code></pre></div>
+font-style: inherit;">glimpse</span>(trello)</span></code></pre></div></div>
 <p>A <em>lot</em> of information about the Trello board is contained in JSON data. We’ll be parsing information about the <code>cards</code> as well as the <code>lists</code> and then joining them together by a common identifier <code>id</code> or <code>idShort</code>.</p>
 </section>
 <section id="parsing-information" class="level1">
@@ -5642,7 +5642,7 @@ font-style: inherit;">glimpse</span>(trello)</span></code></pre></div>
 <section id="cards" class="level2">
 <h2 class="anchored" data-anchor-id="cards">Cards</h2>
 <p>The first step is to extract information about the Trello <code>cards</code> themselves. This information is contained within a list of data frames and requires <strong>flattening</strong> which makes the nested hierarchical data structure into a flatter structure by assigning each of the nested variables its own column as much as possible. Then, the most important variables are selected as <code>cards_trim</code> before moving on to extracting <code>label</code> information.</p>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># selecting cards information</span></span>
 <span id="cb4-2">cards <span class="ot" style="color: #003B4F;
@@ -5696,11 +5696,11 @@ font-style: inherit;">%&gt;%</span></span>
 background-color: null;
 font-style: inherit;">arrange</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">desc</span>(dateLastActivity))</span></code></pre></div>
+font-style: inherit;">desc</span>(dateLastActivity))</span></code></pre></div></div>
 <section id="labels" class="level3">
 <h3 class="anchored" data-anchor-id="labels">Labels</h3>
 <p>Relevant information about the labels is selected and the <code>unnest</code> function is used to flatten because <code>labels</code> is a list of data frames. Again, I found <a href="https://blog.exploratory.io/working-with-json-data-in-very-simple-way-ad7ebcc0bb89">Kan’s post</a> helpful here! Particularly for saving the label details as a character list, which is helpful later on. Once we get to Airtable it’ll be important that label information for each <code>card</code> be structured as a simple list of words (i.e.&nbsp;label1, label2, label3). We get close once the <code>labels</code> are contained within a character list <code>labelList</code>, but there are still “c”s and parentheses that need to be removed. String manipulation is something I’m still learning about so the code below is far from elegant!</p>
-<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># extracting labels details</span></span>
 <span id="cb5-2">labels_info <span class="ot" style="color: #003B4F;
@@ -5843,12 +5843,12 @@ font-style: inherit;">%&gt;%</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">select</span>(<span class="sc" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">-</span>labelList))</span></code></pre></div>
+font-style: inherit;">-</span>labelList))</span></code></pre></div></div>
 </section>
 <section id="attachments" class="level3">
 <h3 class="anchored" data-anchor-id="attachments">Attachments</h3>
 <p>The next step is to download all of the items attached to the cards onto a local folder. I found <a href="https://stackoverflow.com/questions/32174306/download-url-links-using-r">this StackOverflow post</a> really helpful. When I tried this out on my own Trello board I also found that I couldn’t download the few attachments I had made from my local drive. <a href="https://stackoverflow.com/questions/2158780/catching-an-error-and-then-branching-logic/2158803#2158803">This StackOverflow post</a> helped me figure out how to flag and catch these download errors so that I could create a list of the urls with “attachment errors” that I could follow up with manually.</p>
-<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># expanding the attachment lists into separate url records</span></span>
 <span id="cb6-2">att_urls <span class="ot" style="color: #003B4F;
@@ -5997,9 +5997,9 @@ font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'TRUE'</span></span>
 <span id="cb6-22">  }</span>
-<span id="cb6-23">}</span></code></pre></div>
+<span id="cb6-23">}</span></code></pre></div></div>
 <p>The following selects the attachment records with errors, renames somes variables, and exports the data frame as a CSV.</p>
-<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># preparing data frame for export to CSV</span></span>
 <span id="cb7-2">attachment_errors <span class="ot" style="color: #003B4F;
@@ -6035,11 +6035,11 @@ font-style: inherit;">write.csv</span>(attachment_errors, <span class="at" style
 background-color: null;
 font-style: inherit;">file =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"attachment_errors.csv"</span>)</span></code></pre></div>
+font-style: inherit;">"attachment_errors.csv"</span>)</span></code></pre></div></div>
 <blockquote class="blockquote">
 <p><strong><em>Aside:</em></strong> <em>If you have a lot of attachments <em>per card</em>, you may want to create a directory folder for each card. This for loop will get you there – use it instead of the one above:</em></p>
 </blockquote>
-<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># creates individual directory folders for each card id</span></span>
 <span id="cb8-2"><span class="cf" style="color: #003B4F;
@@ -6091,9 +6091,9 @@ background-color: null;
 font-style: inherit;">download.file</span>(url[i], <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">destfile =</span> locAttachments)</span>
-<span id="cb8-7">}</span></code></pre></div>
+<span id="cb8-7">}</span></code></pre></div></div>
 <p>Records in the main <code>cards</code> data frame are labeled “TRUE” within the <code>attachments</code> column if they have attachments and “FALSE” if they don’t.</p>
-<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># converts the attachment column to a categorical variable in the main cards+labels data frame</span></span>
 <span id="cb9-2">ct_labels <span class="ot" style="color: #003B4F;
@@ -6115,13 +6115,13 @@ font-style: inherit;">$</span>idShort, <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">TRUE</span>, <span class="cn" style="color: #8f5902;
 background-color: null;
-font-style: inherit;">FALSE</span>))</span></code></pre></div>
+font-style: inherit;">FALSE</span>))</span></code></pre></div></div>
 </section>
 </section>
 <section id="lists" class="level2">
 <h2 class="anchored" data-anchor-id="lists">Lists</h2>
 <p>The <code>lists</code> information is extracted similarly to the <code>cards</code> information, but flattening is a little more straightforward because it involves only one data frame. With more data frames, the <code>unnest</code> function is a better choice.</p>
-<div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># selecting lists information</span></span>
 <span id="cb10-2">lists <span class="ot" style="color: #003B4F;
@@ -6198,7 +6198,7 @@ font-style: inherit;">select</span>(id<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span>shortUrl, labelList_tidy<span class="sc" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">:</span>nameList, closed, closedList)</span></code></pre></div>
+font-style: inherit;">:</span>nameList, closed, closedList)</span></code></pre></div></div>
 </section>
 </section>
 <section id="exporting-to-csv" class="level1">
@@ -6206,7 +6206,7 @@ font-style: inherit;">:</span>nameList, closed, closedList)</span></code></pre><
 <section id="data-prepping" class="level2">
 <h2 class="anchored" data-anchor-id="data-prepping">Data prepping</h2>
 <p>Columns in the new <code>ct_labels_list</code> data frame are given new names, and the <code>lubridate</code> package is used next to convert the date fields. <a href="http://biostat.mc.vanderbilt.edu/wiki/pub/Main/ColeBeck/datestimes.pdf">This resource</a> was helpful in understanding date conversions and formatting.</p>
-<div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># changing variable names</span></span>
 <span id="cb11-2">tidy_cards <span class="ot" style="color: #003B4F;
@@ -6294,9 +6294,9 @@ font-style: inherit;">TRUE</span>, <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'NA'</span>, Done)) <span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"># ensures only undone tasks assigned a due date get marked as "FALSE"</span></span></code></pre></div>
+font-style: inherit;"># ensures only undone tasks assigned a due date get marked as "FALSE"</span></span></code></pre></div></div>
 <p>The last step before exporting the final data frame <code>tidy_cards</code> is to check the unique number of tasks to make sure it matches the number of records in the data frame (i.e.&nbsp;one task per observation).</p>
-<div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># determining the number of unique tasks</span></span>
 <span id="cb12-2"><span class="fu" style="color: #4758AB;
@@ -6312,17 +6312,17 @@ background-color: null;
 font-style: inherit;"># final look at tidy_cards</span></span>
 <span id="cb12-5"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">glimpse</span>(tidy_cards)</span></code></pre></div>
+font-style: inherit;">glimpse</span>(tidy_cards)</span></code></pre></div></div>
 </section>
 <section id="data-exporting" class="level2">
 <h2 class="anchored" data-anchor-id="data-exporting">Data exporting</h2>
-<div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">write.csv</span>(tidy_cards, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">file =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"tidy_cards.csv"</span>)</span></code></pre></div>
+font-style: inherit;">"tidy_cards.csv"</span>)</span></code></pre></div></div>
 </section>
 </section>
 <section id="formatting-in-airtable" class="level1">
@@ -6430,7 +6430,7 @@ font-style: inherit;">"tidy_cards.csv"</span>)</span></code></pre></div>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2020" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2020. <span>“Migrating from Trello to Airtable: Working
-with JSON Data in R.”</span> May 12, 2020. <a href="https://silviacanelon.com/blog/2020-05-12-trello-to-airtable/">https://silviacanelon.com/blog/2020-05-12-trello-to-airtable/</a>.
+with JSON Data in R.”</span> May 12. <a href="https://silviacanelon.com/blog/2020-05-12-trello-to-airtable/">https://silviacanelon.com/blog/2020-05-12-trello-to-airtable/</a>.
 </div></div></section></div> ]]></description>
   <category>R</category>
   <category>tutorial</category>

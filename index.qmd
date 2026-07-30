@@ -1,8 +1,8 @@
 ---
 title: "Silvia Canelón, PhD"
 pagetitle: "Silvia Canelón, PhD"
-subtitle: "Data Scientist at the University of Pennsylvania"
-image: assets/silvia/img/skyline-philly-dual.png
+subtitle: "Data Scientist at the<br> University of Pennsylvania"
+image: _assets/silvia/img/skyline-philly-dual.png
 image-alt: "Abstract data visualization depicting tall buildings in Philadelphia as a circle. The text inside the circle reads Philadelphia Skyline"
 
 twitter-card:
@@ -13,7 +13,7 @@ twitter-card:
 
 about:
   template: solana
-  image-width: 28em
+  image-width: 26em
   id: hero-heading
   links:
     - text: "{{< fa universal-access >}}"
@@ -67,13 +67,14 @@ I am a researcher, R educator, and data journalist with a love for community. My
 #| eval: true
 
 manual_redirects <-
-  readr::read_table(here::here("static", "_manualredirects.txt"),
-                    col_names = FALSE) |> 
+  readr::read_table(
+    here::here("static", "_manualredirects.txt"),
+    col_names = FALSE
+  ) |>
   dplyr::mutate(redirect = paste0(X1, " ", X2, " ", X3))
 
 manual_redirects <- manual_redirects$redirect
 
 # write the _redirect file
 writeLines(manual_redirects, here::here("_site", "_redirects"))
-
 ```
