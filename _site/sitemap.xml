@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://silviacanelon.com/talk/2021-05-04-data-viz-accessibility/index.html</loc>
-    <lastmod>2025-02-27T16:37:58.000Z</lastmod>
+    <loc>https://silviacanelon.com/talk/2026-07-30-data-viz-meetup/index.html</loc>
+    <lastmod>2026-07-30T14:03:38.377Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/talk/2024-07-10-data-equity-ldi/index.html</loc>
+    <lastmod>2025-02-27T17:01:25.000Z</lastmod>
   </url>
   <url>
     <loc>https://silviacanelon.com/talk/2022-02-11-tdw-ehr-lessons/index.html</loc>
@@ -82,7 +86,7 @@
   </url>
   <url>
     <loc>https://silviacanelon.com/blog/index.html</loc>
-    <lastmod>2026-07-30T00:33:40.427Z</lastmod>
+    <lastmod>2026-07-30T03:43:35.169Z</lastmod>
   </url>
   <url>
     <loc>https://silviacanelon.com/blog/2021-06-02-wave-audit-1/index.html</loc>
@@ -214,7 +218,7 @@
   </url>
   <url>
     <loc>https://silviacanelon.com/project/2024-06-16-ccd-sips/index.html</loc>
-    <lastmod>2025-10-22T20:57:03.000Z</lastmod>
+    <lastmod>2026-07-30T15:02:31.513Z</lastmod>
   </url>
   <url>
     <loc>https://silviacanelon.com/project/index.html</loc>
@@ -265,7 +269,11 @@
     <lastmod>2024-12-18T00:55:17.000Z</lastmod>
   </url>
   <url>
-    <loc>https://silviacanelon.com/talk/2024-07-10-data-equity-ldi/index.html</loc>
-    <lastmod>2025-02-27T17:01:25.000Z</lastmod>
+    <loc>https://silviacanelon.com/talk/2026-07-25-nahj-conf/index.html</loc>
+    <lastmod>2026-07-30T03:36:35.975Z</lastmod>
+  </url>
+  <url>
+    <loc>https://silviacanelon.com/talk/2021-05-04-data-viz-accessibility/index.html</loc>
+    <lastmod>2025-02-27T16:37:58.000Z</lastmod>
   </url>
 </urlset>

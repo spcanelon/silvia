@@ -1,7 +1,7 @@
 ---
 title: 'Philly Center City District SIPS: An Interactive Map'
 date: 2024-06-16
-date-modified: 2025-06-10
+date-modified: 2026-07-30
 author:
   - Silvia Canelón
 slug: ccd-sips
@@ -31,12 +31,12 @@ listing:
   image-height: "200"
 
 links:
-- icon: pin-map-fill
-  name: Interactive Map
-  url: http://tiny.cc/ccdsips2025
-- icon: qr-code
-  name: QR code
-  url: /project/2024-06-16-ccd-sips/qr_code.png
+# - icon: pin-map-fill
+#   name: Interactive Map
+#   url: http://tiny.cc/ccdsips2025
+# - icon: qr-code
+#   name: QR code
+#   url: /project/2024-06-16-ccd-sips/qr_code.png
 - icon: pencil-fill
   name: Map tutorial
   url: /blog/2022-05-31-ccd-sips
@@ -45,8 +45,22 @@ links:
   url: /talk/2022-09-29-ccd-sips
 ---
 
+::: {.callout-note}
+## This map project has been archived 
+Center City District has (finally!) created their own interactive map tool. 
 
-## Map view
+You can find an updated map at:
+<https://centercityphila.org/explore/sips/>
+:::
+
+::: {.callout-tip}
+## Web analytics
+In 2025, this post received 451 unique visitors in the United States who viewed this post 526 times during the CCD SIPS event taking place between June 4 and August 27.
+
+This is lower than [prior years](#past-years) likely because in 2025 [CCD released their first basic map of locations](https://web.archive.org/web/20250614203828/https://www.centercityphila.org/explore-center-city/ccd-sips).
+:::
+
+## 2025 map view
 
 <!--https://dannyda.com/2021/06/09/how-to-make-html-iframe-responsive-iframe-height-equal-to-viewport-screen-height/-->
 <style>
@@ -61,7 +75,7 @@ width: 100%;
 <iframe src="_2025/map.html" scrolling="no">
 </iframe> 
 
-## Table view
+## 2025 table view
 
 ```{r}
 #| label: table
@@ -69,9 +83,19 @@ width: 100%;
 
 year <- paste0("_", "2025")
 
-source(here::here("project", "2024-06-16-ccd-sips", "R", "ccd_sips_functions.R"))
+source(here::here(
+  "project",
+  "2024-06-16-ccd-sips",
+  "R",
+  "ccd_sips_functions.R"
+))
 
-specials <- readr::read_rds(here::here("project", "2024-06-16-ccd-sips", year, "specialsGeocoded.Rds"))
+specials <- readr::read_rds(here::here(
+  "project",
+  "2024-06-16-ccd-sips",
+  year,
+  "specialsGeocoded.Rds"
+))
 
 create_table(specials, page_length = 10)
 ```
@@ -82,12 +106,10 @@ create_table(specials, page_length = 10)
 <!-- start of grid layout -->
 
 :::: {.grid}
-
+ 
 ::: {.g-col-12}
-
 ::: {#maps}
 :::
-
 :::
 
 ::::

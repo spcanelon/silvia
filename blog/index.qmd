@@ -32,5 +32,5 @@ header-includes: >
   <link rel="stylesheet" href="../assets/listing-default.css">
 resources:
   - ../assets/listing-default.css 
-include-after-body: ../assets/silvia/subscribe.html
+# include-after-body: ../assets/silvia/subscribe.html
 ---
