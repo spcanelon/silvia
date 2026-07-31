@@ -9,9 +9,8 @@
 <meta name="author" content="Silvia Canelón">
 <meta name="author" content="Liz Hare">
 <meta name="dcterms.date" content="2021-05-04">
-<meta name="description" content="csv, conf, v6">
 
-<title>Revealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community – Silvia Canelón</title>
+<title>Revealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning – Silvia Canelón</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -56,6 +55,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -90,15 +92,15 @@ ul.task-list li input[type="checkbox"] {
 <meta name="google-site-verification" content="SXazFKEYdrkxQRjO6ofQA45n5g-Uxn_sq3vVTYYnZ9U">
 
 
-<meta name="twitter:title" content="Revealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community">
-<meta name="twitter:description" content="csv, conf, v6">
+<meta name="twitter:title" content="Revealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning">
+<meta name="twitter:description" content="Data visualization accessibility talk to share what we found after scraping alternative (alt) text from data viz shared on Twitter as part of the #TidyTuesday social project.">
 <meta name="twitter:image" content="https://silviacanelon.com/talk/2021-05-04-data-viz-accessibility/featured.jpg">
 <meta name="twitter:creator" content="@spcanelon">
 <meta name="twitter:site" content="@spcanelon">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -313,26 +315,21 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns">
 <div id="title-block-header-title" class="quarto-title page-columns page-full page-layout-full featured-image p-4" style="background-image: url(featured.png), url(featured.jpg), url(../featured.jpg);">
-<h1 class="title">Revealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning Community</h1>
+<h1 class="title">Revealing Room for Improvement in Accessibility within a Social Media Data Visualization Learning</h1>
 <p class="subtitle lead">Data visualization accessibility talk to share what we found after scraping alternative (alt) text from data viz shared on Twitter as part of the #TidyTuesday social project.</p>
     <div class="quarto-categories">
         <div class="quarto-category">journalism</div>
         <div class="quarto-category">R</div>
         <div class="quarto-category">education</div>
+        <div class="quarto-category">data viz</div>
+        <div class="quarto-category">accessibility</div>
         <div class="quarto-category">TidyTuesday</div>
         <div class="quarto-category">TidyTuesdayAltText</div>
         <div class="quarto-category">rtweet</div>
         <div class="quarto-category">RSelenium</div>
-        <div class="quarto-category">data viz</div>
-        <div class="quarto-category">accessibility</div>
       </div>
   </div>
 
-<div>
-  <div id="title-block-title-desc" class="description pt-4">
-    csv, conf, v6
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
@@ -352,13 +349,18 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">July 31, 2026</p>
+    </div>
+  </div>
     
   </div>
   
 
 
 <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-left justify-content-sm-start" role="group" aria-label="Links">
-<a href="https://csvconf.com/speakers/" class="btn btn-secondary text-capitalize"><i class="bi bi-calendar-check-fill me-1"></i> speaker schedule</a>
 <a href="https://bit.ly/TidyTuesday" class="btn btn-secondary text-capitalize"><i class="bi bi-images me-1"></i> slides</a>
 <a href="https://doi.org/10.5281/zenodo.4743271" class="btn btn-secondary text-capitalize"><i class="bi bi-file-richtext-fill me-1"></i> Zenodo</a>
 <a href="https://youtu.be/DxLkv2iRdf8" class="btn btn-secondary text-capitalize"><i class="bi bi-play-btn-fill me-1"></i> video</a>
@@ -369,7 +371,30 @@ ul.task-list li input[type="checkbox"] {
 </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract">Abstract</a></li>
+  <li><a href="#transcript" id="toc-transcript" class="nav-link" data-scroll-target="#transcript">Transcript</a>
+  <ul class="collapse">
+  <li><a href="#who-are-we" id="toc-who-are-we" class="nav-link" data-scroll-target="#who-are-we">Who are we?</a></li>
+  <li><a href="#takeaways" id="toc-takeaways" class="nav-link" data-scroll-target="#takeaways">Takeaways</a></li>
+  <li><a href="#can-blind-people-participate-in-data-viz-learning-communities" id="toc-can-blind-people-participate-in-data-viz-learning-communities" class="nav-link" data-scroll-target="#can-blind-people-participate-in-data-viz-learning-communities">Can blind people participate in data viz learning communities?</a></li>
+  <li><a href="#what-is-tidytuesday" id="toc-what-is-tidytuesday" class="nav-link" data-scroll-target="#what-is-tidytuesday">What is TidyTuesday?</a></li>
+  <li><a href="#what-do-tidytuesday-visualization-tweets-include" id="toc-what-do-tidytuesday-visualization-tweets-include" class="nav-link" data-scroll-target="#what-do-tidytuesday-visualization-tweets-include">What do #TidyTuesday visualization tweets include?</a></li>
+  <li><a href="#how-were-the-data-collected" id="toc-how-were-the-data-collected" class="nav-link" data-scroll-target="#how-were-the-data-collected">How were the data collected?</a></li>
+  <li><a href="#what-did-we-find" id="toc-what-did-we-find" class="nav-link" data-scroll-target="#what-did-we-find">What did we find?</a></li>
+  <li><a href="#where-else-is-alt-text-missing" id="toc-where-else-is-alt-text-missing" class="nav-link" data-scroll-target="#where-else-is-alt-text-missing">Where else is alt-text missing?</a></li>
+  <li><a href="#what-makes-good-alt-text" id="toc-what-makes-good-alt-text" class="nav-link" data-scroll-target="#what-makes-good-alt-text">What makes good alt text?</a></li>
+  <li><a href="#has-the-tide-started-shifting" id="toc-has-the-tide-started-shifting" class="nav-link" data-scroll-target="#has-the-tide-started-shifting">Has the tide started shifting?</a></li>
+  <li><a href="#what-can-you-do" id="toc-what-can-you-do" class="nav-link" data-scroll-target="#what-can-you-do">What can you do?</a></li>
+  <li><a href="#qa" id="toc-qa" class="nav-link" data-scroll-target="#qa">Q&amp;A</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -384,18 +409,173 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<!-- <script src="{{< blogdown/postref >}}index_files/fitvids/fitvids.min.js"></script> -->
-<p>Presented with <a href="https://www.twitter.com/DogGeneticsLLC">Liz Hare, PhD</a> from Dog Genetics, LLC</p>
-<section id="abstract" class="level2">
-<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
-<p>We all aim to use data to tell a compelling story, and many of us enjoy sharing how we got there by open-sourcing our code, but we don’t always share our story with everyone. Even kind, supportive, and open communities like the #TidyTuesday R learning community on Twitter has a ways to go before the content shared can be accessible to everyone.<br><br>Lived experiences of blind R users tell us that most data visualizations shared for TidyTuesday are inaccessible to screen reading technology because they lack alternative text (i.e.&nbsp;alt text) descriptions. Our goal was to bring this hidden lack of accessibility to the surface by examining the alternative text accompanying data visualizations shared as part of the TidyTuesday social project.<br><br>We scraped the alternative text from 6,443 TidyTuesday images posted on Twitter between April 2, 2018 and January 31, 2021. The first image attached to each tweet was considered the primary image and was scraped for alternative text. Manual web inspection revealed the CSS class and HTML element corresponding to the primary image, as well as the attribute containing the alternative text. We used this information and the ROpenSci {RSelenium} package to scrape the alternative text. Our preliminary analysis found that only 2.4% of the images contained a text description entered by the tweet author compared to 84% which were described by default as ‘Image.’<br><br>This small group of intentional alternative text descriptions had a median word count of 18 (range: 1-170), and a median character count of 83 (range: 8-788). As a reference point, Twitter allows 240 characters in a single tweet and 1,000 characters for image descriptions. This analysis was made possible thanks to a dataset of historical TidyTuesday tweet data collected using the ROpenSci {rtweet} package, and openly available in the <a href="https://github.com/rfordatascience/tidytuesday">TidyTuesday GitHub repository</a>.<br><br>We will present during Session 0 on May 4, 2021: <a href="https://crowdcast.io/e/csvconf6-0-session-0">Crowdcast Link</a></p>
-<div class="shareagain" style="min-width:300px;margin:1em auto;">
-<iframe src="https://spcanelon.github.io/csvConf2021/slides" width="800" height="450" style="max-width:100%;border:2px solid currentColor;" loading="lazy" allowfullscreen="">
-</iframe>
-<!-- <script>fitvids('.shareagain', {players: 'iframe'});</script> -->
+<p>Presented with <a href="https://www.linkedin.com/in/liz-hare-phd-1a50925/">Liz Hare, PhD</a> from Dog Genetics, LLC</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Since this presentation, Liz authored a chapter in the Urban Institute’s Do No Harm Guide on Centering Accessibility in Data Visualization. The chapter is titled <a href="https://www.urban.org/sites/default/files/2022-12/Do%20No%20Harm%20Guide%20Centering%20Accessibility%20in%20Data%20Visualization.pdf#Chapter%204">Writing Alt Text to Communicate the Meaning in Data Visualizations</a>. Check it out!</p>
+</div>
+</div>
+<section id="abstract" class="level1">
+<h1>Abstract</h1>
+<p>We all aim to use data to tell a compelling story, and many of us enjoy sharing how we got there by open-sourcing our code, but we don’t always share our story with everyone. Even kind, supportive, and open communities like the #TidyTuesday R learning community on Twitter has a ways to go before the content shared can be accessible to everyone.</p>
+<p>Lived experiences of blind R users tell us that most data visualizations shared for TidyTuesday are inaccessible to screen reading technology because they lack alternative text (i.e.&nbsp;alt text) descriptions. Our goal was to bring this hidden lack of accessibility to the surface by examining the alternative text accompanying data visualizations shared as part of the TidyTuesday social project.</p>
+<p>We scraped the alternative text from 6,443 TidyTuesday images posted on Twitter between April 2, 2018 and January 31, 2021. The first image attached to each tweet was considered the primary image and was scraped for alternative text. Manual web inspection revealed the CSS class and HTML element corresponding to the primary image, as well as the attribute containing the alternative text. We used this information and the ROpenSci {RSelenium} package to scrape the alternative text. Our preliminary analysis found that only 2.4% of the images contained a text description entered by the tweet author compared to 84% which were described by default as ‘Image.’</p>
+<p>This small group of intentional alternative text descriptions had a median word count of 18 (range: 1-170), and a median character count of 83 (range: 8-788). As a reference point, Twitter allows 240 characters in a single tweet and 1,000 characters for image descriptions. This analysis was made possible thanks to a dataset of historical TidyTuesday tweet data collected using the ROpenSci {rtweet} package, and openly available in the <a href="https://github.com/rfordatascience/tidytuesday">TidyTuesday GitHub repository</a>.</p>
+<p>We will present during Session 0 on May 4, 2021: <a href="https://crowdcast.io/e/csvconf6-0-session-0">Crowdcast Link</a></p>
+</section>
+<section id="transcript" class="level1">
+<h1>Transcript</h1>
+<p>An abridged transcript is provided below as an alternative to the video. It was created locally using MacWhisper and has been edited for clarity.</p>
+<p><a href="slide-01.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="slide-01.png" class="img-fluid" alt=""></a></p>
+<p><strong>Silvia Canelón:</strong></p>
+<p>Thanks for the opportunity to talk with you today about an online data visualization learning community and what we found out about how accessible it is for blind people using screen reading software.</p>
+<section id="who-are-we" class="level2">
+<h2 class="anchored" data-anchor-id="who-are-we">Who are we?</h2>
+<p><a href="slide-02.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="slide-02.png" class="img-fluid" alt=""></a></p>
+<p><strong>Silvia:</strong></p>
+<p>My name is Silvia Canelón. I’m a postdoctoral research scientist at the University of Pennsylvania, where I use the R programming language to analyze electronic health record data.</p>
+<p><strong>Liz Hare:</strong></p>
+<p>I’m Liz Hare, and I’ve been working with R for about 15 years to do working dog genetics and genomics data analysis, and I met Silvia in MiR which is an organization of people from minority backgrounds working together to make our better space for everybody.</p>
+<p>Silvia had this […] interest in data accessibility and she had an idea that she wanted to scrape up the information that was being generated by the TidyTuesday project so that we could see how often descriptive text was being added, so that blind people could follow the data regulations.</p>
+</section>
+<section id="takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="takeaways">Takeaways</h2>
+<p><a href="slide-07.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="slide-07.png" class="img-fluid" alt=""></a></p>
+<p><strong>Liz:</strong></p>
+<p>There are a lot of online learning communities around R and other data science software mediated in places like Twitter and Slack that are very supportive and people are really enjoying participating. TidyTuesday is a specific data visualization project using the tidyverse packages in the R open source statistical practice programming language.</p>
+<p>We found that 3% of the tweaks displaying data visualizations had alt text which would describe the contents of the data visualization in a way that could be read by a screen reader.</p>
+<p>84% were described as image which was just the default placeholder when the user didn’t enter anything.</p>
+</section>
+<section id="can-blind-people-participate-in-data-viz-learning-communities" class="level2">
+<h2 class="anchored" data-anchor-id="can-blind-people-participate-in-data-viz-learning-communities">Can blind people participate in data viz learning communities?</h2>
+<p><a href="slide-13.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="slide-13.png" class="img-fluid" alt=""></a></p>
+<p><strong>Liz:</strong></p>
+<p>So we’re still wondering about how blind people can participate in these data science learning communities.</p>
+<p>You may be asking why blind people need access to data visualization. I know that there are people who think that it’s a form of communication that can’t be transmitted in any other way, but most of the time it does need to be.</p>
+<ul>
+<li><p>There are blind scientists who need to be able to access read the scientific literature and contribute to it and present their work.</p></li>
+<li><p>There are more general applications and current events, things like <a href="https://fossheim.io/writing/posts/accessible-dataviz-us-elections/">election maps</a> and public health. We all would like to be able to have access to knowing the <a href="https://www.theguardian.com/society/2020/sep/30/visually-impaired-scots-get-sonic-help-with-covid-graphs">COVID infection rates</a> in the communities around us.</p></li>
+<li><p>There are some statistical software packages like <a href="https://quorumlanguage.com/evidence.html">Quorum</a> and <a href="https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/odsacoutput/n12hxbdrtzec6gn1k913nwfl9o4d.htm">SAS</a> that will use vector-oriented graphics to produce data visualizations that have aspects that can be grabbed by a screen reader, but <a href="https://cran.r-project.org/">R</a> doesn’t have any of that capability at this time.</p></li>
+</ul>
+<p>Screen reading software provides voice or braille access to text that’s on the computer screen. It does not describe graphics.</p>
+<p>You may be familiar with artificial intelligence image descriptions that are provided newly by some operating systems and Facebook and LinkedIn. These processes have not been developed enough that they could meaningfully describe data visualizations.</p>
+<p>So then we wondered specifically about TidyTuesday and the ability of blind people to participate.</p>
+</section>
+<section id="what-is-tidytuesday" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-tidytuesday">What is TidyTuesday?</h2>
+<p><a href="slide-15.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="slide-15.png" class="img-fluid" alt=""></a></p>
+<p><strong>Silvia:</strong></p>
+<p>As Liz had mentioned earlier, it’s a <a href="https://github.com/rfordatascience/tidytuesday">social project</a> that happens on a weekly basis and it’s part of a broader online <a href="https://www.rfordatasci.com/">R learning community</a>. It provides participants an opportunity to practice summarizing and visualizing data with <a href="https://www.rfordatasci.com/">modern tooling</a> like the tidyverse set of packages.</p>
+<p>On the right-hand side of the screen is an embedded tweet, which is an invitation for people to participate on Twitter every week. This tweet was sent out by Tom Mock, who leads the social project. He sent this out last night in preparation for today, which is Tuesday. And so we can see that the tweet includes information about the data set and where it comes from, about the project itself, and includes some relevant links that people can follow.</p>
+</section>
+<section id="what-do-tidytuesday-visualization-tweets-include" class="level2">
+<h2 class="anchored" data-anchor-id="what-do-tidytuesday-visualization-tweets-include">What do #TidyTuesday visualization tweets include?</h2>
+<p><a href="slide-17.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="slide-17.png" class="img-fluid" alt=""></a></p>
+<p><strong>Silvia:</strong></p>
+<p>On the left-hand side is an embedded tweet showing an example of what one of these, what we’re calling TidyTuesday submissions or data visualization shares, what they might look like and what they might include.</p>
+<p>In the body of the tweet itself, there might be a verbal description. Maybe the author shares their interest in the data or what they found. Maybe they share something about their learning process. Maybe they tried a new function or a new package. They may also choose to include some interpretation of the data as well. It can vary. The tweet can also include a link to the author’s source code, which is another really important aspect of the social project as participants are encouraged to share their code openly so that others may learn from the process that went into creating the data visualization and then reproduce it or modify it for their own needs.</p>
+<p>And then of course the tweet will generally have an image attached of the data visualization that was created, but rarely do these images have text descriptions or alt text attached to them.</p>
+</section>
+<section id="how-were-the-data-collected" class="level2">
+<h2 class="anchored" data-anchor-id="how-were-the-data-collected">How were the data collected?</h2>
+<p><a href="slide-20.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="slide-20.png" class="img-fluid" alt=""></a></p>
+<p><strong>Silvia:</strong></p>
+<p>The tweets for TidyTuesday have been collected over time since April of 2018, which is when this project started. Tom Mock has been collecting that data, and he makes them available in the <a href="https://github.com/rfordatascience/tidytuesday">TidyTuesday repository</a>. He collected this information using the <a href="https://docs.ropensci.org/rtweet/">rtweet package</a> from ROpenSci. And so what I did then was I used that data to identify links for each individual tweet and did some processing and used the <a href="https://docs.ropensci.org/RSelenium/">RSelenium package</a>, also from ROpenSci, to scrape the alt text attribute that corresponded to the image in each of those tweets.</p>
+<p>The right-hand side now shows a screenshot of what it looks like for me if I’m in my browser in Firefox and I open up my web inspector, if I’m looking at the tweet that I shared in the last slide, you can see that on the left-hand side there’s some HTML code that corresponds to that tweet. And so the way that RSelenium helped me in this process was essentially running a browser that would travel to each of these individual tweets, find the picture, find the image that was attached and then scrape that alt text attribute.</p>
+<p>In this particular screenshot, we can also see the alt text for the image underneath the image itself in a block of text. That’s visible to us because there are certain extensions you can install in your browser that let you see the alt text for different images. That’s what is showing up here.</p>
+</section>
+<section id="what-did-we-find" class="level2">
+<h2 class="anchored" data-anchor-id="what-did-we-find">What did we find?</h2>
+<p><a href="slide-22.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="slide-22.png" class="img-fluid" alt=""></a></p>
+<p><strong>Silvia:</strong></p>
+<p>So what did we find after scraping?</p>
+<p>We found that over the three years of the TidyTuesday project, there were over 7000 data viz tweets and only 215 or 3% of them had alt text.</p>
+<p><a href="slide-23.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="slide-23.png" class="img-fluid" alt=""></a></p>
+<p>Participation in TidyTuesday has increased over time, but as we can see from these line graphs, the use of alt text is recent and remains really low. What we see on the right hand side is a line graph where there’s a gray line corresponding to all the tweets submitted as part of this project over time. Then there’s another line that is a darker color and it shows which of those tweets also have alt text attached to them.</p>
+<p>We can see that for the most part there has been increased participation in the project over time, but there hasn’t been much change in how alt text is used in this context except for at the end where we see this spike. That spike corresponds to a <a href="https://twitter.com/spcanelon/status/1375222124365946881?s=20">conversation on Twitter</a>, when Liz and I found out we would be presenting at this talk today, and there was some conversation about our preliminary findings and some changes that were implemented because of that.</p>
+</section>
+<section id="where-else-is-alt-text-missing" class="level2">
+<h2 class="anchored" data-anchor-id="where-else-is-alt-text-missing">Where else is alt-text missing?</h2>
+<p><a href="slide-29.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="slide-29.png" class="img-fluid" alt=""></a></p>
+<p><strong>Silvia:</strong></p>
+<p>So Liz, could you tell us where else alt text is missing in in addition to this project?</p>
+<p><strong>Liz:</strong></p>
+<p>Yeah, there’s a lot of free open source material, books and tutorials available on the internet and they’re all wonderfully searchable by Google so that you can answer the questions you have while you’re coding. But many of them are lacking all texts for their data visualization and also sometimes even display code as PNG images which can’t be read by a screen reader.</p>
+<p>This problem is also found with Bookshare, which is a nonprofit that provides access to electronic books for people with print disabilities. They work with publishers who often also don’t provide alt text for images. They don’t provide it themselves. And again, sometimes the actual code snippets are missing from those books and manuals.</p>
+<p>Some R package documentation has data visualizations in it to show you how these interesting new tidyverse kinds of graphs look and come out. And it’s really difficult to figure out if someone who’s trying to display data and you can’t see what the code actually produces.</p>
+<p>There are also a lot of R blogs that have educational components but again, are lacking all text or lacking access to the code.</p>
+<p>This happens both at the individual level as we mentioned with things like blogs and also at the corporate level where RStudio’s documentation on their websites is often missing these accessibility features.</p>
+</section>
+<section id="what-makes-good-alt-text" class="level2">
+<h2 class="anchored" data-anchor-id="what-makes-good-alt-text">What makes good alt text?</h2>
+<p><a href="slide-31.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="slide-31.png" class="img-fluid" alt=""></a></p>
+<p><strong>Liz:</strong></p>
+<p>Once we had scraped these alt texts, one of the things we were interested in asking is what about them makes them good and what about them makes them effective. Based on my experience online and reading media, and also going through each of the alt texts that Silvia scraped.</p>
+<p>The first item that I felt was really important was that something is shared about what the data is showing, what is the meaning being conveyed. 34% included that.</p>
+<p>28% included a description of what variables were on the axes of the data visualization.</p>
+<p>12% had some indication of the scale of the axes or a way to find out what the scale was from the description of the data.</p>
+<p>This one is pretty important too. You need to tell us what kind of graph it is. Is it a line plot? Is it a scatter plot? Is it a QQ plot or residual plot? And 56% provided that. I’d like to also add that there are a lot of really cool modern, new, and also some very specialized kinds of graphics, especially within tidyverse. If you’re using something that’s a little less common, it would be really good to provide some orientation to how the data visualization works and what it’s saying.</p>
+</section>
+<section id="has-the-tide-started-shifting" class="level2">
+<h2 class="anchored" data-anchor-id="has-the-tide-started-shifting">Has the tide started shifting?</h2>
+<p><a href="slide-35.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="slide-35.png" class="img-fluid" alt=""></a></p>
+<p><strong>Silvia:</strong></p>
+<p>We saw in the line graph a couple of slides ago that there seems to be something changing now, so we wanted to ask, has the tide started shifting? Are we noticing changes outside of this as well?</p>
+<p>We know that conversations are happening within R in different spaces.</p>
+<ul>
+<li>One great example is the <a href="https://user2021.r-project.org/participation/accessibility/">useR conference</a> that’s happening this year that Liz is a part of and one of the organizer volunteers for. The conference itself has been very intentional about centering accessibility practices into the conference in terms of how it’s delivered in a way that makes it as accessible as possible for participants that are attending as speakers or that are just attending to participate in the different talks and tutorials.</li>
+<li>The<a href="https://mircommunity.com/about/">MiR community</a> is also a space where we’re having these conversations like the one we’re having today. There’s an accessibility committee within that community that Liz and I are part of and where we regularly meet and discuss these things.</li>
+<li>Within TidyTuesday in particular, when we shared our preliminary findings on Twitter, the leader of the social project, Tom Mock, was able to add a whole section to the <a href="https://themockup.blog/posts/2021-04-01-three-years-of-tidytuesday/">TidyTuesday repository</a> inviting and encouraging participants to include alt text in the data visualizations that they share on Twitter. It includes resources as well for participants and have a place to start from.</li>
+</ul>
+<p>More broadly, we also have noticed conversations happening in other places.</p>
+<ul>
+<li>The <a href="https://www.outlierconf.com/">Data Visualization Society</a> had a conference earlier this year, Outlier Conf, that featured a few different talks about data accessibility.</li>
+<li>A variety of <a href="https://www.a11yproject.com/">A11Y</a> conferences and meetups also are having these conversations.</li>
+</ul>
+<p>There’s also some change happening with tooling within R. One good example is that within RMarkdown, which is very popular, there is now the ability to <a href="https://blog.rstudio.com/2021/04/20/knitr-fig-alt/">add alt text as an option to a code chunk</a>, so that whatever graphical output that code chunk is producing, it can come equipped with alt text as well. In the same way that one might add a figure caption, now we can also add an alt text tag to that graphical output.</p>
+<p>But it is important to note that these changes are great but they are just starting and they’re slow.</p>
+</section>
+<section id="what-can-you-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-can-you-do">What can you do?</h2>
+<p><a href="slide-38.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="slide-38.png" class="img-fluid" alt=""></a></p>
+<p>You can make your data visualizations accessible everywhere that you can.</p>
+<p>This includes adding alt text to websites, journalism, scientific publishing, social media and other spaces.</p>
+<p>In situations where alt text isn’t available in your particular document or platform, try to find creative ways to describe your visualizations and words.</p>
+<p>Liz and I have provided a short list here of some resources, including:</p>
+<ul>
+<li>A great <a href="https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81">blog post by Amy Cesal</a></li>
+<li>The new <a href="https://chartability.fizz.studio/">Chartability Data Viz Audit Workbook by Frank Elavsky</a></li>
+<li>Another <a href="https://github.com/dataviza11y/resources/blob/main/README.md">resource from the A11Y community</a></li>
+</ul>
+<p>And a few links specific to Twitter:</p>
+<ul>
+<li><a href="https://help.twitter.com/en/using-twitter/picture-descriptions">How do I add alt text to the images that I attach?</a></li>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/alt-or-not/">How can I see the alt text if I want to? What kind of extensions are available?</a></li>
+<li><a href="https://addons.mozilla.org/en-GB/firefox/addon/twitter-required-alt-text/">Are there extensions available to help me remember to attach alt text to my images?</a> There’s a resource for that too, specific to Firefox, but other browsers will have them as well.</li>
+</ul>
+<p><a href="slide-39.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="slide-39.png" class="img-fluid" alt=""></a></p>
+<p><strong>Silvia:</strong></p>
+<p>Thanks so much! <a href="https://github.com/spcanelon/csvConf2021">Resources, Liz’s analysis, and also a link to the TidyTuesdayAltText package</a> that we used for this analysis are available in the link on this slide.</p>
+<p>Thanks so much, we’re excited to take some questions.</p>
+</section>
+<section id="qa" class="level2">
+<h2 class="anchored" data-anchor-id="qa">Q&amp;A</h2>
+<p><strong>Event host:</strong></p>
+<p>Fantastic. Thank you so much for sharing this amazing and important work that you’ve been doing and tips for us all to do better.</p>
+<p>There’s a lot of questions, but I think we only have time for one. Jess asks, are there any good resources for testing what the screen reader experience is like for people, or accessibility in general?</p>
+<p><strong>Silvia:</strong></p>
+<p>I think a great place to explore would be some of those A11Y resources. A11Y stands for “accessibility,” and there’s a lot of conversations there that happen within the context of web development. User testing and screen reader testing are part of that full process. So I would encourage folks to check out some of those resources.</p>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
@@ -850,6 +1030,38 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
