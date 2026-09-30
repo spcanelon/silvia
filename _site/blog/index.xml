@@ -12,7 +12,7 @@
 It includes notes and tutorials for my future self and hopefully also for you.&lt;br&gt;&lt;br&gt;
 {{&lt; fa envelope &gt;}} Sign up for my [newsletter](/contact.html#buttondown) to receive updates about new posts.
 </description>
-<generator>quarto-1.9.36</generator>
+<generator>quarto-1.8.26</generator>
 <lastBuildDate>Fri, 29 Sep 2023 04:00:00 GMT</lastBuildDate>
 <item>
   <title>Hello Quarto: Porting my Website from Hugo Apéro</title>
@@ -1442,7 +1442,7 @@ font-style: inherit;">)</span></span></code></pre></div></div>
 <li id="fn6"><p>Don’t skip this step! People will almost certainly have shared one or more of your posts somewhere on the internet, and it helps everyone if you can point them to the right spot↩︎</p></li>
 </ol></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2023" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2023. <span>“Hello Quarto: Porting My Website from Hugo
-Apéro.”</span> September 29. <a href="https://silviacanelon.com/blog/2023-09-29-hello-quarto/">https://silviacanelon.com/blog/2023-09-29-hello-quarto/</a>.
+Apéro.”</span> September 29, 2023. <a href="https://silviacanelon.com/blog/2023-09-29-hello-quarto/">https://silviacanelon.com/blog/2023-09-29-hello-quarto/</a>.
 </div></div></section></div> ]]></description>
   <category>R</category>
   <category>quarto</category>
@@ -3452,7 +3452,7 @@ font-style: inherit;">true</span></span></code></pre></div></div>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2022" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2022. <span>“Creating the Philly Center City SIPS
-Interactive Map.”</span> May 31. <a href="https://silviacanelon.com/blog/2022-05-31-ccd-sips/">https://silviacanelon.com/blog/2022-05-31-ccd-sips/</a>.
+Interactive Map.”</span> May 31, 2022. <a href="https://silviacanelon.com/blog/2022-05-31-ccd-sips/">https://silviacanelon.com/blog/2022-05-31-ccd-sips/</a>.
 </div></div></section></div> ]]></description>
   <category>R</category>
   <category>journalism</category>
@@ -3569,7 +3569,7 @@ Interactive Map.”</span> May 31. <a href="https://silviacanelon.com/blog/2022-
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2022" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2022. <span>“Hello Umami: Deploying a Privacy-Friendly
-Open Source Tool for Web Analytics.”</span> January 18. <a href="https://silviacanelon.com/blog/2022-01-18-hello-umami/">https://silviacanelon.com/blog/2022-01-18-hello-umami/</a>.
+Open Source Tool for Web Analytics.”</span> January 18, 2022. <a href="https://silviacanelon.com/blog/2022-01-18-hello-umami/">https://silviacanelon.com/blog/2022-01-18-hello-umami/</a>.
 </div></div></section></div> ]]></description>
   <category>R</category>
   <category>website</category>
@@ -3884,7 +3884,7 @@ background-color: null;
 font-style: inherit;">+</span></span>
 <span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">geom_bar_pattern</span><span class="op" style="color: #5E5E5E;
+font-style: inherit;"><a href="https://trevorldavis.com/R/ggpattern/reference/geom-docs.html">geom_bar_pattern</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -3990,7 +3990,7 @@ font-style: inherit;">)</span></span></code></pre></div></div>
 
 </section><a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2021" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2021. <span>“Resources for Data Viz
-Accessibility.”</span> September 23. <a href="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/">https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/</a>.
+Accessibility.”</span> September 23, 2021. <a href="https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/">https://silviacanelon.com/blog/2021-09-23-data-viz-a11y/</a>.
 </div></div></section></div> ]]></description>
   <category>R</category>
   <category>journalism</category>
@@ -4347,7 +4347,7 @@ Full page screenshot
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2021" class="csl-entry quarto-appendix-citeas">
-Canelón, Silvia. 2021. <span>“WAVE Audit No. 1.”</span> June 2. <a href="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/">https://silviacanelon.com/blog/2021-06-02-wave-audit-1/</a>.
+Canelón, Silvia. 2021. <span>“WAVE Audit No. 1.”</span> June 2, 2021. <a href="https://silviacanelon.com/blog/2021-06-02-wave-audit-1/">https://silviacanelon.com/blog/2021-06-02-wave-audit-1/</a>.
 </div></div></section></div> ]]></description>
   <category>website</category>
   <category>education</category>
@@ -4400,7 +4400,7 @@ Projects on my site: https://silvia.rbind.io/project
 </section><section id="the-plan" class="level2"><h2 class="anchored" data-anchor-id="the-plan">The Plan</h2>
 <p>I was lucky that Alison had already started converting her own personal site because she gave me a template and example to follow! <i class="fa-solid fa-hands-helping" aria-label="hands-helping"></i></p>
 <p>We’ll follow the steps below throughout the tutorial and each of the six steps comes with its own commit in my git history, so you can see exactly what I changed and when. <i class="fa-solid fa-code-branch" aria-label="code-branch"></i></p>
-{{&lt; tweet 1370027805543698432 &gt;}}
+{{}}
 <p>Then we’ll reuse and migrate your existing content, set up a contact form, tidy up your directory, explore some resources for customizing your new site, and end with the grand finale: deploying your new site!</p>
 </section><section id="prework" class="level2"><h2 class="anchored" data-anchor-id="prework">Prework</h2>
 <section id="branch-deploy" class="level3"><h3 class="anchored" data-anchor-id="branch-deploy">Branch deploy</h3>
@@ -5302,7 +5302,7 @@ font-style: inherit;"># creates a new commit for the merge</span></span></code><
 
 </section><a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2021" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2021. <span>“Hello Hugo Apéro: Converting a Blogdown
-Site from Hugo Academic.”</span> June 1. <a href="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/">https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/</a>.
+Site from Hugo Academic.”</span> June 1, 2021. <a href="https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/">https://silviacanelon.com/blog/2021-06-01-hello-hugo-apero/</a>.
 </div></div></section></div> ]]></description>
   <category>R</category>
   <category>website</category>
@@ -5630,7 +5630,7 @@ font-style: inherit;">"master"</span>)</span></code></pre></div></div>
 </ol>
 </section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2021" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2021. <span>“Deploying Xaringan Slides with GitHub
-Pages.”</span> March 16. <a href="https://silviacanelon.com/blog/2021-03-16-deploying-xaringan-slides/">https://silviacanelon.com/blog/2021-03-16-deploying-xaringan-slides/</a>.
+Pages.”</span> March 16, 2021. <a href="https://silviacanelon.com/blog/2021-03-16-deploying-xaringan-slides/">https://silviacanelon.com/blog/2021-03-16-deploying-xaringan-slides/</a>.
 </div></div></section></div> ]]></description>
   <category>R</category>
   <category>tutorial</category>
@@ -5901,7 +5901,7 @@ Pages.”</span> March 16. <a href="https://silviacanelon.com/blog/2021-03-16-de
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2020" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2020. <span>“Becoming Certified as an RStudio Tidyverse
-Instructor.”</span> October 7. <a href="https://silviacanelon.com/blog/2020-10-07-rstudio-instructor-certification-tidyverse/">https://silviacanelon.com/blog/2020-10-07-rstudio-instructor-certification-tidyverse/</a>.
+Instructor.”</span> October 7, 2020. <a href="https://silviacanelon.com/blog/2020-10-07-rstudio-instructor-certification-tidyverse/">https://silviacanelon.com/blog/2020-10-07-rstudio-instructor-certification-tidyverse/</a>.
 </div></div></section></div> ]]></description>
   <category>R</category>
   <category>RStudio</category>
@@ -6190,7 +6190,7 @@ font-style: inherit;">;</span></span></code></pre></div></div>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2020" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2020. <span>“Customizing Hugo Academic’s Dark Mode with
-Help from Atom.”</span> June 16. <a href="https://silviacanelon.com/blog/2020-05-26-dark-mode-custom-with-atom/">https://silviacanelon.com/blog/2020-05-26-dark-mode-custom-with-atom/</a>.
+Help from Atom.”</span> June 16, 2020. <a href="https://silviacanelon.com/blog/2020-05-26-dark-mode-custom-with-atom/">https://silviacanelon.com/blog/2020-05-26-dark-mode-custom-with-atom/</a>.
 </div></div></section></div> ]]></description>
   <category>website</category>
   <category>tutorial</category>
@@ -7075,7 +7075,7 @@ font-style: inherit;">"tidy_cards.csv"</span>)</span></code></pre></div></div>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-canelón2020" class="csl-entry quarto-appendix-citeas">
 Canelón, Silvia. 2020. <span>“Migrating from Trello to Airtable: Working
-with JSON Data in R.”</span> May 12. <a href="https://silviacanelon.com/blog/2020-05-12-trello-to-airtable/">https://silviacanelon.com/blog/2020-05-12-trello-to-airtable/</a>.
+with JSON Data in R.”</span> May 12, 2020. <a href="https://silviacanelon.com/blog/2020-05-12-trello-to-airtable/">https://silviacanelon.com/blog/2020-05-12-trello-to-airtable/</a>.
 </div></div></section></div> ]]></description>
   <category>R</category>
   <category>tutorial</category>

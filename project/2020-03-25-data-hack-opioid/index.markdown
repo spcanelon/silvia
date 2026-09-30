@@ -38,9 +38,9 @@ links:
 - icon: images
   name: Data Hackathon Slides
   url: https://github.com/CodeForPhilly/datahack2020/raw/master/analyses/team11/Presentation/Team11_March17_Presentation.pptx
-- icon: images
-  name: Lab Meeting Slides
-  url: https://slides.com/spcanelon/2020datahack
+# - icon: images
+#   name: Lab Meeting Slides
+#   url: https://slides.com/spcanelon/2020datahack
 - icon: person-heart
   name: 'Empathy Tool Mockup'
   url: https://codeforphilly.github.io/datahack2020/analyses/team11/
@@ -70,7 +70,7 @@ Be sure to check out these **Freakonomics Radio podcast episodes** to learn more
 - [City of Philadelphia](https://www.phila.gov/programs/combating-the-opioid-epidemic/)
 
 ## Partner organizations/interviewees
-- [Prevention Point Prevention](https://ppponline.org/): drop-in, medical, mobile clinic, and re-entry case managers.
+- [Prevention Point Philadelphia](https://ppponline.org/): drop-in, medical, mobile clinic, and re-entry case managers, as well as individuals in recovery.
 - [Health Federation of Philadelphia](https://healthfederation.org/): Opioid Response Program Coordinator and intern.
 - [Penn Medicine Center for Opioid Recovery and Engagement](https://www.pennmedicine.org/for-patients-and-visitors/find-a-program-or-service/psychiatry/drug-and-alcohol-addiction-treatment/center-for-opioid-recovery-and-engagement): Certified recovery specialists, emergency medicine physician, and individual in recovery.
 

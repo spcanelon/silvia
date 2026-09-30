@@ -10,6 +10,7 @@
   {
     "listing": "/publication/index.html",
     "items": [
+      "/publication/2026-09-29-neighborhood-features-preeclampsia-risk/index.html",
       "/publication/2025-08-01-tbi-survival/index.html",
       "/publication/2024-05-27-tbi-definitions/index.html",
       "/publication/2022-11-24-mwas-repurposed-covid19-meds/index.html",
@@ -33,7 +34,7 @@
   {
     "listing": "/about/index.html",
     "items": [
-      "/project/2025-02-28-nicar-calendar/index.html",
+      "/project/2025-02-28-NICAR-calendar/index.html",
       "/project/2024-06-16-ccd-sips/index.html",
       "/project/2023-04-18-r-for-the-rest-of-us/index.html",
       "/project/2021-07-07-presentable-user2021/index.html",
@@ -74,6 +75,7 @@
       "/blog/2020-10-07-rstudio-instructor-certification-tidyverse/index.html",
       "/blog/2020-05-26-dark-mode-custom-with-atom/index.html",
       "/blog/2020-05-12-trello-to-airtable/index.html",
+      "/publication/2026-09-29-neighborhood-features-preeclampsia-risk/index.html",
       "/publication/2025-08-01-tbi-survival/index.html",
       "/publication/2024-05-27-tbi-definitions/index.html",
       "/publication/2022-11-24-mwas-repurposed-covid19-meds/index.html",
@@ -113,7 +115,7 @@
     "listing": "/project/index.html",
     "items": [
       "/project/2024-06-16-ccd-sips/index.html",
-      "/project/2025-02-28-nicar-calendar/index.html",
+      "/project/2025-02-28-NICAR-calendar/index.html",
       "/project/2020-08-27-teaching-support/index.html",
       "/project/2023-04-18-r-for-the-rest-of-us/index.html",
       "/project/2021-07-07-presentable-user2021/index.html",
