@@ -1,0 +1,38 @@
+---
+title: "The relative importance of neighborhood environment features in explaining preeclampsia risk using machine learning"
+author: 
+- Chloé F. Paris
+- Rachel Ledyard
+- Allan C. Just
+- Eugenia C. South
+- Max Jordan Nguemeni Tiako
+- name: Silvia P. Canelón
+  orcid: 0000-0003-1709-1394
+- Heather H. Burris
+- Joseph D. Romano
+date: 2026-09-29
+slug: neighborhood-features-preeclampsia-risk
+image: featured.png
+categories:
+  - research 
+  - EHR
+description: 'Pregnancy'
+subtitle: EHR study using machine learning to find the relative importance of multiple simultaneous neighborhood health and social vulnerability features associated with preeclampsia.
+links:
+- icon: file-richtext-fill
+  name: Publication
+  url: https://obgyn.onlinelibrary.wiley.com/doi/10.1002/pmf2.70347
+- icon: github
+  name: Code
+  url: https://github.com/RomanoLab/geospatial-preeclampsia-geobirth
+---
+
+## Abstract 
+
+**Introduction:** Disentangling the role of the neighborhood environment in preeclampsia pathogenesis is crucial for addressing social and structural determinants of pregnancy health. Building on epidemiologic studies demonstrating environmental associations with preeclampsia, we used a machine learning approach to determine the _relative importance_ of multiple simultaneous neighborhood features to facilitate prioritization of community pregnancy health initiatives.
+
+**Methods:** We linked 26 features from the neighborhood environment, encompassing social vulnerability, built environment, physical environment, and health vulnerability features, to geocoded residential addresses of participants selected for a matched, nested case-control study from two Philadelphia hospitals. We modeled individual associations of neighborhood features with preeclampsia using conditional logistic regression models. We then built XGBoost models trained on the neighborhood features predicting preeclampsia and applied explainable artificial intelligence (XAI) to disentangle the relative importance of the features associated with preeclampsia.
+
+**Results:** Among 18,754 participants (4689 preeclampsia cases and 14,065 controls), we observed significant associations of neighborhood health and social vulnerability features with preeclampsia. From the XGBoost models, three neighborhood health vulnerability features—prevalence of obesity, prevalence of high blood pressure, and prevalence of short sleep duration among adults—were the most important neighborhood features in predicting preeclampsia.
+
+**Conclusion:** Our findings that neighborhood features vary with respect to their relative importance in predicting preeclampsia demonstrate the value of using XAI to contribute new insights into the vulnerability of pregnant individuals to specific neighborhood environmental features and to inform policy-making priorities for community-level pregnancy health interventions. Specifically, the association between neighborhood hypertension prevalence and preeclampsia, suggests that communities with worse cardiovascular health have a higher preeclampsia risk, which warrants further investigation as a potential avenue for preeclampsia prevention.
